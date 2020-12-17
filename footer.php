@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 </div><!-- #content -->
 
 <?php
-	$page_meta      = get_post_meta( get_the_ID(), '_qubelystarters_page_metadata', true );
+	$page_meta      = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
 	$disable_footer = ( ! empty( $page_meta ) ? $page_meta['footer_toggle'] : false );
 
 if ( false === $disable_footer ) :

@@ -104,7 +104,7 @@ var _wp$components = wp.components,
 var PageSettingsFields = function PageSettingsFields(_ref) {
   var updatedValue = _ref.updatedValue,
       updateMeta = _ref.updateMeta;
-  var is_page = qubelystarters_admin.is_page;
+  var is_page = tutorstarter_admin.is_page;
 
   if ('1' === is_page) {
     return /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(SelectControl, {
@@ -222,12 +222,12 @@ var _wp$data = wp.data,
 
 var PageSettingsFieldsData = compose([withSelect(function () {
   return {
-    updatedValue: select('core/editor').getEditedPostAttribute('meta')._qubelystarters_page_metadata
+    updatedValue: select('core/editor').getEditedPostAttribute('meta')._tutorstarter_page_metadata
   };
 }), withDispatch(function (dispatch) {
   return {
     updateMeta: function updateMeta(value, prop) {
-      var meta = select('core/editor').getEditedPostAttribute('meta')._qubelystarters_page_metadata;
+      var meta = select('core/editor').getEditedPostAttribute('meta')._tutorstarter_page_metadata;
 
       meta = _objectSpread({
         sidebar_select: 'no-sidebar',
@@ -238,21 +238,21 @@ var PageSettingsFieldsData = compose([withSelect(function () {
       meta[prop] = value;
       dispatch('core/editor').editPost({
         meta: {
-          _qubelystarters_page_metadata: meta
+          _tutorstarter_page_metadata: meta
         }
       });
     }
   };
 })])(_fields_page_settings_fields__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
-var QubelyStartersPageSettingsPanel = function QubelyStartersPageSettingsPanel() {
+var tutorstarterPageSettingsPanel = function tutorstarterPageSettingsPanel() {
   return /*#__PURE__*/React.createElement(PluginDocumentSettingPanel, {
     name: "tutorstarter-settings-panel",
     title: "Tutor Starter Page Settings"
   }, /*#__PURE__*/React.createElement(PageSettingsFieldsData, null));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (QubelyStartersPageSettingsPanel);
+/* harmony default export */ __webpack_exports__["default"] = (tutorstarterPageSettingsPanel);
 
 /***/ }),
 
@@ -268,7 +268,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _page_settings__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page-settings */ "./inc/Custom/Page/reactjs/src/page-settings/index.js");
 var registerPlugin = wp.plugins.registerPlugin;
 
-var is_page = qubelystarters_admin.is_page;
+var is_page = tutorstarter_admin.is_page;
 
 if ('1' === is_page) {
   registerPlugin('tutorstarter-settings-panel', {

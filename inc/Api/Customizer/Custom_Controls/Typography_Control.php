@@ -21,7 +21,7 @@ class Typography_Control extends WP_Customize_Control {
 	 *
 	 * @var string control type
 	 */
-	public $type = 'qubelystarters_typography';
+	public $type = 'tutorstarter_typography';
 
 	/**
 	 * Additional arguments passed to JS.

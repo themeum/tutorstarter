@@ -28,9 +28,9 @@ class Header {
 	public function register( $wp_customize ) {
 
 		$wp_customize->add_section(
-			'qubelystarters_header_section',
+			'tutorstarter_header_section',
 			array(
-				'panel'       => 'qubelystarters_customizer_panel',
+				'panel'       => 'tutorstarter_customizer_panel',
 				'title'       => esc_html__( 'Header', 'tutorstarter' ),
 				'description' => esc_html__( 'Customize the header', 'tutorstarter' ),
 				'priority'    => 5,
@@ -38,7 +38,7 @@ class Header {
 		);
 
 		// Overriding default controls.
-		$wp_customize->get_control( 'custom_logo' )->section   = 'qubelystarters_header_section';
+		$wp_customize->get_control( 'custom_logo' )->section   = 'tutorstarter_header_section';
 		$wp_customize->get_control( 'custom_logo' )->transport = 'postMessage';
 
 		// Selective refresh for custom_logo.
@@ -67,7 +67,7 @@ class Header {
 				'header_type_select',
 				array(
 					'label'   => esc_html__( 'Select Header Type', 'tutorstarter' ),
-					'section' => 'qubelystarters_header_section',
+					'section' => 'tutorstarter_header_section',
 					'choices' => array(
 						'header_one'   => array(
 							'name'  => esc_html__( 'Header Fullwidth', 'tutorstarter' ),
@@ -114,7 +114,7 @@ class Header {
 				'menu_bg_color',
 				array(
 					'label'   => esc_html__( 'Header BG Color', 'tutorstarter' ),
-					'section' => 'qubelystarters_header_section',
+					'section' => 'tutorstarter_header_section',
 				)
 			)
 		);
@@ -133,7 +133,7 @@ class Header {
 				'menu_link_color',
 				array(
 					'label'   => esc_html__( 'Menu Link Color', 'tutorstarter' ),
-					'section' => 'qubelystarters_header_section',
+					'section' => 'tutorstarter_header_section',
 				)
 			)
 		);
@@ -152,7 +152,7 @@ class Header {
 				'menu_link_active_color',
 				array(
 					'label'   => esc_html__( 'Menu Link Active and Hover Color', 'tutorstarter' ),
-					'section' => 'qubelystarters_header_section',
+					'section' => 'tutorstarter_header_section',
 				)
 			)
 		);
@@ -171,7 +171,7 @@ class Header {
 				'menu_link_font_size',
 				array(
 					'label'       => esc_html__( 'Font Size (px)', 'tutorstarter' ),
-					'section'     => 'qubelystarters_header_section',
+					'section'     => 'tutorstarter_header_section',
 					'input_attrs' => array(
 						'min'        => 8,
 						'max'        => 100,
@@ -200,7 +200,7 @@ class Header {
 				'menu_link_font_weight',
 				array(
 					'label'   => esc_html__( 'Font Weight', 'tutorstarter' ),
-					'section' => 'qubelystarters_header_section',
+					'section' => 'tutorstarter_header_section',
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
@@ -228,7 +228,7 @@ class Header {
 				'header_search_toggle',
 				array(
 					'label'           => esc_html__( 'Show Search Icon?', 'tutorstarter' ),
-					'section'         => 'qubelystarters_header_section',
+					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback_search',
 				)
 			)
@@ -248,7 +248,7 @@ class Header {
 				'cta_text_toggle',
 				array(
 					'label'           => esc_html__( 'Show CTA Button?', 'tutorstarter' ),
-					'section'         => 'qubelystarters_header_section',
+					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback',
 				)
 			)
@@ -268,7 +268,7 @@ class Header {
 				'cta_background',
 				array(
 					'label'           => esc_html__( 'CTA Background Color', 'tutorstarter' ),
-					'section'         => 'qubelystarters_header_section',
+					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback',
 				)
 			)
@@ -288,7 +288,7 @@ class Header {
 				'cta_color',
 				array(
 					'label'           => esc_html__( 'CTA Text Color', 'tutorstarter' ),
-					'section'         => 'qubelystarters_header_section',
+					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback',
 				)
 			)
@@ -308,7 +308,7 @@ class Header {
 				'cta_text',
 				array(
 					'label'           => esc_html__( 'CTA text', 'tutorstarter' ),
-					'section'         => 'qubelystarters_header_section',
+					'section'         => 'tutorstarter_header_section',
 					'type'            => 'text',
 					'active_callback' => 'control_active_callback',
 				)
@@ -329,7 +329,7 @@ class Header {
 				'cta_text_link',
 				array(
 					'label'           => esc_html__( 'CTA Text Link', 'tutorstarter' ),
-					'section'         => 'qubelystarters_header_section',
+					'section'         => 'tutorstarter_header_section',
 					'type'            => 'text',
 					'active_callback' => 'control_active_callback',
 				)
@@ -350,7 +350,7 @@ class Header {
 				'cta_font_size',
 				array(
 					'label'           => esc_html__( 'CTA Font Size (px)', 'tutorstarter' ),
-					'section'         => 'qubelystarters_header_section',
+					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback',
 					'input_attrs'     => array(
 						'min'        => 8,
@@ -380,7 +380,7 @@ class Header {
 				'cta_text_font_weight',
 				array(
 					'label'           => esc_html__( 'CTA Font Weight', 'tutorstarter' ),
-					'section'         => 'qubelystarters_header_section',
+					'section'         => 'tutorstarter_header_section',
 					'type'            => 'select',
 					'choices'         => array(
 						100 => 100,

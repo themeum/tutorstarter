@@ -105,7 +105,7 @@ class Tags {
 	 * @return boolean
 	 */
 	public static function categorized_blog() {
-		$all_the_cool_cats = get_transient( 'qubelystarters_categories' );
+		$all_the_cool_cats = get_transient( 'tutorstarter_categories' );
 		if ( false === ( $all_the_cool_cats ) ) {
 			// Create an array of all the categories that are attached to posts.
 			$all_the_cool_cats = get_categories(
@@ -118,7 +118,7 @@ class Tags {
 			);
 			// Count the number of categories that are attached to the posts.
 			$all_the_cool_cats = count( $all_the_cool_cats );
-			set_transient( 'qubelystarters_categories', $all_the_cool_cats );
+			set_transient( 'tutorstarter_categories', $all_the_cool_cats );
 		}
 		if ( $all_the_cool_cats > 1 ) {
 			// This blog has more than 1 category so Gutenberg_Starter_categorized_blog should return true.
@@ -138,6 +138,6 @@ class Tags {
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return;
 		}
-		delete_transient( 'qubelystarters_categories' );
+		delete_transient( 'tutorstarter_categories' );
 	}
 }

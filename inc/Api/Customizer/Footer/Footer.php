@@ -29,9 +29,9 @@ class Footer {
 	public function register( $wp_customize ) {
 
 		$wp_customize->add_section(
-			'qubelystarters_footer_section',
+			'tutorstarter_footer_section',
 			array(
-				'panel'       => 'qubelystarters_customizer_panel',
+				'panel'       => 'tutorstarter_customizer_panel',
 				'title'       => esc_html__( 'Footer', 'tutorstarter' ),
 				'description' => esc_html__( 'Customize the footer', 'tutorstarter' ),
 				'priority'    => 10,
@@ -52,7 +52,7 @@ class Footer {
 				'footer_logo_toggle',
 				array(
 					'label'   => esc_html__( 'Show Footer Logo?', 'tutorstarter' ),
-					'section' => 'qubelystarters_footer_section',
+					'section' => 'tutorstarter_footer_section',
 				)
 			)
 		);
@@ -70,7 +70,7 @@ class Footer {
 				'footer_logo',
 				array(
 					'label'           => esc_html__( 'Footer Bottom Logo', 'tutorstarter' ),
-					'section'         => 'qubelystarters_footer_section',
+					'section'         => 'tutorstarter_footer_section',
 					'active_callback' => 'control_active_callback_footer_logo',
 				)
 			)
@@ -90,7 +90,7 @@ class Footer {
 				'footer_type_select',
 				array(
 					'label'   => esc_html__( 'Select Footer Type', 'tutorstarter' ),
-					'section' => 'qubelystarters_footer_section',
+					'section' => 'tutorstarter_footer_section',
 					'choices' => array(
 						'footer_one'   => array(
 							'name'  => esc_html__( '3 Cols', 'tutorstarter' ),
@@ -133,7 +133,7 @@ class Footer {
 				'footer_widgets_bg_color',
 				array(
 					'label'   => esc_html__( 'Widgets Background Color', 'tutorstarter' ),
-					'section' => 'qubelystarters_footer_section',
+					'section' => 'tutorstarter_footer_section',
 				)
 			)
 		);
@@ -152,7 +152,7 @@ class Footer {
 				'footer_bottom_bg_color',
 				array(
 					'label'   => esc_html__( 'Footer Bottom BG Color', 'tutorstarter' ),
-					'section' => 'qubelystarters_footer_section',
+					'section' => 'tutorstarter_footer_section',
 				)
 			)
 		);
@@ -171,7 +171,7 @@ class Footer {
 				'footer_widgets_text_color',
 				array(
 					'label'   => esc_html__( 'Widgets Text Color', 'tutorstarter' ),
-					'section' => 'qubelystarters_footer_section',
+					'section' => 'tutorstarter_footer_section',
 				)
 			)
 		);
@@ -190,7 +190,7 @@ class Footer {
 				'footer_widget_font_size',
 				array(
 					'label'       => esc_html__( 'Widget Title Font Size', 'tutorstarter' ),
-					'section'     => 'qubelystarters_footer_section',
+					'section'     => 'tutorstarter_footer_section',
 					'input_attrs' => array(
 						'min'        => 8,
 						'max'        => 100,
@@ -219,7 +219,7 @@ class Footer {
 				'footer_widget_font_weight',
 				array(
 					'label'   => esc_html__( 'Widget Title Font Weight', 'tutorstarter' ),
-					'section' => 'qubelystarters_footer_section',
+					'section' => 'tutorstarter_footer_section',
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
@@ -247,7 +247,7 @@ class Footer {
 				'footer_bottom_text_color',
 				array(
 					'label'   => esc_html__( 'Footer Bottom Text Color', 'tutorstarter' ),
-					'section' => 'qubelystarters_footer_section',
+					'section' => 'tutorstarter_footer_section',
 				)
 			)
 		);
@@ -266,7 +266,7 @@ class Footer {
 				'footer_bottom_text',
 				array(
 					'label'   => esc_html__( 'Footer Bottom Text', 'tutorstarter' ),
-					'section' => 'qubelystarters_footer_section',
+					'section' => 'tutorstarter_footer_section',
 				)
 			)
 		);

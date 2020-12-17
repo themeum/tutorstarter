@@ -40,7 +40,7 @@ class Demo_Importer {
 	public function import_theme_demo() {
 
 		$demo_list  = array();
-		$packs_list = get_transient( 'qubelystarters_packs' );
+		$packs_list = get_transient( 'tutorstarter_packs' );
 
 		if ( is_admin() && false === $packs_list ) {
 
@@ -50,11 +50,11 @@ class Demo_Importer {
 				$packs_list = json_decode( $results['body'], true );
 
 				if ( is_array( $packs_list ) || ! empty( $packs_list ) ) {
-					set_transient( 'qubelystarters_packs', $packs_list, DAY_IN_SECONDS );
+					set_transient( 'tutorstarter_packs', $packs_list, DAY_IN_SECONDS );
 				}
 			} catch ( Exception $e ) {
 				echo esc_html( $e->getMessage() );
-				delete_transient( 'qubelystarters_packs' );
+				delete_transient( 'tutorstarter_packs' );
 			}
 		}
 

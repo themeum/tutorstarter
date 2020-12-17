@@ -45,7 +45,7 @@ class Meta {
 				'blog_meta_toggle',
 				array(
 					'label'   => esc_html__( 'Show Post Meta?', 'tutorstarter' ),
-					'section' => 'qubelystarters_blog_section',
+					'section' => 'tutorstarter_blog_section',
 				)
 			)
 		);
@@ -64,7 +64,7 @@ class Meta {
 				'category_meta_toggle',
 				array(
 					'label'           => esc_html__( 'Show Post Categories?', 'tutorstarter' ),
-					'section'         => 'qubelystarters_blog_section',
+					'section'         => 'tutorstarter_blog_section',
 					'active_callback' => 'control_active_callback_meta',
 				)
 			)
@@ -84,7 +84,7 @@ class Meta {
 				'author_meta_toggle',
 				array(
 					'label'           => esc_html__( 'Show Author?', 'tutorstarter' ),
-					'section'         => 'qubelystarters_blog_section',
+					'section'         => 'tutorstarter_blog_section',
 					'active_callback' => 'control_active_callback_meta',
 				)
 			)
@@ -104,7 +104,7 @@ class Meta {
 				'featured_image_toggle',
 				array(
 					'label'   => esc_html__( 'Show Featured Image?', 'tutorstarter' ),
-					'section' => 'qubelystarters_blog_section',
+					'section' => 'tutorstarter_blog_section',
 				)
 			)
 		);
@@ -123,7 +123,7 @@ class Meta {
 				'post_title_toggle',
 				array(
 					'label'   => esc_html__( 'Show Post Title?', 'tutorstarter' ),
-					'section' => 'qubelystarters_blog_section',
+					'section' => 'tutorstarter_blog_section',
 				)
 			)
 		);
@@ -142,7 +142,7 @@ class Meta {
 				'post_excerpt_toggle',
 				array(
 					'label'   => esc_html__( 'Show Post Excerpt?', 'tutorstarter' ),
-					'section' => 'qubelystarters_blog_section',
+					'section' => 'tutorstarter_blog_section',
 				)
 			)
 		);
@@ -161,7 +161,7 @@ class Meta {
 				'post_readmore_toggle',
 				array(
 					'label'   => esc_html__( 'Show Read More Button?', 'tutorstarter' ),
-					'section' => 'qubelystarters_blog_section',
+					'section' => 'tutorstarter_blog_section',
 				)
 			)
 		);

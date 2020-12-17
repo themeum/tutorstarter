@@ -66,7 +66,7 @@ class ResponsiveControl extends Component {
                           : '') + device}
                         onClick={() => {
                           const event = new CustomEvent(
-                            'qubelystartersChangedRepsonsivePreview', {
+                            'tutorstarterChangedRepsonsivePreview', {
                             detail: device
                           })
                           document.dispatchEvent(event);
@@ -96,7 +96,7 @@ class ResponsiveControl extends Component {
 
   linkResponsiveButtons() {
     const self = this;
-    document.addEventListener('qubelystartersChangedRepsonsivePreview', function (e) {
+    document.addEventListener('tutorstarterChangedRepsonsivePreview', function (e) {
       self.changeViewType(e.detail);
     })
   }

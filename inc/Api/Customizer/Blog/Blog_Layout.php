@@ -47,7 +47,7 @@ class Blog_Layout {
 				'blog_layout_select',
 				array(
 					'label'   => esc_html__( 'Blog Layout', 'tutorstarter' ),
-					'section' => 'qubelystarters_blog_section',
+					'section' => 'tutorstarter_blog_section',
 					'choices' => array(
 						'default'   => array(
 							'name'  => esc_html__( 'Default', 'tutorstarter' ),
@@ -88,7 +88,7 @@ class Blog_Layout {
 				'blog_grid_selected',
 				array(
 					'label'           => esc_html__( 'Grid Columns', 'tutorstarter' ),
-					'section'         => 'qubelystarters_blog_section',
+					'section'         => 'tutorstarter_blog_section',
 					'type'            => 'select',
 					'choices'         => array(
 						'layout_grid_3' => esc_html__( '3 Columns', 'tutorstarter' ),

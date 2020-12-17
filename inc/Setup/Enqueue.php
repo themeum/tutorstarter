@@ -63,7 +63,7 @@ class Enqueue {
 		}
 
 		// Localizable data.
-		wp_localize_script( 'main', 'qubelystarters_vars', Inline_Css_Js::localized_js() );
+		wp_localize_script( 'main', 'tutorstarter_vars', Inline_Css_Js::localized_js() );
 
 		// Add all inline css that uses customizer settings.
 		wp_add_inline_style( 'main', Inline_Css_Js::output_css() );
@@ -116,7 +116,7 @@ class Enqueue {
 		wp_enqueue_script( 'tutorstarter-dashboard', mix( 'js/tutorstarter-dashboard.js' ), array( 'wp-api', 'wp-i18n', 'wp-components', 'wp-element' ), QUBELY_STARTERS_VERSION, true );
 		wp_localize_script(
 			'tutorstarter-dashboard',
-			'qubelystarters_dashboard',
+			'tutorstarter_dashboard',
 			array(
 				'admin_url' => get_admin_url(),
 			)
@@ -138,7 +138,7 @@ class Enqueue {
 			wp_enqueue_style( 'tutorstarter-control-gfonts', 'https://fonts.googleapis.com/css?family=' . join( '|', $saved_fonts ) . '&text=Abc&display=swap"', array(), QUBELY_STARTERS_VERSION );
 		}
 		wp_enqueue_script( 'tutorstarter-customizer', mix( 'js/customizer-controls.js' ), array( 'jquery', 'customize-controls', 'wp-i18n', 'wp-components', 'wp-compose', 'wp-edit-post', 'wp-element' ), QUBELY_STARTERS_VERSION, true );
-		wp_localize_script( 'tutorstarter-customizer', 'qubelystarters_customizer', Inline_Css_Js::customizer_localized_js() );
+		wp_localize_script( 'tutorstarter-customizer', 'tutorstarter_customizer', Inline_Css_Js::customizer_localized_js() );
 	}
 
 	/**
@@ -156,6 +156,6 @@ class Enqueue {
 		wp_enqueue_script( 'tutorstarter-schema', mix( 'js/tutorstarter-schema.js' ), array( 'wp-i18n', 'wp-compose', 'wp-data', 'wp-components', 'wp-edit-post', 'wp-element', 'wp-plugins' ), QUBELY_STARTERS_VERSION, true );
 		wp_enqueue_script( 'tutorstarter-settings', mix( 'js/tutorstarter-page-settings.js' ), array( 'wp-i18n', 'wp-compose', 'wp-data', 'wp-components', 'wp-edit-post', 'wp-element', 'wp-plugins' ), QUBELY_STARTERS_VERSION, true );
 
-		wp_localize_script( 'tutorstarter-schema', 'qubelystarters_admin', Inline_Css_Js::admin_localized_js() );
+		wp_localize_script( 'tutorstarter-schema', 'tutorstarter_admin', Inline_Css_Js::admin_localized_js() );
 	}
 }

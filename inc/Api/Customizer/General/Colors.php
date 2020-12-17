@@ -24,9 +24,9 @@ class Colors {
 	public function register( $wp_customize ) {
 
 		$wp_customize->add_section(
-			'qubelystarters_colors_section',
+			'tutorstarter_colors_section',
 			array(
-				'panel'       => 'qubelystarters_customizer_panel',
+				'panel'       => 'tutorstarter_customizer_panel',
 				'title'       => esc_html__( 'Colors', 'tutorstarter' ),
 				'description' => esc_html__( 'Colors Settings', 'tutorstarter' ),
 				'priority'    => 3,
@@ -47,7 +47,7 @@ class Colors {
 				'body_bg_color',
 				array(
 					'label'   => esc_html__( 'Body Background Color', 'tutorstarter' ),
-					'section' => 'qubelystarters_colors_section',
+					'section' => 'tutorstarter_colors_section',
 				)
 			)
 		);
@@ -66,7 +66,7 @@ class Colors {
 				'body_text_color',
 				array(
 					'label'   => esc_html__( 'Body Text Color', 'tutorstarter' ),
-					'section' => 'qubelystarters_colors_section',
+					'section' => 'tutorstarter_colors_section',
 				)
 			)
 		);
@@ -85,7 +85,7 @@ class Colors {
 				'link_color',
 				array(
 					'label'   => esc_html__( 'Link Color', 'tutorstarter' ),
-					'section' => 'qubelystarters_colors_section',
+					'section' => 'tutorstarter_colors_section',
 				)
 			)
 		);

@@ -9,10 +9,10 @@ const { Popover, Button, TextControl, Dashicon, Spinner } = wp.components;
 class FontFamilySelector extends Component {
     constructor(props) {
         super(props);
-        localStorage.setItem('localFonts', JSON.stringify(qubelystarters_customizer.fonts));
+        localStorage.setItem('localFonts', JSON.stringify(tutorstarter_customizer.fonts));
         const getFonts = JSON.parse(localStorage.getItem('localFonts'));
 
-        if (getFonts.Google.length < qubelystarters_customizer.fonts.Google.length) {
+        if (getFonts.Google.length < tutorstarter_customizer.fonts.Google.length) {
             localStorage.removeItem('localFonts');
         }
 

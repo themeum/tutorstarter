@@ -239,16 +239,16 @@ if ( ! function_exists( 'svg' ) ) {
 /**
  * TGMPA Plugin Activation
  */
-add_action( 'tgmpa_register', 'qubelystarters_plugin_activation' );
+add_action( 'tgmpa_register', 'tutorstarter_plugin_activation' );
 
-if ( ! function_exists( 'qubelystarters_plugin_activation' ) ) :
+if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
 
 	/**
 	 * Plugin activation
 	 *
 	 * @return void
 	 */
-	function qubelystarters_plugin_activation() {
+	function tutorstarter_plugin_activation() {
 		$plugins = array(
 			array(
 				'name'               => esc_html__( 'Qubely - Advanced Gutenberg Blocks', 'tutorstarter' ),

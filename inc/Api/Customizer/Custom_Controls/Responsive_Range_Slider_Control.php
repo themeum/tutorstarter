@@ -21,7 +21,7 @@ class Responsive_Range_Slider_Control extends WP_Customize_Control {
 	 *
 	 * @var string control type
 	 */
-	public $type = 'qubelystarters_responsive_range_slider';
+	public $type = 'tutorstarter_responsive_range_slider';
 
 	/**
 	 * Public $input_attrs

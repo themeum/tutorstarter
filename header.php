@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
 <div id="page" class="site">
 
 <?php
-$page_meta      = get_post_meta( get_the_ID(), '_qubelystarters_page_metadata', true );
+$page_meta      = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
 $disable_header = ( ! empty( $page_meta ) ? $page_meta['header_toggle'] : false );
 
 if ( false === $disable_header ) {

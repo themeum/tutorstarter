@@ -1,6 +1,6 @@
 const General = () => {
 
-    const adminUrl = qubelystarters_dashboard.admin_url;
+    const adminUrl = tutorstarter_dashboard.admin_url;
 
     return (
         <div className="thm-opt-wrapper">
@@ -23,31 +23,31 @@ const General = () => {
                                 <li>
                                     <div className="item">
                                         <i className="fas fa-paint-brush"></i>
-                                        <a href={`${adminUrl}customize.php?autofocus[section]=qubelystarters_colors_section`} target="_blank">Colors</a>
+                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_colors_section`} target="_blank">Colors</a>
                                     </div>
                                     <div className="item">
                                         <i class="fas fa-columns"></i>
-                                        <a href={`${adminUrl}customize.php?autofocus[section]=qubelystarters_layout_section`} target="_blank">Layout</a>
+                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_layout_section`} target="_blank">Layout</a>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="item">
                                         <i class="fas fa-paint-roller"></i>
-                                        <a href={`${adminUrl}customize.php?autofocus[section]=qubelystarters_header_section`} target="_blank">Header</a>
+                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_header_section`} target="_blank">Header</a>
                                     </div>
                                     <div className="item">
                                         <i className="fas fa-th"></i>
-                                        <a href={`${adminUrl}customize.php?autofocus[section]=qubelystarters_footer_section`} target="_blank">Footer</a>
+                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_footer_section`} target="_blank">Footer</a>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="item">
                                         <i className="fas fa-font"></i>
-                                        <a href={`${adminUrl}customize.php?autofocus[section]=qubelystarters_typography_section`} target="_blank">Typography</a>
+                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_typography_section`} target="_blank">Typography</a>
                                     </div>
                                     <div className="item">
                                         <i className="far fa-edit"></i>
-                                        <a href={`${adminUrl}customize.php?autofocus[section]=qubelystarters_blog_section`} target="_blank">Blog</a>
+                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_blog_section`} target="_blank">Blog</a>
                                     </div>
                                 </li>
                             </ul>

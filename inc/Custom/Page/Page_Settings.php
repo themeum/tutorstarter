@@ -27,7 +27,7 @@ class Page_Settings {
 	public function register_page_settings_meta() {
 		register_post_meta(
 			'page',
-			'_qubelystarters_page_metadata',
+			'_tutorstarter_page_metadata',
 			array(
 				'type'          => 'object',
 				'single'        => true,

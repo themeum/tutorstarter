@@ -304,7 +304,7 @@ trait Inline_Css_Js {
 	 */
 	public static function get_standard_fonts() {
 		return apply_filters(
-			'qubelystarters_standard_fonts_array',
+			'tutorstarter_standard_fonts_array',
 			Fonts::system_fonts_list()
 		);
 	}
@@ -316,7 +316,7 @@ trait Inline_Css_Js {
 	 */
 	public static function get_google_fonts() {
 		return apply_filters(
-			'qubelystarters_google_fonts_array',
+			'tutorstarter_google_fonts_array',
 			Fonts::google_fonts_list()
 		);
 	}

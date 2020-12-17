@@ -7,12 +7,12 @@ import SchemaFields from './fields/schema-fields';
 const SchemaFieldsData = compose([
     withSelect(() => {
         return {
-            updatedValue: select('core/editor').getEditedPostAttribute('meta')._qubelystarters_schema_metadata,
+            updatedValue: select('core/editor').getEditedPostAttribute('meta')._tutorstarter_schema_metadata,
         }
     }),
     withDispatch((dispatch) => ({
         updateMeta(value, prop) {
-            let meta = select('core/editor').getEditedPostAttribute('meta')._qubelystarters_schema_metadata;
+            let meta = select('core/editor').getEditedPostAttribute('meta')._tutorstarter_schema_metadata;
             meta = {
                 main_schema_select: '',
                 sub_schema_select: '',
@@ -48,12 +48,12 @@ const SchemaFieldsData = compose([
             };
             meta[prop] = value;
 
-            dispatch('core/editor').editPost({ meta: { _qubelystarters_schema_metadata: meta } });
+            dispatch('core/editor').editPost({ meta: { _tutorstarter_schema_metadata: meta } });
         }
     })),
 ])(SchemaFields);
 
-const QubelyStartersSchemaPanel = () => {
+const TutorstarterSchemaPanel = () => {
 
     return (
         <PluginDocumentSettingPanel
@@ -65,4 +65,4 @@ const QubelyStartersSchemaPanel = () => {
     )
 }
 
-export default QubelyStartersSchemaPanel;
+export default TutorstarterSchemaPanel;

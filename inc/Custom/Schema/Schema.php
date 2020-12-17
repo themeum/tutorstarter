@@ -30,7 +30,7 @@ class Schema {
 	public function register_schema_post_meta() {
 		register_post_meta(
 			'',
-			'_qubelystarters_schema_metadata',
+			'_tutorstarter_schema_metadata',
 			array(
 				'type'          => 'object',
 				'single'        => true,
@@ -175,7 +175,7 @@ class Schema {
 	 */
 	public function add_schema() {
 		// Get post meta.
-		$post_meta = get_post_meta( get_the_ID(), '_qubelystarters_schema_metadata', true );
+		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema_metadata', true );
 
 		$schema = array();
 

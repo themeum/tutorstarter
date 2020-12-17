@@ -96,7 +96,7 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var General = function General() {
-  var adminUrl = qubelystarters_dashboard.admin_url;
+  var adminUrl = tutorstarter_dashboard.admin_url;
   return /*#__PURE__*/React.createElement("div", {
     className: "thm-opt-wrapper"
   }, /*#__PURE__*/React.createElement("header", {
@@ -124,42 +124,42 @@ var General = function General() {
   }, /*#__PURE__*/React.createElement("i", {
     className: "fas fa-paint-brush"
   }), /*#__PURE__*/React.createElement("a", {
-    href: "".concat(adminUrl, "customize.php?autofocus[section]=qubelystarters_colors_section"),
+    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_colors_section"),
     target: "_blank"
   }, "Colors")), /*#__PURE__*/React.createElement("div", {
     className: "item"
   }, /*#__PURE__*/React.createElement("i", {
     "class": "fas fa-columns"
   }), /*#__PURE__*/React.createElement("a", {
-    href: "".concat(adminUrl, "customize.php?autofocus[section]=qubelystarters_layout_section"),
+    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_layout_section"),
     target: "_blank"
   }, "Layout"))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("div", {
     className: "item"
   }, /*#__PURE__*/React.createElement("i", {
     "class": "fas fa-paint-roller"
   }), /*#__PURE__*/React.createElement("a", {
-    href: "".concat(adminUrl, "customize.php?autofocus[section]=qubelystarters_header_section"),
+    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_header_section"),
     target: "_blank"
   }, "Header")), /*#__PURE__*/React.createElement("div", {
     className: "item"
   }, /*#__PURE__*/React.createElement("i", {
     className: "fas fa-th"
   }), /*#__PURE__*/React.createElement("a", {
-    href: "".concat(adminUrl, "customize.php?autofocus[section]=qubelystarters_footer_section"),
+    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_footer_section"),
     target: "_blank"
   }, "Footer"))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("div", {
     className: "item"
   }, /*#__PURE__*/React.createElement("i", {
     className: "fas fa-font"
   }), /*#__PURE__*/React.createElement("a", {
-    href: "".concat(adminUrl, "customize.php?autofocus[section]=qubelystarters_typography_section"),
+    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_typography_section"),
     target: "_blank"
   }, "Typography")), /*#__PURE__*/React.createElement("div", {
     className: "item"
   }, /*#__PURE__*/React.createElement("i", {
     className: "far fa-edit"
   }), /*#__PURE__*/React.createElement("a", {
-    href: "".concat(adminUrl, "customize.php?autofocus[section]=qubelystarters_blog_section"),
+    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_blog_section"),
     target: "_blank"
   }, "Blog")))))), /*#__PURE__*/React.createElement("div", {
     className: "thm-opt-sidebar"

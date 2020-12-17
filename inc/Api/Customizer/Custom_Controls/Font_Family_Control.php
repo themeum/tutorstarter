@@ -21,7 +21,7 @@ class Font_Family_Control extends WP_Customize_Control {
 	 *
 	 * @var string control type
 	 */
-	public $type = 'qubelystarters_font_family';
+	public $type = 'tutorstarter_font_family';
 
 	/**
 	 * Public $input_attrs

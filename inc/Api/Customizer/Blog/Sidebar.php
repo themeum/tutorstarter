@@ -24,9 +24,9 @@ class Sidebar {
 	public function register( $wp_customize ) {
 
 		$wp_customize->add_section(
-			'qubelystarters_blog_section',
+			'tutorstarter_blog_section',
 			array(
-				'panel'       => 'qubelystarters_customizer_panel',
+				'panel'       => 'tutorstarter_customizer_panel',
 				'title'       => esc_html__( 'Blog', 'tutorstarter' ),
 				'description' => esc_html__( 'Customize blog', 'tutorstarter' ),
 				'priority'    => 6,
@@ -55,7 +55,7 @@ class Sidebar {
 				'sidebar_type_select',
 				array(
 					'label'   => esc_html__( 'Blog Sidebar Type', 'tutorstarter' ),
-					'section' => 'qubelystarters_blog_section',
+					'section' => 'tutorstarter_blog_section',
 					'choices' => array(
 						'sidebar_none'  => array(
 							'name'  => esc_html__( 'No Sidebar', 'tutorstarter' ),
@@ -96,7 +96,7 @@ class Sidebar {
 				'sidebar_type_single',
 				array(
 					'label'   => esc_html__( 'Single Sidebar Type', 'tutorstarter' ),
-					'section' => 'qubelystarters_blog_section',
+					'section' => 'tutorstarter_blog_section',
 					'choices' => array(
 						'sidebar_none'  => array(
 							'name'  => esc_html__( 'No Sidebar', 'tutorstarter' ),

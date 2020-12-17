@@ -24,9 +24,9 @@ class Typography {
 	 */
 	public function register( $wp_customize ) {
 		$wp_customize->add_section(
-			'qubelystarters_typography_section',
+			'tutorstarter_typography_section',
 			array(
-				'panel'       => 'qubelystarters_customizer_panel',
+				'panel'       => 'tutorstarter_customizer_panel',
 				'title'       => esc_html__( 'Typography', 'tutorstarter' ),
 				'description' => esc_html__( 'Typography Settings', 'tutorstarter' ),
 				'priority'    => 3,
@@ -55,7 +55,7 @@ class Typography {
 				'body_font',
 				array(
 					'label'   => esc_html__( 'Body Typography', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 				)
 			)
 		);
@@ -74,7 +74,7 @@ class Typography {
 				'body_font_size',
 				array(
 					'label'       => esc_html__( 'Font Size', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 8,
 						'max'        => 100,
@@ -103,7 +103,7 @@ class Typography {
 				'body_font_weight',
 				array(
 					'label'   => esc_html__( 'Font Weight', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
@@ -131,7 +131,7 @@ class Typography {
 				'body_font_transform',
 				array(
 					'label'   => esc_html__( 'Text Transform', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						'none'       => esc_html__( 'None', 'tutorstarter' ),
@@ -157,7 +157,7 @@ class Typography {
 				'body_font_lineheight',
 				array(
 					'label'       => esc_html__( 'Line Height', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 0,
 						'max'        => 100,
@@ -188,7 +188,7 @@ class Typography {
 				'body_typography',
 				array(
 					'label'       => esc_html__( 'Body Typography', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'defaultParams' => array(
 							'weight_default'  => 700,
@@ -223,7 +223,7 @@ class Typography {
 				'heading_font',
 				array(
 					'label'   => esc_html__( 'H1 - H6 Font Family', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 				)
 			)
 		);
@@ -242,7 +242,7 @@ class Typography {
 				'h1_font_size',
 				array(
 					'label'       => esc_html__( 'H1 Font Size', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 8,
 						'max'        => 100,
@@ -271,7 +271,7 @@ class Typography {
 				'h1_font_weight',
 				array(
 					'label'   => esc_html__( 'H1 Font Weight', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
@@ -299,7 +299,7 @@ class Typography {
 				'h1_font_transform',
 				array(
 					'label'   => esc_html__( 'H1 Text Transform', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						'none'       => esc_html__( 'None', 'tutorstarter' ),
@@ -325,7 +325,7 @@ class Typography {
 				'h1_font_lineheight',
 				array(
 					'label'       => esc_html__( 'H1 Line Height', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 0,
 						'max'        => 100,
@@ -354,7 +354,7 @@ class Typography {
 				'h2_font_size',
 				array(
 					'label'       => esc_html__( 'H2 Font Size', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 8,
 						'max'        => 100,
@@ -383,7 +383,7 @@ class Typography {
 				'h2_font_weight',
 				array(
 					'label'   => esc_html__( 'H2 Font Weight', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
@@ -411,7 +411,7 @@ class Typography {
 				'h2_font_transform',
 				array(
 					'label'   => esc_html__( 'H2 Text Transform', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						'none'       => esc_html__( 'None', 'tutorstarter' ),
@@ -437,7 +437,7 @@ class Typography {
 				'h2_font_lineheight',
 				array(
 					'label'       => esc_html__( 'H2 Line Height', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 0,
 						'max'        => 100,
@@ -466,7 +466,7 @@ class Typography {
 				'h3_font_size',
 				array(
 					'label'       => esc_html__( 'H3 Font Size', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 8,
 						'max'        => 100,
@@ -495,7 +495,7 @@ class Typography {
 				'h3_font_weight',
 				array(
 					'label'   => esc_html__( 'H3 Font Weight', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
@@ -523,7 +523,7 @@ class Typography {
 				'h3_font_transform',
 				array(
 					'label'   => esc_html__( 'H3 Text Transform', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						'none'       => esc_html__( 'None', 'tutorstarter' ),
@@ -549,7 +549,7 @@ class Typography {
 				'h3_font_lineheight',
 				array(
 					'label'       => esc_html__( 'H3 Line Height', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 0,
 						'max'        => 100,
@@ -578,7 +578,7 @@ class Typography {
 				'h4_font_size',
 				array(
 					'label'       => esc_html__( 'H4 Font Size', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 8,
 						'max'        => 100,
@@ -607,7 +607,7 @@ class Typography {
 				'h4_font_weight',
 				array(
 					'label'   => esc_html__( 'H4 Font Weight', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
@@ -635,7 +635,7 @@ class Typography {
 				'h4_font_transform',
 				array(
 					'label'   => esc_html__( 'H4 Text Transform', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						'none'       => esc_html__( 'None', 'tutorstarter' ),
@@ -661,7 +661,7 @@ class Typography {
 				'h4_font_lineheight',
 				array(
 					'label'       => esc_html__( 'H4 Line Height', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 0,
 						'max'        => 100,
@@ -690,7 +690,7 @@ class Typography {
 				'h5_font_size',
 				array(
 					'label'       => esc_html__( 'H5 Font Size', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 8,
 						'max'        => 100,
@@ -719,7 +719,7 @@ class Typography {
 				'h5_font_weight',
 				array(
 					'label'   => esc_html__( 'H5 Font Weight', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
@@ -747,7 +747,7 @@ class Typography {
 				'h5_font_transform',
 				array(
 					'label'   => esc_html__( 'H5 Text Transform', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						'none'       => esc_html__( 'None', 'tutorstarter' ),
@@ -773,7 +773,7 @@ class Typography {
 				'h5_font_lineheight',
 				array(
 					'label'       => esc_html__( 'H5 Line Height', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 0,
 						'max'        => 100,
@@ -802,7 +802,7 @@ class Typography {
 				'h6_font_size',
 				array(
 					'label'       => esc_html__( 'H6 Font Size', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 8,
 						'max'        => 100,
@@ -831,7 +831,7 @@ class Typography {
 				'h6_font_weight',
 				array(
 					'label'   => esc_html__( 'H6 Font Weight', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
@@ -859,7 +859,7 @@ class Typography {
 				'h6_font_transform',
 				array(
 					'label'   => esc_html__( 'H6 Text Transform', 'tutorstarter' ),
-					'section' => 'qubelystarters_typography_section',
+					'section' => 'tutorstarter_typography_section',
 					'type'    => 'select',
 					'choices' => array(
 						'none'       => esc_html__( 'None', 'tutorstarter' ),
@@ -885,7 +885,7 @@ class Typography {
 				'h6_font_lineheight',
 				array(
 					'label'       => esc_html__( 'H6 Line Height', 'tutorstarter' ),
-					'section'     => 'qubelystarters_typography_section',
+					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'min'        => 0,
 						'max'        => 100,

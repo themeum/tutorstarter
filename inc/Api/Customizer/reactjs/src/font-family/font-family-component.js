@@ -23,10 +23,10 @@ class FontFamilyComponent extends Component {
     }
 
     maybe_get_typekit_font(font) {
-        if (Object.prototype.hasOwnProperty.call(qubelystarters_customizer, 'typekitSlugs') === false) {
+        if (Object.prototype.hasOwnProperty.call(tutorstarter_customizer, 'typekitSlugs') === false) {
             return font;
         }
-        const typekitSlugs = qubelystarters_customizer.typekitSlugs;
+        const typekitSlugs = tutorstarter_customizer.typekitSlugs;
         if (Object.prototype.hasOwnProperty.call(typekitSlugs, font)) {
             return typekitSlugs[font];
         }

@@ -39,7 +39,7 @@ class Setup {
 		add_theme_support(
 			'editor-color-palette',
 			apply_filters(
-				'qubelystarters_editor_color_palette',
+				'tutorstarter_editor_color_palette',
 				array(
 					array(
 						'name'  => __( 'Strong Blue', 'tutorstarter' ),
@@ -64,7 +64,7 @@ class Setup {
 		add_theme_support(
 			'editor-font-sizes',
 			apply_filters(
-				'qubelystarters_editor_font_sizes',
+				'tutorstarter_editor_font_sizes',
 				array(
 					array(
 						'name' => __( 'Tiny Fella', 'tutorstarter' ),
@@ -127,7 +127,7 @@ class Setup {
 		add_theme_support(
 			'custom-background',
 			apply_filters(
-				'qubelystarters_custom_background_args',
+				'tutorstarter_custom_background_args',
 				array(
 					'default-color' => 'ffffff',
 					'default-image' => '',
@@ -157,6 +157,6 @@ class Setup {
 	 * Define a max content width
 	 */
 	public function content_width() {
-		$GLOBALS['content_width'] = apply_filters( 'qubelystarters_content_width', get_theme_mod( 'content_width', 1140 ) );
+		$GLOBALS['content_width'] = apply_filters( 'tutorstarter_content_width', get_theme_mod( 'content_width', 1140 ) );
 	}
 }

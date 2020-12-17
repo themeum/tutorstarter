@@ -24,9 +24,9 @@ class Layout {
 	public function register( $wp_customize ) {
 
 		$wp_customize->add_section(
-			'qubelystarters_layout_section',
+			'tutorstarter_layout_section',
 			array(
-				'panel'       => 'qubelystarters_customizer_panel',
+				'panel'       => 'tutorstarter_customizer_panel',
 				'title'       => esc_html__( 'Layout', 'tutorstarter' ),
 				'description' => esc_html__( 'Layout Settings', 'tutorstarter' ),
 				'priority'    => 3,
@@ -48,7 +48,7 @@ class Layout {
 				array(
 					'label'   => esc_html__( 'Content Width (px)', 'tutorstarter' ),
 					'type'    => 'number',
-					'section' => 'qubelystarters_layout_section',
+					'section' => 'tutorstarter_layout_section',
 				)
 			)
 		);

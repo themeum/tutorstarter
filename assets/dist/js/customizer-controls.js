@@ -2151,7 +2151,7 @@ var ResponsiveControl = /*#__PURE__*/function (_Component) {
         }, /*#__PURE__*/React.createElement(Button, {
           className: (device === view ? 'active-device ' : '') + device,
           onClick: function onClick() {
-            var event = new CustomEvent('qubelystartersChangedRepsonsivePreview', {
+            var event = new CustomEvent('tutorstarterChangedRepsonsivePreview', {
               detail: device
             });
             document.dispatchEvent(event);
@@ -2176,7 +2176,7 @@ var ResponsiveControl = /*#__PURE__*/function (_Component) {
     key: "linkResponsiveButtons",
     value: function linkResponsiveButtons() {
       var self = this;
-      document.addEventListener('qubelystartersChangedRepsonsivePreview', function (e) {
+      document.addEventListener('tutorstarterChangedRepsonsivePreview', function (e) {
         self.changeViewType(e.detail);
       });
     }
@@ -2217,12 +2217,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-wp.customize.controlConstructor.qubelystarters_typography = _typography_control__WEBPACK_IMPORTED_MODULE_0__["TypographyControl"];
-wp.customize.controlConstructor.qubelystarters_font_family = _font_family_control__WEBPACK_IMPORTED_MODULE_1__["FontFamilyControl"];
-wp.customize.controlConstructor.qubelystarters_radio_image = _radio_image_control__WEBPACK_IMPORTED_MODULE_2__["RadioImageControl"];
-wp.customize.controlConstructor.qubelystarters_range_slider = _range_slider_control__WEBPACK_IMPORTED_MODULE_3__["RangeSliderControl"];
-wp.customize.controlConstructor.qubelystarters_toggle_switch = _toggle_switch_control__WEBPACK_IMPORTED_MODULE_4__["ToggleSwitchControl"];
-wp.customize.controlConstructor.qubelystarters_responsive_range_slider = _responsive_range_slider_control__WEBPACK_IMPORTED_MODULE_5__["ResponsiveRangeSliderControl"];
+wp.customize.controlConstructor.tutorstarter_typography = _typography_control__WEBPACK_IMPORTED_MODULE_0__["TypographyControl"];
+wp.customize.controlConstructor.tutorstarter_font_family = _font_family_control__WEBPACK_IMPORTED_MODULE_1__["FontFamilyControl"];
+wp.customize.controlConstructor.tutorstarter_radio_image = _radio_image_control__WEBPACK_IMPORTED_MODULE_2__["RadioImageControl"];
+wp.customize.controlConstructor.tutorstarter_range_slider = _range_slider_control__WEBPACK_IMPORTED_MODULE_3__["RangeSliderControl"];
+wp.customize.controlConstructor.tutorstarter_toggle_switch = _toggle_switch_control__WEBPACK_IMPORTED_MODULE_4__["ToggleSwitchControl"];
+wp.customize.controlConstructor.tutorstarter_responsive_range_slider = _responsive_range_slider_control__WEBPACK_IMPORTED_MODULE_5__["ResponsiveRangeSliderControl"];
 
 /***/ }),
 
@@ -2459,11 +2459,11 @@ var FontFamilyComponent = /*#__PURE__*/function (_Component) {
   _createClass(FontFamilyComponent, [{
     key: "maybe_get_typekit_font",
     value: function maybe_get_typekit_font(font) {
-      if (Object.prototype.hasOwnProperty.call(qubelystarters_customizer, 'typekitSlugs') === false) {
+      if (Object.prototype.hasOwnProperty.call(tutorstarter_customizer, 'typekitSlugs') === false) {
         return font;
       }
 
-      var typekitSlugs = qubelystarters_customizer.typekitSlugs;
+      var typekitSlugs = tutorstarter_customizer.typekitSlugs;
 
       if (Object.prototype.hasOwnProperty.call(typekitSlugs, font)) {
         return typekitSlugs[font];
@@ -2676,10 +2676,10 @@ var FontFamilySelector = /*#__PURE__*/function (_Component) {
     _classCallCheck(this, FontFamilySelector);
 
     _this = _super.call(this, props);
-    localStorage.setItem('localFonts', JSON.stringify(qubelystarters_customizer.fonts));
+    localStorage.setItem('localFonts', JSON.stringify(tutorstarter_customizer.fonts));
     var getFonts = JSON.parse(localStorage.getItem('localFonts'));
 
-    if (getFonts.Google.length < qubelystarters_customizer.fonts.Google.length) {
+    if (getFonts.Google.length < tutorstarter_customizer.fonts.Google.length) {
       localStorage.removeItem('localFonts');
     }
 

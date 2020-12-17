@@ -21,7 +21,7 @@ class Toggle_Switch_Control extends WP_Customize_Control {
 	 *
 	 * @var string control type
 	 */
-	public $type = 'qubelystarters_toggle_switch';
+	public $type = 'tutorstarter_toggle_switch';
 
 	/**
 	 * Public $deafult

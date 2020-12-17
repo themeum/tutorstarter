@@ -7,12 +7,12 @@ import PageSettingsFields from './fields/page-settings-fields';
 const PageSettingsFieldsData = compose([
     withSelect(() => {
         return {
-            updatedValue: select('core/editor').getEditedPostAttribute('meta')._qubelystarters_page_metadata,
+            updatedValue: select('core/editor').getEditedPostAttribute('meta')._tutorstarter_page_metadata,
         }
     }),
     withDispatch((dispatch) => ({
         updateMeta(value, prop) {
-            let meta = select('core/editor').getEditedPostAttribute('meta')._qubelystarters_page_metadata;
+            let meta = select('core/editor').getEditedPostAttribute('meta')._tutorstarter_page_metadata;
             meta = {
                 sidebar_select: 'no-sidebar',
                 page_title_toggle: false,
@@ -22,12 +22,12 @@ const PageSettingsFieldsData = compose([
             };
             meta[prop] = value;
 
-            dispatch('core/editor').editPost({ meta: { _qubelystarters_page_metadata: meta } });
+            dispatch('core/editor').editPost({ meta: { _tutorstarter_page_metadata: meta } });
         }
     })),
 ])(PageSettingsFields);
 
-const QubelyStartersPageSettingsPanel = () => {
+const tutorstarterPageSettingsPanel = () => {
 
     return (
         <PluginDocumentSettingPanel
@@ -39,4 +39,4 @@ const QubelyStartersPageSettingsPanel = () => {
     )
 }
 
-export default QubelyStartersPageSettingsPanel;
+export default tutorstarterPageSettingsPanel;

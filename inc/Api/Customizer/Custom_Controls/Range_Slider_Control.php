@@ -21,7 +21,7 @@ class Range_Slider_Control extends WP_Customize_Control {
 	 *
 	 * @var string control type
 	 */
-	public $type = 'qubelystarters_range_slider';
+	public $type = 'tutorstarter_range_slider';
 
 	/**
 	 * Public $deafult

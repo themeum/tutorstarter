@@ -7,11 +7,11 @@ import { localBusiness, organization, person, review } from './select-options';
 const SchemaFields = ({ updatedValue, updateMeta }) => {
 
     let optionsGroup = [];
-    let is_blog_post = qubelystarters_admin.is_post;
-    let post_title = qubelystarters_admin.post_title;
-    let post_excerpt = qubelystarters_admin.post_excerpt;
-    let post_content = qubelystarters_admin.post_content;
-    let post_thumbnail = qubelystarters_admin.post_thumbnail;
+    let is_blog_post = tutorstarter_admin.is_post;
+    let post_title = tutorstarter_admin.post_title;
+    let post_excerpt = tutorstarter_admin.post_excerpt;
+    let post_content = tutorstarter_admin.post_content;
+    let post_thumbnail = tutorstarter_admin.post_thumbnail;
 
     const selectOptions = input => {
         if ('LocalBusiness' === input) {

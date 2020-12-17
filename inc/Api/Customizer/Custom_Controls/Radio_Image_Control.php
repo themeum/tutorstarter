@@ -21,7 +21,7 @@ class Radio_Image_Control extends WP_Customize_Control {
 	 *
 	 * @var string control type
 	 */
-	public $type = 'qubelystarters_radio_image';
+	public $type = 'tutorstarter_radio_image';
 
 	/**
 	 * Public $choices

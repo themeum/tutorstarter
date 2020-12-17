@@ -72,7 +72,7 @@ class Customizer {
 	public function add_customizer_panel( $wp_customize ) {
 		$wp_customize->remove_section( 'colors' );
 		$wp_customize->add_panel(
-			'qubelystarters_customizer_panel',
+			'tutorstarter_customizer_panel',
 			array(
 				'title'      => __( 'Tutor Starter Options Panel', 'tutorstarter' ),
 				'capability' => 'edit_theme_options',

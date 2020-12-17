@@ -506,7 +506,7 @@
             if (null !== updatedValue) {
                 footerLogo.src = updatedValue;
             } else {
-                footerLogo.src = qubelystarters_vars.site_url + '/wp-content/themes/qubely-starters/assets/dist/images/zeus.png';
+                footerLogo.src = tutorstarter_vars.site_url + '/wp-content/themes/qubely-starters/assets/dist/images/zeus.png';
             }
         })
     });

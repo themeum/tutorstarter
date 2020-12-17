@@ -108,11 +108,11 @@ var SchemaFields = function SchemaFields(_ref) {
   var updatedValue = _ref.updatedValue,
       updateMeta = _ref.updateMeta;
   var optionsGroup = [];
-  var is_blog_post = qubelystarters_admin.is_post;
-  var post_title = qubelystarters_admin.post_title;
-  var post_excerpt = qubelystarters_admin.post_excerpt;
-  var post_content = qubelystarters_admin.post_content;
-  var post_thumbnail = qubelystarters_admin.post_thumbnail;
+  var is_blog_post = tutorstarter_admin.is_post;
+  var post_title = tutorstarter_admin.post_title;
+  var post_excerpt = tutorstarter_admin.post_excerpt;
+  var post_content = tutorstarter_admin.post_content;
+  var post_thumbnail = tutorstarter_admin.post_thumbnail;
 
   var selectOptions = function selectOptions(input) {
     if ('LocalBusiness' === input) {
@@ -673,12 +673,12 @@ var _wp$data = wp.data,
 
 var SchemaFieldsData = compose([withSelect(function () {
   return {
-    updatedValue: select('core/editor').getEditedPostAttribute('meta')._qubelystarters_schema_metadata
+    updatedValue: select('core/editor').getEditedPostAttribute('meta')._tutorstarter_schema_metadata
   };
 }), withDispatch(function (dispatch) {
   return {
     updateMeta: function updateMeta(value, prop) {
-      var meta = select('core/editor').getEditedPostAttribute('meta')._qubelystarters_schema_metadata;
+      var meta = select('core/editor').getEditedPostAttribute('meta')._tutorstarter_schema_metadata;
 
       meta = _objectSpread({
         main_schema_select: '',
@@ -715,21 +715,21 @@ var SchemaFieldsData = compose([withSelect(function () {
       meta[prop] = value;
       dispatch('core/editor').editPost({
         meta: {
-          _qubelystarters_schema_metadata: meta
+          _tutorstarter_schema_metadata: meta
         }
       });
     }
   };
 })])(_fields_schema_fields__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
-var QubelyStartersSchemaPanel = function QubelyStartersSchemaPanel() {
+var TutorstarterSchemaPanel = function TutorstarterSchemaPanel() {
   return /*#__PURE__*/React.createElement(PluginDocumentSettingPanel, {
     name: "tutorstarter-schema-panel",
     title: "Tutor Starter Schema Settings"
   }, /*#__PURE__*/React.createElement(SchemaFieldsData, null));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (QubelyStartersSchemaPanel);
+/* harmony default export */ __webpack_exports__["default"] = (TutorstarterSchemaPanel);
 
 /***/ }),
 
