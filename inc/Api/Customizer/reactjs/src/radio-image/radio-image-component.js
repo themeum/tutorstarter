@@ -35,10 +35,10 @@ const RadioImageComponent = ({ control }) => {
 
     return (
         <div>
-            <div className='qubelystarters-control-header'>
+            <div className='tutorstarter-control-header'>
                 {label && <span className='customize-control-title'>{label}</span>}
             </div>
-            <div className='qubelystarters-radio-image'>
+            <div className='tutorstarter-radio-image'>
                 {renderOptions()}
             </div>
         </div>

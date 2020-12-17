@@ -6,7 +6,7 @@ const { useState, useEffect } = wp.element;
 const RangeSliderComponent = ({ control }) => {
 
     useEffect(() => {
-        document.addEventListener('qubelystarters-customizer-event', (e) => {
+        document.addEventListener('tutorstarter-customizer-event', (e) => {
             if (!e.detail) return false;
             if (e.detail.id !== control.id) return false;
             updateValues(e.detail.value);
@@ -25,8 +25,8 @@ const RangeSliderComponent = ({ control }) => {
     }
 
     return (
-        <div className='qubelystarters-background-control qubelystarters-range-control'>
-            <div className='qubelystarters-control-header'>
+        <div className='tutorstarter-background-control tutorstarter-range-control'>
+            <div className='tutorstarter-control-header'>
                 {label && <span className='customize-control-title'>{label}</span>}
             </div>
             <div className='range-wrap'>

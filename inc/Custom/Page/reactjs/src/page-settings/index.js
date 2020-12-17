@@ -31,8 +31,8 @@ const QubelyStartersPageSettingsPanel = () => {
 
     return (
         <PluginDocumentSettingPanel
-            name='qubelystarters-settings-panel'
-            title='Qubely Starters Page Settings'
+            name='tutorstarter-settings-panel'
+            title='Tutor Starter Page Settings'
         >
             <PageSettingsFieldsData />
         </PluginDocumentSettingPanel>

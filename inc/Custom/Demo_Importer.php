@@ -90,7 +90,7 @@ class Demo_Importer {
 	 * @return string
 	 */
 	public function change_text( $default_text ) {
-		$default_text .= '<div class="demo__intro-text"><h3>' . __( 'Welcome to Qubely Starters One Click Demo Import', 'tutorstarter' ) . '</h3></div>';
+		$default_text .= '<div class="demo__intro-text"><h3>' . __( 'Welcome to Tutor Starter One Click Demo Import', 'tutorstarter' ) . '</h3></div>';
 
 		return $default_text;
 	}
@@ -104,10 +104,10 @@ class Demo_Importer {
 	 */
 	public function change_plugin_page( $default_settings ) {
 		$default_settings['parent_slug'] = 'tutorstarter';
-		$default_settings['page_title']  = esc_html__( 'Qubely Starters One Click Demo Import', 'tutorstarter' );
+		$default_settings['page_title']  = esc_html__( 'Tutor Starter One Click Demo Import', 'tutorstarter' );
 		$default_settings['menu_title']  = esc_html__( 'Demo Import', 'tutorstarter' );
 		$default_settings['capability']  = 'import';
-		$default_settings['menu_slug']   = 'qubelystarters-demo-import';
+		$default_settings['menu_slug']   = 'tutorstarter-demo-import';
 
 		return $default_settings;
 	}

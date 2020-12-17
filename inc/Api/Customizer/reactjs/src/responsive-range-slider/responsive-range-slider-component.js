@@ -17,7 +17,7 @@ const ResponsiveRangeSliderComponent = ({ control }) => {
     if (value !== responsiveConverted) {
       setValue(responsiveConverted);
     }
-    document.addEventListener('qubelystarters-changed-customizer-value', (e) => {
+    document.addEventListener('tutorstarter-changed-customizer-value', (e) => {
       if (!e.detail) return false;
       if (e.detail.id !== control.id) return false;
       // Make sure we translate int values to responsive values.
@@ -68,13 +68,13 @@ const ResponsiveRangeSliderComponent = ({ control }) => {
 
   const controlHeader = () => {
     return (
-      <div className='qubelystarters-responsive-control-header'>
+      <div className='tutorstarter-responsive-control-header'>
         {label && <span className='customize-control-title'>{label}</span>}
         <ResponsiveControl
           onChange={(device) => setCurrentDevice(device)}
           hideResponsive={hideResponsive || false}
         />
-        <div className='qubelystarters-units'>
+        <div className='tutorstarter-units'>
           {unitButtons()}
         </div>
       </div>
@@ -92,7 +92,7 @@ const ResponsiveRangeSliderComponent = ({ control }) => {
   displayValue = displayValue === 0 ? 0 : (displayValue || '');
 
   return (
-    <div className='qubelystarters-background-control qubelystarters-range-control'>
+    <div className='tutorstarter-background-control tutorstarter-range-control'>
       {controlHeader()}
       <div className='range-wrap'>
         <RangeControl

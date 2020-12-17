@@ -74,7 +74,7 @@ class Customizer {
 		$wp_customize->add_panel(
 			'qubelystarters_customizer_panel',
 			array(
-				'title'      => __( 'Qubely Starters Options Panel', 'tutorstarter' ),
+				'title'      => __( 'Tutor Starter Options Panel', 'tutorstarter' ),
 				'capability' => 'edit_theme_options',
 				'priority'   => 5,
 			)

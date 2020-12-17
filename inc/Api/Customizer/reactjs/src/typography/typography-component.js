@@ -67,7 +67,7 @@ class TypographyComponent extends Component {
 						{ this.props.control.params.label }
 					</span>
 				) }
-				<div className="qubelystarters-typography-control qubelystarters-background-control">
+				<div className="tutorstarter-typography-control tutorstarter-background-control">
 					{ this.renderFontWeight() }
 					{ this.renderTextTransform() }
 				</div>

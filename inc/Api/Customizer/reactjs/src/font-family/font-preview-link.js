@@ -20,7 +20,7 @@ class FontPreviewLink extends Component {
                 this.props.onClick();
             }}
             >
-                <span className='qubelystarters-font-family'>{this.props.label || this.props.fontFace}</span>
+                <span className='tutorstarter-font-family'>{this.props.label || this.props.fontFace}</span>
                 <VisibilitySensor onChange={(isVisible) => {
                     if (isVisible) {
                         this.setState({ previewWasRendered: true });
@@ -29,8 +29,8 @@ class FontPreviewLink extends Component {
                 >
                     {
                         (this.state.previewWasRendered || this.props.delayLoad === false)
-                            ? <span className='qubelystarters-font-preview' style={style}>Abc</span>
-                            : <span className='qubelystarters-font-preview '>...</span>
+                            ? <span className='tutorstarter-font-preview' style={style}>Abc</span>
+                            : <span className='tutorstarter-font-preview '>...</span>
                     }
                 </VisibilitySensor>
             </a>

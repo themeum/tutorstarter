@@ -107,15 +107,15 @@ class Enqueue {
 	 * Enqueue Admin assets
 	 */
 	public function enqueue_admin_scripts() {
-		wp_enqueue_style( 'qubelystarters-dashboard', mix( 'css/dashboard.css' ), array( 'wp-components' ), QUBELY_STARTERS_VERSION, 'all' );
+		wp_enqueue_style( 'tutorstarter-dashboard', mix( 'css/dashboard.css' ), array( 'wp-components' ), QUBELY_STARTERS_VERSION, 'all' );
 
 		if ( ! isset( $_GET['page'] ) || 'tutorstarter' !== $_GET['page'] ) {
 			return;
 		}
 
-		wp_enqueue_script( 'qubelystarters-dashboard', mix( 'js/qubelystarters-dashboard.js' ), array( 'wp-api', 'wp-i18n', 'wp-components', 'wp-element' ), QUBELY_STARTERS_VERSION, true );
+		wp_enqueue_script( 'tutorstarter-dashboard', mix( 'js/tutorstarter-dashboard.js' ), array( 'wp-api', 'wp-i18n', 'wp-components', 'wp-element' ), QUBELY_STARTERS_VERSION, true );
 		wp_localize_script(
-			'qubelystarters-dashboard',
+			'tutorstarter-dashboard',
 			'qubelystarters_dashboard',
 			array(
 				'admin_url' => get_admin_url(),
@@ -127,7 +127,7 @@ class Enqueue {
 	 * Enqueue customizer controls
 	 */
 	public function enqueue_customizer_controls_scripts() {
-		wp_enqueue_style( 'qubelystarters-controls', mix( 'css/all-controls.css' ), array( 'wp-components' ), QUBELY_STARTERS_VERSION, 'all' );
+		wp_enqueue_style( 'tutorstarter-controls', mix( 'css/all-controls.css' ), array( 'wp-components' ), QUBELY_STARTERS_VERSION, 'all' );
 
 		$saved_fonts = get_transient( 'google_fonts' );
 		if ( false === $saved_fonts ) {
@@ -135,27 +135,27 @@ class Enqueue {
 		}
 
 		if ( ! empty( $saved_fonts ) && is_array( $saved_fonts ) ) {
-			wp_enqueue_style( 'qubelystarters-control-gfonts', 'https://fonts.googleapis.com/css?family=' . join( '|', $saved_fonts ) . '&text=Abc&display=swap"', array(), QUBELY_STARTERS_VERSION );
+			wp_enqueue_style( 'tutorstarter-control-gfonts', 'https://fonts.googleapis.com/css?family=' . join( '|', $saved_fonts ) . '&text=Abc&display=swap"', array(), QUBELY_STARTERS_VERSION );
 		}
-		wp_enqueue_script( 'qubelystarters-customizer', mix( 'js/customizer-controls.js' ), array( 'jquery', 'customize-controls', 'wp-i18n', 'wp-components', 'wp-compose', 'wp-edit-post', 'wp-element' ), QUBELY_STARTERS_VERSION, true );
-		wp_localize_script( 'qubelystarters-customizer', 'qubelystarters_customizer', Inline_Css_Js::customizer_localized_js() );
+		wp_enqueue_script( 'tutorstarter-customizer', mix( 'js/customizer-controls.js' ), array( 'jquery', 'customize-controls', 'wp-i18n', 'wp-components', 'wp-compose', 'wp-edit-post', 'wp-element' ), QUBELY_STARTERS_VERSION, true );
+		wp_localize_script( 'tutorstarter-customizer', 'qubelystarters_customizer', Inline_Css_Js::customizer_localized_js() );
 	}
 
 	/**
 	 * Enqueue customizer preview
 	 */
 	public function enqueue_customize_preview() {
-		wp_enqueue_script( 'qubelystarters-preview', mix( 'js/customizer-preview.js' ), array( 'customize-preview' ), QUBELY_STARTERS_VERSION, true );
+		wp_enqueue_script( 'tutorstarter-preview', mix( 'js/customizer-preview.js' ), array( 'customize-preview' ), QUBELY_STARTERS_VERSION, true );
 	}
 
 	/**
 	 * Enqueue Editor scripts and assets
 	 */
 	public function enqueue_editor_assets() {
-		wp_enqueue_style( 'qubelystarters-admin', mix( 'css/admin.css' ), array(), QUBELY_STARTERS_VERSION, 'all' );
-		wp_enqueue_script( 'qubelystarters-schema', mix( 'js/qubelystarters-schema.js' ), array( 'wp-i18n', 'wp-compose', 'wp-data', 'wp-components', 'wp-edit-post', 'wp-element', 'wp-plugins' ), QUBELY_STARTERS_VERSION, true );
-		wp_enqueue_script( 'qubelystarters-settings', mix( 'js/qubelystarters-page-settings.js' ), array( 'wp-i18n', 'wp-compose', 'wp-data', 'wp-components', 'wp-edit-post', 'wp-element', 'wp-plugins' ), QUBELY_STARTERS_VERSION, true );
+		wp_enqueue_style( 'tutorstarter-admin', mix( 'css/admin.css' ), array(), QUBELY_STARTERS_VERSION, 'all' );
+		wp_enqueue_script( 'tutorstarter-schema', mix( 'js/tutorstarter-schema.js' ), array( 'wp-i18n', 'wp-compose', 'wp-data', 'wp-components', 'wp-edit-post', 'wp-element', 'wp-plugins' ), QUBELY_STARTERS_VERSION, true );
+		wp_enqueue_script( 'tutorstarter-settings', mix( 'js/tutorstarter-page-settings.js' ), array( 'wp-i18n', 'wp-compose', 'wp-data', 'wp-components', 'wp-edit-post', 'wp-element', 'wp-plugins' ), QUBELY_STARTERS_VERSION, true );
 
-		wp_localize_script( 'qubelystarters-schema', 'qubelystarters_admin', Inline_Css_Js::admin_localized_js() );
+		wp_localize_script( 'tutorstarter-schema', 'qubelystarters_admin', Inline_Css_Js::admin_localized_js() );
 	}
 }

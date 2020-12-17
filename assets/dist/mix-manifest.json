@@ -7,7 +7,7 @@
     "/css/dashboard.css": "/css/dashboard.css",
     "/js/customizer-controls.js": "/js/customizer-controls.js",
     "/js/customizer-preview.js": "/js/customizer-preview.js",
-    "/js/qubelystarters-dashboard.js": "/js/qubelystarters-dashboard.js",
-    "/js/qubelystarters-page-settings.js": "/js/qubelystarters-page-settings.js",
-    "/js/qubelystarters-schema.js": "/js/qubelystarters-schema.js"
+    "/js/tutorstarter-dashboard.js": "/js/tutorstarter-dashboard.js",
+    "/js/tutorstarter-page-settings.js": "/js/tutorstarter-page-settings.js",
+    "/js/tutorstarter-schema.js": "/js/tutorstarter-schema.js"
 }

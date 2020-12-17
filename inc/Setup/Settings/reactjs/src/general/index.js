@@ -7,7 +7,7 @@ const General = () => {
             <header className="thm-opt-header">
                 <div className="thm-opt-container header-content">
                     <div className="thm-title">
-                        <h1>Qubely Starters</h1>
+                        <h1>Tutor Starter</h1>
                     </div>
                     <div className="thm-tagline">Version <span><strong>1.0.0</strong></span></div>
                 </div>
@@ -67,7 +67,7 @@ const General = () => {
                                 alt=""
                             />
                             <div className="miscellaneous">
-                                <p>With Qubely Starters, your creativity just got a power-up! Enjoy the freedom of customization and speed that you never had before.</p>
+                                <p>With Tutor Starter, your creativity just got a power-up! Enjoy the freedom of customization and speed that you never had before.</p>
                                 <a href="https://qubely.io">Learn more</a>
                             </div>
                         </div>

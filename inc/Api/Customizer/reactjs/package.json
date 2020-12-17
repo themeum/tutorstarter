@@ -1,7 +1,7 @@
 {
-    "name": "qubelystarters",
+    "name": "tutorstarter",
     "version": "1.0.0",
-    "description": "Modern WordPress Theme for Qubely and Gutenberg block editor.",
+    "description": "Modern WordPress Theme for Tutor LMS.",
     "main": "index.js",
     "dependencies": {
         "classnames": "^2.2.6",

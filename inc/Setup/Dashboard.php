@@ -26,8 +26,8 @@ class Dashboard {
 	 */
 	public function add_admin_menu() {
 
-		$page_title = __( 'Qubely Starters Options', 'tutorstarter' );
-		$menu_title = __( 'Qubely Starters', 'tutorstarter' );
+		$page_title = __( 'Tutor Starter Options', 'tutorstarter' );
+		$menu_title = __( 'Tutor Starter', 'tutorstarter' );
 		$capability = 'manage_options';
 		$menu_slug  = 'tutorstarter';
 		$callback   = array( $this, 'callback' );
@@ -41,6 +41,6 @@ class Dashboard {
 	 * Callback
 	 */
 	public function callback() {
-		echo '<div id="qubelystarters-dashboard"></div>';
+		echo '<div id="tutorstarter-dashboard"></div>';
 	}
 }

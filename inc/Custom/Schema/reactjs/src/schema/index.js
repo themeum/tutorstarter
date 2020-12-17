@@ -57,8 +57,8 @@ const QubelyStartersSchemaPanel = () => {
 
     return (
         <PluginDocumentSettingPanel
-            name='qubelystarters-schema-panel'
-            title='Qubely Starters Schema Settings'
+            name='tutorstarter-schema-panel'
+            title='Tutor Starter Schema Settings'
         >
             <SchemaFieldsData />
         </PluginDocumentSettingPanel>

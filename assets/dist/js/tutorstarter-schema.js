@@ -86,25 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./inc/Custom/Schema/reactjs/src/qubelystarters-schema.js":
-/*!****************************************************************!*\
-  !*** ./inc/Custom/Schema/reactjs/src/qubelystarters-schema.js ***!
-  \****************************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _schema__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./schema */ "./inc/Custom/Schema/reactjs/src/schema/index.js");
-var registerPlugin = wp.plugins.registerPlugin;
-
-registerPlugin('qubelystarters-schema-panel', {
-  render: _schema__WEBPACK_IMPORTED_MODULE_0__["default"],
-  icon: ''
-});
-
-/***/ }),
-
 /***/ "./inc/Custom/Schema/reactjs/src/schema/fields/schema-fields.js":
 /*!**********************************************************************!*\
   !*** ./inc/Custom/Schema/reactjs/src/schema/fields/schema-fields.js ***!
@@ -743,8 +724,8 @@ var SchemaFieldsData = compose([withSelect(function () {
 
 var QubelyStartersSchemaPanel = function QubelyStartersSchemaPanel() {
   return /*#__PURE__*/React.createElement(PluginDocumentSettingPanel, {
-    name: "qubelystarters-schema-panel",
-    title: "Qubely Starters Schema Settings"
+    name: "tutorstarter-schema-panel",
+    title: "Tutor Starter Schema Settings"
   }, /*#__PURE__*/React.createElement(SchemaFieldsData, null));
 };
 
@@ -752,14 +733,33 @@ var QubelyStartersSchemaPanel = function QubelyStartersSchemaPanel() {
 
 /***/ }),
 
+/***/ "./inc/Custom/Schema/reactjs/src/tutorstarter-schema.js":
+/*!**************************************************************!*\
+  !*** ./inc/Custom/Schema/reactjs/src/tutorstarter-schema.js ***!
+  \**************************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _schema__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./schema */ "./inc/Custom/Schema/reactjs/src/schema/index.js");
+var registerPlugin = wp.plugins.registerPlugin;
+
+registerPlugin('tutorstarter-schema-panel', {
+  render: _schema__WEBPACK_IMPORTED_MODULE_0__["default"],
+  icon: ''
+});
+
+/***/ }),
+
 /***/ 4:
-/*!**********************************************************************!*\
-  !*** multi ./inc/Custom/Schema/reactjs/src/qubelystarters-schema.js ***!
-  \**********************************************************************/
+/*!********************************************************************!*\
+  !*** multi ./inc/Custom/Schema/reactjs/src/tutorstarter-schema.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/qubelythemeh/app/public/wp-content/themes/qubelystarters/inc/Custom/Schema/reactjs/src/qubelystarters-schema.js */"./inc/Custom/Schema/reactjs/src/qubelystarters-schema.js");
+module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Custom/Schema/reactjs/src/tutorstarter-schema.js */"./inc/Custom/Schema/reactjs/src/tutorstarter-schema.js");
 
 
 /***/ })

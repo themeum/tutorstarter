@@ -4,5 +4,5 @@ import Dashboard from './index';
 
 render(
     <Dashboard />,
-    document.getElementById('qubelystarters-dashboard')
+    document.getElementById('tutorstarter-dashboard')
 );

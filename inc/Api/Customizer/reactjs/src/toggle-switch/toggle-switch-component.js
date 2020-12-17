@@ -7,7 +7,7 @@ const { useState, useEffect } = wp.element;
 const ToggleSwitchComponent = ({ control }) => {
 
     useEffect(() => {
-        document.addEventListener('qubelystarters-customizer-event', (e) => {
+        document.addEventListener('tutorstarter-customizer-event', (e) => {
             if (!e.detail) {
                 return false;
             }
@@ -21,9 +21,9 @@ const ToggleSwitchComponent = ({ control }) => {
     const [value, setValue] = useState(control.setting.get());
 
     return (
-        <div className='qubelystarters-background-control flex-contents'>
+        <div className='tutorstarter-background-control flex-contents'>
             <ToggleControl
-                className='qubelystarters-toggle-control'
+                className='tutorstarter-toggle-control'
                 checked={value}
                 label={control.params.label}
                 onChange={(updatedValue) => {

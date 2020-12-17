@@ -41,7 +41,7 @@ class FontFamilyComponent extends Component {
                     <span className='customize-control-title'>
                         {this.props.control.params.label}
                     </span>}
-                <div className='qubelystarters-typeface-control qubelystarters-background-control'>
+                <div className='tutorstarter-typeface-control tutorstarter-background-control'>
                     <FontFamilySelector
                         selected={this.state.fontFamily}
                         onFontChoice={(fontFamilySource, fontFamily) => {

@@ -44,7 +44,7 @@ class ResponsiveControl extends Component {
 
     return (
       <Fragment>
-        <div className='qubelystarters-responsive-control-bar'>
+        <div className='tutorstarter-responsive-control-bar'>
           {
             controlLabel &&
             <span
@@ -81,7 +81,7 @@ class ResponsiveControl extends Component {
             </div>}
         </div>
         {this.props.children &&
-          <div className='qubelystarters-responsive-controls-content'>
+          <div className='tutorstarter-responsive-controls-content'>
             {this.props.children}
           </div>}
       </Fragment>

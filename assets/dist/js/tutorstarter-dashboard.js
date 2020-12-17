@@ -105,7 +105,7 @@ var General = function General() {
     className: "thm-opt-container header-content"
   }, /*#__PURE__*/React.createElement("div", {
     className: "thm-title"
-  }, /*#__PURE__*/React.createElement("h1", null, "Qubely Starters")), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("h1", null, "Tutor Starter")), /*#__PURE__*/React.createElement("div", {
     className: "thm-tagline"
   }, "Version ", /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("strong", null, "1.0.0"))))), /*#__PURE__*/React.createElement("main", {
     className: "thm-opt-container"
@@ -176,7 +176,7 @@ var General = function General() {
     alt: ""
   }), /*#__PURE__*/React.createElement("div", {
     className: "miscellaneous"
-  }, /*#__PURE__*/React.createElement("p", null, "With Qubely Starters, your creativity just got a power-up! Enjoy the freedom of customization and speed that you never had before."), /*#__PURE__*/React.createElement("a", {
+  }, /*#__PURE__*/React.createElement("p", null, "With Tutor Starter, your creativity just got a power-up! Enjoy the freedom of customization and speed that you never had before."), /*#__PURE__*/React.createElement("a", {
     href: "https://qubely.io"
   }, "Learn more")))))));
 };
@@ -206,10 +206,10 @@ var Dashboard = function Dashboard() {
 
 /***/ }),
 
-/***/ "./inc/Setup/Settings/reactjs/src/qubelystarters-dashboard.js":
-/*!********************************************************************!*\
-  !*** ./inc/Setup/Settings/reactjs/src/qubelystarters-dashboard.js ***!
-  \********************************************************************/
+/***/ "./inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js":
+/*!******************************************************************!*\
+  !*** ./inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js ***!
+  \******************************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -218,18 +218,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./inc/Setup/Settings/reactjs/src/index.js");
 var render = wp.element.render;
 
-render( /*#__PURE__*/React.createElement(_index__WEBPACK_IMPORTED_MODULE_0__["default"], null), document.getElementById('qubelystarters-dashboard'));
+render( /*#__PURE__*/React.createElement(_index__WEBPACK_IMPORTED_MODULE_0__["default"], null), document.getElementById('tutorstarter-dashboard'));
 
 /***/ }),
 
 /***/ 6:
-/*!**************************************************************************!*\
-  !*** multi ./inc/Setup/Settings/reactjs/src/qubelystarters-dashboard.js ***!
-  \**************************************************************************/
+/*!************************************************************************!*\
+  !*** multi ./inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/qubelythemeh/app/public/wp-content/themes/qubelystarters/inc/Setup/Settings/reactjs/src/qubelystarters-dashboard.js */"./inc/Setup/Settings/reactjs/src/qubelystarters-dashboard.js");
+module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js */"./inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js");
 
 
 /***/ })

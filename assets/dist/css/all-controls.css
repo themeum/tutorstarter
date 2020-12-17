@@ -1,8 +1,8 @@
-.qubelystarters-units {
+.tutorstarter-units {
   margin-left: auto;
 }
 
-.qubelystarters-units button.components-button {
+.tutorstarter-units button.components-button {
   border: none;
   color: #7e8993;
   text-transform: uppercase;
@@ -20,26 +20,26 @@
   justify-content: center;
 }
 
-.qubelystarters-units button.components-button.active {
+.tutorstarter-units button.components-button.active {
   background: #7e8993;
   color: #fff;
 }
 
-.qubelystarters-units button.components-button.active.alone {
+.tutorstarter-units button.components-button.active.alone {
   background-color: #007cba;
   text-shadow: none;
 }
 
-.qubelystarters-control-header {
+.tutorstarter-control-header {
   margin-bottom: 7px;
 }
 
-.qubelystarters-background-control .customize-control-description {
+.tutorstarter-background-control .customize-control-description {
   margin-bottom: 0 !important;
   margin-top: 10px !important;
 }
 
-.qubelystarters-background-control {
+.tutorstarter-background-control {
   border: 1px solid #7e8993;
   border-radius: 3px;
   padding: 10px;
@@ -51,44 +51,44 @@
   align-items: center;
 }
 
-.qubelystarters-responsive-control-header {
+.tutorstarter-responsive-control-header {
   display: flex;
   align-items: center;
   padding-bottom: 5px;
 }
 
-.qubelystarters-responsive-control-bar {
+.tutorstarter-responsive-control-bar {
   display: flex;
   align-items: center;
   margin-left: 14px;
 }
 
-.qubelystarters-responsive-control-bar .customize-control-title {
+.tutorstarter-responsive-control-bar .customize-control-title {
   margin: 0 0 10px;
 }
 
-.qubelystarters-responsive-control-bar .components-button-group {
+.tutorstarter-responsive-control-bar .components-button-group {
   display: flex;
   border: none;
 }
 
-.qubelystarters-responsive-control-bar button {
+.tutorstarter-responsive-control-bar button {
   height: auto;
   box-shadow: none !important;
   padding: 3px 4px !important;
 }
 
-.qubelystarters-responsive-control-bar button svg {
+.tutorstarter-responsive-control-bar button svg {
   fill: #007cba !important;
   height: 15px;
   width: 16px;
 }
 
-.qubelystarters-responsive-control-bar button.active-device svg {
+.tutorstarter-responsive-control-bar button.active-device svg {
   fill: #7e8993 !important;
 }
 
-.qubelystarters-typeface-control .font-family-selector-toggle {
+.tutorstarter-typeface-control .font-family-selector-toggle {
   width: 100%;
   height: 35px;
   align-items: center;
@@ -99,7 +99,7 @@
   background-color: transparent;
 }
 
-.qubelystarters-typeface-control .font-family-selector-toggle .ff-name {
+.tutorstarter-typeface-control .font-family-selector-toggle .ff-name {
   color: #7e8993;
   width: 65%;
   overflow: hidden;
@@ -108,25 +108,25 @@
   text-align: left;
 }
 
-.qubelystarters-typeface-control .font-family-selector-toggle .ff-preview {
+.tutorstarter-typeface-control .font-family-selector-toggle .ff-preview {
   color: #7e8993 !important;
   line-height: 1;
   margin-left: auto;
   font-size: 21px;
 }
 
-.qubelystarters-typeface-control .popover-content {
+.tutorstarter-typeface-control .popover-content {
   position: relative;
   display: block;
   width: 300px !important;
 }
 
-.qubelystarters-typeface-control .popover-header {
+.tutorstarter-typeface-control .popover-header {
   position: absolute;
   top: -40px;
 }
 
-.qubelystarters-typeface-control .search {
+.tutorstarter-typeface-control .search {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,58 +139,58 @@
   box-sizing: border-box;
 }
 
-.qubelystarters-typeface-control .search .components-base-control__field {
+.tutorstarter-typeface-control .search .components-base-control__field {
   margin-bottom: 0;
 }
 
-.qubelystarters-typeface-control .search .components-base-control__field input {
+.tutorstarter-typeface-control .search .components-base-control__field input {
   height: 25px;
   width: 100%;
 }
 
-.qubelystarters-typeface-control .search .components-base-control {
+.tutorstarter-typeface-control .search .components-base-control {
   width: 85%;
 }
 
-.qubelystarters-typeface-control .search .close-font-selector {
+.tutorstarter-typeface-control .search .close-font-selector {
   padding: 0 5px;
   margin-left: auto;
 }
 
-.qubelystarters-typeface-control .components-popover__content {
+.tutorstarter-typeface-control .components-popover__content {
   overflow: hidden !important;
 }
 
-.qubelystarters-typeface-control .qubelystarters-fonts-list {
+.tutorstarter-typeface-control .tutorstarter-fonts-list {
   max-height: 400px;
   margin-top: 40px;
   overflow: auto;
 }
 
-.qubelystarters-typeface-control .qubelystarters-fonts-list .load-more {
+.tutorstarter-typeface-control .tutorstarter-fonts-list .load-more {
   padding: 10px 0;
 }
 
-.qubelystarters-typeface-control .qubelystarters-fonts-list .load-more svg {
+.tutorstarter-typeface-control .tutorstarter-fonts-list .load-more svg {
   fill: #7e8993;
 }
 
-.qubelystarters-typeface-control .qubelystarters-fonts-list li {
+.tutorstarter-typeface-control .tutorstarter-fonts-list li {
   margin: 0;
 }
 
-.qubelystarters-typeface-control .qubelystarters-fonts-list li.selected a {
+.tutorstarter-typeface-control .tutorstarter-fonts-list li.selected a {
   background-color: #0b69da;
   color: #fff;
 }
 
-.qubelystarters-typeface-control .qubelystarters-fonts-list li.no-result {
+.tutorstarter-typeface-control .tutorstarter-fonts-list li.no-result {
   opacity: 0.75;
   font-weight: 600;
   padding: 10px 0;
 }
 
-.qubelystarters-typeface-control .qubelystarters-fonts-list li.font-group-header {
+.tutorstarter-typeface-control .tutorstarter-fonts-list li.font-group-header {
   text-align: left;
   padding: 5px 10px;
   font-size: 15px;
@@ -198,7 +198,7 @@
   background-color: #efefef;
 }
 
-.qubelystarters-typeface-control .qubelystarters-fonts-list li a {
+.tutorstarter-typeface-control .tutorstarter-fonts-list li a {
   align-items: center;
   display: flex;
   padding: 5px 10px;
@@ -207,12 +207,12 @@
   border-bottom: 1px solid #efefef;
 }
 
-.qubelystarters-typeface-control .qubelystarters-fonts-list li a:hover {
+.tutorstarter-typeface-control .tutorstarter-fonts-list li a:hover {
   color: #fff;
   background-color: #0073aa;
 }
 
-.qubelystarters-typeface-control .qubelystarters-fonts-list li a .qubelystarters-font-family {
+.tutorstarter-typeface-control .tutorstarter-fonts-list li a .tutorstarter-font-family {
   font-size: 14px;
   font-weight: 400;
   text-align: left;
@@ -221,79 +221,79 @@
   text-overflow: ellipsis;
 }
 
-.qubelystarters-typeface-control .qubelystarters-fonts-list li a .qubelystarters-font-preview {
+.tutorstarter-typeface-control .tutorstarter-fonts-list li a .tutorstarter-font-preview {
   line-height: initial;
   font-display: swap;
   margin-left: auto;
   font-size: 20px;
 }
 
-.qubelystarters-typeface-control .select-inline {
+.tutorstarter-typeface-control .select-inline {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
 
-.qubelystarters-typeface-control .select-inline > .customize-control-title {
+.tutorstarter-typeface-control .select-inline > .customize-control-title {
   margin: 0;
   max-width: 35%;
 }
 
-.qubelystarters-typeface-control .select-inline > * {
+.tutorstarter-typeface-control .select-inline > * {
   flex-grow: 1;
 }
 
-.qubelystarters-typeface-control .select-inline select {
+.tutorstarter-typeface-control .select-inline select {
   border-radius: 0;
   border-color: #7e8993;
 }
 
-.qubelystarters-typeface-control .select-inline .components-base-control__field {
+.tutorstarter-typeface-control .select-inline .components-base-control__field {
   margin: 0;
 }
 
-.qubelystarters-toggle-control > .components-base-control__field,
-.qubelystarters-toggle-control label {
+.tutorstarter-toggle-control > .components-base-control__field,
+.tutorstarter-toggle-control label {
   margin-bottom: 0 !important;
 }
 
-.qubelystarters-range-control .range-wrap {
+.tutorstarter-range-control .range-wrap {
   display: flex;
   align-items: center;
   justify-items: flex-end;
 }
 
-.qubelystarters-range-control .range-wrap .components-number-control {
+.tutorstarter-range-control .range-wrap .components-number-control {
   width: 25%;
 }
 
-.qubelystarters-range-control .range-wrap .components-range-control {
+.tutorstarter-range-control .range-wrap .components-range-control {
   flex-grow: 1;
 }
 
-.qubelystarters-range-control .range-wrap .components-range-control > div {
+.tutorstarter-range-control .range-wrap .components-range-control > div {
   margin-bottom: 0;
 }
 
-.qubelystarters-radio-image {
+.tutorstarter-radio-image {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.qubelystarters-radio-image .option {
+.tutorstarter-radio-image .option {
   text-align: center;
   padding: 5px;
 }
 
-.qubelystarters-radio-image label {
+.tutorstarter-radio-image label {
   margin: 0 auto;
   flex-direction: column;
   display: flex;
 }
 
-.qubelystarters-radio-image span {
+.tutorstarter-radio-image span {
   margin-top: 7px;
   color: #7e8993;
   font-weight: 800;
@@ -302,41 +302,41 @@
   text-transform: uppercase;
 }
 
-.qubelystarters-radio-image button {
+.tutorstarter-radio-image button {
   cursor: pointer;
   border: none;
   padding: 0;
 }
 
-.qubelystarters-radio-image button.active {
+.tutorstarter-radio-image button.active {
   padding: 4px;
   outline: 3px solid #007cba;
 }
 
-.qubelystarters-radio-image button img {
+.tutorstarter-radio-image button img {
   width: 100%;
   display: block;
 }
 
-#customize-control-header_type_select .qubelystarters-radio-image {
+#customize-control-header_type_select .tutorstarter-radio-image {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 
-#customize-control-header_type_select .qubelystarters-radio-image .option {
+#customize-control-header_type_select .tutorstarter-radio-image .option {
   text-align: center;
   padding: 5px;
 }
 
-#customize-control-header_type_select .qubelystarters-radio-image label {
+#customize-control-header_type_select .tutorstarter-radio-image label {
   margin: 0 auto;
   flex-direction: column;
   display: flex;
 }
 
-#customize-control-header_type_select .qubelystarters-radio-image span {
+#customize-control-header_type_select .tutorstarter-radio-image span {
   margin-top: 7px;
   color: #7e8993;
   font-weight: 800;
@@ -345,18 +345,18 @@
   text-transform: uppercase;
 }
 
-#customize-control-header_type_select .qubelystarters-radio-image button {
+#customize-control-header_type_select .tutorstarter-radio-image button {
   cursor: pointer;
   border: none;
   padding: 0;
 }
 
-#customize-control-header_type_select .qubelystarters-radio-image button.active {
+#customize-control-header_type_select .tutorstarter-radio-image button.active {
   padding: 4px;
   outline: 3px solid #007cba;
 }
 
-#customize-control-header_type_select .qubelystarters-radio-image button img {
+#customize-control-header_type_select .tutorstarter-radio-image button img {
   width: 100%;
   display: block;
 }

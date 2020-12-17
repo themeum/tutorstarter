@@ -136,7 +136,7 @@ class FontFamilySelector extends Component {
                             </a>
                         </div>
                     </div>
-                    <ul className='qubelystarters-fonts-list'>
+                    <ul className='tutorstarter-fonts-list'>
                         {options.length ? options
                             : <li className='no-result' key='no-results'>{__('No results.', 'tutorstarter')}</li>}
                     </ul>
@@ -150,7 +150,7 @@ class FontFamilySelector extends Component {
         const defaultFontface = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';
         const font = this.props.maybeGetTypekit(this.props.selected);
         return (
-            <div className='qubelystarters-font-family-control'>
+            <div className='tutorstarter-font-family-control'>
                 <span className='customize-control-title'>
                     {__('Font Family', 'tutorstarter')}
                 </span>

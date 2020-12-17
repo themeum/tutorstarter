@@ -247,8 +247,8 @@ var PageSettingsFieldsData = compose([withSelect(function () {
 
 var QubelyStartersPageSettingsPanel = function QubelyStartersPageSettingsPanel() {
   return /*#__PURE__*/React.createElement(PluginDocumentSettingPanel, {
-    name: "qubelystarters-settings-panel",
-    title: "Qubely Starters Page Settings"
+    name: "tutorstarter-settings-panel",
+    title: "Tutor Starter Page Settings"
   }, /*#__PURE__*/React.createElement(PageSettingsFieldsData, null));
 };
 
@@ -256,10 +256,10 @@ var QubelyStartersPageSettingsPanel = function QubelyStartersPageSettingsPanel()
 
 /***/ }),
 
-/***/ "./inc/Custom/Page/reactjs/src/qubelystarters-page-settings.js":
-/*!*********************************************************************!*\
-  !*** ./inc/Custom/Page/reactjs/src/qubelystarters-page-settings.js ***!
-  \*********************************************************************/
+/***/ "./inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js":
+/*!*******************************************************************!*\
+  !*** ./inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js ***!
+  \*******************************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -271,7 +271,7 @@ var registerPlugin = wp.plugins.registerPlugin;
 var is_page = qubelystarters_admin.is_page;
 
 if ('1' === is_page) {
-  registerPlugin('qubelystarters-settings-panel', {
+  registerPlugin('tutorstarter-settings-panel', {
     render: _page_settings__WEBPACK_IMPORTED_MODULE_0__["default"],
     icon: ''
   });
@@ -280,13 +280,13 @@ if ('1' === is_page) {
 /***/ }),
 
 /***/ 5:
-/*!***************************************************************************!*\
-  !*** multi ./inc/Custom/Page/reactjs/src/qubelystarters-page-settings.js ***!
-  \***************************************************************************/
+/*!*************************************************************************!*\
+  !*** multi ./inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/qubelythemeh/app/public/wp-content/themes/qubelystarters/inc/Custom/Page/reactjs/src/qubelystarters-page-settings.js */"./inc/Custom/Page/reactjs/src/qubelystarters-page-settings.js");
+module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js */"./inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js");
 
 
 /***/ })

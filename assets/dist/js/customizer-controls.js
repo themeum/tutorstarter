@@ -2136,7 +2136,7 @@ var ResponsiveControl = /*#__PURE__*/function (_Component) {
           controlLabel = _this$props.controlLabel,
           hideResponsive = _this$props.hideResponsive;
       return /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement("div", {
-        className: "qubelystarters-responsive-control-bar"
+        className: "tutorstarter-responsive-control-bar"
       }, controlLabel && /*#__PURE__*/React.createElement("span", {
         className: "customize-control-title"
       }, controlLabel), !hideResponsive && /*#__PURE__*/React.createElement("div", {
@@ -2160,7 +2160,7 @@ var ResponsiveControl = /*#__PURE__*/function (_Component) {
           icon: icon
         })));
       })))), this.props.children && /*#__PURE__*/React.createElement("div", {
-        className: "qubelystarters-responsive-controls-content"
+        className: "tutorstarter-responsive-controls-content"
       }, this.props.children));
     }
   }, {
@@ -2478,7 +2478,7 @@ var FontFamilyComponent = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/React.createElement(Fragment, null, this.props.control.params.label && /*#__PURE__*/React.createElement("span", {
         className: "customize-control-title"
       }, this.props.control.params.label), /*#__PURE__*/React.createElement("div", {
-        className: "qubelystarters-typeface-control qubelystarters-background-control"
+        className: "tutorstarter-typeface-control tutorstarter-background-control"
       }, /*#__PURE__*/React.createElement(_font_family_selector_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
         selected: this.state.fontFamily,
         onFontChoice: function onFontChoice(fontFamilySource, fontFamily) {
@@ -2799,7 +2799,7 @@ var FontFamilySelector = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/React.createElement(Dashicon, {
         icon: "no"
       })))), /*#__PURE__*/React.createElement("ul", {
-        className: "qubelystarters-fonts-list"
+        className: "tutorstarter-fonts-list"
       }, options.length ? options : /*#__PURE__*/React.createElement("li", {
         className: "no-result",
         key: "no-results"
@@ -2814,7 +2814,7 @@ var FontFamilySelector = /*#__PURE__*/function (_Component) {
       var defaultFontface = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';
       var font = this.props.maybeGetTypekit(this.props.selected);
       return /*#__PURE__*/React.createElement("div", {
-        className: "qubelystarters-font-family-control"
+        className: "tutorstarter-font-family-control"
       }, /*#__PURE__*/React.createElement("span", {
         className: "customize-control-title"
       }, __('Font Family', 'tutorstarter')), /*#__PURE__*/React.createElement(Button, {
@@ -3022,7 +3022,7 @@ var FontPreviewLink = /*#__PURE__*/function (_Component) {
           _this2.props.onClick();
         }
       }, /*#__PURE__*/React.createElement("span", {
-        className: "qubelystarters-font-family"
+        className: "tutorstarter-font-family"
       }, this.props.label || this.props.fontFace), /*#__PURE__*/React.createElement(react_visibility_sensor__WEBPACK_IMPORTED_MODULE_1___default.a, {
         onChange: function onChange(isVisible) {
           if (isVisible) {
@@ -3032,10 +3032,10 @@ var FontPreviewLink = /*#__PURE__*/function (_Component) {
           }
         }
       }, this.state.previewWasRendered || this.props.delayLoad === false ? /*#__PURE__*/React.createElement("span", {
-        className: "qubelystarters-font-preview",
+        className: "tutorstarter-font-preview",
         style: style
       }, "Abc") : /*#__PURE__*/React.createElement("span", {
-        className: "qubelystarters-font-preview "
+        className: "tutorstarter-font-preview "
       }, "...")));
     }
   }]);
@@ -3193,11 +3193,11 @@ var RadioImageComponent = function RadioImageComponent(_ref) {
   };
 
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    className: "qubelystarters-control-header"
+    className: "tutorstarter-control-header"
   }, label && /*#__PURE__*/React.createElement("span", {
     className: "customize-control-title"
   }, label)), /*#__PURE__*/React.createElement("div", {
-    className: "qubelystarters-radio-image"
+    className: "tutorstarter-radio-image"
   }, renderOptions()));
 };
 
@@ -3358,7 +3358,7 @@ var _wp$element = wp.element,
 var RangeSliderComponent = function RangeSliderComponent(_ref) {
   var control = _ref.control;
   useEffect(function () {
-    document.addEventListener('qubelystarters-customizer-event', function (e) {
+    document.addEventListener('tutorstarter-customizer-event', function (e) {
       if (!e.detail) return false;
       if (e.detail.id !== control.id) return false;
       updateValues(e.detail.value);
@@ -3391,9 +3391,9 @@ var RangeSliderComponent = function RangeSliderComponent(_ref) {
   };
 
   return /*#__PURE__*/React.createElement("div", {
-    className: "qubelystarters-background-control qubelystarters-range-control"
+    className: "tutorstarter-background-control tutorstarter-range-control"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "qubelystarters-control-header"
+    className: "tutorstarter-control-header"
   }, label && /*#__PURE__*/React.createElement("span", {
     className: "customize-control-title"
   }, label)), /*#__PURE__*/React.createElement("div", {
@@ -3595,7 +3595,7 @@ var ResponsiveRangeSliderComponent = function ResponsiveRangeSliderComponent(_re
       setValue(responsiveConverted);
     }
 
-    document.addEventListener('qubelystarters-changed-customizer-value', function (e) {
+    document.addEventListener('tutorstarter-changed-customizer-value', function (e) {
       if (!e.detail) return false;
       if (e.detail.id !== control.id) return false; // Make sure we translate int values to responsive values.
 
@@ -3654,7 +3654,7 @@ var ResponsiveRangeSliderComponent = function ResponsiveRangeSliderComponent(_re
 
   var controlHeader = function controlHeader() {
     return /*#__PURE__*/React.createElement("div", {
-      className: "qubelystarters-responsive-control-header"
+      className: "tutorstarter-responsive-control-header"
     }, label && /*#__PURE__*/React.createElement("span", {
       className: "customize-control-title"
     }, label), /*#__PURE__*/React.createElement(_common_responsive__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -3663,7 +3663,7 @@ var ResponsiveRangeSliderComponent = function ResponsiveRangeSliderComponent(_re
       },
       hideResponsive: hideResponsive || false
     }), /*#__PURE__*/React.createElement("div", {
-      className: "qubelystarters-units"
+      className: "tutorstarter-units"
     }, unitButtons()));
   };
 
@@ -3678,7 +3678,7 @@ var ResponsiveRangeSliderComponent = function ResponsiveRangeSliderComponent(_re
   var displayValue = parseInt(value[currentDevice]);
   displayValue = displayValue === 0 ? 0 : displayValue || '';
   return /*#__PURE__*/React.createElement("div", {
-    className: "qubelystarters-background-control qubelystarters-range-control"
+    className: "tutorstarter-background-control tutorstarter-range-control"
   }, controlHeader(), /*#__PURE__*/React.createElement("div", {
     className: "range-wrap"
   }, /*#__PURE__*/React.createElement(RangeControl, {
@@ -3803,7 +3803,7 @@ var _wp$element = wp.element,
 var ToggleSwitchComponent = function ToggleSwitchComponent(_ref) {
   var control = _ref.control;
   useEffect(function () {
-    document.addEventListener('qubelystarters-customizer-event', function (e) {
+    document.addEventListener('tutorstarter-customizer-event', function (e) {
       if (!e.detail) {
         return false;
       }
@@ -3822,9 +3822,9 @@ var ToggleSwitchComponent = function ToggleSwitchComponent(_ref) {
       setValue = _useState2[1];
 
   return /*#__PURE__*/React.createElement("div", {
-    className: "qubelystarters-background-control flex-contents"
+    className: "tutorstarter-background-control flex-contents"
   }, /*#__PURE__*/React.createElement(ToggleControl, {
-    className: "qubelystarters-toggle-control",
+    className: "tutorstarter-toggle-control",
     checked: value,
     label: control.params.label,
     onChange: function onChange(updatedValue) {
@@ -4118,7 +4118,7 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/React.createElement(Fragment, null, this.props.control.params.label && /*#__PURE__*/React.createElement("span", {
         className: "customize-control-title"
       }, this.props.control.params.label), /*#__PURE__*/React.createElement("div", {
-        className: "qubelystarters-typography-control qubelystarters-background-control"
+        className: "tutorstarter-typography-control tutorstarter-background-control"
       }, this.renderFontWeight(), this.renderTextTransform()));
     }
   }, {
@@ -4233,7 +4233,7 @@ TypographyComponent.propTypes = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/qubelythemeh/app/public/wp-content/themes/qubelystarters/inc/Api/Customizer/reactjs/src/customizer-controls.js */"./inc/Api/Customizer/reactjs/src/customizer-controls.js");
+module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Api/Customizer/reactjs/src/customizer-controls.js */"./inc/Api/Customizer/reactjs/src/customizer-controls.js");
 
 
 /***/ }),

@@ -9,11 +9,11 @@
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! is_active_sidebar( 'qubelystarters-sidebar' ) ) :
+if ( ! is_active_sidebar( 'tutorstarter-sidebar' ) ) :
 	return;
 endif;
 ?>
 
 <aside id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'qubelystarters-sidebar' ); ?>
+	<?php dynamic_sidebar( 'tutorstarter-sidebar' ); ?>
 </aside><!-- #secondary -->
