@@ -30,7 +30,7 @@ class Dashboard {
 		$menu_title = __( 'Tutor Starter', 'tutorstarter' );
 		$capability = 'manage_options';
 		$menu_slug  = 'tutorstarter';
-		$callback   = array( $this, 'callback' );
+		$callback   = array( $this, 'dashboard_callback' );
 		$icon       = 'dashicons-superhero-alt';
 
 		add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $callback, $icon );
@@ -40,7 +40,7 @@ class Dashboard {
 	/**
 	 * Callback
 	 */
-	public function callback() {
+	public function dashboard_callback() {
 		echo '<div id="tutorstarter-dashboard"></div>';
 	}
 }

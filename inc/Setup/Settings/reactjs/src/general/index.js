@@ -68,7 +68,7 @@ const General = () => {
                             />
                             <div className="miscellaneous">
                                 <p>With Tutor Starter, your creativity just got a power-up! Enjoy the freedom of customization and speed that you never had before.</p>
-                                <a href="https://qubely.io">Learn more</a>
+                                <a href="https://www.themeum.com/product/tutor-lms/">Learn more</a>
                             </div>
                         </div>
                     </div>
