@@ -8,7 +8,7 @@
 <div class="search-popup">
 	<form>
 		<div class="btn-search-close">x</div>
-		<input type="search" name="search" placeholder="Search" autocomplete="off" />
+		<input type="search" name="s" value="<?php echo get_search_query(); ?>" placeholder="Search" autocomplete="off" />
 	</form>
 </div>
 <header id="transparent-header" class="transparent">

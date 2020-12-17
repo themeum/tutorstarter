@@ -27,7 +27,7 @@ const PageSettingsFieldsData = compose([
     })),
 ])(PageSettingsFields);
 
-const tutorstarterPageSettingsPanel = () => {
+const TutorStarterPageSettingsPanel = () => {
 
     return (
         <PluginDocumentSettingPanel
@@ -39,4 +39,4 @@ const tutorstarterPageSettingsPanel = () => {
     )
 }
 
-export default tutorstarterPageSettingsPanel;
+export default TutorStarterPageSettingsPanel;

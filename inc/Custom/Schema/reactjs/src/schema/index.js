@@ -53,7 +53,7 @@ const SchemaFieldsData = compose([
     })),
 ])(SchemaFields);
 
-const TutorstarterSchemaPanel = () => {
+const TutorStarterSchemaPanel = () => {
 
     return (
         <PluginDocumentSettingPanel
@@ -65,4 +65,4 @@ const TutorstarterSchemaPanel = () => {
     )
 }
 
-export default TutorstarterSchemaPanel;
+export default TutorStarterSchemaPanel;

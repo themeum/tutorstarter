@@ -8,7 +8,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Theme GLOBALS.
-define( 'QUBELY_STARTERS_VERSION', '1.0.0' );
+define( 'TUTOR_STARTER_VERSION', '1.0.0' );
 
 if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) :
 	require_once dirname( __FILE__ ) . '/vendor/autoload.php';

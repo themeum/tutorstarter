@@ -251,11 +251,20 @@ if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
 	function tutorstarter_plugin_activation() {
 		$plugins = array(
 			array(
-				'name'               => esc_html__( 'Qubely - Advanced Gutenberg Blocks', 'tutorstarter' ),
-				'slug'               => 'qubely',
+				'name'               => esc_html__( 'Tutor LMS – eLearning and online course solution', 'tutorstarter' ),
+				'slug'               => 'tutor',
 				'required'           => true,
 				'version'            => '',
 				'force_activation'   => true,
+				'force_deactivation' => false,
+				'external_url'       => esc_url( 'https://downloads.wordpress.org/plugin/tutor.zip' ),
+			),
+			array(
+				'name'               => esc_html__( 'Qubely - Advanced Gutenberg Blocks', 'tutorstarter' ),
+				'slug'               => 'qubely',
+				'required'           => false,
+				'version'            => '',
+				'force_activation'   => false,
 				'force_deactivation' => false,
 				'external_url'       => esc_url( 'https://downloads.wordpress.org/plugin/qubely.zip' ),
 			),

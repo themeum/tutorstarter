@@ -1,8 +1,8 @@
 const { registerPlugin } = wp.plugins;
 
-import TutorstarterSchemaPanel from './schema';
+import TutorStarterSchemaPanel from './schema';
 
 registerPlugin('tutorstarter-schema-panel', {
-    render: TutorstarterSchemaPanel,
+    render: TutorStarterSchemaPanel,
     icon: ''
 });
