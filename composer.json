@@ -1,0 +1,27 @@
+{
+	"name": "themeum/qubelystarters",
+	"description": "Modern WordPress Theme for Qubely and Gutenberg block editor.",
+	"keywords": [
+		"WordPress",
+		"Theme",
+		"Tutor_Starter"
+	],
+	"license": "GPL-3.0",
+	"version": "1.0.0",
+	"authors": [
+		{
+			"name": "Themeum",
+			"email": "hello@themeum.com",
+			"homepage": "https://themeum.com"
+		}
+	],
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Tutor_Starter\\": "./inc"
+		},
+		"files": [
+			"./inc/Helpers.php"
+		]
+	}
+}

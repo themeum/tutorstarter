@@ -1,0 +1,13 @@
+{
+    "/js/admin.js": "/js/admin.js",
+    "/js/app.js": "/js/app.js",
+    "/css/style.css": "/css/style.css",
+    "/css/admin.css": "/css/admin.css",
+    "/css/all-controls.css": "/css/all-controls.css",
+    "/css/dashboard.css": "/css/dashboard.css",
+    "/js/customizer-controls.js": "/js/customizer-controls.js",
+    "/js/customizer-preview.js": "/js/customizer-preview.js",
+    "/js/qubelystarters-dashboard.js": "/js/qubelystarters-dashboard.js",
+    "/js/qubelystarters-page-settings.js": "/js/qubelystarters-page-settings.js",
+    "/js/qubelystarters-schema.js": "/js/qubelystarters-schema.js"
+}

@@ -1,0 +1,36 @@
+.qubelystarters-responsive-control-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+.qubelystarters-responsive-control-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
+  
+    .customize-control-title {
+      margin: 0 0 10px;
+    }
+  
+    .components-button-group {
+      display: flex;
+      border: none;
+    }
+  
+    button {
+      height: auto;
+      box-shadow: none !important;
+      padding: 3px 4px !important;
+  
+      svg {
+        fill: #007cba !important;
+        height: 15px;
+        width: 16px;
+      }
+  
+      &.active-device svg {
+        fill: #7e8993 !important;
+      }
+    }
+  }
+  

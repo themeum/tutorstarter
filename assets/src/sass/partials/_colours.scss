@@ -1,0 +1,48 @@
+@each $colour, $hex in $colours {
+	.text-#{$colour} {
+		color: $hex;
+	}
+
+	.background-#{$colour} {
+		background-color: $hex;
+	}
+
+	.border-#{$colour} {
+		border-color: $hex;
+	}
+}
+
+.has-strong-blue-background-color {
+    background-color: #1539E9;
+}
+
+.has-strong-blue-color {
+    color: #1539E9;
+}
+
+.has-pure-black-background-color {
+    background-color: #000000;
+}
+
+.has-pure-black-color {
+    color: #000000;
+}
+
+.has-pure-white-background-color {
+    background-color: #ffffff;
+}
+
+.has-pure-white-color {
+    color: #ffffff;
+}
+
+// Customize text selection
+::selection {
+	background: $black;
+	color: $white;
+}
+
+::-moz-selection {
+	background: $black;
+	color: $white;
+}

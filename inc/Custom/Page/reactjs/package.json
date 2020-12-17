@@ -1,0 +1,9 @@
+{
+    "name": "qubelystarters",
+    "version": "1.0.0",
+    "description": "Modern WordPress Theme for Qubely and Gutenberg block editor.",
+    "main": "index.js",
+    "dependencies": {
+        "prop-types": "^15.7.2"
+    }
+}
