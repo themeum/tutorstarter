@@ -245,14 +245,14 @@ var PageSettingsFieldsData = compose([withSelect(function () {
   };
 })])(_fields_page_settings_fields__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
-var tutorstarterPageSettingsPanel = function tutorstarterPageSettingsPanel() {
+var TutorStarterPageSettingsPanel = function TutorStarterPageSettingsPanel() {
   return /*#__PURE__*/React.createElement(PluginDocumentSettingPanel, {
     name: "tutorstarter-settings-panel",
     title: "Tutor Starter Page Settings"
   }, /*#__PURE__*/React.createElement(PageSettingsFieldsData, null));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (tutorstarterPageSettingsPanel);
+/* harmony default export */ __webpack_exports__["default"] = (TutorStarterPageSettingsPanel);
 
 /***/ }),
 

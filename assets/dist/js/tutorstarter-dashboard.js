@@ -177,11 +177,38 @@ var General = function General() {
   }), /*#__PURE__*/React.createElement("div", {
     className: "miscellaneous"
   }, /*#__PURE__*/React.createElement("p", null, "With Tutor Starter, your creativity just got a power-up! Enjoy the freedom of customization and speed that you never had before."), /*#__PURE__*/React.createElement("a", {
-    href: "https://qubely.io"
+    href: "https://www.themeum.com/product/tutor-lms/"
   }, "Learn more")))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (General);
+
+/***/ }),
+
+/***/ "./inc/Setup/Settings/reactjs/src/header/index.js":
+/*!********************************************************!*\
+  !*** ./inc/Setup/Settings/reactjs/src/header/index.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var Header = function Header() {
+  return /*#__PURE__*/React.createElement("header", null, /*#__PURE__*/React.createElement("div", {
+    className: "navigation-container"
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "General"), /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "Demo Import"), /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "Useful Plugins"), /*#__PURE__*/React.createElement("a", {
+    href: "#"
+  }, "Extra Resources")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Header);
 
 /***/ }),
 
@@ -194,12 +221,14 @@ var General = function General() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _general_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./general/index */ "./inc/Setup/Settings/reactjs/src/general/index.js");
+/* harmony import */ var _general__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./general */ "./inc/Setup/Settings/reactjs/src/general/index.js");
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header */ "./inc/Setup/Settings/reactjs/src/header/index.js");
 var Fragment = wp.element.Fragment;
 
 
+
 var Dashboard = function Dashboard() {
-  return /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(_general_index__WEBPACK_IMPORTED_MODULE_0__["default"], null));
+  return /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(_header__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Dashboard);

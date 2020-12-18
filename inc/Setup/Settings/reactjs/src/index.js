@@ -1,11 +1,12 @@
 const { Fragment } = wp.element;
 
-import General from './general/index';
+import General from './general';
+import Header from './header';
 
 const Dashboard = () => {
     return (
         <Fragment>
-            <General />
+            <Header />
         </Fragment>
     );
 }

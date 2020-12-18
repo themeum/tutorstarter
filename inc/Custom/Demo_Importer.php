@@ -91,6 +91,7 @@ class Demo_Importer {
 	 */
 	public function change_text( $default_text ) {
 		$default_text .= '<div class="demo__intro-text"><h3>' . __( 'Welcome to Tutor Starter One Click Demo Import', 'tutorstarter' ) . '</h3></div>';
+		$default_text .= '<div id="test-page"></div>';
 
 		return $default_text;
 	}

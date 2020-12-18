@@ -722,14 +722,14 @@ var SchemaFieldsData = compose([withSelect(function () {
   };
 })])(_fields_schema_fields__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
-var TutorstarterSchemaPanel = function TutorstarterSchemaPanel() {
+var TutorStarterSchemaPanel = function TutorStarterSchemaPanel() {
   return /*#__PURE__*/React.createElement(PluginDocumentSettingPanel, {
     name: "tutorstarter-schema-panel",
     title: "Tutor Starter Schema Settings"
   }, /*#__PURE__*/React.createElement(SchemaFieldsData, null));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (TutorstarterSchemaPanel);
+/* harmony default export */ __webpack_exports__["default"] = (TutorStarterSchemaPanel);
 
 /***/ }),
 
