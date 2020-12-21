@@ -3876,6 +3876,9 @@ var TypographyControl = wp.customize.Control.extend({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _common_responsive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/responsive */ "./inc/Api/Customizer/reactjs/src/common/responsive.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./inc/Api/Customizer/reactjs/node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) {
   "@babel/helpers - typeof";
 
@@ -4043,8 +4046,13 @@ function _getPrototypeOf(o) {
 }
 
 
+
+
 var __ = wp.i18n.__;
-var SelectControl = wp.components.SelectControl;
+var _wp$components = wp.components,
+    SelectControl = _wp$components.SelectControl,
+    RangeControl = _wp$components.RangeControl,
+    Button = _wp$components.Button;
 var _wp$element = wp.element,
     Component = _wp$element.Component,
     Fragment = _wp$element.Fragment;
@@ -4063,7 +4071,17 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
     var value = props.control.setting.get();
     var defaultParams = {
       weight_default: 700,
-      text_transform: 'none'
+      text_transform: 'none',
+      font_sizes: {
+        desktop: 16,
+        mobile: 13,
+        tablet: 13
+      },
+      line_heights: {
+        desktop: 20,
+        mobile: 20,
+        tablet: 20
+      }
     };
 
     if (!value) {
@@ -4079,11 +4097,24 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
     }
 
     _this.controlParams = props.control.params.input_attrs ? _objectSpread(_objectSpread({}, defaultParams), JSON.parse(props.control.params.input_attrs)) : defaultParams;
+
+    var defaultFontSizes = _objectSpread(_objectSpread({}, defaultParams.font_sizes), _this.controlParams.defaultParams.font_sizes);
+
+    var defaultLineHeights = _objectSpread(_objectSpread({}, defaultParams.line_heights), _this.controlParams.defaultParams.line_heights);
+
     _this.state = {
+      currentDevice: 'desktop',
+      defaultFontSizes: defaultFontSizes,
+      defaultLineHeights: defaultLineHeights,
       fontWeight: value.fontWeight,
-      textTransform: value.textTransform
+      textTransform: value.textTransform,
+      fontSize: _objectSpread(_objectSpread({}, defaultFontSizes), typeof value.fontSize !== 'undefined' && value.fontSize),
+      lineHeight: _objectSpread(_objectSpread({}, defaultLineHeights), typeof value.lineHeight !== 'undefined' && value.lineHeight)
     };
+    _this.renderFontSize = _this.renderFontSize.bind(_assertThisInitialized(_this));
     _this.renderFontWeight = _this.renderFontWeight.bind(_assertThisInitialized(_this));
+    _this.controlHeader = _this.controlHeader.bind(_assertThisInitialized(_this));
+    _this.unitButtons = _this.unitButtons.bind(_assertThisInitialized(_this));
     _this.renderTextTransform = _this.renderTextTransform.bind(_assertThisInitialized(_this));
     _this.updateValues = _this.updateValues.bind(_assertThisInitialized(_this));
     return _this;
@@ -4113,13 +4144,151 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
       };
     }
   }, {
+    key: "unitButtons",
+    value: function unitButtons(units, key) {
+      var _this2 = this;
+
+      if (!units) {
+        return null;
+      }
+
+      if (units.length === 1) {
+        return /*#__PURE__*/React.createElement(Button, {
+          isSmall: true,
+          disabled: true,
+          className: "active alone"
+        }, units[0]);
+      }
+
+      return units.map(function (unit, index) {
+        var currentDevice = _this2.state.currentDevice;
+        var value = _this2.state[key];
+        var buttonClass = classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+          active: value[currentDevice + '-unit'] === unit
+        });
+        return /*#__PURE__*/React.createElement(Button, {
+          key: index,
+          isSmall: true,
+          className: buttonClass,
+          onClick: function onClick() {
+            var nextValue = _objectSpread({}, value);
+
+            nextValue[currentDevice + '-unit'] = unit;
+
+            if (unit !== 'em') {
+              nextValue[currentDevice] = lodash.mapValues(nextValue[currentDevice], function (value) {
+                return value ? parseInt(value) : value;
+              });
+            }
+
+            _this2.setState(_defineProperty({}, key, nextValue));
+
+            _this2.updateValues(_defineProperty({}, key, nextValue));
+          }
+        }, unit);
+      });
+    }
+  }, {
+    key: "controlHeader",
+    value: function controlHeader(label, key, units) {
+      var _this3 = this;
+
+      var hideResponsive = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+      return /*#__PURE__*/React.createElement("div", {
+        className: "tutorstarter-responsive-control-header"
+      }, label && /*#__PURE__*/React.createElement("span", {
+        className: "customize-control-title"
+      }, __(label, 'tutorstarter')), /*#__PURE__*/React.createElement(_common_responsive__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        onChange: function onChange(currentDevice) {
+          return _this3.setState({
+            currentDevice: currentDevice
+          });
+        },
+        hideResponsive: hideResponsive || false
+      }), /*#__PURE__*/React.createElement("div", {
+        className: "tutorstarter-units"
+      }, this.unitButtons(units, this.state[key], key)));
+    }
+  }, {
+    key: "renderFontSize",
+    value: function renderFontSize() {
+      var _this4 = this;
+
+      var _this$state = this.state,
+          fontSize = _this$state.fontSize,
+          defaultFontSizes = _this$state.defaultFontSizes,
+          currentDevice = _this$state.currentDevice;
+      var _this$controlParams$f = this.controlParams.font_sizes,
+          min = _this$controlParams$f.min,
+          max = _this$controlParams$f.max,
+          units = _this$controlParams$f.units;
+      return /*#__PURE__*/React.createElement("div", {
+        className: "select-inline font-size"
+      }, this.controlHeader('Font Sizes', 'fontSize', units), /*#__PURE__*/React.createElement(RangeControl, {
+        step: 1,
+        min: min,
+        max: max,
+        allowReset: true,
+        isShiftStepEnabled: true,
+        value: fontSize[currentDevice],
+        resetFallbackValue: defaultFontSizes[currentDevice],
+        onChange: function onChange(newValue) {
+          _this4.setState(function (prevState) {
+            return {
+              fontSize: _objectSpread(_objectSpread({}, prevState.fontSize), {}, _defineProperty({}, currentDevice, newValue))
+            };
+          });
+
+          _this4.updateValues({
+            fontSize: _objectSpread(_objectSpread({}, fontSize), {}, _defineProperty({}, currentDevice, newValue))
+          });
+        }
+      }));
+    }
+  }, {
+    key: "renderLineHeight",
+    value: function renderLineHeight() {
+      var _this5 = this;
+
+      var _this$state2 = this.state,
+          lineHeight = _this$state2.lineHeight,
+          defaultLineHeights = _this$state2.defaultLineHeights,
+          currentDevice = _this$state2.currentDevice;
+      var _this$controlParams$l = this.controlParams.line_heights,
+          min = _this$controlParams$l.min,
+          max = _this$controlParams$l.max,
+          units = _this$controlParams$l.units;
+      return /*#__PURE__*/React.createElement("div", {
+        className: "select-inline line-height"
+      }, this.controlHeader('Line Height', 'lineHeight', units), /*#__PURE__*/React.createElement(RangeControl, {
+        step: 1,
+        min: min,
+        max: max,
+        allowReset: true,
+        isShiftStepEnabled: true,
+        value: lineHeight[currentDevice],
+        resetFallbackValue: defaultLineHeights[currentDevice],
+        onChange: function onChange(newValue) {
+          _this5.setState(function (prevState) {
+            return {
+              lineHeight: _objectSpread(_objectSpread({}, prevState.lineHeight), {}, _defineProperty({}, currentDevice, newValue))
+            };
+          });
+
+          _this5.updateValues({
+            lineHeight: _objectSpread(_objectSpread({}, lineHeight), {}, _defineProperty({}, currentDevice, newValue))
+          });
+        }
+      }));
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/React.createElement(Fragment, null, this.props.control.params.label && /*#__PURE__*/React.createElement("span", {
         className: "customize-control-title"
       }, this.props.control.params.label), /*#__PURE__*/React.createElement("div", {
         className: "tutorstarter-typography-control tutorstarter-background-control"
-      }, this.renderFontWeight(), this.renderTextTransform()));
+      }, this.renderFontSize(), this.renderLineHeight(), this.renderFontWeight(), this.renderTextTransform()));
     }
   }, {
     key: "updateValues",
@@ -4129,7 +4298,7 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
   }, {
     key: "renderFontWeight",
     value: function renderFontWeight() {
-      var _this2 = this;
+      var _this6 = this;
 
       return /*#__PURE__*/React.createElement("div", {
         className: "select-inline font-weight"
@@ -4169,11 +4338,11 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
           label: '900'
         }],
         onChange: function onChange(fontWeight) {
-          _this2.setState({
+          _this6.setState({
             fontWeight: fontWeight
           });
 
-          _this2.updateValues({
+          _this6.updateValues({
             fontWeight: fontWeight
           });
         }
@@ -4182,7 +4351,7 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
   }, {
     key: "renderTextTransform",
     value: function renderTextTransform() {
-      var _this3 = this;
+      var _this7 = this;
 
       return /*#__PURE__*/React.createElement("div", {
         className: "select-inline text-transform"
@@ -4204,11 +4373,11 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
           label: __('Uppercase', 'tutorstarter')
         }],
         onChange: function onChange(textTransform) {
-          _this3.setState({
+          _this7.setState({
             textTransform: textTransform
           });
 
-          _this3.updateValues({
+          _this7.updateValues({
             textTransform: textTransform
           });
         }

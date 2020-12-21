@@ -59,118 +59,6 @@ class Typography {
 				)
 			)
 		);
-		$wp_customize->add_setting(
-			'body_font_size',
-			array(
-				'title'             => esc_html__( 'Font Size', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 13, "tablet": 13, "desktop": 16 }',
-				'sanitize_callback' => 'sanitize_range_value',
-			)
-		);
-		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
-				$wp_customize,
-				'body_font_size',
-				array(
-					'label'       => esc_html__( 'Font Size', 'tutorstarter' ),
-					'section'     => 'tutorstarter_typography_section',
-					'input_attrs' => array(
-						'min'        => 8,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 13,
-							'tablet'  => 13,
-							'desktop' => 16,
-						),
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'body_font_weight',
-			array(
-				'title'             => esc_html__( 'Font Weight', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => 400,
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'body_font_weight',
-				array(
-					'label'   => esc_html__( 'Font Weight', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						100 => 100,
-						300 => 300,
-						400 => 400,
-						500 => 500,
-						700 => 700,
-						900 => 900,
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'body_font_transform',
-			array(
-				'title'             => esc_html__( 'Text Transform', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => 'none',
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'body_font_transform',
-				array(
-					'label'   => esc_html__( 'Text Transform', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						'none'       => esc_html__( 'None', 'tutorstarter' ),
-						'capitalize' => esc_html__( 'Capitalize', 'tutorstarter' ),
-						'lowercase'  => esc_html__( 'Lowercase', 'tutorstarter' ),
-						'uppercase'  => esc_html__( 'Uppercase', 'tutorstarter' ),
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'body_font_lineheight',
-			array(
-				'title'             => esc_html__( 'Line Height', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 20, "tablet": 20, "desktop": 20 }',
-				'sanitize_callback' => 'sanitize_range_value',
-			)
-		);
-		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
-				$wp_customize,
-				'body_font_lineheight',
-				array(
-					'label'       => esc_html__( 'Line Height', 'tutorstarter' ),
-					'section'     => 'tutorstarter_typography_section',
-					'input_attrs' => array(
-						'min'        => 0,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 20,
-							'tablet'  => 20,
-							'desktop' => 20,
-						),
-					),
-				)
-			)
-		);
 
 		// Body Typography
 		$wp_customize->add_setting(
@@ -190,9 +78,29 @@ class Typography {
 					'label'       => esc_html__( 'Body Typography', 'tutorstarter' ),
 					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
+						'font_sizes' => array(
+							'min'        => 8,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'line_heights' => array(
+							'min'        => 0,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
 						'defaultParams' => array(
 							'weight_default'  => 700,
 							'text_transform'  => 'none',
+							'font_sizes' => array(
+								'mobile'  => 13,
+								'tablet'  => 13,
+								'desktop' => 16,
+							),
+							'line_heights' => array(
+								'mobile'  => 22,
+								'tablet'  => 22,
+								'desktop' => 25,
+							)
 						),
 					),
 				)
