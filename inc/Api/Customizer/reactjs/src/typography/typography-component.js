@@ -12,27 +12,17 @@ class TypographyComponent extends Component {
 		let defaultParams = {
 			weight_default: 700,
 			text_transform: 'none',
-			font_sizes:{
+			font_sizes: {
 				desktop: 16,
 				mobile: 13,
 				tablet: 13,
 			},
-			line_heights:{
+			line_heights: {
 				desktop: 20,
 				mobile: 20,
 				tablet: 20,
 			},
 		};
-
-		if (!value) {
-			value = this.getEmptyValue();
-		}
-		if (props.control.params.input_attrs.length) {
-			const input_attrs = JSON.parse(props.control.params.input_attrs);
-			if (input_attrs.default_is_empty) {
-				defaultParams = this.getEmptyDefault();
-			}
-		}
 
 		this.controlParams = props.control.params.input_attrs
 			? {
@@ -75,25 +65,6 @@ class TypographyComponent extends Component {
 		this.updateValues = this.updateValues.bind(this);
 	}
 
-
-	getEmptyValue(prop = '') {
-		const emptyValue = {
-			fontWeight: 700,
-			textTransform: 'none',
-		};
-		if (prop && emptyValue[prop]) {
-			return emptyValue[prop];
-		}
-		return emptyValue;
-	}
-
-	getEmptyDefault() {
-		return {
-			weight_default: 700,
-			text_transform: 'none',
-		};
-	}
-
 	unitButtons(units, key) {
 		if (!units) {
 			return null;
@@ -105,7 +76,7 @@ class TypographyComponent extends Component {
 
 		return units.map((unit, index) => {
 			const { currentDevice } = this.state;
-			const value=this.state[key];
+			const value = this.state[key];
 			const buttonClass = classnames({ active: value[currentDevice + '-unit'] === unit });
 			return (
 				<Button
@@ -216,24 +187,6 @@ class TypographyComponent extends Component {
 		);
 	}
 
-	render() {
-		return (
-			<Fragment>
-				{ this.props.control.params.label && (
-					<span className="customize-control-title">
-						{ this.props.control.params.label}
-					</span>
-				)}
-				<div className="tutorstarter-typography-control tutorstarter-background-control">
-					{this.renderFontSize()}
-					{this.renderLineHeight()}
-					{this.renderFontWeight()}
-					{this.renderTextTransform()}
-				</div>
-			</Fragment>
-		);
-	}
-
 	updateValues(value) {
 		this.props.control.setting.set({
 			...this.props.control.setting.get(),
@@ -299,6 +252,24 @@ class TypographyComponent extends Component {
 					}}
 				/>
 			</div>
+		);
+	}
+
+	render() {
+		return (
+			<Fragment>
+				{ this.props.control.params.label && (
+					<span className="customize-control-title">
+						{ this.props.control.params.label}
+					</span>
+				)}
+				<div className="tutorstarter-typography-control tutorstarter-background-control">
+					{this.renderFontSize()}
+					{this.renderLineHeight()}
+					{this.renderFontWeight()}
+					{this.renderTextTransform()}
+				</div>
+			</Fragment>
 		);
 	}
 }

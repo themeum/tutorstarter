@@ -66,8 +66,6 @@ class Typography {
 			array(
 				'title'     => esc_html__( 'Body Typography', 'tutorstarter' ),
 				'transport' => 'postMessage',
-				'default'   => '{"fontWeight": 700, "textTransform": "none"}',
-				
 			)
 		);
 		$wp_customize->add_control(
