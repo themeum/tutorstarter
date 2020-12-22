@@ -7,9 +7,6 @@ const Header = () => {
                 <Link to='/wp-admin/admin.php?page=tutorstarter'>
                     General
                 </Link>
-                <Link to='/wp-admin/admin.php?page=demo-import'>
-                    Demo Import
-                </Link>
                 <Link to='/wp-admin/admin.php?page=tutorstarter-useful-plugins'>
                     Useful Plugins
                 </Link>

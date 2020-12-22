@@ -23,31 +23,31 @@ const General = () => {
                                 <li>
                                     <div className="item">
                                         <i className="fas fa-paint-brush"></i>
-                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_colors_section`} target="_blank">Colors</a>
+                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_colors_section`}>Colors</a>
                                     </div>
                                     <div className="item">
-                                        <i class="fas fa-columns"></i>
-                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_layout_section`} target="_blank">Layout</a>
+                                        <i className="fas fa-columns"></i>
+                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_layout_section`}>Layout</a>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="item">
-                                        <i class="fas fa-paint-roller"></i>
-                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_header_section`} target="_blank">Header</a>
+                                        <i className="fas fa-paint-roller"></i>
+                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_header_section`}>Header</a>
                                     </div>
                                     <div className="item">
                                         <i className="fas fa-th"></i>
-                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_footer_section`} target="_blank">Footer</a>
+                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_footer_section`}>Footer</a>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="item">
                                         <i className="fas fa-font"></i>
-                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_typography_section`} target="_blank">Typography</a>
+                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_typography_section`}>Typography</a>
                                     </div>
                                     <div className="item">
                                         <i className="far fa-edit"></i>
-                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_blog_section`} target="_blank">Blog</a>
+                                        <a href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_blog_section`}>Blog</a>
                                     </div>
                                 </li>
                             </ul>
@@ -60,12 +60,6 @@ const General = () => {
                                 <i className="fas fa-paint-brush"></i>
                                 <span>Unleash your creativity</span>
                             </h4>
-                            <img
-                                width="760"
-                                height="560"
-                                src="https://qubely.io/wp-content/uploads/2020/11/Fundraising.png"
-                                alt=""
-                            />
                             <div className="miscellaneous">
                                 <p>With Tutor Starter, your creativity just got a power-up! Enjoy the freedom of customization and speed that you never had before.</p>
                                 <a href="https://www.themeum.com/product/tutor-lms/">Learn more</a>

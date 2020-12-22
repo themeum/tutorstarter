@@ -1,7 +1,6 @@
 import { useLocation } from 'react-router-dom';
 
 import General from './general';
-import DemoImport from './demo-import';
 import Header from './header';
 
 const { Fragment } = wp.element;
@@ -24,7 +23,6 @@ const PageComponent = ({ page }) => {
     return (
         <Fragment>
             {'tutorstarter' === page && <General />}
-            {'demo-import' === page && <DemoImport />}
         </Fragment>
     )
 }
