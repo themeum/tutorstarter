@@ -30,6 +30,18 @@ class Demo_Importer {
 		add_filter( 'pt-ocdi/plugin_intro_text', array( $this, 'change_text' ) );
 		add_filter( 'pt-ocdi/plugin_page_setup', array( $this, 'change_plugin_page' ) );
 		add_action( 'pt-ocdi/after_import', array( $this, 'assign_defaults' ), 10, 1 );
+		add_action( 'wp_ajax_selected_builder', array( $this, 'tutorstarter_selected_builder' ) );
+	}
+	
+	/**
+	 * Capture builder data
+	 */
+	public function tutorstarter_selected_builder() {
+		$builder = isset( $_POST['builder'] ) ? $_POST['builder'] : 'gutenberg';
+
+		wp_send_json_success( $builder );
+
+		return $builder;
 	}
 
 	/**
@@ -73,6 +85,8 @@ class Demo_Importer {
 					'import_widget_file_url'     => $packs['widget'],
 					'import_customizer_file_url' => $packs['customizer'],
 					'import_preview_image_url'   => $packs['preview_image'],
+					'builders'                   => array( 'gutenberg', 'elementor' ),
+					'plugins'                    => array( 'qubely', 'elementor' ),
 				);
 
 				array_push( $demo_list, $list );
