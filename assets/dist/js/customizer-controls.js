@@ -4083,6 +4083,19 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
         tablet: 20
       }
     };
+
+    if (!value) {
+      value = _this.getEmptyValue();
+    }
+
+    if (props.control.params.input_attrs.length) {
+      var input_attrs = JSON.parse(props.control.params.input_attrs);
+
+      if (input_attrs.default_is_empty) {
+        defaultParams = _this.getEmptyDefault();
+      }
+    }
+
     _this.controlParams = props.control.params.input_attrs ? _objectSpread(_objectSpread({}, defaultParams), JSON.parse(props.control.params.input_attrs)) : defaultParams;
 
     var defaultFontSizes = _objectSpread(_objectSpread({}, defaultParams.font_sizes), _this.controlParams.defaultParams.font_sizes);
@@ -4108,6 +4121,29 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
   }
 
   _createClass(TypographyComponent, [{
+    key: "getEmptyValue",
+    value: function getEmptyValue() {
+      var prop = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+      var emptyValue = {
+        fontWeight: 700,
+        textTransform: 'none'
+      };
+
+      if (prop && emptyValue[prop]) {
+        return emptyValue[prop];
+      }
+
+      return emptyValue;
+    }
+  }, {
+    key: "getEmptyDefault",
+    value: function getEmptyDefault() {
+      return {
+        weight_default: 700,
+        text_transform: 'none'
+      };
+    }
+  }, {
     key: "unitButtons",
     value: function unitButtons(units, key) {
       var _this2 = this;
@@ -4140,7 +4176,7 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
             nextValue[currentDevice + '-unit'] = unit;
 
             if (unit !== 'em') {
-              nextValue[currentDevice] = lodash.mapValues(nextValue[currentDevice], function (value) {
+              nextValue[currentDevice] = mapValues(nextValue[currentDevice], function (value) {
                 return value ? parseInt(value) : value;
               });
             }
@@ -4246,6 +4282,15 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
       }));
     }
   }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/React.createElement(Fragment, null, this.props.control.params.label && /*#__PURE__*/React.createElement("span", {
+        className: "customize-control-title"
+      }, this.props.control.params.label), /*#__PURE__*/React.createElement("div", {
+        className: "tutorstarter-typography-control tutorstarter-background-control"
+      }, this.renderFontSize(), this.renderLineHeight(), this.renderFontWeight(), this.renderTextTransform()));
+    }
+  }, {
     key: "updateValues",
     value: function updateValues(value) {
       this.props.control.setting.set(_objectSpread(_objectSpread({}, this.props.control.setting.get()), value));
@@ -4262,9 +4307,6 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
       }, __('Font Weight', 'tutorstarter')), /*#__PURE__*/React.createElement(SelectControl, {
         value: this.state.fontWeight,
         options: [{
-          value: 'none',
-          label: __('None', 'tutorstarter')
-        }, {
           value: 100,
           label: '100'
         }, {
@@ -4337,15 +4379,6 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
           });
         }
       }));
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(Fragment, null, this.props.control.params.label && /*#__PURE__*/React.createElement("span", {
-        className: "customize-control-title"
-      }, this.props.control.params.label), /*#__PURE__*/React.createElement("div", {
-        className: "tutorstarter-typography-control tutorstarter-background-control"
-      }, this.renderFontSize(), this.renderLineHeight(), this.renderFontWeight(), this.renderTextTransform()));
     }
   }]);
 

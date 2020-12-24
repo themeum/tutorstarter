@@ -25,7 +25,7 @@ class Demo_Importer {
 	 * Register Filter Hooks of the Importer Plugin
 	 */
 	public function register() {
-		add_filter( 'pt-ocdi/import_files', array( $this, 'import_theme_demo' ) );
+		add_filter( 'pt-ocdi/import_files', array( $this, 'temp_demo_import' ) );
 		add_filter( 'pt-ocdi/disable_pt_branding', '__return_true' );
 		add_filter( 'pt-ocdi/plugin_intro_text', array( $this, 'change_text' ) );
 		add_filter( 'pt-ocdi/plugin_page_setup', array( $this, 'change_plugin_page' ) );
@@ -42,6 +42,44 @@ class Demo_Importer {
 		wp_send_json_success( $builder );
 
 		return $builder;
+	}
+
+	/**
+	 * Temporary demo import function
+	 */
+	public function temp_demo_import() {
+		return array(
+			array(
+				'import_file_name'             => 'Demo One',
+				'categories'                   => array( 'Business' ),
+				'local_import_file'            => trailingslashit( get_template_directory() ) . 'demo/demo-one/content.xml',
+				'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'demo/demo-one/widgets.wie',
+				'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'demo/demo-one/customizer.dat',
+				//'import_preview_image_url'     => get_template_directory_uri() . '/demo/demo-one/preview.jpg',
+				'builders'                     => array( 'gutenberg', 'elementor' ),
+				'plugins'                      => array( 'qubely', 'elementor' ),
+			),
+			array(
+				'import_file_name'             => 'Demo Two',
+				'categories'                   => array( 'Business', 'Agency' ),
+				'local_import_file'            => trailingslashit( get_template_directory() ) . 'demo/demo-two/content.xml',
+				'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'demo/demo-two/widgets.wie',
+				'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'demo/demo-two/customizer.dat',
+				'import_preview_image_url'     => get_template_directory_uri() . '/demo/demo-two/preview.jpg',
+				'builders'                     => array( 'gutenberg', 'elementor' ),
+				'plugins'                      => array( 'qubely', 'elementor' ),
+			),
+			array(
+				'import_file_name'             => 'Demo Three',
+				'categories'                   => array( 'Portfolio', 'Blog' ),
+				'local_import_file'            => trailingslashit( get_template_directory() ) . 'demo/demo-three/content.xml',
+				'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'demo/demo-three/widgets.wie',
+				'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'demo/demo-three/customizer.dat',
+				//'import_preview_image_url'     => get_template_directory_uri() . '/demo/demo-three/preview.jpg',
+				'builders'                     => array( 'gutenberg' ),
+				'plugins'                      => array( 'qubely' ),
+			),
+		);
 	}
 
 	/**

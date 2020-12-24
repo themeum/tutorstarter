@@ -142,7 +142,7 @@ trait Inline_Css_Js {
 		$widget_title_font_size_tablet  = is_object( $widget_title_font_size_decoded ) ? $widget_title_font_size_decoded->tablet : $widget_title_font_size;
 		$widget_title_font_size_mobile  = is_object( $widget_title_font_size_decoded ) ? $widget_title_font_size_decoded->mobile : $widget_title_font_size;
 		$widget_title_font_size_desktop = is_object( $widget_title_font_size_decoded ) ? $widget_title_font_size_decoded->desktop : $widget_title_font_size;
-
+		
 		// Inline CSS holder.
 		$custom_css = "
 			:root {

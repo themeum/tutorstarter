@@ -66,6 +66,10 @@ class Typography {
 			array(
 				'title'     => esc_html__( 'Body Typography', 'tutorstarter' ),
 				'transport' => 'postMessage',
+				'default'   => array(
+					'fontWeight'    => 700,
+					'textTransform' => 'none',
+				),
 			)
 		);
 		$wp_customize->add_control(
@@ -76,12 +80,14 @@ class Typography {
 					'label'       => esc_html__( 'Body Typography', 'tutorstarter' ),
 					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
-						'font_sizes' => array(
+						'weight_default'  => 700,
+						'text_transform'  => 'none',
+						'font_sizes'    => array(
 							'min'        => 8,
 							'max'        => 100,
-							'units'      => array( 'px' )
+							'units'      => array( 'px' ) 
 						),
-						'line_heights' => array(
+						'line_heights'  => array(
 							'min'        => 0,
 							'max'        => 100,
 							'units'      => array( 'px' )
