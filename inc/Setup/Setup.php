@@ -31,8 +31,12 @@ class Setup {
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'align-wide' );
 		add_theme_support( 'custom-logo' );
+		add_theme_support( 'woocommerce' );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'automatic-feed-links' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-slider' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		// Add editor color palette.
@@ -42,19 +46,29 @@ class Setup {
 				'tutorstarter_editor_color_palette',
 				array(
 					array(
-						'name'  => __( 'Strong Blue', 'tutorstarter' ),
-						'slug'  => 'strong-blue',
-						'color' => '#1539E9',
+						'name'  => __( 'Medium Blue', 'tutorstarter' ),
+						'slug'  => 'medium-blue',
+						'color' => '#175CFF',
 					),
 					array(
-						'name'  => __( 'Black', 'tutorstarter' ),
-						'slug'  => 'pure-black',
-						'color' => '#000000',
+						'name'  => __( 'Deep Navyblue', 'tutorstarter' ),
+						'slug'  => 'deep-navyblue',
+						'color' => '#0A083B',
 					),
 					array(
-						'name'  => __( 'White', 'tutorstarter' ),
-						'slug'  => 'pure-white',
-						'color' => '#ffffff',
+						'name'  => __( 'Off White', 'tutorstarter' ),
+						'slug'  => 'off-white',
+						'color' => '#F7F9FA',
+					),
+					array(
+						'name'  => __( 'Bluish Dark grey', 'tutorstarter' ),
+						'slug'  => 'bluish-dark-grey',
+						'color' => '#57586E',
+					),
+					array(
+						'name'  => __( 'Light grey', 'tutorstarter' ),
+						'slug'  => 'light-grey',
+						'color' => '#EAF1F8',
 					),
 				)
 			)
@@ -66,11 +80,6 @@ class Setup {
 			apply_filters(
 				'tutorstarter_editor_font_sizes',
 				array(
-					array(
-						'name' => __( 'Tiny Fella', 'tutorstarter' ),
-						'slug' => 'tiny-fella',
-						'size' => 14,
-					),
 					array(
 						'name' => __( 'Normal', 'tutorstarter' ),
 						'slug' => 'normal',
@@ -84,22 +93,22 @@ class Setup {
 					array(
 						'name' => __( 'Medium', 'tutorstarter' ),
 						'slug' => 'medium',
-						'size' => 24,
+						'size' => 20,
 					),
 					array(
 						'name' => __( 'Medium+', 'tutorstarter' ),
 						'slug' => 'medium-plus',
-						'size' => 36,
+						'size' => 26,
 					),
 					array(
 						'name' => __( 'Big', 'tutorstarter' ),
 						'slug' => 'big',
-						'size' => 48,
+						'size' => 32,
 					),
 					array(
 						'name' => __( 'Huge', 'tutorstarter' ),
 						'slug' => 'huge',
-						'size' => 84,
+						'size' => 48,
 					),
 				)
 			)

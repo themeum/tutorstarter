@@ -4399,7 +4399,7 @@ TypographyComponent.propTypes = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/wordpress/wp-content/themes/tutorstarter/inc/Api/Customizer/reactjs/src/customizer-controls.js */"./inc/Api/Customizer/reactjs/src/customizer-controls.js");
+module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Api/Customizer/reactjs/src/customizer-controls.js */"./inc/Api/Customizer/reactjs/src/customizer-controls.js");
 
 
 /***/ }),

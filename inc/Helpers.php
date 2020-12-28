@@ -277,15 +277,15 @@ if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
 			// 	'force_deactivation' => false,
 			// 	'external_url'       => esc_url( 'https://downloads.wordpress.org/plugin/one-click-demo-import.2.6.1.zip' ),
 			// ),
-			array(
-				'name'               => esc_html__( 'Cheetah Performance', 'tutorstarter' ),
-				'slug'               => 'cheetah',
-				'source'             => get_stylesheet_directory() . '/plugins/cheetah.zip',
-				'required'           => false,
-				'version'            => '',
-				'force_activation'   => false,
-				'force_deactivation' => false,
-			),
+			// array(
+			// 	'name'               => esc_html__( 'Cheetah Performance', 'tutorstarter' ),
+			// 	'slug'               => 'cheetah',
+			// 	'source'             => get_stylesheet_directory() . '/plugins/cheetah.zip',
+			// 	'required'           => false,
+			// 	'version'            => '',
+			// 	'force_activation'   => false,
+			// 	'force_deactivation' => false,
+			// ),
 		);
 
 		$config = array(

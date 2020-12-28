@@ -27,15 +27,19 @@ $breakpoints: ('xs': $xs, 'sm': $sm, 'md': $md, 'lg': $lg, 'xl': $xl);
 *  Colours
 *--------------------------*/
 $white: #ffffff;
+$off-white: #F7F9FA;
 $black: #000000;
-$light-grey: #f0f0f0;
+$light-grey: #EAF1F8;
+$dark-grey: #57586E;
 $blue: #1539e9;
 $blue-secondary: #1500ff;
 $dark-blue: #000080;
+$dark-navyblue: #0A083B;
+$medium-blue: #175CFF;
 
 // custom colours
 
-$colours: ('white': $white, 'black': $black, 'light-grey': $light-grey, 'blue': $blue, 'blue-secondary': $blue-secondary, 'dark-blue': $dark-blue);
+$colours: ('medium-blue': $medium-blue, 'dark-navyblue': $dark-navyblue, 'dark-grey': $dark-grey, 'off-white': $off-white, 'white': $white, 'black': $black, 'light-grey': $light-grey, 'blue': $blue, 'blue-secondary': $blue-secondary, 'dark-blue': $dark-blue);
 
 /*-------------------------
 *  Typography

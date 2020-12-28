@@ -5738,7 +5738,7 @@ h1.entry-title {
 
 .wp-caption {
   background: #ffffff;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #EAF1F8;
   max-width: 96%;
   /* Image does not overflow the content area */
   padding: 5px 3px 10px;
@@ -6109,6 +6109,54 @@ ul li {
   padding-left: 0;
 }
 
+.text-medium-blue {
+  color: #175CFF;
+}
+
+.background-medium-blue {
+  background-color: #175CFF;
+}
+
+.border-medium-blue {
+  border-color: #175CFF;
+}
+
+.text-dark-navyblue {
+  color: #0A083B;
+}
+
+.background-dark-navyblue {
+  background-color: #0A083B;
+}
+
+.border-dark-navyblue {
+  border-color: #0A083B;
+}
+
+.text-dark-grey {
+  color: #57586E;
+}
+
+.background-dark-grey {
+  background-color: #57586E;
+}
+
+.border-dark-grey {
+  border-color: #57586E;
+}
+
+.text-off-white {
+  color: #F7F9FA;
+}
+
+.background-off-white {
+  background-color: #F7F9FA;
+}
+
+.border-off-white {
+  border-color: #F7F9FA;
+}
+
 .text-white {
   color: #ffffff;
 }
@@ -6134,15 +6182,15 @@ ul li {
 }
 
 .text-light-grey {
-  color: #f0f0f0;
+  color: #EAF1F8;
 }
 
 .background-light-grey {
-  background-color: #f0f0f0;
+  background-color: #EAF1F8;
 }
 
 .border-light-grey {
-  border-color: #f0f0f0;
+  border-color: #EAF1F8;
 }
 
 .text-blue {
@@ -6181,28 +6229,44 @@ ul li {
   border-color: #000080;
 }
 
-.has-strong-blue-background-color {
-  background-color: #1539E9;
+.has-medium-blue-background-color {
+  background-color: #175CFF;
 }
 
-.has-strong-blue-color {
-  color: #1539E9;
+.has-medium-blue-color {
+  color: #175CFF;
 }
 
-.has-pure-black-background-color {
-  background-color: #000000;
+.has-deep-navyblue-background-color {
+  background-color: #0A083B;
 }
 
-.has-pure-black-color {
-  color: #000000;
+.has-deep-navyblue-color {
+  color: #0A083B;
 }
 
-.has-pure-white-background-color {
-  background-color: #ffffff;
+.has-bluish-dark-grey-background-color {
+  background-color: #57586E;
 }
 
-.has-pure-white-color {
-  color: #ffffff;
+.has-bluish-dark-grey-color {
+  color: #57586E;
+}
+
+.has-light-grey-background-color {
+  background-color: #EAF1F8;
+}
+
+.has-light-grey-color {
+  color: #EAF1F8;
+}
+
+.has-off-white-background-color {
+  background-color: #F7F9FA;
+}
+
+.has-off-white-color {
+  color: #F7F9FA;
 }
 
 ::-moz-selection {

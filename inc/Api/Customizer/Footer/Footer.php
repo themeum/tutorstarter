@@ -93,16 +93,20 @@ class Footer {
 					'section' => 'tutorstarter_footer_section',
 					'choices' => array(
 						'footer_one'   => array(
-							'name'  => esc_html__( '3 Cols', 'tutorstarter' ),
+							'name'  => esc_html__( 'Type 1', 'tutorstarter' ),
 							'image' => get_template_directory_uri() . '/assets/dist/images/three-columns.svg',
 						),
 						'footer_two'   => array(
-							'name'  => esc_html__( '4 Cols', 'tutorstarter' ),
+							'name'  => esc_html__( 'Type 2', 'tutorstarter' ),
 							'image' => get_template_directory_uri() . '/assets/dist/images/four-columns.svg',
 						),
 						'footer_three' => array(
-							'name'  => esc_html__( '4 Cols Ext', 'tutorstarter' ),
+							'name'  => esc_html__( 'Type 3', 'tutorstarter' ),
 							'image' => get_template_directory_uri() . '/assets/dist/images/four-columns-extended.svg',
+						),
+						'footer_four' => array(
+							'name'  => esc_html__( 'Type 4', 'tutorstarter' ),
+							'image' => get_template_directory_uri() . '/assets/dist/images/four-columns-extended-left.svg',
 						),
 					),
 				)
