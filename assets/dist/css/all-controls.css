@@ -78,14 +78,24 @@
   padding: 3px 4px !important;
 }
 
-.tutorstarter-responsive-control-bar button svg {
+.tutorstarter-responsive-control-bar button svg,
+.tutorstarter-responsive-control-bar button .dashicon {
   fill: #007cba !important;
   height: 15px;
   width: 16px;
+  font-size: 16px;
 }
 
-.tutorstarter-responsive-control-bar button.active-device svg {
-  fill: #7e8993 !important;
+.preview-mobile .tutorstarter-responsive-control-bar button.mobile .dashicon {
+  color: #7e8993;
+}
+
+.preview-tablet .tutorstarter-responsive-control-bar button.tablet .dashicon {
+  color: #7e8993;
+}
+
+.preview-desktop .tutorstarter-responsive-control-bar button.desktop .dashicon {
+  color: #7e8993;
 }
 
 .tutorstarter-typeface-control .font-family-selector-toggle {

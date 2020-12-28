@@ -22,15 +22,25 @@
       box-shadow: none !important;
       padding: 3px 4px !important;
   
-      svg {
+      svg, .dashicon {
         fill: #007cba !important;
         height: 15px;
         width: 16px;
-      }
-  
-      &.active-device svg {
-        fill: #7e8993 !important;
+        font-size: 16px;
       }
     }
   }
-  
+
+$mappedDevice : 'mobile', 'tablet', 'desktop';
+
+@each $device in $mappedDevice {
+  .preview-#{$device} {
+	.tutorstarter-responsive-control-bar {
+	  button.#{$device} {
+		.dashicon {
+		  color: #7e8993;
+		     }
+	     }
+	  }
+  }
+}

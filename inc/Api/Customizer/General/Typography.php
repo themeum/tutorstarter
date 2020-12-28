@@ -64,12 +64,13 @@ class Typography {
 		$wp_customize->add_setting(
 			'body_typography',
 			array(
-				'title'     => esc_html__( 'Body Typography', 'tutorstarter' ),
-				'transport' => 'postMessage',
-				'default'   => array(
+				'title'             => esc_html__( 'Body Typography', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => array(
 					'fontWeight'    => 700,
 					'textTransform' => 'none',
 				),
+				'sanitize_callback' => 'sanitize_select_range_value',
 			)
 		);
 		$wp_customize->add_control(

@@ -7,6 +7,9 @@
 
 namespace Tutor_Starter\Custom;
 
+use function activate_plugin;
+use function plugins_api;
+
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -42,6 +45,28 @@ class Demo_Importer {
 		wp_send_json_success( $builder );
 
 		return $builder;
+	}
+	
+	/**
+	 * Required plugins list
+	 */
+	public function required_plugins_list() {
+		$woocommerce = array(
+			'base'  => 'woocommerce',
+			'slug'  => 'woocommerce',
+			'path'  => 'woocommerce/woocommerce.php',
+			'title' => esc_html__( 'Woocommerce', 'tutorstarter' ),
+			'src'   => 'repo',
+			'state' => PluginCheck::check_status( 'woocommerce/woocommerce.php' ),
+		);
+		$tutor_lms = array(
+			'base'  => 'tutor',
+			'slug'  => 'tutor',
+			'path'  => 'tutor/tutor.php',
+			'title' => esc_html__( 'Tutor - Ultimate WordPress LMS plugin', 'tutorstarter' ),
+			'src'   => 'repo',
+			'state' => PluginCheck::check_status( 'tutor/tutor.php' ),
+		);
 	}
 
 	/**
