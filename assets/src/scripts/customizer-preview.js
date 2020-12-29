@@ -500,6 +500,18 @@
             }
         })
     });
+    wp.customize('footer_socialmedia_toggle', function (value) {
+        value.bind(function (updatedValue) {
+            let footerSocialMedia = document.querySelector('.site-info #footer-socialmedia');
+            if (null !== footerSocialMedia) {
+                if (true === updatedValue) {
+                    footerSocialMedia.classList.remove('hide');
+                } else {
+                    footerSocialMedia.classList.add('hide');
+                }
+            }
+        })
+    });
     wp.customize('footer_logo', function (value) {
         value.bind(function (updatedValue) {
             let footerLogo = document.querySelector('.site-info img#logo-footer');
@@ -564,7 +576,7 @@
     });
     wp.customize('footer_bottom_text', function (value) {
         value.bind(function (updatedValue) {
-            let footerBottomText = document.querySelector('.site-footer .site-info span.copyright');
+            let footerBottomText = document.querySelector('.copyright-container span.copyright');
             footerBottomText.innerHTML = updatedValue;
         })
     });

@@ -57,6 +57,25 @@ class Footer {
 			)
 		);
 		$wp_customize->add_setting(
+			'footer_socialmedia_toggle',
+			array(
+				'title'             => esc_html__( 'Show Social Media Icons?', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => true,
+				'sanitize_callback' => isset( $input ) ? true : false,
+			)
+		);
+		$wp_customize->add_control(
+			new Toggle_Switch_Control(
+				$wp_customize,
+				'footer_socialmedia_toggle',
+				array(
+					'label'   => esc_html__( 'Show Social Media Icons?', 'tutorstarter' ),
+					'section' => 'tutorstarter_footer_section',
+				)
+			)
+		);
+		$wp_customize->add_setting(
 			'footer_logo',
 			array(
 				'title'             => esc_html__( 'Footer Bottom Logo', 'tutorstarter' ),
