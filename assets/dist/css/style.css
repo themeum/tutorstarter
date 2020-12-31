@@ -6387,6 +6387,413 @@ img.img-responsive {
 # Components
 --------------------------------------------------------------*/
 
+section.tutor-theme-getting-starter .getting-started-page-heading {
+  font-family: Libre Baskerville;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 65px;
+  color: #0A083B;
+  padding: 120px 0px 200px 0px;
+}
+
+section.tutor-theme-getting-starter .sign-type {
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+}
+
+section.tutor-theme-getting-starter .tutor-theme-signing-type {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 350px));
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+section.tutor-theme-getting-starter .tutor-theme-signing-type .sign-as-instructor,
+section.tutor-theme-getting-starter .tutor-theme-signing-type .sign-as-student {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0px;
+  border-radius: 6px;
+}
+
+section.tutor-theme-getting-starter .tutor-theme-signing-type .sign-as-instructor .signing-type-icon,
+section.tutor-theme-getting-starter .tutor-theme-signing-type .sign-as-student .signing-type-icon {
+  background: rgba(23, 92, 255, 0.04);
+  padding: 27px 19px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+section.tutor-theme-getting-starter .tutor-theme-signing-type .sign-as-instructor .signing-title,
+section.tutor-theme-getting-starter .tutor-theme-signing-type .sign-as-student .signing-title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #0A083B;
+}
+
+section.tutor-theme-getting-starter .getting-started-footer {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #0A083B;
+  opacity: 0.7;
+  padding: 160px 0px 130px 0px;
+}
+
+@media (max-width: 767px) {
+  section.tutor-theme-getting-starter .getting-started-page-heading {
+    font-size: 35px;
+    padding: 80px 0px 50px 0px;
+  }
+
+  section.tutor-theme-getting-starter .getting-started-footer {
+    padding: 60px 0px 60px 0px;
+  }
+}
+
+section.tutor-theme-signup {
+  background: #F7F9FA;
+  padding: 100px 0px;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area {
+  max-width: 678px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row {
+  padding: 60px 100px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form-area-heading {
+  font-family: Libre Baskerville;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  color: #0A083B;
+  padding: 0px 0px 40px 0px;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp {
+  margin-bottom: 30px;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp label {
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0A083B;
+  margin-bottom: 12px;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input {
+  background: rgba(255, 255, 255, 0.0001);
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+  border-radius: 6px;
+  width: 100%;
+  padding: 19px 25px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input::-moz-placeholder {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(10, 8, 59, 0.5);
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(10, 8, 59, 0.5);
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input::placeholder {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(10, 8, 59, 0.5);
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input:focus {
+  outline: 0;
+  border: 1.5px solid rgba(10, 8, 59, 0.25);
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp.signup-form-terms-condition {
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  color: #57586E;
+  padding: 0px 10px;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp.signup-form-terms-condition a {
+  color: #1539e9;
+  position: relative;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp.signup-form-terms-condition a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #1539e9;
+  bottom: 0px;
+  left: 0;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form button {
+  background: #175CFF;
+  border-radius: 33px;
+  width: 100%;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row.tutor-theme-social-signup {
+  padding: 40px 100px;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row.tutor-theme-social-signup button {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.514286px;
+  background: #4285f4;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 210px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: #ffffff;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .already-have-account-link {
+  color: #57586E;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 29px;
+}
+
+section.tutor-theme-signup .tutor-theme-signup-form-area .already-have-account-link a {
+  text-align: center;
+  color: #1539e9;
+}
+
+@media (max-width: 767px) {
+  section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row {
+    padding: 40px 40px;
+  }
+
+  section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp.signup-form-terms-condition br {
+    display: none;
+  }
+
+  section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row.tutor-theme-social-signup {
+    padding: 40px 40px;
+  }
+
+  section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row.tutor-theme-social-signup button {
+    gap: 10px;
+  }
+
+  section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row.tutor-theme-social-signup button svg {
+    width: 16px;
+  }
+}
+
+section.tutor-theme-signin {
+  background: #F7F9FA;
+  padding: 100px 0px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area {
+  max-width: 678px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row {
+  padding: 60px 100px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form-area-heading {
+  font-family: Libre Baskerville;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  color: #0A083B;
+  padding: 0px 0px 40px 0px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp {
+  margin-bottom: 30px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp label {
+  display: block;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0A083B;
+  margin-bottom: 12px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp label a {
+  float: right;
+  color: #1539e9;
+  font-weight: normal;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input {
+  background: rgba(255, 255, 255, 0.0001);
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+  border-radius: 6px;
+  width: 100%;
+  padding: 19px 25px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input::-moz-placeholder {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(10, 8, 59, 0.5);
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(10, 8, 59, 0.5);
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input::placeholder {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(10, 8, 59, 0.5);
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input:focus {
+  outline: 0;
+  border: 1.5px solid rgba(10, 8, 59, 0.25);
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp.signin-form-terms-condition {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 26px;
+  text-align: center;
+  color: #57586E;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp.signin-form-terms-condition a {
+  color: #1539e9;
+  text-decoration: underline;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form button {
+  background: #175CFF;
+  border-radius: 33px;
+  width: 100%;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin {
+  padding: 40px 100px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin button {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.514286px;
+  background: #4285f4;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 210px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: #ffffff;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .already-have-account-link {
+  color: #57586E;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 29px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .already-have-account-link a {
+  text-align: center;
+  color: #1539e9;
+}
+
+@media (max-width: 767px) {
+  section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row {
+    padding: 40px 40px;
+  }
+
+  section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin {
+    padding: 40px 40px;
+  }
+
+  section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin button {
+    gap: 10px;
+  }
+
+  section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin button svg {
+    width: 16px;
+  }
+}
+
 header.default {
   display: flex;
   justify-content: space-between;

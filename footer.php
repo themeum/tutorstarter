@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 	$disable_footer = ( ! empty( $page_meta ) ? $page_meta['footer_toggle'] : false );
 
 if ( false === $disable_footer ) :
-	$footer_style = get_theme_mod( 'footer_type_select', 'footer_three' );
+	$footer_style = get_theme_mod( 'footer_type_select', 'footer_four' );
 	get_template_part( 'views/partials/footer/' . $footer_style );
 	?>
 

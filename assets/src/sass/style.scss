@@ -28,6 +28,9 @@
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+@import 'components/getting-started';
+@import "components/signup";
+@import "components/signin";
 @import 'components/header';
 @import 'components/sidebar';
 @import 'components/footer';

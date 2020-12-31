@@ -334,6 +334,3 @@ if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
 		tgmpa( $plugins, $config );
 	}
 endif;
-
-
-
