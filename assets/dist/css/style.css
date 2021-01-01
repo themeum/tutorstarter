@@ -6492,6 +6492,11 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-for
   font-weight: normal;
 }
 
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .signup-status {
+  visibility: hidden;
+  margin: 0px 0px 20px 0px;
+}
+
 section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp {
   margin-bottom: 30px;
 }

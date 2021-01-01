@@ -119,10 +119,62 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_navigation_navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/navigation/navigation */ "./assets/src/scripts/modules/navigation/navigation.js");
 /* harmony import */ var _modules_navigation_navigation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_navigation_navigation__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_auth_registration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/auth/registration */ "./assets/src/scripts/modules/auth/registration.js");
+/* harmony import */ var _modules_auth_registration__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_auth_registration__WEBPACK_IMPORTED_MODULE_1__);
 /**
  * Manage module imports
  */
 
+
+
+/***/ }),
+
+/***/ "./assets/src/scripts/modules/auth/registration.js":
+/*!*********************************************************!*\
+  !*** ./assets/src/scripts/modules/auth/registration.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function () {
+  var tutor_signin_form = document.querySelector('.tutor-signin-form');
+  tutor_signin_form.addEventListener('submit', registerUser);
+
+  function registerUser(e) {
+    e.preventDefault();
+    var request = new XMLHttpRequest();
+    var ajaxurl = tutorstarter_vars.ajaxurl;
+    var reg_status = document.querySelector('.signup-status');
+    var data = new FormData();
+    var username = document.querySelector('#fullname').value;
+    var email = document.querySelector('#email').value;
+    var password = document.querySelector('#password').value;
+    var confirm_password = document.querySelector('#confirm-password').value;
+    data.append('username', username);
+    data.append('email', email);
+    data.append('password', password);
+    data.append('confirm_password', confirm_password);
+    data.append('action', 'ajaxregister');
+    request.open("POST", ajaxurl);
+
+    request.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        var response = JSON.parse(this.responseText);
+        reg_status.style.visibility = "visible";
+
+        if (response.loggedin == true) {
+          reg_status.style.color = "#4285F4";
+          reg_status.innerText = response.message;
+        } else {
+          reg_status.style.color = "#dc3545";
+          reg_status.innerText = response.message;
+        }
+      }
+    };
+
+    request.send(data);
+  }
+})();
 
 /***/ }),
 

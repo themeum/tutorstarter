@@ -31,22 +31,24 @@ defined( 'ABSPATH' ) || exit;
                                     <?php _e('Sign up', 'tutorstarter'); ?>
                                 </div>
                                 <div class="tutor-theme-signup-form">
-                                    <form action="" method="post">
+                                    <form action="" method="post" class="tutor-signin-form">
+                                        <p class="signup-status"></p>
+                                        <!-- <?php wp_nonce_field( 'ajax-register-nonce', 'security' ); ?> -->
                                         <div class="form-grp signup-form-fullname">
-                                            <label for=""><?php _e('Full Name', 'tutorstarter'); ?></label>
-                                            <input name="fullname" type="text" placeholder="John Doe">
+                                            <label for="fullname"><?php _e('Full Name', 'tutorstarter'); ?></label>
+                                            <input name="fullname" id="fullname" type="text" placeholder="John Doe">
                                         </div>
                                         <div class="form-grp signup-form-email">
-                                            <label for=""><?php _e('Email', 'tutorstarter'); ?></label>
-                                            <input type="email" placeholder="name@example.com">
+                                            <label for="email"><?php _e('Email', 'tutorstarter'); ?></label>
+                                            <input name="email" id="email" type="email" placeholder="name@example.com">
                                         </div>
                                         <div class="form-grp signup-form-password">
-                                            <label for=""><?php _e('Password', 'tutorstarter'); ?></label>
-                                            <input type="password" placeholder="Type your password">
+                                            <label for="password"><?php _e('Password', 'tutorstarter'); ?></label>
+                                            <input name="password" id="password" type="password" placeholder="Type your password">
                                         </div>
                                         <div class="form-grp signup-form-confirm-password">
-                                            <label for=""><?php _e('Confirm Password', 'tutorstarter'); ?></label>
-                                            <input type="confirm-password" placeholder="Confirm your password">
+                                            <label for="confirm-password"><?php _e('Confirm Password', 'tutorstarter'); ?></label>
+                                            <input name="confirm_password" id="confirm-password" type="password" placeholder="Confirm your password">
                                         </div>
                                         <div class="form-grp signup-form-terms-condition">
                                             By signing up you agree to the <a href="">Terms and Conditions</a> and the <br> <a href="">  Privacy Policy</a>

@@ -3,3 +3,4 @@
  */
 
 import './modules/navigation/navigation';
+import './modules/auth/registration';
