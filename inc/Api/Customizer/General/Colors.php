@@ -56,7 +56,7 @@ class Colors {
 			array(
 				'title'             => esc_html__( 'Body Text Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#000000',
+				'default'           => '#57586E',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -75,7 +75,7 @@ class Colors {
 			array(
 				'title'             => esc_html__( 'Link Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#000000',
+				'default'           => '#175cff',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);

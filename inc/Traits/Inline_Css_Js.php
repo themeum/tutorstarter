@@ -22,25 +22,25 @@ trait Inline_Css_Js {
 	 */
 	public static function output_css() {
 		// Theme mods.
-		$body_font                 = get_theme_mod( 'body_font', 'Karla' );
-		$heading_font              = get_theme_mod( 'heading_font', 'Karla' );
-		$h1_font_size              = get_theme_mod( 'h1_font_size', '{ "mobile": 42, "tablet": 42, "desktop": 84 }' );
-		$h2_font_size              = get_theme_mod( 'h2_font_size', '{ "mobile": 30, "tablet": 30, "desktop": 48 }' );
-		$h3_font_size              = get_theme_mod( 'h3_font_size', '{ "mobile": 24, "tablet": 24, "desktop": 36 }' );
-		$h4_font_size              = get_theme_mod( 'h4_font_size', '{ "mobile": 20, "tablet": 20, "desktop": 24 }' );
-		$h5_font_size              = get_theme_mod( 'h5_font_size', '{ "mobile": 16, "tablet": 16, "desktop": 18 }' );
-		$h6_font_size              = get_theme_mod( 'h6_font_size', '{ "mobile": 15, "tablet": 15, "desktop": 16 }' );
+		$body_font                 = get_theme_mod( 'body_font', 'Inter' );
+		$heading_font              = get_theme_mod( 'heading_font', 'Libre Baskerville' );
+		$h1_font_size              = get_theme_mod( 'h1_font_size', '{ "mobile": 36, "tablet": 36, "desktop": 48 }' );
+		$h2_font_size              = get_theme_mod( 'h2_font_size', '{ "mobile": 26, "tablet": 26, "desktop": 32 }' );
+		$h3_font_size              = get_theme_mod( 'h3_font_size', '{ "mobile": 24, "tablet": 24, "desktop": 26 }' );
+		$h4_font_size              = get_theme_mod( 'h4_font_size', '{ "mobile": 18, "tablet": 18, "desktop": 18 }' );
+		$h5_font_size              = get_theme_mod( 'h5_font_size', '{ "mobile": 16, "tablet": 16, "desktop": 16 }' );
+		$h6_font_size              = get_theme_mod( 'h6_font_size', '{ "mobile": 15, "tablet": 15, "desktop": 15 }' );
 		$cta_font_size             = get_theme_mod( 'cta_font_size', '{ "mobile": 13, "tablet": 13, "desktop": 16 }' );
-		$body_font_size            = get_theme_mod( 'body_font_size', '{ "mobile": 13, "tablet": 13, "desktop": 16 }' );
+		$body_font_size            = get_theme_mod( 'body_font_size', '{ "mobile": 18, "tablet": 18, "desktop": 18 }' );
 		$header_font_size          = get_theme_mod( 'menu_link_font_size', '{ "mobile": 13, "tablet": 13, "desktop": 16 }' );
 		$cta_text_color            = get_theme_mod( 'cta_color', '#ffffff' );
-		$body_font_lineheight      = get_theme_mod( 'body_font_lineheight', '{ "mobile": 20, "tablet": 20, "desktop": 20 }' );
-		$h1_font_lineheight        = get_theme_mod( 'h1_font_lineheight', '{ "mobile": 42, "tablet": 42, "desktop": 84 }' );
-		$h2_font_lineheight        = get_theme_mod( 'h2_font_lineheight', '{ "mobile": 30, "tablet": 30, "desktop": 60 }' );
+		$body_font_lineheight      = get_theme_mod( 'body_font_lineheight', '{ "mobile": 22, "tablet": 22, "desktop": 22 }' );
+		$h1_font_lineheight        = get_theme_mod( 'h1_font_lineheight', '{ "mobile": 36, "tablet": 36, "desktop": 65 }' );
+		$h2_font_lineheight        = get_theme_mod( 'h2_font_lineheight', '{ "mobile": 30, "tablet": 30, "desktop": 48 }' );
 		$h3_font_lineheight        = get_theme_mod( 'h3_font_lineheight', '{ "mobile": 24, "tablet": 24, "desktop": 48 }' );
-		$h4_font_lineheight        = get_theme_mod( 'h4_font_lineheight', '{ "mobile": 22, "tablet": 22, "desktop": 36 }' );
-		$h5_font_lineheight        = get_theme_mod( 'h5_font_lineheight', '{ "mobile": 20, "tablet": 20, "desktop": 24 }' );
-		$h6_font_lineheight        = get_theme_mod( 'h6_font_lineheight', '{ "mobile": 20, "tablet": 20, "desktop": 22 }' );
+		$h4_font_lineheight        = get_theme_mod( 'h4_font_lineheight', '{ "mobile": 22, "tablet": 22, "desktop": 23 }' );
+		$h5_font_lineheight        = get_theme_mod( 'h5_font_lineheight', '{ "mobile": 22, "tablet": 22, "desktop": 23 }' );
+		$h6_font_lineheight        = get_theme_mod( 'h6_font_lineheight', '{ "mobile": 22, "tablet": 22, "desktop": 23 }' );
 		$h1_font_weight            = get_theme_mod( 'h1_font_weight', 700 );
 		$h2_font_weight            = get_theme_mod( 'h2_font_weight', 700 );
 		$h3_font_weight            = get_theme_mod( 'h3_font_weight', 700 );
@@ -54,13 +54,13 @@ trait Inline_Css_Js {
 		$h5_font_transform         = get_theme_mod( 'h5_font_transform', 'none' );
 		$h6_font_transform         = get_theme_mod( 'h6_font_transform', 'none' );
 		$body_font_weight          = get_theme_mod( 'body_font_weight', 400 );
-		$link_color                = get_theme_mod( 'link_color', '#000000' );
+		$link_color                = get_theme_mod( 'link_color', '#175cff' );
 		$widget_title_font_size    = get_theme_mod( 'footer_widget_font_size', '{ "mobile": 16, "tablet": 16, "desktop": 18 }' );
 		$menu_bg_color             = get_theme_mod( 'menu_bg_color', '#ffffff' );
 		$body_bg_color             = get_theme_mod( 'body_bg_color', '#ffffff' );
 		$cta_background            = get_theme_mod( 'cta_background', '#1539e9' );
 		$cta_font_weight           = get_theme_mod( 'cta_text_font_weight', 700 );
-		$body_text_color           = get_theme_mod( 'body_text_color', '#000000' );
+		$body_text_color           = get_theme_mod( 'body_text_color', '#57586E' );
 		$menu_link_color           = get_theme_mod( 'menu_link_color', '#000000' );
 		$header_font_weight        = get_theme_mod( 'menu_link_font_weight', 700 );
 		$body_font_transform       = get_theme_mod( 'body_font_transform', 'none' );

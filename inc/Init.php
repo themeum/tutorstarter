@@ -30,7 +30,6 @@ final class Init {
 			Custom\Extras::class,
 			Setup\Enqueue::class,
 			Setup\Dashboard::class,
-			//Custom\Demo_Importer::class,
 			Custom\Schema\Schema::class,
 			Custom\Component_Handler::class,
 			Custom\Page\Page_Settings::class,
