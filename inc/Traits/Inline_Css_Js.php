@@ -241,8 +241,9 @@ trait Inline_Css_Js {
 	public static function localized_js() {
 
 		$localized_data = array(
-			'site_url' => site_url(),
-			'ajaxurl'  => admin_url() . 'admin-ajax.php',
+			'site_url'       =>  site_url(),
+			'ajaxurl'        =>  admin_url() . 'admin-ajax.php',
+			'authRedirectUrl' =>  home_url()
 		);
 
 		return $localized_data;

@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
                                     <?php _e('Sign up', 'tutorstarter'); ?>
                                 </div>
                                 <div class="tutor-theme-signup-form">
-                                    <form action="" method="post" class="tutor-signin-form">
+                                    <form action="" method="post" class="tutor-signup-form">
                                         <p class="signup-status"></p>
                                         <!-- <?php wp_nonce_field( 'ajax-register-nonce', 'security' ); ?> -->
                                         <div class="form-grp signup-form-fullname">

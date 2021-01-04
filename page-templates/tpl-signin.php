@@ -31,19 +31,20 @@ defined( 'ABSPATH' ) || exit;
                                     <?php _e('Sign in', 'tutorstarter'); ?>
                                 </div>
                                 <div class="tutor-theme-signin-form">
-                                    <form action="" method="post">
+                                    <form action="" method="post" class="tutor-signin-form">
+                                        <p class="signup-status"></p>
                                         <div class="form-grp signin-form-email">
-                                            <label for=""><?php _e('Email', 'tutorstarter'); ?></label>
-                                            <input type="email" placeholder="name@example.com">
+                                            <label for="login_email"><?php _e('Email', 'tutorstarter'); ?></label>
+                                            <input name="login_email" type="login_email" id="login_email" placeholder="name@example.com">
                                         </div>
                                         <div class="form-grp signin-form-password">
-                                            <label for="">
+                                            <label for="login_password">
                                                 <?php _e('Password', 'tutorstarter'); ?>
                                                 <a href="">
                                                     <?php _e('Forgot password?', 'tutorstarter'); ?>
                                                 </a>
                                             </label>
-                                            <input type="password" placeholder="Type your password">
+                                            <input name="login_password" id="login_password" type="password" placeholder="Type your password">
                                         </div>
                                         <button type="submit" class="btn btn-primary"><?php _e('Log in', 'tutorstarter'); ?></button>
                                     </form><!-- form -->

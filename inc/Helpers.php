@@ -336,7 +336,7 @@ if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
 endif;
 
 add_action('wp_ajax_nopriv_ajaxregister', 'tutor_theme_ajax_register_new_user');
-//add_action('wp_ajax_ajaxregister', 'tutor_theme_ajax_register_new_user');
+add_action('wp_ajax_ajaxregister', 'tutor_theme_ajax_register_new_user');
 
 function tutor_theme_ajax_register_new_user() {	
 	// check_ajax_referer( 'ajax-register-nonce', 'security' );
@@ -369,7 +369,7 @@ function tutor_theme_ajax_register_new_user() {
 		}elseif(strlen($password) <= 6) {
 			echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Password must 7 character or more.','tutorstarter') ));
 			die();
-		}elseif($password != $confirm_password) {
+		}elseif( strcmp($password, $confirm_password) !== 0 ) {
 			echo json_encode( array( 'loggedin' => false, 'message' => __('Wrong!!! Passwords do not match.') ));
 			die();
 		}else {
@@ -381,12 +381,55 @@ function tutor_theme_ajax_register_new_user() {
 			);
 			$user_id = wp_insert_user( $user_input );
 			if ( ! is_wp_error( $user_id ) ) {
-				echo json_encode(array( 'loggedin'=>true, 'message'=> __('Registration successful you can login now.','tutorstarter') ));
-				die();
+				$login_data = array();  
+				$login_data['user_login'] = $username;  
+				$login_data['user_password'] = $password;  
+				$login_data['remember'] = false;  
+			
+				$user_verify = wp_signon( $login_data, false );
+			
+				if ( is_wp_error($user_verify) ) {
+					echo json_encode(array( 'loggedin' => false, 'message'=> __('Something went wrong!!!','tutorstarter') ));
+					die();	
+				} else {
+					echo json_encode(array( 'loggedin' => true, 'message'=> __('Registration successful, redireting ... ... .. .','tutorstarter') ));
+					die();
+				}
 			}else{
-				echo json_encode(array('loggedin'=>false, 'message'=> 'Wrong username or password.'));
+				echo json_encode(array('loggedin' => false, 'message'=> 'Wrong username or password.'));
 				die();
 			}
+		}
+	}
+}
+
+
+add_action('wp_ajax_nopriv_ajaxlogin', 'tutor_theme_ajax_login');
+add_action('wp_ajax_ajaxlogin', 'tutor_theme_ajax_login');
+
+function tutor_theme_ajax_login() {
+	$email 				= 	sanitize_text_field(isset( $_POST['email'] ) ? $_POST['email'] : '');
+	$password 			= 	sanitize_text_field(isset( $_POST['password'] ) ? $_POST['password'] : '');
+	if(!$email) {
+		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Email field is empty.','tutorstarter') ));
+		die();
+	}elseif(!$password) {
+		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Password field is empty.','tutorstarter') ));
+		die();
+	} else {
+		$login_data = array();  
+		$login_data['user_login'] = $email;  
+		$login_data['user_password'] = $password;  
+		$login_data['remember'] = false;  
+	
+		$user_verify = wp_signon( $login_data, false );
+	
+		if ( is_wp_error($user_verify) ) {
+			echo json_encode(array( 'loggedin' => false, 'message'=> __('Invalid login details','tutorstarter') ));
+			die();			
+		} else {
+			echo json_encode(array( 'loggedin' => true, 'message'=> __('Signin successful, redireting ... ... .. .','tutorstarter') ));
+			die();
 		}
 	}
 }

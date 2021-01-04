@@ -3,4 +3,5 @@
  */
 
 import './modules/navigation/navigation';
-import './modules/auth/registration';
+import './modules/auth/signup';
+import './modules/auth/signin';
