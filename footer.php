@@ -25,18 +25,21 @@ if ( false === $disable_footer ) :
 
 <footer id="colophon" class="site-footer container-fluid pt-2 pb-2" role="contentinfo">
 	<div class="container">
-		<div class="row align-middle justify-between">
+		<div class="row align-middle justify-between footer-bottom-container">
 			<div class="site-info">
 			<?php
-			$default     = esc_attr( get_template_directory_uri() . '/assets/dist/images/zeus.png' );
+			$default     = esc_attr( get_template_directory_uri() . '/assets/dist/images/tutor-footer.png' );
 			$footer_logo = esc_url( get_theme_mod( 'footer_logo' ) );
 
 			if ( true === get_theme_mod( 'footer_logo_toggle', true ) ) :
 				?>
 					<img id="logo-footer" src="<?php echo ( '' !== $footer_logo ? $footer_logo : $default ); ?>" alt="<?php echo esc_html( wp_get_document_title() ); ?>" />
 				<?php endif; ?>
-
-				<span class="copyright"><?php wp_kses( _e( get_theme_mod( 'footer_bottom_text', '&copy; All rights reserved.' ), 'tutorstarter' ), allowed_html() ); ?></span>
+				<?php if ( true === get_theme_mod( 'footer_socialmedia_toggle', true ) ) : ?>
+				<span id="footer-socialmedia">
+					<?php is_active_sidebar( 'tutorstarter-footer-socialmedia' ) ? dynamic_sidebar( 'tutorstarter-footer-socialmedia' ) : null; ?>
+				</span>
+				<?php endif; ?>
 			</div><!-- .site-info -->
 			<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 			<div class="footer-menu">
@@ -51,6 +54,9 @@ if ( false === $disable_footer ) :
 				?>
 			</div><!-- .footer-menu-->
 			<?php endif; ?>
+			<div class="copyright-container">
+				<span class="copyright"><?php wp_kses( _e( get_theme_mod( 'footer_bottom_text', '&copy; All rights reserved.' ), 'tutorstarter' ), allowed_html() ); ?></span>
+			</div><!-- .footer-menu-->
 		</div><!-- .row -->
 	</div><!-- .container -->
 </footer><!-- #colophon -->

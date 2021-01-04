@@ -60,6 +60,7 @@ trait Fonts {
 			'Heebo',
 			'Hind Siliguri',
 			'Inconsolata',
+			'Inter',
 			'Josefin Sans',
 			'Karla',
 			'Lato',

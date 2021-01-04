@@ -37,7 +37,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'Body Typography', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => 'Karla',
+				'default'           => 'Inter',
 				'sanitize_callback' => 'sanitize_fonts',
 			)
 		);
@@ -59,53 +59,116 @@ class Typography {
 				)
 			)
 		);
-
-		// Body Typography
 		$wp_customize->add_setting(
-			'body_typography',
+			'body_font_size',
 			array(
-				'title'             => esc_html__( 'Body Typography', 'tutorstarter' ),
+				'title'             => esc_html__( 'Font Size', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => array(
-					'fontWeight'    => 700,
-					'textTransform' => 'none',
-				),
-				'sanitize_callback' => 'sanitize_select_range_value',
+				'default'           => '{ "mobile": 18, "tablet": 18, "desktop": 18 }',
+				'sanitize_callback' => 'sanitize_range_value',
 			)
 		);
 		$wp_customize->add_control(
-			new Typography_Control(
+			new Responsive_Range_Slider_Control(
 				$wp_customize,
-				'body_typography',
+				'body_font_size',
 				array(
-					'label'       => esc_html__( 'Body Typography', 'tutorstarter' ),
+					'label'       => esc_html__( 'Font Size', 'tutorstarter' ),
 					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
-						'weight_default'  => 700,
-						'text_transform'  => 'none',
-						'font_sizes'    => array(
-							'min'        => 8,
-							'max'        => 100,
-							'units'      => array( 'px' ) 
+						'min'        => 8,
+						'max'        => 100,
+						'units'      => array( 'px' ),
+						'defaultVal' => array(
+							'mobile'  => 18,
+							'tablet'  => 18,
+							'desktop' => 18,
 						),
-						'line_heights'  => array(
-							'min'        => 0,
-							'max'        => 100,
-							'units'      => array( 'px' )
-						),
-						'defaultParams' => array(
-							'weight_default'  => 700,
-							'text_transform'  => 'none',
-							'font_sizes' => array(
-								'mobile'  => 13,
-								'tablet'  => 13,
-								'desktop' => 16,
-							),
-							'line_heights' => array(
-								'mobile'  => 22,
-								'tablet'  => 22,
-								'desktop' => 25,
-							)
+					),
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'body_font_weight',
+			array(
+				'title'             => esc_html__( 'Font Weight', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => 400,
+				'sanitize_callback' => 'sanitize_select_radio',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'body_font_weight',
+				array(
+					'label'   => esc_html__( 'Font Weight', 'tutorstarter' ),
+					'section' => 'tutorstarter_typography_section',
+					'type'    => 'select',
+					'choices' => array(
+						100 => 100,
+						200 => 200,
+						300 => 300,
+						400 => 400,
+						500 => 500,
+						600 => 600,
+						700 => 700,
+						800 => 800,
+						900 => 900,
+					),
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'body_font_transform',
+			array(
+				'title'             => esc_html__( 'Text Transform', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => 'none',
+				'sanitize_callback' => 'sanitize_select_radio',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'body_font_transform',
+				array(
+					'label'   => esc_html__( 'Text Transform', 'tutorstarter' ),
+					'section' => 'tutorstarter_typography_section',
+					'type'    => 'select',
+					'choices' => array(
+						'none'       => esc_html__( 'None', 'tutorstarter' ),
+						'capitalize' => esc_html__( 'Capitalize', 'tutorstarter' ),
+						'lowercase'  => esc_html__( 'Lowercase', 'tutorstarter' ),
+						'uppercase'  => esc_html__( 'Uppercase', 'tutorstarter' ),
+					),
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'body_font_lineheight',
+			array(
+				'title'             => esc_html__( 'Line Height', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => '{ "mobile": 22, "tablet": 22, "desktop": 22 }',
+				'sanitize_callback' => 'sanitize_range_value',
+			)
+		);
+		$wp_customize->add_control(
+			new Responsive_Range_Slider_Control(
+				$wp_customize,
+				'body_font_lineheight',
+				array(
+					'label'       => esc_html__( 'Line Height', 'tutorstarter' ),
+					'section'     => 'tutorstarter_typography_section',
+					'input_attrs' => array(
+						'min'        => 0,
+						'max'        => 100,
+						'units'      => array( 'px' ),
+						'defaultVal' => array(
+							'mobile'  => 22,
+							'tablet'  => 22,
+							'desktop' => 22,
 						),
 					),
 				)
@@ -118,7 +181,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'H1 - H6 Font Family', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => 'Karla',
+				'default'           => 'Libre Baskerville',
 				'sanitize_callback' => 'sanitize_fonts',
 			)
 		);
@@ -145,7 +208,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'H1 Font Size', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 42, "tablet": 42, "desktop": 84 }',
+				'default'           => '{ "mobile": 36, "tablet": 36, "desktop": 48 }',
 				'sanitize_callback' => 'sanitize_range_value',
 			)
 		);
@@ -161,9 +224,9 @@ class Typography {
 						'max'        => 100,
 						'units'      => array( 'px' ),
 						'defaultVal' => array(
-							'mobile'  => 42,
-							'tablet'  => 42,
-							'desktop' => 84,
+							'mobile'  => 36,
+							'tablet'  => 36,
+							'desktop' => 48,
 						),
 					),
 				)
@@ -188,10 +251,13 @@ class Typography {
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
+						200 => 200,
 						300 => 300,
 						400 => 400,
 						500 => 500,
+						600 => 600,
 						700 => 700,
+						800 => 800,
 						900 => 900,
 					),
 				)
@@ -228,7 +294,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'H1 Line Height', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 42, "tablet": 42, "desktop": 84 }',
+				'default'           => '{ "mobile": 36, "tablet": 36, "desktop": 65 }',
 				'sanitize_callback' => 'sanitize_range_value',
 			)
 		);
@@ -244,9 +310,9 @@ class Typography {
 						'max'        => 100,
 						'units'      => array( 'px' ),
 						'defaultVal' => array(
-							'mobile'  => 42,
-							'tablet'  => 42,
-							'desktop' => 84,
+							'mobile'  => 36,
+							'tablet'  => 36,
+							'desktop' => 65,
 						),
 					),
 				)
@@ -257,7 +323,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'H2 Font Size', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 30, "tablet": 30, "desktop": 48 }',
+				'default'           => '{ "mobile": 26, "tablet": 26, "desktop": 32 }',
 				'sanitize_callback' => 'sanitize_range_value',
 			)
 		);
@@ -273,9 +339,9 @@ class Typography {
 						'max'        => 100,
 						'units'      => array( 'px' ),
 						'defaultVal' => array(
-							'mobile'  => 30,
-							'tablet'  => 30,
-							'desktop' => 48,
+							'mobile'  => 26,
+							'tablet'  => 26,
+							'desktop' => 32,
 						),
 					),
 				)
@@ -300,10 +366,13 @@ class Typography {
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
+						200 => 200,
 						300 => 300,
 						400 => 400,
 						500 => 500,
+						600 => 600,
 						700 => 700,
+						800 => 800,
 						900 => 900,
 					),
 				)
@@ -340,7 +409,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'H2 Line Height', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 30, "tablet": 30, "desktop": 60 }',
+				'default'           => '{ "mobile": 30, "tablet": 30, "desktop": 48 }',
 				'sanitize_callback' => 'sanitize_range_value',
 			)
 		);
@@ -358,7 +427,7 @@ class Typography {
 						'defaultVal' => array(
 							'mobile'  => 30,
 							'tablet'  => 30,
-							'desktop' => 60,
+							'desktop' => 48,
 						),
 					),
 				)
@@ -369,7 +438,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'H3 Font Size', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 24, "tablet": 24, "desktop": 36 }',
+				'default'           => '{ "mobile": 24, "tablet": 24, "desktop": 26 }',
 				'sanitize_callback' => 'sanitize_range_value',
 			)
 		);
@@ -387,7 +456,7 @@ class Typography {
 						'defaultVal' => array(
 							'mobile'  => 24,
 							'tablet'  => 24,
-							'desktop' => 36,
+							'desktop' => 26,
 						),
 					),
 				)
@@ -412,10 +481,13 @@ class Typography {
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
+						200 => 200,
 						300 => 300,
 						400 => 400,
 						500 => 500,
+						600 => 600,
 						700 => 700,
+						800 => 800,
 						900 => 900,
 					),
 				)
@@ -481,7 +553,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'H4 Font Size', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 20, "tablet": 20, "desktop": 24 }',
+				'default'           => '{ "mobile": 18, "tablet": 18, "desktop": 18 }',
 				'sanitize_callback' => 'sanitize_range_value',
 			)
 		);
@@ -497,9 +569,9 @@ class Typography {
 						'max'        => 100,
 						'units'      => array( 'px' ),
 						'defaultVal' => array(
-							'mobile'  => 20,
-							'tablet'  => 20,
-							'desktop' => 24,
+							'mobile'  => 18,
+							'tablet'  => 18,
+							'desktop' => 18,
 						),
 					),
 				)
@@ -524,10 +596,13 @@ class Typography {
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
+						200 => 200,
 						300 => 300,
 						400 => 400,
 						500 => 500,
+						600 => 600,
 						700 => 700,
+						800 => 800,
 						900 => 900,
 					),
 				)
@@ -564,7 +639,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'H4 Line Height', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 22, "tablet": 22, "desktop": 36 }',
+				'default'           => '{ "mobile": 22, "tablet": 22, "desktop": 23 }',
 				'sanitize_callback' => 'sanitize_range_value',
 			)
 		);
@@ -582,7 +657,7 @@ class Typography {
 						'defaultVal' => array(
 							'mobile'  => 22,
 							'tablet'  => 22,
-							'desktop' => 36,
+							'desktop' => 23,
 						),
 					),
 				)
@@ -593,7 +668,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'H5 Font Size', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 16, "tablet": 16, "desktop": 18 }',
+				'default'           => '{ "mobile": 16, "tablet": 16, "desktop": 16 }',
 				'sanitize_callback' => 'sanitize_range_value',
 			)
 		);
@@ -611,7 +686,7 @@ class Typography {
 						'defaultVal' => array(
 							'mobile'  => 16,
 							'tablet'  => 16,
-							'desktop' => 18,
+							'desktop' => 16,
 						),
 					),
 				)
@@ -636,10 +711,13 @@ class Typography {
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
+						200 => 200,
 						300 => 300,
 						400 => 400,
 						500 => 500,
+						600 => 600,
 						700 => 700,
+						800 => 800,
 						900 => 900,
 					),
 				)
@@ -676,7 +754,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'H5 Line Height', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 20, "tablet": 20, "desktop": 24 }',
+				'default'           => '{ "mobile": 22, "tablet": 22, "desktop": 23 }',
 				'sanitize_callback' => 'sanitize_range_value',
 			)
 		);
@@ -692,9 +770,9 @@ class Typography {
 						'max'        => 100,
 						'units'      => array( 'px' ),
 						'defaultVal' => array(
-							'mobile'  => 20,
-							'tablet'  => 20,
-							'desktop' => 24,
+							'mobile'  => 22,
+							'tablet'  => 22,
+							'desktop' => 23,
 						),
 					),
 				)
@@ -705,7 +783,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'H6 Font Size', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 15, "tablet": 15, "desktop": 16 }',
+				'default'           => '{ "mobile": 15, "tablet": 15, "desktop": 15 }',
 				'sanitize_callback' => 'sanitize_range_value',
 			)
 		);
@@ -723,7 +801,7 @@ class Typography {
 						'defaultVal' => array(
 							'mobile'  => 15,
 							'tablet'  => 15,
-							'desktop' => 16,
+							'desktop' => 15,
 						),
 					),
 				)
@@ -748,10 +826,13 @@ class Typography {
 					'type'    => 'select',
 					'choices' => array(
 						100 => 100,
+						200 => 200,
 						300 => 300,
 						400 => 400,
 						500 => 500,
+						600 => 600,
 						700 => 700,
+						800 => 800,
 						900 => 900,
 					),
 				)
@@ -788,7 +869,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'H6 Line Height', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 20, "tablet": 20, "desktop": 22 }',
+				'default'           => '{ "mobile": 22, "tablet": 22, "desktop": 23 }',
 				'sanitize_callback' => 'sanitize_range_value',
 			)
 		);
@@ -804,9 +885,9 @@ class Typography {
 						'max'        => 100,
 						'units'      => array( 'px' ),
 						'defaultVal' => array(
-							'mobile'  => 20,
-							'tablet'  => 20,
-							'desktop' => 22,
+							'mobile'  => 22,
+							'tablet'  => 22,
+							'desktop' => 23,
 						),
 					),
 				)

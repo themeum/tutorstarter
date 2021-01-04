@@ -19,6 +19,7 @@ node_modules/
 inc/Api/Customizer/reactjs/node_modules/
 # ignore vendor dependency directories
 vendor/
+.DS_Store
 
 # ignore log files and databases
 *.log
