@@ -7567,6 +7567,25 @@ header.alternative {
   padding: 1px;
 }
 
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-cart .tutor-cart-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99999;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-cart .tutor-cart-modal .tutor-modal {
+  position: fixed;
+  width: 360px;
+  min-height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+}
+
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-login-link {
   padding: 0px 10px;
 }
