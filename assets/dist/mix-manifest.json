@@ -1,6 +1,7 @@
 {
     "/js/admin.js": "/js/admin.js",
     "/js/app.js": "/js/app.js",
+    "/css/style.css": "/css/style.css",
     "/css/admin.css": "/css/admin.css",
     "/css/all-controls.css": "/css/all-controls.css",
     "/css/dashboard.css": "/css/dashboard.css",
@@ -8,6 +9,5 @@
     "/js/customizer-preview.js": "/js/customizer-preview.js",
     "/js/tutorstarter-dashboard.js": "/js/tutorstarter-dashboard.js",
     "/js/tutorstarter-page-settings.js": "/js/tutorstarter-page-settings.js",
-    "/js/tutorstarter-schema.js": "/js/tutorstarter-schema.js",
-    "/css/style.css": "/css/style.css"
+    "/js/tutorstarter-schema.js": "/js/tutorstarter-schema.js"
 }

@@ -20,6 +20,37 @@
 					<?php endif; ?>
 				</div>
 				<?php
+				if(taxonomy_exists('course-category')) :	
+					$course_categories = get_terms( array(
+						'taxonomy' => 'course-category',
+						'hide_empty' => false
+					) );
+					// foreach( $course_categories as $course_cat ) :
+					// 	echo "<pre>";
+					// 	print_r(wp_get_attachment_image_src( $course_cat->term_id, 'full' )[0]);
+					// 	print_r(get_term_link($course_cat, 'course-category'));
+					// 	echo "</pre>";
+					if( count($course_categories) > 1 ) :
+				?>
+					<ul id="menu-footer-one" class="menu-one">
+						<li id="menu-item-52" class="icon menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-52">
+							<a href=""> Browse </a>
+							<ul class="sub-menu">
+								<?php 
+								foreach($course_categories as $course_cat) {
+									$category_link = get_term_link($course_cat, 'course-category');
+								?>
+									<li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53">
+										<a href="<?php echo esc_url($category_link); ?>">
+											<?php echo $course_cat->name; ?>
+										</a>
+									</li>
+								<?php }; ?>
+							</ul>
+						</li>
+					</ul>
+				<?php endif; endif; ?>
+				<!-- <?php
 					if ( has_nav_menu( 'primary' ) ) :
 						wp_nav_menu(
 							array(
@@ -28,7 +59,7 @@
 							)
 						);
 					endif;
-				?>
+				?> -->
 			</div>
 			<div class="tutor-navbar-col tutor-navbar-menu">
 				<div class="tutor-navbar-main-menu">
@@ -47,56 +78,25 @@
 					</button>
 				</div>
 				<div class="tutor-navbar-cart">
-					<div class="tutor-cart">
-						<?php echo tutor_starter_header_cart(); ?>
-						<!-- <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M6 16C4.9 16 4.01 16.9 4.01 18C4.01 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16ZM0 0V2H2L5.6 9.59L4.25 12.04C4.09 12.32 4 12.65 4 13C4 14.1 4.9 15 6 15H18V13H6.42C6.28 13 6.17 12.89 6.17 12.75L6.2 12.63L7.1 11H14.55C15.3 11 15.96 10.59 16.3 9.97L19.88 3.48C19.96 3.34 20 3.17 20 3C20 2.45 19.55 2 19 2H4.21L3.27 0H0ZM16 16C14.9 16 14.01 16.9 14.01 18C14.01 19.1 14.9 20 16 20C17.1 20 18 19.1 18 18C18 16.9 17.1 16 16 16Z"
-							/>
-						</svg>
-						<a class="tutor-cart-contents" data-toggle="modal" href="" title="View your shopping cart">
-							<span class="count">
-								1
-							</span>
-						</a> -->
 
-						<?php if ( class_exists( 'woocommerce' )) { ?>
-						<div class="tutor-cart-modal">
-							<div class="tutor-modal" role="document">
-									<button type="button" class="tutor-cart-close">
-										<span>&times;</span>
-									</button>
-									
-									<div class="modal-body">
-										<div class="woo-menu-item-add woocart">
-											
-											<span id="tutor-woo-cart" class="woo-cart">
-												<span class="cart-has-products">
-													<?php esc_html_e('Cart', 'tutorstarter'); ?>
-													<a class="cart-contents">
-														<span class="count"><?php echo 'Cart'; ?><?php echo wp_kses_data( sprintf( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'tutorstarter' ), WC()->cart->get_cart_contents_count() ) );?></span>
-													</a>
-												</span>
-												<?php the_widget( 'WC_Widget_Cart', 'title= ' ); ?>
-											</span>
-										</div>
-
-									</div>
-							</div>
+					<?php if(class_exists('woocommerce')) : ?>
+						<div class="tutor-cart">
+							<?php echo tutor_starter_header_cart(); ?>
 						</div>
-						<!---Cart-->
-						<?php }  ?>
-
-					</div>
+					<?php endif ?>
+					
 					<div class="tutor-login-link">
 						<a href="">
 							Log In
 						</a>
 					</div>
+
 					<div class="tutor-get-started-btn">
 						<?php if ( true === get_theme_mod( 'cta_text_toggle', true ) ) : ?>
 							<a class="call-to-action" href="<?php echo esc_url( get_theme_mod( 'cta_text_link', '#' ) ); ?>"><?php echo esc_html( get_theme_mod( 'cta_text', 'BUY NOW' ) ); ?></a>
 						<?php endif; ?>
 					</div>
+
 				</div>
 			</div>
 		</div>
