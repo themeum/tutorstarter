@@ -3,3 +3,73 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+/* Tutor Course Listing */
+#home-4-featured {
+	.tutor-course-loop-meta {
+		display: none;
+	}
+}
+
+.tutor-course-loop {
+	background: #ffffff;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+	.tutor-course-loop-title {
+		h2 {
+			font-family: "Inter", sans-serif;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 1.5;
+			margin-bottom: 28px;
+			a {
+				color: #0a083b;
+			}
+		}
+	}
+	.tutor-loop-course-container,
+	.tutor-loop-course-footer {
+		padding: 16px 24px;
+	}
+	.tutor-loop-author {
+		font-family: "Inter", sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.5;
+
+		color: #57586e;
+		span {
+			color: inherit;
+		}
+	}
+	.tutor-loop-rating-wrap {
+		color: #efb644;
+		font-size: 12px;
+		i:before {
+			margin-right: 0;
+			margin-left: 0;
+		}
+	}
+
+	.tutor-loop-course-footer {
+		font-family: "Inter", sans-serif;
+		border-top: 1px solid #ebebeb;
+		.price {
+			font-weight: 700;
+			font-size: 12px;
+			line-height: 15px;
+			color: #57586e;
+			a {
+				font-weight: 600;
+				font-size: 14px;
+				display: flex;
+				align-items: center;
+				flex-direction: row-reverse;
+				&:before {
+					margin-right: 0;
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+}
