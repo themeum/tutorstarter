@@ -1,0 +1,89 @@
+#masthead {
+    .tutor-nav {
+        display: flex;
+        justify-content: space-between;
+        .tutor-navbar-col {
+            display: flex;
+            align-items: center;
+            &.tutor-navbar-brand {}
+            &.tutor-navbar-menu {
+                gap: 30px;
+                .tutor-navbar-main-menu {
+                    position: relative;
+                    margin-right: 40px;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 1px;
+                        height: 24px;
+                        top: 50%;
+                        right: -36px;
+                        background-color: rgb(87 88 110 / 11%);
+                        transform: translateY(-50%);
+                    }
+                }
+                .tutor-navbar-cart {
+                    display: flex;
+                    gap: 30px;
+                    .tutor-cart {
+                        position: relative;
+                        svg {
+                            fill : #175CFF;
+                        }
+                        a.tutor-cart-contents {
+                            width: 40px;
+                            height: 40px;
+                            display: block;
+                            position: absolute;
+                            top: -2px;
+                            span.count {
+                                height: 13px;
+                                width: 13px;
+                                border-radius: 50%;
+                                display: inline-block;
+                                text-align: center;
+                                line-height: 13px;
+                                border: 1px solid #175CFF;
+                                color: #175CFF;
+                                position: absolute;
+                                top: -10px;
+                                right: 6px;
+                                font-size: 12px;
+                                padding: 1px;
+                            }
+                        }
+                        .tutor-cart-modal {
+                            position: fixed;
+                            width: 100vw;
+                            height: 100vh;
+                            top: 0;
+                            left: 0;
+                            background-color: rgb(0 0 0 / 70%);
+                            z-index: 99999;                      
+                            .tutor-modal {
+                                position: fixed;
+                                width: 360px;
+                                min-height: 100vh;
+                                top: 0;
+                                right: 0;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                    .tutor-login-link {
+                        padding: 0px 10px;
+                        a {
+                            color : var(--menu-link-color);
+                            font-size: var(--header-font-size);
+                            font-weight: var(--header-font-weight);
+                            &:hover {
+                                color: var(--active-menu-color);
+                            }
+                        }
+                    }
+                    .tutor-get-started-btn {}
+                }
+            }
+        }
+    }
+}
