@@ -1,0 +1,66 @@
+h1.entry-title {
+    padding: 30px 0;
+}
+.woocommerce #content table.cart td.actions .input-text,
+.woocommerce table.cart td.actions .input-text,
+.woocommerce-page #content table.cart td.actions .input-text,
+.woocommerce-page table.cart td.actions .input-text {
+    width: 160px;
+    text-align: center;
+}
+#add_payment_method table.cart td.actions .coupon .input-text, 
+.woocommerce-cart table.cart td.actions .coupon .input-text, 
+.woocommerce-checkout table.cart td.actions .coupon .input-text {
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid #d3ced2;
+    padding: 9px 10px 9px 10px;
+    border-radius: 3px;
+    margin: 0 4px 0 0;
+    outline: 0;
+}
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+    background-color: #175cff;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    transition: all 0.3s ease-in-out;
+}
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+    background-color: #0d48d4;
+}
+
+.woocommerce a.remove {
+    color: #de8080!important;
+}
+
+.woocommerce a.remove:hover {
+    background: #d04242;
+}
+
+.woocommerce-message {
+    border-top-color: #175cff;
+}
+
+.woocommerce-message::before {
+    content: "\e015";
+    color: #0d48d4;
+}
+
+
+// .woocommerce {
+//     .woocommerce-cart-form {
+//         table {
+//             .cart {
+//                 .input-text {
+
+//                 }
+//             }
+//         }
+//     }
+// }

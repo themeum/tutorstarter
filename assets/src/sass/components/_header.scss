@@ -114,20 +114,32 @@ header.alternative {
 .menu-one {
 	display: flex;
 	list-style: none;
+	> li {
+		&:not(:first-child) {
+			margin: 0px 0px 0px 30px;
+		}
+		
+	}
 	li {
 		position: relative;
-		padding: 5px;
-		// &::after {
-		// 	content: "";
-		// 	position: absolute;
-		// 	width: 100%;
-		// 	height: 2px;
-		// 	top: 0;
-		// 	left: 0;
-		// 	background-color: red;
-		// }
+		padding: 0px;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 0%;
+			height: 2px;
+			bottom: 0;
+			left: 0;
+			background-color: red;
+			transition: all 0.4s ease-in-out;
+		}
+		&:hover  {
+			&:before {
+				width: 60%;
+			}
+		}		
 		a {
-			padding: 0px 5px;
+			padding: 0px 0px;
 			text-decoration: none;
 			font-family: inherit;
 			color: var(--menu-link-color);
@@ -142,8 +154,10 @@ header.alternative {
 	}
 
 	.menu-item {
-		margin: 0 10px;
-        position: relative;
+		position: relative;
+		// &:not(:first-child) {
+		// 	margin: 0px 0px 0px 30px;
+		// }
 	}
 	> .menu-item {
 		&:after {
@@ -335,7 +349,7 @@ header.alternative {
 	> a:before {
 		content: "";
 		position: absolute;
-		right: -7px;
+		right: -13px;
 		top: calc(51% + 0px);
 		transform: translateY(-50%) rotate(45deg);
 		border-left-color: inherit;
@@ -347,7 +361,7 @@ header.alternative {
 	> a:after{
 		content: "";
 		position: absolute;
-		right: -3px;
+		right: -9px;
 		top: 51%;
 		border-left-color: inherit;
 		transition: 0.15s linear;
@@ -356,8 +370,7 @@ header.alternative {
 		width: 1px;
 		height: 6px;
 	}
-	&:hover > a::before {
-	}
+	&:hover > a::before {}
 }
 
 /* Responsive (navbar alignments options) */
