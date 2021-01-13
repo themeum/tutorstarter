@@ -335,5 +335,150 @@ if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
 	}
 endif;
 
+add_action('wp_ajax_nopriv_ajaxregister', 'tutor_theme_ajax_register_new_user');
+add_action('wp_ajax_ajaxregister', 'tutor_theme_ajax_register_new_user');
+
+function tutor_theme_ajax_register_new_user() {	
+	// check_ajax_referer( 'ajax-register-nonce', 'security' );
+	$username 			= 	sanitize_text_field(isset( $_POST['username'] ) ? $_POST['username'] : '');
+	$email 				= 	sanitize_text_field(isset( $_POST['email'] ) ? $_POST['email'] : '');
+	$password 			= 	sanitize_text_field(isset( $_POST['password'] ) ? $_POST['password'] : '');
+	$confirm_password 	= 	sanitize_text_field(isset( $_POST['confirm_password'] ) ? $_POST['confirm_password'] : '');
+	if(!$username) {
+		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Username field is empty.','tutorstarter') ));
+		die();
+	}elseif(!$email) {
+		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Email field is empty.','tutorstarter') ));
+		die();
+	}elseif(!$password) {
+		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Password field is empty.','tutorstarter') ));
+		die();
+	}elseif(!$confirm_password) {
+		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Confirm Password field is empty.','tutorstarter') ));
+		die();
+	}else {
+		if(username_exists($username)) {
+			echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Username already exits.','tutorstarter') ));
+			die();
+		}elseif(!is_email($email)) {
+			echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Email address is not correct.','tutorstarter') ));
+			die();
+		}elseif(email_exists($email)) {
+			echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Email user already exits in this site.','tutorstarter') ));
+			die();
+		}elseif(strlen($password) <= 6) {
+			echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Password must 7 character or more.','tutorstarter') ));
+			die();
+		}elseif( strcmp($password, $confirm_password) !== 0 ) {
+			echo json_encode( array( 'loggedin' => false, 'message' => __('Wrong!!! Passwords do not match.') ));
+			die();
+		}else {
+			$user_input = array (
+				'user_login'     =>  $username,
+				'display_name'   =>  $username,
+				'user_email'     =>  $email,
+				'user_pass'      =>  $password
+			);
+			$user_id = wp_insert_user( $user_input );
+			if ( ! is_wp_error( $user_id ) ) {
+				$login_data = array();  
+				$login_data['user_login'] = $username;  
+				$login_data['user_password'] = $password;  
+				$login_data['remember'] = false;  
+			
+				$user_verify = wp_signon( $login_data, false );
+			
+				if ( is_wp_error($user_verify) ) {
+					echo json_encode(array( 'loggedin' => false, 'message'=> __('Something went wrong!!!','tutorstarter') ));
+					die();	
+				} else {
+					echo json_encode(array( 'loggedin' => true, 'message'=> __('Registration successful, redireting ... ... .. .','tutorstarter') ));
+					die();
+				}
+			}else{
+				echo json_encode(array('loggedin' => false, 'message'=> 'Wrong username or password.'));
+				die();
+			}
+		}
+	}
+}
 
 
+add_action('wp_ajax_nopriv_ajaxlogin', 'tutor_theme_ajax_login');
+add_action('wp_ajax_ajaxlogin', 'tutor_theme_ajax_login');
+
+function tutor_theme_ajax_login() {
+	$email 				= 	sanitize_text_field(isset( $_POST['email'] ) ? $_POST['email'] : '');
+	$password 			= 	sanitize_text_field(isset( $_POST['password'] ) ? $_POST['password'] : '');
+	if(!$email) {
+		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Email field is empty.','tutorstarter') ));
+		die();
+	}elseif(!$password) {
+		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Password field is empty.','tutorstarter') ));
+		die();
+	} else {
+		$login_data = array();  
+		$login_data['user_login'] = $email;  
+		$login_data['user_password'] = $password;  
+		$login_data['remember'] = false;  
+	
+		$user_verify = wp_signon( $login_data, false );
+	
+		if ( is_wp_error($user_verify) ) {
+			echo json_encode(array( 'loggedin' => false, 'message'=> __('Invalid login details','tutorstarter') ));
+			die();			
+		} else {
+			echo json_encode(array( 'loggedin' => true, 'message'=> __('Signin successful, redireting ... ... .. .','tutorstarter') ));
+			die();
+		}
+	}
+}
+
+/* -------------------------------------------
+*   tutor starter header cart
+* -------------------------------------------- */
+
+if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
+	function tutor_starter_header_cart() { ?>
+
+		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 16C4.9 16 4.01 16.9 4.01 18C4.01 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16ZM0 0V2H2L5.6 9.59L4.25 12.04C4.09 12.32 4 12.65 4 13C4 14.1 4.9 15 6 15H18V13H6.42C6.28 13 6.17 12.89 6.17 12.75L6.2 12.63L7.1 11H14.55C15.3 11 15.96 10.59 16.3 9.97L19.88 3.48C19.96 3.34 20 3.17 20 3C20 2.45 19.55 2 19 2H4.21L3.27 0H0ZM16 16C14.9 16 14.01 16.9 14.01 18C14.01 19.1 14.9 20 16 20C17.1 20 18 19.1 18 18C18 16.9 17.1 16 16 16Z"
+			/>
+		</svg>
+		<a id="mini-cart-count" class="tutor-cart-contents" href="<?php echo get_template_directory_uri() . '/cart' ?>" title="view your shopping cart">
+			<span class="count">
+				<?php 
+					echo wp_kses_data( 
+						sprintf( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'tutorstarter' ), 
+						WC()->cart->get_cart_contents_count() )
+					);
+				?>
+			</span>
+		</a>
+        <?php
+    }
+}
+
+# Cart Fragments
+add_filter( 'woocommerce_add_to_cart_fragments', 'tutor_starter_cart_link_fragment' );
+if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
+    function tutor_starter_cart_link_fragment( $fragments ) {
+        global $woocommerce;
+		ob_start(); ?>
+		
+		<a id="mini-cart-count" class="tutor-cart-contents" data-toggle="modal" href="<?php echo get_template_directory_uri() . '/cart' ?>" title="View your shopping cart">
+			<span class="count">
+				<?php 
+					echo wp_kses_data( 
+						sprintf( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'tutorstarter' ), 
+						WC()->cart->get_cart_contents_count() )
+					);
+				?>
+			</span>
+		</a>
+          
+        <?php
+        $fragments['#mini-cart-count'] = ob_get_clean();
+        return $fragments;
+    }
+}

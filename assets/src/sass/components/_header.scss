@@ -14,8 +14,10 @@ header.default {
 }
 
 .call-to-action {
-	padding: 21px 60px;
-	background: var(--cta-background-color);
+	padding: 10px 33px;
+	border-radius: 108px;
+	border: 1px solid var(--cta-background-color);
+	//@debug: var(--cta-background-color);
 	font-family: inherit;
 	font-size: var(--cta-font-size);
 	font-weight: var(--cta-font-weight);
@@ -112,18 +114,33 @@ header.alternative {
 .menu-one {
 	display: flex;
 	list-style: none;
-	a {
+	li {
+		position: relative;
 		padding: 5px;
-		text-decoration: none;
-		font-family: inherit;
-		font-size: var(--header-font-size);
-		font-weight: var(--header-font-weight);
-		display: block;
-		//transition: 150ms ease;
-		&:hover {
-			color: var(--active-menu-color);
+		// &::after {
+		// 	content: "";
+		// 	position: absolute;
+		// 	width: 100%;
+		// 	height: 2px;
+		// 	top: 0;
+		// 	left: 0;
+		// 	background-color: red;
+		// }
+		a {
+			padding: 0px 5px;
+			text-decoration: none;
+			font-family: inherit;
+			color: var(--menu-link-color);
+			font-size: var(--header-font-size);
+			font-weight: var(--header-font-weight);
+			display: block;
+			//transition: 150ms ease;
+			&:hover {
+				color: var(--active-menu-color);
+			}
 		}
 	}
+
 	.menu-item {
 		margin: 0 10px;
         position: relative;
@@ -171,6 +188,7 @@ header.alternative {
 /* Navbar options (bg options) */
 #masthead {
 	background: var(--primary-menu-bg-color);
+	padding: 20px 0px;
 }
 
 .nav-search-icon {
@@ -317,15 +335,28 @@ header.alternative {
 	> a:before {
 		content: "";
 		position: absolute;
-		right: -10px;
-		top: calc(50% + 0px);
-		transform: translateY(-50%);
-		border: 4px solid transparent;
+		right: -7px;
+		top: calc(51% + 0px);
+		transform: translateY(-50%) rotate(45deg);
 		border-left-color: inherit;
 		transition: 0.15s linear;
+		background: #57586E;
+		width: 1px;
+		height: 6px;
+	}
+	> a:after{
+		content: "";
+		position: absolute;
+		right: -3px;
+		top: 51%;
+		border-left-color: inherit;
+		transition: 0.15s linear;
+		transform: translateY(-50%) rotate(135deg);
+		background: #57586E;
+		width: 1px;
+		height: 6px;
 	}
 	&:hover > a::before {
-		transform: rotate(90deg);
 	}
 }
 

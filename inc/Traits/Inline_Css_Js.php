@@ -61,12 +61,12 @@ trait Inline_Css_Js {
 		$cta_background            = get_theme_mod( 'cta_background', '#1539e9' );
 		$cta_font_weight           = get_theme_mod( 'cta_text_font_weight', 700 );
 		$body_text_color           = get_theme_mod( 'body_text_color', '#57586E' );
-		$menu_link_color           = get_theme_mod( 'menu_link_color', '#000000' );
+		$menu_link_color           = get_theme_mod( 'menu_link_color', '#57586E' );
 		$header_font_weight        = get_theme_mod( 'menu_link_font_weight', 700 );
 		$body_font_transform       = get_theme_mod( 'body_font_transform', 'none' );
 		$widget_title_font_weight  = get_theme_mod( 'footer_widget_font_weight', 700 );
 		$footer_bottom_bg_color    = get_theme_mod( 'footer_bottom_bg_color', '#000000' );
-		$menu_link_active_color    = get_theme_mod( 'menu_link_active_color', '#1500ff' );
+		$menu_link_active_color    = get_theme_mod( 'menu_link_active_color', '#0A083B' );
 		$footer_widgets_bg_color   = get_theme_mod( 'footer_widgets_bg_color', '#000000' );
 		$footer_bottom_text_color  = get_theme_mod( 'footer_bottom_text_color', '#ffffff' );
 		$footer_widgets_text_color = get_theme_mod( 'footer_widgets_text_color', '#ffffff' );
@@ -241,7 +241,9 @@ trait Inline_Css_Js {
 	public static function localized_js() {
 
 		$localized_data = array(
-			'site_url' => site_url(),
+			'site_url'        =>  site_url(),
+			'ajaxurl'         =>  admin_url() . 'admin-ajax.php',
+			'authRedirectUrl' =>  home_url()
 		);
 
 		return $localized_data;
