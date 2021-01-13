@@ -17,6 +17,8 @@ wp-content/themes/twenty*/
 # ignore node dependency directories
 node_modules/
 inc/Api/Customizer/reactjs/node_modules/
+assets/dist/css/
+assets/dist/js/
 # ignore vendor dependency directories
 vendor/
 .DS_Store
