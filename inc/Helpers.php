@@ -482,3 +482,83 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
         return $fragments;
     }
 }
+
+
+
+add_action('wp_ajax_nopriv_ajaxgoogleauth', 'tutor_theme_ajax_googleauth');
+add_action('wp_ajax_ajaxgoogleauth', 'tutor_theme_ajax_googleauth');
+
+function tutor_theme_ajax_googleauth() {
+	echo json_encode( $_POST );
+	die();
+}
+
+function google_footer_function_login_script() {
+    $google_client_ID = '140541384047-gf7004n9f58kh18gns7692armduvmm62.apps.googleusercontent.com';
+    $google_client_ID_script =  "<script type='text/javascript'> var google_client_ID = '{$google_client_ID}' </script>";
+    echo $google_client_ID_script;
+    ?>
+	<script type="text/javascript">
+        var googleUser = {};
+        var startApp = function() {
+			console.log('google auth api ' + google_client_ID);
+            gapi.load('auth2', function(){
+                // Retrieve the singleton for the GoogleAuth library and set up the client.
+                auth2 = gapi.auth2.init({
+                    //373496230444-uf119vqdp0hsrkujdjt6ucms3scp4v0d.apps.googleusercontent.com
+                    client_id: google_client_ID,
+                    cookiepolicy: 'single_host_origin',
+                    // Request scopes in addition to 'profile' and 'email'
+                    //scope: 'additional_scope'
+                });
+                attachSignin(document.getElementById('gSignIn2'));
+            });
+		};
+
+		function attachSignin(element) {
+			auth2.attachClickHandler(element, {},
+                function(googleUser) {
+					var profile = googleUser.getBasicProfile();
+					var id_token = googleUser.getAuthResponse().id_token; 
+					console.log(profile , id_token);                      
+					//Google AJAX Login
+					let data = {
+						title : 'fetch api ' + profile,
+						body : "pops " + id_token,
+						action : 'ajaxgoogleauth'
+					};
+					fetch(tutorstarter_vars.ajaxurl, {
+							method : "POST",
+							body : JSON.stringify(data),
+							headers: {"Content-type": "application/json; charset=UTF-8"}
+						})
+						.then((data) => {
+							console.log(data);
+						})
+						.catch((err) => {
+							console.log(err);
+						});
+                }, function(error) {
+                    //alert(JSON.stringify(error, undefined, 2));
+                });
+
+			console.log("klsdfnkl;" + tutorstarter_vars.ajaxurl );
+		}
+		startApp();
+		
+	</script>
+<?php }
+
+add_action( 'wp_footer', 'google_footer_function_login_script' );
+
+if($google_client_ID){
+    add_action('wp_enqueue_scripts','load_google_login_script');
+}
+
+add_action('wp_enqueue_scripts', 'load_google_login_script');
+
+if( ! function_exists('load_google_login_script')){
+	function load_google_login_script(){
+		wp_enqueue_script( 'google-login-api-client', 'https://apis.google.com/js/api:client.js', array(), false, false);
+	}
+}
