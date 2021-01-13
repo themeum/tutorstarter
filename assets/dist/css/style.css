@@ -6389,6 +6389,48 @@ img.img-responsive {
 # Components
 --------------------------------------------------------------*/
 
+.tutor-option-field textarea:focus,
+.tutor-option-field input:not([type=submit]):focus,
+.tutor-form-group textarea:focus,
+.tutor-form-group input:not([type=submit]):focus {
+  background: #ffffff;
+  border: 1.5px solid rgba(10, 8, 59, 0.25);
+}
+
+.tutor-option-field textarea:focus,
+.tutor-form-group textarea:focus,
+.tutor-option-field input:focus,
+.tutor-form-group input:focus {
+  outline: none;
+}
+
+.tutor-option-field textarea,
+.tutor-option-field select,
+.tutor-option-field input[type=text],
+.tutor-option-field input[type=number],
+.tutor-option-field input[type="pas.tutor-dashboard-content-innersword"],
+.tutor-form-group textarea,
+.tutor-form-group select,
+.tutor-form-group input[type=text],
+.tutor-form-group input[type=number],
+.tutor-form-group input[type=password] {
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+}
+
+.tutor-option-field-row label,
+.tutor-form-group label {
+  color: #0A083B;
+}
+
+.single_add_to_cart_button,
+a.tutor-button,
+.tutor-button,
+a.tutor-btn,
+.tutor-btn {
+  font-size: 16px;
+  background-color: #175CFF;
+}
+
 h1.entry-title {
   padding: 30px 0;
 }
@@ -6584,7 +6626,7 @@ header.alternative {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: red;
+  background-color: #175CFF;
   transition: all 0.4s ease-in-out;
 }
 
@@ -7180,6 +7222,7 @@ footer {
 }
 
 section.footer-widgets {
+  margin-top: 100px;
   padding-top: 70px;
   padding-bottom: 30px;
   background: var(--footer-widget-bg-color);
@@ -8053,7 +8096,7 @@ header.alternative {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: red;
+  background-color: #175CFF;
   transition: all 0.4s ease-in-out;
 }
 
@@ -8690,19 +8733,20 @@ header.alternative {
 }
 
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-cart a.tutor-cart-contents span.count {
-  height: 13px;
-  width: 13px;
+  height: 16px;
+  width: 16px;
   border-radius: 50%;
   display: inline-block;
   text-align: center;
-  line-height: 13px;
   border: 1px solid #175CFF;
   color: #175CFF;
   position: absolute;
-  top: -10px;
-  right: 6px;
-  font-size: 12px;
-  padding: 1px;
+  top: -8px;
+  right: 8px;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-header-profile-menu {
@@ -8794,6 +8838,7 @@ footer {
 }
 
 section.footer-widgets {
+  margin-top: 100px;
   padding-top: 70px;
   padding-bottom: 30px;
   background: var(--footer-widget-bg-color);

@@ -28,7 +28,10 @@
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-@import 'components/cart.scss';
+@import 'components/tutor/tutor_instructor_reg';
+@import 'components/tutor/tutor_student_reg';
+@import 'components/tutor/tutor_lms';
+@import 'components/woocommerce/cart.scss';
 @import "components/header";
 @import "components/sidebar";
 @import "components/footer";
