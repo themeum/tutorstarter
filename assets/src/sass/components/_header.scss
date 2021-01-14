@@ -126,7 +126,7 @@ header.alternative {
 		&:before {
 			content: "";
 			position: absolute;
-			width: 0%;
+			width: 0px;
 			height: 2px;
 			bottom: 0;
 			left: 0;
@@ -135,7 +135,7 @@ header.alternative {
 		}
 		&:hover  {
 			&:before {
-				width: 60%;
+				width: 40px;
 			}
 		}		
 		a {

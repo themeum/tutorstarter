@@ -5,7 +5,11 @@
         .tutor-navbar-col {
             display: flex;
             align-items: center;
-            &.tutor-navbar-brand {}
+            &.tutor-navbar-brand {
+                .tutor-brand {
+                    margin-right: 50px;
+                }    
+            }
             &.tutor-navbar-menu {
                 gap: 30px;
                 .tutor-navbar-main-menu {

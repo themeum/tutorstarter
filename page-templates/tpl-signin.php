@@ -6,7 +6,13 @@
  *
  * @package Tutor_Starter
  */
-
+if(is_user_logged_in()){
+    // wp_redirect(home_url());
+    $home = home_url();
+    header("Location: $home");
+    // wp_redirect(WP_HOME.'/news.php');
+    die; // You have to die here
+}
 defined( 'ABSPATH' ) || exit;
 ?>
 <!DOCTYPE html>

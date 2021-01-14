@@ -489,8 +489,44 @@ add_action('wp_ajax_nopriv_ajaxgoogleauth', 'tutor_theme_ajax_googleauth');
 add_action('wp_ajax_ajaxgoogleauth', 'tutor_theme_ajax_googleauth');
 
 function tutor_theme_ajax_googleauth() {
-	echo json_encode( $_POST );
-	die();
+
+	//echo json_encode( $_POST );
+	$usermail = $_POST['useremail'];
+    if( $usermail ){
+        $userdata = get_user_by( 'email', $usermail );
+        if(isset($userdata->ID)){
+            wp_set_current_user( $userdata->ID );
+            wp_set_auth_cookie( $userdata->ID );
+            echo json_encode(array( 'loggedin' => true, 'message' => 'Login successful, redirecting...' ));
+        }else{
+            $user_name = substr( $usermail, 0, strpos( $usermail, '@' ));
+            
+            if( username_exists( $user_name ) ){
+                while( 2 > 1 ){
+                    $random     = substr( str_shuffle('abcdefghijklmnopqrstuvwxyz0123456789'), 0, 2 );
+                    $user_name  = $user_name + $random;
+                    if( !username_exists( $user_name ) ){ break; }
+                }
+            }
+            $user_input = array(
+                'first_name'    =>  $_POST['userfirst'],
+                'last_name'     =>  $_POST['userlast'],
+                'user_login'    =>  $user_name,
+                'user_email'    =>  $usermail,
+              	'display_name'	=>  $user_name,
+                'user_pass'     =>  NULL
+            );
+            $user_id = wp_insert_user( $user_input );
+            if ( ! is_wp_error( $user_id ) ) {
+                wp_set_current_user( $user_id );
+                wp_set_auth_cookie( $user_id );
+                echo json_encode(array( 'loggedin' => true, 'message' => 'Login successful, redirecting...' ));
+            } else {
+                echo json_encode(array('loggedin' => false, 'message' => 'Wrong username or password.'));
+            }            
+        }
+        die();
+    }
 }
 
 function google_footer_function_login_script() {
@@ -520,29 +556,44 @@ function google_footer_function_login_script() {
                 function(googleUser) {
 					var profile = googleUser.getBasicProfile();
 					var id_token = googleUser.getAuthResponse().id_token; 
-					console.log(profile , id_token);                      
+					console.log('google auth api ' + google_client_ID);
 					//Google AJAX Login
-					let data = {
-						title : 'fetch api ' + profile,
-						body : "pops " + id_token,
-						action : 'ajaxgoogleauth'
-					};
-					fetch(tutorstarter_vars.ajaxurl, {
-							method : "POST",
-							body : JSON.stringify(data),
-							headers: {"Content-type": "application/json; charset=UTF-8"}
-						})
-						.then((data) => {
-							console.log(data);
-						})
-						.catch((err) => {
-							console.log(err);
-						});
-                }, function(error) {
-                    //alert(JSON.stringify(error, undefined, 2));
-                });
 
-			console.log("klsdfnkl;" + tutorstarter_vars.ajaxurl );
+					let request          =  new XMLHttpRequest();
+					let ajaxurl          =  tutorstarter_vars.ajaxurl;
+					let authRedirectUrl  =  tutorstarter_vars.authRedirectUrl;
+					let reg_status       =  document.querySelector('.signup-status');
+
+					let data             =  new FormData();
+					data.append('id_token', id_token);
+					data.append('useremail', profile.getEmail());
+					data.append('userfirst', profile.getGivenName());
+					data.append('userlast', profile.getFamilyName());
+					data.append('action', 'ajaxgoogleauth');
+
+					request.open("POST", ajaxurl);
+					
+					request.onreadystatechange = function(data) {
+						if(this.readyState === 4 && this.status === 200) {
+							console.log(data);
+							let response = JSON.parse(this.responseText);
+							console.log(response);
+							reg_status.style.visibility = "visible";
+							if (response.loggedin == true) {
+								reg_status.style.color = "#4285F4";
+								reg_status.innerText = response.message;
+								window.location.replace(authRedirectUrl);
+							} else {
+								reg_status.style.color = "#dc3545";
+								reg_status.innerText = response.message;
+							}
+						}
+					};
+					request.send(data);
+
+                }, function(error) {
+                    alert(JSON.stringify(error, undefined, 2));
+                });
 		}
 		startApp();
 		
