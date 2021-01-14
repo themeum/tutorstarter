@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+body {
+	overflow-x: hidden;
+}
+
 /* Tutor Course Listing */
 #home-4-featured {
 	.tutor-course-loop-meta {
