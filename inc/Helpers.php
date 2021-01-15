@@ -434,9 +434,9 @@ function tutor_theme_ajax_login() {
 	}
 }
 
-/* -------------------------------------------
-*   tutor starter header cart
-* -------------------------------------------- */
+/**
+ * tutor starter header cart
+ */
 
 if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
 	function tutor_starter_header_cart() { ?>
@@ -459,7 +459,9 @@ if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
     }
 }
 
-# Cart Fragments
+/**
+ * Cart Fragments
+ */
 add_filter( 'woocommerce_add_to_cart_fragments', 'tutor_starter_cart_link_fragment' );
 if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
     function tutor_starter_cart_link_fragment( $fragments ) {
@@ -484,7 +486,9 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
 }
 
 
-
+/**
+ * login with google
+ */
 add_action('wp_ajax_nopriv_ajaxgoogleauth', 'tutor_theme_ajax_googleauth');
 add_action('wp_ajax_ajaxgoogleauth', 'tutor_theme_ajax_googleauth');
 
@@ -532,12 +536,16 @@ function tutor_theme_ajax_googleauth() {
 function google_footer_function_login_script() {
     $google_client_ID = '140541384047-gf7004n9f58kh18gns7692armduvmm62.apps.googleusercontent.com';
     $google_client_ID_script =  "<script type='text/javascript'> var google_client_ID = '{$google_client_ID}' </script>";
-    echo $google_client_ID_script;
     ?>
 	<script type="text/javascript">
+
+		let googleSignInBtn = document.getElementById('gSignIn2');
+		if(null !== googleSignInBtn) {
+			startApp();
+		}
+
         var googleUser = {};
         var startApp = function() {
-			console.log('google auth api ' + google_client_ID);
             gapi.load('auth2', function(){
                 // Retrieve the singleton for the GoogleAuth library and set up the client.
                 auth2 = gapi.auth2.init({
@@ -555,14 +563,14 @@ function google_footer_function_login_script() {
 			auth2.attachClickHandler(element, {},
                 function(googleUser) {
 					var profile = googleUser.getBasicProfile();
-					var id_token = googleUser.getAuthResponse().id_token; 
+					var id_token = googleUser.getAuthResponse().id_token;
 					console.log('google auth api ' + google_client_ID);
 					//Google AJAX Login
 
 					let request          =  new XMLHttpRequest();
 					let ajaxurl          =  tutorstarter_vars.ajaxurl;
 					let authRedirectUrl  =  tutorstarter_vars.authRedirectUrl;
-					let reg_status       =  document.querySelector('.signup-status');
+					// let reg_status       =  document.querySelector('.signup-status');
 
 					let data             =  new FormData();
 					data.append('id_token', id_token);
@@ -575,17 +583,18 @@ function google_footer_function_login_script() {
 					
 					request.onreadystatechange = function(data) {
 						if(this.readyState === 4 && this.status === 200) {
-							console.log(data);
 							let response = JSON.parse(this.responseText);
-							console.log(response);
-							reg_status.style.visibility = "visible";
-							if (response.loggedin == true) {
-								reg_status.style.color = "#4285F4";
-								reg_status.innerText = response.message;
-								window.location.replace(authRedirectUrl);
-							} else {
-								reg_status.style.color = "#dc3545";
-								reg_status.innerText = response.message;
+							let reg_status  =  document.querySelector('.signup-status');
+							if(null !== reg_status) {
+								reg_status.style.visibility = "visible";
+								if (response.loggedin == true) {
+									reg_status.style.color = "#4285F4";
+									reg_status.innerText = response.message;
+									window.location.replace(authRedirectUrl);
+								} else {
+									reg_status.style.color = "#dc3545";
+									reg_status.innerText = response.message;
+								}
 							}
 						}
 					};
@@ -595,7 +604,6 @@ function google_footer_function_login_script() {
                     alert(JSON.stringify(error, undefined, 2));
                 });
 		}
-		startApp();
 		
 	</script>
 <?php }
@@ -610,6 +618,6 @@ add_action('wp_enqueue_scripts', 'load_google_login_script');
 
 if( ! function_exists('load_google_login_script')){
 	function load_google_login_script(){
-		wp_enqueue_script( 'google-login-api-client', 'https://apis.google.com/js/api:client.js', array(), false, false);
+		wp_enqueue_script( 'google-login-api-client', 'https://apis.google.com/js/api:client.js', array(), false, false );
 	}
 }
