@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<?php if ( true === get_theme_mod( 'blog_meta_toggle' ) ) : ?>
+			<?php if ( true === get_theme_mod( 'blog_meta_toggle', true ) ) : ?>
 				<div class="entry-meta">
 					<?php
 						Tutor_Starter\Core\Tags::posted_on();
@@ -50,6 +50,9 @@ defined( 'ABSPATH' ) || exit;
 	<div class="entry-content">
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
+	<div class="post-tags">
+	 <?php Tutor_Starter\Core\Tags::tags_list(); ?>
+	</div>
 	<?php endif; ?>
 	<?php
 	if ( ! is_single() && true === get_theme_mod( 'post_readmore_toggle', true ) ) :

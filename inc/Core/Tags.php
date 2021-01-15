@@ -43,21 +43,21 @@ class Tags {
 		$categories_list = get_the_category_list( esc_html__( ', ', 'tutorstarter' ) );
 		$categories      = sprintf(
 			// Translators: translatable string for post categories.
-			'<span class="cat-links blog-cats">' . esc_html_x( ' in %1$s', 'post categories', 'tutorstarter' ) . '</span>',
+			'<span class="cat-links blog-cats">' . esc_html_x( ' | %1$s', 'post categories', 'tutorstarter' ) . '</span>',
 			$categories_list
 		); // WPCS: XSS OK.
 
 		$posted_on = sprintf(
 			// Translators: translatable string for post date.
-			esc_html_x( 'Posted on %s', 'post date', 'tutorstarter' ),
+			esc_html_x( '%s', 'post date', 'tutorstarter' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 		$byline = sprintf(
 			// Translators: translatable string for post author.
-			esc_html_x( 'by %s', 'post author', 'tutorstarter' ),
+			esc_html_x( '| %s', 'post author', 'tutorstarter' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
-		echo '<span class="posted-on">' . $posted_on . '</span>' . ( true === get_theme_mod( 'author_meta_toggle' ) ? '<span class="byline"> ' . $byline . '</span>' : null ) . ( true === get_theme_mod( 'category_meta_toggle' ) ? $categories : null ); // WPCS: XSS OK.
+		echo '<span class="posted-on">' . $posted_on . '</span>' . ( true === get_theme_mod( 'category_meta_toggle' ) ? $categories : null ) . ( true === get_theme_mod( 'author_meta_toggle' ) ? '<span class="byline"> ' . $byline . '</span>' : null ); // WPCS: XSS OK.
 	}
 
 	/**
@@ -87,6 +87,32 @@ class Tags {
 			// Translators: %s: post title.
 			comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'tutorstarter' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 			echo '</span>';
+		}
+		edit_post_link(
+			sprintf(
+				// Translators: %s: Name of current post.
+				esc_html__( ' Edit %s', 'tutorstarter' ),
+				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+			),
+			'<span class="edit-link">',
+			'</span>'
+		);
+	}
+
+	/**
+	 * Tags list
+	 *
+	 * @return void
+	 */
+	public static function tags_list() {
+		// Hide category and tag text for pages.
+		if ( 'post' === get_post_type() ) {
+			/* translators: used between list items, there is a space after the comma */
+			$tags_list = get_the_tag_list( '', esc_html__( ' ', 'tutorstarter' ) );
+			if ( $tags_list ) {
+				// Translators: translatable string for post tags.
+				printf( '<span class="tags-links">' . esc_html__( '%1$s', 'tutorstarter' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			}
 		}
 		edit_post_link(
 			sprintf(
