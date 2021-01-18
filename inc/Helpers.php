@@ -339,16 +339,16 @@ add_action('wp_ajax_nopriv_ajaxregister', 'tutor_theme_ajax_register_new_user');
 add_action('wp_ajax_ajaxregister', 'tutor_theme_ajax_register_new_user');
 
 function tutor_theme_ajax_register_new_user() {	
-	// check_ajax_referer( 'ajax-register-nonce', 'security' );
+	//check_ajax_referer( 'tutor-starter-signup-nonce', 'signup-security' );
 	$username 			= 	sanitize_text_field(isset( $_POST['username'] ) ? $_POST['username'] : '');
-	$email 				= 	sanitize_text_field(isset( $_POST['email'] ) ? $_POST['email'] : '');
+	$email 				= 	sanitize_email(isset( $_POST['email'] ) ? $_POST['email'] : '');
 	$password 			= 	sanitize_text_field(isset( $_POST['password'] ) ? $_POST['password'] : '');
 	$confirm_password 	= 	sanitize_text_field(isset( $_POST['confirm_password'] ) ? $_POST['confirm_password'] : '');
 	if(!$username) {
 		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Username field is empty.','tutorstarter') ));
 		die();
 	}elseif(!$email) {
-		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Email field is empty.','tutorstarter') ));
+		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Email isn\'t valid.','tutorstarter') ));
 		die();
 	}elseif(!$password) {
 		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Password field is empty.','tutorstarter') ));
@@ -405,13 +405,13 @@ function tutor_theme_ajax_register_new_user() {
 
 
 add_action('wp_ajax_nopriv_ajaxlogin', 'tutor_theme_ajax_login');
-add_action('wp_ajax_ajaxlogin', 'tutor_theme_ajax_login');
 
 function tutor_theme_ajax_login() {
-	$email 				= 	sanitize_text_field(isset( $_POST['email'] ) ? $_POST['email'] : '');
+	// check_ajax_referer( 'tutor-starter-signin-nonce', 'signin-security' );
+	$email 				= 	sanitize_textarea_field(isset( $_POST['email'] ) ? $_POST['email'] : '');
 	$password 			= 	sanitize_text_field(isset( $_POST['password'] ) ? $_POST['password'] : '');
 	if(!$email) {
-		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Email field is empty.','tutorstarter') ));
+		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Email isn\'t valid.','tutorstarter') ));
 		die();
 	}elseif(!$password) {
 		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Password field is empty.','tutorstarter') ));
@@ -564,7 +564,6 @@ function google_footer_function_login_script() {
                 function(googleUser) {
 					var profile = googleUser.getBasicProfile();
 					var id_token = googleUser.getAuthResponse().id_token;
-					console.log('google auth api ' + google_client_ID);
 					//Google AJAX Login
 
 					let request          =  new XMLHttpRequest();
