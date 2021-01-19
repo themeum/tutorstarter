@@ -22,16 +22,18 @@
             let data             =  new FormData();
             let email            =  document.querySelector('#login_email').value;
             let password         =  document.querySelector('#login_password').value;
+            let signinNonce      =  document.querySelector('#signin-nonce').value;
 
             data.append('email', email);
             data.append('password', password);
-            data.append('action', 'ajaxlogin'); console.log(email, password);
+            data.append('action', 'ajaxlogin'); 
+            data.append('signinNonce', signinNonce);
 
             request.open("POST", ajaxurl);
             
             request.onreadystatechange = function() {            
                 if(this.readyState === 4 && this.status === 200) {
-                    let response = JSON.parse(this.responseText);
+                    let response = JSON.parse(this.responseText); console.log(response)
                     reg_status.style.visibility = "visible";
                     if (response.loggedin == true) {
                         reg_status.style.color = "#4285F4";

@@ -241,9 +241,10 @@ trait Inline_Css_Js {
 	public static function localized_js() {
 
 		$localized_data = array(
-			'site_url'        =>  site_url(),
-			'ajaxurl'         =>  admin_url() . 'admin-ajax.php',
-			'authRedirectUrl' =>  home_url()
+			'site_url'          =>  site_url(),
+			'ajaxurl'           =>  admin_url() . 'admin-ajax.php',
+			'authRedirectUrl'   =>  home_url(),
+			'google_client_ID'  =>  '140541384047-gf7004n9f58kh18gns7692armduvmm62.apps.googleusercontent.com',
 		);
 
 		return $localized_data;
