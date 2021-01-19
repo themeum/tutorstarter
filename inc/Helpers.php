@@ -608,7 +608,7 @@ function google_footer_function_login_script() {
 <?php }
 
 add_action( 'wp_footer', 'google_footer_function_login_script' );
-
+$google_client_ID = '140541384047-gf7004n9f58kh18gns7692armduvmm62.apps.googleusercontent.com';
 if($google_client_ID){
     add_action('wp_enqueue_scripts','load_google_login_script');
 }
