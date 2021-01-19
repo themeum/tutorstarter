@@ -32,39 +32,12 @@ class Typography {
 				'priority'    => 3,
 			)
 		);
-		// Body Font
-		$wp_customize->add_setting(
-			'body_font',
-			array(
-				'title'             => esc_html__( 'Body Font', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => 'Inter',
-				'sanitize_callback' => 'sanitize_fonts',
-			)
-		);
-		$wp_customize->selective_refresh->add_partial(
-			'body_font',
-			array(
-				'selector'            => 'body',
-				'container_inclusive' => false,
-				'render_callback'     => '__return_true',
-			)
-		);
-		$wp_customize->add_control(
-			new Font_Family_Control(
-				$wp_customize,
-				'body_font',
-				array(
-					'label'   => esc_html__( 'Body Font', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-				)
-			)
-		);
+
 		// Body Typography
 		$wp_customize->add_setting(
 			'main_typography',
 			array(
-				'title'     => esc_html__( 'Body Typography', 'tutorstarter' ),
+				'title'     => esc_html__( 'Main Typography', 'tutorstarter' ),
 				'transport' => 'postMessage',
 				'default' => array(
 					'textTransform' => 'none',
@@ -87,7 +60,7 @@ class Typography {
 				$wp_customize,
 				'main_typography',
 				array(
-					'label'       => esc_html__( 'Body Typography', 'tutorstarter' ),
+					'label'       => esc_html__( 'Main Typography', 'tutorstarter' ),
 					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
 						'font_sizes' => array(
@@ -113,6 +86,149 @@ class Typography {
 								'tablet'  => 20,
 								'desktop' => 20,
 							)
+						),
+					),
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'body_font',
+			array(
+				'title'             => esc_html__( 'Body Typography', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => 'Inter',
+				'sanitize_callback' => 'sanitize_fonts',
+			)
+		);
+		$wp_customize->selective_refresh->add_partial(
+			'body_font',
+			array(
+				'selector'            => 'body',
+				'container_inclusive' => false,
+				'render_callback'     => '__return_true',
+			)
+		);
+		$wp_customize->add_control(
+			new Font_Family_Control(
+				$wp_customize,
+				'body_font',
+				array(
+					'label'   => esc_html__( 'Body Typography', 'tutorstarter' ),
+					'section' => 'tutorstarter_typography_section',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'body_font_size',
+			array(
+				'title'             => esc_html__( 'Font Size', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => '{ "mobile": 18, "tablet": 18, "desktop": 18 }',
+				'sanitize_callback' => 'sanitize_range_value',
+			)
+		);
+		$wp_customize->add_control(
+			new Responsive_Range_Slider_Control(
+				$wp_customize,
+				'body_font_size',
+				array(
+					'label'       => esc_html__( 'Font Size', 'tutorstarter' ),
+					'section'     => 'tutorstarter_typography_section',
+					'input_attrs' => array(
+						'min'        => 8,
+						'max'        => 100,
+						'units'      => array( 'px' ),
+						'defaultVal' => array(
+							'mobile'  => 18,
+							'tablet'  => 18,
+							'desktop' => 18,
+						),
+					),
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'body_font_weight',
+			array(
+				'title'             => esc_html__( 'Font Weight', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => 400,
+				'sanitize_callback' => 'sanitize_select_radio',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'body_font_weight',
+				array(
+					'label'   => esc_html__( 'Font Weight', 'tutorstarter' ),
+					'section' => 'tutorstarter_typography_section',
+					'type'    => 'select',
+					'choices' => array(
+						100 => 100,
+						200 => 200,
+						300 => 300,
+						400 => 400,
+						500 => 500,
+						600 => 600,
+						700 => 700,
+						800 => 800,
+						900 => 900,
+					),
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'body_font_transform',
+			array(
+				'title'             => esc_html__( 'Text Transform', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => 'none',
+				'sanitize_callback' => 'sanitize_select_radio',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'body_font_transform',
+				array(
+					'label'   => esc_html__( 'Text Transform', 'tutorstarter' ),
+					'section' => 'tutorstarter_typography_section',
+					'type'    => 'select',
+					'choices' => array(
+						'none'       => esc_html__( 'None', 'tutorstarter' ),
+						'capitalize' => esc_html__( 'Capitalize', 'tutorstarter' ),
+						'lowercase'  => esc_html__( 'Lowercase', 'tutorstarter' ),
+						'uppercase'  => esc_html__( 'Uppercase', 'tutorstarter' ),
+					),
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'body_font_lineheight',
+			array(
+				'title'             => esc_html__( 'Line Height', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => '{ "mobile": 22, "tablet": 22, "desktop": 22 }',
+				'sanitize_callback' => 'sanitize_range_value',
+			)
+		);
+		$wp_customize->add_control(
+			new Responsive_Range_Slider_Control(
+				$wp_customize,
+				'body_font_lineheight',
+				array(
+					'label'       => esc_html__( 'Line Height', 'tutorstarter' ),
+					'section'     => 'tutorstarter_typography_section',
+					'input_attrs' => array(
+						'min'        => 0,
+						'max'        => 100,
+						'units'      => array( 'px' ),
+						'defaultVal' => array(
+							'mobile'  => 22,
+							'tablet'  => 22,
+							'desktop' => 22,
 						),
 					),
 				)

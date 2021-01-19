@@ -30,6 +30,10 @@
   text-shadow: none;
 }
 
+#customize-controls .wp-full-overlay-sidebar-content {
+  background: #F3F3F3;
+}
+
 .tutorstarter-control-header {
   margin-bottom: 7px;
 }
@@ -40,10 +44,10 @@
 }
 
 .tutorstarter-background-control {
-  border: 1px solid #7e8993;
+  border: 1px solid #E8E8E8;
   border-radius: 3px;
   padding: 10px;
-  background: #ffffff;
+  background: #E8E8E8;
 }
 
 .flex-contents {
@@ -104,7 +108,7 @@
   align-items: center;
   justify-content: center;
   display: flex;
-  border: 1px solid #7e8993;
+  border: 1px solid #ccc;
   box-shadow: none;
   background-color: transparent;
 }

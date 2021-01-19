@@ -124,30 +124,13 @@
       bodySelector.style.fontFamily = updatedValue;
     });
   });
-  wp.customize('body_font_size', function (value) {
-    value.bind(function (updatedValue) {
-      var newValue = JSON.parse(updatedValue);
-      var bodySelector = document.querySelector('body');
-      bodySelector.style.fontSize = newValue.desktop + 'px';
-    });
-  });
-  wp.customize('body_font_weight', function (value) {
+  wp.customize('main_typography', function (value) {
     value.bind(function (updatedValue) {
       var bodySelector = document.querySelector('body');
-      bodySelector.style.fontWeight = updatedValue;
-    });
-  });
-  wp.customize('body_font_lineheight', function (value) {
-    value.bind(function (updatedValue) {
-      var newValue = JSON.parse(updatedValue);
-      var bodySelector = document.querySelector('body');
-      bodySelector.style.lineHeight = newValue.desktop + 'px';
-    });
-  });
-  wp.customize('body_font_transform', function (value) {
-    value.bind(function (updatedValue) {
-      var bodySelector = document.querySelector('body');
-      bodySelector.style.textTransform = updatedValue;
+      bodySelector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+      bodySelector.style.fontWeight = updatedValue['fontWeight'];
+      bodySelector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+      bodySelector.style.textTransform = updatedValue['textTransform'];
     });
   });
   wp.customize('heading_font', function (value) {

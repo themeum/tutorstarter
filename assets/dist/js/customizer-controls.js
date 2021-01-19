@@ -4070,7 +4070,7 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
     _this = _super.call(this, props);
     var value = props.control.setting.get();
     var defaultParams = {
-      weight_default: 700,
+      weight_default: 400,
       text_transform: 'none',
       font_sizes: {
         desktop: 16,
