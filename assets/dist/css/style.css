@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 
 /* Document
@@ -6401,6 +6403,224 @@ img.img-responsive {
 # Components
 --------------------------------------------------------------*/
 
+.tutor-wrap .tutor-login-wrap {
+  margin-top: 70px;
+}
+
+.tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input:not([type=checkbox]) {
+  background: rgba(255, 255, 255, 0.0001);
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+  border-radius: 6px;
+  width: 100%;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input:not([type=checkbox])::-moz-placeholder {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(10, 8, 59, 0.5);
+}
+
+.tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input:not([type=checkbox]):-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(10, 8, 59, 0.5);
+}
+
+.tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input:not([type=checkbox])::placeholder {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(10, 8, 59, 0.5);
+}
+
+.tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input:not([type=checkbox]):focus {
+  outline: 0;
+  border: 1.5px solid rgba(10, 8, 59, 0.25);
+}
+
+.tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input[type=submit] {
+  background: #175CFF;
+  border-radius: 33px;
+  padding: 15px 25px;
+  width: 100%;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.tutor-option-field textarea:focus,
+.tutor-option-field input:not([type=submit]):focus,
+.tutor-form-group textarea:focus,
+.tutor-form-group input:not([type=submit]):focus {
+  background: #ffffff;
+  border: 1.5px solid rgba(10, 8, 59, 0.25);
+}
+
+.tutor-option-field textarea:focus,
+.tutor-form-group textarea:focus,
+.tutor-option-field input:focus,
+.tutor-form-group input:focus {
+  outline: none;
+}
+
+.tutor-option-field textarea,
+.tutor-option-field select,
+.tutor-option-field input[type=text],
+.tutor-option-field input[type=number],
+.tutor-option-field input[type="pas.tutor-dashboard-content-innersword"],
+.tutor-form-group textarea,
+.tutor-form-group select,
+.tutor-form-group input[type=text],
+.tutor-form-group input[type=number],
+.tutor-form-group input[type=password] {
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+}
+
+.tutor-option-field-row label,
+.tutor-form-group label {
+  color: #0A083B;
+}
+
+.single_add_to_cart_button,
+a.tutor-button,
+.tutor-button,
+a.tutor-btn,
+.tutor-btn {
+  font-size: 16px;
+  padding: 15px 80px;
+  border-radius: 33px;
+  background-color: #175CFF;
+  border: 1px solid #175CFF;
+}
+
+h1.entry-title {
+  padding: 30px 0;
+}
+
+.woocommerce #content table.cart td.actions .input-text,
+.woocommerce table.cart td.actions .input-text,
+.woocommerce-page #content table.cart td.actions .input-text,
+.woocommerce-page table.cart td.actions .input-text {
+  width: 160px;
+  text-align: center;
+}
+
+#add_payment_method table.cart td.actions .coupon .input-text,
+.woocommerce-cart table.cart td.actions .coupon .input-text,
+.woocommerce-checkout table.cart td.actions .coupon .input-text {
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid #d3ced2;
+  padding: 9px 10px 9px 10px;
+  border-radius: 3px;
+  margin: 0 4px 0 0;
+  outline: 0;
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+  background-color: #175cff;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  transition: all 0.3s ease-in-out;
+}
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+  background-color: #0d48d4;
+}
+
+.woocommerce a.remove {
+  color: #de8080 !important;
+}
+
+.woocommerce a.remove:hover {
+  background: #d04242;
+}
+
+.woocommerce-message {
+  border-top-color: #175cff;
+}
+
+.woocommerce-message::before {
+  content: "\E015";
+  color: #0d48d4;
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+  background: #175cff !important;
+  border-radius: 33px;
+  width: 230px;
+  padding: 20px 30px !important;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  text-align: center;
+  color: #fff !important;
+  margin-top: 20px;
+}
+
+button.woocommerce-Button.button[value=Save] {
+  width: 160px !important;
+}
+
+.woocommerce-password-strength {
+  padding: 7px 1.5em;
+  margin-top: 10px;
+}
+
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover {
+  background: #175cff;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.woocommerce #respond input#submit:focus,
+.woocommerce a.button:focus,
+.woocommerce button.button:focus,
+.woocommerce input.button:focus {
+  outline: 0;
+  color: #fff;
+}
+
+.woocommerce-Input.woocommerce-Input--text.input-text {
+  background: rgba(255, 255, 255, 0.0001);
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+  border-radius: 6px;
+  width: 100%;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  margin-top: 25px !important;
+}
+
+.woocommerce form .show-password-input,
+.woocommerce-page form .show-password-input {
+  position: absolute;
+  right: 0.7em;
+  top: 2.5em;
+  cursor: pointer;
+}
+
 header.default {
   display: flex;
   justify-content: space-between;
@@ -6522,13 +6742,32 @@ header.alternative {
   list-style: none;
 }
 
+.menu-one > li:not(:first-child) {
+  margin: 0px 0px 0px 30px;
+}
+
 .menu-one li {
   position: relative;
-  padding: 5px;
+  padding: 0px;
+}
+
+.menu-one li:before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #175CFF;
+  transition: all 0.4s ease-in-out;
+}
+
+.menu-one li:hover:before {
+  width: 40px;
 }
 
 .menu-one li a {
-  padding: 0px 5px;
+  padding: 0px 0px;
   text-decoration: none;
   font-family: inherit;
   color: var(--menu-link-color);
@@ -6542,7 +6781,6 @@ header.alternative {
 }
 
 .menu-one .menu-item {
-  margin: 0 10px;
   position: relative;
 }
 
@@ -6745,7 +6983,7 @@ header.alternative {
 .menu-item.icon > a:before {
   content: "";
   position: absolute;
-  right: -7px;
+  right: -13px;
   top: calc(51% + 0px);
   transform: translateY(-50%) rotate(45deg);
   border-left-color: inherit;
@@ -6758,7 +6996,7 @@ header.alternative {
 .menu-item.icon > a:after {
   content: "";
   position: absolute;
-  right: -3px;
+  right: -9px;
   top: 51%;
   border-left-color: inherit;
   transition: 0.15s linear;
@@ -7116,6 +7354,7 @@ footer {
 }
 
 section.footer-widgets {
+  margin-top: 100px;
   padding-top: 70px;
   padding-bottom: 30px;
   background: var(--footer-widget-bg-color);
@@ -7587,6 +7826,182 @@ section.tutor-theme-getting-starter .getting-started-footer {
   }
 }
 
+.login form .input,
+.login input[type=password],
+.login input[type=text] {
+  background: rgba(255, 255, 255, 0.0001) !important;
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+  border-radius: 6px;
+  width: 100%;
+  padding: 19px 25px !important;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+section.tutor-theme-signin {
+  background: #F7F9FA;
+  padding: 100px 0px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area {
+  max-width: 678px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row {
+  padding: 60px 100px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form-area-heading {
+  font-family: Libre Baskerville;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  color: #0A083B;
+  padding: 0px 0px 40px 0px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp {
+  margin-bottom: 30px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp label {
+  display: block;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0A083B;
+  margin-bottom: 12px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp label a {
+  float: right;
+  color: #1539e9;
+  font-weight: normal;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input {
+  background: rgba(255, 255, 255, 0.0001);
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+  border-radius: 6px;
+  width: 100%;
+  padding: 19px 25px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input::-moz-placeholder {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(10, 8, 59, 0.5);
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(10, 8, 59, 0.5);
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input::placeholder {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(10, 8, 59, 0.5);
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input:focus {
+  outline: 0;
+  border: 1.5px solid rgba(10, 8, 59, 0.25);
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp.signin-form-terms-condition {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 26px;
+  text-align: center;
+  color: #57586E;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp.signin-form-terms-condition a {
+  color: #1539e9;
+  text-decoration: underline;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form button {
+  background: #175CFF;
+  border-radius: 33px;
+  width: 100%;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin {
+  padding: 40px 100px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin button {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.514286px;
+  background: #4285f4;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 210px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: #ffffff;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .already-have-account-link {
+  color: #57586E;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 29px;
+}
+
+section.tutor-theme-signin .tutor-theme-signin-form-area .already-have-account-link a {
+  text-align: center;
+  color: #1539e9;
+}
+
+@media (max-width: 767px) {
+  section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row {
+    padding: 40px 40px;
+  }
+
+  section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin {
+    padding: 40px 40px;
+  }
+
+  section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin button {
+    gap: 10px;
+  }
+
+  section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin button svg {
+    width: 16px;
+  }
+}
+
 section.tutor-theme-signup {
   background: #F7F9FA;
   padding: 100px 0px;
@@ -7765,170 +8180,6 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .already-have-account-l
   }
 }
 
-section.tutor-theme-signin {
-  background: #F7F9FA;
-  padding: 100px 0px;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area {
-  max-width: 678px;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row {
-  padding: 60px 100px;
-  background: #ffffff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form-area-heading {
-  font-family: Libre Baskerville;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 48px;
-  text-align: center;
-  color: #0A083B;
-  padding: 0px 0px 40px 0px;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp {
-  margin-bottom: 30px;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp label {
-  display: block;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  color: #0A083B;
-  margin-bottom: 12px;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp label a {
-  float: right;
-  color: #1539e9;
-  font-weight: normal;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input {
-  background: rgba(255, 255, 255, 0.0001);
-  border: 1.5px solid rgba(10, 8, 59, 0.1);
-  border-radius: 6px;
-  width: 100%;
-  padding: 19px 25px;
-  box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input::-moz-placeholder {
-  font-size: 16px;
-  line-height: 19px;
-  color: rgba(10, 8, 59, 0.5);
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input:-ms-input-placeholder {
-  font-size: 16px;
-  line-height: 19px;
-  color: rgba(10, 8, 59, 0.5);
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input::placeholder {
-  font-size: 16px;
-  line-height: 19px;
-  color: rgba(10, 8, 59, 0.5);
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input:focus {
-  outline: 0;
-  border: 1.5px solid rgba(10, 8, 59, 0.25);
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp.signin-form-terms-condition {
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 26px;
-  text-align: center;
-  color: #57586E;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp.signin-form-terms-condition a {
-  color: #1539e9;
-  text-decoration: underline;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form button {
-  background: #175CFF;
-  border-radius: 33px;
-  width: 100%;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin {
-  padding: 40px 100px;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin button {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.514286px;
-  background: #4285f4;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 210px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  color: #ffffff;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .already-have-account-link {
-  color: #57586E;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 29px;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .already-have-account-link a {
-  text-align: center;
-  color: #1539e9;
-}
-
-@media (max-width: 767px) {
-  section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row {
-    padding: 40px 40px;
-  }
-
-  section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin {
-    padding: 40px 40px;
-  }
-
-  section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin button {
-    gap: 10px;
-  }
-
-  section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row.tutor-theme-social-signin button svg {
-    width: 16px;
-  }
-}
-
 header.default {
   display: flex;
   justify-content: space-between;
@@ -8050,13 +8301,32 @@ header.alternative {
   list-style: none;
 }
 
+.menu-one > li:not(:first-child) {
+  margin: 0px 0px 0px 30px;
+}
+
 .menu-one li {
   position: relative;
-  padding: 5px;
+  padding: 0px;
+}
+
+.menu-one li:before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #175CFF;
+  transition: all 0.4s ease-in-out;
+}
+
+.menu-one li:hover:before {
+  width: 40px;
 }
 
 .menu-one li a {
-  padding: 0px 5px;
+  padding: 0px 0px;
   text-decoration: none;
   font-family: inherit;
   color: var(--menu-link-color);
@@ -8070,7 +8340,6 @@ header.alternative {
 }
 
 .menu-one .menu-item {
-  margin: 0 10px;
   position: relative;
 }
 
@@ -8273,7 +8542,7 @@ header.alternative {
 .menu-item.icon > a:before {
   content: "";
   position: absolute;
-  right: -7px;
+  right: -13px;
   top: calc(51% + 0px);
   transform: translateY(-50%) rotate(45deg);
   border-left-color: inherit;
@@ -8286,7 +8555,7 @@ header.alternative {
 .menu-item.icon > a:after {
   content: "";
   position: absolute;
-  right: -3px;
+  right: -9px;
   top: 51%;
   border-left-color: inherit;
   transition: 0.15s linear;
@@ -8640,6 +8909,10 @@ header.alternative {
   align-items: center;
 }
 
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-brand .tutor-brand {
+  margin-right: 50px;
+}
+
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu {
   gap: 30px;
 }
@@ -8662,11 +8935,14 @@ header.alternative {
 
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart {
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-cart {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-cart svg {
@@ -8682,38 +8958,81 @@ header.alternative {
 }
 
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-cart a.tutor-cart-contents span.count {
-  height: 13px;
-  width: 13px;
+  height: 16px;
+  width: 16px;
   border-radius: 50%;
   display: inline-block;
   text-align: center;
-  line-height: 13px;
   border: 1px solid #175CFF;
   color: #175CFF;
   position: absolute;
-  top: -10px;
-  right: 6px;
-  font-size: 12px;
-  padding: 1px;
+  top: -8px;
+  right: 8px;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-cart .tutor-cart-modal {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 99999;
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-header-profile-menu {
+  position: relative;
+  cursor: pointer;
 }
 
-#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-cart .tutor-cart-modal .tutor-modal {
-  position: fixed;
-  width: 360px;
-  min-height: 100vh;
-  top: 0;
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-header-profile-menu .tutor-header-profile-photo span.tutor-text-avatar {
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-header-profile-menu:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-header-profile-menu ul {
+  position: absolute;
+  z-index: 999;
+  background: #fff;
+  padding: 10px 0;
+  list-style: none;
+  width: 200px;
   right: 0;
-  background-color: #fff;
+  top: 49px;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-height: 510px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-header-profile-menu ul li {
+  display: block;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-header-profile-menu ul li a {
+  display: block;
+  width: 100%;
+  padding: 5px 25px;
+  color: #1f2949;
+  transition: 300ms;
+  font-size: 14px;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-header-profile-menu ul:before {
+  content: "";
+  bottom: 100%;
+  height: 20px;
+  width: 100%;
+  z-index: 2;
+  left: 0;
+  position: absolute;
 }
 
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-login-link {
@@ -8744,6 +9063,7 @@ footer {
 }
 
 section.footer-widgets {
+  margin-top: 100px;
   padding-top: 70px;
   padding-bottom: 30px;
   background: var(--footer-widget-bg-color);
@@ -8859,295 +9179,6 @@ section.footer-widgets .widget_nav_menu .menu-footer-menu-container .menu-item a
     text-align: center;
     justify-self: center;
   }
-}
-
-/* Blog post single */
-
-.single-post .entry-header {
-  text-align: center;
-}
-
-.single-post .entry-title {
-  font-family: Libre Baskerville;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 65px;
-  letter-spacing: 0px;
-  color: #0a083b;
-  margin-bottom: 24px;
-}
-
-.single-post .entry-meta {
-  margin-bottom: 60px;
-}
-
-.single-post .entry-meta span,
-.single-post .entry-meta a {
-  font-family: Inter;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 2.17;
-  text-align: center;
-  letter-spacing: -0.656526px;
-  color: rgba(10, 8, 59, 0.7);
-  padding-right: 20px;
-}
-
-.single-post .entry-meta span {
-  position: relative;
-  display: inline-block;
-  padding-right: 20px;
-}
-
-.single-post .entry-meta span:not(:last-child):after {
-  content: "I";
-  font-size: inherit;
-  color: #dde3e7;
-}
-
-.single-post .post-thumbnail {
-  margin-bottom: 62px;
-}
-
-.single-post .entry-content,
-.single-post .post-tags {
-  max-width: 720px;
-  margin: 0 auto;
-  font-family: "Inter", sans-serif;
-}
-
-.single-post .entry-content p,
-.single-post .post-tags p {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.72;
-  letter-spacing: -0.562737px;
-  color: rgba(10, 8, 59, 0.7);
-  margin-bottom: 32px;
-}
-
-.single-post .entry-content h4,
-.single-post .post-tags h4 {
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  line-height: 1.6;
-  font-weight: 500;
-  letter-spacing: -0.562px;
-  margin-bottom: 27px;
-}
-
-.single-post .entry-content blockquote,
-.single-post .post-tags blockquote {
-  border: none;
-  padding-left: 54px;
-  position: relative;
-}
-
-.single-post .entry-content blockquote p,
-.single-post .post-tags blockquote p {
-  font-size: 21px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 34px;
-  letter-spacing: -0.656px;
-}
-
-.single-post .entry-content blockquote::before,
-.single-post .post-tags blockquote::before {
-  content: '"';
-  font-family: "Libre Baskerville", sans-serif;
-  font-size: 104px;
-  line-height: 1;
-  position: absolute;
-  left: 0px;
-  top: 4px;
-  color: rgba(10, 8, 59, 0.2);
-}
-
-.single-post .tags-links {
-  display: block;
-  padding-top: 10px;
-}
-
-.single-post .tags-links a {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 19px;
-  letter-spacing: -0.5px;
-  display: inline-block;
-  color: rgba(10, 8, 59, 0.7);
-  background: #eae9f2;
-  border-radius: 5px;
-  padding: 10px 12px;
-  transition: 0.2s linear;
-}
-
-.single-post .tags-links a:not(:last-child) {
-  margin-right: 5px;
-}
-
-.single-post .tags-links a:hover {
-  background: #0a083b;
-  color: #fff;
-}
-
-.single-post .edit-link {
-  display: block;
-  margin-top: 30px;
-}
-
-/* Blog Sidebar */
-
-.page-content .search-form {
-  margin-top: 10px;
-}
-
-.widget .search-form,
-.page-content .search-form {
-  position: relative;
-}
-
-.widget input[type=search],
-.page-content input[type=search] {
-  width: 100%;
-  height: 50px;
-  border: 1px solid rgba(10, 8, 59, 0.1);
-  border-radius: 6px;
-  background: #fff;
-  outline: none;
-  color: #0a083b;
-  padding: 10px;
-}
-
-.widget input[type=search]:focus,
-.page-content input[type=search]:focus {
-  border-color: #175cff;
-}
-
-.widget input.search-submit,
-.page-content input.search-submit {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  height: calc(100% - 10px);
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1;
-  text-transform: capitalize;
-  background-color: #175cff;
-  color: #ffff;
-  padding: 11px 26px;
-  outline: 0;
-  border: 1px solid #175cff;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: 0.2s linear;
-}
-
-.widget input.search-submit:hover,
-.widget input.search-submit:focus,
-.page-content input.search-submit:hover,
-.page-content input.search-submit:focus {
-  background-color: #0a083b;
-  border-color: #0a083b;
-}
-
-.widget .widget-title,
-.page-content .widget-title {
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: #0a083b;
-}
-
-.widget a,
-.page-content a {
-  color: inherit;
-}
-
-.widget a:hover,
-.page-content a:hover {
-  text-decoration: underline;
-  color: #0a083b;
-}
-
-/* Blog Comments area */
-
-.comment-reply-title {
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  line-height: 1.6;
-  font-weight: 500;
-  letter-spacing: -0.562px;
-}
-
-.comments-area {
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-
-.comment-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.comment-form .comment-form-cookies-consent label {
-  display: inline-block;
-}
-
-.comment-form input[type=text],
-.comment-form input[type=email],
-.comment-form input[type=url],
-.comment-form textarea {
-  width: 100%;
-  height: 50px;
-  resize: vertical;
-  border: 1px solid rgba(10, 8, 59, 0.1);
-  border-radius: 6px;
-  background: #fff;
-  outline: none;
-  color: #0a083b;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.comment-form input[type=text]:focus,
-.comment-form input[type=email]:focus,
-.comment-form input[type=url]:focus,
-.comment-form textarea:focus {
-  border-color: #175cff;
-}
-
-.comment-form textarea {
-  height: 100px;
-}
-
-.comment-form .form-submit input[type=submit] {
-  background-color: #175cff;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #ffff;
-  padding: 11px 26px;
-  outline: 0;
-  border: 1px solid #175cff;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: 0.2s linear;
-  display: inline-block;
-  width: auto;
-  height: auto;
-}
-
-.comment-form .form-submit input[type=submit]:hover,
-.comment-form .form-submit input[type=submit]:focus {
-  background-color: #0a083b;
-  border-color: #0a083b;
 }
 
 /* Blog List */

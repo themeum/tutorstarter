@@ -1,0 +1,61 @@
+// .woocommerce-Button.button,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button, 
+.woocommerce input.button {
+    background: #175cff !important;
+    border-radius: 33px;
+    width: 230px;
+    padding: 20px 30px !important;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    align-items: center;
+    text-align: center;
+    color: #fff !important;
+    margin-top: 20px;
+}
+button.woocommerce-Button.button[value="Save"] {
+    width: 160px !important;
+}
+.woocommerce-password-strength {
+    padding: 7px 1.5em;
+    margin-top: 10px;
+}
+.woocommerce #respond input#submit:hover, 
+.woocommerce a.button:hover,
+.woocommerce button.button:hover, 
+.woocommerce input.button:hover {
+    background: #175cff;
+    color: #fff;
+    opacity: 0.8;
+}
+.woocommerce #respond input#submit:focus, 
+.woocommerce a.button:focus,
+.woocommerce button.button:focus, 
+.woocommerce input.button:focus {
+    outline: 0;
+    color: #fff;
+
+}
+.woocommerce-Input.woocommerce-Input--text.input-text {
+    background: hsla(0,0%,100%,.0001);
+    border: 1.5px solid rgba(10,8,59,.1);
+    border-radius: 6px;
+    width: 100%;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+    margin-top: 25px !important;
+}
+
+
+// lost password
+.woocommerce form .show-password-input,
+.woocommerce-page form .show-password-input {
+    position: absolute;
+    right: .7em;
+    top: 2.5em;
+    cursor: pointer;
+}
