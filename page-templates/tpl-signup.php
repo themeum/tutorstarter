@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
                                 <div class="tutor-theme-signup-form">
                                     <form action="" method="post" class="tutor-signup-form">
                                         <p class="signup-status"></p>
-                                        <?php wp_nonce_field( 'tutor-starter-signup-nonce', 'signup-security' ); ?>
+                                        <?php wp_nonce_field( 'tutor-starter-signup-nonce', 'signup-nonce' ); ?>
                                         <div class="form-grp signup-form-fullname">
                                             <label for="fullname"><?php _e('Full Name', 'tutorstarter'); ?></label>
                                             <input name="fullname" id="fullname" type="text" placeholder="John Doe">
