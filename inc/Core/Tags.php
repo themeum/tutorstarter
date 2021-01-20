@@ -43,7 +43,7 @@ class Tags {
 		$categories_list = get_the_category_list( esc_html__( ', ', 'tutorstarter' ) );
 		$categories      = sprintf(
 			// Translators: translatable string for post categories.
-			'<span class="cat-links blog-cats">' . esc_html_x( ' | %1$s', 'post categories', 'tutorstarter' ) . '</span>',
+			'<span class="cat-links blog-cats">' . esc_html_x( ' %1$s', 'post categories', 'tutorstarter' ) . '</span>',
 			$categories_list
 		); // WPCS: XSS OK.
 
@@ -54,7 +54,7 @@ class Tags {
 		);
 		$byline = sprintf(
 			// Translators: translatable string for post author.
-			esc_html_x( '| %s', 'post author', 'tutorstarter' ),
+			esc_html_x( '%s', 'post author', 'tutorstarter' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 		echo '<span class="posted-on">' . $posted_on . '</span>' . ( true === get_theme_mod( 'category_meta_toggle' ) ? $categories : null ) . ( true === get_theme_mod( 'author_meta_toggle' ) ? '<span class="byline"> ' . $byline . '</span>' : null ); // WPCS: XSS OK.

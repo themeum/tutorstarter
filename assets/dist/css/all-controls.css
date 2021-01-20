@@ -30,6 +30,34 @@
   text-shadow: none;
 }
 
+#customize-controls .wp-full-overlay-sidebar-content {
+  background: #F3F3F3;
+}
+
+.wp-picker-container .wp-color-result.button {
+  border: 1px solid #CCCCCC !important;
+  border-radius: 3px !important;
+}
+
+.customize-control input[type=text] {
+  border: 1px solid #CCCCCC !important;
+  border-radius: 3px !important;
+}
+
+.components-select-control__input,
+.components-input-control__input,
+.customize-control input[type=number],
+.customize-control input[type=text] {
+  color: #585b5c !important;
+  background: #E8E8E8 !important;
+}
+
+.components-input-control__backdrop,
+.customize-control input[type=number] {
+  border: 1px solid #CCCCCC !important;
+  border-radius: 3px !important;
+}
+
 .tutorstarter-control-header {
   margin-bottom: 7px;
 }
@@ -40,10 +68,10 @@
 }
 
 .tutorstarter-background-control {
-  border: 1px solid #7e8993;
+  border: 1px solid #F3F3F3;
   border-radius: 3px;
   padding: 10px;
-  background: #ffffff;
+  background: #E8E8E8;
 }
 
 .flex-contents {
@@ -104,13 +132,13 @@
   align-items: center;
   justify-content: center;
   display: flex;
-  border: 1px solid #7e8993;
+  border: 1px solid #CCCCCC;
   box-shadow: none;
-  background-color: transparent;
+  background-color: #E8E8E8;
 }
 
 .tutorstarter-typeface-control .font-family-selector-toggle .ff-name {
-  color: #7e8993;
+  color: #585b5c;
   width: 65%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -119,7 +147,7 @@
 }
 
 .tutorstarter-typeface-control .font-family-selector-toggle .ff-preview {
-  color: #7e8993 !important;
+  color: #585b5c !important;
   line-height: 1;
   margin-left: auto;
   font-size: 21px;
@@ -129,6 +157,7 @@
   position: relative;
   display: block;
   width: 300px !important;
+  background: #E8E8E8;
 }
 
 .tutorstarter-typeface-control .popover-header {
@@ -140,9 +169,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: #E8E8E8;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #CCCCCC;
   padding: 5px;
   width: 300px;
   top: 0;
@@ -205,7 +234,7 @@
   padding: 5px 10px;
   font-size: 15px;
   font-weight: 600;
-  background-color: #efefef;
+  background-color: #E8E8E8;
 }
 
 .tutorstarter-typeface-control .tutorstarter-fonts-list li a {

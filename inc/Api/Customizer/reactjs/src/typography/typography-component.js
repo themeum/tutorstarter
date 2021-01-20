@@ -10,7 +10,7 @@ class TypographyComponent extends Component {
 		super(props);
 		let value = props.control.setting.get();
 		let defaultParams = {
-			weight_default: 700,
+			weight_default: 400,
 			text_transform: 'none',
 			font_sizes:{
 				desktop: 16,
