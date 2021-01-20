@@ -36,11 +36,18 @@
 
 .wp-picker-container .wp-color-result.button {
   border: 1px solid #CCCCCC !important;
+  border-radius: 3px !important;
+}
+
+.customize-control input[type=text] {
+  border: 1px solid #CCCCCC !important;
+  border-radius: 3px !important;
 }
 
 .components-select-control__input,
 .components-input-control__input,
-.customize-control input[type=number] {
+.customize-control input[type=number],
+.customize-control input[type=text] {
   color: #585b5c !important;
   background: #E8E8E8 !important;
 }
@@ -48,6 +55,7 @@
 .components-input-control__backdrop,
 .customize-control input[type=number] {
   border: 1px solid #CCCCCC !important;
+  border-radius: 3px !important;
 }
 
 .tutorstarter-control-header {
@@ -126,7 +134,7 @@
   display: flex;
   border: 1px solid #CCCCCC;
   box-shadow: none;
-  background-color: transparent;
+  background-color: #E8E8E8;
 }
 
 .tutorstarter-typeface-control .font-family-selector-toggle .ff-name {
@@ -149,6 +157,7 @@
   position: relative;
   display: block;
   width: 300px !important;
+  background: #E8E8E8;
 }
 
 .tutorstarter-typeface-control .popover-header {
@@ -160,7 +169,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: #E8E8E8;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid #CCCCCC;
   padding: 5px;
@@ -225,7 +234,7 @@
   padding: 5px 10px;
   font-size: 15px;
   font-weight: 600;
-  background-color: #efefef;
+  background-color: #E8E8E8;
 }
 
 .tutorstarter-typeface-control .tutorstarter-fonts-list li a {

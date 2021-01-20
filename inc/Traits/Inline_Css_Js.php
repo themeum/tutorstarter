@@ -30,7 +30,6 @@ trait Inline_Css_Js {
 		$h4_font_size              = get_theme_mod( 'h4_font_size', '{ "mobile": 18, "tablet": 18, "desktop": 18 }' );
 		$h5_font_size              = get_theme_mod( 'h5_font_size', '{ "mobile": 16, "tablet": 16, "desktop": 16 }' );
 		$h6_font_size              = get_theme_mod( 'h6_font_size', '{ "mobile": 15, "tablet": 15, "desktop": 15 }' );
-		$cta_font_size             = get_theme_mod( 'cta_font_size', '{ "mobile": 13, "tablet": 13, "desktop": 16 }' );
 		$cta_text_color            = get_theme_mod( 'cta_color', '#ffffff' );
 		$h1_font_lineheight        = get_theme_mod( 'h1_font_lineheight', '{ "mobile": 36, "tablet": 36, "desktop": 65 }' );
 		$h2_font_lineheight        = get_theme_mod( 'h2_font_lineheight', '{ "mobile": 30, "tablet": 30, "desktop": 48 }' );
@@ -55,7 +54,7 @@ trait Inline_Css_Js {
 		$menu_bg_color             = get_theme_mod( 'menu_bg_color', '#ffffff' );
 		$body_bg_color             = get_theme_mod( 'body_bg_color', '#ffffff' );
 		$cta_background            = get_theme_mod( 'cta_background', '#1539e9' );
-		$cta_font_weight           = get_theme_mod( 'cta_text_font_weight', 700 );
+		$cta_border_color          = get_theme_mod( 'cta_border_color', '#1539e9' );
 		$body_text_color           = get_theme_mod( 'body_text_color', '#57586E' );
 		$menu_link_color           = get_theme_mod( 'menu_link_color', '#57586E' );
 		$widget_title_font_weight  = get_theme_mod( 'footer_widget_font_weight', 700 );
@@ -99,6 +98,23 @@ trait Inline_Css_Js {
 			),
 		);
 
+		$header_btn_typography = get_theme_mod( 'cta_font_typography',
+			array(
+				'textTransform' => 'none',
+				'fontWeight'    => 400,
+				'fontSize'      => array(
+					'mobile'  => 13,
+					'tablet'  => 13,
+					'desktop' => 16,
+				),
+				'lineHeight' => array(
+					'mobile'  => 20,
+					'tablet'  => 20,
+					'desktop' => 20,
+				),
+			),
+		);
+
 		// Responsive range slider control objects.
 		$h1_font_size_decoded           = $h1_font_size ? json_decode( $h1_font_size ) : null;
 		$h2_font_size_decoded           = $h2_font_size ? json_decode( $h2_font_size ) : null;
@@ -106,7 +122,6 @@ trait Inline_Css_Js {
 		$h4_font_size_decoded           = $h4_font_size ? json_decode( $h4_font_size ) : null;
 		$h5_font_size_decoded           = $h5_font_size ? json_decode( $h5_font_size ) : null;
 		$h6_font_size_decoded           = $h6_font_size ? json_decode( $h6_font_size ) : null;
-		$cta_font_size_decoded          = $cta_font_size ? json_decode( $cta_font_size ) : null;
 		$h1_font_lineheight_decoded     = $h1_font_lineheight ? json_decode( $h1_font_lineheight ) : null;
 		$h2_font_lineheight_decoded     = $h2_font_lineheight ? json_decode( $h2_font_lineheight ) : null;
 		$h3_font_lineheight_decoded     = $h3_font_lineheight ? json_decode( $h3_font_lineheight ) : null;
@@ -134,9 +149,6 @@ trait Inline_Css_Js {
 		$h6_font_size_mobile            = is_object( $h6_font_size_decoded ) ? $h6_font_size_decoded->mobile : $h6_font_size;
 		$h6_font_size_tablet            = is_object( $h6_font_size_decoded ) ? $h6_font_size_decoded->tablet : $h6_font_size;
 		$h6_font_size_desktop           = is_object( $h6_font_size_decoded ) ? $h6_font_size_decoded->desktop : $h6_font_size;
-		$cta_font_size_tablet           = is_object( $cta_font_size_decoded ) ? $cta_font_size_decoded->tablet : $cta_font_size;
-		$cta_font_size_mobile           = is_object( $cta_font_size_decoded ) ? $cta_font_size_decoded->mobile : $cta_font_size;
-		$cta_font_size_desktop          = is_object( $cta_font_size_decoded ) ? $cta_font_size_decoded->desktop : $cta_font_size;
 		$h1_font_lineheight_mobile      = is_object( $h1_font_lineheight_decoded ) ? $h1_font_lineheight_decoded->mobile : $h1_font_lineheight;
 		$h1_font_lineheight_tablet      = is_object( $h1_font_lineheight_decoded ) ? $h1_font_lineheight_decoded->tablet : $h1_font_lineheight;
 		$h1_font_lineheight_desktop     = is_object( $h1_font_lineheight_decoded ) ? $h1_font_lineheight_decoded->desktop : $h1_font_lineheight;
@@ -169,7 +181,11 @@ trait Inline_Css_Js {
 				--body-bg-color: {$body_bg_color};
 				--cta-text-color: {$cta_text_color};
 				--body-text-color: {$body_text_color};
-				--cta-font-weight: {$cta_font_weight};
+				--cta-font-weight: {$header_btn_typography['fontWeight']};
+				--cta-font-transform: {$header_btn_typography['textTransform']};
+				--cta-font-lineheight: {$header_btn_typography['lineHeight']['desktop']};
+				--cta-font-lineheight-tablet: {$header_btn_typography['lineHeight']['tablet']};
+				--cta-font-lineheight-mobile: {$header_btn_typography['lineHeight']['mobile']};
 				--menu-link-color: {$menu_link_color};
 				--body-font-weight: {$body_typography['fontWeight']};
 				--h1-font-weight: {$h1_font_weight};
@@ -186,7 +202,8 @@ trait Inline_Css_Js {
 				--h6-text-transform: {$h6_font_transform};
 				--primary-menu-bg-color: {$menu_bg_color};
 				--cta-background-color: {$cta_background};
-				--cta-font-size: {$cta_font_size_desktop}px;
+				--cta-border-color: {$cta_border_color};
+				--cta-font-size: {$header_btn_typography['fontSize']['desktop']}px;
 				--header-font-weight: {$menu_link_typography['fontWeight']};
 				--header-font-transform: {$menu_link_typography['textTransform']};
 				--header-font-lineheight: {$menu_link_typography['lineHeight']['desktop']};
@@ -213,8 +230,8 @@ trait Inline_Css_Js {
 				--h6-font-size-tablet: {$h6_font_size_tablet}px;
 				--h6-font-size-mobile: {$h6_font_size_mobile}px;
 				--active-menu-color: {$menu_link_active_color};
-				--cta-font-size-tablet: {$cta_font_size_tablet}px;
-				--cta-font-size-mobile: {$cta_font_size_mobile}px;
+				--cta-font-size-tablet: {$header_btn_typography['fontSize']['tablet']}px;
+				--cta-font-size-mobile: {$header_btn_typography['fontSize']['mobile']}px;
 				--header-font-size: {$menu_link_typography['fontSize']['desktop']}px;
 				--body-font-size-mobile: {$body_typography['fontSize']['mobile']}px;
 				--body-font-size-tablet: {$body_typography['fontSize']['tablet']}px;
