@@ -69,6 +69,8 @@ header.alternative {
 		font-family: inherit;
 		font-size: var(--header-font-size);
 		font-weight: var(--header-font-weight);
+		line-height: var(--header-font-lineheight);
+		text-transform: var(--header-font-transform);
 		display: block;
 		//transition: 150ms ease;
 		&:hover {
@@ -145,6 +147,8 @@ header.alternative {
 			color: var(--menu-link-color);
 			font-size: var(--header-font-size);
 			font-weight: var(--header-font-weight);
+			line-height: var(--header-font-lineheight);
+			text-transform: var(--header-font-transform);
 			display: block;
 			//transition: 150ms ease;
 			&:hover {
@@ -537,6 +541,7 @@ header.alternative {
 
 		a {
 			font-size: var(--header-font-size-tablet);
+			line-height: var(--header-font-lineheight-tablet);
 			margin: 10px 0;
 			color: var(--menu-link-color);
 			display: flex;
@@ -613,6 +618,7 @@ header.alternative {
 	.navbar-nav {
 		a {
 			font-size: var(--header-font-size-mobile);
+			line-height: var(--header-font-lineheight-mobile);
 		}
 	}
 	.call-to-action {

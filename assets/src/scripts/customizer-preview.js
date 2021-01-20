@@ -290,21 +290,17 @@
             })
         })
     });
-    wp.customize('menu_link_font_size', function (value) {
-        value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            let menuLinks = document.querySelectorAll('.navbar-nav .menu-item a');
-            menuLinks.forEach((link) => {
-                link.style.fontSize = newValue.desktop + 'px';
-            })
-        })
-    });
-    wp.customize('menu_link_font_weight', function (value) {
+    wp.customize('header_link_typography', function (value) {
         value.bind(function (updatedValue) {
             let menuLinks = document.querySelectorAll('.navbar-nav .menu-item a');
+            if (null !== menuLinks) {
             menuLinks.forEach((link) => {
-                link.style.fontWeight = updatedValue;
+                link.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                link.style.fontWeight = updatedValue['fontWeight'];
+                link.style.textTransform = updatedValue['textTransform'];
+                link.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
             })
+          }
         })
     });
     wp.customize('cta_text_toggle', function (value) {
