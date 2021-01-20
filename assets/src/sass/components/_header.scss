@@ -202,7 +202,10 @@ header.alternative {
 /* Navbar options (bg options) */
 #masthead {
 	background: var(--primary-menu-bg-color);
-	padding: 20px 0px;
+	padding: 20px 90px;
+}
+#masthead.transparent-header {
+	background: transparent;
 }
 
 .nav-search-icon {

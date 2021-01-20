@@ -394,12 +394,12 @@ function tutor_theme_ajax_register_new_user() {
 			
 				if ( is_wp_error($user_verify) ) {
 					echo json_encode(array( 'loggedin' => false, 'message'=> __('Something went wrong!!!','tutorstarter') ));
-					die();	
+					die();
 				} else {
 					echo json_encode(array( 'loggedin' => true, 'message'=> __('Registration successful, redireting ... ... .. .','tutorstarter') ));
 					die();
 				}
-			}else{
+			} else {
 				echo json_encode(array('loggedin' => false, 'message'=> 'Wrong username or password.'));
 				die();
 			}

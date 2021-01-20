@@ -6829,7 +6829,11 @@ header.alternative {
 
 #masthead {
   background: var(--primary-menu-bg-color);
-  padding: 20px 0px;
+  padding: 20px 90px;
+}
+
+#masthead.transparent-header {
+  background: transparent;
 }
 
 .nav-search-icon {
@@ -8299,7 +8303,11 @@ header.alternative {
 
 #masthead {
   background: var(--primary-menu-bg-color);
-  padding: 20px 0px;
+  padding: 20px 90px;
+}
+
+#masthead.transparent-header {
+  background: transparent;
 }
 
 .nav-search-icon {
@@ -8841,7 +8849,7 @@ header.alternative {
   width: 1px;
   height: 24px;
   top: 50%;
-  right: -36px;
+  right: -40px;
   background-color: rgba(87, 88, 110, 0.11);
   transform: translateY(-50%);
 }
@@ -8960,6 +8968,19 @@ header.alternative {
 
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-login-link a:hover {
   color: var(--active-menu-color);
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-nav-search button {
+  font-size: 1.5rem;
+  color: var(--menu-link-color);
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-nav-search button .nav-search-icon {
+  fill: var(--menu-link-color);
 }
 
 aside {

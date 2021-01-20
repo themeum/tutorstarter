@@ -5,7 +5,7 @@
 ?>
 
 <header id="masthead" class="default">
-	<div class="container">	
+	<div class="container-fluid">	
 		<div class="tutor-nav">
 			<div class="tutor-navbar-col tutor-navbar-brand">
 				<div class="tutor-brand">
@@ -26,11 +26,6 @@
 						'number'     => 8,
 						'hide_empty' => false
 					) );
-					// foreach( $course_categories as $course_cat ) :
-					// 	echo "<pre>";
-					// 	print_r(wp_get_attachment_image_src( $course_cat->term_id, 'full' )[0]);
-					// 	print_r(get_term_link($course_cat, 'course-category'));
-					// 	echo "</pre>";
 					if( count($course_categories) > 1 ) :
 				?>
 					<ul id="menu-footer-one" class="menu-one">
@@ -51,16 +46,6 @@
 						</li>
 					</ul><!-- ul#menu-footer-one -->
 				<?php endif; endif; ?>
-				<!-- <?php
-					if ( has_nav_menu( 'primary' ) ) :
-						wp_nav_menu(
-							array(
-								'theme_location' => 'catmenu',
-								'menu_class'     => 'menu-one',
-							)
-						);
-					endif;
-				?> -->
 			</div>
 			<div class="tutor-navbar-col tutor-navbar-menu">
 				<div class="tutor-navbar-main-menu">
