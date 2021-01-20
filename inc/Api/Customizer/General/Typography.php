@@ -80,6 +80,7 @@ class Typography {
 						'desktop' => 20,
 					),
 				),
+				//'sanitize_callback' => 'sanitize_select_range_value',
 			)
 		);
 		$wp_customize->add_control(

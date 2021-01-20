@@ -5,12 +5,12 @@
       align-items: center;
       justify-content: center;
       display: flex;
-      border: 1px solid #ccc;
+      border: 1px solid $border-color;
       box-shadow: none;
-      background-color: transparent;
+      background-color: $background-color;
   
       .ff-name {
-        color: #7e8993;
+        color: $text-color;
         width: 65%;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -19,7 +19,7 @@
       }
   
       .ff-preview {
-        color: #7e8993 !important;
+        color: $text-color !important;
         line-height: 1;
         margin-left: auto;
         font-size: 21px;
@@ -30,6 +30,7 @@
       position: relative;
       display: block;
       width: 300px !important;
+      background: $background-color;
     }
   
     .popover-header {
@@ -41,9 +42,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #fff;
+      background-color: $background-color;
       box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2);
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid $border-color;
       padding: 5px;
       width: 300px;
       top: 0;
@@ -104,7 +105,7 @@
           padding: 5px 10px;
           font-size: 15px;
           font-weight: 600;
-          background-color: #efefef;
+          background-color: $background-color;
         }
   
         a {
