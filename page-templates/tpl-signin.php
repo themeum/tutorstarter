@@ -6,11 +6,9 @@
  *
  * @package Tutor_Starter
  */
-if(is_user_logged_in()){
-    // wp_redirect(home_url());
-    $home = home_url();
-    header("Location: $home");
-    die;
+if(is_user_logged_in()) {
+    wp_redirect(home_url());
+    die();
 }
 defined( 'ABSPATH' ) || exit;
 ?>
