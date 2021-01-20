@@ -6500,6 +6500,13 @@ a.tutor-btn,
   border: 1px solid #175CFF;
 }
 
+.tutor-header-profile-photo img {
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
 h1.entry-title {
   padding: 30px 0;
 }
@@ -6558,26 +6565,35 @@ h1.entry-title {
   color: #0d48d4;
 }
 
-.woocommerce #respond input#submit,
-.woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button {
+.woocommerce .woocommerce-Button.button[value=Save] {
   background: #175cff !important;
-  border-radius: 33px;
-  width: 230px;
+  width: 170px;
+  border-radius: 33px !important;
+  padding: 18px 30px !important;
+  color: #fff !important;
+}
+
+.woocommerce form .show-password-input,
+.woocommerce-page form .show-password-input {
+  position: absolute;
+  right: 0.7em;
+  top: 2.5em;
+  cursor: pointer;
+}
+
+.checkout-button.button.alt.wc-forward,
+.button.wc-backward,
+.place_order {
+  background: #175cff !important;
+  border-radius: 33px !important;
   padding: 20px 30px !important;
   font-family: Inter;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
-  align-items: center;
   text-align: center;
   color: #fff !important;
   margin-top: 20px;
-}
-
-button.woocommerce-Button.button[value=Save] {
-  width: 160px !important;
 }
 
 .woocommerce-password-strength {
@@ -6585,19 +6601,27 @@ button.woocommerce-Button.button[value=Save] {
   margin-top: 10px;
 }
 
-.woocommerce #respond input#submit:hover,
-.woocommerce a.button:hover,
-.woocommerce button.button:hover,
-.woocommerce input.button:hover {
+.woocommerce .woocommerce-Button.button {
+  background: #175cff !important;
+  width: 230px;
+  border-radius: 33px !important;
+  padding: 20px 30px !important;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #fff !important;
+  margin-top: 20px;
+}
+
+.woocommerce .woocommerce-Button.button:hover {
   background: #175cff;
   color: #fff;
   opacity: 0.8;
 }
 
-.woocommerce #respond input#submit:focus,
-.woocommerce a.button:focus,
-.woocommerce button.button:focus,
-.woocommerce input.button:focus {
+.woocommerce .woocommerce-Button.button:focus {
   outline: 0;
   color: #fff;
 }
@@ -6611,14 +6635,6 @@ button.woocommerce-Button.button[value=Save] {
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
   margin-top: 25px !important;
-}
-
-.woocommerce form .show-password-input,
-.woocommerce-page form .show-password-input {
-  position: absolute;
-  right: 0.7em;
-  top: 2.5em;
-  cursor: pointer;
 }
 
 header.default {
@@ -7912,18 +7928,6 @@ section.tutor-theme-getting-starter .getting-started-footer {
   section.tutor-theme-getting-starter .getting-started-footer {
     padding: 60px 0px 60px 0px;
   }
-}
-
-.login form .input,
-.login input[type=password],
-.login input[type=text] {
-  background: rgba(255, 255, 255, 0.0001) !important;
-  border: 1.5px solid rgba(10, 8, 59, 0.1);
-  border-radius: 6px;
-  width: 100%;
-  padding: 19px 25px !important;
-  box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
 }
 
 section.tutor-theme-signin {
