@@ -144,13 +144,13 @@ header.alternative {
 			}
 		}		
 		a {
-			padding: 0px 0px;
+			padding: 4px 0px;
 			text-decoration: none;
 			font-family: inherit;
 			color: var(--menu-link-color);
 			font-size: var(--header-font-size);
 			font-weight: var(--header-font-weight);
-			line-height: var(--header-font-lineheight);
+			line-height: 1.1em;
 			text-transform: var(--header-font-transform);
 			display: block;
 			//transition: 150ms ease;

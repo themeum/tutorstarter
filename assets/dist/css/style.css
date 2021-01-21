@@ -6483,6 +6483,10 @@ img.img-responsive {
   border: 1.5px solid rgba(10, 8, 59, 0.1);
 }
 
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-header-profile-menu ul {
+  overflow-y: auto !important;
+}
+
 .tutor-option-field-row label,
 .tutor-form-group label {
   color: #0A083B;
@@ -6788,13 +6792,13 @@ header.alternative {
 }
 
 .menu-one li a {
-  padding: 0px 0px;
+  padding: 4px 0px;
   text-decoration: none;
   font-family: inherit;
   color: var(--menu-link-color);
   font-size: var(--header-font-size);
   font-weight: var(--header-font-weight);
-  line-height: var(--header-font-lineheight);
+  line-height: 1.1em;
   text-transform: var(--header-font-transform);
   display: block;
 }
@@ -8442,13 +8446,13 @@ header.alternative {
 }
 
 .menu-one li a {
-  padding: 0px 0px;
+  padding: 4px 0px;
   text-decoration: none;
   font-family: inherit;
   color: var(--menu-link-color);
   font-size: var(--header-font-size);
   font-weight: var(--header-font-weight);
-  line-height: var(--header-font-lineheight);
+  line-height: 1.1em;
   text-transform: var(--header-font-transform);
   display: block;
 }
