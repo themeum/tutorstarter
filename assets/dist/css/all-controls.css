@@ -47,13 +47,15 @@
 .components-select-control__input,
 .components-input-control__input,
 .customize-control input[type=number],
-.customize-control input[type=text] {
+.customize-control input[type=text],
+select#_customize-input-blog_grid_selected {
   color: #585b5c !important;
   background: #E8E8E8 !important;
 }
 
 .components-input-control__backdrop,
-.customize-control input[type=number] {
+.customize-control input[type=number],
+select#_customize-input-blog_grid_selected {
   border: 1px solid #CCCCCC !important;
   border-radius: 3px !important;
 }

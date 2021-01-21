@@ -41,6 +41,19 @@ if ( ! function_exists( 'control_active_callback' ) ) {
 	}
 }
 
+if ( ! function_exists( 'control_active_cart_callback' ) ) {
+	/**
+	 * Control active cart callback
+	 */
+	function control_active_cart_callback() {
+
+		if ( class_exists( 'woocommerce' ) ) {
+			return true;
+		}
+		return false;
+	}
+}
+
 if ( ! function_exists( 'control_active_callback_meta' ) ) {
 	/**
 	 * Control active callback for post meta
@@ -131,9 +144,9 @@ if ( ! function_exists( 'sanitize_select_range_value' ) ) {
 	/**
 	 * Sanitize values for select and range inputs.
 	 *
-	 * @param string $input Control input.
+	 * @param string|int $input Control input.
 	 *
-	 * @return float
+	 * @return string|int
 	 */
 	function sanitize_select_range_value( $input ) {
 	

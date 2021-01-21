@@ -2469,7 +2469,7 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
           units = _this$controlParams$f.units;
       return /*#__PURE__*/React.createElement("div", {
         className: "select-inline font-size"
-      }, this.controlHeader('Font Sizes', 'fontSize', units), /*#__PURE__*/React.createElement(RangeControl, {
+      }, this.controlHeader('Font Size', 'fontSize', units), /*#__PURE__*/React.createElement(RangeControl, {
         step: 1,
         min: min,
         max: max,

@@ -130,7 +130,7 @@ class Meta {
 		$wp_customize->add_setting(
 			'post_excerpt_toggle',
 			array(
-				'title'             => esc_html__( 'Show Post Excerpt?', 'tutorstarter' ),
+				'title'             => esc_html__( 'Show Post Excerpt in Blog Listing?', 'tutorstarter' ),
 				'transport'         => 'postMessage',
 				'default'           => true,
 				'sanitize_callback' => isset( $input ) ? true : false,
@@ -141,7 +141,7 @@ class Meta {
 				$wp_customize,
 				'post_excerpt_toggle',
 				array(
-					'label'   => esc_html__( 'Show Post Excerpt?', 'tutorstarter' ),
+					'label'   => esc_html__( 'Show Post Excerpt in Blog Listing?', 'tutorstarter' ),
 					'section' => 'tutorstarter_blog_section',
 				)
 			)
@@ -149,7 +149,7 @@ class Meta {
 		$wp_customize->add_setting(
 			'post_readmore_toggle',
 			array(
-				'title'             => esc_html__( 'Show Read More Button?', 'tutorstarter' ),
+				'title'             => esc_html__( 'Show Read More Button in Blog Listing?', 'tutorstarter' ),
 				'transport'         => 'postMessage',
 				'default'           => true,
 				'sanitize_callback' => isset( $input ) ? true : false,
@@ -160,7 +160,7 @@ class Meta {
 				$wp_customize,
 				'post_readmore_toggle',
 				array(
-					'label'   => esc_html__( 'Show Read More Button?', 'tutorstarter' ),
+					'label'   => esc_html__( 'Show Read More Button in Blog Listing?', 'tutorstarter' ),
 					'section' => 'tutorstarter_blog_section',
 				)
 			)

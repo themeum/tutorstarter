@@ -15,7 +15,7 @@ header.default {
 
 .call-to-action {
 	padding: 10px 33px;
-	border-radius: 108px;
+	border-radius: var(--cta-border-radius);
 	border: 1px solid var(--cta-border-color);
 	background: var(--cta-background-color);
 	//@debug: var(--cta-background-color);

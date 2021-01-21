@@ -24,46 +24,23 @@ trait Inline_Css_Js {
 		// Theme mods.
 		$body_font                 = get_theme_mod( 'body_font', 'Inter' );
 		$heading_font              = get_theme_mod( 'heading_font', 'Libre Baskerville' );
-		$h1_font_size              = get_theme_mod( 'h1_font_size', '{ "mobile": 36, "tablet": 36, "desktop": 48 }' );
-		$h2_font_size              = get_theme_mod( 'h2_font_size', '{ "mobile": 26, "tablet": 26, "desktop": 32 }' );
-		$h3_font_size              = get_theme_mod( 'h3_font_size', '{ "mobile": 24, "tablet": 24, "desktop": 26 }' );
-		$h4_font_size              = get_theme_mod( 'h4_font_size', '{ "mobile": 18, "tablet": 18, "desktop": 18 }' );
-		$h5_font_size              = get_theme_mod( 'h5_font_size', '{ "mobile": 16, "tablet": 16, "desktop": 16 }' );
-		$h6_font_size              = get_theme_mod( 'h6_font_size', '{ "mobile": 15, "tablet": 15, "desktop": 15 }' );
 		$cta_text_color            = get_theme_mod( 'cta_color', '#ffffff' );
-		$h1_font_lineheight        = get_theme_mod( 'h1_font_lineheight', '{ "mobile": 36, "tablet": 36, "desktop": 65 }' );
-		$h2_font_lineheight        = get_theme_mod( 'h2_font_lineheight', '{ "mobile": 30, "tablet": 30, "desktop": 48 }' );
-		$h3_font_lineheight        = get_theme_mod( 'h3_font_lineheight', '{ "mobile": 24, "tablet": 24, "desktop": 48 }' );
-		$h4_font_lineheight        = get_theme_mod( 'h4_font_lineheight', '{ "mobile": 22, "tablet": 22, "desktop": 23 }' );
-		$h5_font_lineheight        = get_theme_mod( 'h5_font_lineheight', '{ "mobile": 22, "tablet": 22, "desktop": 23 }' );
-		$h6_font_lineheight        = get_theme_mod( 'h6_font_lineheight', '{ "mobile": 22, "tablet": 22, "desktop": 23 }' );
-		$h1_font_weight            = get_theme_mod( 'h1_font_weight', 700 );
-		$h2_font_weight            = get_theme_mod( 'h2_font_weight', 700 );
-		$h3_font_weight            = get_theme_mod( 'h3_font_weight', 700 );
-		$h4_font_weight            = get_theme_mod( 'h4_font_weight', 700 );
-		$h5_font_weight            = get_theme_mod( 'h5_font_weight', 700 );
-		$h6_font_weight            = get_theme_mod( 'h6_font_weight', 700 );
-		$h1_font_transform         = get_theme_mod( 'h1_font_transform', 'none' );
-		$h2_font_transform         = get_theme_mod( 'h2_font_transform', 'none' );
-		$h3_font_transform         = get_theme_mod( 'h3_font_transform', 'none' );
-		$h4_font_transform         = get_theme_mod( 'h4_font_transform', 'none' );
-		$h5_font_transform         = get_theme_mod( 'h5_font_transform', 'none' );
-		$h6_font_transform         = get_theme_mod( 'h6_font_transform', 'none' );
 		$link_color                = get_theme_mod( 'link_color', '#175cff' );
-		$widget_title_font_size    = get_theme_mod( 'footer_widget_font_size', '{ "mobile": 16, "tablet": 16, "desktop": 18 }' );
 		$menu_bg_color             = get_theme_mod( 'menu_bg_color', '#ffffff' );
 		$body_bg_color             = get_theme_mod( 'body_bg_color', '#ffffff' );
+		$cart_color                = get_theme_mod( 'cart_color', '#cccccc' );
 		$cta_background            = get_theme_mod( 'cta_background', '#1539e9' );
 		$cta_border_color          = get_theme_mod( 'cta_border_color', '#1539e9' );
+		$cta_border_radius         = get_theme_mod( 'cta_border_radius', 50 );
 		$body_text_color           = get_theme_mod( 'body_text_color', '#57586E' );
 		$menu_link_color           = get_theme_mod( 'menu_link_color', '#57586E' );
-		$widget_title_font_weight  = get_theme_mod( 'footer_widget_font_weight', 700 );
 		$footer_bottom_bg_color    = get_theme_mod( 'footer_bottom_bg_color', '#000000' );
 		$menu_link_active_color    = get_theme_mod( 'menu_link_active_color', '#0A083B' );
 		$footer_widgets_bg_color   = get_theme_mod( 'footer_widgets_bg_color', '#000000' );
 		$footer_bottom_text_color  = get_theme_mod( 'footer_bottom_text_color', '#ffffff' );
 		$footer_widgets_text_color = get_theme_mod( 'footer_widgets_text_color', '#ffffff' );
 
+		// Body Typography.
 		$body_typography = get_theme_mod( 'main_typography',
 			array(
 				'textTransform' => 'none',
@@ -81,6 +58,7 @@ trait Inline_Css_Js {
 			),
 		);
 
+		// Header Menu Typography.
 		$menu_link_typography = get_theme_mod( 'header_link_typography',
 			array(
 				'textTransform' => 'none',
@@ -91,13 +69,14 @@ trait Inline_Css_Js {
 					'desktop' => 16,
 				),
 				'lineHeight' => array(
-					'mobile'  => 20,
-					'tablet'  => 20,
-					'desktop' => 20,
+					'mobile'  => 0,
+					'tablet'  => 0,
+					'desktop' => 0,
 				),
 			),
 		);
 
+		// Header Button Typography.
 		$header_btn_typography = get_theme_mod( 'cta_font_typography',
 			array(
 				'textTransform' => 'none',
@@ -108,70 +87,140 @@ trait Inline_Css_Js {
 					'desktop' => 16,
 				),
 				'lineHeight' => array(
-					'mobile'  => 20,
-					'tablet'  => 20,
-					'desktop' => 20,
+					'mobile'  => 0,
+					'tablet'  => 0,
+					'desktop' => 0,
 				),
 			),
 		);
 
-		// Responsive range slider control objects.
-		$h1_font_size_decoded           = $h1_font_size ? json_decode( $h1_font_size ) : null;
-		$h2_font_size_decoded           = $h2_font_size ? json_decode( $h2_font_size ) : null;
-		$h3_font_size_decoded           = $h3_font_size ? json_decode( $h3_font_size ) : null;
-		$h4_font_size_decoded           = $h4_font_size ? json_decode( $h4_font_size ) : null;
-		$h5_font_size_decoded           = $h5_font_size ? json_decode( $h5_font_size ) : null;
-		$h6_font_size_decoded           = $h6_font_size ? json_decode( $h6_font_size ) : null;
-		$h1_font_lineheight_decoded     = $h1_font_lineheight ? json_decode( $h1_font_lineheight ) : null;
-		$h2_font_lineheight_decoded     = $h2_font_lineheight ? json_decode( $h2_font_lineheight ) : null;
-		$h3_font_lineheight_decoded     = $h3_font_lineheight ? json_decode( $h3_font_lineheight ) : null;
-		$h4_font_lineheight_decoded     = $h4_font_lineheight ? json_decode( $h4_font_lineheight ) : null;
-		$h5_font_lineheight_decoded     = $h5_font_lineheight ? json_decode( $h5_font_lineheight ) : null;
-		$h6_font_lineheight_decoded     = $h6_font_lineheight ? json_decode( $h6_font_lineheight ) : null;
-		$widget_title_font_size_decoded = $widget_title_font_size ? json_decode( $widget_title_font_size ) : null;
+		// H1 Typography.
+		$h1_typography = get_theme_mod( 'h1_typography',
+			array(
+				'textTransform' => 'none',
+				'fontWeight'    => 700,
+				'fontSize'      => array(
+					'mobile'  => 36,
+					'tablet'  => 36,
+					'desktop' => 48,
+				),
+				'lineHeight' => array(
+					'mobile'  => 36,
+					'tablet'  => 36,
+					'desktop' => 64,
+				),
+			),
+		);
 
-		// Check if the theme mod is object and assign sensible device defaults.
-		$h1_font_size_mobile            = is_object( $h1_font_size_decoded ) ? $h1_font_size_decoded->mobile : $h1_font_size;
-		$h1_font_size_tablet            = is_object( $h1_font_size_decoded ) ? $h1_font_size_decoded->tablet : $h1_font_size;
-		$h1_font_size_desktop           = is_object( $h1_font_size_decoded ) ? $h1_font_size_decoded->desktop : $h1_font_size;
-		$h2_font_size_mobile            = is_object( $h2_font_size_decoded ) ? $h2_font_size_decoded->mobile : $h2_font_size;
-		$h2_font_size_tablet            = is_object( $h2_font_size_decoded ) ? $h2_font_size_decoded->tablet : $h2_font_size;
-		$h2_font_size_desktop           = is_object( $h2_font_size_decoded ) ? $h2_font_size_decoded->desktop : $h2_font_size;
-		$h3_font_size_mobile            = is_object( $h3_font_size_decoded ) ? $h3_font_size_decoded->mobile : $h3_font_size;
-		$h3_font_size_tablet            = is_object( $h3_font_size_decoded ) ? $h3_font_size_decoded->tablet : $h3_font_size;
-		$h3_font_size_desktop           = is_object( $h3_font_size_decoded ) ? $h3_font_size_decoded->desktop : $h3_font_size;
-		$h4_font_size_mobile            = is_object( $h4_font_size_decoded ) ? $h4_font_size_decoded->mobile : $h4_font_size;
-		$h4_font_size_tablet            = is_object( $h4_font_size_decoded ) ? $h4_font_size_decoded->tablet : $h4_font_size;
-		$h4_font_size_desktop           = is_object( $h4_font_size_decoded ) ? $h4_font_size_decoded->desktop : $h4_font_size;
-		$h5_font_size_mobile            = is_object( $h5_font_size_decoded ) ? $h5_font_size_decoded->mobile : $h5_font_size;
-		$h5_font_size_tablet            = is_object( $h5_font_size_decoded ) ? $h5_font_size_decoded->tablet : $h5_font_size;
-		$h5_font_size_desktop           = is_object( $h5_font_size_decoded ) ? $h5_font_size_decoded->desktop : $h5_font_size;
-		$h6_font_size_mobile            = is_object( $h6_font_size_decoded ) ? $h6_font_size_decoded->mobile : $h6_font_size;
-		$h6_font_size_tablet            = is_object( $h6_font_size_decoded ) ? $h6_font_size_decoded->tablet : $h6_font_size;
-		$h6_font_size_desktop           = is_object( $h6_font_size_decoded ) ? $h6_font_size_decoded->desktop : $h6_font_size;
-		$h1_font_lineheight_mobile      = is_object( $h1_font_lineheight_decoded ) ? $h1_font_lineheight_decoded->mobile : $h1_font_lineheight;
-		$h1_font_lineheight_tablet      = is_object( $h1_font_lineheight_decoded ) ? $h1_font_lineheight_decoded->tablet : $h1_font_lineheight;
-		$h1_font_lineheight_desktop     = is_object( $h1_font_lineheight_decoded ) ? $h1_font_lineheight_decoded->desktop : $h1_font_lineheight;
-		$h2_font_lineheight_mobile      = is_object( $h2_font_lineheight_decoded ) ? $h2_font_lineheight_decoded->mobile : $h2_font_lineheight;
-		$h2_font_lineheight_tablet      = is_object( $h2_font_lineheight_decoded ) ? $h2_font_lineheight_decoded->tablet : $h2_font_lineheight;
-		$h2_font_lineheight_desktop     = is_object( $h2_font_lineheight_decoded ) ? $h2_font_lineheight_decoded->desktop : $h2_font_lineheight;
-		$h3_font_lineheight_mobile      = is_object( $h3_font_lineheight_decoded ) ? $h3_font_lineheight_decoded->mobile : $h3_font_lineheight;
-		$h3_font_lineheight_tablet      = is_object( $h3_font_lineheight_decoded ) ? $h3_font_lineheight_decoded->tablet : $h3_font_lineheight;
-		$h3_font_lineheight_desktop     = is_object( $h3_font_lineheight_decoded ) ? $h3_font_lineheight_decoded->desktop : $h3_font_lineheight;
-		$h4_font_lineheight_mobile      = is_object( $h4_font_lineheight_decoded ) ? $h4_font_lineheight_decoded->mobile : $h4_font_lineheight;
-		$h4_font_lineheight_tablet      = is_object( $h4_font_lineheight_decoded ) ? $h4_font_lineheight_decoded->tablet : $h4_font_lineheight;
-		$h4_font_lineheight_desktop     = is_object( $h4_font_lineheight_decoded ) ? $h4_font_lineheight_decoded->desktop : $h4_font_lineheight;
-		$h5_font_lineheight_mobile      = is_object( $h5_font_lineheight_decoded ) ? $h5_font_lineheight_decoded->mobile : $h5_font_lineheight;
-		$h5_font_lineheight_tablet      = is_object( $h5_font_lineheight_decoded ) ? $h5_font_lineheight_decoded->tablet : $h5_font_lineheight;
-		$h5_font_lineheight_desktop     = is_object( $h5_font_lineheight_decoded ) ? $h5_font_lineheight_decoded->desktop : $h5_font_lineheight;
-		$h6_font_lineheight_mobile      = is_object( $h6_font_lineheight_decoded ) ? $h6_font_lineheight_decoded->mobile : $h6_font_lineheight;
-		$h6_font_lineheight_tablet      = is_object( $h6_font_lineheight_decoded ) ? $h6_font_lineheight_decoded->tablet : $h6_font_lineheight;
-		$h6_font_lineheight_desktop     = is_object( $h6_font_lineheight_decoded ) ? $h6_font_lineheight_decoded->desktop : $h6_font_lineheight;
-		$widget_title_font_size_tablet  = is_object( $widget_title_font_size_decoded ) ? $widget_title_font_size_decoded->tablet : $widget_title_font_size;
-		$widget_title_font_size_mobile  = is_object( $widget_title_font_size_decoded ) ? $widget_title_font_size_decoded->mobile : $widget_title_font_size;
-		$widget_title_font_size_desktop = is_object( $widget_title_font_size_decoded ) ? $widget_title_font_size_decoded->desktop : $widget_title_font_size;
+		// H2 Typography.
+		$h2_typography = get_theme_mod( 'h2_typography',
+			array(
+				'textTransform' => 'none',
+				'fontWeight'    => 700,
+				'fontSize'      => array(
+					'mobile'  => 26,
+					'tablet'  => 26,
+					'desktop' => 32,
+				),
+				'lineHeight' => array(
+					'mobile'  => 30,
+					'tablet'  => 30,
+					'desktop' => 48,
+				),
+			),
+		);
+
+		// H3 Typography.
+		$h3_typography = get_theme_mod( 'h3_typography',
+			array(
+				'textTransform' => 'none',
+				'fontWeight'    => 700,
+				'fontSize'      => array(
+					'mobile'  => 24,
+					'tablet'  => 24,
+					'desktop' => 26,
+				),
+				'lineHeight' => array(
+					'mobile'  => 24,
+					'tablet'  => 24,
+					'desktop' => 48,
+				),
+			),
+		);
+
+		// H4 Typography.
+		$h4_typography = get_theme_mod( 'h4_typography',
+			array(
+				'textTransform' => 'none',
+				'fontWeight'    => 700,
+				'fontSize'      => array(
+					'mobile'  => 18,
+					'tablet'  => 18,
+					'desktop' => 18,
+				),
+				'lineHeight' => array(
+					'mobile'  => 22,
+					'tablet'  => 22,
+					'desktop' => 23,
+				),
+			),
+		);
+
+		// H5 Typography.
+		$h5_typography = get_theme_mod( 'h5_typography',
+			array(
+				'textTransform' => 'none',
+				'fontWeight'    => 700,
+				'fontSize'      => array(
+					'mobile'  => 16,
+					'tablet'  => 16,
+					'desktop' => 16,
+				),
+				'lineHeight' => array(
+					'mobile'  => 22,
+					'tablet'  => 22,
+					'desktop' => 23,
+				),
+			),
+		);
+
+		// H6 Typography.
+		$h6_typography = get_theme_mod( 'h6_typography',
+			array(
+				'textTransform' => 'none',
+				'fontWeight'    => 700,
+				'fontSize'      => array(
+					'mobile'  => 15,
+					'tablet'  => 15,
+					'desktop' => 15,
+				),
+				'lineHeight' => array(
+					'mobile'  => 22,
+					'tablet'  => 22,
+					'desktop' => 23,
+				),
+			),
+		);
+
+		// Widget Title Typography.
+		$widget_title_typography = get_theme_mod( 'footer_widget_title_typography',
+			array(
+				'textTransform' => 'none',
+				'fontWeight'    => 700,
+				'fontSize'      => array(
+					'mobile'  => 16,
+					'tablet'  => 16,
+					'desktop' => 18,
+				),
+				'lineHeight' => array(
+					'mobile'  => 20,
+					'tablet'  => 20,
+					'desktop' => 23,
+				),
+			),
+		);
 		
-		// Inline CSS holder.
+		// Inline CSS declarations.
 		$custom_css = "
 			:root {
 				--default-color: #ffffff;
@@ -179,6 +228,7 @@ trait Inline_Css_Js {
 				--heading-font: {$heading_font};
 				--link-color: {$link_color};
 				--body-bg-color: {$body_bg_color};
+				--cart-color: {$cart_color};
 				--cta-text-color: {$cta_text_color};
 				--body-text-color: {$body_text_color};
 				--cta-font-weight: {$header_btn_typography['fontWeight']};
@@ -188,21 +238,22 @@ trait Inline_Css_Js {
 				--cta-font-lineheight-mobile: {$header_btn_typography['lineHeight']['mobile']};
 				--menu-link-color: {$menu_link_color};
 				--body-font-weight: {$body_typography['fontWeight']};
-				--h1-font-weight: {$h1_font_weight};
-				--h2-font-weight: {$h2_font_weight};
-				--h3-font-weight: {$h3_font_weight};
-				--h4-font-weight: {$h4_font_weight};
-				--h5-font-weight: {$h5_font_weight};
-				--h6-font-weight: {$h6_font_weight};
-				--h1-text-transform: {$h1_font_transform};
-				--h2-text-transform: {$h2_font_transform};
-				--h3-text-transform: {$h3_font_transform};
-				--h4-text-transform: {$h4_font_transform};
-				--h5-text-transform: {$h5_font_transform};
-				--h6-text-transform: {$h6_font_transform};
+				--h1-font-weight: {$h1_typography['fontWeight']};
+				--h2-font-weight: {$h2_typography['fontWeight']};
+				--h3-font-weight: {$h3_typography['fontWeight']};
+				--h4-font-weight: {$h4_typography['fontWeight']};
+				--h5-font-weight: {$h5_typography['fontWeight']};
+				--h6-font-weight: {$h6_typography['fontWeight']};
+				--h1-text-transform: {$h1_typography['textTransform']};
+				--h2-text-transform: {$h2_typography['textTransform']};
+				--h3-text-transform: {$h3_typography['textTransform']};
+				--h4-text-transform: {$h4_typography['textTransform']};
+				--h5-text-transform: {$h5_typography['textTransform']};
+				--h6-text-transform: {$h6_typography['textTransform']};
 				--primary-menu-bg-color: {$menu_bg_color};
 				--cta-background-color: {$cta_background};
 				--cta-border-color: {$cta_border_color};
+				--cta-border-radius: {$cta_border_radius}px;
 				--cta-font-size: {$header_btn_typography['fontSize']['desktop']}px;
 				--header-font-weight: {$menu_link_typography['fontWeight']};
 				--header-font-transform: {$menu_link_typography['textTransform']};
@@ -211,24 +262,24 @@ trait Inline_Css_Js {
 				--header-font-lineheight-mobile: {$menu_link_typography['lineHeight']['mobile']};
 				--body-text-transform: {$body_typography['textTransform']};
 				--body-font-size: {$body_typography['fontSize']['desktop']}px;
-				--h1-font-size: {$h1_font_size_desktop}px;
-				--h1-font-size-tablet: {$h1_font_size_tablet}px;
-				--h1-font-size-mobile: {$h1_font_size_mobile}px;
-				--h2-font-size: {$h2_font_size_desktop}px;
-				--h2-font-size-tablet: {$h2_font_size_tablet}px;
-				--h2-font-size-mobile: {$h2_font_size_mobile}px;
-				--h3-font-size: {$h3_font_size_desktop}px;
-				--h3-font-size-tablet: {$h3_font_size_tablet}px;
-				--h3-font-size-mobile: {$h3_font_size_mobile}px;
-				--h4-font-size: {$h4_font_size_desktop}px;
-				--h4-font-size-tablet: {$h4_font_size_tablet}px;
-				--h4-font-size-mobile: {$h4_font_size_mobile}px;
-				--h5-font-size: {$h5_font_size_desktop}px;
-				--h5-font-size-tablet: {$h5_font_size_tablet}px;
-				--h5-font-size-mobile: {$h5_font_size_mobile}px;
-				--h6-font-size: {$h6_font_size_desktop}px;
-				--h6-font-size-tablet: {$h6_font_size_tablet}px;
-				--h6-font-size-mobile: {$h6_font_size_mobile}px;
+				--h1-font-size: {$h1_typography['fontSize']['desktop']}px;
+				--h1-font-size-tablet: {$h1_typography['fontSize']['tablet']}px;
+				--h1-font-size-mobile: {$h1_typography['fontSize']['mobile']}px;
+				--h2-font-size: {$h2_typography['fontSize']['desktop']}px;
+				--h2-font-size-tablet: {$h2_typography['fontSize']['tablet']}px;
+				--h2-font-size-mobile: {$h2_typography['fontSize']['mobile']}px;
+				--h3-font-size: {$h3_typography['fontSize']['desktop']}px;
+				--h3-font-size-tablet: {$h3_typography['fontSize']['tablet']}px;
+				--h3-font-size-mobile: {$h3_typography['fontSize']['mobile']}px;
+				--h4-font-size: {$h4_typography['fontSize']['desktop']}px;
+				--h4-font-size-tablet: {$h4_typography['fontSize']['tablet']}px;
+				--h4-font-size-mobile: {$h4_typography['fontSize']['mobile']}px;
+				--h5-font-size: {$h5_typography['fontSize']['desktop']}px;
+				--h5-font-size-tablet: {$h5_typography['fontSize']['tablet']}px;
+				--h5-font-size-mobile: {$h5_typography['fontSize']['mobile']}px;
+				--h6-font-size: {$h6_typography['fontSize']['desktop']}px;
+				--h6-font-size-tablet: {$h6_typography['fontSize']['tablet']}px;
+				--h6-font-size-mobile: {$h6_typography['fontSize']['mobile']}px;
 				--active-menu-color: {$menu_link_active_color};
 				--cta-font-size-tablet: {$header_btn_typography['fontSize']['tablet']}px;
 				--cta-font-size-mobile: {$header_btn_typography['fontSize']['mobile']}px;
@@ -240,32 +291,36 @@ trait Inline_Css_Js {
 				--header-font-size-tablet: {$menu_link_typography['fontSize']['tablet']}px;
 				--header-font-size-mobile: {$menu_link_typography['fontSize']['mobile']}px;
 				--footer-bottom-text-color: {$footer_bottom_text_color};
-				--widget-title-font-weight: {$widget_title_font_weight};
+				--widget-title-font-weight: {$widget_title_typography['fontWeight']};
+				--widget-title-text-transform: {$widget_title_typography['textTransform']};
 				--footer-widget-text-color: {$footer_widgets_text_color};
 				--body-font-lineheight: {$body_typography['lineHeight']['desktop']}px;
-				--h1-font-lineheight: {$h1_font_lineheight_desktop}px;
-				--h1-font-lineheight-tablet: {$h1_font_lineheight_tablet}px;
-				--h1-font-lineheight-mobile: {$h1_font_lineheight_mobile}px;
-				--h2-font-lineheight: {$h2_font_lineheight_desktop}px;
-				--h2-font-lineheight-tablet: {$h2_font_lineheight_tablet}px;
-				--h2-font-lineheight-mobile: {$h2_font_lineheight_mobile}px;
-				--h3-font-lineheight: {$h3_font_lineheight_desktop}px;
-				--h3-font-lineheight-tablet: {$h3_font_lineheight_tablet}px;
-				--h3-font-lineheight-mobile: {$h3_font_lineheight_mobile}px;
-				--h4-font-lineheight: {$h4_font_lineheight_desktop}px;
-				--h4-font-lineheight-tablet: {$h4_font_lineheight_tablet}px;
-				--h4-font-lineheight-mobile: {$h4_font_lineheight_mobile}px;
-				--h5-font-lineheight: {$h5_font_lineheight_desktop}px;
-				--h5-font-lineheight-tablet: {$h5_font_lineheight_tablet}px;
-				--h5-font-lineheight-mobile: {$h5_font_lineheight_mobile}px;
-				--h6-font-lineheight: {$h6_font_lineheight_desktop}px;
-				--h6-font-lineheight-tablet: {$h6_font_lineheight_tablet}px;
-				--h6-font-lineheight-mobile: {$h6_font_lineheight_mobile}px;
-				--widget-title-font-size: {$widget_title_font_size_desktop}px;
+				--h1-font-lineheight: {$h1_typography['lineHeight']['desktop']}px;
+				--h1-font-lineheight-tablet: {$h1_typography['lineHeight']['tablet']}px;
+				--h1-font-lineheight-mobile: {$h1_typography['lineHeight']['mobile']}px;
+				--h2-font-lineheight: {$h2_typography['lineHeight']['desktop']}px;
+				--h2-font-lineheight-tablet: {$h2_typography['lineHeight']['tablet']}px;
+				--h2-font-lineheight-mobile: {$h2_typography['lineHeight']['mobile']}px;
+				--h3-font-lineheight: {$h3_typography['lineHeight']['desktop']}px;
+				--h3-font-lineheight-tablet: {$h3_typography['lineHeight']['tablet']}px;
+				--h3-font-lineheight-mobile: {$h3_typography['lineHeight']['mobile']}px;
+				--h4-font-lineheight: {$h4_typography['lineHeight']['desktop']}px;
+				--h4-font-lineheight-tablet: {$h4_typography['lineHeight']['tablet']}px;
+				--h4-font-lineheight-mobile: {$h4_typography['lineHeight']['mobile']}px;
+				--h5-font-lineheight: {$h5_typography['lineHeight']['desktop']}px;
+				--h5-font-lineheight-tablet: {$h5_typography['lineHeight']['tablet']}px;
+				--h5-font-lineheight-mobile: {$h5_typography['lineHeight']['mobile']}px;
+				--h6-font-lineheight: {$h6_typography['lineHeight']['desktop']}px;
+				--h6-font-lineheight-tablet: {$h6_typography['lineHeight']['tablet']}px;
+				--h6-font-lineheight-mobile: {$h6_typography['lineHeight']['mobile']}px;
 				--body-font-lineheight-tablet: {$body_typography['lineHeight']['tablet']}px;
 				--body-font-lineheight-mobile: {$body_typography['lineHeight']['mobile']}px;
-				--widget-title-font-size-tablet: {$widget_title_font_size_tablet}px;
-				--widget-title-font-size-mobile: {$widget_title_font_size_mobile}px;
+				--widget-title-font-size: {$widget_title_typography['fontSize']['desktop']}px;
+				--widget-title-font-size-tablet: {$widget_title_typography['fontSize']['tablet']}px;
+				--widget-title-font-size-mobile: {$widget_title_typography['fontSize']['mobile']}px;
+				--widget-title-line-height: {$widget_title_typography['lineHeight']['desktop']}px;
+				--widget-title-line-height-tablet: {$widget_title_typography['lineHeight']['tablet']}px;
+				--widget-title-line-height-mobile: {$widget_title_typography['lineHeight']['mobile']}px;
 			}
         ";
 
