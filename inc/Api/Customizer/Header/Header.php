@@ -12,7 +12,6 @@ use WP_Customize_Color_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Typography_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Radio_Image_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Toggle_Switch_Control;
-use Tutor_Starter\Api\Customizer\Custom_Controls\Responsive_Range_Slider_Control;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -172,9 +171,9 @@ class Header {
 						'desktop' => 16,
 					),
 					'lineHeight' => array(
-						'mobile'  => 20,
-						'tablet'  => 20,
-						'desktop' => 20,
+						'mobile'  => 0,
+						'tablet'  => 0,
+						'desktop' => 0,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -207,9 +206,9 @@ class Header {
 								'desktop' => 16,
 							),
 							'line_heights' => array(
-								'mobile'  => 20,
-								'tablet'  => 20,
-								'desktop' => 20,
+								'mobile'  => 0,
+								'tablet'  => 0,
+								'desktop' => 0,
 							)
 						),
 					),
@@ -233,6 +232,26 @@ class Header {
 					'label'           => esc_html__( 'Show Search Icon?', 'tutorstarter' ),
 					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback_search',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'cart_color',
+			array(
+				'title'             => esc_html__( 'Cart Color', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => '#cccccc',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cart_color',
+				array(
+					'label'           => esc_html__( 'Cart Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_cart_callback',
 				)
 			)
 		);
@@ -297,6 +316,27 @@ class Header {
 			)
 		);
 		$wp_customize->add_setting(
+			'cta_border_radius',
+			array(
+				'title'             => esc_html__( 'Border Radius', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => 50,
+				'sanitize_callback' => 'absint',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'cta_border_radius',
+				array(
+					'label'           => esc_html__( 'Border Radius', 'tutorstarter' ),
+					'type'            => 'number',
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback',
+				)
+			)
+		);
+		$wp_customize->add_setting(
 			'cta_color',
 			array(
 				'title'             => esc_html__( 'Button Text Color', 'tutorstarter' ),
@@ -321,7 +361,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Button Text', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => 'BUY NOW',
+				'default'           => 'Getting Started',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			)
 		);
@@ -372,9 +412,9 @@ class Header {
 						'desktop' => 16,
 					),
 					'lineHeight' => array(
-						'mobile'  => 20,
-						'tablet'  => 20,
-						'desktop' => 20,
+						'mobile'  => 0,
+						'tablet'  => 0,
+						'desktop' => 0,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -408,9 +448,9 @@ class Header {
 								'desktop' => 16,
 							),
 							'line_heights' => array(
-								'mobile'  => 20,
-								'tablet'  => 20,
-								'desktop' => 20,
+								'mobile'  => 0,
+								'tablet'  => 0,
+								'desktop' => 0,
 							)
 						),
 					),

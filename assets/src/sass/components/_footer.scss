@@ -24,6 +24,8 @@ section.footer-widgets {
 		font-family: inherit;
 		font-size: var(--widget-title-font-size);
 		font-weight: var(--widget-title-font-weight);
+		line-height: var(--widget-title-line-height);
+		text-transform: var(--widget-title-text-transform);
 	}
 	.widget_nav_menu .menu-footer-menu-container .menu-item a {
 		color: var(--footer-widget-text-color)
@@ -73,6 +75,7 @@ section.footer-widgets {
 @media (max-width: 991px) {
 	.widget-title {
 		font-size: var(--widget-title-font-size-tablet)!important;
+		line-height: var(--widget-title-line-height-tablet)!important;
 	}
 }
 
@@ -82,6 +85,7 @@ section.footer-widgets {
 	}
 	.widget-title {
 		font-size: var(--widget-title-font-size-mobile)!important;
+		line-height: var(--widget-title-line-height-mobile)!important;
 	}
 	.socials {
 		display: flex;

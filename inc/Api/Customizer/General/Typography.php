@@ -7,10 +7,8 @@
 
 namespace Tutor_Starter\Api\Customizer\General;
 
-use WP_Customize_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Typography_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Font_Family_Control;
-use Tutor_Starter\Api\Customizer\Custom_Controls\Responsive_Range_Slider_Control;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -80,7 +78,7 @@ class Typography {
 						'desktop' => 20,
 					),
 				),
-				//'sanitize_callback' => 'sanitize_select_range_value',
+				'sanitize_callback' => 'sanitize_select_range_value',
 			)
 		);
 		$wp_customize->add_control(
@@ -149,690 +147,348 @@ class Typography {
 			)
 		);
 		$wp_customize->add_setting(
-			'h1_font_size',
+			'h1_typography',
 			array(
-				'title'             => esc_html__( 'H1 Font Size', 'tutorstarter' ),
+				'title'             => esc_html__( 'H1 Typography', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 36, "tablet": 36, "desktop": 48 }',
-				'sanitize_callback' => 'sanitize_range_value',
+				'default' => array(
+					'textTransform' => 'none',
+					'fontWeight'    => 700,
+					'fontSize'      => array(
+						'mobile'  => 36,
+						'tablet'  => 36,
+						'desktop' => 48,
+					),
+					'lineHeight' => array(
+						'mobile'  => 36,
+						'tablet'  => 36,
+						'desktop' => 64,
+					),
+				),
+				'sanitize_callback' => 'sanitize_select_range_value',
 			)
 		);
 		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
+			new Typography_Control(
 				$wp_customize,
-				'h1_font_size',
+				'h1_typography',
 				array(
-					'label'       => esc_html__( 'H1 Font Size', 'tutorstarter' ),
+					'label'       => esc_html__( 'H1 Typography', 'tutorstarter' ),
 					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
-						'min'        => 8,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 36,
-							'tablet'  => 36,
-							'desktop' => 48,
+						'font_sizes' => array(
+							'min'        => 8,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'line_heights' => array(
+							'min'        => 0,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'defaultParams' => array(
+							'weight_default'  => 400,
+							'text_transform'  => 'none',
+							'font_sizes' => array(
+								'mobile'  => 36,
+								'tablet'  => 36,
+								'desktop' => 48,
+							),
+							'line_heights' => array(
+								'mobile'  => 36,
+								'tablet'  => 36,
+								'desktop' => 64,
+							)
 						),
 					),
 				)
 			)
 		);
 		$wp_customize->add_setting(
-			'h1_font_weight',
+			'h2_typography',
 			array(
-				'title'             => esc_html__( 'H1 Font Weight', 'tutorstarter' ),
+				'title'             => esc_html__( 'H2 Typography', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => 700,
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'h1_font_weight',
-				array(
-					'label'   => esc_html__( 'H1 Font Weight', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						100 => 100,
-						200 => 200,
-						300 => 300,
-						400 => 400,
-						500 => 500,
-						600 => 600,
-						700 => 700,
-						800 => 800,
-						900 => 900,
+				'default' => array(
+					'textTransform' => 'none',
+					'fontWeight'    => 700,
+					'fontSize'      => array(
+						'mobile'  => 26,
+						'tablet'  => 26,
+						'desktop' => 32,
 					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h1_font_transform',
-			array(
-				'title'             => esc_html__( 'H1 Text Transform', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => 'none',
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'h1_font_transform',
-				array(
-					'label'   => esc_html__( 'H1 Text Transform', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						'none'       => esc_html__( 'None', 'tutorstarter' ),
-						'capitalize' => esc_html__( 'Capitalize', 'tutorstarter' ),
-						'lowercase'  => esc_html__( 'Lowercase', 'tutorstarter' ),
-						'uppercase'  => esc_html__( 'Uppercase', 'tutorstarter' ),
+					'lineHeight' => array(
+						'mobile'  => 30,
+						'tablet'  => 30,
+						'desktop' => 48,
 					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h1_font_lineheight',
-			array(
-				'title'             => esc_html__( 'H1 Line Height', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 36, "tablet": 36, "desktop": 65 }',
-				'sanitize_callback' => 'sanitize_range_value',
+				),
+				'sanitize_callback' => 'sanitize_select_range_value',
 			)
 		);
 		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
+			new Typography_Control(
 				$wp_customize,
-				'h1_font_lineheight',
+				'h2_typography',
 				array(
-					'label'       => esc_html__( 'H1 Line Height', 'tutorstarter' ),
+					'label'       => esc_html__( 'H2 Typography', 'tutorstarter' ),
 					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
-						'min'        => 0,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 36,
-							'tablet'  => 36,
-							'desktop' => 65,
+						'font_sizes' => array(
+							'min'        => 8,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'line_heights' => array(
+							'min'        => 0,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'defaultParams' => array(
+							'weight_default'  => 700,
+							'text_transform'  => 'none',
+							'font_sizes' => array(
+								'mobile'  => 26,
+								'tablet'  => 26,
+								'desktop' => 32,
+							),
+							'line_heights' => array(
+								'mobile'  => 30,
+								'tablet'  => 30,
+								'desktop' => 48,
+							)
 						),
 					),
 				)
 			)
 		);
 		$wp_customize->add_setting(
-			'h2_font_size',
+			'h3_typography',
 			array(
-				'title'             => esc_html__( 'H2 Font Size', 'tutorstarter' ),
+				'title'             => esc_html__( 'H3 Typography', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 26, "tablet": 26, "desktop": 32 }',
-				'sanitize_callback' => 'sanitize_range_value',
+				'default' => array(
+					'textTransform' => 'none',
+					'fontWeight'    => 700,
+					'fontSize'      => array(
+						'mobile'  => 24,
+						'tablet'  => 24,
+						'desktop' => 26,
+					),
+					'lineHeight' => array(
+						'mobile'  => 24,
+						'tablet'  => 24,
+						'desktop' => 48,
+					),
+				),
+				'sanitize_callback' => 'sanitize_select_range_value',
 			)
 		);
 		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
+			new Typography_Control(
 				$wp_customize,
-				'h2_font_size',
+				'h3_typography',
 				array(
-					'label'       => esc_html__( 'H2 Font Size', 'tutorstarter' ),
+					'label'       => esc_html__( 'H3 Typography', 'tutorstarter' ),
 					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
-						'min'        => 8,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 26,
-							'tablet'  => 26,
-							'desktop' => 32,
+						'font_sizes' => array(
+							'min'        => 8,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'line_heights' => array(
+							'min'        => 0,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'defaultParams' => array(
+							'weight_default'  => 700,
+							'text_transform'  => 'none',
+							'font_sizes' => array(
+								'mobile'  => 24,
+								'tablet'  => 24,
+								'desktop' => 26,
+							),
+							'line_heights' => array(
+								'mobile'  => 24,
+								'tablet'  => 24,
+								'desktop' => 48,
+							)
 						),
 					),
 				)
 			)
 		);
 		$wp_customize->add_setting(
-			'h2_font_weight',
+			'h4_typography',
 			array(
-				'title'             => esc_html__( 'H2 Font Weight', 'tutorstarter' ),
+				'title'             => esc_html__( 'H4 Typography', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => 700,
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'h2_font_weight',
-				array(
-					'label'   => esc_html__( 'H2 Font Weight', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						100 => 100,
-						200 => 200,
-						300 => 300,
-						400 => 400,
-						500 => 500,
-						600 => 600,
-						700 => 700,
-						800 => 800,
-						900 => 900,
+				'default' => array(
+					'textTransform' => 'none',
+					'fontWeight'    => 700,
+					'fontSize'      => array(
+						'mobile'  => 18,
+						'tablet'  => 18,
+						'desktop' => 18,
 					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h2_font_transform',
-			array(
-				'title'             => esc_html__( 'H2 Text Transform', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => 'none',
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'h2_font_transform',
-				array(
-					'label'   => esc_html__( 'H2 Text Transform', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						'none'       => esc_html__( 'None', 'tutorstarter' ),
-						'capitalize' => esc_html__( 'Capitalize', 'tutorstarter' ),
-						'lowercase'  => esc_html__( 'Lowercase', 'tutorstarter' ),
-						'uppercase'  => esc_html__( 'Uppercase', 'tutorstarter' ),
+					'lineHeight' => array(
+						'mobile'  => 22,
+						'tablet'  => 22,
+						'desktop' => 23,
 					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h2_font_lineheight',
-			array(
-				'title'             => esc_html__( 'H2 Line Height', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 30, "tablet": 30, "desktop": 48 }',
-				'sanitize_callback' => 'sanitize_range_value',
+				),
+				'sanitize_callback' => 'sanitize_select_range_value',
 			)
 		);
 		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
+			new Typography_Control(
 				$wp_customize,
-				'h2_font_lineheight',
+				'h4_typography',
 				array(
-					'label'       => esc_html__( 'H2 Line Height', 'tutorstarter' ),
+					'label'       => esc_html__( 'H4 Typography', 'tutorstarter' ),
 					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
-						'min'        => 0,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 30,
-							'tablet'  => 30,
-							'desktop' => 48,
+						'font_sizes' => array(
+							'min'        => 8,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'line_heights' => array(
+							'min'        => 0,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'defaultParams' => array(
+							'weight_default'  => 700,
+							'text_transform'  => 'none',
+							'font_sizes' => array(
+								'mobile'  => 18,
+								'tablet'  => 18,
+								'desktop' => 18,
+							),
+							'line_heights' => array(
+								'mobile'  => 22,
+								'tablet'  => 22,
+								'desktop' => 23,
+							)
 						),
 					),
 				)
 			)
 		);
 		$wp_customize->add_setting(
-			'h3_font_size',
+			'h5_typography',
 			array(
-				'title'             => esc_html__( 'H3 Font Size', 'tutorstarter' ),
+				'title'             => esc_html__( 'H5 Typography', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 24, "tablet": 24, "desktop": 26 }',
-				'sanitize_callback' => 'sanitize_range_value',
+				'default' => array(
+					'textTransform' => 'none',
+					'fontWeight'    => 700,
+					'fontSize'      => array(
+						'mobile'  => 16,
+						'tablet'  => 16,
+						'desktop' => 16,
+					),
+					'lineHeight' => array(
+						'mobile'  => 22,
+						'tablet'  => 22,
+						'desktop' => 23,
+					),
+				),
+				'sanitize_callback' => 'sanitize_select_range_value',
 			)
 		);
 		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
+			new Typography_Control(
 				$wp_customize,
-				'h3_font_size',
+				'h5_typography',
 				array(
-					'label'       => esc_html__( 'H3 Font Size', 'tutorstarter' ),
+					'label'       => esc_html__( 'H5 Typography', 'tutorstarter' ),
 					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
-						'min'        => 8,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 24,
-							'tablet'  => 24,
-							'desktop' => 26,
+						'font_sizes' => array(
+							'min'        => 8,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'line_heights' => array(
+							'min'        => 0,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'defaultParams' => array(
+							'weight_default'  => 700,
+							'text_transform'  => 'none',
+							'font_sizes' => array(
+								'mobile'  => 16,
+								'tablet'  => 16,
+								'desktop' => 16,
+							),
+							'line_heights' => array(
+								'mobile'  => 22,
+								'tablet'  => 22,
+								'desktop' => 23,
+							)
 						),
 					),
 				)
 			)
 		);
 		$wp_customize->add_setting(
-			'h3_font_weight',
+			'h6_typography',
 			array(
-				'title'             => esc_html__( 'H3 Font Weight', 'tutorstarter' ),
+				'title'             => esc_html__( 'H6 Typography', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => 700,
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'h3_font_weight',
-				array(
-					'label'   => esc_html__( 'H3 Font Weight', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						100 => 100,
-						200 => 200,
-						300 => 300,
-						400 => 400,
-						500 => 500,
-						600 => 600,
-						700 => 700,
-						800 => 800,
-						900 => 900,
+				'default' => array(
+					'textTransform' => 'none',
+					'fontWeight'    => 700,
+					'fontSize'      => array(
+						'mobile'  => 15,
+						'tablet'  => 15,
+						'desktop' => 15,
 					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h3_font_transform',
-			array(
-				'title'             => esc_html__( 'H3 Text Transform', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => 'none',
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'h3_font_transform',
-				array(
-					'label'   => esc_html__( 'H3 Text Transform', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						'none'       => esc_html__( 'None', 'tutorstarter' ),
-						'capitalize' => esc_html__( 'Capitalize', 'tutorstarter' ),
-						'lowercase'  => esc_html__( 'Lowercase', 'tutorstarter' ),
-						'uppercase'  => esc_html__( 'Uppercase', 'tutorstarter' ),
+					'lineHeight' => array(
+						'mobile'  => 22,
+						'tablet'  => 22,
+						'desktop' => 23,
 					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h3_font_lineheight',
-			array(
-				'title'             => esc_html__( 'H3 Line Height', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 24, "tablet": 24, "desktop": 48 }',
-				'sanitize_callback' => 'sanitize_range_value',
+				),
+				'sanitize_callback' => 'sanitize_select_range_value',
 			)
 		);
 		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
+			new Typography_Control(
 				$wp_customize,
-				'h3_font_lineheight',
+				'h6_typography',
 				array(
-					'label'       => esc_html__( 'H3 Line Height', 'tutorstarter' ),
+					'label'       => esc_html__( 'H6 Typography', 'tutorstarter' ),
 					'section'     => 'tutorstarter_typography_section',
 					'input_attrs' => array(
-						'min'        => 0,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 24,
-							'tablet'  => 24,
-							'desktop' => 48,
+						'font_sizes' => array(
+							'min'        => 8,
+							'max'        => 100,
+							'units'      => array( 'px' )
 						),
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h4_font_size',
-			array(
-				'title'             => esc_html__( 'H4 Font Size', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 18, "tablet": 18, "desktop": 18 }',
-				'sanitize_callback' => 'sanitize_range_value',
-			)
-		);
-		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
-				$wp_customize,
-				'h4_font_size',
-				array(
-					'label'       => esc_html__( 'H4 Font Size', 'tutorstarter' ),
-					'section'     => 'tutorstarter_typography_section',
-					'input_attrs' => array(
-						'min'        => 8,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 18,
-							'tablet'  => 18,
-							'desktop' => 18,
+						'line_heights' => array(
+							'min'        => 0,
+							'max'        => 100,
+							'units'      => array( 'px' )
 						),
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h4_font_weight',
-			array(
-				'title'             => esc_html__( 'H4 Font Weight', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => 700,
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'h4_font_weight',
-				array(
-					'label'   => esc_html__( 'H4 Font Weight', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						100 => 100,
-						200 => 200,
-						300 => 300,
-						400 => 400,
-						500 => 500,
-						600 => 600,
-						700 => 700,
-						800 => 800,
-						900 => 900,
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h4_font_transform',
-			array(
-				'title'             => esc_html__( 'H4 Text Transform', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => 'none',
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'h4_font_transform',
-				array(
-					'label'   => esc_html__( 'H4 Text Transform', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						'none'       => esc_html__( 'None', 'tutorstarter' ),
-						'capitalize' => esc_html__( 'Capitalize', 'tutorstarter' ),
-						'lowercase'  => esc_html__( 'Lowercase', 'tutorstarter' ),
-						'uppercase'  => esc_html__( 'Uppercase', 'tutorstarter' ),
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h4_font_lineheight',
-			array(
-				'title'             => esc_html__( 'H4 Line Height', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 22, "tablet": 22, "desktop": 23 }',
-				'sanitize_callback' => 'sanitize_range_value',
-			)
-		);
-		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
-				$wp_customize,
-				'h4_font_lineheight',
-				array(
-					'label'       => esc_html__( 'H4 Line Height', 'tutorstarter' ),
-					'section'     => 'tutorstarter_typography_section',
-					'input_attrs' => array(
-						'min'        => 0,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 22,
-							'tablet'  => 22,
-							'desktop' => 23,
-						),
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h5_font_size',
-			array(
-				'title'             => esc_html__( 'H5 Font Size', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 16, "tablet": 16, "desktop": 16 }',
-				'sanitize_callback' => 'sanitize_range_value',
-			)
-		);
-		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
-				$wp_customize,
-				'h5_font_size',
-				array(
-					'label'       => esc_html__( 'H5 Font Size', 'tutorstarter' ),
-					'section'     => 'tutorstarter_typography_section',
-					'input_attrs' => array(
-						'min'        => 8,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 16,
-							'tablet'  => 16,
-							'desktop' => 16,
-						),
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h5_font_weight',
-			array(
-				'title'             => esc_html__( 'H5 Font Weight', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => 700,
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'h5_font_weight',
-				array(
-					'label'   => esc_html__( 'H5 Font Weight', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						100 => 100,
-						200 => 200,
-						300 => 300,
-						400 => 400,
-						500 => 500,
-						600 => 600,
-						700 => 700,
-						800 => 800,
-						900 => 900,
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h5_font_transform',
-			array(
-				'title'             => esc_html__( 'H5 Text Transform', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => 'none',
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'h5_font_transform',
-				array(
-					'label'   => esc_html__( 'H5 Text Transform', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						'none'       => esc_html__( 'None', 'tutorstarter' ),
-						'capitalize' => esc_html__( 'Capitalize', 'tutorstarter' ),
-						'lowercase'  => esc_html__( 'Lowercase', 'tutorstarter' ),
-						'uppercase'  => esc_html__( 'Uppercase', 'tutorstarter' ),
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h5_font_lineheight',
-			array(
-				'title'             => esc_html__( 'H5 Line Height', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 22, "tablet": 22, "desktop": 23 }',
-				'sanitize_callback' => 'sanitize_range_value',
-			)
-		);
-		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
-				$wp_customize,
-				'h5_font_lineheight',
-				array(
-					'label'       => esc_html__( 'H5 Line Height', 'tutorstarter' ),
-					'section'     => 'tutorstarter_typography_section',
-					'input_attrs' => array(
-						'min'        => 0,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 22,
-							'tablet'  => 22,
-							'desktop' => 23,
-						),
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h6_font_size',
-			array(
-				'title'             => esc_html__( 'H6 Font Size', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 15, "tablet": 15, "desktop": 15 }',
-				'sanitize_callback' => 'sanitize_range_value',
-			)
-		);
-		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
-				$wp_customize,
-				'h6_font_size',
-				array(
-					'label'       => esc_html__( 'H6 Font Size', 'tutorstarter' ),
-					'section'     => 'tutorstarter_typography_section',
-					'input_attrs' => array(
-						'min'        => 8,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 15,
-							'tablet'  => 15,
-							'desktop' => 15,
-						),
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h6_font_weight',
-			array(
-				'title'             => esc_html__( 'H6 Font Weight', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => 700,
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'h6_font_weight',
-				array(
-					'label'   => esc_html__( 'H6 Font Weight', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						100 => 100,
-						200 => 200,
-						300 => 300,
-						400 => 400,
-						500 => 500,
-						600 => 600,
-						700 => 700,
-						800 => 800,
-						900 => 900,
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h6_font_transform',
-			array(
-				'title'             => esc_html__( 'H6 Text Transform', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => 'none',
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'h6_font_transform',
-				array(
-					'label'   => esc_html__( 'H6 Text Transform', 'tutorstarter' ),
-					'section' => 'tutorstarter_typography_section',
-					'type'    => 'select',
-					'choices' => array(
-						'none'       => esc_html__( 'None', 'tutorstarter' ),
-						'capitalize' => esc_html__( 'Capitalize', 'tutorstarter' ),
-						'lowercase'  => esc_html__( 'Lowercase', 'tutorstarter' ),
-						'uppercase'  => esc_html__( 'Uppercase', 'tutorstarter' ),
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'h6_font_lineheight',
-			array(
-				'title'             => esc_html__( 'H6 Line Height', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 22, "tablet": 22, "desktop": 23 }',
-				'sanitize_callback' => 'sanitize_range_value',
-			)
-		);
-		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
-				$wp_customize,
-				'h6_font_lineheight',
-				array(
-					'label'       => esc_html__( 'H6 Line Height', 'tutorstarter' ),
-					'section'     => 'tutorstarter_typography_section',
-					'input_attrs' => array(
-						'min'        => 0,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 22,
-							'tablet'  => 22,
-							'desktop' => 23,
+						'defaultParams' => array(
+							'weight_default'  => 700,
+							'text_transform'  => 'none',
+							'font_sizes' => array(
+								'mobile'  => 15,
+								'tablet'  => 15,
+								'desktop' => 15,
+							),
+							'line_heights' => array(
+								'mobile'  => 22,
+								'tablet'  => 22,
+								'desktop' => 23,
+							)
 						),
 					),
 				)

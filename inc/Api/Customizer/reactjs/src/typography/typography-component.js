@@ -162,7 +162,7 @@ class TypographyComponent extends Component {
 
 		return (
 			<div className="select-inline font-size">
-				{this.controlHeader('Font Sizes', 'fontSize', units)}
+				{this.controlHeader('Font Size', 'fontSize', units)}
 				<RangeControl
 					step={1}
 					min={min}

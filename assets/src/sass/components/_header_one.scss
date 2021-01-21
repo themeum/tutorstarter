@@ -35,7 +35,7 @@
                         display: flex;
                         align-items: center;
                         svg {
-                            fill : #175CFF;
+                            fill : var(--cart-color);
                         }
                         a.tutor-cart-contents {
                             width: 40px;
@@ -49,8 +49,8 @@
                                 border-radius: 50%;
                                 display: inline-block;
                                 text-align: center;
-                                border: 1px solid #175CFF;
-                                color: #175CFF;
+                                border: 1px solid var(--cart-color);
+                                color: var(--cart-color);
                                 position: absolute;
                                 top: -8px;
                                 right: 8px;

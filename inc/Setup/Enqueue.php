@@ -20,7 +20,9 @@ class Enqueue {
 	 * Register default hooks and actions for WordPress
 	 */
 	public function register() {
-		add_action( 'wp_head', array( $this, 'preload_fontawesome' ) );
+		if ( class_exists( 'QUBELY' ) ) {
+			add_action( 'wp_head', array( $this, 'preload_fontawesome' ) );
+		}
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );
 		add_filter( 'style_loader_tag', array( $this, 'load_styles_deferred' ), 10, 4 );
@@ -82,7 +84,19 @@ class Enqueue {
 	 */
 	public function load_styles_deferred( $html, $handle, $href, $media ) {
 
-		$handles = array( 'gfonts', 'gfonts-heading', 'main', 'qubely-bundle', 'qubely-font-awesome', 'wp-block-library' );
+		$handles = array( 
+			'gfonts',
+			'gfonts-heading',
+			'main',
+			'qubely-bundle',
+			'qubely-font-awesome',
+			'wp-block-library',
+			'wp-block-library-theme',
+			'wc-block-style',
+			'woocommerce-layout',
+			'wc-block-vendors-style',
+			'woocommerce-general',
+		 );
 
 		if ( ! in_array( $handle, $handles, true ) ) {
 			return $html;
