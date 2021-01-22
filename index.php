@@ -22,21 +22,14 @@ get_header(); ?>
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
 					<div class="blog-post-container">
-						<div class="blog-post-content <?php echo 'grid_view' === get_theme_mod( 'blog_layout_select' ) ? 'layout_grid_2' === get_theme_mod( 'blog_grid_selected' ) ? 'layout-grid-2' : 'layout-grid-3' : 'layout-list'; ?>">
-
-					<?php
-					if ( have_posts() ) :
-
-						if ( is_home() && ! is_front_page() ) :
-							?>
+						<?php if ( is_home() && ! is_front_page() ) : ?>
 							<header>
 								<h1 class="page-title"><?php single_post_title(); ?></h1>
 							</header>
-
-							<?php
-						endif;
-
-						/* Start the Loop */
+						<?php endif; ?>
+						<div class="blog-post-content <?php echo 'grid_view' === get_theme_mod( 'blog_layout_select' ) ? 'layout_grid_2' === get_theme_mod( 'blog_grid_selected' ) ? 'layout-grid-2' : 'layout-grid-3' : 'layout-list'; ?>">
+					<?php
+					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
 

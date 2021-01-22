@@ -104,7 +104,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/tutortheme/wp-content/themes/tutorstarter/assets/src/scripts/admin.js */"./assets/src/scripts/admin.js");
+module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/scripts/admin.js */"./assets/src/scripts/admin.js");
 
 
 /***/ })

@@ -5962,17 +5962,17 @@ var General = function General() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./inc/Setup/Settings/reactjs/node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-router-dom */ "./inc/Setup/Settings/reactjs/node_modules/react-router-dom/esm/react-router-dom.js");
 
 
 var Header = function Header() {
   return /*#__PURE__*/React.createElement("header", null, /*#__PURE__*/React.createElement("div", {
     className: "navigation-container"
-  }, /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Link"], {
     to: "/wp-admin/admin.php?page=tutorstarter"
-  }, "General"), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "General"), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Link"], {
     to: "/wp-admin/admin.php?page=tutorstarter-useful-plugins"
-  }, "Useful Plugins"), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "Useful Plugins"), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Link"], {
     to: "/wp-admin/admin.php?page=tutorstarter-extra-resources"
   }, "Extra Resources")));
 };
@@ -5990,7 +5990,7 @@ var Header = function Header() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./inc/Setup/Settings/reactjs/node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-router-dom */ "./inc/Setup/Settings/reactjs/node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _general__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./general */ "./inc/Setup/Settings/reactjs/src/general/index.js");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header */ "./inc/Setup/Settings/reactjs/src/header/index.js");
 
@@ -5999,7 +5999,7 @@ __webpack_require__.r(__webpack_exports__);
 var Fragment = wp.element.Fragment;
 
 var useQuery = function useQuery() {
-  return new URLSearchParams(Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["useLocation"])().search);
+  return new URLSearchParams(Object(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["useLocation"])().search);
 };
 
 var Dashboard = function Dashboard() {
@@ -6027,12 +6027,12 @@ var PageComponent = function PageComponent(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./inc/Setup/Settings/reactjs/node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-router-dom */ "./inc/Setup/Settings/reactjs/node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./inc/Setup/Settings/reactjs/src/index.js");
 var render = wp.element.render;
 
 
-render( /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, /*#__PURE__*/React.createElement(_index__WEBPACK_IMPORTED_MODULE_1__["default"], null)), document.getElementById('tutorstarter-dashboard'));
+render( /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["BrowserRouter"], null, /*#__PURE__*/React.createElement(_index__WEBPACK_IMPORTED_MODULE_1__["default"], null)), document.getElementById('tutorstarter-dashboard'));
 
 /***/ }),
 
@@ -6074,7 +6074,7 @@ module.exports = g;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/tutortheme/wp-content/themes/tutorstarter/inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js */"./inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js");
+module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js */"./inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js");
 
 
 /***/ }),
