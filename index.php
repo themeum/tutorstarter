@@ -42,17 +42,15 @@ get_header(); ?>
 							}
 
 						endwhile;
-
-						the_posts_navigation();
-
 					else :
-
 						get_template_part( 'views/content', 'none' );
-
 					endif;
 					?>
-						</div>
-				</div>
+					</div><!--blog-post-content-->
+					<div class="tutorstarter-pagination">
+						<?php tutorstarter_post_pagination(); ?>
+					</div>
+				</div><!--blog-post-container-->
 				</main><!-- #main -->
 			</div><!-- #primary -->
 		</div><!-- .col- -->

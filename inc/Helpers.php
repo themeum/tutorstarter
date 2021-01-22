@@ -263,6 +263,26 @@ if ( ! function_exists( 'svg' ) ) {
 	}
 }
 
+if ( ! function_exists( 'tutorstarter_post_pagination' ) ) {
+	/**
+	 * Custom pagination
+	 */
+	function tutorstarter_post_pagination() {
+	  global $wp_query;
+	  $paged = 999999999; // need an unlikely integer
+  
+		 echo paginate_links( array(
+			  'base' => str_replace( $paged, '%#%', esc_url( get_pagenum_link( $paged ) ) ),
+			  'format' => '?paged=%#%',
+			  'current' => max( 1, get_query_var('paged') ),
+			  'mid_size' => 2,
+			  'prev_text' => __( '<', 'tutorstarter' ),
+			  'next_text' => __( '>', 'tutorstarter' ),
+			  'total' => $wp_query->max_num_pages
+		 ) );
+	}
+}
+
 /**
  * TGMPA Plugin Activation
  */

@@ -9340,6 +9340,8 @@ img {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-post-content {
@@ -9420,6 +9422,10 @@ img {
 
 /* Blog layout: grid-2 */
 
+.blog-post-container .tutorstarter-pagination {
+  align-self: flex-end;
+}
+
 .blog-post-content.layout-grid-2 {
   display: grid;
 }
@@ -9458,7 +9464,7 @@ img {
 }
 
 .blog-grid-post-item .post-thumbnail img {
-  width: 100%;
+  height: 280px;
   border-radius: 6px;
 }
 

@@ -9,7 +9,10 @@ img {
 	max-width: 1140px;
 	margin: 0 auto;
 	padding: 0 15px;
+	display: flex;
+	flex-direction: column;
 }
+
 .blog-post-content {
 	padding: 30px 0;
 }
