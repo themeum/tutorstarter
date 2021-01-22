@@ -7,6 +7,7 @@
 
 namespace Tutor_Starter\Api\Customizer\Blog;
 
+use WP_Customize_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Toggle_Switch_Control;
 
 defined( 'ABSPATH' ) || exit;
@@ -162,6 +163,34 @@ class Meta {
 				array(
 					'label'   => esc_html__( 'Show Read More Button in Blog Listing?', 'tutorstarter' ),
 					'section' => 'tutorstarter_blog_section',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'custom_excerpt_length',
+			array(
+				'title'             => esc_html__( 'Custom Excerpt Length', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => 18,
+				'sanitize_callback' => 'absint',
+			)
+		);
+		$wp_customize->selective_refresh->add_partial(
+			'custom_excerpt_length',
+			array(
+				'selector'            => '.excerpt',
+				'container_inclusive' => true,
+				'render_callback'     => '__return_true',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'custom_excerpt_length',
+				array(
+					'label'   => esc_html__( 'Custom Excerpt Length', 'tutorstarter' ),
+					'section' => 'tutorstarter_blog_section',
+					'type'    => 'number'
 				)
 			)
 		);

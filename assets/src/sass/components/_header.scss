@@ -135,7 +135,7 @@ header.alternative {
 			height: 2px;
 			bottom: 0;
 			left: 0;
-			background-color: #175CFF;
+			background-color: var(--active-menu-color);
 			transition: all 0.4s ease-in-out;
 		}
 		&:hover  {

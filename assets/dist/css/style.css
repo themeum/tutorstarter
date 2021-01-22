@@ -6783,7 +6783,7 @@ header.alternative {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #175CFF;
+  background-color: var(--active-menu-color);
   transition: all 0.4s ease-in-out;
 }
 
@@ -8437,7 +8437,7 @@ header.alternative {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #175CFF;
+  background-color: var(--active-menu-color);
   transition: all 0.4s ease-in-out;
 }
 
@@ -9059,7 +9059,7 @@ header.alternative {
   height: 24px;
   top: 50%;
   right: -40px;
-  background-color: rgba(87, 88, 110, 0.11);
+  background-color: var(--menu-link-color);
   transform: translateY(-50%);
 }
 
@@ -9173,6 +9173,8 @@ header.alternative {
   color: var(--menu-link-color);
   font-size: var(--header-font-size);
   font-weight: var(--header-font-weight);
+  text-transform: var(--header-font-transform);
+  line-height: var(--header-font-lineheight);
 }
 
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-login-link a:hover {
