@@ -61,7 +61,7 @@
 					request.send(data);
 
                 }, function(error) {
-                    alert(JSON.stringify(error, undefined, 2));
+                    console.log(JSON.stringify(error, undefined, 2));
                 });
         };
         

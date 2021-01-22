@@ -15,7 +15,7 @@ header.default {
 
 .call-to-action {
 	padding: 10px 33px;
-	border-radius: 108px;
+	border-radius: var(--cta-border-radius);
 	border: 1px solid var(--cta-border-color);
 	background: var(--cta-background-color);
 	//@debug: var(--cta-background-color);
@@ -144,13 +144,13 @@ header.alternative {
 			}
 		}		
 		a {
-			padding: 0px 0px;
+			padding: 4px 0px;
 			text-decoration: none;
 			font-family: inherit;
 			color: var(--menu-link-color);
 			font-size: var(--header-font-size);
 			font-weight: var(--header-font-weight);
-			line-height: var(--header-font-lineheight);
+			line-height: 1.1em;
 			text-transform: var(--header-font-transform);
 			display: block;
 			//transition: 150ms ease;
@@ -209,7 +209,10 @@ header.alternative {
 /* Navbar options (bg options) */
 #masthead {
 	background: var(--primary-menu-bg-color);
-	padding: 20px 0px;
+	padding: 20px 90px;
+}
+#masthead.transparent-header {
+	background: transparent;
 }
 
 .nav-search-icon {

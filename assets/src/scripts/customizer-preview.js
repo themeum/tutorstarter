@@ -23,6 +23,19 @@
             })
         })
     });
+    wp.customize('cart_color', function (value) {
+        value.bind(function (updatedValue) {
+            const cartSelector = document.querySelector('.tutor-navbar-cart .tutor-cart svg');
+            const cartContentSelector = document.querySelector('.tutor-navbar-cart .tutor-cart a.tutor-cart-contents span.count');
+            if (null !== cartSelector) {
+                cartSelector.style.fill = updatedValue;
+            }
+            if (null !== cartContentSelector) {
+                cartContentSelector.style.color = updatedValue;
+                cartContentSelector.style.border = '1px solid' + updatedValue;
+            }
+        })
+    });
     wp.customize('body_font', function (value) {
         value.bind(function (updatedValue) {
             const bodySelector = document.querySelector('body');
@@ -48,207 +61,69 @@
             }
         })
     });
-    wp.customize('h1_font_size', function (value) {
-        value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            const h1Selector = document.querySelector('h1, .h1');
-            if (null !== h1Selector) {
-                h1Selector.style.fontSize = newValue.desktop + 'px';
-            }
-        })
-    });
-    wp.customize('h1_font_weight', function (value) {
+    wp.customize('h1_typography', function (value) {
         value.bind(function (updatedValue) {
             const h1Selector = document.querySelector('h1, .h1');
             if (null !== h1Selector) {
-                h1Selector.style.fontWeight = updatedValue;
+                h1Selector.style.fontWeight = updatedValue['fontWeight'];
+                h1Selector.style.textTransform = updatedValue['textTransform'];
+                h1Selector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                h1Selector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
             }
         })
     });
-    wp.customize('h1_font_lineheight', function (value) {
-        value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            const h1Selector = document.querySelector('h1, .h1');
-            if (null !== h1Selector) {
-                h1Selector.style.lineHeight = newValue.desktop + 'px';
-            }
-        })
-    });
-    wp.customize('h1_font_transform', function (value) {
-        value.bind(function (updatedValue) {
-            const h1Selector = document.querySelector('h1, .h1');
-            if (null !== h1Selector) {
-                h1Selector.style.textTransform = updatedValue;
-            }
-        })
-    });
-    wp.customize('h2_font_size', function (value) {
-        value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            const h2Selector = document.querySelector('h2, .h2');
-            if (null !== h2Selector) {
-                h2Selector.style.fontSize = newValue.desktop + 'px';
-            }
-        })
-    });
-    wp.customize('h2_font_weight', function (value) {
+    wp.customize('h2_typography', function (value) {
         value.bind(function (updatedValue) {
             const h2Selector = document.querySelector('h2, .h2');
             if (null !== h2Selector) {
-                h2Selector.style.fontWeight = updatedValue;
+                h2Selector.style.fontWeight = updatedValue['fontWeight'];
+                h2Selector.style.textTransform = updatedValue['textTransform'];
+                h2Selector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                h2Selector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
             }
         })
     });
-    wp.customize('h2_font_lineheight', function (value) {
-        value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            const h2Selector = document.querySelector('h2, .h2');
-            if (null !== h2Selector) {
-                h2Selector.style.lineHeight = newValue.desktop + 'px';
-            }
-        })
-    });
-    wp.customize('h2_font_transform', function (value) {
-        value.bind(function (updatedValue) {
-            const h2Selector = document.querySelector('h2, .h2');
-            if (null !== h2Selector) {
-                h2Selector.style.textTransform = updatedValue;
-            }
-        })
-    });
-    wp.customize('h3_font_size', function (value) {
-        value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            const h3Selector = document.querySelector('h3, .h3');
-            if (null !== h3Selector) {
-                h3Selector.style.fontSize = newValue.desktop + 'px';
-            }
-        })
-    });
-    wp.customize('h3_font_weight', function (value) {
+    wp.customize('h3_typography', function (value) {
         value.bind(function (updatedValue) {
             const h3Selector = document.querySelector('h3, .h3');
             if (null !== h3Selector) {
-                h3Selector.style.fontWeight = updatedValue;
+                h3Selector.style.fontWeight = updatedValue['fontWeight'];
+                h3Selector.style.textTransform = updatedValue['textTransform'];
+                h3Selector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                h3Selector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
             }
         })
     });
-    wp.customize('h3_font_lineheight', function (value) {
-        value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            const h3Selector = document.querySelector('h3, .h3');
-            if (null !== h3Selector) {
-                h3Selector.style.lineHeight = newValue.desktop + 'px';
-            }
-        })
-    });
-    wp.customize('h3_font_transform', function (value) {
-        value.bind(function (updatedValue) {
-            const h3Selector = document.querySelector('h3, .h3');
-            if (null !== h3Selector) {
-                h3Selector.style.textTransform = updatedValue;
-            }
-        })
-    });
-    wp.customize('h4_font_size', function (value) {
-        value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            const h4Selector = document.querySelector('h4, .h4');
-            if (null !== h4Selector) {
-                h4Selector.style.fontSize = newValue.desktop + 'px';
-            }
-        })
-    });
-    wp.customize('h4_font_weight', function (value) {
+    wp.customize('h4_typography', function (value) {
         value.bind(function (updatedValue) {
             const h4Selector = document.querySelector('h4, .h4');
             if (null !== h4Selector) {
-                h4Selector.style.fontWeight = updatedValue;
+                h4Selector.style.fontWeight = updatedValue['fontWeight'];
+                h4Selector.style.textTransform = updatedValue['textTransform'];
+                h4Selector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                h4Selector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
             }
         })
     });
-    wp.customize('h4_font_lineheight', function (value) {
-        value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            const h4Selector = document.querySelector('h4, .h4');
-            if (null !== h4Selector) {
-                h4Selector.style.lineHeight = newValue.desktop + 'px';
-            }
-        })
-    });
-    wp.customize('h4_font_transform', function (value) {
-        value.bind(function (updatedValue) {
-            const h4Selector = document.querySelector('h4, .h4');
-            if (null !== h4Selector) {
-                h4Selector.style.textTransform = updatedValue;
-            }
-        })
-    });
-    wp.customize('h5_font_size', function (value) {
-        value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            const h5Selector = document.querySelector('h5, .h5');
-            if (null !== h5Selector) {
-                h5Selector.style.fontSize = newValue.desktop + 'px';
-            }
-        })
-    });
-    wp.customize('h5_font_weight', function (value) {
+    wp.customize('h5_typography', function (value) {
         value.bind(function (updatedValue) {
             const h5Selector = document.querySelector('h5, .h5');
             if (null !== h5Selector) {
-                h5Selector.style.fontWeight = updatedValue;
+                h5Selector.style.fontWeight = updatedValue['fontWeight'];
+                h5Selector.style.textTransform = updatedValue['textTransform'];
+                h5Selector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                h5Selector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
             }
         })
     });
-    wp.customize('h5_font_lineheight', function (value) {
-        value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            const h5Selector = document.querySelector('h5, .h5');
-            if (null !== h5Selector) {
-                h5Selector.style.lineHeight = newValue.desktop + 'px';
-            }
-        })
-    });
-    wp.customize('h5_font_transform', function (value) {
-        value.bind(function (updatedValue) {
-            const h5Selector = document.querySelector('h5, .h5');
-            if (null !== h5Selector) {
-                h5Selector.style.textTransform = updatedValue;
-            }
-        })
-    });
-    wp.customize('h6_font_size', function (value) {
-        value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            const h6Selector = document.querySelector('h6, .h6');
-            if (null !== h6Selector) {
-                h6Selector.style.fontSize = newValue.desktop + 'px';
-            }
-        })
-    });
-    wp.customize('h6_font_weight', function (value) {
+    wp.customize('h6_typography', function (value) {
         value.bind(function (updatedValue) {
             const h6Selector = document.querySelector('h6, .h6');
             if (null !== h6Selector) {
-                h6Selector.style.fontWeight = updatedValue;
-            }
-        })
-    });
-    wp.customize('h6_font_lineheight', function (value) {
-        value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            const h6Selector = document.querySelector('h6, .h6');
-            if (null !== h6Selector) {
-                h6Selector.style.lineHeight = newValue.desktop + 'px';
-            }
-        })
-    });
-    wp.customize('h6_font_transform', function (value) {
-        value.bind(function (updatedValue) {
-            const h6Selector = document.querySelector('h6, .h6');
-            if (null !== h6Selector) {
-                h6Selector.style.textTransform = updatedValue;
+                h6Selector.style.fontWeight = updatedValue['fontWeight'];
+                h6Selector.style.textTransform = updatedValue['textTransform'];
+                h6Selector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                h6Selector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
             }
         })
     });
@@ -340,6 +215,14 @@
             let ctaElement = document.querySelector('.call-to-action');
             if (null !== ctaElement) {
                 ctaElement.style.border = '1px solid' + updatedValue;
+            }
+        })
+    });
+    wp.customize('cta_border_radius', function (value) {
+        value.bind(function (updatedValue) {
+            let ctaElement = document.querySelector('.call-to-action');
+            if (null !== ctaElement) {
+                ctaElement.style.borderRadius = updatedValue + 'px';
             }
         })
     });
@@ -539,21 +422,17 @@
             })
         })
     });
-    wp.customize('footer_widget_font_size', function (value) {
+    wp.customize('footer_widget_title_typography', function (value) {
         value.bind(function (updatedValue) {
-            let newValue = JSON.parse(updatedValue);
-            let widgetText = document.querySelectorAll('.footer-widgets .widget-title');
-            widgetText.forEach((title) => {
-                title.style.fontSize = newValue.desktop + 'px';
-            })
-        })
-    });
-    wp.customize('footer_widget_font_weight', function (value) {
-        value.bind(function (updatedValue) {
-            let widgetText = document.querySelectorAll('.footer-widgets .widget-title');
-            widgetText.forEach((title) => {
-                title.style.fontWeight = updatedValue;
-            })
+            let widgetText = document.querySelectorAll('.widget-title');
+            if (null !== widgetText) {
+                widgetText.forEach((title) => {
+                    title.style.fontWeight = updatedValue['fontWeight'];
+                    title.style.textTransform = updatedValue['textTransform'];
+                    title.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                    title.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+                })
+            }
         })
     });
     wp.customize('footer_bottom_text_color', function (value) {

@@ -203,7 +203,7 @@ __webpack_require__.r(__webpack_exports__);
 
       request.send(data);
     }, function (error) {
-      alert(JSON.stringify(error, undefined, 2));
+      console.log(JSON.stringify(error, undefined, 2));
     });
   }
 

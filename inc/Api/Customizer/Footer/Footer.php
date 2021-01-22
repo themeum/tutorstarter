@@ -10,9 +10,9 @@ namespace Tutor_Starter\Api\Customizer\Footer;
 use WP_Customize_Control;
 use WP_Customize_Color_Control;
 use WP_Customize_Image_Control;
+use Tutor_Starter\Api\Customizer\Custom_Controls\Typography_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Radio_Image_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Toggle_Switch_Control;
-use Tutor_Starter\Api\Customizer\Custom_Controls\Responsive_Range_Slider_Control;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -199,58 +199,59 @@ class Footer {
 			)
 		);
 		$wp_customize->add_setting(
-			'footer_widget_font_size',
+			'footer_widget_title_typography',
 			array(
-				'title'             => esc_html__( 'Widget Title Font Size', 'tutorstarter' ),
+				'title'             => esc_html__( 'Widget Title Typography', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '{ "mobile": 16, "tablet": 16, "desktop": 18 }',
-				'sanitize_callback' => 'sanitize_range_value',
+				'default' => array(
+					'textTransform' => 'none',
+					'fontWeight'    => 700,
+					'fontSize'      => array(
+						'mobile'  => 16,
+						'tablet'  => 16,
+						'desktop' => 18,
+					),
+					'lineHeight' => array(
+						'mobile'  => 20,
+						'tablet'  => 20,
+						'desktop' => 23,
+					),
+				),
+				'sanitize_callback' => 'sanitize_select_range_value',
 			)
 		);
 		$wp_customize->add_control(
-			new Responsive_Range_Slider_Control(
+			new Typography_Control(
 				$wp_customize,
-				'footer_widget_font_size',
+				'footer_widget_title_typography',
 				array(
-					'label'       => esc_html__( 'Widget Title Font Size', 'tutorstarter' ),
+					'label'       => esc_html__( 'Widget Title Typography', 'tutorstarter' ),
 					'section'     => 'tutorstarter_footer_section',
 					'input_attrs' => array(
-						'min'        => 8,
-						'max'        => 100,
-						'units'      => array( 'px' ),
-						'defaultVal' => array(
-							'mobile'  => 16,
-							'tablet'  => 16,
-							'desktop' => 18,
+						'font_sizes' => array(
+							'min'        => 8,
+							'max'        => 100,
+							'units'      => array( 'px' )
 						),
-					),
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'footer_widget_font_weight',
-			array(
-				'title'             => esc_html__( 'Widget Title Font Weight', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => 700,
-				'sanitize_callback' => 'sanitize_select_radio',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'footer_widget_font_weight',
-				array(
-					'label'   => esc_html__( 'Widget Title Font Weight', 'tutorstarter' ),
-					'section' => 'tutorstarter_footer_section',
-					'type'    => 'select',
-					'choices' => array(
-						100 => 100,
-						300 => 300,
-						400 => 400,
-						500 => 500,
-						700 => 700,
-						900 => 900,
+						'line_heights' => array(
+							'min'        => 0,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'defaultParams' => array(
+							'weight_default'  => 700,
+							'text_transform'  => 'none',
+							'font_sizes' => array(
+								'mobile'  => 16,
+								'tablet'  => 16,
+								'desktop' => 18,
+							),
+							'line_heights' => array(
+								'mobile'  => 20,
+								'tablet'  => 20,
+								'desktop' => 23,
+							)
+						),
 					),
 				)
 			)

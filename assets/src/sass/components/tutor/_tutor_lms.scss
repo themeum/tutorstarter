@@ -1,3 +1,7 @@
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-header-profile-menu ul {
+    overflow-y: auto !important;
+}
+
 .tutor-option-field-row label,
 .tutor-form-group label {
     color: #0A083B;
@@ -17,7 +21,7 @@ a.tutor-btn,
 
 .tutor-header-profile-photo img{
     line-height: 30px;
-    height: 30px;
-    width: 30px;
+    max-height: 30px;
+    max-width: 30px;
     border-radius: 50%;
 }
