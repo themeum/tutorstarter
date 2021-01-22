@@ -123,7 +123,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Menu Link Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#000000',
+				'default'           => '#57586E',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -142,7 +142,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Menu Link Active and Hover Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#1500ff',
+				'default'           => '#175CFF',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -240,7 +240,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Cart Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#cccccc',
+				'default'           => '#57586E',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -280,7 +280,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Button BG Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#1539e9',
+				'default'           => '#ffffff',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);

@@ -22,7 +22,7 @@
                         height: 24px;
                         top: 50%;
                         right: -40px;
-                        background-color: rgb(87 88 110 / 11%);
+                        background-color: var(--menu-link-color);
                         transform: translateY(-50%);
                     }
                 }
@@ -128,6 +128,8 @@
                             color : var(--menu-link-color);
                             font-size: var(--header-font-size);
                             font-weight: var(--header-font-weight);
+                            text-transform: var(--header-font-transform);
+                            line-height: var(--header-font-lineheight);
                             &:hover {
                                 color: var(--active-menu-color);
                             }

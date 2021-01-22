@@ -20,6 +20,7 @@ class Setup {
 	public function register() {
 		add_action( 'after_setup_theme', array( $this, 'setup' ) );
 		add_action( 'after_setup_theme', array( $this, 'content_width' ), 0 );
+		add_filter( 'excerpt_length', array( $this, 'custom_excerpt_length' ), 999 );
 	}
 
 	/**
@@ -167,5 +168,19 @@ class Setup {
 	 */
 	public function content_width() {
 		$GLOBALS['content_width'] = apply_filters( 'tutorstarter_content_width', get_theme_mod( 'content_width', 1140 ) );
+	}
+
+	/**
+	 * Custom excerpt length
+	 * 
+	 * @param int $excerpt_length
+	 * 
+	 * @return int modified excerpt_length
+	 */
+	public function custom_excerpt_length( $length ) {
+		$custom_length = get_theme_mod( 'custom_excerpt_length', 18 );
+		$length = $custom_length;
+		
+		return $length;
 	}
 }
