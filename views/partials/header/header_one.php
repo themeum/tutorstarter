@@ -117,11 +117,11 @@
 											if ( $separator ) {
 												echo '<li class="tutor-dashboard-menu-divider"></li>';
 												if ( $menu_title ) {
-													echo "<li class='tutor-dashboard-menu-divider-header'>{ $menu_title }</li>";
+													echo "<li class='tutor-dashboard-menu-divider-header'>$menu_title</li>";
 												}
 											} else {
 												if ( $dashboard_key === 'index') $dashboard_key = '';
-												echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . " </a> </li>";
+												echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . " </a></li>";
 											}
 										}
 									}

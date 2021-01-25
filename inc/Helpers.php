@@ -297,42 +297,15 @@ if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
 	 */
 	function tutorstarter_plugin_activation() {
 		$plugins = array(
-			// array(
-			// 	'name'               => esc_html__( 'Tutor LMS – eLearning and online course solution', 'tutorstarter' ),
-			// 	'slug'               => 'tutor',
-			// 	'required'           => true,
-			// 	'version'            => '',
-			// 	'force_activation'   => true,
-			// 	'force_deactivation' => false,
-			// 	'external_url'       => esc_url( 'https://downloads.wordpress.org/plugin/tutor.zip' ),
-			// ),
-			// array(
-			// 	'name'               => esc_html__( 'Qubely - Advanced Gutenberg Blocks', 'tutorstarter' ),
-			// 	'slug'               => 'qubely',
-			// 	'required'           => false,
-			// 	'version'            => '',
-			// 	'force_activation'   => false,
-			// 	'force_deactivation' => false,
-			// 	'external_url'       => esc_url( 'https://downloads.wordpress.org/plugin/qubely.zip' ),
-			// ),
-			// array(
-			// 	'name'               => esc_html__( 'One Click Demo Import', 'tutorstarter' ),
-			// 	'slug'               => 'one-click-demo-import',
-			// 	'required'           => false,
-			// 	'version'            => '',
-			// 	'force_activation'   => false,
-			// 	'force_deactivation' => false,
-			// 	'external_url'       => esc_url( 'https://downloads.wordpress.org/plugin/one-click-demo-import.2.6.1.zip' ),
-			// ),
-			// array(
-			// 	'name'               => esc_html__( 'Cheetah Performance', 'tutorstarter' ),
-			// 	'slug'               => 'cheetah',
-			// 	'source'             => get_stylesheet_directory() . '/plugins/cheetah.zip',
-			// 	'required'           => false,
-			// 	'version'            => '',
-			// 	'force_activation'   => false,
-			// 	'force_deactivation' => false,
-			// ),
+			array(
+				'name'               => esc_html__( 'Tutormate', 'tutorstarter' ),
+				'slug'               => 'tutormate',
+				'required'           => false,
+				'version'            => '',
+				'force_activation'   => false,
+				'force_deactivation' => false,
+				'external_url'       => esc_url( '' ), // Will be added later.
+			),
 		);
 
 		$config = array(
