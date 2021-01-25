@@ -20,6 +20,7 @@ class Setup {
 	public function register() {
 		add_action( 'after_setup_theme', array( $this, 'setup' ) );
 		add_action( 'after_setup_theme', array( $this, 'content_width' ), 0 );
+		add_filter( 'excerpt_more', array( $this, 'remove_excerpt_extra_char' ) );
 		add_filter( 'excerpt_length', array( $this, 'custom_excerpt_length' ), 999 );
 	}
 
@@ -182,5 +183,16 @@ class Setup {
 		$length = $custom_length;
 		
 		return $length;
+	}
+
+	/**
+	 * Remove excerpt extra char
+	 * 
+	 * @param string $excerpt extra charset
+	 * 
+	 * @return string modified excerpt extra char
+	 */
+	public function remove_excerpt_extra_char( $more ) {
+		return '';
 	}
 }
