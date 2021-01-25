@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <div class="getting-started-page-heading">
-                            <?php _e('Getting Started', 'tutorstarter'); ?>
+                            <?php _e( 'Getting Started', 'tutorstarter' ); ?>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -34,22 +34,22 @@ defined( 'ABSPATH' ) || exit;
                             <a href="#">
                                 <div class="sign-type sign-as-instructor">
                                     <div class="signing-type-icon">
-                                        <img src="http://nur.local/tutortheme/wp-content/uploads/2020/12/tutor-starter-theme-path-icon.png"
+                                        <img src="<?php echo get_template_directory_uri() . '/assets/dist/images/path-icon.png'; ?>"
                                              alt="sing-as-instructor-icon">
                                     </div>
                                     <div class="signing-title">
-                                        <?php _e('Sign up as an instructor', 'tutorstarter'); ?>
+                                        <?php _e( 'Sign up as an instructor', 'tutorstarter' ); ?>
                                     </div>
                                 </div><!-- sing-as-instructor-->
                             </a>
                             <a href="#">
                                 <div class="sign-type sign-as-student">
                                     <div class="signing-type-icon">
-                                        <img src="http://nur.local/tutortheme/wp-content/uploads/2020/12/tutor-starter-theme-path-icon.png"
+                                        <img src="<?php echo get_template_directory_uri() . '/assets/dist/images/path-icon.png'; ?>"
                                              alt="sing-as-instructor-icon">
                                     </div>
                                     <div class="signing-title">
-                                        <?php _e('I’m a student', 'tutorstarter'); ?>
+                                        <?php _e( 'I’m a student', 'tutorstarter' ); ?>
                                     </div>
                                 </div><!-- sing-as-student-->
                             </a>
@@ -57,13 +57,12 @@ defined( 'ABSPATH' ) || exit;
                     </div>
                     <div class="col-md-12 text-center">
                         <div class="getting-started-footer">
-                            <?php _e('tutor ™ 2020', 'tutorstarter'); ?>
+                            <?php _e( 'tutor ™ 2021', 'tutorstarter' ); ?>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
 		<?php wp_footer(); ?>
 	</body>
 </html>
