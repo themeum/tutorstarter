@@ -5,8 +5,8 @@
  */
 ( function () { 
 
-        let googleSignInBtn      =   document.getElementById('gSignIn2');
-        let google_client_ID     =   tutorstarter_vars.google_client_ID;
+        let googleSignInBtn  = document.getElementById('gSignIn2');
+        let google_client_ID = tutorstarter_vars.google_client_ID;
         var googleUser = {};
         var startApp = function() {
             gapi.load('auth2', function(){

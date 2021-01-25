@@ -362,113 +362,118 @@ if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
 endif;
 
 /**
- * tutor starter ajax signup
+ * Tutor starter ajax signup
  */
-add_action('wp_ajax_nopriv_ajaxregister', 'tutor_theme_ajax_register_new_user');
+add_action( 'wp_ajax_nopriv_ajaxregister', 'tutor_theme_ajax_register_new_user' );
+
 function tutor_theme_ajax_register_new_user() {	
-	if( !check_ajax_referer( 'tutor-starter-signup-nonce','signupNonce' ) ) {
-		echo json_encode(array( 'loggedin' => false, 'message'=> __('It\'s not a valid request.','tutorstarter') ));
+	if ( ! check_ajax_referer( 'tutor-starter-signup-nonce','signupNonce' ) ) {
+		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Cheating huh?', 'tutorstarter' ) ) );
 		die();
 	}
-	$username 			= 	sanitize_text_field(isset( $_POST['username'] ) ? $_POST['username'] : '');
-	$email 				= 	sanitize_email(isset( $_POST['email'] ) ? $_POST['email'] : '');
-	$password 			= 	sanitize_text_field(isset( $_POST['password'] ) ? $_POST['password'] : '');
-	$confirm_password 	= 	sanitize_text_field(isset( $_POST['confirm_password'] ) ? $_POST['confirm_password'] : '');
-	if(!$username) {
-		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Username field is empty.','tutorstarter') ));
+	$username 		  = isset( $_POST['username'] ) ? sanitize_text_field( $_POST['username'] ) : '';
+	$email 			  = isset( $_POST['email'] ) ? sanitize_email( $_POST['email'] ) : '';
+	$password 		  = isset( $_POST['password'] ) ? sanitize_text_field( $_POST['password'] ) : '';
+	$confirm_password = isset( $_POST['confirm_password'] ) ? sanitize_text_field( $_POST['confirm_password'] ) : '';
+
+	if ( ! $username ) {
+		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Please provide a username.', 'tutorstarter' ) ) );
 		die();
-	}elseif(!$email) {
-		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Email isn\'t valid.','tutorstarter') ));
+	} elseif ( ! $email ) {
+		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'A valid email is required.', 'tutorstarter' ) ) );
 		die();
-	}elseif(!$password) {
-		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Password field is empty.','tutorstarter') ));
+	} elseif ( ! $password ) {
+		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Please provide a strong password.', 'tutorstarter' ) ) );
 		die();
-	}elseif(!$confirm_password) {
-		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Confirm Password field is empty.','tutorstarter') ));
+	} elseif ( ! $confirm_password ) {
+		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Please confirm the password.', 'tutorstarter' ) ) );
 		die();
-	}else {
-		if(username_exists($username)) {
-			echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Username already exits.','tutorstarter') ));
+	} else {
+		if ( username_exists( $username ) ) {
+			echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Username already exists.', 'tutorstarter' ) ) );
 			die();
-		}elseif(!is_email($email)) {
-			echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Email address is not correct.','tutorstarter') ));
+		} elseif (! is_email( $email ) ) {
+			echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Email address is not valid.', 'tutorstarter' ) ) );
 			die();
-		}elseif(email_exists($email)) {
-			echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Email user already exits in this site.','tutorstarter') ));
+		} elseif ( email_exists( $email ) ) {
+			echo json_encode( array( 'loggedin' => false, 'message'=> __( 'This Email already exists.', 'tutorstarter' ) ) );
 			die();
-		}elseif(strlen($password) <= 6) {
-			echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Password must 7 character or more.','tutorstarter') ));
+		} elseif ( strlen( $password ) <= 6 ) {
+			echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Password must be 7 characters or more.', 'tutorstarter' ) ) );
 			die();
-		}elseif( strcmp($password, $confirm_password) !== 0 ) {
-			echo json_encode( array( 'loggedin' => false, 'message' => __('Wrong!!! Passwords do not match.') ));
+		} elseif ( strcmp( $password, $confirm_password ) !== 0 ) {
+			echo json_encode( array( 'loggedin' => false, 'message' => __( 'Password does not match.', 'tutorstarter' ) ) );
 			die();
-		}else {
+		} else {
 			$user_input = array (
-				'user_login'     =>  $username,
-				'display_name'   =>  $username,
-				'user_email'     =>  $email,
-				'user_pass'      =>  $password
+				'user_login'   =>  $username,
+				'display_name' =>  $username,
+				'user_email'   =>  $email,
+				'user_pass'    =>  $password
 			);
+
 			$user_id = wp_insert_user( $user_input );
 			if ( ! is_wp_error( $user_id ) ) {
-				$login_data = array();  
-				$login_data['user_login'] = $username;  
+				$login_data                  = array();  
+				$login_data['user_login']    = $username;  
 				$login_data['user_password'] = $password;  
-				$login_data['remember'] = false;  
+				$login_data['remember']      = false;  
 			
 				$user_verify = wp_signon( $login_data, false );
 			
-				if ( is_wp_error($user_verify) ) {
-					echo json_encode(array( 'loggedin' => false, 'message'=> __('Something went wrong!!!','tutorstarter') ));
+				if ( is_wp_error( $user_verify ) ) {
+					echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Something went wrong! Please try again later.', 'tutorstarter' ) ) );
 					die();
 				} else {
-					echo json_encode(array( 'loggedin' => true, 'message'=> __('Registration successful, redireting ... ... .. .','tutorstarter') ));
+					echo json_encode( array( 'loggedin' => true, 'message'=> __( 'Registration successful, redirecting...', 'tutorstarter' ) ) );
 					die();
 				}
 			} else {
-				echo json_encode(array('loggedin' => false, 'message'=> 'Wrong username or password.'));
+				echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Incorrect username or password.', 'tutorstarter' ) ) );
 				die();
 			}
 		}
 	}
 }
 /**
- * tutor starter ajax signin
+ * Tutor starter ajax signin
  */
 add_action('wp_ajax_nopriv_ajaxlogin', 'tutor_theme_ajax_login');
+
 function tutor_theme_ajax_login() {
-	if( !check_ajax_referer( 'tutor-starter-signin-nonce','signinNonce' ) ) {
-		echo json_encode(array( 'loggedin' => false, 'message'=> __('It\'s not a valid request.','tutorstarter') ));
+	if ( ! check_ajax_referer( 'tutor-starter-signin-nonce', 'signinNonce' ) ) {
+		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Cheating huh?', 'tutorstarter') ) );
 		die();
 	}
-	$email 		= 	sanitize_textarea_field(isset( $_POST['email'] ) ? $_POST['email'] : '');
-	$password 	= 	sanitize_text_field(isset( $_POST['password'] ) ? $_POST['password'] : '');
-	if(!$email) {
-		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Email isn\'t valid.','tutorstarter') ));
+	$email 	  = isset( $_POST['email'] ) ? sanitize_email( $_POST['email'] ) : '';
+	$password = isset( $_POST['password'] ) ? sanitize_text_field( $_POST['password'] ) : '';
+	
+	if ( ! $email ) {
+		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Email is not valid.', 'tutorstarter' ) ) );
 		die();
-	}elseif(!$password) {
-		echo json_encode(array( 'loggedin' => false, 'message'=> __('Wrong!!! Password field is empty.','tutorstarter') ));
+	} elseif ( ! $password ) {
+		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Password field is empty.', 'tutorstarter' ) ) );
 		die();
 	} else {
-		$login_data = array();  
-		$login_data['user_login'] = $email;
+		$login_data                  = array();  
+		$login_data['user_login']    = $email;
 		$login_data['user_password'] = $password;
-		$login_data['remember'] = false;
+		$login_data['remember']      = false;
 	
 		$user_verify = wp_signon( $login_data, false );
 	
-		if ( is_wp_error($user_verify) ) {
-			echo json_encode(array( 'loggedin' => false, 'message'=> __('Invalid login details','tutorstarter') ));
+		if ( is_wp_error( $user_verify ) ) {
+			echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Invalid login details', 'tutorstarter' ) ) );
 			die();			
 		} else {
-			echo json_encode(array( 'loggedin' => true, 'message'=> __('Signin successful, redireting..','tutorstarter') ));
+			echo json_encode( array( 'loggedin' => true, 'message'=> __( 'Signin successful, redirecting...', 'tutorstarter' ) ) );
 			die();
 		}
 	}
 }
 
 /**
- * tutor starter header cart
+ * Tutor starter header cart
  */
 if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
 	function tutor_starter_header_cart() { ?>
@@ -517,55 +522,55 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
     }
 }
 
-
 /**
- * login with google
+ * Login with google
  */
-add_action('wp_ajax_nopriv_ajaxgoogleauth', 'tutor_theme_ajax_googleauth');
+add_action( 'wp_ajax_nopriv_ajaxgoogleauth', 'tutor_theme_ajax_googleauth' );
+
 function tutor_theme_ajax_googleauth() {
-	$usermail = $_POST['useremail'];
-    if( $usermail ){
+	$usermail = sanitize_email( $_POST['useremail'] );
+    if ( $usermail ) {
         $userdata = get_user_by( 'email', $usermail );
-        if(isset($userdata->ID)){
+        if ( isset( $userdata->ID ) ) {
             wp_set_current_user( $userdata->ID );
             wp_set_auth_cookie( $userdata->ID );
-            echo json_encode(array( 'loggedin' => true, 'message' => 'Login successful, redirecting...' ));
-        }else{
-            $username = substr( $usermail, 0, strpos( $usermail, '@' ));
+            echo json_encode( array( 'loggedin' => true, 'message' => __( 'Login successful, redirecting...', 'tutorstarter' ) ) );
+        } else {
+            $username = substr( $usermail, 0, strpos( $usermail, '@' ) );
             
-            if( username_exists( $username ) ){
-                while( 2 > 1 ){
-                    $random     = substr( str_shuffle('abcdefghijklmnopqrstuvwxyz0123456789'), 0, 2 );
-                    $username  = $username + $random;
-                    if( !username_exists( $username ) ){ break; }
+            if ( username_exists( $username ) ) {
+                while ( 2 > 1 ) {
+                    $random   = substr( str_shuffle( 'abcdefghijklmnopqrstuvwxyz0123456789' ), 0, 2 );
+                    $username = $username + $random;
+                    if ( ! username_exists( $username ) ) { break; }
                 }
             }
             $user_input = array(
-                'first_name'    =>  $_POST['userfirst'],
-                'last_name'     =>  $_POST['userlast'],
-                'user_login'    =>  $username,
-                'user_email'    =>  $usermail,
-              	'display_name'	=>  $username,
-                'user_pass'     =>  NULL
+                'first_name'   => sanitize_text_field( $_POST['userfirst'] ),
+                'last_name'    => sanitize_text_field( $_POST['userlast'] ),
+                'user_login'   => $username,
+                'user_email'   => $usermail,
+              	'display_name' => $username,
+                'user_pass'    => null
             );
             $user_id = wp_insert_user( $user_input );
             if ( ! is_wp_error( $user_id ) ) {
                 wp_set_current_user( $user_id );
 				wp_set_auth_cookie( $user_id );
-                echo json_encode(array( 'loggedin' => true, 'message' => 'Login successful, redirecting...' ));
+                echo json_encode( array( 'loggedin' => true, 'message' => __( 'Login successful, redirecting...', 'tutorstarter' ) ) );
             } else {
-                echo json_encode(array('loggedin' => false, 'message' => 'Wrong username or password.'));
+                echo json_encode(array( 'loggedin' => false, 'message' => __( 'Wrong username or password.', 'tutorstarter' ) ) );
             }            
         }
         die();
     }
 }
 $google_client_ID = '140541384047-gf7004n9f58kh18gns7692armduvmm62.apps.googleusercontent.com';
-if($google_client_ID){
-    add_action('wp_enqueue_scripts','load_google_login_script');
+if ( $google_client_ID ) {
+    add_action( 'wp_enqueue_scripts','load_google_login_script' );
 }
-if( ! function_exists('load_google_login_script')){
-	function load_google_login_script(){
+if ( ! function_exists( 'load_google_login_script' ) ) {
+	function load_google_login_script() {
 		wp_enqueue_script( 'google-login-api-client', 'https://apis.google.com/js/api:client.js', array(), false, false );
 	}
 }

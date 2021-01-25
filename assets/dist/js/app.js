@@ -231,7 +231,7 @@ __webpack_require__.r(__webpack_exports__);
 (function () {
   var tutor_signin_form = document.querySelector('.tutor-signin-form');
 
-  if (null != tutor_signin_form) {
+  if (null !== tutor_signin_form) {
     var userLogin = function userLogin(e) {
       e.preventDefault();
       var request = new XMLHttpRequest();
@@ -289,7 +289,7 @@ __webpack_require__.r(__webpack_exports__);
 (function () {
   var tutor_signup_form = document.querySelector('.tutor-signup-form');
 
-  if (null != tutor_signup_form) {
+  if (null !== tutor_signup_form) {
     var registerUser = function registerUser(e) {
       e.preventDefault();
       var request = new XMLHttpRequest();

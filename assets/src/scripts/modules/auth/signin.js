@@ -6,7 +6,7 @@
 ( function () { 
    
     const tutor_signin_form = document.querySelector('.tutor-signin-form');
-    if(null != tutor_signin_form) {
+    if(null !== tutor_signin_form) {
 
         tutor_signin_form.addEventListener('submit', userLogin);
         

@@ -7,7 +7,7 @@
     
     const tutor_signup_form = document.querySelector('.tutor-signup-form');
 
-    if(null != tutor_signup_form) {
+    if(null !== tutor_signup_form) {
         tutor_signup_form.addEventListener('submit', registerUser);
         
         function registerUser(e) {
