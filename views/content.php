@@ -10,7 +10,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article id="post-<?php the_ID(); ?>"<?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>"<?php post_class( "blog-post-default" ); ?>>
 	<header class="entry-header">
 		<?php
 		if ( true === get_theme_mod( 'post_title_toggle', true ) ) :
@@ -39,24 +39,26 @@ defined( 'ABSPATH' ) || exit;
 	</header><!-- .entry-header -->
 
 	<?php if ( ! is_single() ) : ?>
-	<div class="entry-content excerpt">
+	<div class="post-data">
+		<div class="entry-content excerpt">
+			<?php
+			if ( true === get_theme_mod( 'post_excerpt_toggle', true ) ) {
+				the_excerpt();
+			}
+			?>
+		</div><!-- .entry-content -->
+		<?php else : ?>
+		<div class="entry-content">
+			<?php the_content(); ?>
+		</div><!-- .entry-content -->
+		<div class="post-tags">
+		<?php Tutor_Starter\Core\Tags::tags_list(); ?>
+		</div>
+		<?php endif; ?>
 		<?php
-		if ( true === get_theme_mod( 'post_excerpt_toggle', true ) ) {
-			the_excerpt();
-		}
-		?>
-	</div><!-- .entry-content -->
-	<?php else : ?>
-	<div class="entry-content">
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
-	<div class="post-tags">
-	 <?php Tutor_Starter\Core\Tags::tags_list(); ?>
+		if ( ! is_single() && true === get_theme_mod( 'post_readmore_toggle', true ) ) :
+			?>
+			<a class="read-more" href="<?php the_permalink(); ?>"><?php _e( 'Read more...', 'tutorstarter' ); ?></a>
+		<?php endif; ?>
 	</div>
-	<?php endif; ?>
-	<?php
-	if ( ! is_single() && true === get_theme_mod( 'post_readmore_toggle', true ) ) :
-		?>
-		<a class="read-more" href="<?php the_permalink(); ?>"><?php _e( 'Read more...', 'tutorstarter' ); ?></a>
-	<?php endif; ?>
 </article><!-- #post-## -->

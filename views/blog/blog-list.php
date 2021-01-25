@@ -37,7 +37,7 @@
 		<?php
 		if ( true === get_theme_mod( 'post_readmore_toggle', true ) ) :
 			?>
-		<a class="read-more" href="<?php the_permalink(); ?>"><?php _e( 'Read more...', 'tutorstarter' ); ?></a>
+		<a class="read-more" href="<?php the_permalink(); ?>"><?php _e( 'Continue Reading &rarr;', 'tutorstarter' ); ?></a>
 		<?php endif; ?>
 	</div>
 </article>
