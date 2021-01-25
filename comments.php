@@ -22,7 +22,7 @@ if ( post_password_required() ) :
 endif;
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area p-2">
 
 	<?php
 	// You can start editing here -- including this comment!

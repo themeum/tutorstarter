@@ -7607,6 +7607,7 @@ img {
 
 .blog-post-container .tutorstarter-pagination {
   align-self: flex-end;
+  display: flex;
 }
 
 .blog-post-content.layout-grid-2 {
@@ -7720,17 +7721,25 @@ img {
 
 .single-post .entry-title {
   font-family: Libre Baskerville;
-  font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: 65px;
+  line-height: 1.345;
   letter-spacing: 0px;
   color: #0a083b;
-  margin-bottom: 24px;
+  padding: 0;
 }
 
-.single-post .entry-meta {
-  margin-bottom: 60px;
+@media screen and (min-width: 992px) {
+  .single-post .entry-title {
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .single-post .entry-meta {
+    margin-bottom: 60px;
+  }
 }
 
 .single-post .entry-meta span,
@@ -7758,7 +7767,19 @@ img {
 }
 
 .single-post .post-thumbnail {
-  margin-bottom: 62px;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .single-post .post-thumbnail {
+    margin-bottom: 62px;
+  }
+}
+
+.single-post .post-thumbnail img {
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .single-post .entry-content,
@@ -7817,6 +7838,12 @@ img {
   color: rgba(10, 8, 59, 0.2);
 }
 
+.single-post .entry-content .edit-link,
+.single-post .post-tags .edit-link {
+  display: block;
+  margin-top: 30px;
+}
+
 .single-post .tags-links {
   display: block;
   padding-top: 10px;
@@ -7843,11 +7870,6 @@ img {
 .single-post .tags-links a:hover {
   background: #0a083b;
   color: #fff;
-}
-
-.single-post .edit-link {
-  display: block;
-  margin-top: 30px;
 }
 
 /* Blog Sidebar */
@@ -7928,22 +7950,32 @@ img {
 
 /* Blog Comments area */
 
-.comment-reply-title {
+.comments-area {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.comment-reply-title,
+.comments-title {
   font-family: "Inter", sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.6;
   font-weight: 500;
   letter-spacing: -0.562px;
+  margin-bottom: 20px;
 }
 
-.comments-area {
-  margin-top: 30px;
-  margin-bottom: 50px;
+.comment-notes {
+  margin-bottom: 20px;
 }
 
 .comment-form label {
   display: block;
   margin-bottom: 5px;
+}
+
+.comment-form .comment-form-cookies-consent {
+  margin-bottom: 30px;
 }
 
 .comment-form .comment-form-cookies-consent label {
@@ -8001,6 +8033,52 @@ img {
   border-color: #0a083b;
 }
 
+.comment-form .logged-in-as {
+  margin-bottom: 20px;
+}
+
+.comment-list {
+  margin-bottom: 20px;
+}
+
+.comment-list .comment-author {
+  display: flex;
+  align-items: center;
+}
+
+.comment-list .comment-author > * {
+  margin-right: 10px;
+}
+
+.comment-list .comment-author img {
+  border-radius: 50%;
+}
+
+.comment-list .comment {
+  display: inline-block;
+}
+
+.comment-list .comment .children {
+  margin-left: 40px;
+}
+
+.comment-list .comment .comment-body {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(10, 8, 59, 0.05);
+}
+
+.comment-list .comment .comment-metadata {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+
+.comment-list .comment .comment-content {
+  margin-bottom: 10px;
+}
+
 /* Blog Layout: override */
 
 .blog-post-content .type-post {
@@ -8033,7 +8111,7 @@ img {
   font-size: 18px;
   line-height: 1.61111em;
   letter-spacing: -0.66px;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 }
 
 .blog-post-content .entry-meta {
@@ -8057,8 +8135,29 @@ img {
   opacity: 0.7;
 }
 
+.blog-post-content .read-more {
+  font-weight: 600;
+  font-size: 16px;
+  color: #175cff;
+}
+
+.blog-grid-post-item .post-thumbnail {
+  border-radius: 10px 10px 0 0;
+}
+
+.blog-grid-post-item .post-thumbnail img {
+  border-radius: 10px 10px 0 0;
+}
+
+.blog-grid-post-item .post-data {
+  padding: 8px 30px 28px;
+}
+
 .blog-post-default {
   margin-bottom: 30px;
+}
+
+.blog-post-default.type-post {
   box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.08);
 }
 
@@ -8085,19 +8184,33 @@ img {
   padding: 10px 30px 30px 30px;
 }
 
-.blog-grid-post-item .post-thumbnail {
-  border-radius: 10px 10px 0 0;
-}
-
-.blog-grid-post-item .post-thumbnail img {
-  border-radius: 10px 10px 0 0;
-}
-
-.blog-grid-post-item .post-data {
-  padding: 8px 30px 28px;
-}
-
 /* Pagination */
+
+.tutorstarter-pagination {
+  font-weight: 500;
+  font-size: 18px;
+  color: #57586e;
+}
+
+.tutorstarter-pagination .page-numbers {
+  background: #ffffff;
+  border: 1px solid #eae9f2;
+  border-radius: 5px;
+  padding: 8px 12.489px;
+  transition: 0.2s linear;
+}
+
+.tutorstarter-pagination .page-numbers.current,
+.tutorstarter-pagination .page-numbers:hover {
+  background: #175cff;
+  border-color: #5454d4;
+  color: #fff;
+  opacity: 1;
+}
+
+.tutorstarter-pagination .page-numbers:not(:last-child) {
+  margin-right: 9px;
+}
 
 /* Tutor Course Listing */
 
