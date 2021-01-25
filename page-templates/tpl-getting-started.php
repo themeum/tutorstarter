@@ -31,27 +31,25 @@ defined( 'ABSPATH' ) || exit;
                     </div>
                     <div class="col-md-12">
                         <div class="tutor-theme-signing-type">
-                            <a href="#">
+                            <a href="/instructor-registration/">
                                 <div class="sign-type sign-as-instructor">
                                     <div class="signing-type-icon">
-                                        <img src="<?php echo get_template_directory_uri() . '/assets/dist/images/path-icon.png'; ?>"
-                                             alt="sing-as-instructor-icon">
+                                        <img src="<?php echo get_template_directory_uri() . '/assets/dist/images/path-icon.png'; ?>" alt="<?php _e( 'Instructor Registration', 'tutorstarter' ) ?>">
                                     </div>
                                     <div class="signing-title">
                                         <?php _e( 'Sign up as an instructor', 'tutorstarter' ); ?>
                                     </div>
-                                </div><!-- sing-as-instructor-->
+                                </div><!-- sign-in-as-instructor-->
                             </a>
-                            <a href="#">
+                            <a href="/student-registration/">
                                 <div class="sign-type sign-as-student">
                                     <div class="signing-type-icon">
-                                        <img src="<?php echo get_template_directory_uri() . '/assets/dist/images/path-icon.png'; ?>"
-                                             alt="sing-as-instructor-icon">
+                                        <img src="<?php echo get_template_directory_uri() . '/assets/dist/images/path-icon.png'; ?>" alt="<?php _e( 'Student Registration', 'tutorstarter' ) ?>">
                                     </div>
                                     <div class="signing-title">
                                         <?php _e( 'I’m a student', 'tutorstarter' ); ?>
                                     </div>
-                                </div><!-- sing-as-student-->
+                                </div><!-- sign-in-as-student-->
                             </a>
                         </div><!-- tutor-theme-signing-type -->
                     </div>
