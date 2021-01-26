@@ -7730,6 +7730,22 @@ section.footer-widgets .widget_nav_menu .menu-footer-menu-container .menu-item a
   }
 }
 
+/* Footer social icons */
+
+.textwidget.custom-html-widget a {
+  color: #ffffff;
+}
+
+.textwidget.custom-html-widget a:hover {
+  color: #ffffff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.textwidget.custom-html-widget a:not(:last-child) {
+  margin-right: 35px;
+}
+
 /* Blog List */
 
 img {
