@@ -73,6 +73,10 @@ class Header {
 							'name'  => esc_html__( 'Header Fullwidth', 'tutorstarter' ),
 							'image' => get_template_directory_uri() . '/assets/dist/images/header-fullwidth.svg',
 						),
+						'header_one_trans'   => array(
+							'name'  => esc_html__( 'Header Fullwidth Transparent', 'tutorstarter' ),
+							'image' => get_template_directory_uri() . '/assets/dist/images/header-fullwidth.svg',
+						),
 						'header_two'   => array(
 							'name'  => esc_html__( 'Header Standard', 'tutorstarter' ),
 							'image' => get_template_directory_uri() . '/assets/dist/images/header-standard.svg',

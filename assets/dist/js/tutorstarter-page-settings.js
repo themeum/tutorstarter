@@ -126,6 +126,31 @@ var PageSettingsFields = function PageSettingsFields(_ref) {
       onChange: function onChange(value) {
         return updateMeta(value, 'sidebar_select');
       }
+    }), /*#__PURE__*/React.createElement(SelectControl, {
+      label: __('Header', 'tutorstarter'),
+      value: updatedValue.header_select,
+      options: [{
+        label: __('--Select Header--', 'tutorstarter'),
+        value: ''
+      }, {
+        label: __('Fullwidth', 'tutorstarter'),
+        value: 'header_one'
+      }, {
+        label: __('Fullwidth Transparent', 'tutorstarter'),
+        value: 'header_one_trans'
+      }, {
+        label: __('Standard', 'tutorstarter'),
+        value: 'header_two'
+      }, {
+        label: __('Standard Transparent', 'tutorstarter'),
+        value: 'header_three'
+      }, {
+        label: __('Centered Logo', 'tutorstarter'),
+        value: 'header_four'
+      }],
+      onChange: function onChange(value) {
+        return updateMeta(value, 'header_select');
+      }
     }), /*#__PURE__*/React.createElement(ToggleControl, {
       label: __('Disable Title?', 'tutorstarter'),
       checked: updatedValue.page_title_toggle,
@@ -231,6 +256,7 @@ var PageSettingsFieldsData = compose([withSelect(function () {
 
       meta = _objectSpread({
         sidebar_select: 'no-sidebar',
+        header_select: 'header_one',
         page_title_toggle: false,
         header_toggle: false,
         footer_toggle: false
@@ -286,7 +312,7 @@ if ('1' === is_page) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js */"./inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js");
+module.exports = __webpack_require__(/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js */"./inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js");
 
 
 /***/ })

@@ -11,8 +11,6 @@
 		<input type="search" name="s" value="<?php echo get_search_query(); ?>" placeholder="Search" autocomplete="off" />
 	</form>
 </div>
-
-
 <header id="masthead" class="default transparent-header">
     <div class="container-fluid">   
         <div class="tutor-nav">
@@ -29,24 +27,24 @@
                     <?php endif; ?>
                 </div><!-- .tutor-brand -->
                 <?php
-                if(taxonomy_exists('course-category')) :
+                if ( taxonomy_exists( 'course-category' ) ) :
                     $course_categories = get_terms( array(
                         'taxonomy'   => 'course-category',
                         'number'     => 8,
                         'hide_empty' => false
                     ) );
-                    if( count($course_categories) > 1 ) :
+                    if ( count( $course_categories ) > 1 ) :
                 ?>
                     <ul id="menu-footer-one" class="menu-one">
                         <li id="menu-item-52" class="icon menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-52">
                             <a href=""> Browse </a>
                             <ul class="sub-menu">
                                 <?php 
-                                foreach($course_categories as $course_cat) {
-                                    $category_link = get_term_link($course_cat, 'course-category');
+                                foreach ( $course_categories as $course_cat ) {
+                                    $category_link = get_term_link( $course_cat, 'course-category' );
                                 ?>
                                     <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53">
-                                        <a href="<?php echo esc_url($category_link); ?>">
+                                        <a href="<?php echo esc_url( $category_link ); ?>">
                                             <?php echo $course_cat->name; ?>
                                         </a>
                                     </li>
@@ -55,16 +53,6 @@
                         </li>
                     </ul><!-- ul#menu-footer-one -->
                 <?php endif; endif; ?>
-                <!-- <?php
-                    if ( has_nav_menu( 'primary' ) ) :
-                        wp_nav_menu(
-                            array(
-                                'theme_location' => 'catmenu',
-                                'menu_class'     => 'menu-one',
-                            )
-                        );
-                    endif;
-                ?> -->
             </div>
             <div class="tutor-navbar-col tutor-navbar-menu">
                 <div class="tutor-navbar-main-menu">
@@ -85,72 +73,71 @@
                     </button>
                 </div><!-- .tutor-navbar-main-menu -->
                 <div class="tutor-navbar-cart">
-
+                <?php if ( true === get_theme_mod( 'header_search_toggle', true ) ) : ?>
                     <div class="tutor-nav-search">
-                        <?php if ( true === get_theme_mod( 'header_search_toggle', true ) ) : ?>
                             <button class="btn-search">
                                 <svg class="nav-search-icon" height="18px" viewBox="0 0 18 18" width="18px">
                                     <path d="M12.5,11 L11.7,11 L11.4,10.7 C12.4,9.6 13,8.1 13,6.5 C13,2.9 10.1,0 6.5,0 C2.9,0 0,2.9 0,6.5 C0,10.1 2.9,13 6.5,13 C8.1,13 9.6,12.4 10.7,11.4 L11,11.7 L11,12.5 L16,17.5 L17.5,16 L12.5,11 L12.5,11 Z M6.5,11 C4,11 2,9 2,6.5 C2,4 4,2 6.5,2 C9,2 11,4 11,6.5 C11,9 9,11 6.5,11 L6.5,11 Z" id="Shape"/>
                                 </svg>
                             </button>
-                        <?php endif; ?>
                     </div>
+                <?php endif; ?>
 
-                    <?php if(class_exists('woocommerce')) : ?>
+                    <?php if ( class_exists( 'woocommerce' ) ) : ?>
                         <div class="tutor-cart">
                             <?php echo tutor_starter_header_cart(); ?>
                         </div>
                     <?php endif ?>
-                    <?php if(!is_user_logged_in()) : ?>
+                    <?php if ( ! is_user_logged_in() ) : ?>
                         <div class="tutor-login-link">
-                            <a href="<?php echo get_template_directory_uri() . '/tutor-theme-sign-in'; ?>">
+                            <a href="<?php echo site_url() . '/login'; ?>">
                                 Log In
                             </a>
                         </div><!-- .tutor-login-link -->
                     <?php endif; ?>
-                    <?php if( is_user_logged_in() ) : ?>
+                    <?php if ( is_user_logged_in() ) : ?>
                         <div class="tutor-header-profile-menu">
                             <div class="tutor-header-profile-photo">
                                 <?php
-                                    if(function_exists('tutor_utils')){
-                                        echo tutor_utils()->get_tutor_avatar(get_current_user_id(), 'thumbnail');
+                                    if ( function_exists( 'tutor_utils' ) ) {
+                                        echo tutor_utils()->get_tutor_avatar( get_current_user_id(), 'thumbnail' );
                                     }else{
-                                        $get_avatar_url = get_avatar_url(get_current_user_id(), 'thumbnail');
+                                        $get_avatar_url = get_avatar_url( get_current_user_id(), 'thumbnail' );
                                         echo "<img alt='' src='$get_avatar_url' />";
                                     }
                                 ?>
                             </div><!-- .tutor-header-profile-photo -->
                             <ul>
                                 <?php
-                                    if(function_exists('tutor_utils')) {
-                                        $dashboard_page_id = tutor_utils()->get_option('tutor_dashboard_page_id');
+                                    if ( function_exists( 'tutor_utils' ) ) {
+                                        $dashboard_page_id = tutor_utils()->get_option( 'tutor_dashboard_page_id' );
                                         $dashboard_pages = tutor_utils()->tutor_dashboard_pages();
                 
-                                        foreach ($dashboard_pages as $dashboard_key => $dashboard_page){
+                                        foreach ( $dashboard_pages as $dashboard_key => $dashboard_page ) {
                                             $menu_title = $dashboard_page;
-                                            $menu_link = tutils()->get_tutor_dashboard_page_permalink($dashboard_key);
+                                            $menu_link = tutils()->get_tutor_dashboard_page_permalink( $dashboard_key );
                                             $separator = false;
-                                            if (is_array($dashboard_page)){
-                                                if(!current_user_can(tutor()->instructor_role)) continue;
-                                                $menu_title = tutor_utils()->array_get('title', $dashboard_page);
+                                            if ( is_array( $dashboard_page ) ) {
+                                                if ( ! current_user_can( tutor()->instructor_role ) ) continue;
+                                                $menu_title = tutor_utils()->array_get( 'title', $dashboard_page );
                                                 /**
                                                  * Add new menu item property "url" for custom link
                                                  */
-                                                if (isset($dashboard_page['url'])){
+                                                if ( isset( $dashboard_page['url'] ) ) {
                                                     $menu_link = $dashboard_page['url'];
                                                 }
-                                                if (isset($dashboard_page['type']) && $dashboard_page['type'] == 'separator'){
+                                                if ( isset( $dashboard_page['type'] ) && $dashboard_page['type'] == 'separator' ) {
                                                     $separator = true;
                                                 }
                                             }
-                                            if ($separator) {
+                                            if ( $separator ) {
                                                 echo '<li class="tutor-dashboard-menu-divider"></li>';
-                                                if ($menu_title) {
-                                                    echo "<li class='tutor-dashboard-menu-divider-header'>{$menu_title}</li>";
+                                                if ( $menu_title ) {
+                                                    echo "<li class='tutor-dashboard-menu-divider-header'>$menu_title</li>";
                                                 }
                                             } else {
-                                                if ($dashboard_key === 'index') $dashboard_key = '';
-                                                echo "<li><a href='".esc_url($menu_link)."'>".esc_html($menu_title)." </a> </li>";
+                                                if ( $dashboard_key === 'index' ) $dashboard_key = '';
+                                                echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . " </a> </li>";
                                             }
                                         }
                                     }
@@ -159,7 +146,7 @@
                         </div><!-- .tutor-header-profile-menu -->
                     <?php endif; ?>
 
-                    <?php if(!is_user_logged_in()) : ?>
+                    <?php if ( ! is_user_logged_in() || is_customize_preview() ) : ?>
                     <div class="tutor-get-started-btn">
                         <?php if ( true === get_theme_mod( 'cta_text_toggle', true ) ) : ?>
                             <a class="call-to-action" href="<?php echo esc_url( get_theme_mod( 'cta_text_link', '#' ) ); ?>"><?php echo esc_html( get_theme_mod( 'cta_text', 'BUY NOW' ) ); ?></a>

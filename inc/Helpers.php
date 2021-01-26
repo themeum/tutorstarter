@@ -36,8 +36,11 @@ if ( ! function_exists( 'control_active_callback' ) ) {
 
 		if ( 'header_one' === $header_type ) {
 			return true;
+		} elseif ( 'header_one_trans' === $header_type ) {
+			return true;
+		} else {
+			return false;
 		}
-		return false;
 	}
 }
 
@@ -91,10 +94,15 @@ if ( ! function_exists( 'control_active_callback_search' ) ) {
 	function control_active_callback_search() {
 		// Get the appropriate theme mod.
 		$header_type = get_theme_mod( 'header_type_select' );
-		if ( 'header_one' !== $header_type ) {
+		if ( 'header_two' === $header_type ) {
 			return true;
+		} elseif ( 'header_three' === $header_type ) {
+			return true;
+		} elseif ( 'header_four' === $header_type ) {
+			return true;
+		} else {
+			return false;
 		}
-		return false;
 	}
 }
 
