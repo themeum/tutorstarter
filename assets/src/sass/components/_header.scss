@@ -380,7 +380,7 @@ header.alternative {
 		width: 1px;
 		height: 6px;
 	}
-	&:hover > a::before {}
+	//&:hover > a::before {}
 }
 
 /* Responsive (navbar alignments options) */
@@ -524,8 +524,14 @@ header.alternative {
 }
 
 @media (max-width: 991px) {
+	#masthead {
+		padding: 10px;
+	}
 	.navbar-toggler {
 		display: block;
+	}
+	.navbar {
+		padding: 0;
 	}
 	.navbar-nav {
 		flex-direction: column;
@@ -622,6 +628,9 @@ header.alternative {
 }
 
 @media (max-width: 767px) {
+	#masthead {
+		padding: 10px 0;
+	}
 	.navbar-nav {
 		a {
 			font-size: var(--header-font-size-mobile);
@@ -631,6 +640,9 @@ header.alternative {
 	.call-to-action {
 		font-size: var(--cta-font-size-mobile);
 		line-height: var(--cta-font-lineheight-mobile);
+	}
+	.navbar-toggler {
+		margin-right: 0;
 	}
 }
 

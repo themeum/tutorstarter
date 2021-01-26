@@ -14,11 +14,11 @@ get_header(); ?>
 <div class="container">
 	<div class="row">
 		<?php if ( 'sidebar_left' === get_theme_mod( 'sidebar_type_single' ) ) : ?>
-			<div id="sidebar" class="col-sm-4">
+			<div id="sidebar" class="col-sm-3">
 				<?php get_sidebar(); ?>
 			</div><!-- .col- -->
 		<?php endif; ?>
-		<div class="<?php echo 'sidebar_none' === get_theme_mod( 'sidebar_type_single' ) ? 'col-lg-10 col-sm-10 m-auto' : 'col-sm-8'; ?>">
+		<div class="<?php echo 'sidebar_none' === get_theme_mod( 'sidebar_type_single' ) ? 'col-lg-10 col-sm-10 m-auto' : 'col-sm-9'; ?>">
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
 
@@ -44,7 +44,7 @@ get_header(); ?>
 			</div><!-- #primary -->
 		</div><!-- .col- -->
 		<?php if ( 'sidebar_right' === get_theme_mod( 'sidebar_type_single' ) ) : ?>
-			<div id="sidebar" class="col-sm-4">
+			<div id="sidebar" class="col-sm-3">
 				<?php get_sidebar(); ?>
 			</div><!-- .col- -->
 		<?php endif; ?>

@@ -37,9 +37,8 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 			<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php if ( ! is_single() ) : ?>
 	<div class="post-data">
+		<?php if ( ! is_single() ) : ?>
 		<div class="entry-content excerpt">
 			<?php
 			if ( true === get_theme_mod( 'post_excerpt_toggle', true ) ) {

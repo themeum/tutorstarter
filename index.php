@@ -14,11 +14,11 @@ get_header(); ?>
 <div class="container">
 	<div class="row align-stretch">
 		<?php if ( 'sidebar_left' === get_theme_mod( 'sidebar_type_select' ) ) : ?>
-			<div id="sidebar" class="col-sm-4">
+			<div id="sidebar" class="col-sm-3">
 				<?php get_sidebar(); ?>
 			</div><!-- .col- -->
 		<?php endif; ?>
-		<div class="<?php echo 'sidebar_none' === get_theme_mod( 'sidebar_type_select' ) ? 'col-lg-12 col-sm-12' : 'col-sm-8'; ?>">
+		<div class="<?php echo 'sidebar_none' === get_theme_mod( 'sidebar_type_select' ) ? 'col-lg-12 col-sm-12' : 'col-sm-9'; ?>">
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
 					<div class="blog-post-container">
@@ -55,7 +55,7 @@ get_header(); ?>
 			</div><!-- #primary -->
 		</div><!-- .col- -->
 		<?php if ( 'sidebar_right' === get_theme_mod( 'sidebar_type_select' ) ) : ?>
-			<div id="sidebar" class="col-sm-4">
+			<div id="sidebar" class="col-sm-3">
 				<?php get_sidebar(); ?>
 			</div><!-- .col- -->
 		<?php endif; ?>

@@ -148,9 +148,40 @@
                             }
                         }
                     }
-                    .tutor-get-started-btn {}
                 }
             }
         }
+    }
+}
+
+@media (max-width: 991px) {
+    #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-main-menu {
+		margin-right: 0!important;
+    }
+    #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-main-menu::after {
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+    #masthead .tutor-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart {
+        gap: 25px;
+    }
+    #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-main-menu {
+		margin-right: 0!important;
+    }
+    #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-brand .tutor-brand {
+        margin-right: 0!important;
+        margin-bottom: 10px;
+    }
+    #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-header-profile-menu {
+        margin-left: 10px;
+    }
+    .tutor-get-started-btn {
+       display:flex;
     }
 }
