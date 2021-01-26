@@ -10,7 +10,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article id="post-<?php the_ID(); ?>"<?php post_class( "blog-post-default" ); ?>>
+<article id="post-<?php the_ID(); ?>"<?php post_class( ! is_single() ? "blog-post-default" : " " ); ?>>
 	<header class="entry-header">
 		<?php
 		if ( true === get_theme_mod( 'post_title_toggle', true ) ) :
@@ -58,7 +58,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php
 		if ( ! is_single() && true === get_theme_mod( 'post_readmore_toggle', true ) ) :
 			?>
-			<a class="read-more" href="<?php the_permalink(); ?>"><?php _e( 'Read more...', 'tutorstarter' ); ?></a>
+			<a class="read-more" href="<?php the_permalink(); ?>"><?php _e( 'Continue Reading &rarr;', 'tutorstarter' ); ?></a>
 		<?php endif; ?>
 	</div>
 </article><!-- #post-## -->
