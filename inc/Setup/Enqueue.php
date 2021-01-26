@@ -87,7 +87,6 @@ class Enqueue {
 		$handles = array( 
 			'gfonts',
 			'gfonts-heading',
-			'main',
 			'qubely-bundle',
 			'qubely-font-awesome',
 			'tutor-icon',

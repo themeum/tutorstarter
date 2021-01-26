@@ -61,4 +61,4 @@ defined( 'ABSPATH' ) || exit;
 			<a class="read-more" href="<?php the_permalink(); ?>"><?php _e( 'Continue Reading &rarr;', 'tutorstarter' ); ?></a>
 		<?php endif; ?>
 	</div>
-</article><!-- #post-## -->
+</article><!--post--->

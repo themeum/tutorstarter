@@ -1,5 +1,7 @@
 @import '~normalize-scss/sass/normalize/import-now';
 @import 'base/reset';
+@import 'components/header';
+@import 'components/header_one';
 
 /*--------------------------------------------------------------
 # Base
@@ -37,7 +39,6 @@
 @import 'components/woocommerce/woo-reset-pass';
 @import 'components/woocommerce/woo-cart-form';
 @import 'components/woocommerce/woo-form';
-@import 'components/header';
 @import 'components/sidebar';
 @import 'components/footer';
 @import 'components/blog-list';
@@ -47,7 +48,3 @@
 @import 'components/getting-started';
 @import 'components/auth/signin';
 @import 'components/auth/signup';
-@import 'components/header';
-@import 'components/header_one';
-@import 'components/sidebar';
-@import 'components/footer';
