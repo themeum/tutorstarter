@@ -759,7 +759,7 @@ registerPlugin('tutorstarter-schema-panel', {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Custom/Schema/reactjs/src/tutorstarter-schema.js */"./inc/Custom/Schema/reactjs/src/tutorstarter-schema.js");
+module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Custom/Schema/reactjs/src/tutorstarter-schema.js */"./inc/Custom/Schema/reactjs/src/tutorstarter-schema.js");
 
 
 /***/ })

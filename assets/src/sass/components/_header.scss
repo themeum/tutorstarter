@@ -41,7 +41,6 @@ header.alternative {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 15px 50px;
 	position: relative;
 	//transition: 0.3s linear;
 	.navbar-toggler,
@@ -405,6 +404,9 @@ header.alternative {
 		.navbar-brand {
 			order: 2;
 			text-align: center;
+			img {
+				margin-left: auto;
+			}
 		}
 		.navbar-utils {
 			order: 3;

@@ -75,7 +75,7 @@ class Header {
 						),
 						'header_one_trans'   => array(
 							'name'  => esc_html__( 'Header Fullwidth Transparent', 'tutorstarter' ),
-							'image' => get_template_directory_uri() . '/assets/dist/images/header-fullwidth.svg',
+							'image' => get_template_directory_uri() . '/assets/dist/images/header-fullwidth-trans.svg',
 						),
 						'header_two'   => array(
 							'name'  => esc_html__( 'Header Standard', 'tutorstarter' ),
@@ -83,7 +83,7 @@ class Header {
 						),
 						'header_three' => array(
 							'name'  => esc_html__( 'Header Transparent', 'tutorstarter' ),
-							'image' => get_template_directory_uri() . '/assets/dist/images/header-transparent.svg',
+							'image' => get_template_directory_uri() . '/assets/dist/images/header-trans.svg',
 						),
 						'header_four'  => array(
 							'name'  => esc_html__( 'Header Centered Logo', 'tutorstarter' ),

@@ -557,7 +557,6 @@ header.alternative {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
   position: relative;
 }
 
@@ -943,6 +942,10 @@ header.alternative {
   .navbar-left .navbar-brand {
     order: 2;
     text-align: center;
+  }
+
+  .navbar-left .navbar-brand img {
+    margin-left: auto;
   }
 
   .navbar-left .navbar-utils {
