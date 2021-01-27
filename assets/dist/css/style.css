@@ -807,6 +807,8 @@ header.alternative {
 
 .btn-transparent .call-to-action {
   background: var(--cta-background-color-trans);
+  border: var(--cta-border-width) solid var(--cta-border-color-trans);
+  color: var(--cta-text-color-trans);
 }
 
 /* Navbar options (bg options) */
@@ -906,7 +908,7 @@ header.alternative {
 }
 
 .menu-item .sub-menu a {
-  color: #57586E;
+  color: #57586e;
 }
 
 .menu-item .sub-menu .sub-menu {
@@ -979,7 +981,7 @@ header.alternative {
   transform: translateY(-50%) rotate(45deg);
   border-left-color: inherit;
   transition: 0.15s linear;
-  background: #57586E;
+  background: #57586e;
   width: 1px;
   height: 6px;
 }
@@ -992,7 +994,7 @@ header.alternative {
   border-left-color: inherit;
   transition: 0.15s linear;
   transform: translateY(-50%) rotate(135deg);
-  background: #57586E;
+  background: #57586e;
   width: 1px;
   height: 6px;
 }
@@ -1640,6 +1642,8 @@ header.alternative {
 
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-get-started-btn .call-to-action {
   background: var(--cta-background-color-trans);
+  border: var(--cta-border-width) solid var(--cta-border-color-trans);
+  color: var(--cta-text-color-trans);
 }
 
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-nav-search button {

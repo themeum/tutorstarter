@@ -25,23 +25,25 @@ trait Inline_Css_Js {
 		$body_font                 = get_theme_mod( 'body_font', 'Inter' );
 		$heading_font              = get_theme_mod( 'heading_font', 'Libre Baskerville' );
 		$cta_text_color            = get_theme_mod( 'cta_color', '#ffffff' );
+		$cta_text_color_trans      = get_theme_mod( 'cta_color_trans', '#175cff' );
 		$link_color                = get_theme_mod( 'link_color', '#175CFF' );
 		$menu_bg_color             = get_theme_mod( 'menu_bg_color', '#ffffff' );
 		$body_bg_color             = get_theme_mod( 'body_bg_color', '#ffffff' );
 		$cart_color                = get_theme_mod( 'cart_color', '#57586E' );
-		$cart_color_trans          = get_theme_mod( 'cart_color_trans', '#ffffff' );
+		$cart_color_trans          = get_theme_mod( 'cart_color_trans', '#175cff' );
 		$cta_background            = get_theme_mod( 'cta_background', '#ffffff' );
 		$cta_background_trans      = get_theme_mod( 'cta_background_trans', '#ffffff' );
 		$cta_border_color          = get_theme_mod( 'cta_border_color', '#1539e9' );
+		$cta_border_color_trans    = get_theme_mod( 'cta_border_color_trans', '#ffffff' );
 		$cta_border_width          = get_theme_mod( 'cta_border_width', 1 );
 		$cta_border_radius         = get_theme_mod( 'cta_border_radius', 50 );
 		$body_text_color           = get_theme_mod( 'body_text_color', '#57586E' );
 		$menu_link_color           = get_theme_mod( 'menu_link_color', '#57586E' );
 		$menu_link_color_trans     = get_theme_mod( 'menu_link_color_trans', '#ffffff' );
-		$footer_bottom_bg_color    = get_theme_mod( 'footer_bottom_bg_color', '#000000' );
+		$footer_bottom_bg_color    = get_theme_mod( 'footer_bottom_bg_color', '#0A083B' );
 		$menu_link_active_color    = get_theme_mod( 'menu_link_active_color', '#175CFF' );
 		$link_active_color_trans   = get_theme_mod( 'menu_link_active_color_trans', '#ffffff' );
-		$footer_widgets_bg_color   = get_theme_mod( 'footer_widgets_bg_color', '#000000' );
+		$footer_widgets_bg_color   = get_theme_mod( 'footer_widgets_bg_color', '#0A083B' );
 		$footer_bottom_text_color  = get_theme_mod( 'footer_bottom_text_color', '#ffffff' );
 		$footer_widgets_text_color = get_theme_mod( 'footer_widgets_text_color', '#ffffff' );
 
@@ -236,6 +238,7 @@ trait Inline_Css_Js {
 				--cart-color: {$cart_color};
 				--cart-color-trans: {$cart_color_trans};
 				--cta-text-color: {$cta_text_color};
+				--cta-text-color-trans: {$cta_text_color_trans};
 				--body-text-color: {$body_text_color};
 				--cta-font-weight: {$header_btn_typography['fontWeight']};
 				--cta-font-transform: {$header_btn_typography['textTransform']};
@@ -261,6 +264,7 @@ trait Inline_Css_Js {
 				--cta-background-color: {$cta_background};
 				--cta-background-color-trans: {$cta_background_trans};
 				--cta-border-color: {$cta_border_color};
+				--cta-border-color-trans: {$cta_border_color_trans};
 				--cta-border-width: {$cta_border_width}px;
 				--cta-border-radius: {$cta_border_radius}px;
 				--cta-font-size: {$header_btn_typography['fontSize']['desktop']}px;

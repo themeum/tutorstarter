@@ -83,6 +83,16 @@ class Footer {
 				'sanitize_callback' => 'esc_url_raw',
 			)
 		);
+		$wp_customize->selective_refresh->add_partial(
+			'footer_logo',
+			array(
+				'selector'            => '.site-info',
+				'container_inclusive' => true,
+				'render_callback'     => function() {
+					return true;
+				},
+			)
+		);
 		$wp_customize->add_control(
 			new WP_Customize_Image_Control(
 				$wp_customize,
@@ -146,7 +156,7 @@ class Footer {
 			array(
 				'title'             => esc_html__( 'Widgets Background Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#000000',
+				'default'           => '#0A083B',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -165,7 +175,7 @@ class Footer {
 			array(
 				'title'             => esc_html__( 'Footer Bottom BG Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#000000',
+				'default'           => '#0A083B',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);

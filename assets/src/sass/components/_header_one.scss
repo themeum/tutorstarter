@@ -8,7 +8,7 @@
             &.tutor-navbar-brand {
                 .tutor-brand {
                     margin-right: 50px;
-                }    
+                }
             }
             &.tutor-navbar-menu {
                 gap: 30px;
@@ -35,7 +35,7 @@
                         display: flex;
                         align-items: center;
                         svg {
-                            fill : var(--cart-color);
+                            fill: var(--cart-color);
                         }
                         a.tutor-cart-contents {
                             width: 40px;
@@ -59,7 +59,7 @@
                                 justify-content: center;
                                 align-items: center;
                             }
-                        }   
+                        }
                     }
 
                     .tutor-header-profile-menu {
@@ -76,11 +76,11 @@
                                     border-radius: 50%;
                                 }
                             }
-                        }    
+                        }
                         &:hover ul {
                             opacity: 1;
                             visibility: visible;
-                        }                    
+                        }
                         ul {
                             position: absolute;
                             z-index: 999;
@@ -111,7 +111,7 @@
                                 }
                             }
                             &:before {
-                                content: '';
+                                content: "";
                                 bottom: 100%;
                                 height: 20px;
                                 width: 100%;
@@ -119,13 +119,13 @@
                                 left: 0;
                                 position: absolute;
                             }
-                        }                        
+                        }
                     }
 
                     .tutor-login-link {
                         padding: 0px 10px;
                         a {
-                            color : var(--menu-link-color);
+                            color: var(--menu-link-color);
                             font-size: var(--header-font-size);
                             font-weight: var(--header-font-weight);
                             text-transform: var(--header-font-transform);
@@ -158,7 +158,7 @@
                         display: flex;
                         align-items: center;
                         svg {
-                            fill : var(--cart-color-trans);
+                            fill: var(--cart-color-trans);
                         }
                         a.tutor-cart-contents {
                             width: 40px;
@@ -182,7 +182,7 @@
                                 justify-content: center;
                                 align-items: center;
                             }
-                        }   
+                        }
                     }
 
                     .tutor-header-profile-menu {
@@ -199,11 +199,11 @@
                                     border-radius: 50%;
                                 }
                             }
-                        }    
+                        }
                         &:hover ul {
                             opacity: 1;
                             visibility: visible;
-                        }                    
+                        }
                         ul {
                             position: absolute;
                             z-index: 999;
@@ -234,7 +234,7 @@
                                 }
                             }
                             &:before {
-                                content: '';
+                                content: "";
                                 bottom: 100%;
                                 height: 20px;
                                 width: 100%;
@@ -242,13 +242,13 @@
                                 left: 0;
                                 position: absolute;
                             }
-                        }                        
+                        }
                     }
 
                     .tutor-login-link {
                         padding: 0px 10px;
                         a {
-                            color : var(--menu-link-color-trans);
+                            color: var(--menu-link-color-trans);
                             font-size: var(--header-font-size);
                             font-weight: var(--header-font-weight);
                             text-transform: var(--header-font-transform);
@@ -261,6 +261,9 @@
                     .tutor-get-started-btn {
                         .call-to-action {
                             background: var(--cta-background-color-trans);
+                            border: var(--cta-border-width) solid
+                                var(--cta-border-color-trans);
+                            color: var(--cta-text-color-trans);
                         }
                     }
                     .tutor-nav-search {
@@ -283,16 +286,22 @@
 }
 
 .tutor-navbar-transparent-menu::after {
-    background-color: var(--menu-link-color-trans)!important;
+    background-color: var(--menu-link-color-trans) !important;
 }
 
 @media (max-width: 991px) {
-    #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-main-menu {
-		margin-right: 0!important;
+    #masthead
+        .tutor-nav
+        .tutor-navbar-col.tutor-navbar-menu
+        .tutor-navbar-main-menu {
+        margin-right: 0 !important;
     }
-    #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-main-menu::after {
-		display: none;
-	}
+    #masthead
+        .tutor-nav
+        .tutor-navbar-col.tutor-navbar-menu
+        .tutor-navbar-main-menu::after {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
@@ -300,20 +309,30 @@
         flex-direction: column;
         align-items: center;
     }
-    #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart {
+    #masthead
+        .tutor-nav
+        .tutor-navbar-col.tutor-navbar-menu
+        .tutor-navbar-cart {
         gap: 25px;
     }
-    #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-main-menu {
-		margin-right: 0!important;
+    #masthead
+        .tutor-nav
+        .tutor-navbar-col.tutor-navbar-menu
+        .tutor-navbar-main-menu {
+        margin-right: 0 !important;
     }
     #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-brand .tutor-brand {
-        margin-right: 0!important;
+        margin-right: 0 !important;
         margin-bottom: 10px;
     }
-    #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-header-profile-menu {
+    #masthead
+        .tutor-nav
+        .tutor-navbar-col.tutor-navbar-menu
+        .tutor-navbar-cart
+        .tutor-header-profile-menu {
         margin-left: 10px;
     }
     .tutor-get-started-btn {
-       display:flex;
+        display: flex;
     }
 }

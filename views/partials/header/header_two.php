@@ -93,7 +93,7 @@
                     <?php if ( ! is_user_logged_in() || is_customize_preview() ) : ?>
                     <div class="tutor-get-started-btn">
                         <?php if ( true === get_theme_mod( 'cta_text_toggle', true ) ) : ?>
-                            <a class="call-to-action" href="<?php echo esc_url( get_theme_mod( 'cta_text_link', '#' ) ); ?>"><?php echo esc_html( get_theme_mod( 'cta_text', 'BUY NOW' ) ); ?></a>
+                            <a class="call-to-action" href="<?php echo esc_url( get_theme_mod( 'cta_text_link', '#' ) ); ?>"><?php echo esc_html( get_theme_mod( 'cta_text', 'Getting Started' ) ); ?></a>
                         <?php endif; ?>
                     </div><!-- .tutor-get-started-btn -->
                     <?php endif; ?>

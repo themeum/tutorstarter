@@ -298,24 +298,6 @@ select#_customize-input-blog_grid_selected {
   margin-bottom: 0 !important;
 }
 
-.tutorstarter-range-control .range-wrap {
-  display: flex;
-  align-items: center;
-  justify-items: flex-end;
-}
-
-.tutorstarter-range-control .range-wrap .components-number-control {
-  width: 25%;
-}
-
-.tutorstarter-range-control .range-wrap .components-range-control {
-  flex-grow: 1;
-}
-
-.tutorstarter-range-control .range-wrap .components-range-control > div {
-  margin-bottom: 0;
-}
-
 .tutorstarter-radio-image {
   display: flex;
   flex-direction: row;

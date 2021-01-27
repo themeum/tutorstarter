@@ -338,7 +338,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Transparent Cart Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#ffffff',
+				'default'           => '#175cff',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -429,7 +429,27 @@ class Header {
 				array(
 					'label'           => esc_html__( 'Border Color', 'tutorstarter' ),
 					'section'         => 'tutorstarter_header_section',
-					'active_callback' => 'control_active_callback',
+					'active_callback' => 'control_active_callback_non_trans',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'cta_border_color_trans',
+			array(
+				'title'             => esc_html__( 'Transparent Border Color', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => '#175cff',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cta_border_color_trans',
+				array(
+					'label'           => esc_html__( 'Transparent Border Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback_transparent',
 				)
 			)
 		);
@@ -491,7 +511,27 @@ class Header {
 				array(
 					'label'           => esc_html__( 'Button Text Color', 'tutorstarter' ),
 					'section'         => 'tutorstarter_header_section',
-					'active_callback' => 'control_active_callback',
+					'active_callback' => 'control_active_callback_non_trans',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'cta_color_trans',
+			array(
+				'title'             => esc_html__( 'Transparent Button Text Color', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => '#175cff',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cta_color_trans',
+				array(
+					'label'           => esc_html__( 'Transparent Button Text Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback_transparent',
 				)
 			)
 		);
