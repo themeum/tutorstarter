@@ -9,15 +9,17 @@
         <div class="tutor-nav">
             <div class="tutor-navbar-col tutor-navbar-brand">
                 <div class="tutor-brand">
-                    <?php if ( has_custom_logo() ) : ?>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                            <?php the_custom_logo(); ?>
-                        </a>
-                    <?php else : ?>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                            <?php svg( 'logo' ); ?>
-                        </a>
-                    <?php endif; ?>
+                    <?php 
+						$trans_logo = get_theme_mod( 'transparent_logo' );
+						if ( $trans_logo ) : ?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<img src="<?php echo $trans_logo; ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" />
+							</a>
+						<?php else : ?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<?php the_custom_logo(); ?>
+							</a>
+						<?php endif; ?>
                 </div><!-- .tutor-brand -->
             </div>
             <div class="tutor-navbar-main-menu">
@@ -26,7 +28,7 @@
                             wp_nav_menu(
                                 array(
                                     'theme_location' => 'primary',
-                                    'menu_class'     => 'navbar-nav menu-one',
+                                    'menu_class'     => 'navbar-nav menu-one-transparent',
                                 )
                             );
                         endif;
@@ -91,7 +93,7 @@
                     <?php endif; ?>
 
                     <?php if ( ! is_user_logged_in() || is_customize_preview() ) : ?>
-                    <div class="tutor-get-started-btn">
+                    <div class="tutor-get-started-btn btn-transparent">
                         <?php if ( true === get_theme_mod( 'cta_text_toggle', true ) ) : ?>
                             <a class="call-to-action" href="<?php echo esc_url( get_theme_mod( 'cta_text_link', '#' ) ); ?>"><?php echo esc_html( get_theme_mod( 'cta_text', 'BUY NOW' ) ); ?></a>
                         <?php endif; ?>

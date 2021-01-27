@@ -709,6 +709,81 @@ header.alternative {
   color: var(--active-menu-color);
 }
 
+.menu-one-transparent {
+  display: flex;
+  list-style: none;
+}
+
+.menu-one-transparent > li:not(:first-child) {
+  margin: 0px 0px 0px 30px;
+}
+
+.menu-one-transparent li {
+  position: relative;
+  padding: 0px;
+}
+
+.menu-one-transparent li:before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+.menu-one-transparent li:hover:before {
+  width: 40px;
+}
+
+.menu-one-transparent li a {
+  padding: 4px 0px;
+  text-decoration: none;
+  font-family: inherit;
+  color: var(--menu-link-color-trans);
+  font-size: var(--header-font-size);
+  font-weight: var(--header-font-weight);
+  line-height: 1.1em;
+  text-transform: var(--header-font-transform);
+  display: block;
+}
+
+.menu-one-transparent li a:hover {
+  color: var(--active-menu-color-trans);
+}
+
+.menu-one-transparent .menu-item {
+  position: relative;
+}
+
+.menu-one-transparent > .menu-item:after {
+  content: "";
+  display: none;
+}
+
+.menu-one-transparent > .menu-item:hover:after {
+  display: none;
+}
+
+.menu-one-transparent .menu-item.current-menu-item:after {
+  content: "";
+  display: none;
+}
+
+.menu-one-transparent .menu-item.icon > a:before {
+  background: var(--menu-link-color-trans);
+}
+
+.menu-one-transparent .menu-item.icon > a:after {
+  background: var(--menu-link-color-trans);
+}
+
+.menu-one-transparent .menu-item.current-menu-item > a {
+  color: var(--active-menu-color-trans);
+}
+
 .navbar-toggler {
   padding: 0.1rem 0.45rem;
   cursor: pointer;
@@ -730,6 +805,10 @@ header.alternative {
   outline: none;
 }
 
+.btn-transparent .call-to-action {
+  background: var(--cta-background-color-trans);
+}
+
 /* Navbar options (bg options) */
 
 #masthead {
@@ -739,6 +818,7 @@ header.alternative {
 
 #masthead.transparent-header {
   background: transparent;
+  color: var(--menu-link-color-trans);
 }
 
 .nav-search-icon {
@@ -766,11 +846,11 @@ header.alternative {
 .bg-transparent .navbar-toggler,
 .bg-transparent a,
 .bg-transparent .utils-search {
-  color: var(--menu-link-color);
+  color: var(--menu-link-color-trans);
 }
 
 .bg-transparent .menu-item:after {
-  background: var(--active-menu-color);
+  background: var(--active-menu-color-trans);
 }
 
 @media (min-width: 992px) {
@@ -826,7 +906,7 @@ header.alternative {
 }
 
 .menu-item .sub-menu a {
-  color: var(--menu-link-color);
+  color: #57586E;
 }
 
 .menu-item .sub-menu .sub-menu {
@@ -1438,6 +1518,145 @@ header.alternative {
 
 #masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart .tutor-nav-search button .nav-search-icon {
   fill: var(--menu-link-color);
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-cart svg {
+  fill: var(--cart-color-trans);
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-cart a.tutor-cart-contents {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  top: -2px;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-cart a.tutor-cart-contents span.count {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid var(--cart-color-trans);
+  color: var(--cart-color-trans);
+  position: absolute;
+  top: -8px;
+  right: 8px;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-header-profile-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-header-profile-menu .tutor-header-profile-photo span.tutor-text-avatar {
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-header-profile-menu:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-header-profile-menu ul {
+  position: absolute;
+  z-index: 999;
+  background: #fff;
+  padding: 10px 0;
+  list-style: none;
+  width: 200px;
+  right: 0;
+  top: 49px;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-height: 510px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-header-profile-menu ul li {
+  display: block;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-header-profile-menu ul li a {
+  display: block;
+  width: 100%;
+  padding: 5px 25px;
+  color: #1f2949;
+  transition: 300ms;
+  font-size: 14px;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-header-profile-menu ul:before {
+  content: "";
+  bottom: 100%;
+  height: 20px;
+  width: 100%;
+  z-index: 2;
+  left: 0;
+  position: absolute;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-login-link {
+  padding: 0px 10px;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-login-link a {
+  color: var(--menu-link-color-trans);
+  font-size: var(--header-font-size);
+  font-weight: var(--header-font-weight);
+  text-transform: var(--header-font-transform);
+  line-height: var(--header-font-lineheight);
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-login-link a:hover {
+  color: var(--active-menu-color-trans);
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-get-started-btn .call-to-action {
+  background: var(--cta-background-color-trans);
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-nav-search button {
+  font-size: 1.5rem;
+  color: var(--menu-link-color-trans);
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#masthead .tutor-nav .tutor-navbar-col.tutor-navbar-menu .tutor-navbar-cart-transparent .tutor-nav-search button .nav-search-icon {
+  fill: var(--menu-link-color-trans);
+}
+
+.tutor-navbar-transparent-menu::after {
+  background-color: var(--menu-link-color-trans) !important;
 }
 
 @media (max-width: 991px) {

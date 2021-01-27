@@ -185,6 +185,86 @@ header.alternative {
 	}
 }
 
+.menu-one-transparent {
+	display: flex;
+	list-style: none;
+	> li {
+		&:not(:first-child) {
+			margin: 0px 0px 0px 30px;
+		}
+		
+	}
+	li {
+		position: relative;
+		padding: 0px;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 0px;
+			height: 2px;
+			bottom: 0;
+			left: 0;
+			background-color: transparent;
+			transition: all 0.4s ease-in-out;
+		}
+		&:hover  {
+			&:before {
+				width: 40px;
+			}
+		}		
+		a {
+			padding: 4px 0px;
+			text-decoration: none;
+			font-family: inherit;
+			color: var(--menu-link-color-trans);
+			font-size: var(--header-font-size);
+			font-weight: var(--header-font-weight);
+			line-height: 1.1em;
+			text-transform: var(--header-font-transform);
+			display: block;
+			//transition: 150ms ease;
+			&:hover {
+				color: var(--active-menu-color-trans);
+			}
+		}
+	}
+
+	.menu-item {
+		position: relative;
+		// &:not(:first-child) {
+		// 	margin: 0px 0px 0px 30px;
+		// }
+	}
+	> .menu-item {
+		&:after {
+			content: "";
+			display: none;
+		}
+		&:hover:after {
+			display: none;
+		}
+    }
+    .menu-item.current-menu-item {
+        &:after {
+			content: "";
+			display: none;
+		}
+	}
+    .menu-item.icon > a {
+        &:before {
+			background: var(--menu-link-color-trans);
+		}
+	}
+    .menu-item.icon > a {
+        &:after {
+			background: var(--menu-link-color-trans);
+		}
+	}
+	.menu-item.current-menu-item > a {
+		color: var(--active-menu-color-trans);
+	}
+}
+
 .navbar-toggler {
 	padding: 0.1rem 0.45rem;
 	cursor: pointer;
@@ -205,6 +285,9 @@ header.alternative {
 	}
 }
 
+.btn-transparent .call-to-action {
+	background: var(--cta-background-color-trans);
+}
 /* Navbar options (bg options) */
 #masthead {
 	background: var(--primary-menu-bg-color);
@@ -212,6 +295,7 @@ header.alternative {
 }
 #masthead.transparent-header {
 	background: transparent;
+	color: var(--menu-link-color-trans);
 }
 
 .nav-search-icon {
@@ -236,10 +320,10 @@ header.alternative {
 	.navbar-toggler,
 	a,
 	.utils-search {
-		color: var(--menu-link-color);
+		color: var(--menu-link-color-trans);
 	}
 	.menu-item:after {
-		background: var(--active-menu-color);
+		background: var(--active-menu-color-trans);
 	}
 }
 
@@ -295,7 +379,7 @@ header.alternative {
 		z-index: 999;
 		box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.15);
 		a {
-			color: var(--menu-link-color);
+			color: #57586E;
 		}
 		.sub-menu {
 			top: 0;

@@ -29,14 +29,18 @@ trait Inline_Css_Js {
 		$menu_bg_color             = get_theme_mod( 'menu_bg_color', '#ffffff' );
 		$body_bg_color             = get_theme_mod( 'body_bg_color', '#ffffff' );
 		$cart_color                = get_theme_mod( 'cart_color', '#57586E' );
+		$cart_color_trans          = get_theme_mod( 'cart_color_trans', '#ffffff' );
 		$cta_background            = get_theme_mod( 'cta_background', '#ffffff' );
+		$cta_background_trans      = get_theme_mod( 'cta_background_trans', '#ffffff' );
 		$cta_border_color          = get_theme_mod( 'cta_border_color', '#1539e9' );
 		$cta_border_width          = get_theme_mod( 'cta_border_width', 1 );
 		$cta_border_radius         = get_theme_mod( 'cta_border_radius', 50 );
 		$body_text_color           = get_theme_mod( 'body_text_color', '#57586E' );
 		$menu_link_color           = get_theme_mod( 'menu_link_color', '#57586E' );
+		$menu_link_color_trans     = get_theme_mod( 'menu_link_color_trans', '#ffffff' );
 		$footer_bottom_bg_color    = get_theme_mod( 'footer_bottom_bg_color', '#000000' );
 		$menu_link_active_color    = get_theme_mod( 'menu_link_active_color', '#175CFF' );
+		$link_active_color_trans   = get_theme_mod( 'menu_link_active_color_trans', '#ffffff' );
 		$footer_widgets_bg_color   = get_theme_mod( 'footer_widgets_bg_color', '#000000' );
 		$footer_bottom_text_color  = get_theme_mod( 'footer_bottom_text_color', '#ffffff' );
 		$footer_widgets_text_color = get_theme_mod( 'footer_widgets_text_color', '#ffffff' );
@@ -230,6 +234,7 @@ trait Inline_Css_Js {
 				--link-color: {$link_color};
 				--body-bg-color: {$body_bg_color};
 				--cart-color: {$cart_color};
+				--cart-color-trans: {$cart_color_trans};
 				--cta-text-color: {$cta_text_color};
 				--body-text-color: {$body_text_color};
 				--cta-font-weight: {$header_btn_typography['fontWeight']};
@@ -238,6 +243,7 @@ trait Inline_Css_Js {
 				--cta-font-lineheight-tablet: {$header_btn_typography['lineHeight']['tablet']}px;
 				--cta-font-lineheight-mobile: {$header_btn_typography['lineHeight']['mobile']}px;
 				--menu-link-color: {$menu_link_color};
+				--menu-link-color-trans: {$menu_link_color_trans};
 				--body-font-weight: {$body_typography['fontWeight']};
 				--h1-font-weight: {$h1_typography['fontWeight']};
 				--h2-font-weight: {$h2_typography['fontWeight']};
@@ -253,6 +259,7 @@ trait Inline_Css_Js {
 				--h6-text-transform: {$h6_typography['textTransform']};
 				--primary-menu-bg-color: {$menu_bg_color};
 				--cta-background-color: {$cta_background};
+				--cta-background-color-trans: {$cta_background_trans};
 				--cta-border-color: {$cta_border_color};
 				--cta-border-width: {$cta_border_width}px;
 				--cta-border-radius: {$cta_border_radius}px;
@@ -283,6 +290,7 @@ trait Inline_Css_Js {
 				--h6-font-size-tablet: {$h6_typography['fontSize']['tablet']}px;
 				--h6-font-size-mobile: {$h6_typography['fontSize']['mobile']}px;
 				--active-menu-color: {$menu_link_active_color};
+				--active-menu-color-trans: {$link_active_color_trans};
 				--cta-font-size-tablet: {$header_btn_typography['fontSize']['tablet']}px;
 				--cta-font-size-mobile: {$header_btn_typography['fontSize']['mobile']}px;
 				--header-font-size: {$menu_link_typography['fontSize']['desktop']}px;
