@@ -320,6 +320,27 @@ class Header {
 			)
 		);
 		$wp_customize->add_setting(
+			'cta_border_width',
+			array(
+				'title'             => esc_html__( 'Border Width', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => 1,
+				'sanitize_callback' => 'absint',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cta_border_width',
+				array(
+					'label'           => esc_html__( 'Border Width', 'tutorstarter' ),
+					'type'            => 'number',
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback',
+				)
+			)
+		);
+		$wp_customize->add_setting(
 			'cta_border_radius',
 			array(
 				'title'             => esc_html__( 'Border Radius', 'tutorstarter' ),

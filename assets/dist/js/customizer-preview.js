@@ -322,7 +322,16 @@
       var ctaElement = document.querySelector('.call-to-action');
 
       if (null !== ctaElement) {
-        ctaElement.style.border = '1px solid' + updatedValue;
+        ctaElement.style.borderColor = updatedValue;
+      }
+    });
+  });
+  wp.customize('cta_border_width', function (value) {
+    value.bind(function (updatedValue) {
+      var ctaElement = document.querySelector('.call-to-action');
+
+      if (null !== ctaElement) {
+        ctaElement.style.borderWidth = updatedValue + 'px';
       }
     });
   });
