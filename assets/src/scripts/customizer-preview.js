@@ -214,7 +214,15 @@
         value.bind(function (updatedValue) {
             let ctaElement = document.querySelector('.call-to-action');
             if (null !== ctaElement) {
-                ctaElement.style.border = '1px solid' + updatedValue;
+                ctaElement.style.borderColor = updatedValue;
+            }
+        })
+    });
+    wp.customize('cta_border_width', function (value) {
+        value.bind(function (updatedValue) {
+            let ctaElement = document.querySelector('.call-to-action');
+            if (null !== ctaElement) {
+                ctaElement.style.borderWidth = updatedValue + 'px';
             }
         })
     });

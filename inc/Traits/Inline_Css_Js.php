@@ -31,6 +31,7 @@ trait Inline_Css_Js {
 		$cart_color                = get_theme_mod( 'cart_color', '#57586E' );
 		$cta_background            = get_theme_mod( 'cta_background', '#ffffff' );
 		$cta_border_color          = get_theme_mod( 'cta_border_color', '#1539e9' );
+		$cta_border_width          = get_theme_mod( 'cta_border_width', 1 );
 		$cta_border_radius         = get_theme_mod( 'cta_border_radius', 50 );
 		$body_text_color           = get_theme_mod( 'body_text_color', '#57586E' );
 		$menu_link_color           = get_theme_mod( 'menu_link_color', '#57586E' );
@@ -233,9 +234,9 @@ trait Inline_Css_Js {
 				--body-text-color: {$body_text_color};
 				--cta-font-weight: {$header_btn_typography['fontWeight']};
 				--cta-font-transform: {$header_btn_typography['textTransform']};
-				--cta-font-lineheight: {$header_btn_typography['lineHeight']['desktop']};
-				--cta-font-lineheight-tablet: {$header_btn_typography['lineHeight']['tablet']};
-				--cta-font-lineheight-mobile: {$header_btn_typography['lineHeight']['mobile']};
+				--cta-font-lineheight: {$header_btn_typography['lineHeight']['desktop']}px;
+				--cta-font-lineheight-tablet: {$header_btn_typography['lineHeight']['tablet']}px;
+				--cta-font-lineheight-mobile: {$header_btn_typography['lineHeight']['mobile']}px;
 				--menu-link-color: {$menu_link_color};
 				--body-font-weight: {$body_typography['fontWeight']};
 				--h1-font-weight: {$h1_typography['fontWeight']};
@@ -253,13 +254,14 @@ trait Inline_Css_Js {
 				--primary-menu-bg-color: {$menu_bg_color};
 				--cta-background-color: {$cta_background};
 				--cta-border-color: {$cta_border_color};
+				--cta-border-width: {$cta_border_width}px;
 				--cta-border-radius: {$cta_border_radius}px;
 				--cta-font-size: {$header_btn_typography['fontSize']['desktop']}px;
 				--header-font-weight: {$menu_link_typography['fontWeight']};
 				--header-font-transform: {$menu_link_typography['textTransform']};
-				--header-font-lineheight: {$menu_link_typography['lineHeight']['desktop']};
-				--header-font-lineheight-tablet: {$menu_link_typography['lineHeight']['tablet']};
-				--header-font-lineheight-mobile: {$menu_link_typography['lineHeight']['mobile']};
+				--header-font-lineheight: {$menu_link_typography['lineHeight']['desktop']}px;
+				--header-font-lineheight-tablet: {$menu_link_typography['lineHeight']['tablet']}px;
+				--header-font-lineheight-mobile: {$menu_link_typography['lineHeight']['mobile']}px;
 				--body-text-transform: {$body_typography['textTransform']};
 				--body-font-size: {$body_typography['fontSize']['desktop']}px;
 				--h1-font-size: {$h1_typography['fontSize']['desktop']}px;

@@ -34,9 +34,7 @@ if ( ! function_exists( 'control_active_callback' ) ) {
 		// Get the appropriate theme mod.
 		$header_type = get_theme_mod( 'header_type_select' );
 
-		if ( 'header_one' === $header_type ) {
-			return true;
-		} elseif ( 'header_one_trans' === $header_type ) {
+		if ( 'header_four' !== $header_type ) {
 			return true;
 		} else {
 			return false;
@@ -49,11 +47,15 @@ if ( ! function_exists( 'control_active_cart_callback' ) ) {
 	 * Control active cart callback
 	 */
 	function control_active_cart_callback() {
-
-		if ( class_exists( 'woocommerce' ) ) {
+		// Get the appropriate theme mod.
+		$header_type = get_theme_mod( 'header_type_select' );
+		if ( class_exists( 'woocommerce' ) && 'header_one' === $header_type ) {
 			return true;
+		} elseif ( class_exists( 'woocommerce' ) && 'header_one_trans' === $header_type ) {
+			return true;
+		} else {
+			return false;
 		}
-		return false;
 	}
 }
 
@@ -94,11 +96,7 @@ if ( ! function_exists( 'control_active_callback_search' ) ) {
 	function control_active_callback_search() {
 		// Get the appropriate theme mod.
 		$header_type = get_theme_mod( 'header_type_select' );
-		if ( 'header_two' === $header_type ) {
-			return true;
-		} elseif ( 'header_three' === $header_type ) {
-			return true;
-		} elseif ( 'header_four' === $header_type ) {
+		if ( 'header_four' === $header_type ) {
 			return true;
 		} else {
 			return false;

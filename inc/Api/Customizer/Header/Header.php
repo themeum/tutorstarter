@@ -75,7 +75,7 @@ class Header {
 						),
 						'header_one_trans'   => array(
 							'name'  => esc_html__( 'Header Fullwidth Transparent', 'tutorstarter' ),
-							'image' => get_template_directory_uri() . '/assets/dist/images/header-fullwidth.svg',
+							'image' => get_template_directory_uri() . '/assets/dist/images/header-fullwidth-trans.svg',
 						),
 						'header_two'   => array(
 							'name'  => esc_html__( 'Header Standard', 'tutorstarter' ),
@@ -83,7 +83,7 @@ class Header {
 						),
 						'header_three' => array(
 							'name'  => esc_html__( 'Header Transparent', 'tutorstarter' ),
-							'image' => get_template_directory_uri() . '/assets/dist/images/header-transparent.svg',
+							'image' => get_template_directory_uri() . '/assets/dist/images/header-trans.svg',
 						),
 						'header_four'  => array(
 							'name'  => esc_html__( 'Header Centered Logo', 'tutorstarter' ),
@@ -314,6 +314,27 @@ class Header {
 				'cta_border_color',
 				array(
 					'label'           => esc_html__( 'Border Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'cta_border_width',
+			array(
+				'title'             => esc_html__( 'Border Width', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => 1,
+				'sanitize_callback' => 'absint',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cta_border_width',
+				array(
+					'label'           => esc_html__( 'Border Width', 'tutorstarter' ),
+					'type'            => 'number',
 					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback',
 				)

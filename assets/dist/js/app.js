@@ -440,19 +440,19 @@
 			/*! no static exports found */
 			/***/ function(module, exports, __webpack_require__) {
 				__webpack_require__(
-					/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/scripts/app.js */ './assets/src/scripts/app.js'
+					/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/scripts/app.js */ './assets/src/scripts/app.js'
 				);
 				__webpack_require__(
-					/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/sass/style.scss */ './assets/src/sass/style.scss'
+					/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/sass/style.scss */ './assets/src/sass/style.scss'
 				);
 				__webpack_require__(
-					/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/sass/admin.scss */ './assets/src/sass/admin.scss'
+					/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/sass/admin.scss */ './assets/src/sass/admin.scss'
 				);
 				__webpack_require__(
-					/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Api/Customizer/reactjs/src/sass/all-controls.scss */ './inc/Api/Customizer/reactjs/src/sass/all-controls.scss'
+					/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Api/Customizer/reactjs/src/sass/all-controls.scss */ './inc/Api/Customizer/reactjs/src/sass/all-controls.scss'
 				);
 				module.exports = __webpack_require__(
-					/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Setup/Settings/reactjs/src/sass/dashboard.scss */ './inc/Setup/Settings/reactjs/src/sass/dashboard.scss'
+					/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Setup/Settings/reactjs/src/sass/dashboard.scss */ './inc/Setup/Settings/reactjs/src/sass/dashboard.scss'
 				);
 
 				/***/
