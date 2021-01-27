@@ -26,9 +26,14 @@ section.footer-widgets {
 		font-weight: var(--widget-title-font-weight);
 		line-height: var(--widget-title-line-height);
 		text-transform: var(--widget-title-text-transform);
+		margin-bottom: 24px;
 	}
 	.widget_nav_menu .menu-footer-menu-container .menu-item a {
 		color: var(--footer-widget-text-color);
+	}
+	.container {
+		padding-bottom: 70px;
+		border-bottom: 1px solid rgb(255 255 255 / 0.08);
 	}
 }
 
