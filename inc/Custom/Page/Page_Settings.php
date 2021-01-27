@@ -40,6 +40,10 @@ class Page_Settings {
 								'type'              => 'string',
 								'sanitize_callback' => 'sanitize_text_field',
 							),
+							'header_select'    => array(
+								'type'              => 'string',
+								'sanitize_callback' => 'sanitize_text_field',
+							),
 							'page_title_toggle' => array(
 								'type'              => 'boolean',
 								'default'           => true,

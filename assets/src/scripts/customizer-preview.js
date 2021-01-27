@@ -192,7 +192,7 @@
     })
     wp.customize('header_search_toggle', function (value) {
         value.bind(function (updatedValue) {
-            let searchToggle = document.querySelector('.utils-search');
+            let searchToggle = document.querySelector('.utils-search, .tutor-nav-search');
             if (null !== searchToggle) {
                 if (true === updatedValue) {
                     searchToggle.classList.remove('hide')

@@ -20,6 +20,19 @@ const PageSettingsFields = ({ updatedValue, updateMeta }) => {
                     ]}
                     onChange={(value) => updateMeta(value, 'sidebar_select')}
                 />
+                <SelectControl
+                    label={__('Header', 'tutorstarter')}
+                    value={updatedValue.header_select}
+                    options={[
+                        { label: __('--Select Header--', 'tutorstarter'), value: '' },
+                        { label: __('Fullwidth', 'tutorstarter'), value: 'header_one' },
+                        { label: __('Fullwidth Transparent', 'tutorstarter'), value: 'header_one_trans' },
+                        { label: __('Standard', 'tutorstarter'), value: 'header_two' },
+                        { label: __('Standard Transparent', 'tutorstarter'), value: 'header_three' },
+                        { label: __('Centered Logo', 'tutorstarter'), value: 'header_four' },
+                    ]}
+                    onChange={(value) => updateMeta(value, 'header_select')}
+                />
                 <ToggleControl
                     label={__('Disable Title?', 'tutorstarter')}
                     checked={updatedValue.page_title_toggle}

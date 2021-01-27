@@ -297,7 +297,7 @@
   });
   wp.customize('header_search_toggle', function (value) {
     value.bind(function (updatedValue) {
-      var searchToggle = document.querySelector('.utils-search');
+      var searchToggle = document.querySelector('.utils-search, .tutor-nav-search');
 
       if (null !== searchToggle) {
         if (true === updatedValue) {
@@ -583,7 +583,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/scripts/customizer-preview.js */"./assets/src/scripts/customizer-preview.js");
+module.exports = __webpack_require__(/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/scripts/customizer-preview.js */"./assets/src/scripts/customizer-preview.js");
 
 
 /***/ })

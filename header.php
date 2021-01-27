@@ -30,10 +30,15 @@ defined( 'ABSPATH' ) || exit;
 <?php
 $page_meta      = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
 $disable_header = ( ! empty( $page_meta ) ? $page_meta['header_toggle'] : false );
+$selected_header = ( ! empty( $page_meta ) ? $page_meta['header_select'] : '' );
 
 if ( false === $disable_header ) {
+	if ( ! empty( $selected_header ) ) {
+		get_template_part( 'views/partials/header/' . $selected_header );
+	} else {
 	$header_style = get_theme_mod( 'header_type_select', 'header_one' );
 	get_template_part( 'views/partials/header/' . $header_style );
+	}
 }
 ?>
 
