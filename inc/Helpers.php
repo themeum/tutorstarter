@@ -51,7 +51,20 @@ if ( ! function_exists( 'control_active_cart_callback' ) ) {
 		$header_type = get_theme_mod( 'header_type_select' );
 		if ( class_exists( 'woocommerce' ) && 'header_one' === $header_type ) {
 			return true;
-		} elseif ( class_exists( 'woocommerce' ) && 'header_one_trans' === $header_type ) {
+		} else {
+			return false;
+		}
+	}
+}
+
+if ( ! function_exists( 'control_active_cart_trans_callback' ) ) {
+	/**
+	 * Control active cart transparent callback
+	 */
+	function control_active_cart_trans_callback() {
+		// Get the appropriate theme mod.
+		$header_type = get_theme_mod( 'header_type_select' );
+		if ( class_exists( 'woocommerce' ) && 'header_one_trans' === $header_type ) {
 			return true;
 		} else {
 			return false;
@@ -91,12 +104,65 @@ if ( ! function_exists( 'control_active_callback_grid' ) ) {
 
 if ( ! function_exists( 'control_active_callback_search' ) ) {
 	/**
-	 * Control active callback for search icon
+	 * Control active callback for transparent menu color
 	 */
 	function control_active_callback_search() {
 		// Get the appropriate theme mod.
 		$header_type = get_theme_mod( 'header_type_select' );
 		if ( 'header_four' === $header_type ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+if ( ! function_exists( 'control_active_callback_std_menu' ) ) {
+	/**
+	 * Control active callback for std menu color
+	 */
+	function control_active_callback_std_menu() {
+		// Get the appropriate theme mod.
+		$header_type = get_theme_mod( 'header_type_select' );
+		if ( 'header_one' === $header_type ) {
+			return true;
+		} elseif ( 'header_two' === $header_type ) {
+			return true;
+		} elseif ( 'header_four' === $header_type ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+if ( ! function_exists( 'control_active_callback_transparent' ) ) {
+	/**
+	 * Control active callback for transparent header
+	 */
+	function control_active_callback_transparent() {
+		// Get the appropriate theme mod.
+		$header_type = get_theme_mod( 'header_type_select' );
+		if ( 'header_one_trans' === $header_type ) {
+			return true;
+		} elseif ( 'header_three' === $header_type ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+if ( ! function_exists( 'control_active_callback_non_trans' ) ) {
+	/**
+	 * Control active callback for transparent header
+	 */
+	function control_active_callback_non_trans() {
+		// Get the appropriate theme mod.
+		$header_type = get_theme_mod( 'header_type_select' );
+		if ( 'header_one' == $header_type ) {
+			return true;
+		} elseif ( 'header_two' === $header_type ) {
 			return true;
 		} else {
 			return false;

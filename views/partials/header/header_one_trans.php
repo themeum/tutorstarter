@@ -9,15 +9,17 @@
 		<div class="tutor-nav">
 			<div class="tutor-navbar-col tutor-navbar-brand">
 				<div class="tutor-brand">
-					<?php if ( has_custom_logo() ) : ?>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<?php the_custom_logo(); ?>
-						</a>
-					<?php else : ?>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<?php svg( 'logo' ); ?>
-						</a>
-					<?php endif; ?>
+					<?php 
+						$trans_logo = get_theme_mod( 'transparent_logo' );
+						if ( $trans_logo ) : ?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<img src="<?php echo $trans_logo; ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" />
+							</a>
+						<?php else : ?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<?php the_custom_logo(); ?>
+							</a>
+						<?php endif; ?>
 				</div><!-- .tutor-brand -->
 				<?php
 				if ( taxonomy_exists( 'course-category' ) ) :
@@ -48,13 +50,13 @@
 				<?php endif; endif; ?>
 			</div>
 			<div class="tutor-navbar-col tutor-navbar-menu">
-				<div class="tutor-navbar-main-menu">
+				<div class="tutor-navbar-main-menu tutor-navbar-transparent-menu">
 					<?php
 						if ( has_nav_menu( 'primary' ) ) :
 							wp_nav_menu(
 								array(
 									'theme_location' => 'primary',
-									'menu_class'     => 'navbar-nav menu-one',
+									'menu_class'     => 'navbar-nav menu-one-transparent',
 								)
 							);
 						endif;
@@ -65,7 +67,7 @@
 						</svg>
 					</button>
 				</div><!-- .tutor-navbar-main-menu -->
-				<div class="tutor-navbar-cart">
+				<div class="tutor-navbar-cart-transparent">
 
 					<?php if ( class_exists( 'woocommerce' ) ) : ?>
 						<div class="tutor-cart">

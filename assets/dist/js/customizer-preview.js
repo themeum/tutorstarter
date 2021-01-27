@@ -242,7 +242,21 @@
   });
   wp.customize('menu_link_color', function (value) {
     value.bind(function (updatedValue) {
-      var menuLinks = document.querySelectorAll('.bg-primary .navbar-toggler, .bg-primary a, .bg-transparent .navbar-toggler, .bg-transparent a');
+      var menuLinks = document.querySelectorAll('.bg-primary .navbar-toggler, .bg-primary a');
+      var searchIcon = document.querySelector('.nav-search-icon');
+
+      if (null !== searchIcon) {
+        searchIcon.style.fill = updatedValue;
+      }
+
+      menuLinks.forEach(function (link) {
+        link.style.color = updatedValue;
+      });
+    });
+  });
+  wp.customize('menu_link_color_trans', function (value) {
+    value.bind(function (updatedValue) {
+      var menuLinks = document.querySelectorAll('.menu-one-transparent li a, .transparent-header .navbar-toggler');
       var searchIcon = document.querySelector('.nav-search-icon');
 
       if (null !== searchIcon) {
@@ -256,7 +270,21 @@
   });
   wp.customize('menu_link_active_color', function (value) {
     value.bind(function (updatedValue) {
-      var menuLinks = document.querySelectorAll('.bg-primary .navbar-toggler, .bg-primary a, .bg-transparent .navbar-toggler, .bg-transparent a');
+      var menuLinks = document.querySelectorAll('.bg-primary .navbar-toggler, .bg-primary a');
+      menuLinks.forEach(function (link) {
+        link.style.color = updatedValue;
+        link.addEventListener('mouseenter', function () {
+          link.style.color = updatedValue;
+        });
+        link.addEventListener('mouseleave', function () {
+          link.style.color = '';
+        });
+      });
+    });
+  });
+  wp.customize('menu_link_active_color_trans', function (value) {
+    value.bind(function (updatedValue) {
+      var menuLinks = document.querySelectorAll('.menu-one-transparent li a, .transparent-header .navbar-toggler');
       menuLinks.forEach(function (link) {
         link.style.color = updatedValue;
         link.addEventListener('mouseenter', function () {
@@ -311,6 +339,15 @@
   wp.customize('cta_background', function (value) {
     value.bind(function (updatedValue) {
       var ctaBackground = document.querySelector('.call-to-action');
+
+      if (null !== ctaBackground) {
+        ctaBackground.style.backgroundColor = updatedValue;
+      }
+    });
+  });
+  wp.customize('cta_background_trans', function (value) {
+    value.bind(function (updatedValue) {
+      var ctaBackground = document.querySelector('.tutor-navbar-cart-transparent .tutor-get-started-btn .call-to-action, .btn-transparent .call-to-action');
 
       if (null !== ctaBackground) {
         ctaBackground.style.backgroundColor = updatedValue;

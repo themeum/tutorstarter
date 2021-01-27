@@ -9,6 +9,7 @@ namespace Tutor_Starter\Api\Customizer\Header;
 
 use WP_Customize_Control;
 use WP_Customize_Color_Control;
+use WP_Customize_Image_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Typography_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Radio_Image_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Toggle_Switch_Control;
@@ -50,6 +51,35 @@ class Header {
 				'render_callback'     => function() {
 					return the_custom_logo();
 				},
+			)
+		);
+		$wp_customize->add_setting(
+			'transparent_logo',
+			array(
+				'title'             => esc_html__( 'Transparent Logo', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'esc_url_raw',
+			)
+		);
+		$wp_customize->selective_refresh->add_partial(
+			'transparent_logo',
+			array(
+				'selector'            => '.site-branding',
+				'container_inclusive' => true,
+				'render_callback'     => function() {
+					return true;
+				},
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'transparent_logo',
+				array(
+					'label'           => esc_html__( 'Transparent Logo', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback_transparent',
+				)
 			)
 		);
 		$wp_customize->add_setting(
@@ -119,6 +149,7 @@ class Header {
 				array(
 					'label'   => esc_html__( 'Header BG Color', 'tutorstarter' ),
 					'section' => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback_std_menu',
 				)
 			)
 		);
@@ -136,8 +167,29 @@ class Header {
 				$wp_customize,
 				'menu_link_color',
 				array(
-					'label'   => esc_html__( 'Menu Link Color', 'tutorstarter' ),
-					'section' => 'tutorstarter_header_section',
+					'label'           => esc_html__( 'Menu Link Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback_std_menu',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'menu_link_color_trans',
+			array(
+				'title'             => esc_html__( 'Transparent Menu Link Color', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => '#ffffff',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'menu_link_color_trans',
+				array(
+					'label'           => esc_html__( 'Transparent Menu Link Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback_transparent',
 				)
 			)
 		);
@@ -155,8 +207,30 @@ class Header {
 				$wp_customize,
 				'menu_link_active_color',
 				array(
-					'label'   => esc_html__( 'Menu Link Active and Hover Color', 'tutorstarter' ),
-					'section' => 'tutorstarter_header_section',
+					'label'           => esc_html__( 'Menu Link Active and Hover Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback_std_menu',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'menu_link_active_color_trans',
+			array(
+				'title'             => esc_html__( 'Transparent Link Active and Hover Color', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => '#ffffff',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'menu_link_active_color_trans',
+				array(
+					'label'           => esc_html__( 'Transparent Link Active and Hover Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback_transparent',
 				)
 			)
 		);
@@ -260,6 +334,26 @@ class Header {
 			)
 		);
 		$wp_customize->add_setting(
+			'cart_color_trans',
+			array(
+				'title'             => esc_html__( 'Transparent Cart Color', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => '#ffffff',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cart_color_trans',
+				array(
+					'label'           => esc_html__( 'Transparent Cart Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_cart_trans_callback',
+				)
+			)
+		);
+		$wp_customize->add_setting(
 			'cta_text_toggle',
 			array(
 				'title'             => esc_html__( 'Show Button?', 'tutorstarter' ),
@@ -295,7 +389,27 @@ class Header {
 				array(
 					'label'           => esc_html__( 'Button BG Color', 'tutorstarter' ),
 					'section'         => 'tutorstarter_header_section',
-					'active_callback' => 'control_active_callback',
+					'active_callback' => 'control_active_callback_non_trans',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'cta_background_trans',
+			array(
+				'title'             => esc_html__( 'Transparent Button BG Color', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => '#ffffff',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cta_background_trans',
+				array(
+					'label'           => esc_html__( 'Transparent Button BG Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback_transparent',
 				)
 			)
 		);
