@@ -28,7 +28,7 @@ if ( false === $disable_footer ) :
 	}
 	?>
 
-<footer id="colophon" class="site-footer <?php echo 'footer_five' === $footer_style ? 'footer-five ' : ''; ?>container-fluid pt-2 pb-2" role="contentinfo">
+<footer id="colophon" class="site-footer <?php echo 'footer_five' === $selected_footer ? 'footer-five ' : ''; ?>container-fluid pt-2 pb-2" role="contentinfo">
 	<div class="container">
 		<div class="row align-middle justify-between footer-bottom-container">
 			<div class="site-info">

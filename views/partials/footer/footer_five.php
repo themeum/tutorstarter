@@ -4,9 +4,9 @@
  */
 ?>
 
-<section class="footer-widgets">
+<section class="footer-widgets footer-alternative">
 	<div class="container">
-		<div class="row justify-between align-top footer-alternative">
+		<div class="row justify-between align-top">
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<?php is_active_sidebar( 'tutorstarter-footer-widget1' ) ? dynamic_sidebar( 'tutorstarter-footer-widget1' ) : null; ?>
 			</div><!-- left widget container -->
