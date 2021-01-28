@@ -15,15 +15,20 @@ defined( 'ABSPATH' ) || exit;
 </div><!-- #content -->
 
 <?php
-	$page_meta      = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
-	$disable_footer = ( ! empty( $page_meta ) ? $page_meta['footer_toggle'] : false );
+	$page_meta       = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
+	$disable_footer  = ( ! empty( $page_meta['footer_toggle'] ) ? $page_meta['footer_toggle'] : false );
+	$selected_footer = ( ! empty( $page_meta['footer_select'] ) ? $page_meta['footer_select'] : '' );
 
 if ( false === $disable_footer ) :
-	$footer_style = get_theme_mod( 'footer_type_select', 'footer_four' );
-	get_template_part( 'views/partials/footer/' . $footer_style );
+	if ( ! empty( $selected_footer ) ) {
+		get_template_part( 'views/partials/footer/' . $selected_footer );
+	} else {
+		$footer_style = get_theme_mod( 'footer_type_select', 'footer_four' );
+		get_template_part( 'views/partials/footer/' . $footer_style );
+	}
 	?>
 
-<footer id="colophon" class="site-footer container-fluid pt-2 pb-2" role="contentinfo">
+<footer id="colophon" class="site-footer <?php echo 'footer_five' === $footer_style ? 'footer-five ' : ''; ?>container-fluid pt-2 pb-2" role="contentinfo">
 	<div class="container">
 		<div class="row align-middle justify-between footer-bottom-container">
 			<div class="site-info">

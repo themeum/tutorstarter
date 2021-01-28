@@ -29,8 +29,8 @@ defined( 'ABSPATH' ) || exit;
 
 <?php
 $page_meta      = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
-$disable_header = ( ! empty( $page_meta ) ? $page_meta['header_toggle'] : false );
-$selected_header = ( ! empty( $page_meta ) ? $page_meta['header_select'] : '' );
+$disable_header = ( ! empty( $page_meta['header_toggle'] ) ? $page_meta['header_toggle'] : false );
+$selected_header = ( ! empty( $page_meta['header_select'] ) ? $page_meta['header_select'] : '' );
 
 if ( false === $disable_header ) {
 	if ( ! empty( $selected_header ) ) {

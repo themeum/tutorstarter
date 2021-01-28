@@ -137,6 +137,10 @@ class Footer {
 							'name'  => esc_html__( 'Type 4', 'tutorstarter' ),
 							'image' => get_template_directory_uri() . '/assets/dist/images/four-columns-extended-left.svg',
 						),
+						'footer_five' => array(
+							'name'  => esc_html__( 'Type 5', 'tutorstarter' ),
+							'image' => get_template_directory_uri() . '/assets/dist/images/four-columns-extended-left.svg',
+						),
 					),
 				)
 			)
@@ -165,8 +169,9 @@ class Footer {
 				$wp_customize,
 				'footer_widgets_bg_color',
 				array(
-					'label'   => esc_html__( 'Widgets Background Color', 'tutorstarter' ),
-					'section' => 'tutorstarter_footer_section',
+					'label'           => esc_html__( 'Widgets Background Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_footer_section',
+					'active_callback' => 'control_active_callback_footer_layout',
 				)
 			)
 		);
@@ -186,6 +191,7 @@ class Footer {
 				array(
 					'label'   => esc_html__( 'Footer Bottom BG Color', 'tutorstarter' ),
 					'section' => 'tutorstarter_footer_section',
+					'active_callback' => 'control_active_callback_footer_layout',
 				)
 			)
 		);
@@ -205,6 +211,7 @@ class Footer {
 				array(
 					'label'   => esc_html__( 'Widgets Text Color', 'tutorstarter' ),
 					'section' => 'tutorstarter_footer_section',
+					'active_callback' => 'control_active_callback_footer_layout',
 				)
 			)
 		);
@@ -263,6 +270,7 @@ class Footer {
 							)
 						),
 					),
+					'active_callback' => 'control_active_callback_footer_layout',
 				)
 			)
 		);
@@ -321,6 +329,7 @@ class Footer {
 							)
 						),
 					),
+					'active_callback' => 'control_active_callback_footer_layout',
 				)
 			)
 		);
@@ -340,6 +349,7 @@ class Footer {
 				array(
 					'label'   => esc_html__( 'Footer Bottom Text Color', 'tutorstarter' ),
 					'section' => 'tutorstarter_footer_section',
+					'active_callback' => 'control_active_callback_footer_layout',
 				)
 			)
 		);
