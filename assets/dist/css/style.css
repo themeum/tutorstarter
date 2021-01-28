@@ -7859,10 +7859,16 @@ section.footer-widgets .widget-title {
   font-weight: var(--widget-title-font-weight);
   line-height: var(--widget-title-line-height);
   text-transform: var(--widget-title-text-transform);
+  margin-bottom: 24px;
 }
 
 section.footer-widgets .widget_nav_menu .menu-footer-menu-container .menu-item a {
   color: var(--footer-widget-text-color);
+}
+
+section.footer-widgets .container {
+  padding-bottom: 70px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .row#secondary-menu li {
@@ -7954,6 +7960,22 @@ section.footer-widgets .widget_nav_menu .menu-footer-menu-container .menu-item a
     text-align: center;
     justify-self: center;
   }
+}
+
+/* Footer social icons */
+
+.textwidget.custom-html-widget a {
+  color: #ffffff;
+}
+
+.textwidget.custom-html-widget a:hover {
+  color: #ffffff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.textwidget.custom-html-widget a:not(:last-child) {
+  margin-right: 35px;
 }
 
 /* Blog List */
@@ -8382,17 +8404,6 @@ img {
   color: #0a083b;
 }
 
-.widget a,
-.page-content a {
-  color: inherit;
-}
-
-.widget a:hover,
-.page-content a:hover {
-  text-decoration: underline;
-  color: #0a083b;
-}
-
 /* Blog Comments area */
 
 .comments-area {
@@ -8740,6 +8751,126 @@ img {
   margin-left: 5px;
 }
 
+/* Single Course */
+
+.tutor-wrap.tutor-full-width-course-top {
+  padding-top: 90px;
+}
+
+.tutor-single-course-segment {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #57586e;
+}
+
+.tutor-single-course-lead-info h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.5;
+  color: #0a083b;
+}
+
+.tutor-single-course-meta ul li {
+  color: #57586e;
+}
+
+.tutor-single-course-meta ul li a {
+  color: #57586e;
+}
+
+.tutor-single-course-meta ul li span,
+.tutor-single-course-meta ul li strong {
+  color: rgba(87, 88, 110, 0.5);
+}
+
+.tutor-segment-title,
+.tutor-single-course-segment .tutor-segment-title {
+  margin-bottom: 13px;
+  color: #0a083b;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.85;
+}
+
+.tutor-course-summery,
+.tutor-course-content-content {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.81;
+  color: #57586e;
+}
+
+.tutor-course-topics-contents .tutor-course-title h4 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0a083b;
+  display: flex;
+  align-items: center;
+}
+
+.tutor-course-topics-contents .tutor-course-lesson h5 {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+}
+
+.tutor-course-topics-contents .tutor-course-title {
+  background: #f7f9fa;
+}
+
+.tutor-course-topics-contents .tutor-course-topic {
+  border-color: #f7f9fa;
+  border-radius: 4px;
+}
+
+.tutor-course-topics-contents .tutor-course-lesson {
+  border-color: #f7f9fa;
+}
+
+.tutor-single-course-meta.tutor-lead-meta {
+  border-color: #f7f9fa;
+}
+
+.single-instructor-wrap,
+.tutor-course-reviews-wrap {
+  border-color: #f7f9fa;
+  border-radius: 4px;
+}
+
+.single-instructor-wrap .single-instructor-top,
+.single-instructor-wrap .tutor-review-individual-item,
+.tutor-course-reviews-wrap .single-instructor-top,
+.tutor-course-reviews-wrap .tutor-review-individual-item {
+  border-color: #f7f9fa;
+}
+
+.tutor-lesson-video-wrap .plyr--video {
+  border-radius: 0;
+}
+
+.tutor-price-preview-box {
+  border: none;
+  background: #fafbfc;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.tutor-user-public-profile .tutor-user-profile-content {
+  font-size: 16px;
+  line-height: 1.81;
+}
+
+.tutor-user-public-profile .tutor-user-profile-content > h3 {
+  font-size: 32px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
 section.tutor-theme-getting-starter .getting-started-page-heading {
   font-family: Libre Baskerville;
   font-weight: bold;
@@ -8856,7 +8987,7 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
 
 section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp label a {
   float: right;
-  color: #1539e9;
+  color: #175cff;
   font-weight: normal;
 }
 
@@ -8904,7 +9035,7 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
 }
 
 section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp.signin-form-terms-condition a {
-  color: #1539e9;
+  color: #175cff;
   text-decoration: underline;
 }
 
@@ -8953,7 +9084,7 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .already-have-account-l
 
 section.tutor-theme-signin .tutor-theme-signin-form-area .already-have-account-link a {
   text-align: center;
-  color: #1539e9;
+  color: #175cff;
 }
 
 @media (max-width: 767px) {
@@ -9069,7 +9200,7 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-for
 }
 
 section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp.signup-form-terms-condition a {
-  color: #1539e9;
+  color: #175cff;
   position: relative;
 }
 
@@ -9078,7 +9209,7 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-for
   position: absolute;
   width: 100%;
   height: 1px;
-  background: #1539e9;
+  background: #175cff;
   bottom: 0px;
   left: 0;
 }
@@ -9127,7 +9258,7 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .already-have-account-l
 
 section.tutor-theme-signup .tutor-theme-signup-form-area .already-have-account-link a {
   text-align: center;
-  color: #1539e9;
+  color: #175cff;
 }
 
 @media (max-width: 767px) {
