@@ -151,6 +151,31 @@ var PageSettingsFields = function PageSettingsFields(_ref) {
       onChange: function onChange(value) {
         return updateMeta(value, 'header_select');
       }
+    }), /*#__PURE__*/React.createElement(SelectControl, {
+      label: __('Footer', 'tutorstarter'),
+      value: updatedValue.footer_select,
+      options: [{
+        label: __('--Select Footer--', 'tutorstarter'),
+        value: ''
+      }, {
+        label: __('Type 1', 'tutorstarter'),
+        value: 'footer_one'
+      }, {
+        label: __('Type 2', 'tutorstarter'),
+        value: 'footer_two'
+      }, {
+        label: __('Type 3', 'tutorstarter'),
+        value: 'footer_three'
+      }, {
+        label: __('Type 4', 'tutorstarter'),
+        value: 'footer_four'
+      }, {
+        label: __('Type 5', 'tutorstarter'),
+        value: 'footer_five'
+      }],
+      onChange: function onChange(value) {
+        return updateMeta(value, 'footer_select');
+      }
     }), /*#__PURE__*/React.createElement(ToggleControl, {
       label: __('Disable Title?', 'tutorstarter'),
       checked: updatedValue.page_title_toggle,
@@ -255,8 +280,9 @@ var PageSettingsFieldsData = compose([withSelect(function () {
       var meta = select('core/editor').getEditedPostAttribute('meta')._tutorstarter_page_metadata;
 
       meta = _objectSpread({
-        sidebar_select: 'no-sidebar',
-        header_select: 'header_one',
+        sidebar_select: '',
+        header_select: '',
+        footer_select: '',
         page_title_toggle: false,
         header_toggle: false,
         footer_toggle: false

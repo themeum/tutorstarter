@@ -184,6 +184,20 @@ if ( ! function_exists( 'control_active_callback_footer_logo' ) ) {
 	}
 }
 
+if ( ! function_exists( 'control_active_callback_footer_layout' ) ) {
+	/**
+	 * Control active callback for footer layouts except five
+	 */
+	function control_active_callback_footer_layout() {
+		// Get the appropriate theme mod.
+		$selected_footer = get_theme_mod( 'footer_type_select' );
+		if ( 'footer_five' === $selected_footer ) {
+			return false;
+		}
+		return true;
+	}
+}
+
 if ( ! function_exists( 'sanitize_range_value' ) ) {
 	/**
 	 * Sanitize values for range inputs.

@@ -14,8 +14,9 @@ const PageSettingsFieldsData = compose([
         updateMeta(value, prop) {
             let meta = select('core/editor').getEditedPostAttribute('meta')._tutorstarter_page_metadata;
             meta = {
-                sidebar_select: 'no-sidebar',
-                header_select: 'header_one',
+                sidebar_select: '',
+                header_select: '',
+                footer_select: '',
                 page_title_toggle: false,
                 header_toggle: false,
                 footer_toggle: false,
