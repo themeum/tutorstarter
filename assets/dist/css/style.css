@@ -8003,6 +8003,13 @@ section.footer-widgets .container {
   margin-right: 35px;
 }
 
+.footer-widget-contact-info {
+  color: var(--footer-widget-text-color);
+  font-size: 20px;
+  line-height: 1.8;
+  font-weight: 600;
+}
+
 /* Blog List */
 
 img {
