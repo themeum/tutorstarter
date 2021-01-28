@@ -226,6 +226,24 @@ trait Inline_Css_Js {
 				),
 			),
 		);
+
+		// Widget Text Typography.
+		$widget_text_typography = get_theme_mod( 'footer_widget_text_typography',
+			array(
+				'textTransform' => 'none',
+				'fontWeight'    => 400,
+				'fontSize'      => array(
+					'mobile'  => 16,
+					'tablet'  => 16,
+					'desktop' => 16,
+				),
+				'lineHeight' => array(
+					'mobile'  => 0,
+					'tablet'  => 0,
+					'desktop' => 0,
+				),
+			),
+		);
 		
 		// Inline CSS declarations.
 		$custom_css = "
@@ -335,6 +353,14 @@ trait Inline_Css_Js {
 				--widget-title-line-height: {$widget_title_typography['lineHeight']['desktop']}px;
 				--widget-title-line-height-tablet: {$widget_title_typography['lineHeight']['tablet']}px;
 				--widget-title-line-height-mobile: {$widget_title_typography['lineHeight']['mobile']}px;
+				--widget-text-font-weight: {$widget_text_typography['fontWeight']};
+				--widget-text-transform: {$widget_text_typography['textTransform']};
+				--widget-text-font-size: {$widget_text_typography['fontSize']['desktop']}px;
+				--widget-text-font-size-tablet: {$widget_text_typography['fontSize']['tablet']}px;
+				--widget-text-font-size-mobile: {$widget_text_typography['fontSize']['mobile']}px;
+				--widget-text-line-height: {$widget_text_typography['lineHeight']['desktop']}px;
+				--widget-text-line-height-tablet: {$widget_text_typography['lineHeight']['tablet']}px;
+				--widget-text-line-height-mobile: {$widget_text_typography['lineHeight']['mobile']}px;
 			}
         ";
 

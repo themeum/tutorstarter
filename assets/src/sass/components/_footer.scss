@@ -9,14 +9,19 @@ section.footer-widgets {
 	background: var(--footer-widget-bg-color);
 	& ul li a {
 		color: var(--footer-widget-text-color);
-		font-size: $base-fs;
-		font-weight: 700;
-		line-height: 32px;
+		font-size: var(--widget-text-font-size);
+		font-weight: var(--widget-text-font-weight);
+		line-height: var(--widget-text-line-height);
+		text-transform: var(--widget-text-transform);
 		list-style: none;
 	}
 	.widget {
 		p {
 			color: var(--footer-widget-text-color);
+			font-size: var(--widget-text-font-size);
+			line-height: var(--widget-text-line-height);
+			font-weight: var(--widget-text-font-weight);
+			text-transform: var(--widget-text-transform);
 		}
 	}
 	.widget-title {
@@ -78,19 +83,41 @@ section.footer-widgets {
 }
 
 @media (max-width: 991px) {
-	.widget-title {
-		font-size: var(--widget-title-font-size-tablet) !important;
-		line-height: var(--widget-title-line-height-tablet) !important;
+	section.footer-widgets {
+		.widget-title {
+			font-size: var(--widget-title-font-size-tablet)!important;
+			line-height: var(--widget-title-line-height-tablet)!important;
+		}
+		.widget {
+			p {
+				font-size: var(--widget-text-font-size-tablet)!important;
+				line-height: var(--widget-text-line-height-tablet)!important;
+			}
+		}
+		& ul li a {
+			font-size: var(--widget-text-font-size-tablet)!important;
+			line-height: var(--widget-text-line-height-tablet)!important;
+		}
 	}
 }
 
 @media (max-width: 767px) {
 	section.footer-widgets {
 		text-align: center;
-	}
-	.widget-title {
-		font-size: var(--widget-title-font-size-mobile) !important;
-		line-height: var(--widget-title-line-height-mobile) !important;
+		.widget-title {
+			font-size: var(--widget-title-font-size-mobile) !important;
+			line-height: var(--widget-title-line-height-mobile) !important;
+		}
+		.widget {
+			p {
+				font-size: var(--widget-text-font-size-mobile)!important;
+				line-height: var(--widget-text-line-height-mobile)!important;
+			}
+		}
+		& ul li a {
+			font-size: var(--widget-text-font-size-mobile)!important;
+			line-height: var(--widget-text-line-height-mobile)!important;
+		}
 	}
 	.socials {
 		display: flex;

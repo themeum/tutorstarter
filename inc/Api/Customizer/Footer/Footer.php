@@ -267,6 +267,64 @@ class Footer {
 			)
 		);
 		$wp_customize->add_setting(
+			'footer_widget_text_typography',
+			array(
+				'title'             => esc_html__( 'Widget Text Typography', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default' => array(
+					'textTransform' => 'none',
+					'fontWeight'    => 400,
+					'fontSize'      => array(
+						'mobile'  => 16,
+						'tablet'  => 16,
+						'desktop' => 16,
+					),
+					'lineHeight' => array(
+						'mobile'  => 0,
+						'tablet'  => 0,
+						'desktop' => 0,
+					),
+				),
+				'sanitize_callback' => 'sanitize_select_range_value',
+			)
+		);
+		$wp_customize->add_control(
+			new Typography_Control(
+				$wp_customize,
+				'footer_widget_text_typography',
+				array(
+					'label'       => esc_html__( 'Widget Text Typography', 'tutorstarter' ),
+					'section'     => 'tutorstarter_footer_section',
+					'input_attrs' => array(
+						'font_sizes' => array(
+							'min'        => 8,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'line_heights' => array(
+							'min'        => 0,
+							'max'        => 100,
+							'units'      => array( 'px' )
+						),
+						'defaultParams' => array(
+							'weight_default'  => 400,
+							'text_transform'  => 'none',
+							'font_sizes' => array(
+								'mobile'  => 16,
+								'tablet'  => 16,
+								'desktop' => 16,
+							),
+							'line_heights' => array(
+								'mobile'  => 0,
+								'tablet'  => 0,
+								'desktop' => 0,
+							)
+						),
+					),
+				)
+			)
+		);
+		$wp_customize->add_setting(
 			'footer_bottom_text_color',
 			array(
 				'title'             => esc_html__( 'Footer Bottom Text Color', 'tutorstarter' ),
