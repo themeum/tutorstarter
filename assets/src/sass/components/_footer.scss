@@ -192,6 +192,9 @@ section.footer-widgets {
 		border: none;
 		padding-bottom: 0;
 	}
+	.logo-footer.trans {
+		margin-left: 20px;
+	}
 }
 .footer-five {
 	.textwidget.custom-html-widget a,
@@ -209,8 +212,8 @@ section.footer-widgets {
 				content: '';
 				border-right: 1px solid #e1e7f6;
 				position: absolute;
-				height: 250%;
-				top: -25%;
+				height: 200%;
+				top: -55%;
 				right: 12%;
 			}
 		}
