@@ -816,6 +816,8 @@ header.alternative {
 #masthead {
   background: var(--primary-menu-bg-color);
   padding: 20px 90px;
+  position: relative;
+  z-index: 99999;
 }
 
 #masthead.transparent-header {
@@ -902,6 +904,7 @@ header.alternative {
   transform: translateY(5px);
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   background: var(--primary-menu-bg-color);
+  background: #fff;
   border-radius: 4px;
   z-index: 999;
   box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.15);
@@ -1760,7 +1763,7 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1140px;
 }
 
 .container-fluid {
