@@ -119,100 +119,16 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_navigation_navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/navigation/navigation */ "./assets/src/scripts/modules/navigation/navigation.js");
 /* harmony import */ var _modules_navigation_navigation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_navigation_navigation__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modules_auth_google_signin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/auth/google_signin */ "./assets/src/scripts/modules/auth/google_signin.js");
-/* harmony import */ var _modules_auth_google_signin__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_auth_google_signin__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_auth_signup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/auth/signup */ "./assets/src/scripts/modules/auth/signup.js");
-/* harmony import */ var _modules_auth_signup__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_auth_signup__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _modules_auth_signin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/auth/signin */ "./assets/src/scripts/modules/auth/signin.js");
-/* harmony import */ var _modules_auth_signin__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_auth_signin__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_auth_signup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/auth/signup */ "./assets/src/scripts/modules/auth/signup.js");
+/* harmony import */ var _modules_auth_signup__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_auth_signup__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_auth_signin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/auth/signin */ "./assets/src/scripts/modules/auth/signin.js");
+/* harmony import */ var _modules_auth_signin__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_auth_signin__WEBPACK_IMPORTED_MODULE_2__);
 /**
  * Manage module imports
  */
 
 
 
-
-
-/***/ }),
-
-/***/ "./assets/src/scripts/modules/auth/google_signin.js":
-/*!**********************************************************!*\
-  !*** ./assets/src/scripts/modules/auth/google_signin.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * File google_signin.js.
- *
- * Handles google_signin in for new user
- */
-(function () {
-  var googleSignInBtn = document.getElementById('gSignIn2');
-  var google_client_ID = tutorstarter_vars.google_client_ID;
-  var googleUser = {};
-
-  var startApp = function startApp() {
-    gapi.load('auth2', function () {
-      // Retrieve the singleton for the GoogleAuth library and set up the client.
-      auth2 = gapi.auth2.init({
-        //373496230444-uf119vqdp0hsrkujdjt6ucms3scp4v0d.apps.googleusercontent.com
-        client_id: google_client_ID,
-        cookiepolicy: 'single_host_origin' // Request scopes in addition to 'profile' and 'email'
-        //scope: 'additional_scope'
-
-      });
-      attachSignin(document.getElementById('gSignIn2'));
-    });
-  };
-
-  function attachSignin(element) {
-    auth2.attachClickHandler(element, {}, function (googleUser) {
-      var profile = googleUser.getBasicProfile();
-      var id_token = googleUser.getAuthResponse().id_token;
-      var request = new XMLHttpRequest();
-      var ajaxurl = tutorstarter_vars.ajaxurl;
-      var authRedirectUrl = tutorstarter_vars.authRedirectUrl;
-      var data = new FormData();
-      data.append('id_token', id_token);
-      data.append('useremail', profile.getEmail());
-      data.append('userfirst', profile.getGivenName());
-      data.append('userlast', profile.getFamilyName());
-      data.append('action', 'ajaxgoogleauth');
-      request.open("POST", ajaxurl);
-
-      request.onreadystatechange = function (data) {
-        if (this.readyState === 4 && this.status === 200) {
-          var response = JSON.parse(this.responseText);
-          var reg_status = document.querySelector('.signup-status');
-
-          if (null !== reg_status) {
-            reg_status.style.visibility = "visible";
-
-            if (response.loggedin == true) {
-              reg_status.style.color = "#4285F4";
-              reg_status.innerText = response.message;
-              window.location.replace(authRedirectUrl);
-            } else {
-              reg_status.style.color = "#dc3545";
-              reg_status.innerText = response.message;
-            }
-          }
-        }
-      };
-
-      request.send(data);
-    }, function (error) {
-      console.log(JSON.stringify(error, undefined, 2));
-    });
-  }
-
-  ;
-
-  if (null !== googleSignInBtn) {
-    startApp();
-  }
-})();
 
 /***/ }),
 
