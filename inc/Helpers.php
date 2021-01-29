@@ -198,6 +198,21 @@ if ( ! function_exists( 'control_active_callback_footer_layout' ) ) {
 	}
 }
 
+if ( ! function_exists( 'control_active_callback_footer_logo_trans' ) ) {
+	/**
+	 * Control active callback for footer transparent logo
+	 */
+	function control_active_callback_footer_logo_trans() {
+		// Get the appropriate theme mod.
+		$is_enabled      = get_theme_mod( 'footer_logo_toggle' );
+		$selected_footer = get_theme_mod( 'footer_type_select' );
+		if ( 'footer_five' === $selected_footer && true === $is_enabled ) {
+			return true;
+		}
+		return false;
+	}
+}
+
 if ( ! function_exists( 'sanitize_range_value' ) ) {
 	/**
 	 * Sanitize values for range inputs.
