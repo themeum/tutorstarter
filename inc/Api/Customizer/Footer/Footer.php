@@ -46,12 +46,22 @@ class Footer {
 				'sanitize_callback' => isset( $input ) ? true : false,
 			)
 		);
+		$wp_customize->selective_refresh->add_partial(
+			'footer_logo_toggle',
+			array(
+				'selector'            => '.site-info',
+				'container_inclusive' => true,
+				'render_callback'     => function() {
+					return true;
+				},
+			)
+		);
 		$wp_customize->add_control(
 			new Toggle_Switch_Control(
 				$wp_customize,
 				'footer_logo_toggle',
 				array(
-					'label'   => esc_html__( 'Show Footer Logo?', 'tutorstarter' ),
+					'label'   => esc_html__( 'Show Footer Bottom Logo?', 'tutorstarter' ),
 					'section' => 'tutorstarter_footer_section',
 				)
 			)
@@ -100,7 +110,6 @@ class Footer {
 				array(
 					'label'           => esc_html__( 'Footer Bottom Logo', 'tutorstarter' ),
 					'section'         => 'tutorstarter_footer_section',
-					'active_callback' => 'control_active_callback_footer_logo',
 				)
 			)
 		);
