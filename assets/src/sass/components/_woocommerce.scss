@@ -82,3 +82,9 @@ body.woocommerce-cart {
 		margin-top: 30px;
 	}
 }
+
+#add_payment_method table.cart img,
+.woocommerce-cart table.cart img,
+.woocommerce-checkout table.cart img {
+	width: 50px;
+}
