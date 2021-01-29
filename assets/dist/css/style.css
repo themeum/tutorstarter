@@ -817,7 +817,7 @@ header.alternative {
   background: var(--primary-menu-bg-color);
   padding: 20px 90px;
   position: relative;
-  z-index: 99999;
+  z-index: 1;
 }
 
 #masthead.transparent-header {
@@ -9397,5 +9397,83 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .already-have-account-l
   section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row.tutor-theme-social-signup button svg {
     width: 16px;
   }
+}
+
+body.woocommerce-checkout {
+  background: #f7f9fa;
+}
+
+.woocommerce-billing-fields__field-wrapper,
+.woocommerce-additional-fields__field-wrapper {
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.woocommerce-billing-fields__field-wrapper .form-row label,
+.woocommerce-additional-fields__field-wrapper .form-row label {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #0a083b;
+  margin-bottom: 6px;
+}
+
+.woocommerce-billing-fields__field-wrapper .form-row .input-text,
+.woocommerce-billing-fields__field-wrapper .form-row .select2-container--default .select2-selection--single,
+.woocommerce-additional-fields__field-wrapper .form-row .input-text,
+.woocommerce-additional-fields__field-wrapper .form-row .select2-container--default .select2-selection--single {
+  background: rgba(255, 255, 255, 0.0001);
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+  border-radius: 6px;
+}
+
+.woocommerce-billing-fields__field-wrapper .form-row .input-text,
+.woocommerce-additional-fields__field-wrapper .form-row .input-text {
+  background: rgba(255, 255, 255, 0.0001);
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+  border-radius: 6px;
+  height: 40px;
+  padding: 15px;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  color: rgba(10, 8, 59, 0.7);
+}
+
+.woocommerce-billing-fields__field-wrapper .form-row .input-text::-moz-placeholder, .woocommerce-additional-fields__field-wrapper .form-row .input-text::-moz-placeholder {
+  color: rgba(10, 8, 59, 0.5);
+}
+
+.woocommerce-billing-fields__field-wrapper .form-row .input-text:-ms-input-placeholder, .woocommerce-additional-fields__field-wrapper .form-row .input-text:-ms-input-placeholder {
+  color: rgba(10, 8, 59, 0.5);
+}
+
+.woocommerce-billing-fields__field-wrapper .form-row .input-text::placeholder,
+.woocommerce-additional-fields__field-wrapper .form-row .input-text::placeholder {
+  color: rgba(10, 8, 59, 0.5);
+}
+
+.woocommerce-billing-fields__field-wrapper .form-row textarea.input-text,
+.woocommerce-additional-fields__field-wrapper .form-row textarea.input-text {
+  height: auto;
+  resize: vertical;
+}
+
+.woocommerce-billing-fields h3,
+.woocommerce-additional-fields h3,
+h3#order_review_heading {
+  color: #0a083b;
+  margin-bottom: 23px;
+}
+
+.woocommerce table.shop_table {
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
 }
 
