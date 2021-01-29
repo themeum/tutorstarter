@@ -146,7 +146,6 @@ header.alternative {
 			text-decoration: none;
 			font-family: inherit;
 			color: var(--menu-link-color);
-			color: var(--menu-link-color-trans);
 			font-size: var(--header-font-size);
 			font-weight: var(--header-font-weight);
 			line-height: 1.1em;
@@ -299,6 +298,15 @@ header.alternative {
 #masthead.transparent-header {
 	background: transparent;
 	color: var(--menu-link-color-trans);
+	.menu-one li a {
+		color: var(--menu-link-color-trans);
+	}
+	.menu-item.icon > a {
+		&:after,
+		&:before {
+			background: var(--menu-link-color-trans);
+		}
+	}
 }
 
 .nav-search-icon {

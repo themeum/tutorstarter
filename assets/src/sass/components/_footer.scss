@@ -40,6 +40,12 @@ section.footer-widgets {
 		padding-bottom: 70px;
 		border-bottom: 1px solid rgb(255 255 255 / 0.08);
 	}
+	.logo-footer {
+		margin-left: 20px;
+		@media (max-width: 767px) {
+			margin: 0 auto;
+		}
+	}
 }
 
 .row {
@@ -55,6 +61,15 @@ section.footer-widgets {
 }
 .site-footer {
 	background: var(--footer-bottom-bg-color);
+	@media (max-width: 767px) {
+		.row {
+			justify-content: center;
+			flex-direction: column;
+		}
+		.copyright {
+			margin-left: 0;
+		}
+	}
 }
 
 .footer-bottom-container {
@@ -191,9 +206,6 @@ section.footer-widgets {
 	.container {
 		border: none;
 		padding-bottom: 0;
-	}
-	.logo-footer.trans {
-		margin-left: 20px;
 	}
 }
 .footer-five {
