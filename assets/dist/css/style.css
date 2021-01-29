@@ -676,6 +676,7 @@ header.alternative {
   text-decoration: none;
   font-family: inherit;
   color: var(--menu-link-color);
+  color: var(--menu-link-color-trans);
   font-size: var(--header-font-size);
   font-weight: var(--header-font-weight);
   line-height: 1.1em;
