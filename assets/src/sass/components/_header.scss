@@ -293,12 +293,12 @@ header.alternative {
 	background: var(--primary-menu-bg-color);
 	padding: 20px 90px;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 }
 #masthead.transparent-header {
 	background: transparent;
 	color: var(--menu-link-color-trans);
-	.menu-one li a {
+	.menu-one > li > a {
 		color: var(--menu-link-color-trans);
 	}
 	.menu-item.icon > a {
