@@ -408,18 +408,6 @@
     });
 
     // Footer customization.
-    wp.customize('footer_logo_toggle', function (value) {
-        value.bind(function (updatedValue) {
-            let footerLogo = document.querySelector('.site-info img#logo-footer');
-            if (null !== footerLogo) {
-                if (true === updatedValue) {
-                    footerLogo.classList.remove('hide');
-                } else {
-                    footerLogo.classList.add('hide');
-                }
-            }
-        })
-    });
     wp.customize('footer_socialmedia_toggle', function (value) {
         value.bind(function (updatedValue) {
             let footerSocialMedia = document.querySelector('.site-info #footer-socialmedia');

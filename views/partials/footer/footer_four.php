@@ -13,9 +13,11 @@
 	<div class="container">
 		<div class="row justify-between align-top">
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				<?php if ( 'footer_five' !== $selected_footer || 'footer_five' !== $footer_style ) : ?>
-					<img class="logo-footer" src="<?php echo '' !== $footer_logo ? $footer_logo : '' ?>" alt="<?php echo esc_attr( bloginfo( 'name' ) ) ?>">
-				<?php else : ''; endif; ?>
+				<?php if ( 'footer_five' !== $selected_footer || 'footer_five' !== $footer_style ) : 
+					if ( ! empty( $footer_logo ) ) : ?>
+						<img class="logo-footer" src="<?php echo esc_url_raw( $footer_logo ); ?>" alt="<?php echo esc_attr( bloginfo( 'name' ) ) ?>">
+					<?php endif; ?>
+				<?php endif; ?>
 				<?php is_active_sidebar( 'tutorstarter-footer-widget1' ) ? dynamic_sidebar( 'tutorstarter-footer-widget1' ) : null; ?>
 			</div><!-- left widget container -->
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 ml-0 pl-0">

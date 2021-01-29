@@ -170,20 +170,6 @@ if ( ! function_exists( 'control_active_callback_non_trans' ) ) {
 	}
 }
 
-if ( ! function_exists( 'control_active_callback_footer_logo' ) ) {
-	/**
-	 * Control active callback for footer logo
-	 */
-	function control_active_callback_footer_logo() {
-		// Get the appropriate theme mod.
-		$is_enabled = get_theme_mod( 'footer_logo_toggle' );
-		if ( true === $is_enabled ) {
-			return true;
-		}
-		return false;
-	}
-}
-
 if ( ! function_exists( 'control_active_callback_footer_layout' ) ) {
 	/**
 	 * Control active callback for footer layouts except five
@@ -404,7 +390,7 @@ if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
 				'version'            => '',
 				'force_activation'   => false,
 				'force_deactivation' => false,
-				'external_url'       => esc_url( '' ), // Will be added later.
+				'external_url'       => esc_url( '' ), //@TODO Will be added later.
 			),
 		);
 

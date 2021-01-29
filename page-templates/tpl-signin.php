@@ -6,8 +6,8 @@
  *
  * @package Tutor_Starter
  */
-if(is_user_logged_in()) {
-    wp_redirect(home_url());
+if ( is_user_logged_in() ) {
+    wp_redirect( home_url()) ;
     die();
 }
 defined( 'ABSPATH' ) || exit;

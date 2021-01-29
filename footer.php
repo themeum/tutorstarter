@@ -32,18 +32,6 @@ if ( false === $disable_footer ) :
 	<div class="container">
 		<div class="row align-middle justify-between footer-bottom-container">
 			<div class="site-info">
-			<?php
-			$default           = esc_attr( get_template_directory_uri() . '/assets/dist/images/tutor-footer.png' );
-			$footer_logo       = esc_url( get_theme_mod( 'footer_logo' ) );
-			$footer_logo_trans = esc_url( get_theme_mod( 'footer_logo_trans' ) );
-
-			if ( true === get_theme_mod( 'footer_logo_toggle', true ) ) :
-				if ( 'footer_five' === $selected_footer || 'footer_five' === $footer_style ) : ?>
-					<img id="logo-footer" src="<?php echo ( '' !== $footer_logo_trans ? $footer_logo_trans : $default ); ?>" alt="<?php echo esc_html( wp_get_document_title() ); ?>" />
-				<?php else : ?>
-					<img id="logo-footer" src="<?php echo ( '' !== $footer_logo ? $footer_logo : $default ); ?>" alt="<?php echo esc_html( wp_get_document_title() ); ?>" />
-				<?php endif; ?>
-			<?php endif; ?>
 				<?php if ( true === get_theme_mod( 'footer_socialmedia_toggle', true ) ) : ?>
 					<span id="footer-socialmedia">
 						<?php is_active_sidebar( 'tutorstarter-footer-socialmedia' ) ? dynamic_sidebar( 'tutorstarter-footer-socialmedia' ) : null; ?>
