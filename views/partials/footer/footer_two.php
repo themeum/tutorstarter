@@ -3,11 +3,19 @@
  * Footer two 4 equal columns
  */
 ?>
-
+<?php
+    $page_meta         = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
+	$selected_footer   = ( ! empty( $page_meta['footer_select'] ) ? $page_meta['footer_select'] : '' );
+	$footer_style      = get_theme_mod( 'footer_type_select' );
+	$footer_logo       = get_theme_mod( 'footer_logo' );
+?>
 <section class="footer-widgets">
 	<div class="container">
 		<div class="row justify-between align-top">
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+				<?php if ( 'footer_five' !== $selected_footer || 'footer_five' !== $footer_style ) : ?>
+					<img class="logo-footer" src="<?php echo '' !== $footer_logo ? $footer_logo : '' ?>" alt="<?php echo esc_attr( bloginfo( 'name' ) ) ?>">
+				<?php else : ''; endif; ?>
 				<?php is_active_sidebar( 'tutorstarter-footer-widget1' ) ? dynamic_sidebar( 'tutorstarter-footer-widget1' ) : null; ?>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">

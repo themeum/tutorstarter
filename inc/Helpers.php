@@ -204,9 +204,8 @@ if ( ! function_exists( 'control_active_callback_footer_logo_trans' ) ) {
 	 */
 	function control_active_callback_footer_logo_trans() {
 		// Get the appropriate theme mod.
-		$is_enabled      = get_theme_mod( 'footer_logo_toggle' );
 		$selected_footer = get_theme_mod( 'footer_type_select' );
-		if ( 'footer_five' === $selected_footer && true === $is_enabled ) {
+		if ( 'footer_five' === $selected_footer ) {
 			return true;
 		}
 		return false;
