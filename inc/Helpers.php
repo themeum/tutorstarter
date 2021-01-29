@@ -170,20 +170,6 @@ if ( ! function_exists( 'control_active_callback_non_trans' ) ) {
 	}
 }
 
-if ( ! function_exists( 'control_active_callback_footer_logo' ) ) {
-	/**
-	 * Control active callback for footer logo
-	 */
-	function control_active_callback_footer_logo() {
-		// Get the appropriate theme mod.
-		$is_enabled = get_theme_mod( 'footer_logo_toggle' );
-		if ( true === $is_enabled ) {
-			return true;
-		}
-		return false;
-	}
-}
-
 if ( ! function_exists( 'control_active_callback_footer_layout' ) ) {
 	/**
 	 * Control active callback for footer layouts except five
@@ -404,7 +390,7 @@ if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
 				'version'            => '',
 				'force_activation'   => false,
 				'force_deactivation' => false,
-				'external_url'       => esc_url( '' ), // Will be added later.
+				'external_url'       => esc_url( '' ), //@TODO Will be added later.
 			),
 		);
 
@@ -593,57 +579,4 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
         $fragments['#mini-cart-count'] = ob_get_clean();
         return $fragments;
     }
-}
-
-/**
- * Login with google
- */
-add_action( 'wp_ajax_nopriv_ajaxgoogleauth', 'tutor_theme_ajax_googleauth' );
-
-function tutor_theme_ajax_googleauth() {
-	$usermail = sanitize_email( $_POST['useremail'] );
-    if ( $usermail ) {
-        $userdata = get_user_by( 'email', $usermail );
-        if ( isset( $userdata->ID ) ) {
-            wp_set_current_user( $userdata->ID );
-            wp_set_auth_cookie( $userdata->ID );
-            echo json_encode( array( 'loggedin' => true, 'message' => __( 'Login successful, redirecting...', 'tutorstarter' ) ) );
-        } else {
-            $username = substr( $usermail, 0, strpos( $usermail, '@' ) );
-            
-            if ( username_exists( $username ) ) {
-                while ( 2 > 1 ) {
-                    $random   = substr( str_shuffle( 'abcdefghijklmnopqrstuvwxyz0123456789' ), 0, 2 );
-                    $username = $username + $random;
-                    if ( ! username_exists( $username ) ) { break; }
-                }
-            }
-            $user_input = array(
-                'first_name'   => sanitize_text_field( $_POST['userfirst'] ),
-                'last_name'    => sanitize_text_field( $_POST['userlast'] ),
-                'user_login'   => $username,
-                'user_email'   => $usermail,
-              	'display_name' => $username,
-                'user_pass'    => null
-            );
-            $user_id = wp_insert_user( $user_input );
-            if ( ! is_wp_error( $user_id ) ) {
-                wp_set_current_user( $user_id );
-				wp_set_auth_cookie( $user_id );
-                echo json_encode( array( 'loggedin' => true, 'message' => __( 'Login successful, redirecting...', 'tutorstarter' ) ) );
-            } else {
-                echo json_encode(array( 'loggedin' => false, 'message' => __( 'Wrong username or password.', 'tutorstarter' ) ) );
-            }            
-        }
-        die();
-    }
-}
-$google_client_ID = '140541384047-gf7004n9f58kh18gns7692armduvmm62.apps.googleusercontent.com';
-if ( $google_client_ID ) {
-    add_action( 'wp_enqueue_scripts','load_google_login_script' );
-}
-if ( ! function_exists( 'load_google_login_script' ) ) {
-	function load_google_login_script() {
-		wp_enqueue_script( 'google-login-api-client', 'https://apis.google.com/js/api:client.js', array(), false, false );
-	}
 }

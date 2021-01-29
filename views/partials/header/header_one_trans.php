@@ -32,7 +32,7 @@
 				?>
 					<ul id="menu-footer-one" class="menu-one">
 						<li id="menu-item-52" class="icon menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-52">
-							<a href="">Browse</a>
+							<a href=""><?php esc_html_e( 'Browse', 'tutorstarter' ); ?></a>
 							<ul class="sub-menu">
 								<?php 
 								foreach ( $course_categories as $course_cat ) {
@@ -76,8 +76,8 @@
 					<?php endif ?>
 					<?php if ( ! is_user_logged_in() ) : ?>
 						<div class="tutor-login-link">
-							<a href="<?php echo site_url() . '/login'; ?>">
-								Log In
+							<a href="<?php echo site_url() . '/sign-in'; ?>">
+								<?php esc_html_e( 'Log In', 'tutorstarter' ); ?>
 							</a>
 						</div><!-- .tutor-login-link -->
 					<?php endif; ?>

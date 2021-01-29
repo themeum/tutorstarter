@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || exit;
                             <a href="/instructor-registration/">
                                 <div class="sign-type sign-as-instructor">
                                     <div class="signing-type-icon">
-                                        <img src="<?php echo get_template_directory_uri() . '/assets/dist/images/path-icon.png'; ?>" alt="<?php _e( 'Instructor Registration', 'tutorstarter' ) ?>">
+                                        <img src="<?php echo esc_url_raw( get_template_directory_uri() . '/assets/dist/images/path-icon.png' ); ?>" alt="<?php _e( 'Instructor Registration', 'tutorstarter' ) ?>">
                                     </div>
                                     <div class="signing-title">
                                         <?php _e( 'Sign up as an instructor', 'tutorstarter' ); ?>
@@ -44,7 +44,7 @@ defined( 'ABSPATH' ) || exit;
                             <a href="/student-registration/">
                                 <div class="sign-type sign-as-student">
                                     <div class="signing-type-icon">
-                                        <img src="<?php echo get_template_directory_uri() . '/assets/dist/images/path-icon.png'; ?>" alt="<?php _e( 'Student Registration', 'tutorstarter' ) ?>">
+                                        <img src="<?php echo esc_url_raw( get_template_directory_uri() . '/assets/dist/images/path-icon.png' ); ?>" alt="<?php _e( 'Student Registration', 'tutorstarter' ) ?>">
                                     </div>
                                     <div class="signing-title">
                                         <?php _e( 'I’m a student', 'tutorstarter' ); ?>
