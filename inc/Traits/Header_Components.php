@@ -19,7 +19,7 @@ trait Header_Components {
 	 */
 	public static function navbar_toggler() {
 
-		$toggler_html = '<li class="nav-close"><button class="btn-nav-close">X</button></li>';
+		$toggler_html = '<li class="nav-close"><button class="btn-nav-close"><span>+</span></button></li>';
 
 		return $toggler_html;
 	}
