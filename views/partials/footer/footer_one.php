@@ -15,7 +15,7 @@
 			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
 				<?php if ( 'footer_five' !== $selected_footer || 'footer_five' !== $footer_style ) : 
 					if ( ! empty( $footer_logo ) ) : ?>
-						<img class="logo-footer" src="<?php echo esc_url_raw( $footer_logo ); ?>" alt="<?php echo esc_attr( bloginfo( 'name' ) ) ?>">
+						<img height="24" width="92" class="logo-footer" src="<?php echo esc_url_raw( $footer_logo ); ?>" alt="<?php echo esc_attr( bloginfo( 'name' ) ) ?>">
 					<?php endif; ?>
 				<?php endif; ?>
 				<?php is_active_sidebar( 'tutorstarter-footer-widget1' ) ? dynamic_sidebar( 'tutorstarter-footer-widget1' ) : null; ?>
