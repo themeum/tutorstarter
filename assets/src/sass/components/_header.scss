@@ -190,6 +190,9 @@ body.admin-bar .navbar-nav {
 	.menu-item.current-menu-item > a {
 		color: var(--active-menu-color);
 	}
+	.sub-menu li {
+		margin: 0 10px;
+	}
 }
 
 .menu-one-transparent {
@@ -212,12 +215,16 @@ body.admin-bar .navbar-nav {
 			height: 2px;
 			bottom: 0;
 			left: 0;
-			background-color: transparent;
+			background-color: var(--active-menu-color);
 			transition: all 0.4s ease-in-out;
 		}
 		&:hover {
 			&:before {
-				width: 40px;
+				@media (min-width: 992px) {
+					&:before {
+						width: 40px;
+					}
+				}
 			}
 		}
 		a {
