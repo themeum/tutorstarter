@@ -718,6 +718,10 @@ body.admin-bar .navbar-nav {
   color: var(--active-menu-color);
 }
 
+.menu-one .sub-menu li {
+  margin: 0 10px;
+}
+
 .menu-one-transparent {
   display: flex;
   list-style: none;
@@ -741,12 +745,14 @@ body.admin-bar .navbar-nav {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: transparent;
+  background-color: var(--active-menu-color);
   transition: all 0.4s ease-in-out;
 }
 
-.menu-one-transparent li:hover:before {
-  width: 40px;
+@media (min-width: 992px) {
+  .menu-one-transparent li:hover:before:before {
+    width: 40px;
+  }
 }
 
 .menu-one-transparent li a {
