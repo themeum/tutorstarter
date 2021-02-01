@@ -642,13 +642,19 @@ header.alternative {
   color: var(--active-menu-color);
 }
 
+body.admin-bar .navbar-nav {
+  top: 30px;
+}
+
 .menu-one {
   display: flex;
   list-style: none;
 }
 
-.menu-one > li:not(:first-child) {
-  margin: 0px 0px 0px 30px;
+@media (min-width: 992px) {
+  .menu-one > li:not(:first-child) {
+    margin: 0px 0px 0px 30px;
+  }
 }
 
 .menu-one li {
@@ -667,8 +673,10 @@ header.alternative {
   transition: all 0.4s ease-in-out;
 }
 
-.menu-one li:hover:before {
-  width: 40px;
+@media (min-width: 992px) {
+  .menu-one li:hover:before {
+    width: 40px;
+  }
 }
 
 .menu-one li a {
@@ -681,6 +689,7 @@ header.alternative {
   line-height: 1.1em;
   text-transform: var(--header-font-transform);
   display: block;
+  position: relative;
 }
 
 .menu-one li a:hover {
@@ -714,8 +723,10 @@ header.alternative {
   list-style: none;
 }
 
-.menu-one-transparent > li:not(:first-child) {
-  margin: 0px 0px 0px 30px;
+@media (min-width: 992px) {
+  .menu-one-transparent > li:not(:first-child) {
+    margin: 0px 0px 0px 30px;
+  }
 }
 
 .menu-one-transparent li {
@@ -742,12 +753,18 @@ header.alternative {
   padding: 4px 0px;
   text-decoration: none;
   font-family: inherit;
-  color: var(--menu-link-color-trans);
   font-size: var(--header-font-size);
   font-weight: var(--header-font-weight);
   line-height: 1.1em;
   text-transform: var(--header-font-transform);
   display: block;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .menu-one-transparent li a {
+    color: var(--menu-link-color-trans);
+  }
 }
 
 .menu-one-transparent li a:hover {
@@ -772,12 +789,11 @@ header.alternative {
   display: none;
 }
 
-.menu-one-transparent .menu-item.icon > a:before {
-  background: var(--menu-link-color-trans);
-}
-
-.menu-one-transparent .menu-item.icon > a:after {
-  background: var(--menu-link-color-trans);
+@media (min-width: 992px) {
+  .menu-one-transparent .menu-item.icon > a:before,
+  .menu-one-transparent .menu-item.icon > a::after {
+    background: var(--menu-link-color-trans);
+  }
 }
 
 .menu-one-transparent .menu-item.current-menu-item > a {
@@ -829,9 +845,11 @@ header.alternative {
   color: var(--menu-link-color-trans);
 }
 
-#masthead.transparent-header .menu-item.icon > a:after,
-#masthead.transparent-header .menu-item.icon > a:before {
-  background: var(--menu-link-color-trans);
+@media (min-width: 992px) {
+  #masthead.transparent-header .menu-item.icon > a:after,
+  #masthead.transparent-header .menu-item.icon > a:before {
+    background: var(--menu-link-color-trans);
+  }
 }
 
 .nav-search-icon {
@@ -968,6 +986,7 @@ header.alternative {
 .nav-close {
   margin-left: auto;
   margin-top: 10px;
+  margin-bottom: 20px;
   display: none;
 }
 
@@ -983,6 +1002,28 @@ header.alternative {
   background: var(--primary-menu-bg-color);
   color: var(--menu-link-color);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-close .btn-nav-close span {
+  display: inline-block;
+  font-size: 1.5em;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-close .btn-nav-close:hover {
+  background: #57586e;
+  border-color: #57586e;
+  color: #fff;
+}
+
+.nav-close:before {
+  display: none;
 }
 
 .menu-item.icon > a:before {
@@ -1183,7 +1224,7 @@ header.alternative {
     top: 0;
     width: 300px;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     box-shadow: 0px 0px 0 1000px rgba(0, 0, 0, 0.5);
     transform: translateX(-300px);
   }
@@ -1251,12 +1292,6 @@ header.alternative {
     max-height: initial;
   }
 
-  .menu-item.icon a:before {
-    top: unset;
-    right: 0;
-    transform: translateY(0px);
-  }
-
   .call-to-action {
     padding: 12px 14px;
     overflow: hidden;
@@ -1265,6 +1300,10 @@ header.alternative {
     line-height: var(--cta-font-lineheight-tablet);
     color: var(--cta-text-color);
     text-align: center;
+  }
+
+  ul#menu-footer-one {
+    display: none;
   }
 }
 
@@ -1367,6 +1406,14 @@ header.alternative {
     height: 170px;
     padding: 15px;
   }
+}
+
+.transparent-header .call-to-action {
+  background: transparent !important;
+}
+
+.transparent-header .navbar-toggler svg {
+  fill: #fff;
 }
 
 #masthead .tutor-nav {
