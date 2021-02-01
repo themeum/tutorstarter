@@ -26,7 +26,9 @@ class Enqueue {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );
 		add_filter( 'style_loader_tag', array( $this, 'load_styles_deferred' ), 10, 4 );
-		add_filter( 'script_loader_tag', array( $this, 'load_scripts_deferred' ), 10, 1 );
+		if ( ! is_admin() ) {
+			add_filter( 'script_loader_tag', array( $this, 'load_scripts_deferred' ), 10, 1 );
+		}
 		add_action( 'customize_preview_init', array( $this, 'enqueue_customize_preview' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_editor_assets' ) );
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_customizer_controls_scripts' ) );
