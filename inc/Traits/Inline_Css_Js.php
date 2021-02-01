@@ -375,6 +375,7 @@ trait Inline_Css_Js {
 		$localized_data = array(
 			'site_url'         =>  site_url(),
 			'ajaxurl'          =>  admin_url( 'admin-ajax.php' ),
+			'authRedirectUrl'  =>  home_url(),
 		);
 
 		return $localized_data;

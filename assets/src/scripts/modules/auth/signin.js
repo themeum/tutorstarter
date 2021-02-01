@@ -5,40 +5,40 @@
  */
 ( function () { 
    
-    const tutor_signin_form = document.querySelector('.tutor-signin-form');
-    if(null !== tutor_signin_form) {
+    const tutor_signin_form = document.querySelector( '.tutor-signin-form' );
+    if ( null !== tutor_signin_form ) {
 
-        tutor_signin_form.addEventListener('submit', userLogin);
+        tutor_signin_form.addEventListener( 'submit', userLogin );
         
-        function userLogin(e) {
+        function userLogin( e ) {
 
             e.preventDefault(); 
             
-            let request                 =  new XMLHttpRequest();
-            let ajaxurl                 =  tutorstarter_vars.ajaxurl;
-            let authRedirectUrl          =  tutorstarter_vars.authRedirectUrl;
+            let request         = new XMLHttpRequest();
+            let ajaxurl         = tutorstarter_vars.ajaxurl;
+            let authRedirectUrl = tutorstarter_vars.authRedirectUrl;
 
-            let reg_status       =  document.querySelector('.signup-status');
-            let data             =  new FormData();
-            let email            =  document.querySelector('#login_email').value;
-            let password         =  document.querySelector('#login_password').value;
-            let signinNonce      =  document.querySelector('#signin-nonce').value;
+            let reg_status  = document.querySelector('.signup-status');
+            let data        = new FormData();
+            let email       = document.querySelector('#login_email').value;
+            let password    = document.querySelector('#login_password').value;
+            let signinNonce = document.querySelector('#signin-nonce').value;
 
-            data.append('email', email);
-            data.append('password', password);
-            data.append('action', 'ajaxlogin'); 
-            data.append('signinNonce', signinNonce);
+            data.append( 'email', email );
+            data.append( 'password', password );
+            data.append( 'action', 'ajaxlogin' ); 
+            data.append( 'signinNonce', signinNonce );
 
-            request.open("POST", ajaxurl);
+            request.open( "POST", ajaxurl );
             
             request.onreadystatechange = function() {            
-                if(this.readyState === 4 && this.status === 200) {
-                    let response = JSON.parse(this.responseText); console.log(response)
+                if ( this.readyState === 4 && this.status === 200 ) {
+                    let response = JSON.parse( this.responseText );
                     reg_status.style.visibility = "visible";
-                    if (response.loggedin == true) {
+                    if ( response.loggedin == true ) {
                         reg_status.style.color = "#4285F4";
                         reg_status.innerText = response.message;
-                        window.location.replace(authRedirectUrl);
+                        window.location.replace( authRedirectUrl );
                     } else {
                         reg_status.style.color = "#dc3545";
                         reg_status.innerText = response.message;
@@ -46,9 +46,8 @@
                 }
             };      
 
-            request.send(data);
+            request.send( data );
         }
-
     }
-
+    
 })();

@@ -167,7 +167,6 @@ __webpack_require__.r(__webpack_exports__);
       request.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
           var response = JSON.parse(this.responseText);
-          console.log(response);
           reg_status.style.visibility = "visible";
 
           if (response.loggedin == true) {
