@@ -1827,6 +1827,144 @@ module.exports = ReactPropTypesSecret;
 
 /***/ }),
 
+/***/ "./inc/Api/Customizer/reactjs/src/color/color-component.js":
+/*!*****************************************************************!*\
+  !*** ./inc/Api/Customizer/reactjs/src/color/color-component.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+var useState = wp.element.useState;
+var ColorPicker = wp.components.ColorPicker;
+
+var ColorComponent = function ColorComponent(_ref) {
+  var control = _ref.control;
+
+  var _useState = useState(control.setting.get()),
+      _useState2 = _slicedToArray(_useState, 2),
+      color = _useState2[0],
+      setColor = _useState2[1];
+
+  var _useState3 = useState(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      displayColor = _useState4[0],
+      setDisplayColor = _useState4[1];
+
+  var displayColorContainer = function displayColorContainer() {
+    setDisplayColor(!displayColor);
+  };
+
+  return /*#__PURE__*/React.createElement("div", {
+    className: "tutorstarter-background-control",
+    onClick: displayColorContainer
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "color-control"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "customize-control-title"
+  }, control.params.label), /*#__PURE__*/React.createElement("div", {
+    className: "color-box",
+    style: {
+      backgroundColor: "rgba(".concat(color.rgb.r, ", ").concat(color.rgb.g, ", ").concat(color.rgb.b, ", ").concat(color.rgb.a, ")")
+    },
+    onClick: displayColorContainer
+  })), displayColor && /*#__PURE__*/React.createElement("div", {
+    className: "color-popup"
+  }, /*#__PURE__*/React.createElement(ColorPicker, {
+    color: color,
+    onChangeComplete: function onChangeComplete(updatedColor) {
+      setColor(updatedColor);
+      control.setting.set(updatedColor);
+    }
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ColorComponent);
+
+/***/ }),
+
+/***/ "./inc/Api/Customizer/reactjs/src/color/control.js":
+/*!*********************************************************!*\
+  !*** ./inc/Api/Customizer/reactjs/src/color/control.js ***!
+  \*********************************************************/
+/*! exports provided: ColorControl */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ColorControl", function() { return ColorControl; });
+/* harmony import */ var _color_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./color-component */ "./inc/Api/Customizer/reactjs/src/color/color-component.js");
+
+var ColorControl = wp.customize.Control.extend({
+  renderContent: function renderContent() {
+    var control = this;
+    ReactDOM.render( /*#__PURE__*/React.createElement(_color_component__WEBPACK_IMPORTED_MODULE_0__["default"], {
+      control: control
+    }), control.container[0]);
+  }
+});
+
+/***/ }),
+
 /***/ "./inc/Api/Customizer/reactjs/src/common/responsive.js":
 /*!*************************************************************!*\
   !*** ./inc/Api/Customizer/reactjs/src/common/responsive.js ***!
@@ -2088,18 +2226,21 @@ ResponsiveControl.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _typography_control__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./typography/control */ "./inc/Api/Customizer/reactjs/src/typography/control.js");
-/* harmony import */ var _font_family_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./font-family/control */ "./inc/Api/Customizer/reactjs/src/font-family/control.js");
-/* harmony import */ var _radio_image_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./radio-image/control */ "./inc/Api/Customizer/reactjs/src/radio-image/control.js");
-/* harmony import */ var _toggle_switch_control__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./toggle-switch/control */ "./inc/Api/Customizer/reactjs/src/toggle-switch/control.js");
+/* harmony import */ var _color_control__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./color/control */ "./inc/Api/Customizer/reactjs/src/color/control.js");
+/* harmony import */ var _typography_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./typography/control */ "./inc/Api/Customizer/reactjs/src/typography/control.js");
+/* harmony import */ var _font_family_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./font-family/control */ "./inc/Api/Customizer/reactjs/src/font-family/control.js");
+/* harmony import */ var _radio_image_control__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./radio-image/control */ "./inc/Api/Customizer/reactjs/src/radio-image/control.js");
+/* harmony import */ var _toggle_switch_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./toggle-switch/control */ "./inc/Api/Customizer/reactjs/src/toggle-switch/control.js");
 
 
 
 
-wp.customize.controlConstructor.tutorstarter_typography = _typography_control__WEBPACK_IMPORTED_MODULE_0__["TypographyControl"];
-wp.customize.controlConstructor.tutorstarter_font_family = _font_family_control__WEBPACK_IMPORTED_MODULE_1__["FontFamilyControl"];
-wp.customize.controlConstructor.tutorstarter_radio_image = _radio_image_control__WEBPACK_IMPORTED_MODULE_2__["RadioImageControl"];
-wp.customize.controlConstructor.tutorstarter_toggle_switch = _toggle_switch_control__WEBPACK_IMPORTED_MODULE_3__["ToggleSwitchControl"];
+
+wp.customize.controlConstructor.tutorstarter_color_alpha = _color_control__WEBPACK_IMPORTED_MODULE_0__["ColorControl"];
+wp.customize.controlConstructor.tutorstarter_typography = _typography_control__WEBPACK_IMPORTED_MODULE_1__["TypographyControl"];
+wp.customize.controlConstructor.tutorstarter_font_family = _font_family_control__WEBPACK_IMPORTED_MODULE_2__["FontFamilyControl"];
+wp.customize.controlConstructor.tutorstarter_radio_image = _radio_image_control__WEBPACK_IMPORTED_MODULE_3__["RadioImageControl"];
+wp.customize.controlConstructor.tutorstarter_toggle_switch = _toggle_switch_control__WEBPACK_IMPORTED_MODULE_4__["ToggleSwitchControl"];
 
 /***/ }),
 
@@ -3783,7 +3924,7 @@ TypographyComponent.propTypes = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Api/Customizer/reactjs/src/customizer-controls.js */"./inc/Api/Customizer/reactjs/src/customizer-controls.js");
+module.exports = __webpack_require__(/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Api/Customizer/reactjs/src/customizer-controls.js */"./inc/Api/Customizer/reactjs/src/customizer-controls.js");
 
 
 /***/ }),

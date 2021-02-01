@@ -15,7 +15,6 @@
 			"homepage": "https://themeum.com"
 		}
 	],
-	"require": {},
 	"autoload": {
 		"psr-4": {
 			"Tutor_Starter\\": "./inc"

@@ -384,3 +384,20 @@ select#_customize-input-blog_grid_selected {
   display: block;
 }
 
+.color-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color-box {
+  width: 50px;
+  height: 25px;
+}
+
+.color-popup {
+  position: relative;
+  z-index: 2;
+}
+

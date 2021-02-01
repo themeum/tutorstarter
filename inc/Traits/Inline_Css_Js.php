@@ -47,6 +47,17 @@ trait Inline_Css_Js {
 		$footer_bottom_text_color  = get_theme_mod( 'footer_bottom_text_color', '#ffffff' );
 		$footer_widgets_text_color = get_theme_mod( 'footer_widgets_text_color', '#ffffff' );
 
+		$hello_color =  get_theme_mod( 'hello_color',
+			array(
+				'rgb' => array(
+					'r' => 0,
+					'g' => 0,
+					'b' => 0,
+					'a' => 0.5,
+				),
+			),
+	 	);
+
 		// Body Typography.
 		$body_typography = get_theme_mod( 'main_typography',
 			array(
@@ -248,7 +259,7 @@ trait Inline_Css_Js {
 		// Inline CSS declarations.
 		$custom_css = "
 			:root {
-				--default-color: #ffffff;
+				--default-color: rgba({$hello_color['rgb']['r']}, {$hello_color['rgb']['g']}, {$hello_color['rgb']['b']}, {$hello_color['rgb']['a']});
 				--body-font: {$body_font};
 				--heading-font: {$heading_font};
 				--link-color: {$link_color};

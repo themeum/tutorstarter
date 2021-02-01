@@ -170,6 +170,19 @@ if ( ! function_exists( 'control_active_callback_non_trans' ) ) {
 	}
 }
 
+if ( ! function_exists( 'tutorstarter_sanitize_color' ) ) {
+	/**
+	 * Sanitize colors.
+	 *
+	 * @param array $value The color.
+	 * 
+	 * @return array
+	 */
+	function tutorstarter_sanitize_color( $value ) {
+		return $value;
+	}
+}
+
 if ( ! function_exists( 'control_active_callback_footer_layout' ) ) {
 	/**
 	 * Control active callback for footer layouts except five
