@@ -9036,6 +9036,54 @@ img {
   margin-bottom: 24px;
 }
 
+/* Instructor listing */
+
+.tutor-instructor-list.tutor-course-loop {
+  border: none;
+}
+
+.tutor-instructor-list .tutor-instructor-name {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0a083b;
+}
+
+.tutor-instructor-list .tutor-instructor-course-count {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tutor-instructor-list .tutor-instructor-course-count > span {
+  color: #57586e !important;
+}
+
+.tutor-instructor-list .tutor-instructor-rating * {
+  font-size: 12px;
+}
+
+.tutor-instructor-list .ratings {
+  margin-top: 20px;
+}
+
+.tutor-instructor-list .tutor-instructor-name {
+  margin-top: 14px !important;
+}
+
+.tutor-instructor-list .tutor-instructor-course-count {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.tutor-instructor-list .tutor-instructor-rating,
+.tutor-instructor-list .tutor-instructor-name,
+.tutor-instructor-list .tutor-instructor-course-count {
+  padding: 0px 24px !important;
+}
+
 section.tutor-theme-getting-starter .getting-started-page-heading {
   font-family: Libre Baskerville;
   font-weight: bold;
