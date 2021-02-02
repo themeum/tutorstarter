@@ -54,20 +54,20 @@ h1.entry-title {
 }
 
 .nav-links {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	margin-top: 15px;
-    margin-bottom: 10px;
-    a {
-        font-weight: 700;
-    }
+	margin-bottom: 10px;
+	a {
+		font-weight: 700;
+	}
 }
 .post-page-numbers.current {
-    font-weight: 700;
+	font-weight: 700;
 }
 
-.sticky {
+.single-post .sticky {
 	border: 1px solid #000000;
 	padding: 15px;
 }

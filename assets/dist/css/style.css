@@ -6979,7 +6979,7 @@ h1.entry-title {
   font-weight: 700;
 }
 
-.sticky {
+.single-post .sticky {
   border: 1px solid #000000;
   padding: 15px;
 }
@@ -9155,8 +9155,10 @@ section.tutor-theme-getting-starter .getting-started-footer {
 }
 
 section.tutor-theme-signin {
-  background: #F7F9FA;
+  background: #f7f9fa;
   padding: 100px 0px;
+  width: 100vw;
+  height: 100vh;
 }
 
 section.tutor-theme-signin .tutor-theme-signin-form-area {
@@ -9179,7 +9181,7 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
   font-size: 32px;
   line-height: 48px;
   text-align: center;
-  color: #0A083B;
+  color: #0a083b;
   padding: 0px 0px 40px 0px;
 }
 
@@ -9194,7 +9196,7 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  color: #0A083B;
+  color: #0a083b;
   margin-bottom: 12px;
 }
 
@@ -9244,7 +9246,7 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
   font-weight: normal;
   line-height: 26px;
   text-align: center;
-  color: #57586E;
+  color: #57586e;
 }
 
 section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp.signin-form-terms-condition a {
@@ -9253,7 +9255,7 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
 }
 
 section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form button {
-  background: #175CFF;
+  background: #175cff;
   border-radius: 33px;
   width: 100%;
   font-family: Inter;
@@ -9287,7 +9289,7 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
 }
 
 section.tutor-theme-signin .tutor-theme-signin-form-area .already-have-account-link {
-  color: #57586E;
+  color: #57586e;
   font-family: Inter;
   font-style: normal;
   font-weight: normal;

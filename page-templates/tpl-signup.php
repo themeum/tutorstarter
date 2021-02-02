@@ -55,7 +55,7 @@ defined( 'ABSPATH' ) || exit;
                                             <input name="confirm_password" id="confirm-password" type="password" placeholder="Confirm your password">
                                         </div>
                                         <div class="form-grp signup-form-terms-condition">
-                                            By signing up you agree to the <a href="">Terms and Conditions</a> and the <br> <a href="">  Privacy Policy</a>
+                                            By signing up you agree to the <a href="/terms-conditions">Terms and Conditions</a> and the <br> <a href="/privacy-policy">  Privacy Policy</a>
                                         </div>
                                         <?php do_action( 'tutorstarter_auth_recaptcha' ); ?>
                                         <button type="submit" class="btn btn-primary tutor-starter-btn"><?php _e( 'Sign up', 'tutorstarter' ); ?></button>
