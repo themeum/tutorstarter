@@ -19,6 +19,8 @@ node_modules/
 inc/Api/Customizer/reactjs/node_modules/
 assets/dist/css/
 assets/dist/js/
+assets/.DS_Store
+assets/dist/.DS_Store
 # ignore vendor dependency directories
 vendor/
 .DS_Store
