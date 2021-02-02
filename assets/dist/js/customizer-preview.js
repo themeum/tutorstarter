@@ -345,12 +345,12 @@
       }
     });
   });
-  wp.customize('cta_background_trans', function (value) {
+  wp.customize('background_trans_cta', function (value) {
     value.bind(function (updatedValue) {
       var ctaBackground = document.querySelector('.tutor-navbar-cart-transparent .tutor-get-started-btn .call-to-action, .btn-transparent .call-to-action');
 
       if (null !== ctaBackground) {
-        ctaBackground.style.backgroundColor = updatedValue;
+        ctaBackground.style.backgroundColor = "rgba(".concat(updatedValue.rgb.r, ", ").concat(updatedValue.rgb.g, ", ").concat(updatedValue.rgb.b, ", ").concat(updatedValue.rgb.a, ")");
       }
     });
   });
@@ -630,7 +630,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/scripts/customizer-preview.js */"./assets/src/scripts/customizer-preview.js");
+module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/scripts/customizer-preview.js */"./assets/src/scripts/customizer-preview.js");
 
 
 /***/ })

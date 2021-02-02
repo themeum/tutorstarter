@@ -8,7 +8,6 @@
 namespace Tutor_Starter\Api\Customizer\General;
 
 use WP_Customize_Color_Control;
-use Tutor_Starter\Api\Customizer\Custom_Controls\Color_Control;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -86,32 +85,6 @@ class Colors {
 				'link_color',
 				array(
 					'label'   => esc_html__( 'Link Color', 'tutorstarter' ),
-					'section' => 'tutorstarter_colors_section',
-				)
-			)
-		);
-		$wp_customize->add_setting(
-			'hello_color',
-			array(
-				'title'             => esc_html__( 'Test Color', 'tutorstarter' ),
-				'transport'         => 'postMessage',
-				'default'           => array(
-					'rgb' => array(
-						'r' => 0,
-						'g' => 0,
-						'b' => 0,
-						'a' => 0.5,
-					),
-				),
-				'sanitize_callback' => 'tutorstarter_sanitize_color',
-			)
-		);
-		$wp_customize->add_control(
-			new Color_Control(
-				$wp_customize,
-				'hello_color',
-				array(
-					'label'   => esc_html__( 'Test Color', 'tutorstarter' ),
 					'section' => 'tutorstarter_colors_section',
 				)
 			)

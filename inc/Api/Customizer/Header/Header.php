@@ -10,6 +10,7 @@ namespace Tutor_Starter\Api\Customizer\Header;
 use WP_Customize_Control;
 use WP_Customize_Color_Control;
 use WP_Customize_Image_Control;
+use Tutor_Starter\Api\Customizer\Custom_Controls\Color_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Typography_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Radio_Image_Control;
 use Tutor_Starter\Api\Customizer\Custom_Controls\Toggle_Switch_Control;
@@ -394,20 +395,27 @@ class Header {
 			)
 		);
 		$wp_customize->add_setting(
-			'cta_background_trans',
+			'background_trans_cta',
 			array(
-				'title'             => esc_html__( 'Transparent Button BG Color', 'tutorstarter' ),
+				'title'             => esc_html__( 'Transparent Btn BG Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#ffffff',
-				'sanitize_callback' => 'sanitize_hex_color',
+				'default'           => array(
+					'rgb' => array(
+						'r' => 0,
+						'g' => 0,
+						'b' => 0,
+						'a' => 0.5,
+					),
+				),
+				'sanitize_callback' => 'tutorstarter_sanitize_color',
 			)
 		);
 		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
+			new Color_Control(
 				$wp_customize,
-				'cta_background_trans',
+				'background_trans_cta',
 				array(
-					'label'           => esc_html__( 'Transparent Button BG Color', 'tutorstarter' ),
+					'label'           => esc_html__( 'Transparent Btn BG Color', 'tutorstarter' ),
 					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback_transparent',
 				)

@@ -1915,8 +1915,7 @@ var ColorComponent = function ColorComponent(_ref) {
   };
 
   return /*#__PURE__*/React.createElement("div", {
-    className: "tutorstarter-background-control",
-    onClick: displayColorContainer
+    className: "tutorstarter-background-control"
   }, /*#__PURE__*/React.createElement("div", {
     className: "color-control"
   }, /*#__PURE__*/React.createElement("span", {
@@ -3924,7 +3923,7 @@ TypographyComponent.propTypes = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Api/Customizer/reactjs/src/customizer-controls.js */"./inc/Api/Customizer/reactjs/src/customizer-controls.js");
+module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Api/Customizer/reactjs/src/customizer-controls.js */"./inc/Api/Customizer/reactjs/src/customizer-controls.js");
 
 
 /***/ }),

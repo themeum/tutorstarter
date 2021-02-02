@@ -238,11 +238,11 @@
             }
         })
     });
-    wp.customize('cta_background_trans', function (value) {
+    wp.customize('background_trans_cta', function (value) {
         value.bind(function (updatedValue) {
             let ctaBackground = document.querySelector('.tutor-navbar-cart-transparent .tutor-get-started-btn .call-to-action, .btn-transparent .call-to-action');
             if (null !== ctaBackground) {
-                ctaBackground.style.backgroundColor = updatedValue;
+                ctaBackground.style.backgroundColor = `rgba(${updatedValue.rgb.r}, ${updatedValue.rgb.g}, ${updatedValue.rgb.b}, ${updatedValue.rgb.a})`;
             }
         })
     });

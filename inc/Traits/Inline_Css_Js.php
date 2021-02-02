@@ -32,7 +32,6 @@ trait Inline_Css_Js {
 		$cart_color                = get_theme_mod( 'cart_color', '#57586E' );
 		$cart_color_trans          = get_theme_mod( 'cart_color_trans', '#175cff' );
 		$cta_background            = get_theme_mod( 'cta_background', '#ffffff' );
-		$cta_background_trans      = get_theme_mod( 'cta_background_trans', '#ffffff' );
 		$cta_border_color          = get_theme_mod( 'cta_border_color', '#1539e9' );
 		$cta_border_color_trans    = get_theme_mod( 'cta_border_color_trans', '#ffffff' );
 		$cta_border_width          = get_theme_mod( 'cta_border_width', 1 );
@@ -47,7 +46,7 @@ trait Inline_Css_Js {
 		$footer_bottom_text_color  = get_theme_mod( 'footer_bottom_text_color', '#ffffff' );
 		$footer_widgets_text_color = get_theme_mod( 'footer_widgets_text_color', '#ffffff' );
 
-		$hello_color =  get_theme_mod( 'hello_color',
+		$cta_background_trans =  get_theme_mod( 'background_trans_cta',
 			array(
 				'rgb' => array(
 					'r' => 0,
@@ -259,7 +258,7 @@ trait Inline_Css_Js {
 		// Inline CSS declarations.
 		$custom_css = "
 			:root {
-				--default-color: rgba({$hello_color['rgb']['r']}, {$hello_color['rgb']['g']}, {$hello_color['rgb']['b']}, {$hello_color['rgb']['a']});
+				--default-color: #ffffff;
 				--body-font: {$body_font};
 				--heading-font: {$heading_font};
 				--link-color: {$link_color};
@@ -291,7 +290,7 @@ trait Inline_Css_Js {
 				--h6-text-transform: {$h6_typography['textTransform']};
 				--primary-menu-bg-color: {$menu_bg_color};
 				--cta-background-color: {$cta_background};
-				--cta-background-color-trans: {$cta_background_trans};
+				--cta-background-color-trans: rgba({$cta_background_trans['rgb']['r']}, {$cta_background_trans['rgb']['g']}, {$cta_background_trans['rgb']['b']}, {$cta_background_trans['rgb']['a']});
 				--cta-border-color: {$cta_border_color};
 				--cta-border-color-trans: {$cta_border_color_trans};
 				--cta-border-width: {$cta_border_width}px;

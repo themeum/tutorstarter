@@ -11,7 +11,7 @@ const ColorComponent = ( { control } ) => {
     }
 
     return (
-        <div className='tutorstarter-background-control' onClick={displayColorContainer}>
+        <div className='tutorstarter-background-control'>
             <div className='color-control'>
                 <span className='customize-control-title'>
                     { control.params.label }

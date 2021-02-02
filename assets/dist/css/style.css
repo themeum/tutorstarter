@@ -1414,10 +1414,6 @@ body.admin-bar .navbar-nav {
   }
 }
 
-.transparent-header .call-to-action {
-  background: transparent !important;
-}
-
 .transparent-header .navbar-toggler svg {
   fill: #fff;
 }
