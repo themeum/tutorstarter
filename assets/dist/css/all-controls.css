@@ -394,6 +394,7 @@ select#_customize-input-blog_grid_selected {
 .color-box {
   width: 50px;
   height: 25px;
+  border: 1px solid #000;
 }
 
 .color-popup {
