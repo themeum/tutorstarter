@@ -9699,6 +9699,7 @@ body.woocommerce-cart .site-content {
 
 .woocommerce button.button:hover {
   background-color: #0a083b !important;
+  color: #fff;
 }
 
 .woocommerce div.product p.price ins,
