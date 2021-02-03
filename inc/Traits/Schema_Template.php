@@ -44,6 +44,41 @@ trait Schema_Template {
 	}
 
 	/**
+	 * Course
+	 *
+	 * @param string schema type.
+	 *
+	 * @return array schema
+	 */
+	public static function course( $schema_type ) {
+		// Get the relevant meta.
+		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema_metadata', true );
+
+		if ( ! empty( $post_meta ) && 'Course' === $schema_type ) {
+			$schema = array(
+				'@context' => 'http://schema.org',
+				'@type'    => 'Course',
+			);
+
+			if ( '' !== $post_meta['name'] ) {
+				$schema['name'] = $post_meta['name'];
+			}
+
+			if ( '' !== $post_meta['description'] ) {
+				$schema['description'] = $post_meta['description'];
+			}
+
+			if ( '' !== $post_meta['provider_name'] ) {
+				$schema['provider']          = array();
+				$schema['provider']['@type'] = 'Organization';
+				$schema['provider']['name']  = $post_meta['provider_name'];
+			}
+		}
+
+		return $schema;
+	}
+
+	/**
 	 * Blog post
 	 *
 	 * @return array schema

@@ -198,11 +198,14 @@ var SchemaFields = function SchemaFields(_ref) {
       }, {
         label: __('Person', 'tutorstarter'),
         value: 'Person'
+      }, {
+        label: __('Course', 'tutorstarter'),
+        value: 'Course'
       }],
       onChange: function onChange(value) {
         return updateMeta(value, 'main_schema_select');
       }
-    }), 'WebPage' !== updatedValue.main_schema_select && 'Video' !== updatedValue.main_schema_select && /*#__PURE__*/React.createElement(SelectControl, {
+    }), 'WebPage' !== updatedValue.main_schema_select && 'Video' !== updatedValue.main_schema_select && 'Course' !== updatedValue.main_schema_select && /*#__PURE__*/React.createElement(SelectControl, {
       label: 'Person' === updatedValue.main_schema_select ? __('Gender', 'tutorstarter') : __('Sub Schema Type', 'tutorstarter'),
       value: updatedValue.sub_schema_select,
       options: selectOptions(updatedValue.main_schema_select),
@@ -265,7 +268,7 @@ var SchemaFields = function SchemaFields(_ref) {
       onChange: function onChange(value) {
         return updateMeta(value, 'po_box');
       }
-    })), 'Person' !== updatedValue.main_schema_select && 'WebPage' !== updatedValue.main_schema_select && /*#__PURE__*/React.createElement(TextControl, {
+    })), 'Person' !== updatedValue.main_schema_select && 'WebPage' !== updatedValue.main_schema_select && 'Course' !== updatedValue.main_schema_select && /*#__PURE__*/React.createElement(TextControl, {
       label: 'Video' === updatedValue.main_schema_select ? __('Thumbnail URL', 'tutorstarter') : __('Logo/Image URL', 'tutorstarter'),
       placeholder: __('e.g: https://site.com/image-url.jpg', 'tutorstarter'),
       value: updatedValue.logo_url,
@@ -286,7 +289,7 @@ var SchemaFields = function SchemaFields(_ref) {
       onChange: function onChange(value) {
         return updateMeta(value, 'po_box');
       }
-    }), 'WebPage' !== updatedValue.main_schema_select && 'Video' !== updatedValue.main_schema_select && 'Review' !== updatedValue.main_schema_select && /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(TextControl, {
+    }), 'WebPage' !== updatedValue.main_schema_select && 'Video' !== updatedValue.main_schema_select && 'Review' !== updatedValue.main_schema_select && 'Course' !== updatedValue.main_schema_select && /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(TextControl, {
       label: __('Address', 'tutorstarter'),
       placeholder: __('e.g: 45, johnson road', 'tutorstarter'),
       value: updatedValue.address,
@@ -407,6 +410,13 @@ var SchemaFields = function SchemaFields(_ref) {
       value: updatedValue.publisher_name,
       onChange: function onChange(value) {
         return updateMeta(value, 'publisher_name');
+      }
+    })), 'Course' === updatedValue.main_schema_select && /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(TextControl, {
+      label: __('Provider Name', 'tutorstarter'),
+      placeholder: __('e.g: Awesome Course Org.', 'tutorstarter'),
+      value: updatedValue.provider_name,
+      onChange: function onChange(value) {
+        return updateMeta(value, 'provider_name');
       }
     })));
   }
