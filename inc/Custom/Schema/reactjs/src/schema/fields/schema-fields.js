@@ -83,10 +83,11 @@ const SchemaFields = ({ updatedValue, updateMeta }) => {
                         { label: __('Video', 'tutorstarter'), value: 'Video' },
                         { label: __('Review', 'tutorstarter'), value: 'Review' },
                         { label: __('Person', 'tutorstarter'), value: 'Person' },
+                        { label: __('Course', 'tutorstarter'), value: 'Course' },
                     ]}
                     onChange={(value) => updateMeta(value, 'main_schema_select')}
                 />
-                { 'WebPage' !== updatedValue.main_schema_select && 'Video' !== updatedValue.main_schema_select &&
+                { 'WebPage' !== updatedValue.main_schema_select && 'Video' !== updatedValue.main_schema_select && 'Course' !== updatedValue.main_schema_select &&
                     <SelectControl
                         label={'Person' === updatedValue.main_schema_select ? __('Gender', 'tutorstarter') : __('Sub Schema Type', 'tutorstarter')}
                         value={updatedValue.sub_schema_select}
@@ -146,7 +147,7 @@ const SchemaFields = ({ updatedValue, updateMeta }) => {
                         />
                     </Fragment>
                 }
-                { 'Person' !== updatedValue.main_schema_select && 'WebPage' !== updatedValue.main_schema_select &&
+                { 'Person' !== updatedValue.main_schema_select && 'WebPage' !== updatedValue.main_schema_select && 'Course' !== updatedValue.main_schema_select &&
                     <TextControl
                         label={'Video' === updatedValue.main_schema_select ? __('Thumbnail URL', 'tutorstarter') : __('Logo/Image URL', 'tutorstarter')}
                         placeholder={__('e.g: https://site.com/image-url.jpg', 'tutorstarter')}
@@ -170,7 +171,7 @@ const SchemaFields = ({ updatedValue, updateMeta }) => {
                         onChange={(value) => updateMeta(value, 'po_box')}
                     />
                 }
-                { 'WebPage' !== updatedValue.main_schema_select && 'Video' !== updatedValue.main_schema_select && 'Review' !== updatedValue.main_schema_select &&
+                { 'WebPage' !== updatedValue.main_schema_select && 'Video' !== updatedValue.main_schema_select && 'Review' !== updatedValue.main_schema_select && 'Course' !== updatedValue.main_schema_select &&
                     <Fragment>
                         <TextControl
                             label={__('Address', 'tutorstarter')}
@@ -285,6 +286,16 @@ const SchemaFields = ({ updatedValue, updateMeta }) => {
                             value={updatedValue.publisher_name}
                             onChange={(value) => updateMeta(value, 'publisher_name')}
                         />
+                    </Fragment>
+                }
+                { 'Course' === updatedValue.main_schema_select && 
+                    <Fragment>
+                        <TextControl
+                                label={__('Provider Name', 'tutorstarter')}
+                                placeholder={__('e.g: Awesome Course Org.', 'tutorstarter')}
+                                value={updatedValue.provider_name}
+                                onChange={(value) => updateMeta(value, 'provider_name')}
+                            />
                     </Fragment>
                 }
             </Fragment>

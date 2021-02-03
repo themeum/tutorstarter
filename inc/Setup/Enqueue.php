@@ -29,6 +29,7 @@ class Enqueue {
 		if ( ! is_admin() && ! is_customize_preview() ) {
 			add_filter( 'script_loader_tag', array( $this, 'load_scripts_deferred' ), 10, 1 );
 		}
+		add_filter( 'use_block_editor_for_post_type', array( $this, 'enable_gutenberg_on_product_page' ), 10, 2 );
 		add_action( 'customize_preview_init', array( $this, 'enqueue_customize_preview' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_editor_assets' ) );
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_customizer_controls_scripts' ) );
@@ -132,6 +133,22 @@ class Enqueue {
 		$link_to_preload = '<link rel="preload" href="' . get_site_url( null, '/wp-content/plugins/qubely/assets/fonts/fa-solid-900.woff2' ) . '" as="font" crossorigin="anonymous">';
 
 		echo $link_to_preload;
+	}
+
+	/**
+	 * Enable gutenberg on product page
+	 * 
+	 * @param string $post_type
+	 * @param bool $can_edit
+	 * 
+	 * @return bool $can_edit
+	 */
+	public function enable_gutenberg_on_product_page( $can_edit, $post_type ) {
+		if ( 'product' === $post_type ) {
+			$can_edit = true;
+		}
+
+		return $can_edit;
 	}
 
 	/**

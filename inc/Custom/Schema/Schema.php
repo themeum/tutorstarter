@@ -163,6 +163,10 @@ class Schema {
 								'type'              => 'string',
 								'sanitize_callback' => 'sanitize_text_field',
 							),
+							'provider_name'         => array(
+								'type'              => 'string',
+								'sanitize_callback' => 'sanitize_text_field',
+							),
 						),
 					),
 				),
@@ -195,6 +199,8 @@ class Schema {
 				$schema = Schema_Template::video( $type );
 			} elseif ( 'Review' === $type ) {
 				$schema = Schema_Template::review( $type );
+			} elseif( 'Course' === $type ) {
+				$schema = Schema_Template::course( $type );
 			} elseif ( 'post' === get_post_type() ) {
 				$schema = Schema_Template::blog_post();
 			}
