@@ -93,7 +93,20 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+(function () {
+  var select_value = document.querySelector('#hcf_select');
+  var date_value = document.querySelector('#hcf_published_date');
 
+  if (null !== select_value) {
+    select_value.addEventListener('change', function () {
+      if ('Course' === select_value.value) {
+        date_value.style.display = 'none';
+      } else {
+        date_value.style.display = 'block';
+      }
+    });
+  }
+})();
 
 /***/ }),
 
@@ -104,7 +117,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/wp-tutor-starter/wp-content/themes/tutorstarter/assets/src/scripts/admin.js */"./assets/src/scripts/admin.js");
+module.exports = __webpack_require__(/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/scripts/admin.js */"./assets/src/scripts/admin.js");
 
 
 /***/ })

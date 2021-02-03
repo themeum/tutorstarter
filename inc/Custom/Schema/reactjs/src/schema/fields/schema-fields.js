@@ -291,11 +291,11 @@ const SchemaFields = ({ updatedValue, updateMeta }) => {
                 { 'Course' === updatedValue.main_schema_select && 
                     <Fragment>
                         <TextControl
-                                label={__('Provider Name', 'tutorstarter')}
-                                placeholder={__('e.g: Awesome Course Org.', 'tutorstarter')}
-                                value={updatedValue.provider_name}
-                                onChange={(value) => updateMeta(value, 'provider_name')}
-                            />
+                            label={__('Provider Name', 'tutorstarter')}
+                            placeholder={__('e.g: Awesome Course Org.', 'tutorstarter')}
+                            value={updatedValue.provider_name}
+                            onChange={(value) => updateMeta(value, 'provider_name')}
+                        />
                     </Fragment>
                 }
             </Fragment>

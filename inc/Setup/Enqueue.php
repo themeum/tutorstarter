@@ -29,7 +29,7 @@ class Enqueue {
 		if ( ! is_admin() && ! is_customize_preview() ) {
 			add_filter( 'script_loader_tag', array( $this, 'load_scripts_deferred' ), 10, 1 );
 		}
-		add_filter( 'use_block_editor_for_post_type', array( $this, 'enable_gutenberg_on_product_page' ), 10, 2 );
+		//add_filter( 'use_block_editor_for_post_type', array( $this, 'enable_gutenberg_on_product_page' ), 10, 2 );
 		add_action( 'customize_preview_init', array( $this, 'enqueue_customize_preview' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_editor_assets' ) );
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_customizer_controls_scripts' ) );
@@ -156,7 +156,8 @@ class Enqueue {
 	 */
 	public function enqueue_admin_scripts() {
 		wp_enqueue_style( 'tutorstarter-dashboard', mix( 'css/dashboard.css' ), array( 'wp-components' ), TUTOR_STARTER_VERSION, 'all' );
-
+		wp_enqueue_script( 'tutorstarter-admin-scc', mix( 'js/admin.js' ), array( 'jquery' ), TUTOR_STARTER_VERSION, true );
+		
 		if ( ! isset( $_GET['page'] ) || 'tutorstarter' !== $_GET['page'] ) {
 			return;
 		}

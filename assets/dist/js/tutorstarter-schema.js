@@ -720,7 +720,8 @@ var SchemaFieldsData = compose([withSelect(function () {
         publisher_type: '',
         publisher_name: '',
         keywords: '',
-        article_body: ''
+        article_body: '',
+        provider_name: ''
       }, meta);
       meta[prop] = value;
       dispatch('core/editor').editPost({
@@ -769,7 +770,7 @@ registerPlugin('tutorstarter-schema-panel', {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/wp-tutor-starter/wp-content/themes/tutorstarter/inc/Custom/Schema/reactjs/src/tutorstarter-schema.js */"./inc/Custom/Schema/reactjs/src/tutorstarter-schema.js");
+module.exports = __webpack_require__(/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Custom/Schema/reactjs/src/tutorstarter-schema.js */"./inc/Custom/Schema/reactjs/src/tutorstarter-schema.js");
 
 
 /***/ })
