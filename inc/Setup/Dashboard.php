@@ -31,7 +31,7 @@ class Dashboard {
 		$capability = 'manage_options';
 		$menu_slug  = 'tutorstarter';
 		$callback   = array( $this, 'dashboard_callback' );
-		$icon       = 'dashicons-superhero-alt';
+		$icon       = get_template_directory_uri() . '/assets/dist/images/admin-logo.png';
 
 		add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $callback, $icon );
 		add_submenu_page( $menu_slug, $page_title, __( 'General', 'tutorstarter' ), $capability, $menu_slug, $callback );
