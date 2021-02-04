@@ -9725,3 +9725,51 @@ body.woocommerce-cart .site-content {
   opacity: 1;
 }
 
+.tutor-starter-custom-subscription {
+  position: relative;
+}
+
+.tutor-starter-custom-subscription input[type=email] {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  width: 478px;
+  width: 100%;
+  height: 58px;
+  color: rgba(10, 8, 59, 0.5);
+  background: #ffffff;
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+  border-radius: 40px;
+  outline: none;
+  padding: 10px 22px;
+  position: relative;
+}
+
+.tutor-starter-custom-subscription input[type=email]:focus {
+  border-color: #175cff;
+  color: #0a083b;
+}
+
+.tutor-starter-custom-subscription button {
+  cursor: pointer;
+  position: absolute;
+  outline: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  background: #175cff;
+  color: #fff;
+  border-radius: 108px;
+  border: 1px solid #175cff;
+  padding: 10px 36px;
+  right: 8px;
+  top: 8px;
+  height: calc(100% - 16px);
+  transition: 0.2s linear;
+}
+
+.tutor-starter-custom-subscription button:hover,
+.tutor-starter-custom-subscription buttonfocus {
+  background: #0a083b;
+}
+
