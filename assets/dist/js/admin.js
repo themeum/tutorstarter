@@ -90,10 +90,91 @@
 /*!*************************************!*\
   !*** ./assets/src/scripts/admin.js ***!
   \*************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_schema_schema__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/schema/schema */ "./assets/src/scripts/modules/schema/schema.js");
+/* harmony import */ var _modules_schema_schema__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_schema_schema__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/***/ }),
+
+/***/ "./assets/src/scripts/modules/schema/schema.js":
+/*!*****************************************************!*\
+  !*** ./assets/src/scripts/modules/schema/schema.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+(function () {
+  var mainSchemaSelect = document.querySelector('#main_schema_select');
+  var subSchemaSelect = document.querySelector('.meta-sub-schema');
+  var name = document.querySelector('.meta-name');
+  var description = document.querySelector('.meta-description');
+  var logoUrl = document.querySelector('.meta-logo');
+  var address = document.querySelector('.meta-address');
+  var phone = document.querySelector('.meta-phone');
+  var city = document.querySelector('.meta-city');
+  var stateRegion = document.querySelector('.meta-state-region');
+  var zipCode = document.querySelector('.meta-zip-code');
+  var country = document.querySelector('.meta-country');
+  var poBox = document.querySelector('.meta-po-box');
+  var jobTitle = document.querySelector('.meta-job-title');
+  var height = document.querySelector('.meta-height');
+  var birthDate = document.querySelector('.meta-birth-date');
+  var birthPlace = document.querySelector('.meta-birth-place');
+  var nationality = document.querySelector('.meta-nationality');
+  var duration = document.querySelector('.meta-duration');
+  var uploadDate = document.querySelector('.meta-upload-date');
+  var contentUrl = document.querySelector('.meta-content-url');
+  var embedUrl = document.querySelector('.meta-embed-url');
+  var interactionCount = document.querySelector('.meta-interaction-count');
+  var ratingValue = document.querySelector('.meta-rating-value');
+  var reviewedProduct = document.querySelector('.meta-reviewed-product');
+  var reviewedBy = document.querySelector('.meta-reviewed-by');
+  var datePublished = document.querySelector('.meta-date-published');
+  var publisherType = document.querySelector('.meta-publisher-type');
+  var publisherName = document.querySelector('.meta-publisher-name');
+  var keywords = document.querySelector('.meta-keywords');
+  var articleBody = document.querySelector('.meta-article-body');
+  var providerName = document.querySelector('.meta-provider-name');
 
+  if (null !== mainSchemaSelect) {
+    mainSchemaSelect.addEventListener('change', function () {
+      if ('Course' === mainSchemaSelect.value) {
+        null !== logoUrl ? logoUrl.style.display = 'none' : '';
+        null !== address ? address.style.display = 'none' : '';
+        null !== phone ? phone.style.display = 'none' : '';
+        null !== city ? city.style.display = 'none' : '';
+        null !== stateRegion ? stateRegion.style.display = 'none' : '';
+        null !== zipCode ? zipCode.style.display = 'none' : '';
+        null !== country ? country.style.display = 'none' : '';
+        null !== poBox ? poBox.style.display = 'none' : '';
+        null !== jobTitle ? jobTitle.style.display = 'none' : '';
+        null !== height ? height.style.display = 'none' : '';
+        null !== birthDate ? birthDate.style.display = 'none' : '';
+        null !== birthPlace ? birthPlace.style.display = 'none' : '';
+        null !== nationality ? nationality.style.display = 'none' : '';
+        null !== duration ? duration.style.display = 'none' : '';
+        null !== uploadDate ? uploadDate.style.display = 'none' : '';
+        null !== contentUrl ? contentUrl.style.display = 'none' : '';
+        null !== embedUrl ? embedUrl.style.display = 'none' : '';
+        null !== interactionCount ? interactionCount.style.display = 'none' : '';
+        null !== ratingValue ? ratingValue.style.display = 'none' : '';
+        null !== reviewedProduct ? reviewedProduct.style.display = 'none' : '';
+        null !== reviewedBy ? reviewedBy.style.display = 'none' : '';
+        null !== datePublished ? datePublished.style.display = 'none' : '';
+        null !== publisherType ? publisherType.style.display = 'none' : '';
+        null !== publisherName ? publisherName.style.display = 'none' : '';
+        null !== keywords ? keywords.style.display = 'none' : '';
+        null !== articleBody ? articleBody.style.display = 'none' : '';
+        null !== subSchemaSelect ? subSchemaSelect.style.display = 'none' : '';
+      }
+    });
+  }
+})();
 
 /***/ }),
 
@@ -104,7 +185,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/wp-tutor-starter/wp-content/themes/tutorstarter/assets/src/scripts/admin.js */"./assets/src/scripts/admin.js");
+module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/scripts/admin.js */"./assets/src/scripts/admin.js");
 
 
 /***/ })

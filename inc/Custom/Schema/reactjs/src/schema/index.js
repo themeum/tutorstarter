@@ -44,6 +44,7 @@ const SchemaFieldsData = compose([
                 publisher_name: '',
                 keywords: '',
                 article_body: '',
+                provider_name: '',
                 ...meta
             };
             meta[prop] = value;
