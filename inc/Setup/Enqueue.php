@@ -156,7 +156,7 @@ class Enqueue {
 	 */
 	public function enqueue_admin_scripts() {
 		wp_enqueue_style( 'tutorstarter-dashboard', mix( 'css/dashboard.css' ), array( 'wp-components' ), TUTOR_STARTER_VERSION, 'all' );
-		wp_enqueue_script( 'tutorstarter-admin-scc', mix( 'js/admin.js' ), array( 'jquery' ), TUTOR_STARTER_VERSION, true );
+		wp_enqueue_script( 'tutorstarter-admin', mix( 'js/admin.js' ), array(), TUTOR_STARTER_VERSION, true );
 		
 		if ( ! isset( $_GET['page'] ) || 'tutorstarter' !== $_GET['page'] ) {
 			return;

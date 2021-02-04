@@ -26,156 +26,6 @@ class Custom_Metabox {
 	}
 
 	/**
-	 * Register schema meta
-	 */
-	public function register_schema_post_meta() {
-		register_post_meta(
-			'',
-			'_tutorstarter_schema_metadata',
-			array(
-				'type'          => 'object',
-				'single'        => true,
-				'auth_callback' => '__return_true',
-				'show_in_rest'  => array(
-					'schema' => array(
-						'type'       => 'object',
-						'properties' => array(
-							'main_schema_select' => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'sub_schema_select'  => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'name'               => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'logo_url'           => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'description'        => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'wp_filter_nohtml_kses',
-							),
-							'address'            => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'phone'              => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'email'              => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'city'               => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'state_region'       => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'zip_code'           => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'country'            => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'po_box'             => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'job_title'          => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'height'             => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'birth_date'         => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'birth_place'        => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'nationality'        => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'duration'           => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'upload_date'        => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'content_url'        => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'embed_url'          => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'interaction_count'  => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'rating_value'       => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'reviewed_product'   => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'reviewed_by'        => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'date_published'     => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'publisher_type'     => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'publisher_name'     => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'keywords'           => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'article_body'       => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'provider_name'         => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-						),
-					),
-				),
-			)
-		);
-	}
-
-	/**
 	 * Add custom metaboxes
 	 */
 	public function add_custom_meta_boxes() {
@@ -195,16 +45,20 @@ class Custom_Metabox {
 	public function save_schema_meta_data( $post_id ) {
 
 		if ( ! isset( $_POST['tutorstarter_metabox_nonce'] ) ) {
-            return $post_id;
+            return;
         }
  
         $nonce = $_POST['tutorstarter_metabox_nonce'];
  
         if ( ! wp_verify_nonce( $nonce, 'tutorstarter_metabox_inputs' ) ) {
-            return $post_id;
+            return;
         }
 
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+			return;
+		}
+
+		if ( ! current_user_can( 'edit_posts' ) ) {
 			return;
 		}
 
@@ -212,11 +66,39 @@ class Custom_Metabox {
 			$post_id = $parent_id;
 		}
 
-		$fields = [
-			'hcf_author' => sanitize_text_field( $_POST['hcf_author'] ),
-			'hcf_published_date' => sanitize_text_field( $_POST['hcf_published_date'] ),
-			'hcf_price' => sanitize_text_field( $_POST['hcf_price'] ),
-		];
+		$fields = array(
+			'main_schema_select' => sanitize_text_field( $_POST['main_schema_select'] ),
+			'sub_schema_select'  => sanitize_text_field( $_POST['sub_schema_select'] ),
+			'name'               => sanitize_text_field( $_POST['name'] ),
+			'logo_url'           => sanitize_text_field( $_POST['logo_url'] ),
+			'description'        => sanitize_text_field( $_POST['description'] ),
+			'address'            => sanitize_text_field( $_POST['address'] ),
+			'phone'              => sanitize_text_field( $_POST['phone'] ),
+			'city'               => sanitize_text_field( $_POST['city'] ),
+			'state_region'       => sanitize_text_field( $_POST['state_region'] ),
+			'zip_code'           => sanitize_text_field( $_POST['zip_code'] ),
+			'country'            => sanitize_text_field( $_POST['country'] ),
+			'po_box'             => sanitize_text_field( $_POST['po_box'] ),
+			'job_title'          => sanitize_text_field( $_POST['job_title'] ),
+			'height'             => sanitize_text_field( $_POST['height'] ),
+			'birth_date'         => sanitize_text_field( $_POST['birth_date'] ),
+			'birth_place'        => sanitize_text_field( $_POST['birth_place'] ),
+			'nationality'        => sanitize_text_field( $_POST['nationality'] ),
+			'duration'           => sanitize_text_field( $_POST['duration'] ),
+			'upload_date'        => sanitize_text_field( $_POST['upload_date'] ),
+			'content_url'        => sanitize_text_field( $_POST['content_url'] ),
+			'embed_url'          => sanitize_text_field( $_POST['embed_url'] ),
+			'interaction_count'  => sanitize_text_field( $_POST['interaction_count'] ),
+			'rating_value'       => sanitize_text_field( $_POST['rating_value'] ),
+			'reviewed_product'   => sanitize_text_field( $_POST['reviewed_product'] ),
+			'reviewed_by'        => sanitize_text_field( $_POST['reviewed_by'] ),
+			'date_published'     => sanitize_text_field( $_POST['date_published'] ),
+			'publisher_type'     => sanitize_text_field( $_POST['publisher_type'] ),
+			'publisher_name'     => sanitize_text_field( $_POST['publisher_name'] ),
+			'keywords'           => sanitize_text_field( $_POST['keywords'] ),
+			'article_body'       => sanitize_text_field( $_POST['article_body'] ),
+			'provider_name'      => sanitize_text_field( $_POST['provider_name'] ),
+		);
 
 		update_post_meta( $post_id, '_tutorstarter_schema', $fields );
 	}

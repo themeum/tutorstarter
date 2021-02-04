@@ -218,7 +218,7 @@ render( /*#__PURE__*/React.createElement(_index__WEBPACK_IMPORTED_MODULE_0__["de
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js */"./inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js");
+module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js */"./inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js");
 
 
 /***/ })

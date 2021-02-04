@@ -11,3 +11,15 @@ body.gutenberg-editor-page .editor-block-list__block {
     margin-left: 2%;
     margin-right: 2%;
 }
+.tutorstarter-metabox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.tutorstarter-meta-field {
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+    width: 100%;
+}
