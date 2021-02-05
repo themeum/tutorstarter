@@ -23,7 +23,7 @@ trait Schema_Template {
 	 */
 	public static function web_page( $schema_type ) {
 		// Get the relevant meta.
-		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema_metadata', true );
+		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema', true );
 
 		if ( ! empty( $post_meta ) && 'WebPage' === $schema_type ) {
 			$schema = array(
@@ -52,7 +52,7 @@ trait Schema_Template {
 	 */
 	public static function course( $schema_type ) {
 		// Get the relevant meta.
-		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema_metadata', true );
+		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema', true );
 
 		if ( ! empty( $post_meta ) && 'Course' === $schema_type ) {
 			$schema = array(
@@ -85,7 +85,7 @@ trait Schema_Template {
 	 */
 	public static function blog_post() {
 		// Get the relevant meta.
-		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema_metadata', true );
+		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema', true );
 
 		if ( ! empty( $post_meta ) ) {
 			$schema = array(
@@ -157,7 +157,7 @@ trait Schema_Template {
 	 */
 	public static function video( $schema_type ) {
 		// Get the relevant meta.
-		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema_metadata', true );
+		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema', true );
 
 		if ( ! empty( $post_meta ) && 'Video' === $schema_type ) {
 			$schema = array(
@@ -210,7 +210,7 @@ trait Schema_Template {
 	 */
 	public static function review( $schema_type ) {
 		// Get the relevant meta.
-		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema_metadata', true );
+		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema', true );
 
 		if ( ! empty( $post_meta ) && 'Review' === $schema_type ) {
 			$schema = array(
@@ -277,7 +277,7 @@ trait Schema_Template {
 	 */
 	public static function organization( $schema_type ) {
 		// Get the relevant meta.
-		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema_metadata', true );
+		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema', true );
 
 		if ( ! empty( $post_meta ) && 'Organization' === $schema_type ) {
 			$schema = array(
@@ -336,7 +336,7 @@ trait Schema_Template {
 	 */
 	public static function local_business( $schema_type ) {
 		// Get the relevant meta.
-		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema_metadata', true );
+		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema', true );
 
 		if ( ! empty( $post_meta ) && 'LocalBusiness' === $schema_type ) {
 			$schema = array(
@@ -391,7 +391,7 @@ trait Schema_Template {
 	 */
 	public static function person( $schema_type ) {
 		// Get the relevant meta.
-		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema_metadata', true );
+		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema', true );
 
 		if ( ! empty( $post_meta ) && 'Person' === $schema_type ) {
 			$schema = array(

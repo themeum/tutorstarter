@@ -24,10 +24,9 @@ mix.setPublicPath('./assets/dist');
 
 // Compile assets
 mix.js('assets/src/scripts/app.js', 'assets/dist/js')
-	.js('assets/src/scripts/admin.js', 'assets/dist/js')
 	.js('assets/src/scripts/customizer-preview.js', 'assets/dist/js')
 	.react('inc/Api/Customizer/reactjs/src/customizer-controls.js', 'assets/dist/js')
-	.react('inc/Custom/Schema/reactjs/src/tutorstarter-schema.js', 'assets/dist/js')
+	.react('inc/Custom/Schema/schemajs/src/tutor-schema.js', 'assets/dist/js')
 	.react('inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js', 'assets/dist/js')
 	.react('inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js', 'assets/dist/js')
 	.sass('assets/src/sass/style.scss', 'assets/dist/css')
