@@ -18,53 +18,67 @@ class Page_Settings {
 	 * Register
 	 */
 	public function register() {
-		add_action( 'init', array( $this, 'register_page_settings_meta' ) );
+		add_action( 'add_meta_boxes', array( $this, 'add_page_settings_meta' ) );
+		add_action( 'save_post', array( $this, 'save_page_settings_meta' ) );
 	}
 
 	/**
 	 * Register page settings meta
 	 */
-	public function register_page_settings_meta() {
-		register_post_meta(
-			'page',
-			'_tutorstarter_page_metadata',
-			array(
-				'type'          => 'object',
-				'single'        => true,
-				'auth_callback' => '__return_true',
-				'show_in_rest'  => array(
-					'schema' => array(
-						'type'       => 'object',
-						'properties' => array(
-							'sidebar_select'    => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'header_select'    => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'footer_select'    => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
-							'page_title_toggle' => array(
-								'type'              => 'boolean',
-								'default'           => true,
-								'sanitize_callback' => isset( $input ) ? true : false,
-							),
-							'header_toggle'     => array(
-								'type'              => 'boolean',
-								'sanitize_callback' => isset( $input ) ? true : false,
-							),
-							'footer_toggle'     => array(
-								'type'              => 'boolean',
-								'sanitize_callback' => isset( $input ) ? true : false,
-							),
-						),
-					),
-				),
-			)
+	public function add_page_settings_meta() {
+		add_meta_box( 'tutorstarter-page-setting' , __( 'Tutor Starter Page Settings', 'tutorstarter' ), array( $this, 'page_display_callback' ), 'page', 'side' );
+	}
+
+	/**
+	 * Display callback
+	 */
+	public function page_display_callback( $post ) { 
+		echo '<div id="tutorstarter-page-settings"></div>';
+	}
+
+	/**
+	 * Sanitize toggle value
+	 * 
+	 * @param bool $input
+	 * 
+	 * @return bool
+	 */
+	public function sanitize_toggle_value( $input ) {
+		$toggle_state = 0;
+		if ( true === $input ) {
+			$toggle_state = 1;
+		} else {
+			$toggle_state = 0;
+		}
+		return $toggle_state;
+	}
+
+	/**
+	 * Save page settings meta
+	 */
+	public function save_page_settings_meta( $post_id ) {
+
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+			return;
+		}
+
+		if ( ! current_user_can( 'edit_posts' ) ) {
+			return;
+		}
+
+		if ( $parent_id = wp_is_post_revision( $post_id ) ) {
+			$post_id = $parent_id;
+		}
+
+		$fields = array(
+			'sidebar_select'    => isset( $_POST['sidebar_select'] ) ? sanitize_text_field( $_POST['sidebar_select'] ) : '',
+			'header_select'     => isset( $_POST['header_select'] ) ? sanitize_text_field( $_POST['header_select'] ) : '',
+			'footer_select'     => isset( $_POST['footer_select'] ) ? sanitize_text_field( $_POST['footer_select'] ) : '',
+			'page_title_toggle' => $this->sanitize_toggle_value( $_POST['page_title_toggle'] ),
+			'header_toggle'     => isset( $_POST['header_toggle'] ) ? true : false,
+			'footer_toggle'     => isset( $_POST['footer_toggle'] ) ? true : false,
 		);
+
+		update_post_meta( $post_id, '_tutorstarter_page_metadata', $fields );
 	}
 }

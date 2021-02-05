@@ -7,9 +7,6 @@
 
 namespace Tutor_Starter\Custom\Schema;
 
-use Tutor_Starter\Traits\Schema_Fields;
-use Tutor_Starter\Traits\Schema_Template;
-
 defined( 'ABSPATH' ) || exit;
 
 /**

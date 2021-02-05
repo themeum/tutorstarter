@@ -255,10 +255,12 @@ trait Inline_Css_Js {
 			$is_page = true;
 		}
 		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema', true );
+		$page_meta = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
 		$localized_data = array(
 			'is_post'        => $is_post,
 			'is_page'        => $is_page,
 			'post_meta'      => json_encode( $post_meta ),
+			'page_meta'      => json_encode( $page_meta ),
 			'post_title'     => $post_title,
 			'post_excerpt'   => $post_excerpt,
 			'post_content'   => $post_content,

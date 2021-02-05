@@ -88,8 +88,8 @@ const TutorSchemaFields = () => {
                 <TextControl
                     label={__('Keywords', 'tutorstarter')}
                     placeholder={__('e.g: seo wordpress blog', 'tutorstarter')}
-                    id='keywords'
-                    name='keywords'
+                    id='post_keywords'
+                    name='post_keywords'
                     value={post_keywords}
                     onChange={(value) => setPostKeywords(value)}
                 />

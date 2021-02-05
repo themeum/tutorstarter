@@ -95,216 +95,208 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
 var __ = wp.i18n.__;
-var Fragment = wp.element.Fragment;
+var _wp$element = wp.element,
+    Fragment = _wp$element.Fragment,
+    useState = _wp$element.useState;
 var _wp$components = wp.components,
     SelectControl = _wp$components.SelectControl,
     ToggleControl = _wp$components.ToggleControl;
 
-var PageSettingsFields = function PageSettingsFields(_ref) {
-  var updatedValue = _ref.updatedValue,
-      updateMeta = _ref.updateMeta;
-  var is_page = tutorstarter_admin.is_page;
+var PageSettingsFields = function PageSettingsFields() {
+  var page_meta = JSON.parse(tutorstarter_admin_schema.page_meta);
 
-  if ('1' === is_page) {
-    return /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(SelectControl, {
-      label: __('Sidebar', 'tutorstarter'),
-      value: updatedValue.sidebar_select,
-      options: [{
-        label: __('--Select Option--', 'tutorstarter'),
-        value: ''
-      }, {
-        label: __('No Sidebar', 'tutorstarter'),
-        value: 'no-sidebar'
-      }, {
-        label: __('Left Sidebar', 'tutorstarter'),
-        value: 'left-sidebar'
-      }, {
-        label: __('Right Sidebar', 'tutorstarter'),
-        value: 'right-sidebar'
-      }],
-      onChange: function onChange(value) {
-        return updateMeta(value, 'sidebar_select');
-      }
-    }), /*#__PURE__*/React.createElement(SelectControl, {
-      label: __('Header', 'tutorstarter'),
-      value: updatedValue.header_select,
-      options: [{
-        label: __('--Select Header--', 'tutorstarter'),
-        value: ''
-      }, {
-        label: __('Fullwidth', 'tutorstarter'),
-        value: 'header_one'
-      }, {
-        label: __('Fullwidth Transparent', 'tutorstarter'),
-        value: 'header_one_trans'
-      }, {
-        label: __('Standard', 'tutorstarter'),
-        value: 'header_two'
-      }, {
-        label: __('Standard Transparent', 'tutorstarter'),
-        value: 'header_three'
-      }, {
-        label: __('Centered Logo', 'tutorstarter'),
-        value: 'header_four'
-      }],
-      onChange: function onChange(value) {
-        return updateMeta(value, 'header_select');
-      }
-    }), /*#__PURE__*/React.createElement(SelectControl, {
-      label: __('Footer', 'tutorstarter'),
-      value: updatedValue.footer_select,
-      options: [{
-        label: __('--Select Footer--', 'tutorstarter'),
-        value: ''
-      }, {
-        label: __('Type 1', 'tutorstarter'),
-        value: 'footer_one'
-      }, {
-        label: __('Type 2', 'tutorstarter'),
-        value: 'footer_two'
-      }, {
-        label: __('Type 3', 'tutorstarter'),
-        value: 'footer_three'
-      }, {
-        label: __('Type 4', 'tutorstarter'),
-        value: 'footer_four'
-      }, {
-        label: __('Type 5', 'tutorstarter'),
-        value: 'footer_five'
-      }],
-      onChange: function onChange(value) {
-        return updateMeta(value, 'footer_select');
-      }
-    }), /*#__PURE__*/React.createElement(ToggleControl, {
-      label: __('Disable Title?', 'tutorstarter'),
-      checked: updatedValue.page_title_toggle,
-      onChange: function onChange(value) {
-        return updateMeta(value, 'page_title_toggle');
-      }
-    }), /*#__PURE__*/React.createElement(ToggleControl, {
-      label: __('Disable Header?', 'tutorstarter'),
-      checked: updatedValue.header_toggle,
-      onChange: function onChange(value) {
-        return updateMeta(value, 'header_toggle');
-      }
-    }), /*#__PURE__*/React.createElement(ToggleControl, {
-      label: __('Disable Footer?', 'tutorstarter'),
-      checked: updatedValue.footer_toggle,
-      onChange: function onChange(value) {
-        return updateMeta(value, 'footer_toggle');
-      }
-    }));
-  } else {
-    return /*#__PURE__*/React.createElement(Fragment, null);
-  }
+  var _useState = useState(page_meta.page_title_toggle),
+      _useState2 = _slicedToArray(_useState, 2),
+      page_title_toggle = _useState2[0],
+      setDisableTitle = _useState2[1];
+
+  var _useState3 = useState(page_meta.header_toggle),
+      _useState4 = _slicedToArray(_useState3, 2),
+      header_toggle = _useState4[0],
+      setDisableHeader = _useState4[1];
+
+  var _useState5 = useState(page_meta.footer_toggle),
+      _useState6 = _slicedToArray(_useState5, 2),
+      footer_toggle = _useState6[0],
+      setDisableFooter = _useState6[1];
+
+  var _useState7 = useState(page_meta.sidebar_select),
+      _useState8 = _slicedToArray(_useState7, 2),
+      sidebar_select = _useState8[0],
+      setSidebar = _useState8[1];
+
+  var _useState9 = useState(page_meta.header_select),
+      _useState10 = _slicedToArray(_useState9, 2),
+      header_select = _useState10[0],
+      setHeader = _useState10[1];
+
+  var _useState11 = useState(page_meta.footer_select),
+      _useState12 = _slicedToArray(_useState11, 2),
+      footer_select = _useState12[0],
+      setFooter = _useState12[1];
+
+  return /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(SelectControl, {
+    label: __('Sidebar', 'tutorstarter'),
+    id: "sidebar_select",
+    name: "sidebar_select",
+    value: sidebar_select,
+    options: [{
+      label: __('--Select Option--', 'tutorstarter'),
+      value: ''
+    }, {
+      label: __('No Sidebar', 'tutorstarter'),
+      value: 'no-sidebar'
+    }, {
+      label: __('Left Sidebar', 'tutorstarter'),
+      value: 'left-sidebar'
+    }, {
+      label: __('Right Sidebar', 'tutorstarter'),
+      value: 'right-sidebar'
+    }],
+    onChange: function onChange(value) {
+      return setSidebar(value);
+    }
+  }), /*#__PURE__*/React.createElement(SelectControl, {
+    label: __('Header', 'tutorstarter'),
+    id: "header_select",
+    name: "header_select",
+    value: header_select,
+    options: [{
+      label: __('--Select Header--', 'tutorstarter'),
+      value: ''
+    }, {
+      label: __('Fullwidth', 'tutorstarter'),
+      value: 'header_one'
+    }, {
+      label: __('Fullwidth Transparent', 'tutorstarter'),
+      value: 'header_one_trans'
+    }, {
+      label: __('Standard', 'tutorstarter'),
+      value: 'header_two'
+    }, {
+      label: __('Standard Transparent', 'tutorstarter'),
+      value: 'header_three'
+    }, {
+      label: __('Centered Logo', 'tutorstarter'),
+      value: 'header_four'
+    }],
+    onChange: function onChange(value) {
+      return setHeader(value);
+    }
+  }), /*#__PURE__*/React.createElement(SelectControl, {
+    label: __('Footer', 'tutorstarter'),
+    id: "footer_select",
+    name: "footer_select",
+    value: footer_select,
+    options: [{
+      label: __('--Select Footer--', 'tutorstarter'),
+      value: ''
+    }, {
+      label: __('Type 1', 'tutorstarter'),
+      value: 'footer_one'
+    }, {
+      label: __('Type 2', 'tutorstarter'),
+      value: 'footer_two'
+    }, {
+      label: __('Type 3', 'tutorstarter'),
+      value: 'footer_three'
+    }, {
+      label: __('Type 4', 'tutorstarter'),
+      value: 'footer_four'
+    }, {
+      label: __('Type 5', 'tutorstarter'),
+      value: 'footer_five'
+    }],
+    onChange: function onChange(value) {
+      return setFooter(value);
+    }
+  }), /*#__PURE__*/React.createElement(ToggleControl, {
+    label: __('Disable Title?', 'tutorstarter'),
+    id: "page_title_toggle",
+    name: "page_title_toggle",
+    checked: page_title_toggle,
+    onChange: function onChange(value) {
+      return setDisableTitle(value);
+    }
+  }), /*#__PURE__*/React.createElement(ToggleControl, {
+    label: __('Disable Header?', 'tutorstarter'),
+    id: "header_toggle",
+    name: "header_toggle",
+    checked: header_toggle,
+    onChange: function onChange(value) {
+      return setDisableHeader(value);
+    }
+  }), /*#__PURE__*/React.createElement(ToggleControl, {
+    label: __('Disable Footer?', 'tutorstarter'),
+    id: "footer_toggle",
+    name: "footer_toggle",
+    checked: footer_toggle,
+    onChange: function onChange(value) {
+      return setDisableFooter(value);
+    }
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PageSettingsFields);
-
-/***/ }),
-
-/***/ "./inc/Custom/Page/reactjs/src/page-settings/index.js":
-/*!************************************************************!*\
-  !*** ./inc/Custom/Page/reactjs/src/page-settings/index.js ***!
-  \************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _fields_page_settings_fields__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fields/page-settings-fields */ "./inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js");
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    if (enumerableOnly) symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    });
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-
-    if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
-    }
-  }
-
-  return target;
-}
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-var compose = wp.compose.compose;
-var PluginDocumentSettingPanel = wp.editPost.PluginDocumentSettingPanel;
-var _wp$data = wp.data,
-    select = _wp$data.select,
-    withSelect = _wp$data.withSelect,
-    withDispatch = _wp$data.withDispatch;
-
-var PageSettingsFieldsData = compose([withSelect(function () {
-  return {
-    updatedValue: select('core/editor').getEditedPostAttribute('meta')._tutorstarter_page_metadata
-  };
-}), withDispatch(function (dispatch) {
-  return {
-    updateMeta: function updateMeta(value, prop) {
-      var meta = select('core/editor').getEditedPostAttribute('meta')._tutorstarter_page_metadata;
-
-      meta = _objectSpread({
-        sidebar_select: '',
-        header_select: '',
-        footer_select: '',
-        page_title_toggle: false,
-        header_toggle: false,
-        footer_toggle: false
-      }, meta);
-      meta[prop] = value;
-      dispatch('core/editor').editPost({
-        meta: {
-          _tutorstarter_page_metadata: meta
-        }
-      });
-    }
-  };
-})])(_fields_page_settings_fields__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-var TutorStarterPageSettingsPanel = function TutorStarterPageSettingsPanel() {
-  return /*#__PURE__*/React.createElement(PluginDocumentSettingPanel, {
-    name: "tutorstarter-settings-panel",
-    title: "Tutor Starter Page Settings"
-  }, /*#__PURE__*/React.createElement(PageSettingsFieldsData, null));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (TutorStarterPageSettingsPanel);
 
 /***/ }),
 
@@ -317,17 +309,10 @@ var TutorStarterPageSettingsPanel = function TutorStarterPageSettingsPanel() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _page_settings__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page-settings */ "./inc/Custom/Page/reactjs/src/page-settings/index.js");
-var registerPlugin = wp.plugins.registerPlugin;
+/* harmony import */ var _page_settings_fields_page_settings_fields__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page-settings/fields/page-settings-fields */ "./inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js");
+var render = wp.element.render;
 
-var is_page = tutorstarter_admin.is_page;
-
-if ('1' === is_page) {
-  registerPlugin('tutorstarter-settings-panel', {
-    render: _page_settings__WEBPACK_IMPORTED_MODULE_0__["default"],
-    icon: ''
-  });
-}
+render( /*#__PURE__*/React.createElement(_page_settings_fields_page_settings_fields__WEBPACK_IMPORTED_MODULE_0__["default"], null), document.getElementById('tutorstarter-page-settings'));
 
 /***/ }),
 
@@ -338,7 +323,7 @@ if ('1' === is_page) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js */"./inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js");
+module.exports = __webpack_require__(/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js */"./inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js");
 
 
 /***/ })

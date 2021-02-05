@@ -1,12 +1,8 @@
-const { registerPlugin } = wp.plugins;
+const { render } = wp.element;
 
-import TutorStarterPageSettingsPanel from './page-settings';
+import PageSettingsFields from './page-settings/fields/page-settings-fields';
 
-let is_page = tutorstarter_admin.is_page;
-
-if ('1' === is_page) {
-    registerPlugin('tutorstarter-settings-panel', {
-        render: TutorStarterPageSettingsPanel,
-        icon: ''
-    });
-}
+render(
+    <PageSettingsFields />,
+    document.getElementById('tutorstarter-page-settings')
+);
