@@ -250,21 +250,32 @@ trait Inline_Css_Js {
 			$post_content   = wp_strip_all_tags( get_the_content( get_the_ID() ) );
 			$post_thumbnail = ( false !== get_the_post_thumbnail_url( get_the_ID() ) ? get_the_post_thumbnail_url( get_the_ID() ) : '' );
 		}
-
-		if ( 'page' === get_post_type() ) {
-			$is_page = true;
-		}
+		
 		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema', true );
-		$page_meta = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
+
 		$localized_data = array(
 			'is_post'        => $is_post,
-			'is_page'        => $is_page,
 			'post_meta'      => json_encode( $post_meta ),
-			'page_meta'      => json_encode( $page_meta ),
 			'post_title'     => $post_title,
 			'post_excerpt'   => $post_excerpt,
 			'post_content'   => $post_content,
 			'post_thumbnail' => $post_thumbnail,
+			'ajax_url'       => admin_url( 'admin-ajax.php' ),
+		);
+
+		return $localized_data;
+	}
+
+	/**
+	 * Page settings localized data
+	 */
+	public static function page_settings_localized_data() {
+		if ( 'page' === get_post_type() ) {
+			$is_page = true;
+		}
+
+		$localized_data = array(
+			'is_page' => $is_page,
 		);
 
 		return $localized_data;
