@@ -577,7 +577,7 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
         global $woocommerce;
 		ob_start(); ?>
 		
-		<a id="mini-cart-count" class="tutor-cart-contents" data-toggle="modal" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="View your shopping cart">
+		<a id="mini-cart-count" class="tutor-cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="View your shopping cart">
 			<span class="count">
 				<?php 
 					echo wp_kses_data( 
