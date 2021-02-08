@@ -593,3 +593,33 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
         return $fragments;
     }
 }
+
+add_filter( 'woocommerce_checkout_fields' , 'tutorstarter_unset_checkout_fields' );
+
+if ( ! function_exists( 'tutorstarter_unset_checkout_fields' ) ) {
+	function tutorstarter_unset_checkout_fields( $fields ) {
+		$only_virtual = true;
+    
+		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+			// Check if there are non-virtual products
+			if ( ! $cart_item['data']->is_virtual() && ! $cart_item['data']->is_downloadable() ) $only_virtual = false;   
+		}
+		
+		if ( $only_virtual ) {
+			unset( $fields['billing']['billing_first_name'] );
+			unset( $fields['billing']['billing_last_name'] );
+			unset( $fields['billing']['billing_email'] );
+			unset( $fields['billing']['billing_company'] );
+			unset( $fields['billing']['billing_address_1'] );
+			unset( $fields['billing']['billing_address_2'] );
+			unset( $fields['billing']['billing_city'] );
+			unset( $fields['billing']['billing_postcode'] );
+			unset( $fields['billing']['billing_country'] );
+			unset( $fields['billing']['billing_state'] );
+			unset( $fields['billing']['billing_phone'] );
+			add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
+		}
+     
+     return $fields;
+	}
+}
