@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-do_action( 'woocommerce_before_cart' ); ?>
+?>
 <div class="tutorstarter-cart-container">
 	<form class="woocommerce-cart-form form-container" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
@@ -121,6 +121,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
 				</form>
+				<div class="cart-notices"><?php do_action( 'woocommerce_before_cart' ); ?></div>
 			</div><!-- .cart-coupon -->
 		</div><!-- .cart-collaterals -->
 	</div><!-- .cart-collaterals-container -->	

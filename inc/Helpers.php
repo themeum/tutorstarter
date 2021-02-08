@@ -572,6 +572,7 @@ if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
  * Cart Fragments
  */
 add_filter( 'woocommerce_add_to_cart_fragments', 'tutor_starter_cart_link_fragment' );
+
 if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
     function tutor_starter_cart_link_fragment( $fragments ) {
         global $woocommerce;
@@ -594,6 +595,9 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
     }
 }
 
+/**
+ * Disabling checkout billing fields for digital products
+ */
 add_filter( 'woocommerce_checkout_fields' , 'tutorstarter_unset_checkout_fields' );
 
 if ( ! function_exists( 'tutorstarter_unset_checkout_fields' ) ) {
@@ -621,5 +625,22 @@ if ( ! function_exists( 'tutorstarter_unset_checkout_fields' ) ) {
 		}
      
      return $fields;
+	}
+}
+
+/**
+ * Changing order button html output
+ */
+add_filter( 'woocommerce_order_button_html', 'tutorstarter_order_btn_html' );
+
+if ( ! function_exists( 'tutorstarter_order_btn_html' ) ) {
+ 
+	function tutorstarter_order_btn_html( $button ) {
+		
+		$order_button_text = __( 'Complete Payment', 'tutorstarter' );
+
+		$button = '<input type="submit" class="checkout-order-button" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '" />';
+		
+		return $button;
 	}
 }

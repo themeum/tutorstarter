@@ -1,0 +1,55 @@
+.checkout-top-spacing {
+    margin-top: 30px;
+}
+
+.tutorstarter-checkout-container {
+    .checkout-contents {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .checkout-payment {
+            .checkout-heading {
+                font-family: "Libre Baskerville";
+                font-weight: 700;
+                font-size: 26px;
+                line-height: 48px;
+                color: #0a083b;
+                margin-bottom: 24px;
+            }
+            .order-details-heading {
+                @extend .checkout-heading;
+                margin-top: 30px;
+            }
+            .cart-contents {
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        .checkout-order-summary {
+            .checkout-heading {
+                font-family: "Libre Baskerville";
+                font-weight: 700;
+                font-size: 26px;
+                line-height: 48px;
+                color: #0a083b;
+                margin-bottom: 24px;
+            }
+            .checkout-order-button {
+                background: #175cff;
+                border: none;
+                border-radius: 33px;
+                padding: 15px;
+                font-family: Inter;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: center;
+                color: #ffffff;
+                cursor: pointer;
+            }
+        }
+    }
+}
