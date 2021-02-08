@@ -7809,6 +7809,46 @@ h1.entry-title {
   color: #0d48d4;
 }
 
+/** New Override classes */
+
+.tutorstarter-cart-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.tutorstarter-cart-container .cart-page-heading {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 48px;
+  padding: 0;
+  margin-bottom: 23px;
+}
+
+.tutorstarter-cart-container .form-container {
+  width: 65%;
+}
+
+.tutorstarter-cart-container .cart-contents {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container {
+  width: 35%;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-summary .cart_totals {
+  width: 80%;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-coupon {
+  width: 80%;
+  float: right;
+}
+
 .woocommerce .woocommerce-Button.button[value=Save] {
   background: #175cff !important;
   width: 170px;

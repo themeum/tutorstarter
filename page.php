@@ -20,7 +20,7 @@ $sidebar   = ( ! empty( $page_meta ) ? $page_meta['sidebar_select'] : 'no-sideba
 	<div class="row align-stretch">
 	<?php if ( 'left-sidebar' === $sidebar ) : ?>
 		<div id="sidebar" class="col-sm-4">
-			<?php get_sidebar(); ?>
+			<?php dynamic_sidebar( 'tutorstarter-page-sidebar' ); ?>
 		</div><!-- .col- -->
 	<?php endif; ?>
 	<div class="<?php echo 'no-sidebar' === $sidebar || '' === $sidebar ? 'col-xl-12 col-lg-12 col-sm-12' : 'col-sm-8'; ?>">
@@ -48,7 +48,7 @@ $sidebar   = ( ! empty( $page_meta ) ? $page_meta['sidebar_select'] : 'no-sideba
 	</div><!-- .col- -->
 	<?php if ( 'right-sidebar' === $sidebar ) : ?>
 		<div id="sidebar" class="col-sm-4">
-			<?php get_sidebar(); ?>
+			<?php dynamic_sidebar( 'tutorstarter-page-sidebar' ); ?>
 		</div><!-- .col- -->
 	<?php endif; ?>
 	</div><!-- .row -->

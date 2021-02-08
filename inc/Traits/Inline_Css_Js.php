@@ -46,214 +46,40 @@ trait Inline_Css_Js {
 		$footer_bottom_text_color  = get_theme_mod( 'footer_bottom_text_color', '#ffffff' );
 		$footer_widgets_text_color = get_theme_mod( 'footer_widgets_text_color', '#ffffff' );
 
-		$cta_background_trans =  get_theme_mod( 'background_trans_cta',
-			array(
-				'rgb' => array(
-					'r' => 0,
-					'g' => 0,
-					'b' => 0,
-					'a' => 0.5,
-				),
-			),
-	 	);
+		$cta_background_trans =  get_theme_mod( 'background_trans_cta', 'rgba(0, 0, 0, 0.5)' );
 
 		// Body Typography.
-		$body_typography = get_theme_mod( 'main_typography',
-			array(
-				'textTransform' => 'none',
-				'fontWeight'    => 400,
-				'fontSize'      => array(
-					'mobile'  => 13,
-					'tablet'  => 13,
-					'desktop' => 16,
-				),
-				'lineHeight' => array(
-					'mobile'  => 20,
-					'tablet'  => 20,
-					'desktop' => 20,
-				),
-			),
-		);
+		$body_typography = get_theme_mod( 'main_typography' );
 
 		// Header Menu Typography.
-		$menu_link_typography = get_theme_mod( 'header_link_typography',
-			array(
-				'textTransform' => 'none',
-				'fontWeight'    => 400,
-				'fontSize'      => array(
-					'mobile'  => 13,
-					'tablet'  => 13,
-					'desktop' => 16,
-				),
-				'lineHeight' => array(
-					'mobile'  => 0,
-					'tablet'  => 0,
-					'desktop' => 0,
-				),
-			),
-		);
+		$menu_link_typography = get_theme_mod( 'header_link_typography' );
 
 		// Header Button Typography.
-		$header_btn_typography = get_theme_mod( 'cta_font_typography',
-			array(
-				'textTransform' => 'none',
-				'fontWeight'    => 400,
-				'fontSize'      => array(
-					'mobile'  => 13,
-					'tablet'  => 13,
-					'desktop' => 16,
-				),
-				'lineHeight' => array(
-					'mobile'  => 0,
-					'tablet'  => 0,
-					'desktop' => 0,
-				),
-			),
-		);
+		$header_btn_typography = get_theme_mod( 'cta_font_typography' );
 
 		// H1 Typography.
-		$h1_typography = get_theme_mod( 'h1_typography',
-			array(
-				'textTransform' => 'none',
-				'fontWeight'    => 700,
-				'fontSize'      => array(
-					'mobile'  => 36,
-					'tablet'  => 36,
-					'desktop' => 48,
-				),
-				'lineHeight' => array(
-					'mobile'  => 36,
-					'tablet'  => 36,
-					'desktop' => 64,
-				),
-			),
-		);
+		$h1_typography = get_theme_mod( 'h1_typography' );
 
 		// H2 Typography.
-		$h2_typography = get_theme_mod( 'h2_typography',
-			array(
-				'textTransform' => 'none',
-				'fontWeight'    => 700,
-				'fontSize'      => array(
-					'mobile'  => 26,
-					'tablet'  => 26,
-					'desktop' => 32,
-				),
-				'lineHeight' => array(
-					'mobile'  => 30,
-					'tablet'  => 30,
-					'desktop' => 48,
-				),
-			),
-		);
+		$h2_typography = get_theme_mod( 'h2_typography' );
 
 		// H3 Typography.
-		$h3_typography = get_theme_mod( 'h3_typography',
-			array(
-				'textTransform' => 'none',
-				'fontWeight'    => 700,
-				'fontSize'      => array(
-					'mobile'  => 24,
-					'tablet'  => 24,
-					'desktop' => 26,
-				),
-				'lineHeight' => array(
-					'mobile'  => 24,
-					'tablet'  => 24,
-					'desktop' => 48,
-				),
-			),
-		);
+		$h3_typography = get_theme_mod( 'h3_typography' );
 
 		// H4 Typography.
-		$h4_typography = get_theme_mod( 'h4_typography',
-			array(
-				'textTransform' => 'none',
-				'fontWeight'    => 700,
-				'fontSize'      => array(
-					'mobile'  => 18,
-					'tablet'  => 18,
-					'desktop' => 18,
-				),
-				'lineHeight' => array(
-					'mobile'  => 22,
-					'tablet'  => 22,
-					'desktop' => 23,
-				),
-			),
-		);
+		$h4_typography = get_theme_mod( 'h4_typography' );
 
 		// H5 Typography.
-		$h5_typography = get_theme_mod( 'h5_typography',
-			array(
-				'textTransform' => 'none',
-				'fontWeight'    => 700,
-				'fontSize'      => array(
-					'mobile'  => 16,
-					'tablet'  => 16,
-					'desktop' => 16,
-				),
-				'lineHeight' => array(
-					'mobile'  => 22,
-					'tablet'  => 22,
-					'desktop' => 23,
-				),
-			),
-		);
+		$h5_typography = get_theme_mod( 'h5_typography' );
 
 		// H6 Typography.
-		$h6_typography = get_theme_mod( 'h6_typography',
-			array(
-				'textTransform' => 'none',
-				'fontWeight'    => 700,
-				'fontSize'      => array(
-					'mobile'  => 15,
-					'tablet'  => 15,
-					'desktop' => 15,
-				),
-				'lineHeight' => array(
-					'mobile'  => 22,
-					'tablet'  => 22,
-					'desktop' => 23,
-				),
-			),
-		);
+		$h6_typography = get_theme_mod( 'h6_typography' );
 
 		// Widget Title Typography.
-		$widget_title_typography = get_theme_mod( 'footer_widget_title_typography',
-			array(
-				'textTransform' => 'none',
-				'fontWeight'    => 700,
-				'fontSize'      => array(
-					'mobile'  => 16,
-					'tablet'  => 16,
-					'desktop' => 18,
-				),
-				'lineHeight' => array(
-					'mobile'  => 20,
-					'tablet'  => 20,
-					'desktop' => 23,
-				),
-			),
-		);
+		$widget_title_typography = get_theme_mod( 'footer_widget_title_typography' );
 
 		// Widget Text Typography.
-		$widget_text_typography = get_theme_mod( 'footer_widget_text_typography',
-			array(
-				'textTransform' => 'none',
-				'fontWeight'    => 400,
-				'fontSize'      => array(
-					'mobile'  => 16,
-					'tablet'  => 16,
-					'desktop' => 16,
-				),
-				'lineHeight' => array(
-					'mobile'  => 0,
-					'tablet'  => 0,
-					'desktop' => 0,
-				),
-			),
-		);
+		$widget_text_typography = get_theme_mod( 'footer_widget_text_typography' );
 		
 		// Inline CSS declarations.
 		$custom_css = "
@@ -424,18 +250,32 @@ trait Inline_Css_Js {
 			$post_content   = wp_strip_all_tags( get_the_content( get_the_ID() ) );
 			$post_thumbnail = ( false !== get_the_post_thumbnail_url( get_the_ID() ) ? get_the_post_thumbnail_url( get_the_ID() ) : '' );
 		}
+		
+		$post_meta = get_post_meta( get_the_ID(), '_tutorstarter_schema', true );
 
+		$localized_data = array(
+			'is_post'        => $is_post,
+			'post_meta'      => json_encode( $post_meta ),
+			'post_title'     => $post_title,
+			'post_excerpt'   => $post_excerpt,
+			'post_content'   => $post_content,
+			'post_thumbnail' => $post_thumbnail,
+			'ajax_url'       => admin_url( 'admin-ajax.php' ),
+		);
+
+		return $localized_data;
+	}
+
+	/**
+	 * Page settings localized data
+	 */
+	public static function page_settings_localized_data() {
 		if ( 'page' === get_post_type() ) {
 			$is_page = true;
 		}
 
 		$localized_data = array(
-			'is_post'        => $is_post,
-			'is_page'        => $is_page,
-			'post_title'     => $post_title,
-			'post_excerpt'   => $post_excerpt,
-			'post_content'   => $post_content,
-			'post_thumbnail' => $post_thumbnail,
+			'is_page' => $is_page,
 		);
 
 		return $localized_data;

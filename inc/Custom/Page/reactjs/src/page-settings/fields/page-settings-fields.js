@@ -4,7 +4,7 @@ const { SelectControl, ToggleControl } = wp.components;
 
 const PageSettingsFields = ({ updatedValue, updateMeta }) => {
 
-    let is_page = tutorstarter_admin.is_page;
+    let is_page = tutorstarter_admin_page.is_page;
 
     if ('1' === is_page) {
         return (

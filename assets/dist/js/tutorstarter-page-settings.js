@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -104,7 +104,7 @@ var _wp$components = wp.components,
 var PageSettingsFields = function PageSettingsFields(_ref) {
   var updatedValue = _ref.updatedValue,
       updateMeta = _ref.updateMeta;
-  var is_page = tutorstarter_admin.is_page;
+  var is_page = tutorstarter_admin_page.is_page;
 
   if ('1' === is_page) {
     return /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(SelectControl, {
@@ -320,7 +320,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _page_settings__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page-settings */ "./inc/Custom/Page/reactjs/src/page-settings/index.js");
 var registerPlugin = wp.plugins.registerPlugin;
 
-var is_page = tutorstarter_admin.is_page;
+var is_page = tutorstarter_admin_page.is_page;
 
 if ('1' === is_page) {
   registerPlugin('tutorstarter-settings-panel', {
@@ -331,7 +331,7 @@ if ('1' === is_page) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!*************************************************************************!*\
   !*** multi ./inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js ***!
   \*************************************************************************/

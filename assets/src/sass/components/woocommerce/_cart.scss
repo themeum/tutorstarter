@@ -8,8 +8,8 @@ h1.entry-title {
     width: 160px;
     text-align: center;
 }
-#add_payment_method table.cart td.actions .coupon .input-text, 
-.woocommerce-cart table.cart td.actions .coupon .input-text, 
+#add_payment_method table.cart td.actions .coupon .input-text,
+.woocommerce-cart table.cart td.actions .coupon .input-text,
 .woocommerce-checkout table.cart td.actions .coupon .input-text {
     float: left;
     box-sizing: border-box;
@@ -36,7 +36,7 @@ h1.entry-title {
 }
 
 .woocommerce a.remove {
-    color: #de8080!important;
+    color: #de8080 !important;
 }
 
 .woocommerce a.remove:hover {
@@ -50,4 +50,47 @@ h1.entry-title {
 .woocommerce-message::before {
     content: "\e015";
     color: #0d48d4;
+}
+
+/** New Override classes */
+.tutorstarter-cart-container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+
+    .cart-page-heading {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 48px;
+        padding: 0;
+        margin-bottom: 23px;
+    }
+
+    .form-container {
+        width: 65%;
+    }
+
+    .cart-contents {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cart-collaterals-container {
+        width: 35%;
+
+        .cart-collaterals {
+            .cart-summary {
+                .cart_totals {
+                    width: 80%;
+                }
+            }
+
+            .cart-coupon {
+                width: 80%;
+                float: right;
+            }
+        }
+    }
 }

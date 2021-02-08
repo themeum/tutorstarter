@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -211,7 +211,7 @@ render( /*#__PURE__*/React.createElement(_index__WEBPACK_IMPORTED_MODULE_0__["de
 
 /***/ }),
 
-/***/ 6:
+/***/ 5:
 /*!************************************************************************!*\
   !*** multi ./inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js ***!
   \************************************************************************/

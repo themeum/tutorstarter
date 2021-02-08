@@ -12,7 +12,7 @@ use Tutor_Starter\Traits\Inline_Css_Js;
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Enqueue.
+ * Enqueue class
  */
 class Enqueue {
 
@@ -29,7 +29,6 @@ class Enqueue {
 		if ( ! is_admin() && ! is_customize_preview() ) {
 			add_filter( 'script_loader_tag', array( $this, 'load_scripts_deferred' ), 10, 1 );
 		}
-		//add_filter( 'use_block_editor_for_post_type', array( $this, 'enable_gutenberg_on_product_page' ), 10, 2 );
 		add_action( 'customize_preview_init', array( $this, 'enqueue_customize_preview' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_editor_assets' ) );
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_customizer_controls_scripts' ) );
@@ -136,27 +135,13 @@ class Enqueue {
 	}
 
 	/**
-	 * Enable gutenberg on product page
-	 * 
-	 * @param string $post_type
-	 * @param bool $can_edit
-	 * 
-	 * @return bool $can_edit
-	 */
-	public function enable_gutenberg_on_product_page( $can_edit, $post_type ) {
-		if ( 'product' === $post_type ) {
-			$can_edit = true;
-		}
-
-		return $can_edit;
-	}
-
-	/**
 	 * Enqueue Admin assets
 	 */
 	public function enqueue_admin_scripts() {
 		wp_enqueue_style( 'tutorstarter-dashboard', mix( 'css/dashboard.css' ), array( 'wp-components' ), TUTOR_STARTER_VERSION, 'all' );
-		wp_enqueue_script( 'tutorstarter-admin', mix( 'js/admin.js' ), array(), TUTOR_STARTER_VERSION, true );
+
+		wp_enqueue_script( 'tutorstarter-schema-data', mix( 'js/tutor-schema.js' ), array( 'wp-i18n', 'wp-components', 'wp-element' ), TUTOR_STARTER_VERSION, true );
+		wp_localize_script( 'tutorstarter-schema-data', 'tutorstarter_admin_schema', Inline_Css_Js::admin_localized_js() );
 		
 		if ( ! isset( $_GET['page'] ) || 'tutorstarter' !== $_GET['page'] ) {
 			return;
@@ -202,9 +187,7 @@ class Enqueue {
 	 */
 	public function enqueue_editor_assets() {
 		wp_enqueue_style( 'tutorstarter-admin', mix( 'css/admin.css' ), array(), TUTOR_STARTER_VERSION, 'all' );
-		wp_enqueue_script( 'tutorstarter-schema', mix( 'js/tutorstarter-schema.js' ), array( 'wp-i18n', 'wp-compose', 'wp-data', 'wp-components', 'wp-edit-post', 'wp-element', 'wp-plugins' ), TUTOR_STARTER_VERSION, true );
 		wp_enqueue_script( 'tutorstarter-settings', mix( 'js/tutorstarter-page-settings.js' ), array( 'wp-i18n', 'wp-compose', 'wp-data', 'wp-components', 'wp-edit-post', 'wp-element', 'wp-plugins' ), TUTOR_STARTER_VERSION, true );
-
-		wp_localize_script( 'tutorstarter-schema', 'tutorstarter_admin', Inline_Css_Js::admin_localized_js() );
+		wp_localize_script( 'tutorstarter-settings', 'tutorstarter_admin_page', Inline_Css_Js::page_settings_localized_data() );
 	}
 }
