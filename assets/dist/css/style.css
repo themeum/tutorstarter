@@ -7816,9 +7816,15 @@ h1.entry-title {
 }
 
 .tutorstarter-cart-container {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-gap: 30px;
+}
+
+@media (min-width: 992px) {
+  .tutorstarter-cart-container {
+    grid-template-columns: auto 3fr auto;
+    grid-template-columns: 65.5% auto;
+  }
 }
 
 .tutorstarter-cart-container .cart-page-heading,
@@ -7849,15 +7855,17 @@ h1.entry-title {
   margin-bottom: 4px;
 }
 
-.tutorstarter-cart-container .form-container {
-  width: 65%;
-}
-
 .tutorstarter-cart-container .cart-contents {
   display: grid;
   align-items: center;
-  grid-template-columns: auto 3fr auto;
-  grid-gap: 30px;
+  grid-gap: 15px;
+}
+
+@media (min-width: 480px) {
+  .tutorstarter-cart-container .cart-contents {
+    grid-template-columns: auto 3fr auto;
+    grid-gap: 30px;
+  }
 }
 
 .tutorstarter-cart-container .cart-contents:not(:last-child) {
@@ -7868,23 +7876,114 @@ h1.entry-title {
 
 .tutorstarter-cart-container .cart-product-image img {
   border-radius: 8px;
-  width: 160px;
-  height: 90px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .tutorstarter-cart-container .cart-collaterals-container {
-  width: 35%;
+  max-width: 450px;
 }
 
 .tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-summary .cart_totals {
-  width: 80%;
+  width: 100%;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-summary .cart_totals .checkout-button {
+  padding: 15px !important;
+  margin-top: 13px;
+  margin-bottom: 30px;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-summary .cart_totals .wc-proceed-to-checkout {
+  padding: 0 !important;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-summary table.shop_table {
+  border: none;
+  box-shadow: none;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-summary table.shop_table th,
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-summary table.shop_table td {
+  padding: 18px 0px;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-summary table.shop_table td {
+  text-align: right;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-summary table.shop_table tr.cart-subtotal th,
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-summary table.shop_table tr.order-total th {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(10, 8, 59, 0.7);
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-summary table.shop_table .cart-subtotal .woocommerce-Price-amount.amount,
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-summary table.shop_table tr.order-total th {
+  font-weight: 500;
+  color: #0a083b;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-summary table.shop_table .order-total .woocommerce-Price-amount.amount {
+  font-weight: 600;
+  font-size: 26px;
+  color: #0a083b;
 }
 
 .tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-coupon {
-  width: 80%;
+  width: 100%;
   float: right;
+  border-top: 1px solid #ebebeb;
+  padding-top: 30px;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-coupon form {
+  position: relative;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-coupon form input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  width: 478px;
+  width: 100%;
+  height: 58px;
+  color: rgba(10, 8, 59, 0.5);
+  background: #ffffff;
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+  border-radius: 40px;
+  outline: none;
+  padding: 10px 22px;
+  position: relative;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-coupon form input:focus {
+  border-color: #175cff;
+  color: #0a083b;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-coupon form button {
+  cursor: pointer;
+  position: absolute;
+  outline: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.31;
+  background: #175cff;
+  color: #fff;
+  border-radius: 108px;
+  border: 1px solid #175cff;
+  padding: 10px 23.5px;
+  right: 8px;
+  top: 8px;
+  height: calc(100% - 16px);
+  transition: 0.2s linear;
+}
+
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-coupon form button:hover,
+.tutorstarter-cart-container .cart-collaterals-container .cart-collaterals .cart-coupon form buttonfocus {
+  border-color: #0a083b;
+  background: #0a083b;
 }
 
 .cart-contents-wrapper,
@@ -9673,7 +9772,7 @@ h3#order_review_heading,
 }
 
 form.woocommerce-cart-form {
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 form.woocommerce-cart-form td {
@@ -9682,7 +9781,7 @@ form.woocommerce-cart-form td {
 }
 
 body.woocommerce-cart .site-content {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 #add_payment_method table.cart img,
