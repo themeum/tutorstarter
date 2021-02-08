@@ -1,96 +1,135 @@
 h1.entry-title {
-    padding: 30px 0;
+	padding: 30px 0;
 }
 .woocommerce #content table.cart td.actions .input-text,
 .woocommerce table.cart td.actions .input-text,
 .woocommerce-page #content table.cart td.actions .input-text,
 .woocommerce-page table.cart td.actions .input-text {
-    width: 160px;
-    text-align: center;
+	width: 160px;
+	text-align: center;
 }
 #add_payment_method table.cart td.actions .coupon .input-text,
 .woocommerce-cart table.cart td.actions .coupon .input-text,
 .woocommerce-checkout table.cart td.actions .coupon .input-text {
-    float: left;
-    box-sizing: border-box;
-    border: 1px solid #d3ced2;
-    padding: 9px 10px 9px 10px;
-    border-radius: 3px;
-    margin: 0 4px 0 0;
-    outline: 0;
+	float: left;
+	box-sizing: border-box;
+	border: 1px solid #d3ced2;
+	padding: 9px 10px 9px 10px;
+	border-radius: 3px;
+	margin: 0 4px 0 0;
+	outline: 0;
 }
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-    background-color: #175cff;
-    color: #fff;
-    -webkit-font-smoothing: antialiased;
-    transition: all 0.3s ease-in-out;
+	background-color: #175cff;
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease-in-out;
 }
 .woocommerce #respond input#submit.alt:hover,
 .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
 .woocommerce input.button.alt:hover {
-    background-color: #0d48d4;
+	background-color: #0d48d4;
 }
 
 .woocommerce a.remove {
-    color: #de8080 !important;
+	color: #de8080 !important;
 }
 
 .woocommerce a.remove:hover {
-    background: #d04242;
+	background: #d04242;
 }
 
 .woocommerce-message {
-    border-top-color: #175cff;
+	border-top-color: #175cff;
 }
 
 .woocommerce-message::before {
-    content: "\e015";
-    color: #0d48d4;
+	content: '\e015';
+	color: #0d48d4;
 }
 
 /** New Override classes */
+.woocommerce-cart {
+	background: #f7f9fa;
+}
 .tutorstarter-cart-container {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
 
-    .cart-page-heading {
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 48px;
-        padding: 0;
-        margin-bottom: 23px;
-    }
+	.cart-page-heading,
+	.cart-summary h2 {
+		font-family: 'Libre Baskerville';
+		font-weight: 700;
+		font-size: 26px;
+		line-height: 48px;
+		color: #0a083b;
+		margin-bottom: 24px;
+	}
+	.cart-product-title a,
+	.cart-product-price {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 1.5;
+		color: #0a083b;
+	}
+	.cart-product-remove a {
+		font-size: 16px;
+		line-height: 19px;
+		color: #175cff;
+	}
+	.cart-product-price {
+		margin-bottom: 4px;
+	}
 
-    .form-container {
-        width: 65%;
-    }
+	.form-container {
+		width: 65%;
+	}
 
-    .cart-contents {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+	.cart-contents {
+		display: grid;
+		align-items: center;
+		grid-template-columns: auto 3fr auto;
+		grid-gap: 30px;
+	}
+	.cart-contents:not(:last-child) {
+		border-bottom: 1px solid #ebebeb;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+	.cart-product-image img {
+		border-radius: 8px;
+		width: 160px;
+		height: 90px;
+		object-fit: cover;
+	}
 
-    .cart-collaterals-container {
-        width: 35%;
+	.cart-collaterals-container {
+		width: 35%;
 
-        .cart-collaterals {
-            .cart-summary {
-                .cart_totals {
-                    width: 80%;
-                }
-            }
+		.cart-collaterals {
+			.cart-summary {
+				.cart_totals {
+					width: 80%;
+				}
+			}
 
-            .cart-coupon {
-                width: 80%;
-                float: right;
-            }
-        }
-    }
+			.cart-coupon {
+				width: 80%;
+				float: right;
+			}
+		}
+	}
+}
+
+.cart-contents-wrapper,
+.cart-collaterals {
+	background: #ffffff;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+	padding: 30px;
 }
