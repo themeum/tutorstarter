@@ -162,6 +162,9 @@ class Setup {
 			)
 		);
 
+		// Custom image size for cart items
+		add_image_size( 'cart-image-thumb', 160, 90, true );
+
 	}
 
 	/**
