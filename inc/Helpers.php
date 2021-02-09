@@ -639,7 +639,7 @@ if ( ! function_exists( 'tutorstarter_order_btn_html' ) ) {
 		
 		$order_button_text = __( 'Complete Payment', 'tutorstarter' );
 
-		$button = '<input type="submit" class="checkout-order-button" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '" />';
+		$button = '<input type="submit" class="checkout-order-button checkout-button" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '" />';
 		
 		return $button;
 	}

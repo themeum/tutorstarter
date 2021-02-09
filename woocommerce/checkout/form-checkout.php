@@ -30,12 +30,14 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 }
 
 ?>
-<div class="tutorstarter-checkout-container">
+<div class="tutorstarter-checkout-container tutorstarter-cart-container">
 	<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
 		<?php if ( $checkout->get_checkout_fields() ) : ?>
 
 			<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
+
+			
 
 			<div class="checkout-contents" id="customer_details">
 				<div class="checkout-payment">
@@ -49,6 +51,8 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 						} 
 					?>
 					<?php wc_get_template( 'checkout/payment.php' ); ?>
+					<h2 class="order-details-heading cart-page-heading"><?php esc_html_e( 'Order Details', 'tutorstarter' ); ?></h2>
+					<div class="cart-contents-wrapper">
 					<?php
 						foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 							$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
@@ -57,7 +61,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 							if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 								$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 						?>
-					<h2 class="order-details-heading"><?php esc_html_e( 'Order Details', 'tutorstarter' ); ?></h2>
+					
 					<div class="cart-contents">
 						<div class="cart-product-image">
 							<?php
@@ -99,35 +103,38 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 					</div><!-- .cart-contents -->
 					<?php }
 				} ?>
+				</div>
 				</div><!-- .checkout-payment -->
 
-				<div class="checkout-order-summary">
-					<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
-		
-					<h2 class="checkout-heading"><?php esc_html_e( 'Summary', 'tutorstarter' ); ?></h2>
-					
-					<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
-
-					<div id="order_review" class="woocommerce-checkout-review-order">
-						<?php wc_get_template( 'checkout/review-order.php' ); ?>
-					</div>
-					<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
-
-					<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
-
-					<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' ); // @codingStandardsIgnoreLine ?>
-
-					<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
-
-					<?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
-
-				</div>
+				
 			</div>
 
 			<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
 		<?php endif; ?>
 	</form>
+	<div class="checkout-order-summary">
+		<h2 class="checkout-heading cart-page-heading"><?php esc_html_e( 'Summary', 'tutorstarter' ); ?></h2>
+		<div class="cart-collaterals">
+			<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
+	
+			<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+	
+			<div id="order_review" class="woocommerce-checkout-review-order">
+				<?php wc_get_template( 'checkout/review-order.php' ); ?>
+			</div>
+			
+			<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
+	
+			<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+	
+			<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' ); // @codingStandardsIgnoreLine ?>
+	
+			<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
+	
+			<?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
+		</div>
+	</div>
 </div><!-- .tutorstarter-checkout-container -->
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

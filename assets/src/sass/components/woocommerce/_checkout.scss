@@ -1,55 +1,69 @@
 .checkout-top-spacing {
-    margin-top: 30px;
+	margin-top: 30px;
 }
 
-.tutorstarter-checkout-container {
-    .checkout-contents {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+.checkout-order-summary {
+	max-width: 550px;
+}
 
-        .checkout-payment {
-            .checkout-heading {
-                font-family: "Libre Baskerville";
-                font-weight: 700;
-                font-size: 26px;
-                line-height: 48px;
-                color: #0a083b;
-                margin-bottom: 24px;
-            }
-            .order-details-heading {
-                @extend .checkout-heading;
-                margin-top: 30px;
-            }
-            .cart-contents {
-                margin-top: 30px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-        }
-        .checkout-order-summary {
-            .checkout-heading {
-                font-family: "Libre Baskerville";
-                font-weight: 700;
-                font-size: 26px;
-                line-height: 48px;
-                color: #0a083b;
-                margin-bottom: 24px;
-            }
-            .checkout-order-button {
-                background: #175cff;
-                border: none;
-                border-radius: 33px;
-                padding: 15px;
-                font-family: Inter;
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 19px;
-                text-align: center;
-                color: #ffffff;
-                cursor: pointer;
-            }
-        }
-    }
+.woocommerce-checkout-payment {
+	background: #ffffff !important;
+	box-shadow: 0px 2px 4px rgb(0 0 0 / 8%);
+	border-radius: 8px !important;
+	margin-bottom: 83px;
+}
+
+.payment_methods.methods {
+	label {
+		cursor: pointer;
+		> img {
+			display: inline-block;
+		}
+	}
+	border-bottom: none !important;
+}
+
+.payment_box {
+	&::before {
+		display: none !important;
+	}
+	&.payment_method_paypal {
+		display: none !important;
+	}
+	&.payment_method_stripe {
+		background: transparent !important;
+		p {
+			display: none;
+		}
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+}
+
+.wc-stripe-elements-field {
+	background: rgba(255, 255, 255, 0.0001);
+	border: 1.5px solid rgba(10, 8, 59, 0.1);
+	border-radius: 6px;
+	padding: 19px 24px;
+	font-size: 16px;
+	line-height: 19px;
+	color: rgba(10, 8, 59, 0.5);
+	transition: 0.2s linear;
+	&:hover,
+	&:focus {
+		border-color: #175cff;
+	}
+}
+
+fieldset#wc-stripe-cc-form {
+	.form-row {
+		padding: 0 !important;
+	}
+	label {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 1.5;
+		color: #0a083b;
+		margin-bottom: 14px;
+	}
 }
