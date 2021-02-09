@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
-<table class="shop_table woocommerce-checkout-review-order-table">
+<table class="shop_table shop_table_responsive">
 	<thead>
 		<tr>
 			<th class="product-name"><?php esc_html_e( 'Product', 'tutorstarter' ); ?></th>
