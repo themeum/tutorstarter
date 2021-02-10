@@ -266,6 +266,9 @@ svg:not(:root) {
 
 button,
 input,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input::-webkit-input-placeholder,
 optgroup,
 select,
 textarea {
@@ -343,7 +346,10 @@ button:-moz-focusring,
  * Show the overflow in Edge.
  */
 
-input {
+input,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input::-webkit-input-placeholder {
   overflow: visible;
 }
 
@@ -1384,7 +1390,11 @@ body.admin-bar .navbar-nav {
   cursor: pointer;
 }
 
-.search-popup input[type=search] {
+.search-popup input[type=search],
+.search-popup .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .search-popup input[type=search]:focus,
+.search-popup .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .search-popup input[type=search]::-webkit-input-placeholder {
   width: 100%;
   height: 70px;
   border: none;
@@ -1394,15 +1404,22 @@ body.admin-bar .navbar-nav {
   font-size: 2rem;
   font-weight: 300;
   padding: 0px 10px;
+  -webkit-transition: 100ms;
   transition: 100ms;
 }
 
-.search-popup input[type=search]:focus {
+.search-popup input[type=search]:focus,
+.search-popup .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .search-popup input[type=search]:focus,
+.search-popup .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .search-popup input[type=search]:focus::-webkit-input-placeholder {
   box-shadow: 0 0 0 3px rgba(0, 129, 255, 0.43);
   border-color: transparent;
 }
 
-.search-popup input[type=search]::-webkit-input-placeholder {
+.search-popup input[type=search]::-webkit-input-placeholder,
+.search-popup .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .search-popup input[type=search]::-webkit-input-placeholder {
   color: #b3b3b3;
 }
 
@@ -7647,16 +7664,6 @@ img.img-responsive {
   margin-top: 70px;
 }
 
-.tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input:not([type=checkbox]) {
-  background: rgba(255, 255, 255, 0.0001);
-  border: 1.5px solid rgba(10, 8, 59, 0.1);
-  border-radius: 6px;
-  width: 100%;
-  padding: 5px 25px;
-  box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
-}
-
 .tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input:not([type=checkbox])::-moz-placeholder {
   font-size: 16px;
   line-height: 19px;
@@ -7675,12 +7682,16 @@ img.img-responsive {
   color: rgba(10, 8, 59, 0.5);
 }
 
-.tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input:not([type=checkbox]):focus {
+.tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input:not([type=checkbox]):focus,
+.tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:not([type=checkbox]):focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input:not([type=checkbox]):focus::-webkit-input-placeholder {
   outline: 0;
   border: 1.5px solid rgba(10, 8, 59, 0.25);
 }
 
-.tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input[type=submit] {
+.tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input[type=submit],
+.tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=submit]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input[type=submit]::-webkit-input-placeholder {
   background: #175CFF;
   border-radius: 33px;
   padding: 15px 25px;
@@ -7697,8 +7708,16 @@ img.img-responsive {
 
 .tutor-option-field textarea:focus,
 .tutor-option-field input:not([type=submit]):focus,
+.tutor-option-field .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:not([type=submit]):focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-option-field input:not([type=submit]):focus,
+.tutor-option-field .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:not([type=submit]):focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-option-field input:not([type=submit]):focus::-webkit-input-placeholder,
 .tutor-form-group textarea:focus,
-.tutor-form-group input:not([type=submit]):focus {
+.tutor-form-group input:not([type=submit]):focus,
+.tutor-form-group .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:not([type=submit]):focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-form-group input:not([type=submit]):focus,
+.tutor-form-group .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:not([type=submit]):focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-form-group input:not([type=submit]):focus::-webkit-input-placeholder {
   background: #ffffff;
   border: 1.5px solid rgba(10, 8, 59, 0.25);
 }
@@ -7706,20 +7725,52 @@ img.img-responsive {
 .tutor-option-field textarea:focus,
 .tutor-form-group textarea:focus,
 .tutor-option-field input:focus,
-.tutor-form-group input:focus {
+.tutor-option-field .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-option-field input:focus,
+.tutor-option-field .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-option-field input:focus::-webkit-input-placeholder,
+.tutor-form-group input:focus,
+.tutor-form-group .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-form-group input:focus,
+.tutor-form-group .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-form-group input:focus::-webkit-input-placeholder {
   outline: none;
 }
 
 .tutor-option-field textarea,
 .tutor-option-field select,
 .tutor-option-field input[type=text],
+.tutor-option-field .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=text]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-option-field input[type=text]:focus,
+.tutor-option-field .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=text]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-option-field input[type=text]::-webkit-input-placeholder,
 .tutor-option-field input[type=number],
+.tutor-option-field .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=number]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-option-field input[type=number]:focus,
+.tutor-option-field .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=number]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-option-field input[type=number]::-webkit-input-placeholder,
 .tutor-option-field input[type="pas.tutor-dashboard-content-innersword"],
+.tutor-option-field .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type="pas.tutor-dashboard-content-innersword"]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-option-field input[type="pas.tutor-dashboard-content-innersword"]:focus,
+.tutor-option-field .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type="pas.tutor-dashboard-content-innersword"]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-option-field input[type="pas.tutor-dashboard-content-innersword"]::-webkit-input-placeholder,
 .tutor-form-group textarea,
 .tutor-form-group select,
 .tutor-form-group input[type=text],
+.tutor-form-group .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=text]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-form-group input[type=text]:focus,
+.tutor-form-group .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=text]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-form-group input[type=text]::-webkit-input-placeholder,
 .tutor-form-group input[type=number],
-.tutor-form-group input[type=password] {
+.tutor-form-group .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=number]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-form-group input[type=number]:focus,
+.tutor-form-group .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=number]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-form-group input[type=number]::-webkit-input-placeholder,
+.tutor-form-group input[type=password],
+.tutor-form-group .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=password]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-form-group input[type=password]:focus,
+.tutor-form-group .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=password]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-form-group input[type=password]::-webkit-input-placeholder {
   border: 1.5px solid rgba(10, 8, 59, 0.1);
 }
 
@@ -7776,19 +7827,32 @@ h1.entry-title {
 }
 
 .woocommerce #respond input#submit.alt,
+.woocommerce #respond .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input#submit.alt::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .woocommerce #respond input#submit.alt::-webkit-input-placeholder,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
-.woocommerce input.button.alt {
+.woocommerce input.button.alt,
+.woocommerce .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.button.alt:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .woocommerce input.button.alt:focus,
+.woocommerce .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.button.alt::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .woocommerce input.button.alt::-webkit-input-placeholder {
   background-color: #175cff;
   color: #fff;
   -webkit-font-smoothing: antialiased;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .woocommerce #respond input#submit.alt:hover,
+.woocommerce #respond .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input#submit.alt:hover::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .woocommerce #respond input#submit.alt:hover::-webkit-input-placeholder,
 .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover {
+.woocommerce input.button.alt:hover,
+.woocommerce .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.button.alt:hover:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .woocommerce input.button.alt:hover:focus,
+.woocommerce .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.button.alt:hover::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .woocommerce input.button.alt:hover::-webkit-input-placeholder {
   background-color: #0d48d4;
 }
 
@@ -7981,7 +8045,11 @@ h1.entry-title {
   position: relative;
 }
 
-.tutorstarter-cart-container .cart-collaterals .cart-coupon form input {
+.tutorstarter-cart-container .cart-collaterals .cart-coupon form input,
+.tutorstarter-cart-container .cart-collaterals .cart-coupon form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutorstarter-cart-container .cart-collaterals .cart-coupon form input:focus,
+.tutorstarter-cart-container .cart-collaterals .cart-coupon form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutorstarter-cart-container .cart-collaterals .cart-coupon form input::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
@@ -7997,7 +8065,9 @@ h1.entry-title {
   position: relative;
 }
 
-.tutorstarter-cart-container .cart-collaterals .cart-coupon form input:focus {
+.tutorstarter-cart-container .cart-collaterals .cart-coupon form input:focus,
+.tutorstarter-cart-container .cart-collaterals .cart-coupon form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutorstarter-cart-container .cart-collaterals .cart-coupon form input:focus::-webkit-input-placeholder {
   border-color: #175cff;
   color: #0a083b;
 }
@@ -8828,7 +8898,15 @@ img {
 }
 
 .widget input[type=search],
-.page-content input[type=search] {
+.widget .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .widget input[type=search]:focus,
+.widget .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .widget input[type=search]::-webkit-input-placeholder,
+.page-content input[type=search],
+.page-content .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .page-content input[type=search]:focus,
+.page-content .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .page-content input[type=search]::-webkit-input-placeholder {
   width: 100%;
   height: 50px;
   border: 1px solid rgba(10, 8, 59, 0.1);
@@ -8840,12 +8918,28 @@ img {
 }
 
 .widget input[type=search]:focus,
-.page-content input[type=search]:focus {
+.widget .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .widget input[type=search]:focus,
+.widget .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .widget input[type=search]:focus::-webkit-input-placeholder,
+.page-content input[type=search]:focus,
+.page-content .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .page-content input[type=search]:focus,
+.page-content .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .page-content input[type=search]:focus::-webkit-input-placeholder {
   border-color: #175cff;
 }
 
 .widget input.search-submit,
-.page-content input.search-submit {
+.widget .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.search-submit:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .widget input.search-submit:focus,
+.widget .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.search-submit::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .widget input.search-submit::-webkit-input-placeholder,
+.page-content input.search-submit,
+.page-content .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.search-submit:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .page-content input.search-submit:focus,
+.page-content .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.search-submit::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .page-content input.search-submit::-webkit-input-placeholder {
   position: absolute;
   right: 5px;
   top: 5px;
@@ -8862,13 +8956,26 @@ img {
   border: 1px solid #175cff;
   border-radius: 50px;
   cursor: pointer;
+  -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
 
 .widget input.search-submit:hover,
+.widget .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.search-submit:hover::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .widget input.search-submit:hover::-webkit-input-placeholder,
 .widget input.search-submit:focus,
+.widget .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.search-submit:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .widget input.search-submit:focus,
+.widget .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.search-submit:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .widget input.search-submit:focus::-webkit-input-placeholder,
 .page-content input.search-submit:hover,
-.page-content input.search-submit:focus {
+.page-content .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.search-submit:hover::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .page-content input.search-submit:hover::-webkit-input-placeholder,
+.page-content input.search-submit:focus,
+.page-content .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.search-submit:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .page-content input.search-submit:focus,
+.page-content .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.search-submit:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .page-content input.search-submit:focus::-webkit-input-placeholder {
   background-color: #0a083b;
   border-color: #0a083b;
 }
@@ -8916,8 +9023,20 @@ img {
 }
 
 .comment-form input[type=text],
+.comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=text]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=text]:focus,
+.comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=text]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=text]::-webkit-input-placeholder,
 .comment-form input[type=email],
+.comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=email]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=email]:focus,
+.comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=email]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=email]::-webkit-input-placeholder,
 .comment-form input[type=url],
+.comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=url]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=url]:focus,
+.comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=url]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=url]::-webkit-input-placeholder,
 .comment-form textarea {
   width: 100%;
   height: 50px;
@@ -8932,8 +9051,20 @@ img {
 }
 
 .comment-form input[type=text]:focus,
+.comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=text]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=text]:focus,
+.comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=text]:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=text]:focus::-webkit-input-placeholder,
 .comment-form input[type=email]:focus,
+.comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=email]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=email]:focus,
+.comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=email]:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=email]:focus::-webkit-input-placeholder,
 .comment-form input[type=url]:focus,
+.comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=url]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=url]:focus,
+.comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=url]:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=url]:focus::-webkit-input-placeholder,
 .comment-form textarea:focus {
   border-color: #175cff;
 }
@@ -8942,7 +9073,11 @@ img {
   height: 100px;
 }
 
-.comment-form .form-submit input[type=submit] {
+.comment-form .form-submit input[type=submit],
+.comment-form .form-submit .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=submit]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form .form-submit input[type=submit]:focus,
+.comment-form .form-submit .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=submit]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form .form-submit input[type=submit]::-webkit-input-placeholder {
   background-color: #175cff;
   font-family: "Inter", sans-serif;
   font-weight: 600;
@@ -8954,6 +9089,7 @@ img {
   border: 1px solid #175cff;
   border-radius: 50px;
   cursor: pointer;
+  -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
   display: inline-block;
   width: auto;
@@ -8961,7 +9097,13 @@ img {
 }
 
 .comment-form .form-submit input[type=submit]:hover,
-.comment-form .form-submit input[type=submit]:focus {
+.comment-form .form-submit .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=submit]:hover:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form .form-submit input[type=submit]:hover:focus,
+.comment-form .form-submit .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=submit]:hover::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form .form-submit input[type=submit]:hover::-webkit-input-placeholder,
+.comment-form .form-submit input[type=submit]:focus,
+.comment-form .form-submit .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=submit]:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form .form-submit input[type=submit]:focus::-webkit-input-placeholder {
   background-color: #0a083b;
   border-color: #0a083b;
 }
@@ -9327,7 +9469,7 @@ img {
 }
 
 .tutor-lesson-video-wrap .plyr--video {
-  border-radius: 0;
+  border-radius: 4px 4px 0px 0px;
 }
 
 .tutor-price-preview-box {
@@ -9394,6 +9536,69 @@ img {
 .tutor-instructor-list .tutor-instructor-name,
 .tutor-instructor-list .tutor-instructor-course-count {
   padding: 0px 24px !important;
+}
+
+.tutor-course-archive-results-wrap {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(87, 88, 110, 0.5);
+}
+
+.tutor-course-filter-wrapper > div:last-child select[name=tutor_course_filter] {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  border: 1px solid #e1e7ec;
+  border-radius: 4px;
+  padding: 12px 19px;
+  color: #57586e;
+  outline: none;
+}
+
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field {
+  border: 1px solid #e1e7ec;
+  border-radius: 4px;
+  padding: 5px 9px 5px 13px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input::-webkit-input-placeholder {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(87, 88, 110, 0.5);
+}
+
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field i {
+  font-size: 14px;
+  cursor: pointer;
+  color: #ababb6;
+}
+
+.tutor-course-filter-wrapper > div:first-child h4 {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(10, 8, 59, 0.8);
+  border-bottom: 1px solid #e1e7ec;
+  padding-bottom: 8px;
+  margin-top: 50px;
+}
+
+.tutor-course-filter-wrapper > div:first-child label {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #57586e;
 }
 
 section.tutor-theme-getting-starter .getting-started-page-heading {
@@ -9518,16 +9723,6 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
   font-weight: normal;
 }
 
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input {
-  background: rgba(255, 255, 255, 0.0001);
-  border: 1.5px solid rgba(10, 8, 59, 0.1);
-  border-radius: 6px;
-  width: 100%;
-  padding: 19px 25px;
-  box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
-}
-
 section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input::-moz-placeholder {
   font-size: 16px;
   line-height: 19px;
@@ -9546,7 +9741,9 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
   color: rgba(10, 8, 59, 0.5);
 }
 
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input:focus {
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input:focus,
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input:focus::-webkit-input-placeholder {
   outline: 0;
   border: 1.5px solid rgba(10, 8, 59, 0.25);
 }
@@ -9685,16 +9882,6 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-for
   margin-bottom: 12px;
 }
 
-section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input {
-  background: rgba(255, 255, 255, 0.0001);
-  border: 1.5px solid rgba(10, 8, 59, 0.1);
-  border-radius: 6px;
-  width: 100%;
-  padding: 19px 25px;
-  box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
-}
-
 section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input::-moz-placeholder {
   font-size: 16px;
   line-height: 19px;
@@ -9713,7 +9900,9 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-for
   color: rgba(10, 8, 59, 0.5);
 }
 
-section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input:focus {
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input:focus,
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input:focus::-webkit-input-placeholder {
   outline: 0;
   border: 1.5px solid rgba(10, 8, 59, 0.25);
 }
@@ -9933,6 +10122,12 @@ body.woocommerce-page .site-content {
   margin-bottom: 10px;
 }
 
+.tutorstarter-woocommerce .page-title {
+  font-size: 26px;
+  line-height: 1.85;
+  margin-bottom: 25px;
+}
+
 .tutorstarter-woocommerce .product_title.entry-title {
   font-size: 2em;
   line-height: 1.5;
@@ -9968,6 +10163,8 @@ body.woocommerce-page .site-content {
 }
 
 .woocommerce #respond input#submit,
+.woocommerce #respond .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input#submit::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .woocommerce #respond input#submit::-webkit-input-placeholder,
 .woocommerce ul.products li.product .button {
   font-family: Inter;
   font-style: normal;
@@ -9981,6 +10178,8 @@ body.woocommerce-page .site-content {
 }
 
 .woocommerce #respond input#submit:hover,
+.woocommerce #respond .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input#submit:hover::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .woocommerce #respond input#submit:hover::-webkit-input-placeholder,
 .woocommerce ul.products li.product .button:hover {
   background: #0a083b;
   color: #fff;
@@ -10031,15 +10230,39 @@ body.woocommerce-page .site-content {
           clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 50% 75%, 0 100%, 0 0, 0 0);
 }
 
+.woocommerce ul.products {
+  padding-top: 20px;
+}
+
 .woocommerce ul.products li.product a:hover {
   opacity: 1;
+}
+
+.woocommerce ul.products li.product .added_to_cart.wc-forward {
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+  color: green;
+  padding: 0;
+}
+
+.woocommerce ul.products li.product .button.loading {
+  padding-right: 35px;
+}
+
+.woocommerce ul.products li.product .button.loading::after {
+  right: 12px;
 }
 
 .tutor-starter-custom-subscription {
   position: relative;
 }
 
-.tutor-starter-custom-subscription input[type=email] {
+.tutor-starter-custom-subscription input[type=email],
+.tutor-starter-custom-subscription .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=email]::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-starter-custom-subscription input[type=email]::-webkit-input-placeholder,
+.tutor-starter-custom-subscription .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=email]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-starter-custom-subscription input[type=email]:focus {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
@@ -10055,7 +10278,11 @@ body.woocommerce-page .site-content {
   position: relative;
 }
 
-.tutor-starter-custom-subscription input[type=email]:focus {
+.tutor-starter-custom-subscription input[type=email]:focus,
+.tutor-starter-custom-subscription .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=email]:focus::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-starter-custom-subscription input[type=email]:focus::-webkit-input-placeholder,
+.tutor-starter-custom-subscription .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=email]:focus,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-starter-custom-subscription input[type=email]:focus {
   border-color: #175cff;
   color: #0a083b;
 }

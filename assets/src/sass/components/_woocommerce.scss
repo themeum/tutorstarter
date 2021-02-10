@@ -98,6 +98,12 @@ body.woocommerce-page {
 		color: #0a083b;
 		margin-bottom: 10px;
 	}
+	.page-title {
+		font-size: 26px;
+		line-height: 1.85;
+		margin-bottom: 25px;
+	}
+
 	.product_title.entry-title {
 		font-size: 2em;
 		line-height: 1.5;
@@ -191,6 +197,24 @@ body.woocommerce-page {
 	clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 50% 75%, 0 100%, 0 0, 0 0);
 }
 
-.woocommerce ul.products li.product a:hover {
-	opacity: 1;
+.woocommerce ul.products {
+	padding-top: 20px;
+	li.product {
+		a:hover {
+			opacity: 1;
+		}
+		.added_to_cart.wc-forward {
+			display: block;
+			text-align: center;
+			margin-bottom: 15px;
+			color: green;
+			padding: 0;
+		}
+		.button.loading {
+			padding-right: 35px;
+			&::after {
+				right: 12px;
+			}
+		}
+	}
 }
