@@ -404,7 +404,7 @@ class Header {
 						'r' => 0,
 						'g' => 0,
 						'b' => 0,
-						'a' => 0.5,
+						'a' => 0.1,
 					),
 				),
 				'sanitize_callback' => 'tutorstarter_sanitize_color',

@@ -46,7 +46,8 @@ trait Inline_Css_Js {
 		$footer_bottom_text_color  = get_theme_mod( 'footer_bottom_text_color', '#ffffff' );
 		$footer_widgets_text_color = get_theme_mod( 'footer_widgets_text_color', '#ffffff' );
 
-		$cta_background_trans =  get_theme_mod( 'background_trans_cta', 'rgba(0, 0, 0, 0.5)' );
+		$cta_trans_bg = get_theme_mod( 'background_trans_cta' );
+		$cta_background_trans =  ! empty( $cta_trans_bg['rgb'] ) ? 'rgba(' . $cta_trans_bg['rgb']['r'] . ',' . $cta_trans_bg['rgb']['g'] . ',' . $cta_trans_bg['rgb']['b'] . ',' . $cta_trans_bg['rgb']['a'] . ')' : 'rgba(0, 0, 0, 0.1)';
 
 		// Body Typography.
 		$body_typography = get_theme_mod( 'main_typography' );
@@ -116,7 +117,7 @@ trait Inline_Css_Js {
 				--h6-text-transform: {$h6_typography['textTransform']};
 				--primary-menu-bg-color: {$menu_bg_color};
 				--cta-background-color: {$cta_background};
-				--cta-background-color-trans: rgba({$cta_background_trans['rgb']['r']}, {$cta_background_trans['rgb']['g']}, {$cta_background_trans['rgb']['b']}, {$cta_background_trans['rgb']['a']});
+				--cta-background-color-trans: {$cta_background_trans};
 				--cta-border-color: {$cta_border_color};
 				--cta-border-color-trans: {$cta_border_color_trans};
 				--cta-border-width: {$cta_border_width}px;
