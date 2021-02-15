@@ -55,7 +55,7 @@ defined( 'ABSPATH' ) || exit;
                                             <input name="confirm_password" id="confirm-password" type="password" placeholder="Confirm your password">
                                         </div>
                                         <div class="form-grp signup-form-terms-condition">
-                                            By signing up you agree to the <a href="/terms-conditions">Terms and Conditions</a> and the <br> <a href="/privacy-policy">  Privacy Policy</a>
+                                            By signing up you agree to the <a href="<?php echo esc_url( site_url() . '/terms-conditions' ); ?>">Terms and Conditions</a> and the <br> <a href="<?php echo esc_url( site_url() . '/privacy-policy' ); ?>">  Privacy Policy</a>
                                         </div>
                                         <?php do_action( 'tutorstarter_auth_recaptcha' ); ?>
                                         <button type="submit" class="btn btn-primary tutor-starter-btn"><?php _e( 'Sign up', 'tutorstarter' ); ?></button>
@@ -63,7 +63,7 @@ defined( 'ABSPATH' ) || exit;
                                 </div><!-- tutor-theme-signup-form -->
                             </div><!-- tutor-theme-signup-form-area-row -->
                             <div class="already-have-account-link text-center mt-3">
-                                Already have an account? <a href="/sign-in/">Log in</a>
+                                Already have an account? <a href="<?php echo esc_url( site_url() . '/sign-in/' ); ?>">Log in</a>
                             </div>
                         </div>
                     </div>

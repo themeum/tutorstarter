@@ -46,7 +46,7 @@ defined( 'ABSPATH' ) || exit;
                                                 <?php _e( 'Password', 'tutorstarter' ); ?>
                                                 <?php $lostpasurl = wp_lostpassword_url( home_url() ); ?>
                                                 <a href="<?php echo esc_url( $lostpasurl ); ?>">
-                                                    <?php _e( 'Forgot password?', 'tutorstarter' ); ?>
+                                                    <?php esc_html_e( 'Forgot password?', 'tutorstarter' ); ?>
                                                 </a>
                                             </label>
                                             <input name="login_password" id="login_password" type="password" placeholder="Type your password">
@@ -58,7 +58,7 @@ defined( 'ABSPATH' ) || exit;
                             </div><!-- tutor-theme-signup-form-area-row -->
                             <!-- tutor-theme-signin-form-area-row tutor-theme-social-signin -->
                             <div class="already-have-account-link text-center mt-3">
-                                Don’t have an account? <a href="/sign-up/">Sign up</a>
+                                Don’t have an account? <a href="<?php echo esc_url( site_url() . '/sign-up/' ); ?>">Sign up</a>
                             </div>
                         </div>
                     </div>

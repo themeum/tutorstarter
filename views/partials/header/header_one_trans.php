@@ -76,7 +76,7 @@
 					<?php endif ?>
 					<?php if ( ! is_user_logged_in() ) : ?>
 						<div class="tutor-login-link">
-							<a href="<?php echo site_url() . '/sign-in'; ?>">
+							<a href="<?php echo esc_url( site_url() . '/sign-in' ); ?>">
 								<?php esc_html_e( 'Log In', 'tutorstarter' ); ?>
 							</a>
 						</div><!-- .tutor-login-link -->

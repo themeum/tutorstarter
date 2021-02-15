@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
                     </div>
                     <div class="col-md-12">
                         <div class="tutor-theme-signing-type">
-                            <a href="/instructor-registration/">
+                            <a href="<?php echo esc_url( site_url() . '/instructor-registration/' ); ?>">
                                 <div class="sign-type sign-as-instructor">
                                     <div class="signing-type-icon">
                                         <img src="<?php echo esc_url_raw( get_template_directory_uri() . '/assets/dist/images/path-icon.png' ); ?>" alt="<?php _e( 'Instructor Registration', 'tutorstarter' ) ?>">
@@ -41,7 +41,7 @@ defined( 'ABSPATH' ) || exit;
                                     </div>
                                 </div><!-- sign-in-as-instructor-->
                             </a>
-                            <a href="/student-registration/">
+                            <a href="<?php echo esc_url( site_url() . '/student-registration/' ); ?>">
                                 <div class="sign-type sign-as-student">
                                     <div class="signing-type-icon">
                                         <img src="<?php echo esc_url_raw( get_template_directory_uri() . '/assets/dist/images/path-icon.png' ); ?>" alt="<?php _e( 'Student Registration', 'tutorstarter' ) ?>">
