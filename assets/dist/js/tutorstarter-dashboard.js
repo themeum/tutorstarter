@@ -105,69 +105,48 @@ var General = function General() {
     className: "thm-opt-container header-content"
   }, /*#__PURE__*/React.createElement("div", {
     className: "thm-title"
-  }, /*#__PURE__*/React.createElement("h1", null, "Tutor Starter")), /*#__PURE__*/React.createElement("div", {
-    className: "thm-tagline"
-  }, "Version ", /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("strong", null, "1.0.0"))))), /*#__PURE__*/React.createElement("main", {
+  }, /*#__PURE__*/React.createElement("h1", null, "Tutor Starter")), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontWeight: 200,
+      fontSize: '16px'
+    }
+  }, " - v", tutorstarter_dashboard.theme_version)), /*#__PURE__*/React.createElement("h4", {
+    className: "title"
+  }, /*#__PURE__*/React.createElement("span", null, "Customizer Quick Links"))), /*#__PURE__*/React.createElement("main", {
     className: "thm-opt-container"
   }, /*#__PURE__*/React.createElement("div", {
     className: "thm-opt-content"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "thm-opt-main"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "thm-opt-card"
-  }, /*#__PURE__*/React.createElement("h4", {
-    className: "title"
-  }, /*#__PURE__*/React.createElement("span", null, "Customizer Quick Links")), /*#__PURE__*/React.createElement("ul", {
-    className: "links"
-  }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("div", {
-    className: "item"
+  }, /*#__PURE__*/React.createElement("a", {
+    className: "thm-opt-card",
+    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_colors_section")
   }, /*#__PURE__*/React.createElement("i", {
     className: "fas fa-paint-brush"
-  }), /*#__PURE__*/React.createElement("a", {
-    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_colors_section")
-  }, "Colors")), /*#__PURE__*/React.createElement("div", {
-    className: "item"
+  }), /*#__PURE__*/React.createElement("p", null, "Colors")), /*#__PURE__*/React.createElement("a", {
+    className: "thm-opt-card",
+    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_layout_section")
   }, /*#__PURE__*/React.createElement("i", {
     className: "fas fa-columns"
-  }), /*#__PURE__*/React.createElement("a", {
-    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_layout_section")
-  }, "Layout"))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("div", {
-    className: "item"
+  }), /*#__PURE__*/React.createElement("p", null, "Layouts")), /*#__PURE__*/React.createElement("a", {
+    className: "thm-opt-card",
+    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_header_section")
   }, /*#__PURE__*/React.createElement("i", {
     className: "fas fa-paint-roller"
-  }), /*#__PURE__*/React.createElement("a", {
-    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_header_section")
-  }, "Header")), /*#__PURE__*/React.createElement("div", {
-    className: "item"
+  }), /*#__PURE__*/React.createElement("p", null, "Header")), /*#__PURE__*/React.createElement("a", {
+    className: "thm-opt-card",
+    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_footer_section")
   }, /*#__PURE__*/React.createElement("i", {
     className: "fas fa-th"
-  }), /*#__PURE__*/React.createElement("a", {
-    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_footer_section")
-  }, "Footer"))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("div", {
-    className: "item"
+  }), /*#__PURE__*/React.createElement("p", null, "Footer")), /*#__PURE__*/React.createElement("a", {
+    className: "thm-opt-card",
+    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_typography_section")
   }, /*#__PURE__*/React.createElement("i", {
     className: "fas fa-font"
-  }), /*#__PURE__*/React.createElement("a", {
-    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_typography_section")
-  }, "Typography")), /*#__PURE__*/React.createElement("div", {
-    className: "item"
+  }), /*#__PURE__*/React.createElement("p", null, "Typography")), /*#__PURE__*/React.createElement("a", {
+    className: "thm-opt-card",
+    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_blog_section")
   }, /*#__PURE__*/React.createElement("i", {
     className: "far fa-edit"
-  }), /*#__PURE__*/React.createElement("a", {
-    href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_blog_section")
-  }, "Blog")))))), /*#__PURE__*/React.createElement("div", {
-    className: "thm-opt-sidebar"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "thm-opt-card"
-  }, /*#__PURE__*/React.createElement("h4", {
-    className: "title"
-  }, /*#__PURE__*/React.createElement("i", {
-    className: "fas fa-paint-brush"
-  }), /*#__PURE__*/React.createElement("span", null, "Unleash your creativity")), /*#__PURE__*/React.createElement("div", {
-    className: "miscellaneous"
-  }, /*#__PURE__*/React.createElement("p", null, "With Tutor Starter, your creativity just got a power-up! Enjoy the freedom of customization and speed that you never had before."), /*#__PURE__*/React.createElement("a", {
-    href: "https://www.themeum.com/product/tutor-lms/"
-  }, "Learn more")))))));
+  }), /*#__PURE__*/React.createElement("p", null, "Blog")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (General);

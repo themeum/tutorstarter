@@ -154,7 +154,8 @@ class Enqueue {
 			'tutorstarter-dashboard',
 			'tutorstarter_dashboard',
 			array(
-				'admin_url' => get_admin_url(),
+				'admin_url'     => get_admin_url(),
+				'theme_version' => TUTOR_STARTER_VERSION,
 			)
 		);
 	}

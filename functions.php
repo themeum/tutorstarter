@@ -8,7 +8,8 @@
 defined( 'ABSPATH' ) || exit;
 
 // Theme GLOBALS.
-define( 'TUTOR_STARTER_VERSION', '1.0.0' );
+$theme = wp_get_theme();
+define( 'TUTOR_STARTER_VERSION', $theme->get( 'Version' ) );
 
 if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) :
 	require_once dirname( __FILE__ ) . '/vendor/autoload.php';
