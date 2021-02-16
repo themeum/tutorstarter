@@ -71,6 +71,7 @@ img {
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+            transition: 0.35s linear;
             text-decoration: none;
              i {
                  font-size: 25px;
@@ -78,6 +79,9 @@ img {
 
              p {
                 font-size: 17px;
+             }
+             &:hover {
+                 box-shadow: 0px 30px 60px -10px rgb(0 28 73 / 15%);
              }
         }
     }
