@@ -9,15 +9,18 @@
         <div class="tutor-nav">
             <div class="tutor-navbar-col tutor-navbar-brand">
                 <div class="tutor-brand">
-                    <?php if ( has_custom_logo() ) : ?>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                            <?php the_custom_logo(); ?>
-                        </a>
-                    <?php else : ?>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                            <?php svg( 'logo' ); ?>
-                        </a>
-                    <?php endif; ?>
+                    <?php $logo = get_theme_mod( 'custom_logo' );
+						$logo_img = wp_get_attachment_image_src( $logo );
+					?>
+					<?php if ( $logo_img ) : ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="<?php echo esc_url( $logo_img[0] ); ?>" alt="<?php esc_html_e( bloginfo( 'name' ) ); ?>" />
+						</a>
+					<?php else : ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-header.png' ); ?>" alt="<?php esc_html_e( bloginfo( 'name' ) ); ?>" />
+						</a>
+					<?php endif; ?>
                 </div><!-- .tutor-brand -->
             </div>
             <div class="tutor-navbar-main-menu">

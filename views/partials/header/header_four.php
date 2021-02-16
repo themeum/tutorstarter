@@ -14,15 +14,18 @@
 <header id="masthead" class="alternative">
 	<nav class="navbar navbar-left bg-primary">
 		<div class="navbar-brand">
-		<?php if ( has_custom_logo() ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<?php the_custom_logo(); ?>
-			</a>
-		<?php else : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<?php svg( 'logo' ); ?>
-			</a>
-		<?php endif; ?>
+			<?php $logo = get_theme_mod( 'custom_logo' );
+				$logo_img = wp_get_attachment_image_src( $logo );
+			?>
+			<?php if ( $logo_img ) : ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img src="<?php echo esc_url( $logo_img[0] ); ?>" alt="<?php esc_html_e( bloginfo( 'name' ) ); ?>" />
+				</a>
+			<?php else : ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-header.png' ); ?>" alt="<?php esc_html_e( bloginfo( 'name' ) ); ?>" />
+				</a>
+			<?php endif; ?>
 		</div>
 		<button class="navbar-toggler">
 			<svg height="30px" id="nav-toggler-id" viewBox="0 0 32 28" width="32px" xml:space="preserve"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
