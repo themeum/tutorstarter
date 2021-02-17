@@ -9602,6 +9602,11 @@ img {
   color: #57586e;
 }
 
+.tutor-single-course-sidebar .tutor-price-preview-box .price .price ins {
+  margin-right: 10px;
+  text-decoration: none;
+}
+
 section.tutor-theme-getting-starter .getting-started-page-heading {
   font-family: Libre Baskerville;
   font-weight: bold;
