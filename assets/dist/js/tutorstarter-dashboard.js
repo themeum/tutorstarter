@@ -119,33 +119,33 @@ var General = function General() {
   }, /*#__PURE__*/React.createElement("a", {
     className: "thm-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_colors_section")
-  }, /*#__PURE__*/React.createElement("i", {
-    className: "fas fa-paint-brush"
+  }, /*#__PURE__*/React.createElement("span", {
+    "class": "dashicons dashicons-color-picker"
   }), /*#__PURE__*/React.createElement("p", null, "Colors")), /*#__PURE__*/React.createElement("a", {
     className: "thm-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_layout_section")
-  }, /*#__PURE__*/React.createElement("i", {
-    className: "fas fa-columns"
+  }, /*#__PURE__*/React.createElement("span", {
+    "class": "dashicons dashicons-layout"
   }), /*#__PURE__*/React.createElement("p", null, "Layouts")), /*#__PURE__*/React.createElement("a", {
     className: "thm-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_header_section")
-  }, /*#__PURE__*/React.createElement("i", {
-    className: "fas fa-paint-roller"
+  }, /*#__PURE__*/React.createElement("span", {
+    "class": "dashicons dashicons-archive"
   }), /*#__PURE__*/React.createElement("p", null, "Header")), /*#__PURE__*/React.createElement("a", {
     className: "thm-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_footer_section")
-  }, /*#__PURE__*/React.createElement("i", {
-    className: "fas fa-th"
+  }, /*#__PURE__*/React.createElement("span", {
+    "class": "dashicons dashicons-table-row-before"
   }), /*#__PURE__*/React.createElement("p", null, "Footer")), /*#__PURE__*/React.createElement("a", {
     className: "thm-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_typography_section")
-  }, /*#__PURE__*/React.createElement("i", {
-    className: "fas fa-font"
+  }, /*#__PURE__*/React.createElement("span", {
+    "class": "dashicons dashicons-editor-spellcheck"
   }), /*#__PURE__*/React.createElement("p", null, "Typography")), /*#__PURE__*/React.createElement("a", {
     className: "thm-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_blog_section")
-  }, /*#__PURE__*/React.createElement("i", {
-    className: "far fa-edit"
+  }, /*#__PURE__*/React.createElement("span", {
+    "class": "dashicons dashicons-edit-page"
   }), /*#__PURE__*/React.createElement("p", null, "Blog")))));
 };
 

@@ -18,27 +18,27 @@ const General = () => {
             <main className="thm-opt-container">
                 <div className="thm-opt-content">
                     <a className="thm-opt-card" href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_colors_section`}>
-                        <i className="fas fa-paint-brush"></i>
+                        <span class="dashicons dashicons-color-picker"></span>
                         <p>Colors</p>
                     </a>
                     <a className="thm-opt-card" href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_layout_section`}>
-                        <i className="fas fa-columns"></i>
+                        <span class="dashicons dashicons-layout"></span>
                         <p>Layouts</p>
                     </a>
                     <a className="thm-opt-card" href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_header_section`}>
-                        <i className="fas fa-paint-roller"></i>
+                        <span class="dashicons dashicons-archive"></span>
                         <p>Header</p>
                     </a>
                     <a className="thm-opt-card" href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_footer_section`}>
-                        <i className="fas fa-th"></i>
+                        <span class="dashicons dashicons-table-row-before"></span>
                         <p>Footer</p>
                     </a>
                     <a className="thm-opt-card" href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_typography_section`}>
-                        <i className="fas fa-font"></i>       
+                        <span class="dashicons dashicons-editor-spellcheck"></span>      
                         <p>Typography</p>
                     </a>
                     <a className="thm-opt-card" href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_blog_section`}>
-                        <i className="far fa-edit"></i>
+                        <span class="dashicons dashicons-edit-page"></span>
                         <p>Blog</p>
                     </a>
                 </div>
