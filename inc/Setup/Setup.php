@@ -165,6 +165,9 @@ class Setup {
 		// Custom image size for cart items
 		add_image_size( 'cart-image-thumb', 160, 90, true );
 
+		//Load theme textdomain.
+		load_theme_textdomain( 'tutorstarter', get_template_directory() . '/languages' );
+
 	}
 
 	/**
