@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
-<div class="tutorstarter-order-receipt-container">
+<div class="tutorstarter-order-receipt-container" style="margin-top: 40px;">
 	<div class="woocommerce-order">
 
 		<?php

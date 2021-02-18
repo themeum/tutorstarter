@@ -49,7 +49,7 @@ section.tutor-theme-signin {
 							padding: 19px 25px;
 							box-sizing: border-box;
 							transition: all 0.3s ease-in-out;
-							&::placeholder {
+							&:placeholder {
 								font-size: 16px;
 								line-height: 19px;
 								color: rgba(10, 8, 59, 0.5);
@@ -58,19 +58,6 @@ section.tutor-theme-signin {
 								outline: 0;
 								border: 1.5px solid rgba(10, 8, 59, 0.25);
 							}
-						}
-					}
-					.form-grp.signin-form-terms-condition {
-						font-family: Inter;
-						font-size: $base-fs;
-						font-style: normal;
-						font-weight: normal;
-						line-height: 26px;
-						text-align: center;
-						color: #57586e;
-						a {
-							color: $blue;
-							text-decoration: underline;
 						}
 					}
 					button {

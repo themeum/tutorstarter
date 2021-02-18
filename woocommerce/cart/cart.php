@@ -112,7 +112,7 @@ defined( 'ABSPATH' ) || exit;
 				<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 					<?php if ( wc_coupons_enabled() ) { ?>
 						<div class="">
-							<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Enter coupon', 'tutorstarter' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply', 'tutorstarter' ); ?>"><?php esc_attr_e( 'Apply', 'tutorstarter' ); ?></button>
+							<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Enter coupon', 'tutorstarter' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply', 'tutorstarter' ); ?>"><?php esc_html_e( 'Apply', 'tutorstarter' ); ?></button>
 							<?php do_action( 'woocommerce_cart_coupon' ); ?>
 						</div>
 					<?php } ?>

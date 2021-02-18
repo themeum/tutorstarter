@@ -31,34 +31,34 @@ defined( 'ABSPATH' ) || exit;
                         <div class="tutor-theme-signin-form-area">
                             <div class="tutor-theme-signin-form-area-row">
                                 <div class="tutor-theme-signin-form-area-heading">
-                                    <?php _e( 'Sign in', 'tutorstarter' ); ?>
+                                    <?php esc_html_e( 'Sign in', 'tutorstarter' ); ?>
                                 </div>
                                 <div class="tutor-theme-signin-form">
                                     <form action="" method="post" class="tutor-signin-form">
                                         <p class="signup-status"></p>
                                         <?php wp_nonce_field( 'tutor-starter-signin-nonce', 'signin-nonce' ); ?>
                                         <div class="form-grp signin-form-email">
-                                            <label for="login_email"><?php _e( 'Email', 'tutorstarter' ); ?></label>
-                                            <input name="login_email" type="login_email" id="login_email" placeholder="name@example.com">
+                                            <label for="login_email"><?php esc_html_e( 'Email', 'tutorstarter' ); ?></label>
+                                            <input name="login_email" type="login_email" id="login_email" placeholder="<?php esc_attr_e( 'name@example.com', 'tutorstarter' ); ?>">
                                         </div>
                                         <div class="form-grp signin-form-password">
                                             <label for="login_password">
-                                                <?php _e( 'Password', 'tutorstarter' ); ?>
+                                                <?php esc_html_e( 'Password', 'tutorstarter' ); ?>
                                                 <?php $lostpasurl = wp_lostpassword_url( home_url() ); ?>
                                                 <a href="<?php echo esc_url( $lostpasurl ); ?>">
                                                     <?php esc_html_e( 'Forgot password?', 'tutorstarter' ); ?>
                                                 </a>
                                             </label>
-                                            <input name="login_password" id="login_password" type="password" placeholder="Type your password">
+                                            <input name="login_password" id="login_password" type="password" placeholder="<?php esc_attr_e( 'Type your password', 'tutorstarter' ); ?>">
                                         </div>
                                         <?php do_action( 'tutorstarter_auth_recaptcha' ); ?>
-                                        <button type="submit" class="btn btn-primary tutor-starter-btn"><?php _e( 'Log in', 'tutorstarter' ); ?></button>
+                                        <button type="submit" class="btn btn-primary tutor-starter-btn"><?php esc_html_e( 'Log in', 'tutorstarter' ); ?></button>
                                     </form><!-- form -->
                                 </div><!-- tutor-theme-signup-form -->
                             </div><!-- tutor-theme-signup-form-area-row -->
                             <!-- tutor-theme-signin-form-area-row tutor-theme-social-signin -->
                             <div class="already-have-account-link text-center mt-3">
-                                Don’t have an account? <a href="<?php echo esc_url( site_url() . '/sign-up/' ); ?>">Sign up</a>
+                                <?php esc_html_e( 'Don\'t have an account?', 'tutorstarter' ); ?> <a href="<?php echo esc_url( site_url() . '/sign-up/' ); ?>"><?php esc_html_e( 'Sign up', 'tutorstarter' ); ?></a>
                             </div>
                         </div>
                     </div>

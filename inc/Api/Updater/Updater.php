@@ -42,7 +42,7 @@ class Updater {
         $theme               = wp_get_theme();
 		$this->theme_name    = $theme->get( 'TextDomain' );
 		$this->theme_version = $theme->get( 'Version' );
-        $this->api_endpoint  = 'https://www.themeum.com/wp-json/themeum-license/v1/';
+        $this->api_endpoint  = 'https://www.themeum.com/wp-json/themeum-license/v2/';
         
 		add_filter( 'pre_set_site_transient_update_themes', array( $this, 'check_for_update' ) );
     }
@@ -65,7 +65,7 @@ class Updater {
 		);
 
 		// Make the POST request.
-		$request = wp_remote_post( $this->api_endpoint . 'check-update', $params );
+		$request = wp_remote_post( $this->api_endpoint . 'check-update-free', $params );
 
 		$request_body = false;
 		// Check if response is valid.

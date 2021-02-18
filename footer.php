@@ -52,7 +52,7 @@ if ( false === $disable_footer ) :
 			</div><!-- .footer-menu-->
 			<?php endif; ?>
 			<div class="copyright-container">
-				<span class="copyright"><?php wp_kses( _e( get_theme_mod( 'footer_bottom_text', '&copy; All rights reserved.' ), 'tutorstarter' ), allowed_html() ); ?></span>
+				<span class="copyright"><?php wp_kses( esc_html_e( get_theme_mod( 'footer_bottom_text', '&copy; All rights reserved.' ), 'tutorstarter' ), allowed_html() ); ?></span>
 			</div><!-- .footer-menu-->
 		</div><!-- .row -->
 	</div><!-- .container -->

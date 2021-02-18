@@ -8,7 +8,7 @@
 <div class="search-popup">
 	<form>
 		<div class="btn-search-close">x</div>
-		<input type="search" name="s" value="<?php echo get_search_query(); ?>" placeholder="Search" autocomplete="off" />
+		<input type="search" name="s" value="<?php echo get_search_query(); ?>" placeholder="<?php esc_attr_e( 'Search', 'tutorstarter' ); ?>" autocomplete="off" />
 	</form>
 </div>
 <header id="masthead" class="alternative">
@@ -19,11 +19,11 @@
 			?>
 			<?php if ( $logo_img ) : ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img src="<?php echo esc_url( $logo_img[0] ); ?>" alt="<?php esc_html_e( bloginfo( 'name' ) ); ?>" />
+					<img src="<?php echo esc_url( $logo_img[0] ); ?>" alt="<?php esc_attr_e( bloginfo( 'name' ) ); ?>" />
 				</a>
 			<?php else : ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-header.png' ); ?>" alt="<?php esc_html_e( bloginfo( 'name' ) ); ?>" />
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-header.png' ); ?>" alt="<?php esc_attr_e( bloginfo( 'name' ) ); ?>" />
 				</a>
 			<?php endif; ?>
 		</div>

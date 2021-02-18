@@ -57,7 +57,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php
 		if ( ! is_single() && true === get_theme_mod( 'post_readmore_toggle', true ) ) :
 			?>
-			<a class="read-more" href="<?php the_permalink(); ?>"><?php _e( 'Continue Reading &rarr;', 'tutorstarter' ); ?></a>
+			<a class="read-more" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Continue Reading &rarr;', 'tutorstarter' ); ?></a>
 		<?php endif; ?>
 	</div>
 </article><!--post--->

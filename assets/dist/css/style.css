@@ -9729,19 +9729,22 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
   font-weight: normal;
 }
 
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input::-moz-placeholder {
-  font-size: 16px;
-  line-height: 19px;
-  color: rgba(10, 8, 59, 0.5);
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input,
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input::-webkit-input-placeholder {
+  background: rgba(255, 255, 255, 0.0001);
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+  border-radius: 6px;
+  width: 100%;
+  padding: 19px 25px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input:-ms-input-placeholder {
-  font-size: 16px;
-  line-height: 19px;
-  color: rgba(10, 8, 59, 0.5);
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input::placeholder {
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input:placeholder,
+section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:placeholder::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input:placeholder::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 19px;
   color: rgba(10, 8, 59, 0.5);
@@ -9752,21 +9755,6 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input:focus::-webkit-input-placeholder {
   outline: 0;
   border: 1.5px solid rgba(10, 8, 59, 0.25);
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp.signin-form-terms-condition {
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 26px;
-  text-align: center;
-  color: #57586e;
-}
-
-section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp.signin-form-terms-condition a {
-  color: #175cff;
-  text-decoration: underline;
 }
 
 section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form button {
@@ -9888,19 +9876,22 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-for
   margin-bottom: 12px;
 }
 
-section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input::-moz-placeholder {
-  font-size: 16px;
-  line-height: 19px;
-  color: rgba(10, 8, 59, 0.5);
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input,
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input::-webkit-input-placeholder {
+  background: rgba(255, 255, 255, 0.0001);
+  border: 1.5px solid rgba(10, 8, 59, 0.1);
+  border-radius: 6px;
+  width: 100%;
+  padding: 19px 25px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input:-ms-input-placeholder {
-  font-size: 16px;
-  line-height: 19px;
-  color: rgba(10, 8, 59, 0.5);
-}
-
-section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input::placeholder {
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input:placeholder,
+section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:placeholder::-webkit-input-placeholder,
+.tutor-course-filter-wrapper > div:first-child .tutor-course-search-field section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp input:placeholder::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 19px;
   color: rgba(10, 8, 59, 0.5);

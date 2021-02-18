@@ -14,11 +14,11 @@
 					?>
 					<?php if ( $logo_img ) : ?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php echo esc_url( $logo_img[0] ); ?>" alt="<?php esc_html_e( bloginfo( 'name' ) ); ?>" />
+							<img src="<?php echo esc_url( $logo_img[0] ); ?>" alt="<?php esc_attr_e( bloginfo( 'name' ) ); ?>" />
 						</a>
 					<?php else : ?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-white.png' ); ?>" alt="<?php esc_html_e( bloginfo( 'name' ) ); ?>" />
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-white.png' ); ?>" alt="<?php esc_attr_e( bloginfo( 'name' ) ); ?>" />
 						</a>
 					<?php endif; ?>
 				</div><!-- .tutor-brand -->
@@ -136,7 +136,7 @@
 					<?php if ( ! is_user_logged_in() || is_customize_preview() ) : ?>
 					<div class="tutor-get-started-btn">
 						<?php if ( true === get_theme_mod( 'cta_text_toggle', true ) ) : ?>
-							<a class="call-to-action" href="<?php echo esc_url( site_url() . get_theme_mod( 'cta_text_link', '#' ) ); ?>"><?php echo esc_html( get_theme_mod( 'cta_text', 'Getting Started' ) ); ?></a>
+							<a class="call-to-action" href="<?php echo esc_url( site_url() . get_theme_mod( 'cta_text_link', '#' ) ); ?>"><?php echo esc_html__( get_theme_mod( 'cta_text', 'Getting Started' ), 'tutorstarter' ); ?></a>
 						<?php endif; ?>
 					</div><!-- .tutor-get-started-btn -->
 					<?php endif; ?>
