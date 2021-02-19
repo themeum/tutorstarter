@@ -404,6 +404,7 @@ if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
 				'force_activation'   => false,
 				'force_deactivation' => false,
 				'external_url'       => esc_url( 'https://api.tutorlms.com/wp-content/uploads/2021/02/tutormate.zip' ),
+				'source'             => esc_url( 'https://api.tutorlms.com/wp-content/uploads/2021/02/tutormate.zip' ),
 			),
 		);
 
