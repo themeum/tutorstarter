@@ -55,7 +55,7 @@ defined( 'ABSPATH' ) || exit;
                                             <input name="confirm_password" id="confirm-password" type="password" placeholder="<?php esc_attr_e( 'Confirm your password', 'tutorstarter' ); ?>">
                                         </div>
                                         <div class="form-grp signup-form-terms-condition">
-                                            <?php esc_html_e( 'By signing up you agree to the', 'tutorstarter' ); ?> <a href="<?php echo esc_url( site_url() . '/terms-conditions' ); ?>"><?php esc_html_e( 'Terms and Conditions', 'tutorstarter' ); ?></a> <?php esc_html_e( 'and the', 'tutorstarter' ); ?> <br> <a href="<?php echo esc_url( site_url() . '/privacy-policy' ); ?>">  <?php esc_html_e( 'Privacy Policy', 'tutorstarter' ); ?></a>
+                                            <?php esc_html_e( 'By signing up you agree to the', 'tutorstarter' ); ?> <a href="<?php echo esc_url( home_url() . '/terms-conditions' ); ?>"><?php esc_html_e( 'Terms and Conditions', 'tutorstarter' ); ?></a> <?php esc_html_e( 'and the', 'tutorstarter' ); ?> <br> <a href="<?php echo esc_url( home_url() . '/privacy-policy' ); ?>">  <?php esc_html_e( 'Privacy Policy', 'tutorstarter' ); ?></a>
                                         </div>
                                         <?php do_action( 'tutorstarter_auth_recaptcha' ); ?>
                                         <button type="submit" class="btn btn-primary tutor-starter-btn"><?php esc_html_e( 'Sign up', 'tutorstarter' ); ?></button>
@@ -63,7 +63,7 @@ defined( 'ABSPATH' ) || exit;
                                 </div><!-- tutor-theme-signup-form -->
                             </div><!-- tutor-theme-signup-form-area-row -->
                             <div class="already-have-account-link text-center mt-3">
-                                <?php esc_html_e( 'Already have an account?', 'tutorstarter' ); ?> <a href="<?php echo esc_url( site_url() . '/sign-in/' ); ?>"><?php esc_html_e( 'Log in', 'tutorstarter' ); ?></a>
+                                <?php esc_html_e( 'Already have an account?', 'tutorstarter' ); ?> <a href="<?php echo esc_url( home_url() . '/sign-in/' ); ?>"><?php esc_html_e( 'Log in', 'tutorstarter' ); ?></a>
                             </div>
                         </div>
                     </div>

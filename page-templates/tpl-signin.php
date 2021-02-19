@@ -58,7 +58,7 @@ defined( 'ABSPATH' ) || exit;
                             </div><!-- tutor-theme-signup-form-area-row -->
                             <!-- tutor-theme-signin-form-area-row tutor-theme-social-signin -->
                             <div class="already-have-account-link text-center mt-3">
-                                <?php esc_html_e( 'Don\'t have an account?', 'tutorstarter' ); ?> <a href="<?php echo esc_url( site_url() . '/sign-up/' ); ?>"><?php esc_html_e( 'Sign up', 'tutorstarter' ); ?></a>
+                                <?php esc_html_e( 'Don\'t have an account?', 'tutorstarter' ); ?> <a href="<?php echo esc_url( home_url() . '/sign-up/' ); ?>"><?php esc_html_e( 'Sign up', 'tutorstarter' ); ?></a>
                             </div>
                         </div>
                     </div>

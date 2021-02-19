@@ -129,7 +129,7 @@ class Enqueue {
 	 * Preload font-awesome
 	 */
 	public function preload_fontawesome() {
-		$link_to_preload = '<link rel="preload" href="' . get_site_url( null, '/wp-content/plugins/qubely/assets/fonts/fa-solid-900.woff2' ) . '" as="font" crossorigin="anonymous">';
+		$link_to_preload = '<link rel="preload" href="' . get_home_url( null, '/wp-content/plugins/qubely/assets/fonts/fa-solid-900.woff2' ) . '" as="font" crossorigin="anonymous">';
 
 		echo $link_to_preload;
 	}

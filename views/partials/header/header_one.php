@@ -77,7 +77,7 @@
 					<?php endif ?>
 					<?php if ( ! is_user_logged_in() ) : ?>
 						<div class="tutor-login-link">
-							<a href="<?php echo esc_url( site_url() . '/sign-in' ); ?>">
+							<a href="<?php echo esc_url( home_url() . '/sign-in' ); ?>">
 								<?php esc_html_e( 'Log In', 'tutorstarter' ); ?>
 							</a>
 						</div><!-- .tutor-login-link -->
@@ -136,7 +136,7 @@
 					<?php if ( ! is_user_logged_in() || is_customize_preview() ) : ?>
 					<div class="tutor-get-started-btn">
 						<?php if ( true === get_theme_mod( 'cta_text_toggle', true ) ) : ?>
-							<a class="call-to-action" href="<?php echo esc_url( site_url() . get_theme_mod( 'cta_text_link', '#' ) ); ?>"><?php echo esc_html__( get_theme_mod( 'cta_text', 'Getting Started' ), 'tutorstarter' ); ?></a>
+							<a class="call-to-action" href="<?php echo esc_url( home_url() . get_theme_mod( 'cta_text_link', '#' ) ); ?>"><?php echo esc_html__( get_theme_mod( 'cta_text', 'Getting Started' ), 'tutorstarter' ); ?></a>
 						<?php endif; ?>
 					</div><!-- .tutor-get-started-btn -->
 					<?php endif; ?>
