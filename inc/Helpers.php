@@ -400,10 +400,10 @@ if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
 				'name'               => esc_html__( 'Tutormate', 'tutorstarter' ),
 				'slug'               => 'tutormate',
 				'required'           => false,
-				'version'            => '',
+				'version'            => '1.0.0',
 				'force_activation'   => false,
 				'force_deactivation' => false,
-				'external_url'       => esc_url( '' ), //@TODO Will be added later.
+				'external_url'       => esc_url( 'https://api.tutorlms.com/wp-content/uploads/2021/02/tutormate.zip' ),
 			),
 		);
 
