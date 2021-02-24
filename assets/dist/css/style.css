@@ -8536,7 +8536,7 @@ img {
 
 .blog-post-container {
   max-width: 1140px;
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
   padding: 0 15px;
   display: flex;
   flex-direction: column;
@@ -8735,7 +8735,7 @@ img {
 }
 
 .single-post .entry-title {
-  font-family: Libre Baskerville;
+  font-family: var(--heading-font);
   font-style: normal;
   font-weight: 700;
   line-height: 1.345;
@@ -8759,7 +8759,7 @@ img {
 
 .single-post .entry-meta span,
 .single-post .entry-meta a {
-  font-family: Inter;
+  font-family: var(--body-font);
   font-weight: 400;
   font-size: 18px;
   line-height: 2.17;
@@ -8801,7 +8801,7 @@ img {
 .single-post .post-tags {
   max-width: 720px;
   margin: 0 auto;
-  font-family: "Inter", sans-serif;
+  font-family: var(--body-font);
 }
 
 .single-post .entry-content p,
@@ -8817,7 +8817,7 @@ img {
 
 .single-post .entry-content h4,
 .single-post .post-tags h4 {
-  font-family: "Inter", sans-serif;
+  font-family: var(--body-font);
   font-size: 24px;
   line-height: 1.6;
   font-weight: 500;
@@ -8844,7 +8844,7 @@ img {
 .single-post .entry-content blockquote::before,
 .single-post .post-tags blockquote::before {
   content: '"';
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: var(--heading-font);
   font-size: 104px;
   line-height: 1;
   position: absolute;
@@ -8865,7 +8865,7 @@ img {
 }
 
 .single-post .tags-links a {
-  font-family: "Inter", sans-serif;
+  font-family: var(--body-font);
   font-size: 16px;
   font-weight: 500;
   line-height: 19px;
@@ -8945,7 +8945,7 @@ img {
   right: 5px;
   top: 5px;
   height: calc(100% - 10px);
-  font-family: "Inter", sans-serif;
+  font-family: var(--body-font);
   font-weight: 600;
   font-size: 16px;
   line-height: 1;
@@ -8983,7 +8983,7 @@ img {
 
 .widget .widget-title,
 .page-content .widget-title {
-  font-family: "Inter", sans-serif;
+  font-family: var(--body-font);
   font-size: 20px;
   font-weight: 600;
   color: #0a083b;
@@ -8998,7 +8998,7 @@ img {
 
 .comment-reply-title,
 .comments-title {
-  font-family: "Inter", sans-serif;
+  font-family: var(--body-font);
   font-size: 22px;
   line-height: 1.6;
   font-weight: 500;
@@ -9080,7 +9080,7 @@ img {
 .comment-form .form-submit .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=submit]::-webkit-input-placeholder,
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form .form-submit input[type=submit]::-webkit-input-placeholder {
   background-color: #175cff;
-  font-family: "Inter", sans-serif;
+  font-family: var(--body-font);
   font-weight: 600;
   font-size: 16px;
   text-transform: capitalize;
@@ -9369,6 +9369,10 @@ img {
 .tutor-course-loop .tutor-loop-course-footer .price a:before {
   margin-right: 0;
   margin-left: 5px;
+}
+
+.tutor-courses-wrap {
+  margin-top: 50px;
 }
 
 /* Single Course */

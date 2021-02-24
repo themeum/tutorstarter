@@ -139,7 +139,7 @@ class Enqueue {
 	public function enqueue_admin_scripts( $hook ) {
 		wp_enqueue_style( 'tutorstarter-dashboard', mix( 'css/dashboard.css' ), array( 'wp-components' ), TUTOR_STARTER_VERSION, 'all' );
 
-		if ( 'post.php' === $hook ) {
+		if ( 'post.php' === $hook || 'post-new.php' === $hook ) {
 			wp_enqueue_script( 'tutorstarter-schema-data', mix( 'js/tutor-schema.js' ), array( 'wp-i18n', 'wp-components', 'wp-element' ), TUTOR_STARTER_VERSION, true );
 			wp_localize_script( 'tutorstarter-schema-data', 'tutorstarter_admin_schema', Inline_Css_Js::admin_localized_js() );
 		}
