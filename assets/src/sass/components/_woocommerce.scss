@@ -218,3 +218,22 @@ body.woocommerce-page {
 		}
 	}
 }
+
+
+.single-product {
+	.button.wc-forward {
+		font-family: Inter;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 19px;
+		background: #175cff;
+		border-radius: 33px;
+		padding: 10px 25px;
+		color: #ffffff;
+		&:hover{
+			background-color: #0a083b;
+			color: #fff;
+		}
+	}
+}

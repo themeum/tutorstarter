@@ -9607,6 +9607,28 @@ img {
   text-decoration: none;
 }
 
+.tutor-pagination-wrap .page-numbers {
+  min-width: 38px;
+  color: #57586e;
+  background: #ffffff;
+  margin: 60px 2px 12px 2px;
+  padding: 7.5px;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 1.2222em !important;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid #bbc0d4;
+  transition: all 0.15s ease-in-out;
+}
+
+.tutor-pagination-wrap .page-numbers:hover,
+.tutor-pagination-wrap .page-numbers.current {
+  background: #175cff;
+  color: #ffffff;
+  border: 1px solid #175cff;
+}
+
 section.tutor-theme-getting-starter .getting-started-page-heading {
   font-family: Libre Baskerville;
   font-weight: bold;
@@ -10249,6 +10271,23 @@ body.woocommerce-page .site-content {
 
 .woocommerce ul.products li.product .button.loading::after {
   right: 12px;
+}
+
+.single-product .button.wc-forward {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  background: #175cff;
+  border-radius: 33px;
+  padding: 10px 25px;
+  color: #ffffff;
+}
+
+.single-product .button.wc-forward:hover {
+  background-color: #0a083b;
+  color: #fff;
 }
 
 .tutor-starter-custom-subscription {
