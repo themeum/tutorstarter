@@ -10290,6 +10290,11 @@ body.woocommerce-page .site-content {
   color: #fff;
 }
 
+.woocommerce-thankyou-order-received {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
 .tutor-starter-custom-subscription {
   position: relative;
 }
