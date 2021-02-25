@@ -49,6 +49,12 @@ h1.entry-title {
 	padding: 5px 0;
 }
 
+.entry-content p:after {
+	content: "";
+	clear: both;
+    display: table;
+  }
+
 .post-navigation {
 	padding: 5px;
 }

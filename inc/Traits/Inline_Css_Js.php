@@ -50,37 +50,148 @@ trait Inline_Css_Js {
 		$cta_background_trans =  ! empty( $cta_trans_bg['rgb'] ) ? 'rgba(' . $cta_trans_bg['rgb']['r'] . ',' . $cta_trans_bg['rgb']['g'] . ',' . $cta_trans_bg['rgb']['b'] . ',' . $cta_trans_bg['rgb']['a'] . ')' : 'rgba(0, 0, 0, 0.1)';
 
 		// Body Typography.
-		$body_typography = get_theme_mod( 'main_typography' );
+		$body_typography                   = get_theme_mod( 'main_typography' );
+		$body_typography_fontsize         = ! empty( $body_typography['fontSize'] ) ? $body_typography['fontSize']['desktop'] : 16;
+		$body_typography_fontsize_tablet  = ! empty( $body_typography['fontSize'] ) ? $body_typography['fontSize']['tablet'] : 13;
+		$body_typography_fontsize_mobile  = ! empty( $body_typography['fontSize'] ) ? $body_typography['fontSize']['mobile'] : 13;
+		
+		$body_typography_lineheight        = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['desktop'] : 20;
+		$body_typography_lineheight_tablet = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['tablet'] : 20;
+		$body_typography_lineheight_mobile = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['mobile'] : 20;
+		
+		$body_typography_fontweight        = ! empty( $body_typography['fontWeight'] ) ? $body_typography['fontWeight'] : 400;
+		$body_typography_texttransform     = ! empty( $body_typography['textTransform'] ) ? $body_typography['textTransform'] : 'none';
 
 		// Header Menu Typography.
 		$menu_link_typography = get_theme_mod( 'header_link_typography' );
+		$menu_link_typography_fontsize = ! empty( $menu_link_typography['fontSize'] ) ? $menu_link_typography['fontSize']['desktop'] : 16;
+		$menu_link_typography_fontsize_tablet = ! empty( $menu_link_typography['fontSize'] ) ? $menu_link_typography['fontSize']['tablet'] : 13;
+		$menu_link_typography_fontsize_mobile = ! empty( $menu_link_typography['fontSize'] ) ? $menu_link_typography['fontSize']['mobile'] : 13;
+		
+		$menu_link_typography_lineheight = ! empty( $menu_link_typography['lineHeight'] ) ? $menu_link_typography['lineHeight']['desktop'] : 0;
+		$menu_link_typography_lineheight_tablet = ! empty( $menu_link_typography['lineHeight'] ) ? $menu_link_typography['lineHeight']['tablet'] : 0;
+		$menu_link_typography_lineheight_mobile = ! empty( $menu_link_typography['lineHeight'] ) ? $menu_link_typography['lineHeight']['mobile'] : 0;
+
+		$menu_link_typography_fontweight = ! empty( $menu_link_typography['fontWeight'] ) ? $menu_link_typography['fontWeight'] : 400;
+		$menu_link_typography_texttransform = ! empty( $menu_link_typography['textTransform'] ) ? $menu_link_typography['textTransform'] : 'none';
 
 		// Header Button Typography.
 		$header_btn_typography = get_theme_mod( 'cta_font_typography' );
+		$header_btn_typography_fontsize = ! empty( $header_btn_typography['fontSize'] ) ? $header_btn_typography['fontSize']['desktop'] : 16;
+		$header_btn_typography_fontsize_tablet = ! empty( $header_btn_typography['fontSize'] ) ? $header_btn_typography['fontSize']['tablet'] : 13;
+		$header_btn_typography_fontsize_mobile = ! empty( $header_btn_typography['fontSize'] ) ? $header_btn_typography['fontSize']['mobile'] : 13;
+
+		$header_btn_typography_lineheight = ! empty( $header_btn_typography['lineHeight'] ) ? $header_btn_typography['lineHeight']['desktop'] : 0;
+		$header_btn_typography_lineheight_tablet = ! empty( $header_btn_typography['lineHeight'] ) ? $header_btn_typography['lineHeight']['tablet'] : 0;
+		$header_btn_typography_lineheight_mobile = ! empty( $header_btn_typography['lineHeight'] ) ? $header_btn_typography['lineHeight']['mobile'] : 0;
+
+		$header_btn_typography_fontweight = ! empty( $header_btn_typography['fontWeight'] ) ? $header_btn_typography['fontWeight'] : 400;
+		$header_btn_typography_texttransform = ! empty( $header_btn_typography['textTransform'] ) ? $header_btn_typography['textTransform'] : 'none';
 
 		// H1 Typography.
 		$h1_typography = get_theme_mod( 'h1_typography' );
+		$h1_typography_fontsize = ! empty( $h1_typography['fontSize'] ) ? $h1_typography['fontSize']['desktop'] : 48;
+		$h1_typography_fontsize_tablet = ! empty( $h1_typography['fontSize'] ) ? $h1_typography['fontSize']['tablet'] : 36;
+		$h1_typography_fontsize_mobile = ! empty( $h1_typography['fontSize'] ) ? $h1_typography['fontSize']['mobile'] : 36;
+
+		$h1_typography_lineheight = ! empty( $h1_typography['lineHeight'] ) ? $h1_typography['lineHeight']['desktop'] : 64;
+		$h1_typography_lineheight_tablet = ! empty( $h1_typography['lineHeight'] ) ? $h1_typography['lineHeight']['tablet'] : 36;
+		$h1_typography_lineheight_mobile = ! empty( $h1_typography['lineHeight'] ) ? $h1_typography['lineHeight']['mobile'] : 36;
+		
+		$h1_typography_fontweight = ! empty( $h1_typography['fontWeight'] ) ? $h1_typography['fontWeight'] : 700;
+		$h1_typography_texttransform = ! empty( $h1_typography['textTransform'] ) ? $h1_typography['textTransform'] : 'none';
 
 		// H2 Typography.
 		$h2_typography = get_theme_mod( 'h2_typography' );
+		$h2_typography_fontsize = ! empty( $h2_typography['fontSize'] ) ? $h2_typography['fontSize']['desktop'] : 32;
+		$h2_typography_fontsize_tablet = ! empty( $h2_typography['fontSize'] ) ? $h2_typography['fontSize']['tablet'] : 26;
+		$h2_typography_fontsize_mobile = ! empty( $h2_typography['fontSize'] ) ? $h2_typography['fontSize']['mobile'] : 26;
+		
+		$h2_typography_lineheight = ! empty( $h2_typography['lineHeight'] ) ? $h2_typography['lineHeight']['desktop'] : 48;
+		$h2_typography_lineheight_tablet = ! empty( $h2_typography['lineHeight'] ) ? $h2_typography['lineHeight']['tablet'] : 30;
+		$h2_typography_lineheight_mobile = ! empty( $h2_typography['lineHeight'] ) ? $h2_typography['lineHeight']['mobile'] : 30;
+		
+		$h2_typography_fontweight = ! empty( $h2_typography['fontWeight'] ) ? $h2_typography['fontWeight'] : 700;
+		$h2_typography_texttransform = ! empty( $h2_typography['textTransform'] ) ? $h2_typography['textTransform'] : 'none';
 
 		// H3 Typography.
 		$h3_typography = get_theme_mod( 'h3_typography' );
+		$h3_typography_fontsize = ! empty( $h3_typography['fontSize'] ) ? $h3_typography['fontSize']['desktop'] : 26;
+		$h3_typography_fontsize_tablet = ! empty( $h3_typography['fontSize'] ) ? $h3_typography['fontSize']['tablet'] : 24;
+		$h3_typography_fontsize_mobile = ! empty( $h3_typography['fontSize'] ) ? $h3_typography['fontSize']['mobile'] : 24;
+		
+		$h3_typography_lineheight = ! empty( $h3_typography['lineHeight'] ) ? $h3_typography['lineHeight']['desktop'] : 48;
+		$h3_typography_lineheight_tablet = ! empty( $h3_typography['lineHeight'] ) ? $h3_typography['lineHeight']['tablet'] : 24;
+		$h3_typography_lineheight_mobile = ! empty( $h3_typography['lineHeight'] ) ? $h3_typography['lineHeight']['mobile'] : 24;
+		
+		$h3_typography_fontweight = ! empty( $h3_typography['fontWeight'] ) ? $h3_typography['fontWeight'] : 700;
+		$h3_typography_texttransform = ! empty( $h3_typography['textTransform'] ) ? $h3_typography['textTransform'] : 'none';
 
 		// H4 Typography.
 		$h4_typography = get_theme_mod( 'h4_typography' );
+		$h4_typography_fontsize = ! empty( $h4_typography['fontSize'] ) ? $h4_typography['fontSize']['desktop'] : 18;
+		$h4_typography_fontsize_tablet = ! empty( $h4_typography['fontSize'] ) ? $h4_typography['fontSize']['tablet'] : 18;
+		$h4_typography_fontsize_mobile = ! empty( $h4_typography['fontSize'] ) ? $h4_typography['fontSize']['mobile'] : 18;
+		
+		$h4_typography_lineheight = ! empty( $h4_typography['lineHeight'] ) ? $h4_typography['lineHeight']['desktop'] : 23;
+		$h4_typography_lineheight_tablet = ! empty( $h4_typography['lineHeight'] ) ? $h4_typography['lineHeight']['tablet'] : 22;
+		$h4_typography_lineheight_mobile = ! empty( $h4_typography['lineHeight'] ) ? $h4_typography['lineHeight']['mobile'] : 22;
+		
+		$h4_typography_fontweight = ! empty( $h4_typography['fontWeight'] ) ? $h4_typography['fontWeight'] : 700;
+		$h4_typography_texttransform = ! empty( $h4_typography['textTransform'] ) ? $h4_typography['textTransform'] : 'none';
 
 		// H5 Typography.
 		$h5_typography = get_theme_mod( 'h5_typography' );
+		$h5_typography_fontsize = ! empty( $h5_typography['fontSize'] ) ? $h5_typography['fontSize']['desktop'] : 16;
+		$h5_typography_fontsize_tablet = ! empty( $h5_typography['fontSize'] ) ? $h5_typography['fontSize']['tablet'] : 16;
+		$h5_typography_fontsize_mobile = ! empty( $h5_typography['fontSize'] ) ? $h5_typography['fontSize']['mobile'] : 16;
+		
+		$h5_typography_lineheight = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['desktop'] : 23;
+		$h5_typography_lineheight_tablet = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['tablet'] : 22;
+		$h5_typography_lineheight_mobile = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['mobile'] : 22;
+		
+		$h5_typography_fontweight = ! empty( $h5_typography['fontWeight'] ) ? $h5_typography['fontWeight'] : 700;
+		$h5_typography_texttransform = ! empty( $h5_typography['textTransform'] ) ? $h5_typography['textTransform'] : 'none';
 
 		// H6 Typography.
 		$h6_typography = get_theme_mod( 'h6_typography' );
+		$h6_typography_fontsize = ! empty( $h6_typography['fontSize'] ) ? $h6_typography['fontSize']['desktop'] : 15;
+		$h6_typography_fontsize_tablet = ! empty( $h6_typography['fontSize'] ) ? $h6_typography['fontSize']['tablet'] : 15;
+		$h6_typography_fontsize_mobile = ! empty( $h6_typography['fontSize'] ) ? $h6_typography['fontSize']['mobile'] : 15;
+		
+		$h6_typography_lineheight = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['desktop'] : 23;
+		$h6_typography_lineheight_tablet = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['tablet'] : 22;
+		$h6_typography_lineheight_mobile = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['mobile'] : 22;
+		
+		$h6_typography_fontweight = ! empty( $h6_typography['fontWeight'] ) ? $h6_typography['fontWeight'] : 700;
+		$h6_typography_texttransform = ! empty( $h6_typography['textTransform'] ) ? $h6_typography['textTransform'] : 'none';
 
 		// Widget Title Typography.
 		$widget_title_typography = get_theme_mod( 'footer_widget_title_typography' );
+		$widget_title_typography_fontsize = ! empty( $widget_title_typography['fontSize'] ) ? $widget_title_typography['fontSize']['desktop'] : 18;
+		$widget_title_typography_fontsize_tablet = ! empty( $widget_title_typography['fontSize'] ) ? $widget_title_typography['fontSize']['tablet'] : 16;
+		$widget_title_typography_fontsize_mobile = ! empty( $widget_title_typography['fontSize'] ) ? $widget_title_typography['fontSize']['mobile'] : 16;
 
+		$widget_title_typography_lineheight = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['desktop'] : 23;
+		$widget_title_typography_lineheight_tablet = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['tablet'] : 20;
+		$widget_title_typography_lineheight_mobile = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['mobile'] : 20;
+		
+		$widget_title_typography_fontweight = ! empty( $widget_title_typography['fontWeight'] ) ? $widget_title_typography['fontWeight'] : 700;
+		$widget_title_typography_texttransform = ! empty( $widget_title_typography['textTransform'] ) ? $widget_title_typography['textTransform'] : 'none';
+		
 		// Widget Text Typography.
 		$widget_text_typography = get_theme_mod( 'footer_widget_text_typography' );
+		$widget_text_typography_fontsize = ! empty( $widget_text_typography['fontSize'] ) ? $widget_text_typography['fontSize']['desktop'] : 16;
+		$widget_text_typography_fontsize_tablet = ! empty( $widget_text_typography['fontSize'] ) ? $widget_text_typography['fontSize']['tablet'] : 16;
+		$widget_text_typography_fontsize_mobile = ! empty( $widget_text_typography['fontSize'] ) ? $widget_text_typography['fontSize']['mobile'] : 16;
+
+		$widget_text_typography_lineheight = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['desktop'] : 0;
+		$widget_text_typography_lineheight_tablet = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['tablet'] : 0;
+		$widget_text_typography_lineheight_mobile = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['mobile'] : 0;
+		
+		$widget_text_typography_fontweight = ! empty( $widget_text_typography['fontWeight'] ) ? $widget_text_typography['fontWeight'] : 400;
+		$widget_text_typography_texttransform = ! empty( $widget_text_typography['textTransform'] ) ? $widget_text_typography['textTransform'] : 'none';
+		
 		
 		// Inline CSS declarations.
 		$custom_css = "
@@ -95,26 +206,26 @@ trait Inline_Css_Js {
 				--cta-text-color: {$cta_text_color};
 				--cta-text-color-trans: {$cta_text_color_trans};
 				--body-text-color: {$body_text_color};
-				--cta-font-weight: {$header_btn_typography['fontWeight']};
-				--cta-font-transform: {$header_btn_typography['textTransform']};
-				--cta-font-lineheight: {$header_btn_typography['lineHeight']['desktop']}px;
-				--cta-font-lineheight-tablet: {$header_btn_typography['lineHeight']['tablet']}px;
-				--cta-font-lineheight-mobile: {$header_btn_typography['lineHeight']['mobile']}px;
+				--cta-font-weight: {$header_btn_typography_fontweight};
+				--cta-font-transform: {$header_btn_typography_texttransform};
+				--cta-font-lineheight: {$header_btn_typography_lineheight}px;
+				--cta-font-lineheight-tablet: {$header_btn_typography_lineheight_tablet}px;
+				--cta-font-lineheight-mobile: {$header_btn_typography_lineheight_mobile}px;
 				--menu-link-color: {$menu_link_color};
 				--menu-link-color-trans: {$menu_link_color_trans};
-				--body-font-weight: {$body_typography['fontWeight']};
-				--h1-font-weight: {$h1_typography['fontWeight']};
-				--h2-font-weight: {$h2_typography['fontWeight']};
-				--h3-font-weight: {$h3_typography['fontWeight']};
-				--h4-font-weight: {$h4_typography['fontWeight']};
-				--h5-font-weight: {$h5_typography['fontWeight']};
-				--h6-font-weight: {$h6_typography['fontWeight']};
-				--h1-text-transform: {$h1_typography['textTransform']};
-				--h2-text-transform: {$h2_typography['textTransform']};
-				--h3-text-transform: {$h3_typography['textTransform']};
-				--h4-text-transform: {$h4_typography['textTransform']};
-				--h5-text-transform: {$h5_typography['textTransform']};
-				--h6-text-transform: {$h6_typography['textTransform']};
+				--body-font-weight: {$body_typography_fontweight};
+				--h1-font-weight: {$h1_typography_fontweight};
+				--h2-font-weight: {$h2_typography_fontweight};
+				--h3-font-weight: {$h3_typography_fontweight};
+				--h4-font-weight: {$h4_typography_fontweight};
+				--h5-font-weight: {$h5_typography_fontweight};
+				--h6-font-weight: {$h6_typography_fontweight};
+				--h1-text-transform: {$h1_typography_texttransform};
+				--h2-text-transform: {$h2_typography_texttransform};
+				--h3-text-transform: {$h3_typography_texttransform};
+				--h4-text-transform: {$h4_typography_texttransform};
+				--h5-text-transform: {$h5_typography_texttransform};
+				--h6-text-transform: {$h6_typography_texttransform};
 				--primary-menu-bg-color: {$menu_bg_color};
 				--cta-background-color: {$cta_background};
 				--cta-background-color-trans: {$cta_background_trans};
@@ -122,82 +233,82 @@ trait Inline_Css_Js {
 				--cta-border-color-trans: {$cta_border_color_trans};
 				--cta-border-width: {$cta_border_width}px;
 				--cta-border-radius: {$cta_border_radius}px;
-				--cta-font-size: {$header_btn_typography['fontSize']['desktop']}px;
-				--header-font-weight: {$menu_link_typography['fontWeight']};
-				--header-font-transform: {$menu_link_typography['textTransform']};
-				--header-font-lineheight: {$menu_link_typography['lineHeight']['desktop']}px;
-				--header-font-lineheight-tablet: {$menu_link_typography['lineHeight']['tablet']}px;
-				--header-font-lineheight-mobile: {$menu_link_typography['lineHeight']['mobile']}px;
-				--body-text-transform: {$body_typography['textTransform']};
-				--body-font-size: {$body_typography['fontSize']['desktop']}px;
-				--h1-font-size: {$h1_typography['fontSize']['desktop']}px;
-				--h1-font-size-tablet: {$h1_typography['fontSize']['tablet']}px;
-				--h1-font-size-mobile: {$h1_typography['fontSize']['mobile']}px;
-				--h2-font-size: {$h2_typography['fontSize']['desktop']}px;
-				--h2-font-size-tablet: {$h2_typography['fontSize']['tablet']}px;
-				--h2-font-size-mobile: {$h2_typography['fontSize']['mobile']}px;
-				--h3-font-size: {$h3_typography['fontSize']['desktop']}px;
-				--h3-font-size-tablet: {$h3_typography['fontSize']['tablet']}px;
-				--h3-font-size-mobile: {$h3_typography['fontSize']['mobile']}px;
-				--h4-font-size: {$h4_typography['fontSize']['desktop']}px;
-				--h4-font-size-tablet: {$h4_typography['fontSize']['tablet']}px;
-				--h4-font-size-mobile: {$h4_typography['fontSize']['mobile']}px;
-				--h5-font-size: {$h5_typography['fontSize']['desktop']}px;
-				--h5-font-size-tablet: {$h5_typography['fontSize']['tablet']}px;
-				--h5-font-size-mobile: {$h5_typography['fontSize']['mobile']}px;
-				--h6-font-size: {$h6_typography['fontSize']['desktop']}px;
-				--h6-font-size-tablet: {$h6_typography['fontSize']['tablet']}px;
-				--h6-font-size-mobile: {$h6_typography['fontSize']['mobile']}px;
+				--cta-font-size: {$header_btn_typography_fontsize}px;
+				--header-font-weight: {$menu_link_typography_fontweight};
+				--header-font-transform: {$menu_link_typography_texttransform};
+				--header-font-lineheight: {$menu_link_typography_lineheight}px;
+				--header-font-lineheight-tablet: {$menu_link_typography_lineheight_tablet}px;
+				--header-font-lineheight-mobile: {$menu_link_typography_lineheight_mobile}px;
+				--body-text-transform: {$body_typography_texttransform};
+				--body-font-size: {$body_typography_fontsize}px;
+				--h1-font-size: {$h1_typography_fontsize}px;
+				--h1-font-size-tablet: {$h1_typography_fontsize_tablet}px;
+				--h1-font-size-mobile: {$h1_typography_fontsize_mobile}px;
+				--h2-font-size: {$h2_typography_fontsize}px;
+				--h2-font-size-tablet: {$h2_typography_fontsize_tablet}px;
+				--h2-font-size-mobile: {$h2_typography_fontsize_mobile}px;
+				--h3-font-size: {$h3_typography_fontsize}px;
+				--h3-font-size-tablet: {$h3_typography_fontsize_tablet}px;
+				--h3-font-size-mobile: {$h3_typography_fontsize_mobile}px;
+				--h4-font-size: {$h4_typography_fontsize}px;
+				--h4-font-size-tablet: {$h4_typography_fontsize_tablet}px;
+				--h4-font-size-mobile: {$h4_typography_fontsize_mobile}px;
+				--h5-font-size: {$h5_typography_fontsize}px;
+				--h5-font-size-tablet: {$h5_typography_fontsize_tablet}px;
+				--h5-font-size-mobile: {$h5_typography_fontsize_mobile}px;
+				--h6-font-size: {$h6_typography_fontsize}px;
+				--h6-font-size-tablet: {$h6_typography_fontsize_tablet}px;
+				--h6-font-size-mobile: {$h6_typography_fontsize_mobile}px;
 				--active-menu-color: {$menu_link_active_color};
 				--active-menu-color-trans: {$link_active_color_trans};
-				--cta-font-size-tablet: {$header_btn_typography['fontSize']['tablet']}px;
-				--cta-font-size-mobile: {$header_btn_typography['fontSize']['mobile']}px;
-				--header-font-size: {$menu_link_typography['fontSize']['desktop']}px;
-				--body-font-size-mobile: {$body_typography['fontSize']['mobile']}px;
-				--body-font-size-tablet: {$body_typography['fontSize']['tablet']}px;
+				--cta-font-size-tablet: {$header_btn_typography_fontsize_tablet}px;
+				--cta-font-size-mobile: {$header_btn_typography_fontsize_mobile}px;
+				--header-font-size: {$menu_link_typography_fontsize}px;
+				--body-font-size-mobile: {$body_typography_fontsize_mobile}px;
+				--body-font-size-tablet: {$body_typography_fontsize_tablet}px;
 				--footer-bottom-bg-color: {$footer_bottom_bg_color};
 				--footer-widget-bg-color: {$footer_widgets_bg_color};
-				--header-font-size-tablet: {$menu_link_typography['fontSize']['tablet']}px;
-				--header-font-size-mobile: {$menu_link_typography['fontSize']['mobile']}px;
+				--header-font-size-tablet: {$menu_link_typography_fontsize_tablet}px;
+				--header-font-size-mobile: {$menu_link_typography_fontsize_mobile}px;
 				--footer-bottom-text-color: {$footer_bottom_text_color};
-				--widget-title-font-weight: {$widget_title_typography['fontWeight']};
-				--widget-title-text-transform: {$widget_title_typography['textTransform']};
+				--widget-title-font-weight: {$widget_title_typography_fontweight};
+				--widget-title-text-transform: {$widget_title_typography_texttransform};
 				--footer-widget-text-color: {$footer_widgets_text_color};
-				--body-font-lineheight: {$body_typography['lineHeight']['desktop']}px;
-				--h1-font-lineheight: {$h1_typography['lineHeight']['desktop']}px;
-				--h1-font-lineheight-tablet: {$h1_typography['lineHeight']['tablet']}px;
-				--h1-font-lineheight-mobile: {$h1_typography['lineHeight']['mobile']}px;
-				--h2-font-lineheight: {$h2_typography['lineHeight']['desktop']}px;
-				--h2-font-lineheight-tablet: {$h2_typography['lineHeight']['tablet']}px;
-				--h2-font-lineheight-mobile: {$h2_typography['lineHeight']['mobile']}px;
-				--h3-font-lineheight: {$h3_typography['lineHeight']['desktop']}px;
-				--h3-font-lineheight-tablet: {$h3_typography['lineHeight']['tablet']}px;
-				--h3-font-lineheight-mobile: {$h3_typography['lineHeight']['mobile']}px;
-				--h4-font-lineheight: {$h4_typography['lineHeight']['desktop']}px;
-				--h4-font-lineheight-tablet: {$h4_typography['lineHeight']['tablet']}px;
-				--h4-font-lineheight-mobile: {$h4_typography['lineHeight']['mobile']}px;
-				--h5-font-lineheight: {$h5_typography['lineHeight']['desktop']}px;
-				--h5-font-lineheight-tablet: {$h5_typography['lineHeight']['tablet']}px;
-				--h5-font-lineheight-mobile: {$h5_typography['lineHeight']['mobile']}px;
-				--h6-font-lineheight: {$h6_typography['lineHeight']['desktop']}px;
-				--h6-font-lineheight-tablet: {$h6_typography['lineHeight']['tablet']}px;
-				--h6-font-lineheight-mobile: {$h6_typography['lineHeight']['mobile']}px;
-				--body-font-lineheight-tablet: {$body_typography['lineHeight']['tablet']}px;
-				--body-font-lineheight-mobile: {$body_typography['lineHeight']['mobile']}px;
-				--widget-title-font-size: {$widget_title_typography['fontSize']['desktop']}px;
-				--widget-title-font-size-tablet: {$widget_title_typography['fontSize']['tablet']}px;
-				--widget-title-font-size-mobile: {$widget_title_typography['fontSize']['mobile']}px;
-				--widget-title-line-height: {$widget_title_typography['lineHeight']['desktop']}px;
-				--widget-title-line-height-tablet: {$widget_title_typography['lineHeight']['tablet']}px;
-				--widget-title-line-height-mobile: {$widget_title_typography['lineHeight']['mobile']}px;
-				--widget-text-font-weight: {$widget_text_typography['fontWeight']};
-				--widget-text-transform: {$widget_text_typography['textTransform']};
-				--widget-text-font-size: {$widget_text_typography['fontSize']['desktop']}px;
-				--widget-text-font-size-tablet: {$widget_text_typography['fontSize']['tablet']}px;
-				--widget-text-font-size-mobile: {$widget_text_typography['fontSize']['mobile']}px;
-				--widget-text-line-height: {$widget_text_typography['lineHeight']['desktop']}px;
-				--widget-text-line-height-tablet: {$widget_text_typography['lineHeight']['tablet']}px;
-				--widget-text-line-height-mobile: {$widget_text_typography['lineHeight']['mobile']}px;
+				--body-font-lineheight: {$body_typography_lineheight}px;
+				--h1-font-lineheight: {$h1_typography_lineheight}px;
+				--h1-font-lineheight-tablet: {$h1_typography_lineheight_tablet}px;
+				--h1-font-lineheight-mobile: {$h1_typography_lineheight_mobile}px;
+				--h2-font-lineheight: {$h2_typography_lineheight}px;
+				--h2-font-lineheight-tablet: {$h2_typography_lineheight_tablet}px;
+				--h2-font-lineheight-mobile: {$h2_typography_lineheight_mobile}px;
+				--h3-font-lineheight: {$h3_typography_lineheight}px;
+				--h3-font-lineheight-tablet: {$h3_typography_lineheight_tablet}px;
+				--h3-font-lineheight-mobile: {$h3_typography_lineheight_mobile}px;
+				--h4-font-lineheight: {$h4_typography_lineheight}px;
+				--h4-font-lineheight-tablet: {$h4_typography_lineheight_tablet}px;
+				--h4-font-lineheight-mobile: {$h4_typography_lineheight_mobile}px;
+				--h5-font-lineheight: {$h5_typography_lineheight}px;
+				--h5-font-lineheight-tablet: {$h5_typography_lineheight_tablet}px;
+				--h5-font-lineheight-mobile: {$h5_typography_lineheight_mobile}px;
+				--h6-font-lineheight: {$h6_typography_lineheight}px;
+				--h6-font-lineheight-tablet: {$h6_typography_lineheight_tablet}px;
+				--h6-font-lineheight-mobile: {$h6_typography_lineheight_mobile}px;
+				--body-font-lineheight-tablet: {$body_typography_lineheight_tablet}px;
+				--body-font-lineheight-mobile: {$body_typography_lineheight_mobile}px;
+				--widget-title-font-size: {$widget_title_typography_fontsize}px;
+				--widget-title-font-size-tablet: {$widget_title_typography_fontsize_tablet}px;
+				--widget-title-font-size-mobile: {$widget_title_typography_fontsize_mobile}px;
+				--widget-title-line-height: {$widget_title_typography_lineheight}px;
+				--widget-title-line-height-tablet: {$widget_title_typography_lineheight_tablet}px;
+				--widget-title-line-height-mobile: {$widget_title_typography_lineheight_mobile}px;
+				--widget-text-font-weight: {$widget_text_typography_fontweight};
+				--widget-text-transform: {$widget_text_typography_texttransform};
+				--widget-text-font-size: {$widget_text_typography_fontsize}px;
+				--widget-text-font-size-tablet: {$widget_text_typography_fontsize_tablet}px;
+				--widget-text-font-size-mobile: {$widget_text_typography_fontsize_mobile}px;
+				--widget-text-line-height: {$widget_text_typography_lineheight}px;
+				--widget-text-line-height-tablet: {$widget_text_typography_lineheight_tablet}px;
+				--widget-text-line-height-mobile: {$widget_text_typography_lineheight_mobile}px;
 			}
         ";
 

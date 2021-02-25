@@ -95,6 +95,8 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+var __ = wp.i18n.__;
+
 var General = function General() {
   var adminUrl = tutorstarter_dashboard.admin_url;
   return /*#__PURE__*/React.createElement("div", {
@@ -105,14 +107,14 @@ var General = function General() {
     className: "thm-opt-container header-content"
   }, /*#__PURE__*/React.createElement("div", {
     className: "thm-title"
-  }, /*#__PURE__*/React.createElement("h1", null, "Tutor Starter")), /*#__PURE__*/React.createElement("p", {
+  }, /*#__PURE__*/React.createElement("h1", null, __('Tutor Starter', 'tutorstarter'))), /*#__PURE__*/React.createElement("p", {
     style: {
       fontWeight: 200,
       fontSize: '16px'
     }
   }, " - v", tutorstarter_dashboard.theme_version)), /*#__PURE__*/React.createElement("h4", {
     className: "title"
-  }, /*#__PURE__*/React.createElement("span", null, "Customizer Quick Links"))), /*#__PURE__*/React.createElement("main", {
+  }, /*#__PURE__*/React.createElement("span", null, __('Customizer Quick Links', 'tutorstarter')))), /*#__PURE__*/React.createElement("main", {
     className: "thm-opt-container"
   }, /*#__PURE__*/React.createElement("div", {
     className: "thm-opt-content"
@@ -121,32 +123,32 @@ var General = function General() {
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_colors_section")
   }, /*#__PURE__*/React.createElement("span", {
     "class": "dashicons dashicons-color-picker"
-  }), /*#__PURE__*/React.createElement("p", null, "Colors")), /*#__PURE__*/React.createElement("a", {
+  }), /*#__PURE__*/React.createElement("p", null, __('Colors', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
     className: "thm-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_layout_section")
   }, /*#__PURE__*/React.createElement("span", {
     "class": "dashicons dashicons-layout"
-  }), /*#__PURE__*/React.createElement("p", null, "Layouts")), /*#__PURE__*/React.createElement("a", {
+  }), /*#__PURE__*/React.createElement("p", null, __('Layouts', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
     className: "thm-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_header_section")
   }, /*#__PURE__*/React.createElement("span", {
     "class": "dashicons dashicons-archive"
-  }), /*#__PURE__*/React.createElement("p", null, "Header")), /*#__PURE__*/React.createElement("a", {
+  }), /*#__PURE__*/React.createElement("p", null, __('Header', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
     className: "thm-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_footer_section")
   }, /*#__PURE__*/React.createElement("span", {
     "class": "dashicons dashicons-table-row-before"
-  }), /*#__PURE__*/React.createElement("p", null, "Footer")), /*#__PURE__*/React.createElement("a", {
+  }), /*#__PURE__*/React.createElement("p", null, __('Footer', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
     className: "thm-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_typography_section")
   }, /*#__PURE__*/React.createElement("span", {
     "class": "dashicons dashicons-editor-spellcheck"
-  }), /*#__PURE__*/React.createElement("p", null, "Typography")), /*#__PURE__*/React.createElement("a", {
+  }), /*#__PURE__*/React.createElement("p", null, __('Typography', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
     className: "thm-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_blog_section")
   }, /*#__PURE__*/React.createElement("span", {
     "class": "dashicons dashicons-edit-page"
-  }), /*#__PURE__*/React.createElement("p", null, "Blog")))));
+  }), /*#__PURE__*/React.createElement("p", null, __('Blog', 'tutorstarter'))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (General);

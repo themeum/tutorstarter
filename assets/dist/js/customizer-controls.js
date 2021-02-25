@@ -3748,7 +3748,7 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
           units = _this$controlParams$f.units;
       return /*#__PURE__*/React.createElement("div", {
         className: "select-inline font-size"
-      }, this.controlHeader('Font Size', 'fontSize', units), /*#__PURE__*/React.createElement(RangeControl, {
+      }, this.controlHeader(__('Font Size', 'tutorstarter'), 'fontSize', units), /*#__PURE__*/React.createElement(RangeControl, {
         step: 1,
         min: min,
         max: max,
@@ -3784,7 +3784,7 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
           units = _this$controlParams$l.units;
       return /*#__PURE__*/React.createElement("div", {
         className: "select-inline line-height"
-      }, this.controlHeader('Line Height', 'lineHeight', units), /*#__PURE__*/React.createElement(RangeControl, {
+      }, this.controlHeader(__('Line Height', 'tutorstarter'), 'lineHeight', units), /*#__PURE__*/React.createElement(RangeControl, {
         step: 1,
         min: min,
         max: max,
