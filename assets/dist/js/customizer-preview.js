@@ -133,6 +133,21 @@
       }
     });
   });
+  wp.customize('cart_color_trans', function (value) {
+    value.bind(function (updatedValue) {
+      var cartTransSelector = document.querySelector('.tutor-navbar-cart-transparent .tutor-cart svg');
+      var cartTransContentSelector = document.querySelector('.tutor-navbar-cart-transparent .tutor-cart a.tutor-cart-contents span.count');
+
+      if (null !== cartTransSelector) {
+        cartTransSelector.style.fill = updatedValue;
+      }
+
+      if (null !== cartTransContentSelector) {
+        cartTransContentSelector.style.color = updatedValue;
+        cartTransContentSelector.style.border = '1px solid' + updatedValue;
+      }
+    });
+  });
   wp.customize('body_font', function (value) {
     value.bind(function (updatedValue) {
       var bodySelector = document.querySelector('body');
@@ -363,6 +378,15 @@
       }
     });
   });
+  wp.customize('cta_border_color_trans', function (value) {
+    value.bind(function (updatedValue) {
+      var ctaElement = document.querySelector('.btn-transparent .call-to-action');
+
+      if (null !== ctaElement) {
+        ctaElement.style.borderColor = updatedValue;
+      }
+    });
+  });
   wp.customize('cta_border_width', function (value) {
     value.bind(function (updatedValue) {
       var ctaElement = document.querySelector('.call-to-action');
@@ -384,6 +408,15 @@
   wp.customize('cta_color', function (value) {
     value.bind(function (updatedValue) {
       var ctaElement = document.querySelector('.call-to-action');
+
+      if (null !== ctaElement) {
+        ctaElement.style.color = updatedValue;
+      }
+    });
+  });
+  wp.customize('cta_color_trans', function (value) {
+    value.bind(function (updatedValue) {
+      var ctaElement = document.querySelector('.btn-transparent .call-to-action');
 
       if (null !== ctaElement) {
         ctaElement.style.color = updatedValue;
@@ -630,7 +663,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/scripts/customizer-preview.js */"./assets/src/scripts/customizer-preview.js");
+module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/scripts/customizer-preview.js */"./assets/src/scripts/customizer-preview.js");
 
 
 /***/ })

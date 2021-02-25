@@ -339,7 +339,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Transparent Cart Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#175cff',
+				'default'           => '#ffffff',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -446,7 +446,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Transparent Border Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#175cff',
+				'default'           => '#ffffff',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -528,7 +528,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Transparent Button Text Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#175cff',
+				'default'           => '#ffffff',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);

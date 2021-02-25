@@ -134,7 +134,7 @@
 					<?php endif; ?>
 
 					<?php if ( ! is_user_logged_in() || is_customize_preview() ) : ?>
-					<div class="tutor-get-started-btn">
+					<div class="tutor-get-started-btn btn-transparent">
 						<?php if ( true === get_theme_mod( 'cta_text_toggle', true ) ) : ?>
 							<a class="call-to-action" href="<?php echo esc_url( home_url() . get_theme_mod( 'cta_text_link', '#' ) ); ?>"><?php echo esc_html__( get_theme_mod( 'cta_text', 'Getting Started' ), 'tutorstarter' ); ?></a>
 						<?php endif; ?>

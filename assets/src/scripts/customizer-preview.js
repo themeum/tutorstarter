@@ -36,6 +36,19 @@
             }
         })
     });
+    wp.customize('cart_color_trans', function (value) {
+        value.bind(function (updatedValue) {
+            const cartTransSelector = document.querySelector('.tutor-navbar-cart-transparent .tutor-cart svg');
+            const cartTransContentSelector = document.querySelector('.tutor-navbar-cart-transparent .tutor-cart a.tutor-cart-contents span.count');
+            if (null !== cartTransSelector) {
+                cartTransSelector.style.fill = updatedValue;
+            }
+            if (null !== cartTransContentSelector) {
+                cartTransContentSelector.style.color = updatedValue;
+                cartTransContentSelector.style.border = '1px solid' + updatedValue;
+            }
+        })
+    });
     wp.customize('body_font', function (value) {
         value.bind(function (updatedValue) {
             const bodySelector = document.querySelector('body');
@@ -254,6 +267,14 @@
             }
         })
     });
+    wp.customize('cta_border_color_trans', function (value) {
+        value.bind(function (updatedValue) {
+            let ctaElement = document.querySelector('.btn-transparent .call-to-action');
+            if (null !== ctaElement) {
+                ctaElement.style.borderColor = updatedValue;
+            }
+        })
+    });
     wp.customize('cta_border_width', function (value) {
         value.bind(function (updatedValue) {
             let ctaElement = document.querySelector('.call-to-action');
@@ -273,6 +294,14 @@
     wp.customize('cta_color', function (value) {
         value.bind(function (updatedValue) {
             let ctaElement = document.querySelector('.call-to-action');
+            if (null !== ctaElement) {
+                ctaElement.style.color = updatedValue;
+            }
+        })
+    });
+    wp.customize('cta_color_trans', function (value) {
+        value.bind(function (updatedValue) {
+            let ctaElement = document.querySelector('.btn-transparent .call-to-action');
             if (null !== ctaElement) {
                 ctaElement.style.color = updatedValue;
             }

@@ -30,7 +30,7 @@ trait Inline_Css_Js {
 		$menu_bg_color             = get_theme_mod( 'menu_bg_color', '#ffffff' );
 		$body_bg_color             = get_theme_mod( 'body_bg_color', '#ffffff' );
 		$cart_color                = get_theme_mod( 'cart_color', '#57586E' );
-		$cart_color_trans          = get_theme_mod( 'cart_color_trans', '#175cff' );
+		$cart_color_trans          = get_theme_mod( 'cart_color_trans', '#ffffff' );
 		$cta_background            = get_theme_mod( 'cta_background', '#ffffff' );
 		$cta_border_color          = get_theme_mod( 'cta_border_color', '#1539e9' );
 		$cta_border_color_trans    = get_theme_mod( 'cta_border_color_trans', '#ffffff' );
