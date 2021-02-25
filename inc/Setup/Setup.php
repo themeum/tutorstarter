@@ -19,7 +19,6 @@ class Setup {
 	 */
 	public function register() {
 		add_action( 'after_setup_theme', array( $this, 'setup' ) );
-		add_action( 'after_setup_theme', array( $this, 'content_width' ), 0 );
 		add_filter( 'excerpt_more', array( $this, 'remove_excerpt_extra_char' ) );
 		add_filter( 'excerpt_length', array( $this, 'custom_excerpt_length' ), 999 );
 	}
@@ -165,16 +164,9 @@ class Setup {
 		// Custom image size for cart items
 		add_image_size( 'cart-image-thumb', 160, 90, true );
 
-		//Load theme textdomain.
+		// Load theme textdomain.
 		load_theme_textdomain( 'tutorstarter', get_template_directory() . '/languages' );
 
-	}
-
-	/**
-	 * Define a max content width
-	 */
-	public function content_width() {
-		$GLOBALS['content_width'] = apply_filters( 'tutorstarter_content_width', get_theme_mod( 'content_width', 1140 ) );
 	}
 
 	/**

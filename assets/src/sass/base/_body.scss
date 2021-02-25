@@ -1,4 +1,7 @@
 body {
-	color: var(--body-text-color);
-	background-color: var(--body-bg-color);
+    background-color: var(--body-bg-color);
+}
+
+body p {
+    color: var(--body-text-color);
 }

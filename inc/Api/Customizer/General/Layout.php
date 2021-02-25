@@ -33,7 +33,7 @@ class Layout {
 			)
 		);
 		$wp_customize->add_setting(
-			'content_width',
+			'content_width_value',
 			array(
 				'title'             => esc_html__( 'Content Width (px)', 'tutorstarter' ),
 				'transport'         => 'postMessage',
@@ -44,7 +44,7 @@ class Layout {
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
-				'content_width',
+				'content_width_value',
 				array(
 					'label'   => esc_html__( 'Content Width (px)', 'tutorstarter' ),
 					'type'    => 'number',

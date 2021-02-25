@@ -11,7 +11,7 @@
     });
     wp.customize('body_text_color', function (value) {
         value.bind(function (updatedValue) {
-            const bodySelector = document.querySelector('body');
+            const bodySelector = document.querySelector('body p');
             bodySelector.style.color = updatedValue;
         })
     });
