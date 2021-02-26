@@ -43,3 +43,19 @@
 		}
 	}
 }
+
+@media screen and (max-width: 567px) {
+	.tutor-starter-custom-subscription button {
+		position: unset;
+		margin-top: 10px;
+		font-size: 14px;
+		padding: 8px 15px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+	.tutor-starter-custom-subscription input[type=email] {
+		height: 45px;
+	}
+}

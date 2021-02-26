@@ -8352,6 +8352,10 @@ fieldset#wc-stripe-cc-form label {
   margin-top: 25px !important;
 }
 
+#sidebar {
+  margin-top: 50px;
+}
+
 aside {
   position: relative;
 }
@@ -8828,6 +8832,7 @@ img {
 
 .single-post .entry-header {
   text-align: center;
+  margin-top: 50px;
 }
 
 .single-post .entry-title {
@@ -10450,5 +10455,26 @@ body.woocommerce-page .site-content {
 .tutor-starter-custom-subscription button:hover,
 .tutor-starter-custom-subscription buttonfocus {
   background: #0a083b;
+}
+
+@media screen and (max-width: 567px) {
+  .tutor-starter-custom-subscription button {
+    position: unset;
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 8px 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .tutor-starter-custom-subscription input[type=email],
+  .tutor-starter-custom-subscription .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=email]::-webkit-input-placeholder,
+  .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-starter-custom-subscription input[type=email]::-webkit-input-placeholder,
+  .tutor-starter-custom-subscription .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=email]:focus,
+  .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-starter-custom-subscription input[type=email]:focus {
+    height: 45px;
+  }
 }
 
