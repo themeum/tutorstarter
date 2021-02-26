@@ -7,13 +7,17 @@ section.footer-widgets {
 	padding-top: 70px;
 	padding-bottom: 30px;
 	background: var(--footer-widget-bg-color);
-	& ul li a {
-		color: var(--footer-widget-text-color);
-		font-size: var(--widget-text-font-size);
-		font-weight: var(--widget-text-font-weight);
-		line-height: var(--widget-text-line-height);
-		text-transform: var(--widget-text-transform);
+	& ul li {
 		list-style: none;
+		
+		a {
+			color: var(--footer-widget-text-color);
+			font-size: var(--widget-text-font-size);
+			font-weight: var(--widget-text-font-weight);
+			line-height: var(--widget-text-line-height);
+			text-transform: var(--widget-text-transform);
+			list-style: none;
+		}
 	}
 	.widget {
 		p {

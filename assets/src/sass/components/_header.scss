@@ -131,6 +131,7 @@ body.admin-bar .navbar-nav {
     li {
         position: relative;
         padding: 0px;
+        list-style: none;
         &:before {
             content: "";
             position: absolute;
@@ -208,6 +209,7 @@ body.admin-bar .navbar-nav {
     li {
         position: relative;
         padding: 0px;
+        list-style: none;
         &:before {
             content: "";
             position: absolute;
@@ -316,6 +318,9 @@ body.admin-bar .navbar-nav {
 #masthead.transparent-header {
     background: transparent;
     color: var(--menu-link-color-trans);
+    position: absolute;
+    left: 0;
+    width: 100%;
     .menu-one > li > a {
         color: var(--menu-link-color-trans);
     }
@@ -659,6 +664,14 @@ body.admin-bar .navbar-nav {
             right: 0;
         }
     }
+    .sub-menu .menu-item.icon > a:before,
+    .sub-menu .menu-item.icon > a:after {
+        background: #57586e !important;
+        right: -7px;
+    }
+    .sub-menu .menu-item.icon > a:after {
+        right: -3px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -767,6 +780,15 @@ body.admin-bar .navbar-nav {
     ul#menu-footer-one {
         display: none;
     }
+
+    /* Clickable down arrow */
+    .menu-item.icon>a:before, .menu-item.icon>a:after {
+        right: 3px;
+    }
+    .menu-item.icon>a:after {
+        right: 7px;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -869,4 +891,12 @@ body.admin-bar .navbar-nav {
     .navbar-toggler svg {
         fill: #fff;
     }
+}
+
+/* Navbar spacing when logged-in */
+body.admin-bar .navbar-nav {
+	top: 45px;
+}
+body.admin-bar li.nav-close {
+	margin-top: 20px;
 }

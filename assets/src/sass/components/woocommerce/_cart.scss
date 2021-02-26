@@ -266,3 +266,10 @@ h1.entry-title {
 	border-radius: 8px;
 	padding: 30px;
 }
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    background-color: #ffffff!important;
+    color: #515151;
+    border-top: none!important;
+    text-align: center!important;
+}

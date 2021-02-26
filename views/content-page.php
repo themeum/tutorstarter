@@ -15,9 +15,11 @@ $hide_title = ( ! empty( $page_meta ) ? $page_meta['page_title_toggle'] : false 
 
 <article id="post-<?php the_ID(); ?>"<?php post_class(); ?>>
 <?php if ( false === $hide_title ) : ?>
-	<header class="entry-header">
-	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<?php if ( ! is_cart() && ! is_checkout() ) : ?>
+		<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</header><!-- .entry-header -->
+	<?php endif; ?>
 <?php endif; ?>
 	<div class="entry-content">
 	<?php

@@ -4,4 +4,22 @@ body {
 
 body p {
     color: var(--body-text-color);
+    font-size: var(--body-font-size);
+    font-weight: var(--body-font-weight);
+    text-transform: var(--body-text-transform);
+    line-height: var(--body-font-lineheight);
+}
+
+@media screen and (max-width: 991px) {
+    body p {
+        font-size: var(--body-font-size-tablet);
+        line-height: var(--body-font-lineheight-tablet);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body p {
+        font-size: var(--body-font-size-mobile);
+        line-height: var(--body-font-lineheight-mobile);
+    }
 }

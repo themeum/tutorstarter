@@ -1,3 +1,9 @@
+/* Lists (Nested) */
+ul li > ul,
+ol li > ol {
+    padding-left: 15px;
+}
+
 .widget ul {
     padding-left: 0;
 }

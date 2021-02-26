@@ -55,9 +55,9 @@ trait Inline_Css_Js {
 		$body_typography_fontsize_tablet  = ! empty( $body_typography['fontSize'] ) ? $body_typography['fontSize']['tablet'] : 13;
 		$body_typography_fontsize_mobile  = ! empty( $body_typography['fontSize'] ) ? $body_typography['fontSize']['mobile'] : 13;
 		
-		$body_typography_lineheight        = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['desktop'] : 20;
-		$body_typography_lineheight_tablet = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['tablet'] : 20;
-		$body_typography_lineheight_mobile = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['mobile'] : 20;
+		$body_typography_lineheight        = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['desktop'] : 28;
+		$body_typography_lineheight_tablet = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['tablet'] : 28;
+		$body_typography_lineheight_mobile = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['mobile'] : 28;
 		
 		$body_typography_fontweight        = ! empty( $body_typography['fontWeight'] ) ? $body_typography['fontWeight'] : 400;
 		$body_typography_texttransform     = ! empty( $body_typography['textTransform'] ) ? $body_typography['textTransform'] : 'none';

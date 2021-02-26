@@ -37,7 +37,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	<div class="tutorstarter-checkout-container tutorstarter-cart-container">
 		<div class="checkout-contents" id="customer_details">
 			<div class="checkout-payment">
-				<h2 class="checkout-heading"><?php esc_html_e( 'Checkout', 'tutorstarter' ); ?></h2>
+				<h2 class="checkout-heading"><?php esc_html( the_title() ); ?></h2>
 				<?php 
 					foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 						// Check if there are non-virtual products

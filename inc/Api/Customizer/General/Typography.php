@@ -73,9 +73,9 @@ class Typography {
 						'desktop' => 16,
 					),
 					'lineHeight' => array(
-						'mobile'  => 20,
-						'tablet'  => 20,
-						'desktop' => 20,
+						'mobile'  => 28,
+						'tablet'  => 28,
+						'desktop' => 28,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -108,9 +108,9 @@ class Typography {
 								'desktop' => 16,
 							),
 							'line_heights' => array(
-								'mobile'  => 20,
-								'tablet'  => 20,
-								'desktop' => 20,
+								'mobile'  => 28,
+								'tablet'  => 28,
+								'desktop' => 28,
 							)
 						),
 					),

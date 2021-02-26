@@ -37,7 +37,7 @@ class Sidebar {
 			array(
 				'title'             => esc_html__( 'Blog Sidebar Type', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => 'sidebar_right',
+				'default'           => 'sidebar_none',
 				'sanitize_callback' => 'sanitize_select_radio',
 			)
 		);
@@ -78,7 +78,7 @@ class Sidebar {
 			array(
 				'title'             => esc_html__( 'Single Sidebar Type', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => 'sidebar_right',
+				'default'           => 'sidebar_none',
 				'sanitize_callback' => 'sanitize_select_radio',
 			)
 		);
