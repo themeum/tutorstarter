@@ -7086,6 +7086,10 @@ h1.entry-title {
   /* Above WP toolbar. */
 }
 
+.comment-list li {
+  display: block !important;
+}
+
 .size-auto,
 .size-full,
 .size-large,

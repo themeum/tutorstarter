@@ -93,7 +93,6 @@ class Enqueue {
 			'qubely-font-awesome',
 			'tutor-icon',
 			'tutor-plyr',
-			'tutor-frontend',
 			'wp-block-library',
 			'wp-block-library-theme',
 			'wc-block-style',
