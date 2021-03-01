@@ -1,12 +1,12 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/style.css": "/css/style.css",
-    "/css/admin.css": "/css/admin.css",
-    "/css/all-controls.css": "/css/all-controls.css",
-    "/css/dashboard.css": "/css/dashboard.css",
-    "/js/customizer-controls.js": "/js/customizer-controls.js",
-    "/js/customizer-preview.js": "/js/customizer-preview.js",
-    "/js/tutor-schema.js": "/js/tutor-schema.js",
-    "/js/tutorstarter-dashboard.js": "/js/tutorstarter-dashboard.js",
-    "/js/tutorstarter-page-settings.js": "/js/tutorstarter-page-settings.js"
+    "/js/app.js": "/js/app.js?id=b30cf210cb33e0f77a1e",
+    "/css/style.css": "/css/style.css?id=369b3f4176b97ac3e1f2",
+    "/css/admin.css": "/css/admin.css?id=941b28c10c88d51f4b00",
+    "/css/all-controls.css": "/css/all-controls.css?id=4cd26fcaa55b96f23767",
+    "/css/dashboard.css": "/css/dashboard.css?id=a875dd3bcbd03faf6055",
+    "/js/customizer-controls.js": "/js/customizer-controls.js?id=79023f7492b7630f5349",
+    "/js/customizer-preview.js": "/js/customizer-preview.js?id=c20e517ac03fd6bc6647",
+    "/js/tutor-schema.js": "/js/tutor-schema.js?id=a2cf2264c216ad31d97f",
+    "/js/tutorstarter-dashboard.js": "/js/tutorstarter-dashboard.js?id=c2b62aea4e129ebcbe2e",
+    "/js/tutorstarter-page-settings.js": "/js/tutorstarter-page-settings.js?id=00475a005e7b9afd46f4"
 }

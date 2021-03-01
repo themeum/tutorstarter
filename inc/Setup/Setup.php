@@ -29,6 +29,10 @@ class Setup {
 	 * @return void
 	 */
 	public function setup() {
+
+		// Load theme textdomain.
+		load_theme_textdomain( 'tutorstarter', get_template_directory() . '/languages' );
+		
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'align-wide' );
 		add_theme_support( 'custom-logo' );
@@ -163,9 +167,6 @@ class Setup {
 
 		// Custom image size for cart items
 		add_image_size( 'cart-image-thumb', 160, 90, true );
-
-		// Load theme textdomain.
-		load_theme_textdomain( 'tutorstarter', get_template_directory() . '/languages' );
 
 	}
 

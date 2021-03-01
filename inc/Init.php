@@ -34,7 +34,7 @@ final class Init {
 			Custom\Component_Handler::class,
 			Custom\Page\Page_Settings::class,
 			Api\Customizer\Customizer::class,
-			Api\Updater\Updater::class,
+			//Api\Updater\Updater::class,
 			Custom\Schema\Custom_Metabox::class,
 		);
 	}
