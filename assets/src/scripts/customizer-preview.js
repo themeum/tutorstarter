@@ -11,7 +11,7 @@
     });
     wp.customize('body_text_color', function (value) {
         value.bind(function (updatedValue) {
-            const bodySelector = document.querySelector('body p');
+            const bodySelector = document.querySelector('body');
             bodySelector.style.color = updatedValue;
         })
     });
@@ -76,67 +76,79 @@
     });
     wp.customize('h1_typography', function (value) {
         value.bind(function (updatedValue) {
-            const h1Selector = document.querySelector('h1, .h1');
+            const h1Selector = document.querySelectorAll('h1, .h1');
             if (null !== h1Selector) {
-                h1Selector.style.fontWeight = updatedValue['fontWeight'];
-                h1Selector.style.textTransform = updatedValue['textTransform'];
-                h1Selector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-                h1Selector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+                h1Selector.forEach((h1tag) => {
+                    h1tag.style.fontWeight = updatedValue['fontWeight'];
+                    h1tag.style.textTransform = updatedValue['textTransform'];
+                    h1tag.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                    h1tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+                })
             }
         })
     });
     wp.customize('h2_typography', function (value) {
         value.bind(function (updatedValue) {
-            const h2Selector = document.querySelector('h2, .h2');
+            const h2Selector = document.querySelectorAll('h2, .h2');
             if (null !== h2Selector) {
-                h2Selector.style.fontWeight = updatedValue['fontWeight'];
-                h2Selector.style.textTransform = updatedValue['textTransform'];
-                h2Selector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-                h2Selector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+                h2Selector.forEach((h2tag) => {
+                    h2tag.style.fontWeight = updatedValue['fontWeight'];
+                    h2tag.style.textTransform = updatedValue['textTransform'];
+                    h2tag.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                    h2tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+                })
             }
         })
     });
     wp.customize('h3_typography', function (value) {
         value.bind(function (updatedValue) {
-            const h3Selector = document.querySelector('h3, .h3');
+            const h3Selector = document.querySelectorAll('h3, .h3');
             if (null !== h3Selector) {
-                h3Selector.style.fontWeight = updatedValue['fontWeight'];
-                h3Selector.style.textTransform = updatedValue['textTransform'];
-                h3Selector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-                h3Selector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+                h3Selector.forEach((h3tag) => {
+                    h3tag.style.fontWeight = updatedValue['fontWeight'];
+                    h3tag.style.textTransform = updatedValue['textTransform'];
+                    h3tag.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                    h3tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+                })
             }
         })
     });
     wp.customize('h4_typography', function (value) {
         value.bind(function (updatedValue) {
-            const h4Selector = document.querySelector('h4, .h4');
+            const h4Selector = document.querySelectorAll('h4, .h4');
             if (null !== h4Selector) {
-                h4Selector.style.fontWeight = updatedValue['fontWeight'];
-                h4Selector.style.textTransform = updatedValue['textTransform'];
-                h4Selector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-                h4Selector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+                h4Selector.forEach((h4tag) => {
+                    h4tag.style.fontWeight = updatedValue['fontWeight'];
+                    h4tag.style.textTransform = updatedValue['textTransform'];
+                    h4tag.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                    h4tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+                })
             }
         })
     });
     wp.customize('h5_typography', function (value) {
         value.bind(function (updatedValue) {
-            const h5Selector = document.querySelector('h5, .h5');
+            const h5Selector = document.querySelectorAll('h5, .h5');
             if (null !== h5Selector) {
-                h5Selector.style.fontWeight = updatedValue['fontWeight'];
-                h5Selector.style.textTransform = updatedValue['textTransform'];
-                h5Selector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-                h5Selector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+                h5Selector.forEach((h5tag) => {
+                    h5tag.style.fontWeight = updatedValue['fontWeight'];
+                    h5tag.style.textTransform = updatedValue['textTransform'];
+                    h5tag.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                    h5tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+                })
             }
         })
     });
     wp.customize('h6_typography', function (value) {
         value.bind(function (updatedValue) {
-            const h6Selector = document.querySelector('h6, .h6');
+            const h6Selector = document.querySelectorAll('h6, .h6');
             if (null !== h6Selector) {
-                h6Selector.style.fontWeight = updatedValue['fontWeight'];
-                h6Selector.style.textTransform = updatedValue['textTransform'];
-                h6Selector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-                h6Selector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+                h6Selector.forEach((h6tag) => {
+                    h6tag.style.fontWeight = updatedValue['fontWeight'];
+                    h6tag.style.textTransform = updatedValue['textTransform'];
+                    h6tag.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
+                    h6tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+                })
             }
         })
     });

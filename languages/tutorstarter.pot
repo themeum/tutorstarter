@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-02-26T11:00:29+00:00\n"
+"POT-Creation-Date: 2021-03-01T12:04:06+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: tutorstarter\n"
@@ -448,7 +448,7 @@ msgstr ""
 
 #: inc/Api/Customizer/Header/Header.php:360
 #: inc/Api/Customizer/Header/Header.php:371
-msgid "Show Button?"
+msgid "Show Starter Button?"
 msgstr ""
 
 #: inc/Api/Customizer/Header/Header.php:380
@@ -1151,47 +1151,47 @@ msgstr ""
 msgid "CatMenu"
 msgstr ""
 
-#: inc/Setup/Setup.php:50
+#: inc/Setup/Setup.php:54
 msgid "Medium Blue"
 msgstr ""
 
-#: inc/Setup/Setup.php:55
+#: inc/Setup/Setup.php:59
 msgid "Deep Navyblue"
 msgstr ""
 
-#: inc/Setup/Setup.php:60
+#: inc/Setup/Setup.php:64
 msgid "Off White"
 msgstr ""
 
-#: inc/Setup/Setup.php:65
+#: inc/Setup/Setup.php:69
 msgid "Bluish Dark grey"
 msgstr ""
 
-#: inc/Setup/Setup.php:70
+#: inc/Setup/Setup.php:74
 msgid "Light grey"
 msgstr ""
 
-#: inc/Setup/Setup.php:85
+#: inc/Setup/Setup.php:89
 msgid "Normal"
 msgstr ""
 
-#: inc/Setup/Setup.php:90
+#: inc/Setup/Setup.php:94
 msgid "Normal+"
 msgstr ""
 
-#: inc/Setup/Setup.php:95
+#: inc/Setup/Setup.php:99
 msgid "Medium"
 msgstr ""
 
-#: inc/Setup/Setup.php:100
+#: inc/Setup/Setup.php:104
 msgid "Medium+"
 msgstr ""
 
-#: inc/Setup/Setup.php:105
+#: inc/Setup/Setup.php:109
 msgid "Big"
 msgstr ""
 
-#: inc/Setup/Setup.php:110
+#: inc/Setup/Setup.php:114
 msgid "Huge"
 msgstr ""
 

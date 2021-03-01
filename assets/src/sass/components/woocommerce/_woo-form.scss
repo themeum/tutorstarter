@@ -7,7 +7,7 @@
     width: 230px;
     border-radius: 33px !important;
     padding: 20px 30px !important;
-    font-family: Inter;
+    font-family: var(--body-font);
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
@@ -34,21 +34,3 @@
     transition: all .3s ease-in-out;
     margin-top: 25px !important;
 }
-
-
-
-// .woocommerce #respond input#submit:hover, 
-// .woocommerce a.button:hover,
-// .woocommerce button.button:hover, 
-// .woocommerce input.button:hover {
-//     background: #175cff;
-//     color: #fff;
-//     opacity: 0.8;
-// }
-// .woocommerce #respond input#submit:focus, 
-// .woocommerce a.button:focus,
-// .woocommerce button.button:focus, 
-// .woocommerce input.button:focus {
-//     outline: 0;
-//     color: #fff;
-// }

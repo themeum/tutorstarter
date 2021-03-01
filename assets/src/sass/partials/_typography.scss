@@ -1,16 +1,3 @@
-body {
-	font-family: $base-font;
-	font-size: var(--body-font-size);
-	font-weight: var(--body-font-weight);
-	line-height: var(--body-font-lineheight);
-	text-transform: var(--body-text-transform);
-
-	//@include font-size($base-fs, $base-fs * 1.5, 0.5px);
-
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 .has-huge-font-size {
 	font-size: 84px;
 }

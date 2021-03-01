@@ -55,9 +55,9 @@ trait Inline_Css_Js {
 		$body_typography_fontsize_tablet  = ! empty( $body_typography['fontSize'] ) ? $body_typography['fontSize']['tablet'] : 13;
 		$body_typography_fontsize_mobile  = ! empty( $body_typography['fontSize'] ) ? $body_typography['fontSize']['mobile'] : 13;
 		
-		$body_typography_lineheight        = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['desktop'] : 28;
-		$body_typography_lineheight_tablet = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['tablet'] : 28;
-		$body_typography_lineheight_mobile = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['mobile'] : 28;
+		$body_typography_lineheight        = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['desktop'] : 30;
+		$body_typography_lineheight_tablet = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['tablet'] : 30;
+		$body_typography_lineheight_mobile = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['mobile'] : 30;
 		
 		$body_typography_fontweight        = ! empty( $body_typography['fontWeight'] ) ? $body_typography['fontWeight'] : 400;
 		$body_typography_texttransform     = ! empty( $body_typography['textTransform'] ) ? $body_typography['textTransform'] : 'none';
@@ -146,9 +146,9 @@ trait Inline_Css_Js {
 		$h5_typography_fontsize_tablet = ! empty( $h5_typography['fontSize'] ) ? $h5_typography['fontSize']['tablet'] : 16;
 		$h5_typography_fontsize_mobile = ! empty( $h5_typography['fontSize'] ) ? $h5_typography['fontSize']['mobile'] : 16;
 		
-		$h5_typography_lineheight = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['desktop'] : 23;
-		$h5_typography_lineheight_tablet = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['tablet'] : 22;
-		$h5_typography_lineheight_mobile = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['mobile'] : 22;
+		$h5_typography_lineheight = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['desktop'] : 26;
+		$h5_typography_lineheight_tablet = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['tablet'] : 26;
+		$h5_typography_lineheight_mobile = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['mobile'] : 26;
 		
 		$h5_typography_fontweight = ! empty( $h5_typography['fontWeight'] ) ? $h5_typography['fontWeight'] : 700;
 		$h5_typography_texttransform = ! empty( $h5_typography['textTransform'] ) ? $h5_typography['textTransform'] : 'none';
@@ -159,9 +159,9 @@ trait Inline_Css_Js {
 		$h6_typography_fontsize_tablet = ! empty( $h6_typography['fontSize'] ) ? $h6_typography['fontSize']['tablet'] : 15;
 		$h6_typography_fontsize_mobile = ! empty( $h6_typography['fontSize'] ) ? $h6_typography['fontSize']['mobile'] : 15;
 		
-		$h6_typography_lineheight = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['desktop'] : 23;
-		$h6_typography_lineheight_tablet = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['tablet'] : 22;
-		$h6_typography_lineheight_mobile = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['mobile'] : 22;
+		$h6_typography_lineheight = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['desktop'] : 24;
+		$h6_typography_lineheight_tablet = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['tablet'] : 24;
+		$h6_typography_lineheight_mobile = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['mobile'] : 24;
 		
 		$h6_typography_fontweight = ! empty( $h6_typography['fontWeight'] ) ? $h6_typography['fontWeight'] : 700;
 		$h6_typography_texttransform = ! empty( $h6_typography['textTransform'] ) ? $h6_typography['textTransform'] : 'none';

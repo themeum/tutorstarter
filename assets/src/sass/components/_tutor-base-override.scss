@@ -17,7 +17,7 @@ $blue: #175cff;
     border-radius: 8px;
     .tutor-course-loop-title {
         h2 {
-            font-family: "Inter", sans-serif;
+            font-family: var(--body-font);
             font-weight: 600;
             font-size: 16px;
             line-height: 1.5;
@@ -35,7 +35,7 @@ $blue: #175cff;
         padding: 11px 24px;
     }
     .tutor-loop-author {
-        font-family: "Inter", sans-serif;
+        font-family: var(--body-font);
         font-weight: 400;
         font-size: 14px;
         line-height: 1.5;
@@ -58,7 +58,7 @@ $blue: #175cff;
     }
 
     .tutor-loop-course-footer {
-        font-family: "Inter", sans-serif;
+        font-family: var(--body-font);
         border-top: 1px solid #ebebeb;
         .price {
             font-weight: 700;
@@ -140,7 +140,7 @@ $blue: #175cff;
         align-items: center;
     }
     .tutor-course-lesson h5 {
-        font-family: "Inter";
+        font-family: var(--body-font);
         font-weight: 400;
         font-size: 16px;
         line-height: 1.87;
@@ -198,7 +198,7 @@ $blue: #175cff;
         border: none;
     }
     .tutor-instructor-name {
-        font-family: "Inter", sans-serif;
+        font-family: var(--body-font);
         font-weight: 600;
         font-size: 16px;
         line-height: 24px;
@@ -206,7 +206,7 @@ $blue: #175cff;
     }
 
     .tutor-instructor-course-count {
-        font-family: "Inter", sans-serif;
+        font-family: var(--body-font);
         font-weight: 500;
         font-size: 14px;
         line-height: 1.5;
@@ -247,7 +247,7 @@ $blue: #175cff;
 
 .tutor-course-filter-wrapper {
     > div:last-child select[name="tutor_course_filter"] {
-        font-family: "Inter";
+        font-family: var(--body-font);
         font-weight: 600;
         font-size: 16px;
         line-height: 21px;
@@ -265,7 +265,7 @@ $blue: #175cff;
             outline: none;
             margin-bottom: 20px;
             input {
-                font-family: "Inter";
+                font-family: var(--body-font);
                 font-weight: 600;
                 font-size: 14px;
                 line-height: 21px;
@@ -284,7 +284,7 @@ $blue: #175cff;
             }
         }
         h4 {
-            font-family: "Inter";
+            font-family: var(--body-font);
             font-weight: 600;
             font-size: 16px;
             line-height: 1.5;
@@ -294,7 +294,7 @@ $blue: #175cff;
             margin-top: 50px;
         }
         label {
-            font-family: "Inter";
+            font-family: var(--body-font);
             font-weight: 400;
             font-size: 16px;
             line-height: 1.5;
@@ -324,7 +324,7 @@ $blue: #175cff;
         background: #ffffff;
         margin: 60px 2px 12px 2px;
         padding: 7.5px;
-        font-family: "Inter", sans-serif;
+        font-family: var(--body-font);
         font-size: 18px;
         line-height: 1.2222em !important;
         font-weight: 500;
@@ -336,8 +336,6 @@ $blue: #175cff;
             background: #175cff;
             color: #ffffff;
             border: 1px solid #175cff;
-        }
-        .next {
         }
     }
 }

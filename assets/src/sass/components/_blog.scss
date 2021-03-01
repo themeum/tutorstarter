@@ -16,6 +16,7 @@
         letter-spacing: 0px;
         color: #0a083b;
         padding: 0;
+        overflow-wrap: break-word;
     }
 
     .entry-meta {
@@ -337,6 +338,7 @@
         line-height: 1.61111em;
         letter-spacing: -0.66px;
         margin-bottom: 18px;
+        word-break: break-word;
     }
 
     .entry-meta {

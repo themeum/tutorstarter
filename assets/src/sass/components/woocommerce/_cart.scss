@@ -64,7 +64,7 @@ h1.entry-title {
 	.cart-page-heading,
 	.cart-summary h2,
 	.checkout-heading {
-		font-family: 'Libre Baskerville';
+		font-family: var(--heading-font);
 		font-weight: 700;
 		font-size: 26px;
 		line-height: 48px;

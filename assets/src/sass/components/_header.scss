@@ -894,9 +894,8 @@ body.admin-bar .navbar-nav {
 }
 
 /* Navbar spacing when logged-in */
-body.admin-bar .navbar-nav {
-	top: 45px;
-}
-body.admin-bar li.nav-close {
-	margin-top: 20px;
+@media screen and ( max-width: 991px ) {
+    body.admin-bar .navbar-nav {
+        padding-top: 30px;
+    }
 }

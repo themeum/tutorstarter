@@ -357,7 +357,7 @@ class Header {
 		$wp_customize->add_setting(
 			'cta_text_toggle',
 			array(
-				'title'             => esc_html__( 'Show Button?', 'tutorstarter' ),
+				'title'             => esc_html__( 'Show Starter Button?', 'tutorstarter' ),
 				'transport'         => 'postMessage',
 				'default'           => true,
 				'sanitize_callback' => isset( $input ) ? true : false,
@@ -368,7 +368,7 @@ class Header {
 				$wp_customize,
 				'cta_text_toggle',
 				array(
-					'label'           => esc_html__( 'Show Button?', 'tutorstarter' ),
+					'label'           => esc_html__( 'Show Starter Button?', 'tutorstarter' ),
 					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback',
 				)

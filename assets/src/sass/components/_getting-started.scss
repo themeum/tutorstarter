@@ -1,6 +1,6 @@
 section.tutor-theme-getting-starter{
   .getting-started-page-heading {
-        font-family: Libre Baskerville;
+        font-family: var(--heading-font);
         font-weight: bold;
         font-size: 48px;
         line-height: 65px;
@@ -29,7 +29,7 @@ section.tutor-theme-getting-starter{
         margin-bottom: 14px;
       }
       .signing-title {
-        font-family: Inter;
+        font-family: var(--body-font);
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
@@ -42,7 +42,7 @@ section.tutor-theme-getting-starter{
     }
   }
   .getting-started-footer {
-      font-family: Inter;
+      font-family: var(--body-font);
       font-style: normal;
       font-weight: normal;
       font-size: 18px;
