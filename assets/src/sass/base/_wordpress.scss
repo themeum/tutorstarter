@@ -73,7 +73,7 @@ h1.entry-title {
     font-weight: 700;
 }
 
-.single-post .sticky {
+.sticky {
     border: 1px solid #000000;
     padding: 15px;
 }
@@ -160,7 +160,7 @@ h1.entry-title {
     /* Above WP toolbar. */
 }
 
-.comment-list li {
+.comment-list > li {
     display: block!important;
 }
 
@@ -180,4 +180,15 @@ a.wp-block-button__link br {
 
 .wp-block-button:not(:last-child) {
     margin-bottom: 10px;
+}
+
+blockquote {
+    border-left: 5px solid var(--body-text-color);
+    padding-left: 20px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+pre {
+    white-space: pre-wrap;
 }

@@ -34,15 +34,17 @@
                             );
                         endif;
                     ?>
-                <button class="navbar-toggler">
-                    <svg height="30px" id="nav-toggler-id" viewBox="0 0 32 28" width="32px" xml:space="preserve">
-                        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
-                    </svg>
-                </button>
+                <?php if ( has_nav_menu( 'primary' ) ) : ?>
+                    <button class="navbar-toggler">
+                        <svg height="30px" id="nav-toggler-id" viewBox="0 0 32 28" width="32px" xml:space="preserve">
+                            <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+                        </svg>
+                    </button>
+                <?php endif; ?>
             </div><!-- .tutor-navbar-main-menu -->
             <div class="tutor-navbar-col tutor-navbar-menu">
                 <div class="tutor-navbar-cart">
-                    <?php if ( is_user_logged_in() ) : ?>
+                    <?php if ( class_exists( '\TUTOR\Utils' ) && is_user_logged_in() ) : ?>
                         <div class="tutor-header-profile-menu">
                             <div class="tutor-header-profile-photo">
                                 <?php

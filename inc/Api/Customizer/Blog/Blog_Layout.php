@@ -29,7 +29,7 @@ class Blog_Layout {
 			array(
 				'title'             => esc_html__( 'Blog Layout', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => 'default',
+				'default'           => 'grid_view',
 				'sanitize_callback' => 'sanitize_select_radio',
 			)
 		);

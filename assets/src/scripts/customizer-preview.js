@@ -192,13 +192,13 @@
     });
     wp.customize('menu_link_active_color', function (value) {
         value.bind(function (updatedValue) {
-            let menuLinks = document.querySelectorAll('.bg-primary .navbar-toggler, .bg-primary a');
+            let menuLinks = document.querySelectorAll('.menu-one li a');
             menuLinks.forEach((link) => {
                 link.style.color = updatedValue;
-                link.addEventListener('mouseenter', () => {
+                link.addEventListener('mousemove', () => {
                     link.style.color = updatedValue;
                 });
-                link.addEventListener('mouseleave', () => {
+                link.addEventListener('mouseout', () => {
                     link.style.color = '';
                 });
             })
@@ -209,10 +209,10 @@
             let menuLinks = document.querySelectorAll('.menu-one-transparent li a, .transparent-header .navbar-toggler');
             menuLinks.forEach((link) => {
                 link.style.color = updatedValue;
-                link.addEventListener('mouseenter', () => {
+                link.addEventListener('mousemove', () => {
                     link.style.color = updatedValue;
                 });
-                link.addEventListener('mouseleave', () => {
+                link.addEventListener('mouseout', () => {
                     link.style.color = '';
                 });
             })

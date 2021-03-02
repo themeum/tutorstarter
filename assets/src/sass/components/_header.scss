@@ -221,6 +221,7 @@ body.admin-bar .navbar-nav {
             transition: all 0.4s ease-in-out;
         }
         &:hover {
+            color: var(--active-menu-color-trans);
             &:before {
                 @media (min-width: 992px) {
                     &:before {
@@ -244,6 +245,9 @@ body.admin-bar .navbar-nav {
             position: relative;
             //transition: 150ms ease;
             &:hover {
+                color: var(--active-menu-color-trans);
+            }
+            &:active {
                 color: var(--active-menu-color-trans);
             }
         }
@@ -331,6 +335,9 @@ body.admin-bar .navbar-nav {
                 background: var(--menu-link-color-trans);
             }
         }
+    }
+    .menu-item:hover > a {
+        color: var(--active-menu-color-trans);
     }
 }
 
@@ -762,11 +769,7 @@ body.admin-bar .navbar-nav {
             max-height: initial;
         }
     }
-    .menu-item.icon a:before {
-        // top: unset;
-        // right: 0;
-        // transform: translateY(0px);
-    }
+    
     .call-to-action {
         padding: 12px 14px;
         overflow: hidden;

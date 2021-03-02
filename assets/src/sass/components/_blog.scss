@@ -16,7 +16,8 @@
         letter-spacing: 0px;
         color: #0a083b;
         padding: 0;
-        overflow-wrap: break-word;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
     }
 
     .entry-meta {
@@ -78,11 +79,8 @@
             line-height: 1.6;
             font-weight: 500;
             letter-spacing: -0.562px;
-            margin-bottom: 27px;
         }
         blockquote {
-            border: none;
-            padding-left: 54px;
             position: relative;
             p {
                 font-size: 21px;
@@ -91,16 +89,16 @@
                 line-height: 34px;
                 letter-spacing: -0.656px;
             }
-            &::before {
-                content: '"';
-                font-family: var(--heading-font);
-                font-size: 104px;
-                line-height: 1;
-                position: absolute;
-                left: 0px;
-                top: 4px;
-                color: rgba(10, 8, 59, 0.2);
-            }
+            // &::before {
+            //     content: '"';
+            //     font-family: var(--heading-font);
+            //     font-size: 104px;
+            //     line-height: 1;
+            //     position: absolute;
+            //     left: 0px;
+            //     top: 4px;
+            //     color: rgba(10, 8, 59, 0.2);
+            // }
         }
         .edit-link {
             display: block;
@@ -287,7 +285,7 @@
         }
     }
     .comment {
-        display: inline-block;
+        display: block;
         .children {
             margin-left: 40px;
         }
@@ -410,8 +408,6 @@
 }
 
 // Blog List
-.blog-post-item {
-}
 
 /* Pagination */
 .tutorstarter-pagination {

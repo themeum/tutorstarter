@@ -297,13 +297,13 @@
   });
   wp.customize('menu_link_active_color', function (value) {
     value.bind(function (updatedValue) {
-      var menuLinks = document.querySelectorAll('.bg-primary .navbar-toggler, .bg-primary a');
+      var menuLinks = document.querySelectorAll('.menu-one li a');
       menuLinks.forEach(function (link) {
         link.style.color = updatedValue;
-        link.addEventListener('mouseenter', function () {
+        link.addEventListener('mousemove', function () {
           link.style.color = updatedValue;
         });
-        link.addEventListener('mouseleave', function () {
+        link.addEventListener('mouseout', function () {
           link.style.color = '';
         });
       });
@@ -314,10 +314,10 @@
       var menuLinks = document.querySelectorAll('.menu-one-transparent li a, .transparent-header .navbar-toggler');
       menuLinks.forEach(function (link) {
         link.style.color = updatedValue;
-        link.addEventListener('mouseenter', function () {
+        link.addEventListener('mousemove', function () {
           link.style.color = updatedValue;
         });
-        link.addEventListener('mouseleave', function () {
+        link.addEventListener('mouseout', function () {
           link.style.color = '';
         });
       });
