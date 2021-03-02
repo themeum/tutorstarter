@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-03-02T05:46:27+00:00\n"
+"POT-Creation-Date: 2021-03-02T12:04:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: tutorstarter\n"
@@ -1365,8 +1365,8 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
-#: views/partials/header/header_one.php:81
-#: views/partials/header/header_one_trans.php:81
+#: views/partials/header/header_one.php:90
+#: views/partials/header/header_one_trans.php:90
 msgid "Log In"
 msgstr ""
 
