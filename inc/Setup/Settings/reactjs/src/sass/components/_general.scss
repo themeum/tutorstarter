@@ -15,7 +15,7 @@ img {
     display: block;
 }
 
-.thm-opt-wrapper {
+.tutorstarter-opt-wrapper {
     background: #f1f1f1;
     color: #333;
     font-family: inherit;
@@ -23,7 +23,7 @@ img {
     line-height: 1.4em;
     padding-bottom: 30px;
 }
-.thm-opt-container {
+.tutorstarter-opt-container {
     max-width: 100%;
     margin: 0 auto;
     @media screen and (min-width: 992px) {
@@ -33,7 +33,7 @@ img {
         width: 100%;
     }
 }
-.thm-opt-header {
+.tutorstarter-opt-header {
     background-color: transparent;
     text-align: center;
     padding: 20px;
@@ -51,14 +51,14 @@ img {
     }
 }
 
-.thm-opt-container {
-    .thm-opt-content {
+.tutorstarter-opt-container {
+    .tutorstarter-opt-content {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        .thm-opt-card {
+        .tutorstarter-opt-card {
             display: flex;
             flex-direction: column;
             align-items: center;

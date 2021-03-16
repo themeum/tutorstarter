@@ -100,11 +100,11 @@ var __ = wp.i18n.__;
 var General = function General() {
   var adminUrl = tutorstarter_dashboard.admin_url;
   return /*#__PURE__*/React.createElement("div", {
-    className: "thm-opt-wrapper"
+    className: "tutorstarter-opt-wrapper"
   }, /*#__PURE__*/React.createElement("header", {
-    className: "thm-opt-header"
+    className: "tutorstarter-opt-header"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "thm-opt-container header-content"
+    className: "tutorstarter-opt-container header-content"
   }, /*#__PURE__*/React.createElement("div", {
     className: "thm-title"
   }, /*#__PURE__*/React.createElement("h1", null, __('Tutor Starter', 'tutorstarter'))), /*#__PURE__*/React.createElement("p", {
@@ -115,36 +115,36 @@ var General = function General() {
   }, " - v", tutorstarter_dashboard.theme_version)), /*#__PURE__*/React.createElement("h4", {
     className: "title"
   }, /*#__PURE__*/React.createElement("span", null, __('Customizer Quick Links', 'tutorstarter')))), /*#__PURE__*/React.createElement("main", {
-    className: "thm-opt-container"
+    className: "tutorstarter-opt-container"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "thm-opt-content"
+    className: "tutorstarter-opt-content"
   }, /*#__PURE__*/React.createElement("a", {
-    className: "thm-opt-card",
+    className: "tutorstarter-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_colors_section")
   }, /*#__PURE__*/React.createElement("span", {
     "class": "dashicons dashicons-color-picker"
   }), /*#__PURE__*/React.createElement("p", null, __('Colors', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
-    className: "thm-opt-card",
+    className: "tutorstarter-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_layout_section")
   }, /*#__PURE__*/React.createElement("span", {
     "class": "dashicons dashicons-layout"
   }), /*#__PURE__*/React.createElement("p", null, __('Layouts', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
-    className: "thm-opt-card",
+    className: "tutorstarter-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_header_section")
   }, /*#__PURE__*/React.createElement("span", {
     "class": "dashicons dashicons-archive"
   }), /*#__PURE__*/React.createElement("p", null, __('Header', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
-    className: "thm-opt-card",
+    className: "tutorstarter-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_footer_section")
   }, /*#__PURE__*/React.createElement("span", {
     "class": "dashicons dashicons-table-row-before"
   }), /*#__PURE__*/React.createElement("p", null, __('Footer', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
-    className: "thm-opt-card",
+    className: "tutorstarter-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_typography_section")
   }, /*#__PURE__*/React.createElement("span", {
     "class": "dashicons dashicons-editor-spellcheck"
   }), /*#__PURE__*/React.createElement("p", null, __('Typography', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
-    className: "thm-opt-card",
+    className: "tutorstarter-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_blog_section")
   }, /*#__PURE__*/React.createElement("span", {
     "class": "dashicons dashicons-edit-page"
