@@ -3808,11 +3808,20 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React.createElement(Fragment, null, this.props.control.params.label && /*#__PURE__*/React.createElement("span", {
-        className: "customize-control-title"
-      }, this.props.control.params.label), /*#__PURE__*/React.createElement("div", {
-        className: "tutorstarter-typography-control tutorstarter-background-control"
-      }, this.renderFontSize(), this.renderLineHeight(), this.renderFontWeight(), this.renderTextTransform()));
+      return /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement("div", {
+        className: "tutorstarter-accordions"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "tutorstarter-single-accordion"
+      }, this.props.control.params.label && /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement("input", {
+        className: "input-collapsible",
+        type: "checkbox",
+        id: this.props.control.params.label
+      }), /*#__PURE__*/React.createElement("label", {
+        className: "tutorstarter-single-accordion-label",
+        htmlFor: this.props.control.params.label
+      }, this.props.control.params.label)), /*#__PURE__*/React.createElement("div", {
+        className: "tutorstarter-typography-control tutorstarter-background-control tutorstarter-single-accordion-content"
+      }, this.renderFontSize(), this.renderLineHeight(), this.renderFontWeight(), this.renderTextTransform()))));
     }
   }, {
     key: "updateValues",

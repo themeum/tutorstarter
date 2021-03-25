@@ -2,7 +2,7 @@
 $dark: #0a083b;
 $medium: #57586e;
 $light: rgb(87 88 110 / 50%);
-$blue: #175cff;
+$blue: #1950D1;
 
 /* Tutor Course Listing */
 #home-4-featured {
@@ -333,9 +333,9 @@ $blue: #175cff;
         transition: all 0.15s ease-in-out;
         &:hover,
         &.current {
-            background: #175cff;
+            background: #1950D1;
             color: #ffffff;
-            border: 1px solid #175cff;
+            border: 1px solid #1950D1;
         }
     }
 }

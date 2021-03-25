@@ -40,7 +40,7 @@ class Enqueue {
 	public function enqueue_scripts() {
 		// CSS.
 		$body_font        = get_theme_mod( 'body_font', 'Inter' );
-		$heading_font     = get_theme_mod( 'heading_font', 'Libre Baskerville' );
+		$heading_font     = get_theme_mod( 'heading_font', 'Sora' );
 		$body_font_url    = '';
 		$heading_font_url = '';
 

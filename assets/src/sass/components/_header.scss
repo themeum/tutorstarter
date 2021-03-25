@@ -28,7 +28,7 @@ header.default {
 }
 
 header.alternative {
-    box-shadow: 0px 5px 15px 0px rgba(#000, 0.15);
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 .navbar {
@@ -302,7 +302,7 @@ body.admin-bar .navbar-nav {
     &:hover,
     &:focus,
     &:active {
-        box-shadow: 0 0 0 2px rgba(#000, 0.36);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.36);
         outline: none;
     }
 }
@@ -374,7 +374,7 @@ body.admin-bar .navbar-nav {
     .bg-blur {
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
-        background: rgba(#fff, 0.6);
+        background: rgba(255, 255, 255, 0.6);
         z-index: 999;
         .navbar-toggler,
         a,
@@ -605,7 +605,7 @@ body.admin-bar .navbar-nav {
             width: 300px;
             height: 100%;
             overflow-y: scroll;
-            box-shadow: 0px 0px 0 2000px rgba(#000, 0.5);
+            box-shadow: 0px 0px 0 2000px rgba(0, 0, 0, 0.5);
             transform: translateX(-300px);
 
             a {
@@ -624,7 +624,7 @@ body.admin-bar .navbar-nav {
             }
             .menu-item {
                 &:not(:last-child) {
-                    border-bottom: 1px solid rgba(#000, 0.1);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                 }
                 &:hover > a {
                     color: var(--active-menu-color);
@@ -706,7 +706,7 @@ body.admin-bar .navbar-nav {
         width: 300px;
         height: 100%;
         overflow-y: auto;
-        box-shadow: 0px 0px 0 1000px rgba(#000, 0.5);
+        box-shadow: 0px 0px 0 1000px rgba(0, 0, 0, 0.5);
         transform: translateX(-300px);
 
         a {
@@ -727,7 +727,7 @@ body.admin-bar .navbar-nav {
         }
         .menu-item {
             &:not(:last-child) {
-                border-bottom: 1px solid rgba(#000, 0.1);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             }
             &:hover > a {
                 color: var(--menu-link-color);
@@ -825,7 +825,7 @@ body.admin-bar .navbar-nav {
     z-index: 999999;
     display: grid;
     place-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(#000, 0.5);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
     transition: 200ms;
     &.active {
         opacity: 1;

@@ -159,7 +159,7 @@
       var bodySelector = document.querySelector('body');
       bodySelector.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
       bodySelector.style.fontWeight = updatedValue['fontWeight'];
-      bodySelector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+      bodySelector.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'em';
       bodySelector.style.textTransform = updatedValue['textTransform'];
     });
   });
@@ -183,7 +183,7 @@
           h1tag.style.fontWeight = updatedValue['fontWeight'];
           h1tag.style.textTransform = updatedValue['textTransform'];
           h1tag.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-          h1tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+          h1tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'em';
         });
       }
     });
@@ -197,7 +197,7 @@
           h2tag.style.fontWeight = updatedValue['fontWeight'];
           h2tag.style.textTransform = updatedValue['textTransform'];
           h2tag.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-          h2tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+          h2tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'em';
         });
       }
     });
@@ -211,7 +211,7 @@
           h3tag.style.fontWeight = updatedValue['fontWeight'];
           h3tag.style.textTransform = updatedValue['textTransform'];
           h3tag.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-          h3tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+          h3tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'em';
         });
       }
     });
@@ -225,7 +225,7 @@
           h4tag.style.fontWeight = updatedValue['fontWeight'];
           h4tag.style.textTransform = updatedValue['textTransform'];
           h4tag.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-          h4tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+          h4tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'em';
         });
       }
     });
@@ -239,7 +239,7 @@
           h5tag.style.fontWeight = updatedValue['fontWeight'];
           h5tag.style.textTransform = updatedValue['textTransform'];
           h5tag.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-          h5tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+          h5tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'em';
         });
       }
     });
@@ -253,7 +253,7 @@
           h6tag.style.fontWeight = updatedValue['fontWeight'];
           h6tag.style.textTransform = updatedValue['textTransform'];
           h6tag.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-          h6tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+          h6tag.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'em';
         });
       }
     });
@@ -332,7 +332,7 @@
           link.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
           link.style.fontWeight = updatedValue['fontWeight'];
           link.style.textTransform = updatedValue['textTransform'];
-          link.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+          link.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'em';
         });
       }
     });
@@ -459,7 +459,7 @@
 
       if (null !== ctaElement) {
         ctaElement.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-        ctaElement.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+        ctaElement.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'em';
         ctaElement.style.textTransform = updatedValue['textTransform'];
         ctaElement.style.fontWeight = updatedValue['fontWeight'];
       }
@@ -629,7 +629,7 @@
           title.style.fontWeight = updatedValue['fontWeight'];
           title.style.textTransform = updatedValue['textTransform'];
           title.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-          title.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+          title.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'em';
         });
       }
     });
@@ -643,7 +643,7 @@
           text.style.fontWeight = updatedValue['fontWeight'];
           text.style.textTransform = updatedValue['textTransform'];
           text.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
-          text.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'px';
+          text.style.lineHeight = updatedValue['lineHeight']['desktop'] + 'em';
         });
       }
     });

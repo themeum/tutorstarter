@@ -151,7 +151,7 @@
         color: #0a083b;
         padding: 10px;
         &:focus {
-            border-color: #175cff;
+            border-color: #1950D1;
         }
     }
 
@@ -165,11 +165,11 @@
         font-size: 16px;
         line-height: 1;
         text-transform: capitalize;
-        background-color: #175cff;
+        background-color: #1950D1;
         color: #ffff;
         padding: 11px 26px;
         outline: 0;
-        border: 1px solid #175cff;
+        border: 1px solid #1950D1;
         border-radius: 50px;
         cursor: pointer;
         transition: 0.2s linear;
@@ -235,7 +235,7 @@
         margin-bottom: 20px;
 
         &:focus {
-            border-color: #175cff;
+            border-color: #1950D1;
         }
     }
     textarea {
@@ -244,7 +244,7 @@
 
     .form-submit {
         input[type="submit"] {
-            background-color: #175cff;
+            background-color: #1950D1;
             font-family: var(--body-font);
             font-weight: 600;
             font-size: 16px;
@@ -252,7 +252,7 @@
             color: #ffff;
             padding: 11px 26px;
             outline: 0;
-            border: 1px solid #175cff;
+            border: 1px solid #1950D1;
             border-radius: 50px;
             cursor: pointer;
             transition: 0.2s linear;
@@ -362,7 +362,7 @@
     .read-more {
         font-weight: 600;
         font-size: 16px;
-        color: #175cff;
+        color: #1950D1;
     }
 }
 
@@ -422,7 +422,7 @@
         transition: 0.2s linear;
         &.current,
         &:hover {
-            background: #175cff;
+            background: #1950D1;
             border-color: #5454d4;
             color: #fff;
             opacity: 1;

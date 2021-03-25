@@ -73,9 +73,9 @@ class Typography {
 						'desktop' => 16,
 					),
 					'lineHeight' => array(
-						'mobile'  => 30,
-						'tablet'  => 30,
-						'desktop' => 30,
+						'mobile'  => 1.5,
+						'tablet'  => 1.5,
+						'desktop' => 1.7,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -91,13 +91,13 @@ class Typography {
 					'input_attrs' => array(
 						'font_sizes' => array(
 							'min'        => 8,
-							'max'        => 100,
+							'max'        => 200,
 							'units'      => array( 'px' )
 						),
 						'line_heights' => array(
 							'min'        => 0,
-							'max'        => 100,
-							'units'      => array( 'px' )
+							'max'        => 50,
+							'units'      => array( 'em' )
 						),
 						'defaultParams' => array(
 							'weight_default'  => 400,
@@ -108,9 +108,9 @@ class Typography {
 								'desktop' => 16,
 							),
 							'line_heights' => array(
-								'mobile'  => 30,
-								'tablet'  => 30,
-								'desktop' => 30,
+								'mobile'  => 1.5,
+								'tablet'  => 1.5,
+								'desktop' => 1.7,
 							)
 						),
 					),
@@ -124,7 +124,7 @@ class Typography {
 			array(
 				'title'             => esc_html__( 'H1 - H6 Font Family', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => 'Libre Baskerville',
+				'default'           => 'Sora',
 				'sanitize_callback' => 'sanitize_fonts',
 			)
 		);
@@ -155,14 +155,14 @@ class Typography {
 					'textTransform' => 'none',
 					'fontWeight'    => 700,
 					'fontSize'      => array(
-						'mobile'  => 36,
-						'tablet'  => 36,
-						'desktop' => 48,
+						'mobile'  => 48,
+						'tablet'  => 48,
+						'desktop' => 68,
 					),
 					'lineHeight' => array(
-						'mobile'  => 36,
-						'tablet'  => 36,
-						'desktop' => 64,
+						'mobile'  => 2.5,
+						'tablet'  => 2.5,
+						'desktop' => 2.5,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -178,26 +178,26 @@ class Typography {
 					'input_attrs' => array(
 						'font_sizes' => array(
 							'min'        => 8,
-							'max'        => 100,
+							'max'        => 200,
 							'units'      => array( 'px' )
 						),
 						'line_heights' => array(
 							'min'        => 0,
-							'max'        => 100,
-							'units'      => array( 'px' )
+							'max'        => 50,
+							'units'      => array( 'em' )
 						),
 						'defaultParams' => array(
 							'weight_default'  => 400,
 							'text_transform'  => 'none',
 							'font_sizes' => array(
-								'mobile'  => 36,
-								'tablet'  => 36,
-								'desktop' => 48,
+								'mobile'  => 48,
+								'tablet'  => 48,
+								'desktop' => 68,
 							),
 							'line_heights' => array(
-								'mobile'  => 36,
-								'tablet'  => 36,
-								'desktop' => 64,
+								'mobile'  => 2.5,
+								'tablet'  => 2.5,
+								'desktop' => 2.5,
 							)
 						),
 					),
@@ -213,14 +213,14 @@ class Typography {
 					'textTransform' => 'none',
 					'fontWeight'    => 700,
 					'fontSize'      => array(
-						'mobile'  => 26,
-						'tablet'  => 26,
-						'desktop' => 32,
+						'mobile'  => 32,
+						'tablet'  => 32,
+						'desktop' => 48,
 					),
 					'lineHeight' => array(
-						'mobile'  => 30,
-						'tablet'  => 30,
-						'desktop' => 48,
+						'mobile'  => 2,
+						'tablet'  => 2,
+						'desktop' => 2,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -236,26 +236,26 @@ class Typography {
 					'input_attrs' => array(
 						'font_sizes' => array(
 							'min'        => 8,
-							'max'        => 100,
+							'max'        => 200,
 							'units'      => array( 'px' )
 						),
 						'line_heights' => array(
 							'min'        => 0,
-							'max'        => 100,
-							'units'      => array( 'px' )
+							'max'        => 50,
+							'units'      => array( 'em' )
 						),
 						'defaultParams' => array(
 							'weight_default'  => 700,
 							'text_transform'  => 'none',
 							'font_sizes' => array(
-								'mobile'  => 26,
-								'tablet'  => 26,
-								'desktop' => 32,
+								'mobile'  => 32,
+								'tablet'  => 32,
+								'desktop' => 48,
 							),
 							'line_heights' => array(
-								'mobile'  => 30,
-								'tablet'  => 30,
-								'desktop' => 48,
+								'mobile'  => 2,
+								'tablet'  => 2,
+								'desktop' => 2,
 							)
 						),
 					),
@@ -271,14 +271,14 @@ class Typography {
 					'textTransform' => 'none',
 					'fontWeight'    => 700,
 					'fontSize'      => array(
-						'mobile'  => 24,
-						'tablet'  => 24,
-						'desktop' => 26,
+						'mobile'  => 28,
+						'tablet'  => 28,
+						'desktop' => 36,
 					),
 					'lineHeight' => array(
-						'mobile'  => 24,
-						'tablet'  => 24,
-						'desktop' => 48,
+						'mobile'  => 1.8,
+						'tablet'  => 1.8,
+						'desktop' => 1.8,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -294,26 +294,26 @@ class Typography {
 					'input_attrs' => array(
 						'font_sizes' => array(
 							'min'        => 8,
-							'max'        => 100,
+							'max'        => 200,
 							'units'      => array( 'px' )
 						),
 						'line_heights' => array(
 							'min'        => 0,
-							'max'        => 100,
-							'units'      => array( 'px' )
+							'max'        => 50,
+							'units'      => array( 'em' )
 						),
 						'defaultParams' => array(
 							'weight_default'  => 700,
 							'text_transform'  => 'none',
 							'font_sizes' => array(
-								'mobile'  => 24,
-								'tablet'  => 24,
-								'desktop' => 26,
+								'mobile'  => 28,
+								'tablet'  => 28,
+								'desktop' => 36,
 							),
 							'line_heights' => array(
-								'mobile'  => 24,
-								'tablet'  => 24,
-								'desktop' => 48,
+								'mobile'  => 1.8,
+								'tablet'  => 1.8,
+								'desktop' => 1.8,
 							)
 						),
 					),
@@ -329,14 +329,14 @@ class Typography {
 					'textTransform' => 'none',
 					'fontWeight'    => 700,
 					'fontSize'      => array(
-						'mobile'  => 18,
-						'tablet'  => 18,
-						'desktop' => 18,
+						'mobile'  => 24,
+						'tablet'  => 24,
+						'desktop' => 26,
 					),
 					'lineHeight' => array(
-						'mobile'  => 22,
-						'tablet'  => 22,
-						'desktop' => 23,
+						'mobile'  => 1.7,
+						'tablet'  => 1.7,
+						'desktop' => 1.7,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -352,26 +352,26 @@ class Typography {
 					'input_attrs' => array(
 						'font_sizes' => array(
 							'min'        => 8,
-							'max'        => 100,
+							'max'        => 200,
 							'units'      => array( 'px' )
 						),
 						'line_heights' => array(
 							'min'        => 0,
-							'max'        => 100,
-							'units'      => array( 'px' )
+							'max'        => 50,
+							'units'      => array( 'em' )
 						),
 						'defaultParams' => array(
 							'weight_default'  => 700,
 							'text_transform'  => 'none',
 							'font_sizes' => array(
-								'mobile'  => 18,
-								'tablet'  => 18,
-								'desktop' => 18,
+								'mobile'  => 24,
+								'tablet'  => 24,
+								'desktop' => 26,
 							),
 							'line_heights' => array(
-								'mobile'  => 22,
-								'tablet'  => 22,
-								'desktop' => 23,
+								'mobile'  => 1.7,
+								'tablet'  => 1.7,
+								'desktop' => 1.7,
 							)
 						),
 					),
@@ -387,14 +387,14 @@ class Typography {
 					'textTransform' => 'none',
 					'fontWeight'    => 700,
 					'fontSize'      => array(
-						'mobile'  => 16,
-						'tablet'  => 16,
-						'desktop' => 16,
+						'mobile'  => 18,
+						'tablet'  => 18,
+						'desktop' => 20,
 					),
 					'lineHeight' => array(
-						'mobile'  => 26,
-						'tablet'  => 26,
-						'desktop' => 26,
+						'mobile'  => 1.6,
+						'tablet'  => 1.6,
+						'desktop' => 1.6,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -410,26 +410,26 @@ class Typography {
 					'input_attrs' => array(
 						'font_sizes' => array(
 							'min'        => 8,
-							'max'        => 100,
+							'max'        => 200,
 							'units'      => array( 'px' )
 						),
 						'line_heights' => array(
 							'min'        => 0,
-							'max'        => 100,
-							'units'      => array( 'px' )
+							'max'        => 50,
+							'units'      => array( 'em' )
 						),
 						'defaultParams' => array(
 							'weight_default'  => 700,
 							'text_transform'  => 'none',
 							'font_sizes' => array(
-								'mobile'  => 16,
-								'tablet'  => 16,
-								'desktop' => 16,
+								'mobile'  => 18,
+								'tablet'  => 18,
+								'desktop' => 20,
 							),
 							'line_heights' => array(
-								'mobile'  => 26,
-								'tablet'  => 26,
-								'desktop' => 26,
+								'mobile'  => 1.6,
+								'tablet'  => 1.6,
+								'desktop' => 1.6,
 							)
 						),
 					),
@@ -445,14 +445,14 @@ class Typography {
 					'textTransform' => 'none',
 					'fontWeight'    => 700,
 					'fontSize'      => array(
-						'mobile'  => 15,
-						'tablet'  => 15,
-						'desktop' => 15,
+						'mobile'  => 17,
+						'tablet'  => 17,
+						'desktop' => 18,
 					),
 					'lineHeight' => array(
-						'mobile'  => 24,
-						'tablet'  => 24,
-						'desktop' => 24,
+						'mobile'  => 1.5,
+						'tablet'  => 1.5,
+						'desktop' => 1.5,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -468,26 +468,26 @@ class Typography {
 					'input_attrs' => array(
 						'font_sizes' => array(
 							'min'        => 8,
-							'max'        => 100,
+							'max'        => 200,
 							'units'      => array( 'px' )
 						),
 						'line_heights' => array(
 							'min'        => 0,
-							'max'        => 100,
-							'units'      => array( 'px' )
+							'max'        => 50,
+							'units'      => array( 'em' )
 						),
 						'defaultParams' => array(
 							'weight_default'  => 700,
 							'text_transform'  => 'none',
 							'font_sizes' => array(
-								'mobile'  => 15,
-								'tablet'  => 15,
-								'desktop' => 15,
+								'mobile'  => 17,
+								'tablet'  => 17,
+								'desktop' => 18,
 							),
 							'line_heights' => array(
-								'mobile'  => 24,
-								'tablet'  => 24,
-								'desktop' => 24,
+								'mobile'  => 1.5,
+								'tablet'  => 1.5,
+								'desktop' => 1.5,
 							)
 						),
 					),

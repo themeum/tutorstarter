@@ -75,7 +75,7 @@ class Colors {
 			array(
 				'title'             => esc_html__( 'Link Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#175cff',
+				'default'           => '#1950D1',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);

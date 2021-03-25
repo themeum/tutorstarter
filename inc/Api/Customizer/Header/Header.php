@@ -199,7 +199,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Menu Link Active and Hover Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#175CFF',
+				'default'           => '#1950D1',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -268,13 +268,13 @@ class Header {
 					'input_attrs' => array(
 						'font_sizes' => array(
 							'min'        => 8,
-							'max'        => 100,
+							'max'        => 200,
 							'units'      => array( 'px' )
 						),
 						'line_heights' => array(
 							'min'        => 0,
-							'max'        => 100,
-							'units'      => array( 'px' )
+							'max'        => 50,
+							'units'      => array( 'em' )
 						),
 						'defaultParams' => array(
 							'weight_default'  => 400,
@@ -618,13 +618,13 @@ class Header {
 					'input_attrs' => array(
 						'font_sizes' => array(
 							'min'        => 8,
-							'max'        => 100,
+							'max'        => 200,
 							'units'      => array( 'px' )
 						),
 						'line_heights' => array(
 							'min'        => 0,
-							'max'        => 100,
-							'units'      => array( 'px' )
+							'max'        => 50,
+							'units'      => array( 'em' )
 						),
 						'defaultParams' => array(
 							'weight_default'  => 400,

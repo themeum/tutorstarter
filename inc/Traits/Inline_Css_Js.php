@@ -23,10 +23,10 @@ trait Inline_Css_Js {
 	public static function output_css() {
 		// Theme mods.
 		$body_font                 = get_theme_mod( 'body_font', 'Inter' );
-		$heading_font              = get_theme_mod( 'heading_font', 'Libre Baskerville' );
+		$heading_font              = get_theme_mod( 'heading_font', 'Sora' );
 		$cta_text_color            = get_theme_mod( 'cta_color', '#ffffff' );
-		$cta_text_color_trans      = get_theme_mod( 'cta_color_trans', '#175cff' );
-		$link_color                = get_theme_mod( 'link_color', '#175CFF' );
+		$cta_text_color_trans      = get_theme_mod( 'cta_color_trans', '#1950D1' );
+		$link_color                = get_theme_mod( 'link_color', '#1950D1' );
 		$menu_bg_color             = get_theme_mod( 'menu_bg_color', '#ffffff' );
 		$body_bg_color             = get_theme_mod( 'body_bg_color', '#ffffff' );
 		$cart_color                = get_theme_mod( 'cart_color', '#57586E' );
@@ -39,10 +39,10 @@ trait Inline_Css_Js {
 		$body_text_color           = get_theme_mod( 'body_text_color', '#57586E' );
 		$menu_link_color           = get_theme_mod( 'menu_link_color', '#57586E' );
 		$menu_link_color_trans     = get_theme_mod( 'menu_link_color_trans', '#ffffff' );
-		$footer_bottom_bg_color    = get_theme_mod( 'footer_bottom_bg_color', '#0A083B' );
-		$menu_link_active_color    = get_theme_mod( 'menu_link_active_color', '#175CFF' );
+		$footer_bottom_bg_color    = get_theme_mod( 'footer_bottom_bg_color', '#1E1E2C' );
+		$menu_link_active_color    = get_theme_mod( 'menu_link_active_color', '#1950D1' );
 		$link_active_color_trans   = get_theme_mod( 'menu_link_active_color_trans', '#ffffff' );
-		$footer_widgets_bg_color   = get_theme_mod( 'footer_widgets_bg_color', '#0A083B' );
+		$footer_widgets_bg_color   = get_theme_mod( 'footer_widgets_bg_color', '#1E1E2C' );
 		$footer_bottom_text_color  = get_theme_mod( 'footer_bottom_text_color', '#ffffff' );
 		$footer_widgets_text_color = get_theme_mod( 'footer_widgets_text_color', '#ffffff' );
 
@@ -55,9 +55,9 @@ trait Inline_Css_Js {
 		$body_typography_fontsize_tablet  = ! empty( $body_typography['fontSize'] ) ? $body_typography['fontSize']['tablet'] : 13;
 		$body_typography_fontsize_mobile  = ! empty( $body_typography['fontSize'] ) ? $body_typography['fontSize']['mobile'] : 13;
 		
-		$body_typography_lineheight        = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['desktop'] : 30;
-		$body_typography_lineheight_tablet = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['tablet'] : 30;
-		$body_typography_lineheight_mobile = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['mobile'] : 30;
+		$body_typography_lineheight        = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['desktop'] : 1.7;
+		$body_typography_lineheight_tablet = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['tablet'] : 1.5;
+		$body_typography_lineheight_mobile = ! empty( $body_typography['lineHeight'] ) ? $body_typography['lineHeight']['mobile'] : 1.5;
 		
 		$body_typography_fontweight        = ! empty( $body_typography['fontWeight'] ) ? $body_typography['fontWeight'] : 400;
 		$body_typography_texttransform     = ! empty( $body_typography['textTransform'] ) ? $body_typography['textTransform'] : 'none';
@@ -90,78 +90,78 @@ trait Inline_Css_Js {
 
 		// H1 Typography.
 		$h1_typography = get_theme_mod( 'h1_typography' );
-		$h1_typography_fontsize = ! empty( $h1_typography['fontSize'] ) ? $h1_typography['fontSize']['desktop'] : 48;
-		$h1_typography_fontsize_tablet = ! empty( $h1_typography['fontSize'] ) ? $h1_typography['fontSize']['tablet'] : 36;
-		$h1_typography_fontsize_mobile = ! empty( $h1_typography['fontSize'] ) ? $h1_typography['fontSize']['mobile'] : 36;
+		$h1_typography_fontsize = ! empty( $h1_typography['fontSize'] ) ? $h1_typography['fontSize']['desktop'] : 68;
+		$h1_typography_fontsize_tablet = ! empty( $h1_typography['fontSize'] ) ? $h1_typography['fontSize']['tablet'] : 48;
+		$h1_typography_fontsize_mobile = ! empty( $h1_typography['fontSize'] ) ? $h1_typography['fontSize']['mobile'] : 48;
 
-		$h1_typography_lineheight = ! empty( $h1_typography['lineHeight'] ) ? $h1_typography['lineHeight']['desktop'] : 64;
-		$h1_typography_lineheight_tablet = ! empty( $h1_typography['lineHeight'] ) ? $h1_typography['lineHeight']['tablet'] : 36;
-		$h1_typography_lineheight_mobile = ! empty( $h1_typography['lineHeight'] ) ? $h1_typography['lineHeight']['mobile'] : 36;
+		$h1_typography_lineheight = ! empty( $h1_typography['lineHeight'] ) ? $h1_typography['lineHeight']['desktop'] : 2.5;
+		$h1_typography_lineheight_tablet = ! empty( $h1_typography['lineHeight'] ) ? $h1_typography['lineHeight']['tablet'] : 2.5;
+		$h1_typography_lineheight_mobile = ! empty( $h1_typography['lineHeight'] ) ? $h1_typography['lineHeight']['mobile'] : 2.5;
 		
 		$h1_typography_fontweight = ! empty( $h1_typography['fontWeight'] ) ? $h1_typography['fontWeight'] : 700;
 		$h1_typography_texttransform = ! empty( $h1_typography['textTransform'] ) ? $h1_typography['textTransform'] : 'none';
 
 		// H2 Typography.
 		$h2_typography = get_theme_mod( 'h2_typography' );
-		$h2_typography_fontsize = ! empty( $h2_typography['fontSize'] ) ? $h2_typography['fontSize']['desktop'] : 32;
-		$h2_typography_fontsize_tablet = ! empty( $h2_typography['fontSize'] ) ? $h2_typography['fontSize']['tablet'] : 26;
-		$h2_typography_fontsize_mobile = ! empty( $h2_typography['fontSize'] ) ? $h2_typography['fontSize']['mobile'] : 26;
+		$h2_typography_fontsize = ! empty( $h2_typography['fontSize'] ) ? $h2_typography['fontSize']['desktop'] : 48;
+		$h2_typography_fontsize_tablet = ! empty( $h2_typography['fontSize'] ) ? $h2_typography['fontSize']['tablet'] : 32;
+		$h2_typography_fontsize_mobile = ! empty( $h2_typography['fontSize'] ) ? $h2_typography['fontSize']['mobile'] : 32;
 		
-		$h2_typography_lineheight = ! empty( $h2_typography['lineHeight'] ) ? $h2_typography['lineHeight']['desktop'] : 48;
-		$h2_typography_lineheight_tablet = ! empty( $h2_typography['lineHeight'] ) ? $h2_typography['lineHeight']['tablet'] : 30;
-		$h2_typography_lineheight_mobile = ! empty( $h2_typography['lineHeight'] ) ? $h2_typography['lineHeight']['mobile'] : 30;
+		$h2_typography_lineheight = ! empty( $h2_typography['lineHeight'] ) ? $h2_typography['lineHeight']['desktop'] : 2;
+		$h2_typography_lineheight_tablet = ! empty( $h2_typography['lineHeight'] ) ? $h2_typography['lineHeight']['tablet'] : 2;
+		$h2_typography_lineheight_mobile = ! empty( $h2_typography['lineHeight'] ) ? $h2_typography['lineHeight']['mobile'] : 2;
 		
 		$h2_typography_fontweight = ! empty( $h2_typography['fontWeight'] ) ? $h2_typography['fontWeight'] : 700;
 		$h2_typography_texttransform = ! empty( $h2_typography['textTransform'] ) ? $h2_typography['textTransform'] : 'none';
 
 		// H3 Typography.
 		$h3_typography = get_theme_mod( 'h3_typography' );
-		$h3_typography_fontsize = ! empty( $h3_typography['fontSize'] ) ? $h3_typography['fontSize']['desktop'] : 26;
-		$h3_typography_fontsize_tablet = ! empty( $h3_typography['fontSize'] ) ? $h3_typography['fontSize']['tablet'] : 24;
-		$h3_typography_fontsize_mobile = ! empty( $h3_typography['fontSize'] ) ? $h3_typography['fontSize']['mobile'] : 24;
+		$h3_typography_fontsize = ! empty( $h3_typography['fontSize'] ) ? $h3_typography['fontSize']['desktop'] : 36;
+		$h3_typography_fontsize_tablet = ! empty( $h3_typography['fontSize'] ) ? $h3_typography['fontSize']['tablet'] : 28;
+		$h3_typography_fontsize_mobile = ! empty( $h3_typography['fontSize'] ) ? $h3_typography['fontSize']['mobile'] : 28;
 		
-		$h3_typography_lineheight = ! empty( $h3_typography['lineHeight'] ) ? $h3_typography['lineHeight']['desktop'] : 48;
-		$h3_typography_lineheight_tablet = ! empty( $h3_typography['lineHeight'] ) ? $h3_typography['lineHeight']['tablet'] : 24;
-		$h3_typography_lineheight_mobile = ! empty( $h3_typography['lineHeight'] ) ? $h3_typography['lineHeight']['mobile'] : 24;
+		$h3_typography_lineheight = ! empty( $h3_typography['lineHeight'] ) ? $h3_typography['lineHeight']['desktop'] : 1.8;
+		$h3_typography_lineheight_tablet = ! empty( $h3_typography['lineHeight'] ) ? $h3_typography['lineHeight']['tablet'] : 1.8;
+		$h3_typography_lineheight_mobile = ! empty( $h3_typography['lineHeight'] ) ? $h3_typography['lineHeight']['mobile'] : 1.8;
 		
 		$h3_typography_fontweight = ! empty( $h3_typography['fontWeight'] ) ? $h3_typography['fontWeight'] : 700;
 		$h3_typography_texttransform = ! empty( $h3_typography['textTransform'] ) ? $h3_typography['textTransform'] : 'none';
 
 		// H4 Typography.
 		$h4_typography = get_theme_mod( 'h4_typography' );
-		$h4_typography_fontsize = ! empty( $h4_typography['fontSize'] ) ? $h4_typography['fontSize']['desktop'] : 18;
-		$h4_typography_fontsize_tablet = ! empty( $h4_typography['fontSize'] ) ? $h4_typography['fontSize']['tablet'] : 18;
-		$h4_typography_fontsize_mobile = ! empty( $h4_typography['fontSize'] ) ? $h4_typography['fontSize']['mobile'] : 18;
+		$h4_typography_fontsize = ! empty( $h4_typography['fontSize'] ) ? $h4_typography['fontSize']['desktop'] : 26;
+		$h4_typography_fontsize_tablet = ! empty( $h4_typography['fontSize'] ) ? $h4_typography['fontSize']['tablet'] : 24;
+		$h4_typography_fontsize_mobile = ! empty( $h4_typography['fontSize'] ) ? $h4_typography['fontSize']['mobile'] : 24;
 		
-		$h4_typography_lineheight = ! empty( $h4_typography['lineHeight'] ) ? $h4_typography['lineHeight']['desktop'] : 23;
-		$h4_typography_lineheight_tablet = ! empty( $h4_typography['lineHeight'] ) ? $h4_typography['lineHeight']['tablet'] : 22;
-		$h4_typography_lineheight_mobile = ! empty( $h4_typography['lineHeight'] ) ? $h4_typography['lineHeight']['mobile'] : 22;
+		$h4_typography_lineheight = ! empty( $h4_typography['lineHeight'] ) ? $h4_typography['lineHeight']['desktop'] : 1.7;
+		$h4_typography_lineheight_tablet = ! empty( $h4_typography['lineHeight'] ) ? $h4_typography['lineHeight']['tablet'] : 1.7;
+		$h4_typography_lineheight_mobile = ! empty( $h4_typography['lineHeight'] ) ? $h4_typography['lineHeight']['mobile'] : 1.7;
 		
 		$h4_typography_fontweight = ! empty( $h4_typography['fontWeight'] ) ? $h4_typography['fontWeight'] : 700;
 		$h4_typography_texttransform = ! empty( $h4_typography['textTransform'] ) ? $h4_typography['textTransform'] : 'none';
 
 		// H5 Typography.
 		$h5_typography = get_theme_mod( 'h5_typography' );
-		$h5_typography_fontsize = ! empty( $h5_typography['fontSize'] ) ? $h5_typography['fontSize']['desktop'] : 16;
-		$h5_typography_fontsize_tablet = ! empty( $h5_typography['fontSize'] ) ? $h5_typography['fontSize']['tablet'] : 16;
-		$h5_typography_fontsize_mobile = ! empty( $h5_typography['fontSize'] ) ? $h5_typography['fontSize']['mobile'] : 16;
+		$h5_typography_fontsize = ! empty( $h5_typography['fontSize'] ) ? $h5_typography['fontSize']['desktop'] : 20;
+		$h5_typography_fontsize_tablet = ! empty( $h5_typography['fontSize'] ) ? $h5_typography['fontSize']['tablet'] : 18;
+		$h5_typography_fontsize_mobile = ! empty( $h5_typography['fontSize'] ) ? $h5_typography['fontSize']['mobile'] : 18;
 		
-		$h5_typography_lineheight = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['desktop'] : 26;
-		$h5_typography_lineheight_tablet = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['tablet'] : 26;
-		$h5_typography_lineheight_mobile = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['mobile'] : 26;
+		$h5_typography_lineheight = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['desktop'] : 1.6;
+		$h5_typography_lineheight_tablet = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['tablet'] : 1.6;
+		$h5_typography_lineheight_mobile = ! empty( $h5_typography['lineHeight'] ) ? $h5_typography['lineHeight']['mobile'] : 1.6;
 		
 		$h5_typography_fontweight = ! empty( $h5_typography['fontWeight'] ) ? $h5_typography['fontWeight'] : 700;
 		$h5_typography_texttransform = ! empty( $h5_typography['textTransform'] ) ? $h5_typography['textTransform'] : 'none';
 
 		// H6 Typography.
 		$h6_typography = get_theme_mod( 'h6_typography' );
-		$h6_typography_fontsize = ! empty( $h6_typography['fontSize'] ) ? $h6_typography['fontSize']['desktop'] : 15;
-		$h6_typography_fontsize_tablet = ! empty( $h6_typography['fontSize'] ) ? $h6_typography['fontSize']['tablet'] : 15;
-		$h6_typography_fontsize_mobile = ! empty( $h6_typography['fontSize'] ) ? $h6_typography['fontSize']['mobile'] : 15;
+		$h6_typography_fontsize = ! empty( $h6_typography['fontSize'] ) ? $h6_typography['fontSize']['desktop'] : 18;
+		$h6_typography_fontsize_tablet = ! empty( $h6_typography['fontSize'] ) ? $h6_typography['fontSize']['tablet'] : 17;
+		$h6_typography_fontsize_mobile = ! empty( $h6_typography['fontSize'] ) ? $h6_typography['fontSize']['mobile'] : 17;
 		
-		$h6_typography_lineheight = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['desktop'] : 24;
-		$h6_typography_lineheight_tablet = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['tablet'] : 24;
-		$h6_typography_lineheight_mobile = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['mobile'] : 24;
+		$h6_typography_lineheight = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['desktop'] : 1.5;
+		$h6_typography_lineheight_tablet = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['tablet'] : 1.5;
+		$h6_typography_lineheight_mobile = ! empty( $h6_typography['lineHeight'] ) ? $h6_typography['lineHeight']['mobile'] : 1.5;
 		
 		$h6_typography_fontweight = ! empty( $h6_typography['fontWeight'] ) ? $h6_typography['fontWeight'] : 700;
 		$h6_typography_texttransform = ! empty( $h6_typography['textTransform'] ) ? $h6_typography['textTransform'] : 'none';
@@ -172,9 +172,9 @@ trait Inline_Css_Js {
 		$widget_title_typography_fontsize_tablet = ! empty( $widget_title_typography['fontSize'] ) ? $widget_title_typography['fontSize']['tablet'] : 16;
 		$widget_title_typography_fontsize_mobile = ! empty( $widget_title_typography['fontSize'] ) ? $widget_title_typography['fontSize']['mobile'] : 16;
 
-		$widget_title_typography_lineheight = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['desktop'] : 23;
-		$widget_title_typography_lineheight_tablet = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['tablet'] : 20;
-		$widget_title_typography_lineheight_mobile = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['mobile'] : 20;
+		$widget_title_typography_lineheight = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['desktop'] : 1.7;
+		$widget_title_typography_lineheight_tablet = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['tablet'] : 1.7;
+		$widget_title_typography_lineheight_mobile = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['mobile'] : 1.7;
 		
 		$widget_title_typography_fontweight = ! empty( $widget_title_typography['fontWeight'] ) ? $widget_title_typography['fontWeight'] : 700;
 		$widget_title_typography_texttransform = ! empty( $widget_title_typography['textTransform'] ) ? $widget_title_typography['textTransform'] : 'none';
@@ -185,9 +185,9 @@ trait Inline_Css_Js {
 		$widget_text_typography_fontsize_tablet = ! empty( $widget_text_typography['fontSize'] ) ? $widget_text_typography['fontSize']['tablet'] : 16;
 		$widget_text_typography_fontsize_mobile = ! empty( $widget_text_typography['fontSize'] ) ? $widget_text_typography['fontSize']['mobile'] : 16;
 
-		$widget_text_typography_lineheight = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['desktop'] : 0;
-		$widget_text_typography_lineheight_tablet = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['tablet'] : 0;
-		$widget_text_typography_lineheight_mobile = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['mobile'] : 0;
+		$widget_text_typography_lineheight = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['desktop'] : 1.7;
+		$widget_text_typography_lineheight_tablet = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['tablet'] : 1.7;
+		$widget_text_typography_lineheight_mobile = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['mobile'] : 1.7;
 		
 		$widget_text_typography_fontweight = ! empty( $widget_text_typography['fontWeight'] ) ? $widget_text_typography['fontWeight'] : 400;
 		$widget_text_typography_texttransform = ! empty( $widget_text_typography['textTransform'] ) ? $widget_text_typography['textTransform'] : 'none';
@@ -208,9 +208,9 @@ trait Inline_Css_Js {
 				--body-text-color: {$body_text_color};
 				--cta-font-weight: {$header_btn_typography_fontweight};
 				--cta-font-transform: {$header_btn_typography_texttransform};
-				--cta-font-lineheight: {$header_btn_typography_lineheight}px;
-				--cta-font-lineheight-tablet: {$header_btn_typography_lineheight_tablet}px;
-				--cta-font-lineheight-mobile: {$header_btn_typography_lineheight_mobile}px;
+				--cta-font-lineheight: {$header_btn_typography_lineheight}em;
+				--cta-font-lineheight-tablet: {$header_btn_typography_lineheight_tablet}em;
+				--cta-font-lineheight-mobile: {$header_btn_typography_lineheight_mobile}em;
 				--menu-link-color: {$menu_link_color};
 				--menu-link-color-trans: {$menu_link_color_trans};
 				--body-font-weight: {$body_typography_fontweight};
@@ -236,9 +236,9 @@ trait Inline_Css_Js {
 				--cta-font-size: {$header_btn_typography_fontsize}px;
 				--header-font-weight: {$menu_link_typography_fontweight};
 				--header-font-transform: {$menu_link_typography_texttransform};
-				--header-font-lineheight: {$menu_link_typography_lineheight}px;
-				--header-font-lineheight-tablet: {$menu_link_typography_lineheight_tablet}px;
-				--header-font-lineheight-mobile: {$menu_link_typography_lineheight_mobile}px;
+				--header-font-lineheight: {$menu_link_typography_lineheight}em;
+				--header-font-lineheight-tablet: {$menu_link_typography_lineheight_tablet}em;
+				--header-font-lineheight-mobile: {$menu_link_typography_lineheight_mobile}em;
 				--body-text-transform: {$body_typography_texttransform};
 				--body-font-size: {$body_typography_fontsize}px;
 				--h1-font-size: {$h1_typography_fontsize}px;
@@ -274,41 +274,41 @@ trait Inline_Css_Js {
 				--widget-title-font-weight: {$widget_title_typography_fontweight};
 				--widget-title-text-transform: {$widget_title_typography_texttransform};
 				--footer-widget-text-color: {$footer_widgets_text_color};
-				--body-font-lineheight: {$body_typography_lineheight}px;
-				--h1-font-lineheight: {$h1_typography_lineheight}px;
-				--h1-font-lineheight-tablet: {$h1_typography_lineheight_tablet}px;
-				--h1-font-lineheight-mobile: {$h1_typography_lineheight_mobile}px;
-				--h2-font-lineheight: {$h2_typography_lineheight}px;
-				--h2-font-lineheight-tablet: {$h2_typography_lineheight_tablet}px;
-				--h2-font-lineheight-mobile: {$h2_typography_lineheight_mobile}px;
-				--h3-font-lineheight: {$h3_typography_lineheight}px;
-				--h3-font-lineheight-tablet: {$h3_typography_lineheight_tablet}px;
-				--h3-font-lineheight-mobile: {$h3_typography_lineheight_mobile}px;
-				--h4-font-lineheight: {$h4_typography_lineheight}px;
-				--h4-font-lineheight-tablet: {$h4_typography_lineheight_tablet}px;
-				--h4-font-lineheight-mobile: {$h4_typography_lineheight_mobile}px;
-				--h5-font-lineheight: {$h5_typography_lineheight}px;
-				--h5-font-lineheight-tablet: {$h5_typography_lineheight_tablet}px;
-				--h5-font-lineheight-mobile: {$h5_typography_lineheight_mobile}px;
-				--h6-font-lineheight: {$h6_typography_lineheight}px;
-				--h6-font-lineheight-tablet: {$h6_typography_lineheight_tablet}px;
-				--h6-font-lineheight-mobile: {$h6_typography_lineheight_mobile}px;
-				--body-font-lineheight-tablet: {$body_typography_lineheight_tablet}px;
-				--body-font-lineheight-mobile: {$body_typography_lineheight_mobile}px;
+				--body-font-lineheight: {$body_typography_lineheight}em;
+				--h1-font-lineheight: {$h1_typography_lineheight}em;
+				--h1-font-lineheight-tablet: {$h1_typography_lineheight_tablet}em;
+				--h1-font-lineheight-mobile: {$h1_typography_lineheight_mobile}em;
+				--h2-font-lineheight: {$h2_typography_lineheight}em;
+				--h2-font-lineheight-tablet: {$h2_typography_lineheight_tablet}em;
+				--h2-font-lineheight-mobile: {$h2_typography_lineheight_mobile}em;
+				--h3-font-lineheight: {$h3_typography_lineheight}em;
+				--h3-font-lineheight-tablet: {$h3_typography_lineheight_tablet}em;
+				--h3-font-lineheight-mobile: {$h3_typography_lineheight_mobile}em;
+				--h4-font-lineheight: {$h4_typography_lineheight}em;
+				--h4-font-lineheight-tablet: {$h4_typography_lineheight_tablet}em;
+				--h4-font-lineheight-mobile: {$h4_typography_lineheight_mobile}em;
+				--h5-font-lineheight: {$h5_typography_lineheight}em;
+				--h5-font-lineheight-tablet: {$h5_typography_lineheight_tablet}em;
+				--h5-font-lineheight-mobile: {$h5_typography_lineheight_mobile}em;
+				--h6-font-lineheight: {$h6_typography_lineheight}em;
+				--h6-font-lineheight-tablet: {$h6_typography_lineheight_tablet}em;
+				--h6-font-lineheight-mobile: {$h6_typography_lineheight_mobile}em;
+				--body-font-lineheight-tablet: {$body_typography_lineheight_tablet}em;
+				--body-font-lineheight-mobile: {$body_typography_lineheight_mobile}em;
 				--widget-title-font-size: {$widget_title_typography_fontsize}px;
 				--widget-title-font-size-tablet: {$widget_title_typography_fontsize_tablet}px;
 				--widget-title-font-size-mobile: {$widget_title_typography_fontsize_mobile}px;
-				--widget-title-line-height: {$widget_title_typography_lineheight}px;
-				--widget-title-line-height-tablet: {$widget_title_typography_lineheight_tablet}px;
-				--widget-title-line-height-mobile: {$widget_title_typography_lineheight_mobile}px;
+				--widget-title-line-height: {$widget_title_typography_lineheight}em;
+				--widget-title-line-height-tablet: {$widget_title_typography_lineheight_tablet}em;
+				--widget-title-line-height-mobile: {$widget_title_typography_lineheight_mobile}em;
 				--widget-text-font-weight: {$widget_text_typography_fontweight};
 				--widget-text-transform: {$widget_text_typography_texttransform};
 				--widget-text-font-size: {$widget_text_typography_fontsize}px;
 				--widget-text-font-size-tablet: {$widget_text_typography_fontsize_tablet}px;
 				--widget-text-font-size-mobile: {$widget_text_typography_fontsize_mobile}px;
-				--widget-text-line-height: {$widget_text_typography_lineheight}px;
-				--widget-text-line-height-tablet: {$widget_text_typography_lineheight_tablet}px;
-				--widget-text-line-height-mobile: {$widget_text_typography_lineheight_mobile}px;
+				--widget-text-line-height: {$widget_text_typography_lineheight}em;
+				--widget-text-line-height-tablet: {$widget_text_typography_lineheight_tablet}em;
+				--widget-text-line-height-mobile: {$widget_text_typography_lineheight_mobile}em;
 			}
         ";
 

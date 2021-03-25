@@ -169,7 +169,7 @@ class Footer {
 			array(
 				'title'             => esc_html__( 'Widgets Background Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#0A083B',
+				'default'           => '#1E1E2C',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -189,7 +189,7 @@ class Footer {
 			array(
 				'title'             => esc_html__( 'Footer Bottom BG Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#0A083B',
+				'default'           => '#1E1E2C',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -238,9 +238,9 @@ class Footer {
 						'desktop' => 18,
 					),
 					'lineHeight' => array(
-						'mobile'  => 20,
-						'tablet'  => 20,
-						'desktop' => 23,
+						'mobile'  => 1.7,
+						'tablet'  => 1.7,
+						'desktop' => 1.7,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -256,13 +256,13 @@ class Footer {
 					'input_attrs' => array(
 						'font_sizes' => array(
 							'min'        => 8,
-							'max'        => 100,
+							'max'        => 200,
 							'units'      => array( 'px' )
 						),
 						'line_heights' => array(
 							'min'        => 0,
-							'max'        => 100,
-							'units'      => array( 'px' )
+							'max'        => 50,
+							'units'      => array( 'em' )
 						),
 						'defaultParams' => array(
 							'weight_default'  => 700,
@@ -273,9 +273,9 @@ class Footer {
 								'desktop' => 18,
 							),
 							'line_heights' => array(
-								'mobile'  => 20,
-								'tablet'  => 20,
-								'desktop' => 23,
+								'mobile'  => 1.7,
+								'tablet'  => 1.7,
+								'desktop' => 1.7,
 							)
 						),
 					),
@@ -297,9 +297,9 @@ class Footer {
 						'desktop' => 16,
 					),
 					'lineHeight' => array(
-						'mobile'  => 0,
-						'tablet'  => 0,
-						'desktop' => 0,
+						'mobile'  => 1.7,
+						'tablet'  => 1.7,
+						'desktop' => 1.7,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -315,13 +315,13 @@ class Footer {
 					'input_attrs' => array(
 						'font_sizes' => array(
 							'min'        => 8,
-							'max'        => 100,
+							'max'        => 200,
 							'units'      => array( 'px' )
 						),
 						'line_heights' => array(
 							'min'        => 0,
-							'max'        => 100,
-							'units'      => array( 'px' )
+							'max'        => 50,
+							'units'      => array( 'em' )
 						),
 						'defaultParams' => array(
 							'weight_default'  => 400,
@@ -332,9 +332,9 @@ class Footer {
 								'desktop' => 16,
 							),
 							'line_heights' => array(
-								'mobile'  => 0,
-								'tablet'  => 0,
-								'desktop' => 0,
+								'mobile'  => 1.7,
+								'tablet'  => 1.7,
+								'desktop' => 1.7,
 							)
 						),
 					),
