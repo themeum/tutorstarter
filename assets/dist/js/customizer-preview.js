@@ -266,6 +266,15 @@
       }
     });
   });
+  wp.customize('header_sticky_bg_color', function (value) {
+    value.bind(function (updatedValue) {
+      var stickyMenuBg = document.querySelector('header.header-sticky');
+
+      if (null !== stickyMenuBg) {
+        stickyMenuBg.style.backgroundColor = "rgba(".concat(updatedValue.rgb.r, ", ").concat(updatedValue.rgb.g, ", ").concat(updatedValue.rgb.b, ", ").concat(updatedValue.rgb.a, ")");
+      }
+    });
+  });
   wp.customize('menu_link_color', function (value) {
     value.bind(function (updatedValue) {
       var menuLinks = document.querySelectorAll('.navbar-nav .menu-item a');

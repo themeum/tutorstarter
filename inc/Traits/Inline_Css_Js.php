@@ -48,6 +48,10 @@ trait Inline_Css_Js {
 
 		$cta_trans_bg = get_theme_mod( 'background_trans_cta' );
 		$cta_background_trans =  ! empty( $cta_trans_bg['rgb'] ) ? 'rgba(' . $cta_trans_bg['rgb']['r'] . ',' . $cta_trans_bg['rgb']['g'] . ',' . $cta_trans_bg['rgb']['b'] . ',' . $cta_trans_bg['rgb']['a'] . ')' : 'rgba(0, 0, 0, 0.1)';
+		
+		// Sticky header BG.
+		$sticky_header_bg = get_theme_mod( 'header_sticky_bg_color' );
+		$sticky_header_bg_trans =  ! empty( $sticky_header_bg['rgb'] ) ? 'rgba(' . $sticky_header_bg['rgb']['r'] . ',' . $sticky_header_bg['rgb']['g'] . ',' . $sticky_header_bg['rgb']['b'] . ',' . $sticky_header_bg['rgb']['a'] . ')' : 'rgba(4, 42, 132, 0.7)';
 
 		// Body Typography.
 		$body_typography                   = get_theme_mod( 'main_typography' );
@@ -227,6 +231,7 @@ trait Inline_Css_Js {
 				--h5-text-transform: {$h5_typography_texttransform};
 				--h6-text-transform: {$h6_typography_texttransform};
 				--primary-menu-bg-color: {$menu_bg_color};
+				--sticky-menu-bg-color: {$sticky_header_bg_trans};
 				--cta-background-color: {$cta_background};
 				--cta-background-color-trans: {$cta_background_trans};
 				--cta-border-color: {$cta_border_color};

@@ -313,6 +313,13 @@ class Header {
 				'sanitize_callback' => isset( $input ) ? true : false,
 			)
 		);
+		$wp_customize->selective_refresh->add_partial(
+			'header_sticky_toggle',
+			array(
+				'selector'            => 'header.header-sticky',
+				'container_inclusive' => true,
+			)
+		);
 		$wp_customize->add_control(
 			new Toggle_Switch_Control(
 				$wp_customize,
@@ -321,6 +328,33 @@ class Header {
 					'label'           => esc_html__( 'Make Header Sticky?', 'tutorstarter' ),
 					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback_transparent',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'header_sticky_bg_color',
+			array(
+				'title'             => esc_html__( 'Sticky Header BG Color', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => array(
+					'rgb' => array(
+						'r' => 4,
+						'g' => 42,
+						'b' => 132,
+						'a' => 0.7,
+					),
+				),
+				'sanitize_callback' => 'tutorstarter_sanitize_color',
+			)
+		);
+		$wp_customize->add_control(
+			new Color_Control(
+				$wp_customize,
+				'header_sticky_bg_color',
+				array(
+					'label'           => esc_html__( 'Sticky Header BG Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback_sticky_header',
 				)
 			)
 		);

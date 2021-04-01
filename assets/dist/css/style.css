@@ -549,14 +549,22 @@ header.header-transparent .navbar {
     color: var(--navTransColor);
   }
 
+  header.header-transparent .navbar .navbar-nav > .menu-item > a:hover {
+    color: var(--navTransHoverColor);
+  }
+
   header.header-transparent .navbar .navbar-nav > .menu-item.icon > a:before {
     background: var(--navTransColor);
     -webkit-mask-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6' viewBox='0 0 8 6' fill='none'%3e%3cpath d='M0.94 0.726685L4 3.78002L7.06 0.726685L8 1.66668L4 5.66668L0 1.66668L0.94 0.726685Z' fill='%23fff'/%3e%3c/svg%3e");
     mask-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6' viewBox='0 0 8 6' fill='none'%3e%3cpath d='M0.94 0.726685L4 3.78002L7.06 0.726685L8 1.66668L4 5.66668L0 1.66668L0.94 0.726685Z' fill='%23fff'/%3e%3c/svg%3e");
   }
 
-  header.header-transparent .navbar .navbar-nav > .menu-item:not(.icon) a::after {
-    background: #fff;
+  header.header-transparent .navbar .navbar-nav > .menu-item.icon:hover > a:before {
+    background: var(--navTransHoverColor);
+  }
+
+  header.header-transparent .navbar .navbar-nav > .menu-item:not(.icon) a:after {
+    background: var(--navTransHoverColor);
   }
 }
 
@@ -613,7 +621,7 @@ header.header-sticky {
 
 header.header-sticky.sticky-on {
   position: fixed;
-  background: rgba(4, 42, 132, 0.9);
+  background: var(--sticky-menu-bg-color);
 }
 
 header.header-sticky.sticky-on .navbar {

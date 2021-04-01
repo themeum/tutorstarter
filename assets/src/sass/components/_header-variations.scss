@@ -16,6 +16,9 @@ header.header-transparent {
 				> .menu-item {
 					> a {
 						color: var(--navTransColor);
+						&:hover {
+							color: var(--navTransHoverColor);
+						}
 					}
 					&.icon > a:before {
 						background: var(--navTransColor);
@@ -24,9 +27,12 @@ header.header-transparent {
 
 						mask-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6' viewBox='0 0 8 6' fill='none'%3e%3cpath d='M0.94 0.726685L4 3.78002L7.06 0.726685L8 1.66668L4 5.66668L0 1.66668L0.94 0.726685Z' fill='%23fff'/%3e%3c/svg%3e");
 					}
+					&.icon:hover > a:before{
+						background: var(--navTransHoverColor);
+					}
 
-					&:not(.icon) a::after {
-						background: #fff;
+					&:not(.icon) a:after {
+						background: var(--navTransHoverColor);
 					}
 				}
 			}
@@ -83,7 +89,7 @@ header.header-sticky {
     transition: 0.5s linear;
 	&.sticky-on {
 		position: fixed;
-		background: rgb(4 42 132 / 90%);
+		background: var(--sticky-menu-bg-color);
 		.navbar {
 			padding-top: 15px;
 			padding-bottom: 15px;

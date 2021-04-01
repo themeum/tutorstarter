@@ -140,6 +140,21 @@ if ( ! function_exists( 'control_active_callback_transparent' ) ) {
 	}
 }
 
+if ( ! function_exists( 'control_active_callback_sticky_header' ) ) {
+	/**
+	 * Control active callback for sticky header bg
+	 */
+	function control_active_callback_sticky_header() {
+		// Get the appropriate theme mod.
+		$header_sticky_on = get_theme_mod( 'header_sticky_toggle' );
+		if ( true === $header_sticky_on ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
 if ( ! function_exists( 'control_active_callback_non_trans' ) ) {
 	/**
 	 * Control active callback for non-transparent header
