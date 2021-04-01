@@ -5,47 +5,58 @@
  */
 
 (function () {
-
     /* Navbar toggler */
-    const toggleBtn = document.querySelector(".navbar-toggler");
-    const navbarNav = document.querySelector(".navbar-nav");
-    const navCloseBtn = document.querySelector(".btn-nav-close");
+    const toggleBtn = document.querySelector('.navbar-toggler');
+    const navbarNav = document.querySelector('.navbar-nav');
+    const navCloseBtn = document.querySelector('.btn-nav-close');
+    const searchCloseBtn = document.querySelector('.search-field-popup .close-btn');
 
-    if (toggleBtn !== null) {
-        toggleBtn.addEventListener("click", () => {
-            navbarNav.classList.toggle("active");
+    if ( null !== toggleBtn ) {
+        toggleBtn.addEventListener('click', () => {
+            navbarNav.classList.toggle('active');
+        });
+    }
+    if ( null !== navCloseBtn ) {
+        navCloseBtn.addEventListener('click', () => {
+            navbarNav.classList.remove('active');
         });
     }
 
-    if (navCloseBtn !== null) {
-        navCloseBtn.addEventListener("click", () => {
-            navbarNav.classList.remove("active");
+    /* Add icon on .menu-item if dropdown exists */
+    const navItems = document.querySelectorAll('.menu-item');
+
+    if ( null !== navItems ) {
+        navItems.forEach((item) => {
+            const hasDropdowns = item.querySelector('.sub-menu') !== null;
+            if (hasDropdowns) {
+                item.classList.add('icon');
+            }
         });
     }
 
-    /* Search popup */
-    const searchBtn = document.querySelector(".btn-search");
-    const searchBtnClose = document.querySelector(".btn-search-close");
-    const searchPopup = document.querySelector(".search-popup");
+    /*  Sticky header */
+    window.addEventListener('scroll', () => {
+        const stickyHeader = document.querySelector('.header-sticky');
+        if ( null !== stickyHeader ) {
+            stickyHeader.classList.toggle('sticky-on', window.scrollY > 200);
+        }
+    });
 
-    if (searchBtn !== null) {
-        searchBtn.addEventListener("click", () => {
-            searchPopup.classList.toggle("active");
+    /* Popup search field */
+    const searchBtn = document.querySelector('.navbar-utils .btn-search');
+    const popupWrapper = document.querySelector('.search-field-popup');
+    if ( null !== searchBtn ) {
+        searchBtn.addEventListener('click', () => {
+            if ( null !== popupWrapper ) {
+                popupWrapper.classList.toggle('show');
+            }
+        });
+    }
+    if ( null !== searchCloseBtn ) {
+        searchCloseBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            popupWrapper.classList.remove('show');
         });
     }
 
-    if (searchBtnClose !== null) {
-        searchBtnClose.addEventListener("click", () => {
-            searchPopup.classList.remove("active");
-        });
-    }
-
-    /* Add icon on .nav-item if dropdown exists */
-    const hasDropdowns = document.querySelectorAll(".menu-item-has-children");
-
-    if (hasDropdowns !== null) {
-        hasDropdowns.forEach(item => {
-            item.classList.add('icon');
-        })
-    }
 })();

@@ -25,11 +25,10 @@ const PageSettingsFields = ({ updatedValue, updateMeta }) => {
                     value={updatedValue.header_select}
                     options={[
                         { label: __('--Select Header--', 'tutorstarter'), value: '' },
-                        { label: __('Fullwidth', 'tutorstarter'), value: 'header_one' },
-                        { label: __('Fullwidth Transparent', 'tutorstarter'), value: 'header_one_trans' },
-                        { label: __('Standard', 'tutorstarter'), value: 'header_two' },
-                        { label: __('Standard Transparent', 'tutorstarter'), value: 'header_three' },
-                        { label: __('Centered Logo', 'tutorstarter'), value: 'header_four' },
+                        { label: __('Header Default', 'tutorstarter'), value: 'header_default' },
+                        { label: __('Header Transparent', 'tutorstarter'), value: 'header_transparent' },
+                        { label: __('Header Right', 'tutorstarter'), value: 'header_right' },
+                        { label: __('Header Fullwidth', 'tutorstarter'), value: 'header_fullwidth' },
                     ]}
                     onChange={(value) => updateMeta(value, 'header_select')}
                 />

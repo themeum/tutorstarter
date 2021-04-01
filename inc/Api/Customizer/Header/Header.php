@@ -47,7 +47,7 @@ class Header {
 		$wp_customize->selective_refresh->add_partial(
 			'custom_logo',
 			array(
-				'selector'            => '.site-branding',
+				'selector'            => '.navbar-brand',
 				'container_inclusive' => true,
 				'render_callback'     => function() {
 					return the_custom_logo();
@@ -65,11 +65,8 @@ class Header {
 		$wp_customize->selective_refresh->add_partial(
 			'transparent_logo',
 			array(
-				'selector'            => '.site-branding',
+				'selector'            => '.navbar-brand',
 				'container_inclusive' => true,
-				'render_callback'     => function() {
-					return true;
-				},
 			)
 		);
 		$wp_customize->add_control(
@@ -100,25 +97,21 @@ class Header {
 					'label'   => esc_html__( 'Select Header Type', 'tutorstarter' ),
 					'section' => 'tutorstarter_header_section',
 					'choices' => array(
-						'header_one'   => array(
-							'name'  => esc_html__( 'Header Fullwidth', 'tutorstarter' ),
-							'image' => get_template_directory_uri() . '/assets/dist/images/header-fullwidth.svg',
+						'header_default'   => array(
+							'name'  => esc_html__( 'Header Default', 'tutorstarter' ),
+							'image' => get_template_directory_uri() . '/assets/dist/images/header-default.svg',
 						),
-						'header_one_trans'   => array(
-							'name'  => esc_html__( 'Header Fullwidth Transparent', 'tutorstarter' ),
-							'image' => get_template_directory_uri() . '/assets/dist/images/header-fullwidth-trans.svg',
-						),
-						'header_two'   => array(
-							'name'  => esc_html__( 'Header Standard', 'tutorstarter' ),
-							'image' => get_template_directory_uri() . '/assets/dist/images/header-standard.svg',
-						),
-						'header_three' => array(
+						'header_transparent'   => array(
 							'name'  => esc_html__( 'Header Transparent', 'tutorstarter' ),
-							'image' => get_template_directory_uri() . '/assets/dist/images/header-trans.svg',
+							'image' => get_template_directory_uri() . '/assets/dist/images/header-transparent.svg',
 						),
-						'header_four'  => array(
-							'name'  => esc_html__( 'Header Centered Logo', 'tutorstarter' ),
-							'image' => get_template_directory_uri() . '/assets/dist/images/logo-center.svg',
+						'header_right'   => array(
+							'name'  => esc_html__( 'Header with Search Bar', 'tutorstarter' ),
+							'image' => get_template_directory_uri() . '/assets/dist/images/header-right.svg',
+						),
+						'header_fullwidth'   => array(
+							'name'  => esc_html__( 'Header Fullwidth', 'tutorstarter' ),
+							'image' => get_template_directory_uri() . '/assets/dist/images/header-full-width.svg',
 						),
 					),
 				)
@@ -127,11 +120,8 @@ class Header {
 		$wp_customize->selective_refresh->add_partial(
 			'header_type_select',
 			array(
-				'selector'            => '#masthead',
+				'selector'            => 'header',
 				'container_inclusive' => true,
-				'render_callback'     => function() {
-					return get_template_part( 'views/partials/header/header_type_select' );
-				},
 			)
 		);
 		$wp_customize->add_setting(
@@ -199,7 +189,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Menu Link Active and Hover Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#1950D1',
+				'default'           => '#175cff',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -250,9 +240,9 @@ class Header {
 						'desktop' => 16,
 					),
 					'lineHeight' => array(
-						'mobile'  => 0,
-						'tablet'  => 0,
-						'desktop' => 0,
+						'mobile'  => 1.2,
+						'tablet'  => 1.2,
+						'desktop' => 1.2,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -285,9 +275,9 @@ class Header {
 								'desktop' => 16,
 							),
 							'line_heights' => array(
-								'mobile'  => 0,
-								'tablet'  => 0,
-								'desktop' => 0,
+								'mobile'  => 1.2,
+								'tablet'  => 1.2,
+								'desktop' => 1.2,
 							)
 						),
 					),
@@ -310,7 +300,27 @@ class Header {
 				array(
 					'label'           => esc_html__( 'Show Search Icon?', 'tutorstarter' ),
 					'section'         => 'tutorstarter_header_section',
-					'active_callback' => 'control_active_callback_search',
+					'active_callback' => 'control_active_callback_transparent',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'header_sticky_toggle',
+			array(
+				'title'             => esc_html__( 'Make Header Sticky?', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => false,
+				'sanitize_callback' => isset( $input ) ? true : false,
+			)
+		);
+		$wp_customize->add_control(
+			new Toggle_Switch_Control(
+				$wp_customize,
+				'header_sticky_toggle',
+				array(
+					'label'           => esc_html__( 'Make Header Sticky?', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback_transparent',
 				)
 			)
 		);
@@ -599,9 +609,9 @@ class Header {
 						'desktop' => 16,
 					),
 					'lineHeight' => array(
-						'mobile'  => 0,
-						'tablet'  => 0,
-						'desktop' => 0,
+						'mobile'  => 1.2,
+						'tablet'  => 1.2,
+						'desktop' => 1.2,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -635,9 +645,9 @@ class Header {
 								'desktop' => 16,
 							),
 							'line_heights' => array(
-								'mobile'  => 0,
-								'tablet'  => 0,
-								'desktop' => 0,
+								'mobile'  => 1.2,
+								'tablet'  => 1.2,
+								'desktop' => 1.2,
 							)
 						),
 					),

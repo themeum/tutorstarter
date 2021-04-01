@@ -40,7 +40,7 @@ trait Inline_Css_Js {
 		$menu_link_color           = get_theme_mod( 'menu_link_color', '#57586E' );
 		$menu_link_color_trans     = get_theme_mod( 'menu_link_color_trans', '#ffffff' );
 		$footer_bottom_bg_color    = get_theme_mod( 'footer_bottom_bg_color', '#1E1E2C' );
-		$menu_link_active_color    = get_theme_mod( 'menu_link_active_color', '#1950D1' );
+		$menu_link_active_color    = get_theme_mod( 'menu_link_active_color', '#175cff' );
 		$link_active_color_trans   = get_theme_mod( 'menu_link_active_color_trans', '#ffffff' );
 		$footer_widgets_bg_color   = get_theme_mod( 'footer_widgets_bg_color', '#1E1E2C' );
 		$footer_bottom_text_color  = get_theme_mod( 'footer_bottom_text_color', '#ffffff' );
@@ -68,9 +68,9 @@ trait Inline_Css_Js {
 		$menu_link_typography_fontsize_tablet = ! empty( $menu_link_typography['fontSize'] ) ? $menu_link_typography['fontSize']['tablet'] : 13;
 		$menu_link_typography_fontsize_mobile = ! empty( $menu_link_typography['fontSize'] ) ? $menu_link_typography['fontSize']['mobile'] : 13;
 		
-		$menu_link_typography_lineheight = ! empty( $menu_link_typography['lineHeight'] ) ? $menu_link_typography['lineHeight']['desktop'] : 0;
-		$menu_link_typography_lineheight_tablet = ! empty( $menu_link_typography['lineHeight'] ) ? $menu_link_typography['lineHeight']['tablet'] : 0;
-		$menu_link_typography_lineheight_mobile = ! empty( $menu_link_typography['lineHeight'] ) ? $menu_link_typography['lineHeight']['mobile'] : 0;
+		$menu_link_typography_lineheight = ! empty( $menu_link_typography['lineHeight'] ) ? $menu_link_typography['lineHeight']['desktop'] : 1.2;
+		$menu_link_typography_lineheight_tablet = ! empty( $menu_link_typography['lineHeight'] ) ? $menu_link_typography['lineHeight']['tablet'] : 1.2;
+		$menu_link_typography_lineheight_mobile = ! empty( $menu_link_typography['lineHeight'] ) ? $menu_link_typography['lineHeight']['mobile'] : 1.2;
 
 		$menu_link_typography_fontweight = ! empty( $menu_link_typography['fontWeight'] ) ? $menu_link_typography['fontWeight'] : 400;
 		$menu_link_typography_texttransform = ! empty( $menu_link_typography['textTransform'] ) ? $menu_link_typography['textTransform'] : 'none';
@@ -81,9 +81,9 @@ trait Inline_Css_Js {
 		$header_btn_typography_fontsize_tablet = ! empty( $header_btn_typography['fontSize'] ) ? $header_btn_typography['fontSize']['tablet'] : 13;
 		$header_btn_typography_fontsize_mobile = ! empty( $header_btn_typography['fontSize'] ) ? $header_btn_typography['fontSize']['mobile'] : 13;
 
-		$header_btn_typography_lineheight = ! empty( $header_btn_typography['lineHeight'] ) ? $header_btn_typography['lineHeight']['desktop'] : 0;
-		$header_btn_typography_lineheight_tablet = ! empty( $header_btn_typography['lineHeight'] ) ? $header_btn_typography['lineHeight']['tablet'] : 0;
-		$header_btn_typography_lineheight_mobile = ! empty( $header_btn_typography['lineHeight'] ) ? $header_btn_typography['lineHeight']['mobile'] : 0;
+		$header_btn_typography_lineheight = ! empty( $header_btn_typography['lineHeight'] ) ? $header_btn_typography['lineHeight']['desktop'] : 1.2;
+		$header_btn_typography_lineheight_tablet = ! empty( $header_btn_typography['lineHeight'] ) ? $header_btn_typography['lineHeight']['tablet'] : 1.2;
+		$header_btn_typography_lineheight_mobile = ! empty( $header_btn_typography['lineHeight'] ) ? $header_btn_typography['lineHeight']['mobile'] : 1.2;
 
 		$header_btn_typography_fontweight = ! empty( $header_btn_typography['fontWeight'] ) ? $header_btn_typography['fontWeight'] : 400;
 		$header_btn_typography_texttransform = ! empty( $header_btn_typography['textTransform'] ) ? $header_btn_typography['textTransform'] : 'none';

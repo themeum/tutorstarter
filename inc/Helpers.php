@@ -49,7 +49,11 @@ if ( ! function_exists( 'control_active_cart_callback' ) ) {
 	function control_active_cart_callback() {
 		// Get the appropriate theme mod.
 		$header_type = get_theme_mod( 'header_type_select' );
-		if ( class_exists( 'woocommerce' ) && 'header_one' === $header_type ) {
+		if ( class_exists( 'woocommerce' ) && 'header_default' === $header_type ) {
+			return true;
+		} elseif ( class_exists( 'woocommerce' ) && 'header_right' === $header_type ) {
+			return true;
+		} elseif ( class_exists( 'woocommerce' ) && 'header_fullwidth' === $header_type ) {
 			return true;
 		} else {
 			return false;
@@ -64,7 +68,7 @@ if ( ! function_exists( 'control_active_cart_trans_callback' ) ) {
 	function control_active_cart_trans_callback() {
 		// Get the appropriate theme mod.
 		$header_type = get_theme_mod( 'header_type_select' );
-		if ( class_exists( 'woocommerce' ) && 'header_one_trans' === $header_type ) {
+		if ( class_exists( 'woocommerce' ) && 'header_transparent' === $header_type ) {
 			return true;
 		} else {
 			return false;
@@ -102,21 +106,6 @@ if ( ! function_exists( 'control_active_callback_grid' ) ) {
 	}
 }
 
-if ( ! function_exists( 'control_active_callback_search' ) ) {
-	/**
-	 * Control active callback for transparent menu color
-	 */
-	function control_active_callback_search() {
-		// Get the appropriate theme mod.
-		$header_type = get_theme_mod( 'header_type_select' );
-		if ( 'header_four' === $header_type ) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-}
-
 if ( ! function_exists( 'control_active_callback_std_menu' ) ) {
 	/**
 	 * Control active callback for std menu color
@@ -124,11 +113,11 @@ if ( ! function_exists( 'control_active_callback_std_menu' ) ) {
 	function control_active_callback_std_menu() {
 		// Get the appropriate theme mod.
 		$header_type = get_theme_mod( 'header_type_select' );
-		if ( 'header_one' === $header_type ) {
+		if ( 'header_default' === $header_type ) {
 			return true;
-		} elseif ( 'header_two' === $header_type ) {
+		} elseif ( 'header_right' === $header_type ) {
 			return true;
-		} elseif ( 'header_four' === $header_type ) {
+		} elseif ( 'header_fullwidth' === $header_type ) {
 			return true;
 		} else {
 			return false;
@@ -143,9 +132,7 @@ if ( ! function_exists( 'control_active_callback_transparent' ) ) {
 	function control_active_callback_transparent() {
 		// Get the appropriate theme mod.
 		$header_type = get_theme_mod( 'header_type_select' );
-		if ( 'header_one_trans' === $header_type ) {
-			return true;
-		} elseif ( 'header_three' === $header_type ) {
+		if ( 'header_transparent' === $header_type ) {
 			return true;
 		} else {
 			return false;
@@ -155,14 +142,16 @@ if ( ! function_exists( 'control_active_callback_transparent' ) ) {
 
 if ( ! function_exists( 'control_active_callback_non_trans' ) ) {
 	/**
-	 * Control active callback for transparent header
+	 * Control active callback for non-transparent header
 	 */
 	function control_active_callback_non_trans() {
 		// Get the appropriate theme mod.
 		$header_type = get_theme_mod( 'header_type_select' );
-		if ( 'header_one' == $header_type ) {
+		if ( 'header_default' == $header_type ) {
 			return true;
-		} elseif ( 'header_two' === $header_type ) {
+		} elseif ( 'header_right' === $header_type ) {
+			return true;
+		} elseif ( 'header_fullwidth' === $header_type ) {
 			return true;
 		} else {
 			return false;
@@ -551,19 +540,20 @@ function tutor_theme_ajax_login() {
 if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
 	function tutor_starter_header_cart() { ?>
 
-		<svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M6 16C4.9 16 4.01 16.9 4.01 18C4.01 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16ZM0 0V2H2L5.6 9.59L4.25 12.04C4.09 12.32 4 12.65 4 13C4 14.1 4.9 15 6 15H18V13H6.42C6.28 13 6.17 12.89 6.17 12.75L6.2 12.63L7.1 11H14.55C15.3 11 15.96 10.59 16.3 9.97L19.88 3.48C19.96 3.34 20 3.17 20 3C20 2.45 19.55 2 19 2H4.21L3.27 0H0ZM16 16C14.9 16 14.01 16.9 14.01 18C14.01 19.1 14.9 20 16 20C17.1 20 18 19.1 18 18C18 16.9 17.1 16 16 16Z"
-			/>
-		</svg>
-		<a id="mini-cart-count" class="tutor-cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="view your shopping cart">
-			<span class="count">
-				<?php 
-					echo wp_kses_data( 
-						sprintf( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'tutorstarter' ), 
-						WC()->cart->get_cart_contents_count() )
-					);
-				?>
-			</span>
+		<a class="btn-cart" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart' ); ?>">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				height="19"
+				viewBox="0 0 21 19"
+				width="21"
+			>
+				<path
+					d="m18.9375 10.832 1.6523-7.31247c.0704-.25781.0235-.49219-.1406-.70312-.164-.21094-.3867-.31641-.668-.31641h-13.81636l-.3164-1.582031c-.04688-.1875-.15235-.339844-.31641-.457031-.14062-.140626-.30469-.210938-.49219-.210938h-3.62109c-.234375 0-.433594.082031-.597656.246094-.164063.164062-.246094.363281-.246094.597656v.5625c0 .23438.082031.43359.246094.59766.164062.16406.363281.24609.597656.24609h2.46094l2.46093 12.0586c-.30468.1875-.55078.4336-.73828.7383-.16406.3047-.24609.6328-.24609.9843 0 .5391.1875.9961.5625 1.3711.39844.3985.86719.5977 1.40625.5977s.99609-.1992 1.37109-.5977c.39844-.375.59766-.8437.59766-1.4062 0-.5391-.19922-.9961-.59766-1.3711h7.38281c-.3984.375-.5977.832-.5977 1.3711 0 .5625.1876 1.0312.5626 1.4062.3984.3985.8671.5977 1.4062.5977s.9961-.1992 1.3711-.5977c.3984-.375.5977-.832.5977-1.3711 0-.375-.1055-.7148-.3165-1.0195-.1875-.3281-.457-.5742-.8085-.7383l.2109-.8789c.0469-.2578-.0117-.4922-.1758-.7031s-.375-.3164-.6328-.3164h-9.45704l-.21094-1.125h10.30078c.1875 0 .3516-.0586.4922-.1758.1641-.1172.2695-.2812.3164-.4922z"
+					
+				/>
+			</svg>
+			<span>(<?php echo WC()->cart->get_cart_contents_count(); ?>)</span>
 		</a>
         <?php
     }
@@ -579,19 +569,12 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
         global $woocommerce;
 		ob_start(); ?>
 		
-		<a id="mini-cart-count" class="tutor-cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="View your shopping cart">
-			<span class="count">
-				<?php 
-					echo wp_kses_data( 
-						sprintf( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'tutorstarter' ), 
-						WC()->cart->get_cart_contents_count() )
-					);
-				?>
-			</span>
+		<a class="btn-cart" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart' ); ?>">
+			<span>(<?php echo WC()->cart->get_cart_contents_count(); ?>)</span>
 		</a>
           
         <?php
-        $fragments['#mini-cart-count'] = ob_get_clean();
+        $fragments['a.btn-cart'] = ob_get_clean();
         return $fragments;
     }
 }
@@ -644,4 +627,49 @@ if ( ! function_exists( 'tutorstarter_order_btn_html' ) ) {
 		
 		return $button;
 	}
+}
+
+/**
+ * Header switcher
+ */
+function tutorstarter_header_switcher() {
+	$page_meta            = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
+	$selected_page_header = ( ! empty( $page_meta['header_select'] ) ? $page_meta['header_select'] : '' );
+
+	$selected_header     = get_theme_mod( 'header_type_select', 'header_default' );
+	$active_header_class = 'navbar-center';
+
+	if ( ! empty( $selected_page_header ) ) {
+		switch ( $selected_page_header ) {
+			case 'header_default':
+				$active_header_class = 'navbar-center';
+				break;
+			case 'header_transparent':
+				$active_header_class = 'navbar-left';
+				break;
+			case 'header_right':
+				$active_header_class = 'navbar-right';
+				break;
+			case 'header_fullwidth':
+				$active_header_class = 'navbar-right full-width';
+				break;
+		}
+	} else {
+		switch ( $selected_header ) {
+			case 'header_default':
+				$active_header_class = 'navbar-center';
+				break;
+			case 'header_transparent':
+				$active_header_class = 'navbar-left';
+				break;
+			case 'header_right':
+				$active_header_class = 'navbar-right';
+				break;
+			case 'header_fullwidth':
+				$active_header_class = 'navbar-right full-width';
+				break;
+		}
+	}
+
+	return $active_header_class;
 }

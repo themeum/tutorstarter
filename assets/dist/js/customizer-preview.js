@@ -120,8 +120,8 @@
   });
   wp.customize('cart_color', function (value) {
     value.bind(function (updatedValue) {
-      var cartSelector = document.querySelector('.tutor-navbar-cart .tutor-cart svg');
-      var cartContentSelector = document.querySelector('.tutor-navbar-cart .tutor-cart a.tutor-cart-contents span.count');
+      var cartSelector = document.querySelector('.navbar .navbar-utils a.btn-cart svg > path');
+      var cartContentSelector = document.querySelector('.navbar .navbar-utils a.btn-cart span');
 
       if (null !== cartSelector) {
         cartSelector.style.fill = updatedValue;
@@ -129,14 +129,13 @@
 
       if (null !== cartContentSelector) {
         cartContentSelector.style.color = updatedValue;
-        cartContentSelector.style.border = '1px solid' + updatedValue;
       }
     });
   });
   wp.customize('cart_color_trans', function (value) {
     value.bind(function (updatedValue) {
-      var cartTransSelector = document.querySelector('.tutor-navbar-cart-transparent .tutor-cart svg');
-      var cartTransContentSelector = document.querySelector('.tutor-navbar-cart-transparent .tutor-cart a.tutor-cart-contents span.count');
+      var cartTransSelector = document.querySelector('.header-transparent .navbar .navbar-utils a.btn-cart svg > path');
+      var cartTransContentSelector = document.querySelector('.header-transparent .navbar .navbar-utils a.btn-cart span');
 
       if (null !== cartTransSelector) {
         cartTransSelector.style.fill = updatedValue;
@@ -144,7 +143,6 @@
 
       if (null !== cartTransContentSelector) {
         cartTransContentSelector.style.color = updatedValue;
-        cartTransContentSelector.style.border = '1px solid' + updatedValue;
       }
     });
   });
@@ -261,66 +259,67 @@
 
   wp.customize('menu_bg_color', function (value) {
     value.bind(function (updatedValue) {
-      var menuBg = document.querySelectorAll('#masthead, .alternative, .bg-primary, .menu-item ul.sub-menu');
-      menuBg.forEach(function (menu) {
-        menu.style.backgroundColor = updatedValue;
-      });
+      var menuBg = document.querySelector('.header-default');
+
+      if (null !== menuBg) {
+        menuBg.style.backgroundColor = updatedValue;
+      }
     });
   });
   wp.customize('menu_link_color', function (value) {
     value.bind(function (updatedValue) {
-      var menuLinks = document.querySelectorAll('.bg-primary .navbar-toggler, .bg-primary a');
-      var searchIcon = document.querySelector('.nav-search-icon');
+      var menuLinks = document.querySelectorAll('.navbar-nav .menu-item a');
 
-      if (null !== searchIcon) {
-        searchIcon.style.fill = updatedValue;
+      if (null !== menuLinks) {
+        menuLinks.forEach(function (link) {
+          link.style.color = updatedValue;
+        });
       }
-
-      menuLinks.forEach(function (link) {
-        link.style.color = updatedValue;
-      });
     });
   });
   wp.customize('menu_link_color_trans', function (value) {
     value.bind(function (updatedValue) {
-      var menuLinks = document.querySelectorAll('.menu-one-transparent li a, .transparent-header .navbar-toggler');
-      var searchIcon = document.querySelector('.nav-search-icon');
+      var menuLinks = document.querySelectorAll('.header-transparent .navbar-nav .menu-item a');
 
-      if (null !== searchIcon) {
-        searchIcon.style.fill = updatedValue;
+      if (null !== menuLinks) {
+        menuLinks.forEach(function (link) {
+          link.style.color = updatedValue;
+        });
       }
-
-      menuLinks.forEach(function (link) {
-        link.style.color = updatedValue;
-      });
     });
   });
   wp.customize('menu_link_active_color', function (value) {
     value.bind(function (updatedValue) {
-      var menuLinks = document.querySelectorAll('.menu-one li a');
-      menuLinks.forEach(function (link) {
-        link.style.color = updatedValue;
-        link.addEventListener('mousemove', function () {
+      var menuLinks = document.querySelectorAll('.navbar-nav .menu-item a'); //let dropdownCaret = document.querySelectorAll('.navbar-nav > .menu-item.icon > a:before');
+
+      if (null !== menuLinks) {
+        menuLinks.forEach(function (link) {
           link.style.color = updatedValue;
+          link.addEventListener('mousemove', function () {
+            link.style.color = updatedValue;
+          });
+          link.addEventListener('mouseout', function () {
+            link.style.color = '';
+          });
         });
-        link.addEventListener('mouseout', function () {
-          link.style.color = '';
-        });
-      });
+      }
     });
   });
   wp.customize('menu_link_active_color_trans', function (value) {
     value.bind(function (updatedValue) {
-      var menuLinks = document.querySelectorAll('.menu-one-transparent li a, .transparent-header .navbar-toggler');
-      menuLinks.forEach(function (link) {
-        link.style.color = updatedValue;
-        link.addEventListener('mousemove', function () {
+      var menuLinks = document.querySelectorAll('.header-transparent .navbar-nav .menu-item a');
+
+      if (null !== menuLinks) {
+        menuLinks.forEach(function (link) {
           link.style.color = updatedValue;
+          link.addEventListener('mousemove', function () {
+            link.style.color = updatedValue;
+          });
+          link.addEventListener('mouseout', function () {
+            link.style.color = '';
+          });
         });
-        link.addEventListener('mouseout', function () {
-          link.style.color = '';
-        });
-      });
+      }
     });
   });
   wp.customize('header_link_typography', function (value) {
@@ -339,7 +338,7 @@
   });
   wp.customize('cta_text_toggle', function (value) {
     value.bind(function (updatedValue) {
-      var ctaToggle = document.querySelector('.call-to-action');
+      var ctaToggle = document.querySelector('a.btn-getstarted');
 
       if (null !== ctaToggle) {
         if (true === updatedValue) {
@@ -352,7 +351,7 @@
   });
   wp.customize('header_search_toggle', function (value) {
     value.bind(function (updatedValue) {
-      var searchToggle = document.querySelector('.utils-search, .tutor-nav-search');
+      var searchToggle = document.querySelector('.utils-search');
 
       if (null !== searchToggle) {
         if (true === updatedValue) {
@@ -365,7 +364,7 @@
   });
   wp.customize('cta_background', function (value) {
     value.bind(function (updatedValue) {
-      var ctaBackground = document.querySelector('.call-to-action');
+      var ctaBackground = document.querySelector('.navbar .navbar-utils a.btn-getstarted');
 
       if (null !== ctaBackground) {
         ctaBackground.style.backgroundColor = updatedValue;
@@ -374,7 +373,7 @@
   });
   wp.customize('background_trans_cta', function (value) {
     value.bind(function (updatedValue) {
-      var ctaBackground = document.querySelector('.tutor-navbar-cart-transparent .tutor-get-started-btn .call-to-action, .btn-transparent .call-to-action');
+      var ctaBackground = document.querySelector('.header-transparent .navbar .navbar-utils a.btn-getstarted');
 
       if (null !== ctaBackground) {
         ctaBackground.style.backgroundColor = "rgba(".concat(updatedValue.rgb.r, ", ").concat(updatedValue.rgb.g, ", ").concat(updatedValue.rgb.b, ", ").concat(updatedValue.rgb.a, ")");
@@ -383,7 +382,7 @@
   });
   wp.customize('cta_border_color', function (value) {
     value.bind(function (updatedValue) {
-      var ctaElement = document.querySelector('.call-to-action');
+      var ctaElement = document.querySelector('.navbar .navbar-utils a.btn-getstarted');
 
       if (null !== ctaElement) {
         ctaElement.style.borderColor = updatedValue;
@@ -392,7 +391,7 @@
   });
   wp.customize('cta_border_color_trans', function (value) {
     value.bind(function (updatedValue) {
-      var ctaElement = document.querySelector('.btn-transparent .call-to-action');
+      var ctaElement = document.querySelector('.header-transparent .navbar .navbar-utils a.btn-getstarted');
 
       if (null !== ctaElement) {
         ctaElement.style.borderColor = updatedValue;
@@ -401,7 +400,7 @@
   });
   wp.customize('cta_border_width', function (value) {
     value.bind(function (updatedValue) {
-      var ctaElement = document.querySelector('.call-to-action');
+      var ctaElement = document.querySelector('a.btn-getstarted');
 
       if (null !== ctaElement) {
         ctaElement.style.borderWidth = updatedValue + 'px';
@@ -410,7 +409,7 @@
   });
   wp.customize('cta_border_radius', function (value) {
     value.bind(function (updatedValue) {
-      var ctaElement = document.querySelector('.call-to-action');
+      var ctaElement = document.querySelector('a.btn-getstarted');
 
       if (null !== ctaElement) {
         ctaElement.style.borderRadius = updatedValue + 'px';
@@ -419,7 +418,7 @@
   });
   wp.customize('cta_color', function (value) {
     value.bind(function (updatedValue) {
-      var ctaElement = document.querySelector('.call-to-action');
+      var ctaElement = document.querySelector('.navbar .navbar-utils a.btn-getstarted');
 
       if (null !== ctaElement) {
         ctaElement.style.color = updatedValue;
@@ -428,7 +427,7 @@
   });
   wp.customize('cta_color_trans', function (value) {
     value.bind(function (updatedValue) {
-      var ctaElement = document.querySelector('.btn-transparent .call-to-action');
+      var ctaElement = document.querySelector('.header-transparent .navbar .navbar-utils a.btn-getstarted');
 
       if (null !== ctaElement) {
         ctaElement.style.color = updatedValue;
@@ -437,7 +436,7 @@
   });
   wp.customize('cta_text', function (value) {
     value.bind(function (updatedValue) {
-      var ctaElement = document.querySelector('.call-to-action');
+      var ctaElement = document.querySelector('a.btn-getstarted');
 
       if (null !== ctaElement) {
         ctaElement.innerHTML = updatedValue;
@@ -446,7 +445,7 @@
   });
   wp.customize('cta_text_link', function (value) {
     value.bind(function (updatedValue) {
-      var ctaElement = document.querySelector('.call-to-action');
+      var ctaElement = document.querySelector('a.btn-getstarted');
 
       if (null !== ctaElement) {
         ctaElement.href = updatedValue;
@@ -455,7 +454,7 @@
   });
   wp.customize('cta_font_typography', function (value) {
     value.bind(function (updatedValue) {
-      var ctaElement = document.querySelector('.call-to-action');
+      var ctaElement = document.querySelector('a.btn-getstarted');
 
       if (null !== ctaElement) {
         ctaElement.style.fontSize = updatedValue['fontSize']['desktop'] + 'px';
