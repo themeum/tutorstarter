@@ -193,6 +193,13 @@ class Header {
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
+		$wp_customize->selective_refresh->add_partial(
+			'menu_link_active_color',
+			array(
+				'selector'            => '.navbar-nav .menu-item a',
+				'container_inclusive' => true,
+			)
+		);
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
@@ -204,7 +211,6 @@ class Header {
 				)
 			)
 		);
-
 		$wp_customize->add_setting(
 			'menu_link_active_color_trans',
 			array(
@@ -212,6 +218,13 @@ class Header {
 				'transport'         => 'postMessage',
 				'default'           => '#ffffff',
 				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+		$wp_customize->selective_refresh->add_partial(
+			'menu_link_active_color_trans',
+			array(
+				'selector'            => '.header-transparent .navbar-nav .menu-item a',
+				'container_inclusive' => true,
 			)
 		);
 		$wp_customize->add_control(
@@ -225,7 +238,6 @@ class Header {
 				)
 			)
 		);
-
 		$wp_customize->add_setting(
 			'header_link_typography',
 			array(
@@ -363,7 +375,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Cart Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#57586E',
+				'default'           => '#1950D1',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);

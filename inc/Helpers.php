@@ -146,8 +146,9 @@ if ( ! function_exists( 'control_active_callback_sticky_header' ) ) {
 	 */
 	function control_active_callback_sticky_header() {
 		// Get the appropriate theme mod.
+		$header_type = get_theme_mod( 'header_type_select' );
 		$header_sticky_on = get_theme_mod( 'header_sticky_toggle' );
-		if ( true === $header_sticky_on ) {
+		if ( true === $header_sticky_on && 'header_transparent' === $header_type ) {
 			return true;
 		} else {
 			return false;
@@ -554,8 +555,7 @@ function tutor_theme_ajax_login() {
  */
 if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
 	function tutor_starter_header_cart() { ?>
-
-		<a class="btn-cart" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart' ); ?>">
+		<span class="btn-cart">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
@@ -568,8 +568,10 @@ if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
 					
 				/>
 			</svg>
-			<span>(<?php echo WC()->cart->get_cart_contents_count(); ?>)</span>
-		</a>
+			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart' ); ?>">
+				<span>(<?php echo WC()->cart->get_cart_contents_count(); ?>)</span>
+			</a>
+		</span>
         <?php
     }
 }
@@ -584,12 +586,12 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
         global $woocommerce;
 		ob_start(); ?>
 		
-		<a class="btn-cart" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart' ); ?>">
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart' ); ?>">
 			<span>(<?php echo WC()->cart->get_cart_contents_count(); ?>)</span>
 		</a>
           
         <?php
-        $fragments['a.btn-cart'] = ob_get_clean();
+        $fragments['a.cart-contents'] = ob_get_clean();
         return $fragments;
     }
 }

@@ -120,8 +120,8 @@
   });
   wp.customize('cart_color', function (value) {
     value.bind(function (updatedValue) {
-      var cartSelector = document.querySelector('.navbar .navbar-utils a.btn-cart svg > path');
-      var cartContentSelector = document.querySelector('.navbar .navbar-utils a.btn-cart span');
+      var cartSelector = document.querySelector('.navbar .navbar-utils .btn-cart svg > path');
+      var cartContentSelector = document.querySelector('.navbar .navbar-utils .btn-cart span');
 
       if (null !== cartSelector) {
         cartSelector.style.fill = updatedValue;
@@ -134,8 +134,8 @@
   });
   wp.customize('cart_color_trans', function (value) {
     value.bind(function (updatedValue) {
-      var cartTransSelector = document.querySelector('.header-transparent .navbar .navbar-utils a.btn-cart svg > path');
-      var cartTransContentSelector = document.querySelector('.header-transparent .navbar .navbar-utils a.btn-cart span');
+      var cartTransSelector = document.querySelector('.header-transparent .navbar .navbar-utils .btn-cart svg > path');
+      var cartTransContentSelector = document.querySelector('.header-transparent .navbar .navbar-utils .btn-cart span');
 
       if (null !== cartTransSelector) {
         cartTransSelector.style.fill = updatedValue;
