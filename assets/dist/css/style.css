@@ -551,6 +551,7 @@ header.header-transparent .navbar {
 
   header.header-transparent .navbar .navbar-nav > .menu-item > a:hover {
     color: var(--navTransHoverColor);
+    filter: drop-shadow(0px 0px 0px var(--navTransHoverColor));
   }
 
   header.header-transparent .navbar .navbar-nav > .menu-item.icon > a:before {
@@ -977,10 +978,20 @@ header.header-default .utils-search {
   display: flex;
   align-items: center;
   color: var(--navDefaultColor);
+  position: relative;
 }
 
 .navbar-nav > .menu-item:hover > a {
   color: var(--navDefaultHoverColor);
+}
+
+.navbar-nav > .menu-item.current-menu-item > a {
+  color: var(--navDefaultHoverColor);
+}
+
+.navbar-nav > .menu-item.current-menu-item a:after {
+  width: 51.6% !important;
+  opacity: 1 !important;
 }
 
 .navbar-toggler {
@@ -1113,7 +1124,7 @@ header.header-default .utils-search {
   }
 
   .navbar-nav > .menu-item:hover > a {
-    filter: drop-shadow(0px 0px 0px #fff);
+    filter: drop-shadow(0px 0px 0px var(--navDefaultHoverColor));
   }
 
   .navbar-nav > .menu-item:hover > a:after {

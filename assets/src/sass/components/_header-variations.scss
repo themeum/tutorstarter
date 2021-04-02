@@ -18,6 +18,7 @@ header.header-transparent {
 						color: var(--navTransColor);
 						&:hover {
 							color: var(--navTransHoverColor);
+							filter: drop-shadow(0px 0px 0px var(--navTransHoverColor));
 						}
 					}
 					&.icon > a:before {

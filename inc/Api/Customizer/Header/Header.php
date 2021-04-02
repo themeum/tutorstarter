@@ -457,10 +457,10 @@ class Header {
 				'transport'         => 'postMessage',
 				'default'           => array(
 					'rgb' => array(
-						'r' => 0,
-						'g' => 0,
-						'b' => 0,
-						'a' => 0.1,
+						'r' => 25,
+						'g' => 80,
+						'b' => 209,
+						'a' => 1,
 					),
 				),
 				'sanitize_callback' => 'tutorstarter_sanitize_color',
@@ -502,7 +502,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Transparent Border Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#ffffff',
+				'default'           => '#1950D1',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);
@@ -564,7 +564,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Button Text Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '#ffffff',
+				'default'           => '#1539e9',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);

@@ -24,8 +24,8 @@ trait Inline_Css_Js {
 		// Theme mods.
 		$body_font                 = get_theme_mod( 'body_font', 'Inter' );
 		$heading_font              = get_theme_mod( 'heading_font', 'Sora' );
-		$cta_text_color            = get_theme_mod( 'cta_color', '#ffffff' );
-		$cta_text_color_trans      = get_theme_mod( 'cta_color_trans', '#1950D1' );
+		$cta_text_color            = get_theme_mod( 'cta_color', '#1539e9' );
+		$cta_text_color_trans      = get_theme_mod( 'cta_color_trans', '#ffffff' );
 		$link_color                = get_theme_mod( 'link_color', '#1950D1' );
 		$menu_bg_color             = get_theme_mod( 'menu_bg_color', '#ffffff' );
 		$body_bg_color             = get_theme_mod( 'body_bg_color', '#ffffff' );
@@ -33,7 +33,7 @@ trait Inline_Css_Js {
 		$cart_color_trans          = get_theme_mod( 'cart_color_trans', '#ffffff' );
 		$cta_background            = get_theme_mod( 'cta_background', '#ffffff' );
 		$cta_border_color          = get_theme_mod( 'cta_border_color', '#1539e9' );
-		$cta_border_color_trans    = get_theme_mod( 'cta_border_color_trans', '#ffffff' );
+		$cta_border_color_trans    = get_theme_mod( 'cta_border_color_trans', '#1950D1' );
 		$cta_border_width          = get_theme_mod( 'cta_border_width', 1 );
 		$cta_border_radius         = get_theme_mod( 'cta_border_radius', 50 );
 		$body_text_color           = get_theme_mod( 'body_text_color', '#57586E' );
@@ -47,7 +47,7 @@ trait Inline_Css_Js {
 		$footer_widgets_text_color = get_theme_mod( 'footer_widgets_text_color', '#ffffff' );
 
 		$cta_trans_bg = get_theme_mod( 'background_trans_cta' );
-		$cta_background_trans =  ! empty( $cta_trans_bg['rgb'] ) ? 'rgba(' . $cta_trans_bg['rgb']['r'] . ',' . $cta_trans_bg['rgb']['g'] . ',' . $cta_trans_bg['rgb']['b'] . ',' . $cta_trans_bg['rgb']['a'] . ')' : 'rgba(0, 0, 0, 0.1)';
+		$cta_background_trans =  ! empty( $cta_trans_bg['rgb'] ) ? 'rgba(' . $cta_trans_bg['rgb']['r'] . ',' . $cta_trans_bg['rgb']['g'] . ',' . $cta_trans_bg['rgb']['b'] . ',' . $cta_trans_bg['rgb']['a'] . ')' : 'rgba(25, 80, 209, 1)';
 		
 		// Sticky header BG.
 		$sticky_header_bg = get_theme_mod( 'header_sticky_bg_color' );
