@@ -21,18 +21,6 @@ const PageSettingsFields = ({ updatedValue, updateMeta }) => {
                     onChange={(value) => updateMeta(value, 'sidebar_select')}
                 />
                 <SelectControl
-                    label={__('Header', 'tutorstarter')}
-                    value={updatedValue.header_select}
-                    options={[
-                        { label: __('--Select Header--', 'tutorstarter'), value: '' },
-                        { label: __('Header Default', 'tutorstarter'), value: 'header_default' },
-                        { label: __('Header Transparent', 'tutorstarter'), value: 'header_transparent' },
-                        { label: __('Header Right', 'tutorstarter'), value: 'header_right' },
-                        { label: __('Header Fullwidth', 'tutorstarter'), value: 'header_fullwidth' },
-                    ]}
-                    onChange={(value) => updateMeta(value, 'header_select')}
-                />
-                <SelectControl
                     label={__('Footer', 'tutorstarter')}
                     value={updatedValue.footer_select}
                     options={[
@@ -54,6 +42,11 @@ const PageSettingsFields = ({ updatedValue, updateMeta }) => {
                     label={__('Disable Header?', 'tutorstarter')}
                     checked={updatedValue.header_toggle}
                     onChange={(value) => updateMeta(value, 'header_toggle')}
+                />
+                <ToggleControl
+                    label={__('Enable Transparent Header?', 'tutorstarter')}
+                    checked={updatedValue.header_trans_toggle}
+                    onChange={(value) => updateMeta(value, 'header_trans_toggle')}
                 />
                 <ToggleControl
                     label={__('Disable Footer?', 'tutorstarter')}

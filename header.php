@@ -11,9 +11,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$page_meta       = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
-$disable_header  = ( ! empty( $page_meta['header_toggle'] ) ? $page_meta['header_toggle'] : false );
-$selected_header = ( ! empty( $page_meta['header_select'] ) ? $page_meta['header_select'] : '' );
+$page_meta           = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
+$disable_header      = ( ! empty( $page_meta['header_toggle'] ) ? $page_meta['header_toggle'] : false );
+$trans_header_toggle = ( ! empty( $page_meta['trans_header_toggle'] ) ? $page_meta['trans_header_toggle'] : false );
 
 ?>
 <!DOCTYPE html>
@@ -32,8 +32,8 @@ $selected_header = ( ! empty( $page_meta['header_select'] ) ? $page_meta['header
 <div id="page" class="site">
 
 <?php if ( false === $disable_header ) {
-	if ( ! empty( $selected_header ) ) {
-		'header_transparent' === $selected_header ? get_template_part( 'views/partials/header/header_transparent' ) : get_template_part( 'views/partials/header/header_default' );
+	if ( true === $trans_header_toggle ) {
+		get_template_part( 'views/partials/header/header_transparent' );
 	} else {
 		$header_style = get_theme_mod( 'header_type_select', 'header_default' );
 		'header_transparent' === $header_style ? get_template_part( 'views/partials/header/header_transparent' ) : get_template_part( 'views/partials/header/header_default' );

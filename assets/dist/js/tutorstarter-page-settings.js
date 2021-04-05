@@ -127,28 +127,6 @@ var PageSettingsFields = function PageSettingsFields(_ref) {
         return updateMeta(value, 'sidebar_select');
       }
     }), /*#__PURE__*/React.createElement(SelectControl, {
-      label: __('Header', 'tutorstarter'),
-      value: updatedValue.header_select,
-      options: [{
-        label: __('--Select Header--', 'tutorstarter'),
-        value: ''
-      }, {
-        label: __('Header Default', 'tutorstarter'),
-        value: 'header_default'
-      }, {
-        label: __('Header Transparent', 'tutorstarter'),
-        value: 'header_transparent'
-      }, {
-        label: __('Header Right', 'tutorstarter'),
-        value: 'header_right'
-      }, {
-        label: __('Header Fullwidth', 'tutorstarter'),
-        value: 'header_fullwidth'
-      }],
-      onChange: function onChange(value) {
-        return updateMeta(value, 'header_select');
-      }
-    }), /*#__PURE__*/React.createElement(SelectControl, {
       label: __('Footer', 'tutorstarter'),
       value: updatedValue.footer_select,
       options: [{
@@ -184,6 +162,12 @@ var PageSettingsFields = function PageSettingsFields(_ref) {
       checked: updatedValue.header_toggle,
       onChange: function onChange(value) {
         return updateMeta(value, 'header_toggle');
+      }
+    }), /*#__PURE__*/React.createElement(ToggleControl, {
+      label: __('Enable Transparent Header?', 'tutorstarter'),
+      checked: updatedValue.header_trans_toggle,
+      onChange: function onChange(value) {
+        return updateMeta(value, 'header_trans_toggle');
       }
     }), /*#__PURE__*/React.createElement(ToggleControl, {
       label: __('Disable Footer?', 'tutorstarter'),
@@ -277,11 +261,11 @@ var PageSettingsFieldsData = compose([withSelect(function () {
       var meta = select('core/editor').getEditedPostAttribute('meta')._tutorstarter_page_metadata;
 
       meta = _objectSpread({
-        sidebar_select: '',
-        header_select: '',
-        footer_select: '',
+        sidebar_select: 'no-sidebar',
+        footer_select: 'footer_four',
         page_title_toggle: false,
         header_toggle: false,
+        header_trans_toggle: false,
         footer_toggle: false
       }, meta);
       meta[prop] = value;
@@ -335,7 +319,7 @@ if ('1' === is_page) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/zaman/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js */"./inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js");
+module.exports = __webpack_require__(/*! /Volumes/Web/Projects/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js */"./inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js");
 
 
 /***/ })

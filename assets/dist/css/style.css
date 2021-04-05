@@ -842,6 +842,10 @@ header.header-default .utils-search {
   position: absolute;
 }
 
+body.admin-bar header.header-transparent {
+  top: 20px;
+}
+
 :root {
   --headerDefaultBg: var(--primary-menu-bg-color);
   --headerBtnColor: var(--cta-text-color);

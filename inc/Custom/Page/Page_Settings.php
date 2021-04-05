@@ -40,10 +40,6 @@ class Page_Settings {
 								'type'              => 'string',
 								'sanitize_callback' => 'sanitize_text_field',
 							),
-							'header_select'    => array(
-								'type'              => 'string',
-								'sanitize_callback' => 'sanitize_text_field',
-							),
 							'footer_select'    => array(
 								'type'              => 'string',
 								'sanitize_callback' => 'sanitize_text_field',
@@ -54,6 +50,10 @@ class Page_Settings {
 								'sanitize_callback' => isset( $input ) ? true : false,
 							),
 							'header_toggle'     => array(
+								'type'              => 'boolean',
+								'sanitize_callback' => isset( $input ) ? true : false,
+							),
+							'header_trans_toggle'     => array(
 								'type'              => 'boolean',
 								'sanitize_callback' => isset( $input ) ? true : false,
 							),
