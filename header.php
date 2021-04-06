@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 $page_meta           = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
 $disable_header      = ( ! empty( $page_meta['header_toggle'] ) ? $page_meta['header_toggle'] : false );
-$trans_header_toggle = ( ! empty( $page_meta['trans_header_toggle'] ) ? $page_meta['trans_header_toggle'] : false );
+$trans_header_toggle = ( ! empty( $page_meta['header_trans_toggle'] ) ? $page_meta['header_trans_toggle'] : false );
 
 ?>
 <!DOCTYPE html>

@@ -11,7 +11,7 @@ const PageSettingsFields = ({ updatedValue, updateMeta }) => {
             <Fragment>
                 <SelectControl
                     label={__('Sidebar', 'tutorstarter')}
-                    value={updatedValue.sidebar_select}
+                    value={null !== updatedValue ? updatedValue.sidebar_select : 'no-sidebar'}
                     options={[
                         { label: __('--Select Option--', 'tutorstarter'), value: '' },
                         { label: __('No Sidebar', 'tutorstarter'), value: 'no-sidebar' },
@@ -22,7 +22,7 @@ const PageSettingsFields = ({ updatedValue, updateMeta }) => {
                 />
                 <SelectControl
                     label={__('Footer', 'tutorstarter')}
-                    value={updatedValue.footer_select}
+                    value={null !== updatedValue ? updatedValue.footer_select : ''}
                     options={[
                         { label: __('--Select Footer--', 'tutorstarter'), value: '' },
                         { label: __('Type 1', 'tutorstarter'), value: 'footer_one' },
@@ -35,22 +35,22 @@ const PageSettingsFields = ({ updatedValue, updateMeta }) => {
                 />
                 <ToggleControl
                     label={__('Disable Title?', 'tutorstarter')}
-                    checked={updatedValue.page_title_toggle}
+                    checked={null !== updatedValue ? updatedValue.page_title_toggle : false}
                     onChange={(value) => updateMeta(value, 'page_title_toggle')}
                 />
                 <ToggleControl
                     label={__('Disable Header?', 'tutorstarter')}
-                    checked={updatedValue.header_toggle}
+                    checked={null !== updatedValue ? updatedValue.header_toggle : false}
                     onChange={(value) => updateMeta(value, 'header_toggle')}
                 />
                 <ToggleControl
                     label={__('Enable Transparent Header?', 'tutorstarter')}
-                    checked={updatedValue.header_trans_toggle}
+                    checked={null !== updatedValue ? updatedValue.header_trans_toggle : false}
                     onChange={(value) => updateMeta(value, 'header_trans_toggle')}
                 />
                 <ToggleControl
                     label={__('Disable Footer?', 'tutorstarter')}
-                    checked={updatedValue.footer_toggle}
+                    checked={null !== updatedValue ? updatedValue.footer_toggle : false}
                     onChange={(value) => updateMeta(value, 'footer_toggle')}
                 />
             </Fragment>

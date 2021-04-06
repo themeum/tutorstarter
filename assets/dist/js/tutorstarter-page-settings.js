@@ -109,7 +109,7 @@ var PageSettingsFields = function PageSettingsFields(_ref) {
   if ('1' === is_page) {
     return /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(SelectControl, {
       label: __('Sidebar', 'tutorstarter'),
-      value: updatedValue.sidebar_select,
+      value: null !== updatedValue ? updatedValue.sidebar_select : 'no-sidebar',
       options: [{
         label: __('--Select Option--', 'tutorstarter'),
         value: ''
@@ -128,7 +128,7 @@ var PageSettingsFields = function PageSettingsFields(_ref) {
       }
     }), /*#__PURE__*/React.createElement(SelectControl, {
       label: __('Footer', 'tutorstarter'),
-      value: updatedValue.footer_select,
+      value: null !== updatedValue ? updatedValue.footer_select : '',
       options: [{
         label: __('--Select Footer--', 'tutorstarter'),
         value: ''
@@ -153,25 +153,25 @@ var PageSettingsFields = function PageSettingsFields(_ref) {
       }
     }), /*#__PURE__*/React.createElement(ToggleControl, {
       label: __('Disable Title?', 'tutorstarter'),
-      checked: updatedValue.page_title_toggle,
+      checked: null !== updatedValue ? updatedValue.page_title_toggle : false,
       onChange: function onChange(value) {
         return updateMeta(value, 'page_title_toggle');
       }
     }), /*#__PURE__*/React.createElement(ToggleControl, {
       label: __('Disable Header?', 'tutorstarter'),
-      checked: updatedValue.header_toggle,
+      checked: null !== updatedValue ? updatedValue.header_toggle : false,
       onChange: function onChange(value) {
         return updateMeta(value, 'header_toggle');
       }
     }), /*#__PURE__*/React.createElement(ToggleControl, {
       label: __('Enable Transparent Header?', 'tutorstarter'),
-      checked: updatedValue.header_trans_toggle,
+      checked: null !== updatedValue ? updatedValue.header_trans_toggle : false,
       onChange: function onChange(value) {
         return updateMeta(value, 'header_trans_toggle');
       }
     }), /*#__PURE__*/React.createElement(ToggleControl, {
       label: __('Disable Footer?', 'tutorstarter'),
-      checked: updatedValue.footer_toggle,
+      checked: null !== updatedValue ? updatedValue.footer_toggle : false,
       onChange: function onChange(value) {
         return updateMeta(value, 'footer_toggle');
       }
@@ -261,8 +261,8 @@ var PageSettingsFieldsData = compose([withSelect(function () {
       var meta = select('core/editor').getEditedPostAttribute('meta')._tutorstarter_page_metadata;
 
       meta = _objectSpread({
-        sidebar_select: 'no-sidebar',
-        footer_select: 'footer_four',
+        sidebar_select: '',
+        footer_select: '',
         page_title_toggle: false,
         header_toggle: false,
         header_trans_toggle: false,

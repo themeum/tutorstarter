@@ -651,26 +651,13 @@ if ( ! function_exists( 'tutorstarter_order_btn_html' ) ) {
  */
 function tutorstarter_header_switcher() {
 	$page_meta            = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
-	$selected_page_header = ( ! empty( $page_meta['header_select'] ) ? $page_meta['header_select'] : '' );
+	$trans_header_toggle  = ( ! empty( $page_meta['header_trans_toggle'] ) ? $page_meta['header_trans_toggle'] : false );
 
 	$selected_header     = get_theme_mod( 'header_type_select', 'header_default' );
 	$active_header_class = 'navbar-center';
 
-	if ( ! empty( $selected_page_header ) ) {
-		switch ( $selected_page_header ) {
-			case 'header_default':
-				$active_header_class = 'navbar-center';
-				break;
-			case 'header_transparent':
-				$active_header_class = 'navbar-left';
-				break;
-			case 'header_right':
-				$active_header_class = 'navbar-right';
-				break;
-			case 'header_fullwidth':
-				$active_header_class = 'navbar-right full-width';
-				break;
-		}
+	if ( ! empty( $trans_header_toggle ) && true === $trans_header_toggle ) {
+		$active_header_class = 'navbar-left';
 	} else {
 		switch ( $selected_header ) {
 			case 'header_default':
