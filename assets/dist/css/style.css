@@ -989,11 +989,11 @@ body.admin-bar header.header-transparent {
   color: var(--navDefaultHoverColor);
 }
 
-.navbar-nav > .menu-item.current-menu-item > a {
+.navbar-nav .menu-item.current-menu-item a {
   color: var(--navDefaultHoverColor);
 }
 
-.navbar-nav > .menu-item.current-menu-item a:after {
+.navbar-nav .menu-item.current-menu-item a:after {
   width: 51.6% !important;
   opacity: 1 !important;
 }

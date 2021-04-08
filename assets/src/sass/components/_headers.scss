@@ -132,8 +132,8 @@
 		
 	}
 	// Current menu item
-	> .menu-item.current-menu-item {
-		> a {
+	.menu-item.current-menu-item {
+		a {
 			color: var(--navDefaultHoverColor);
 		}
 		a:after{
