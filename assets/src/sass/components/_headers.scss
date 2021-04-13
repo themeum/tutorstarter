@@ -103,6 +103,18 @@
 			max-width: unset;
 		}
 	}
+	.navbar-nav{
+		// Current menu item
+		.menu-item.current-menu-item {
+			a {
+				color: var(--navDefaultHoverColor);
+			}
+			a:after{
+				width: 51.6% !important;
+				opacity: 1 !important;
+			}
+		}
+	}
 }
 
 .navbar-nav {
@@ -131,16 +143,7 @@
 		}
 		
 	}
-	// Current menu item
-	.menu-item.current-menu-item {
-		a {
-			color: var(--navDefaultHoverColor);
-		}
-		a:after{
-			width: 51.6% !important;
-			opacity: 1 !important;
-		}
-	}
+	
 
 }
 

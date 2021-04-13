@@ -35,6 +35,10 @@ header.header-transparent {
 					&:not(.icon) a:after {
 						background: var(--navTransHoverColor);
 					}
+					&:hover > a {
+						filter: drop-shadow(0px 0px 0px var(--navTransColor));
+					}
+					
 				}
 			}
 		}
