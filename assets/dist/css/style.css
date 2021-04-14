@@ -567,6 +567,10 @@ header.header-transparent .navbar {
   header.header-transparent .navbar .navbar-nav > .menu-item:not(.icon) a:after {
     background: var(--navTransHoverColor);
   }
+
+  header.header-transparent .navbar .navbar-nav > .menu-item:hover > a {
+    filter: drop-shadow(0px 0px 0px var(--navTransColor));
+  }
 }
 
 header.header-transparent .navbar .navbar-utils .btn-search svg path {
@@ -961,6 +965,15 @@ body.admin-bar header.header-transparent {
   max-width: unset;
 }
 
+.navbar .navbar-nav .menu-item.current-menu-item a {
+  color: var(--navDefaultHoverColor);
+}
+
+.navbar .navbar-nav .menu-item.current-menu-item a:after {
+  width: 51.6% !important;
+  opacity: 1 !important;
+}
+
 .navbar-nav {
   display: flex;
   list-style: none;
@@ -987,15 +1000,6 @@ body.admin-bar header.header-transparent {
 
 .navbar-nav > .menu-item:hover > a {
   color: var(--navDefaultHoverColor);
-}
-
-.navbar-nav .menu-item.current-menu-item a {
-  color: var(--navDefaultHoverColor);
-}
-
-.navbar-nav .menu-item.current-menu-item a:after {
-  width: 51.6% !important;
-  opacity: 1 !important;
 }
 
 .navbar-toggler {

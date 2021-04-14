@@ -34,6 +34,9 @@ mix.js('assets/src/scripts/app.js', 'assets/dist/js')
 	.sass('inc/Api/Customizer/reactjs/src/sass/all-controls.scss', 'assets/dist/css')
 	.sass('inc/Setup/Settings/reactjs/src/sass/dashboard.scss', 'assets/dist/css')
 
+// Disable notification
+mix.disableNotifications();
+
 // Add versioning to assets in production environment
 if (mix.inProduction()) {
 	mix.version();
