@@ -176,9 +176,9 @@ trait Inline_Css_Js {
 		$widget_title_typography_fontsize_tablet = ! empty( $widget_title_typography['fontSize'] ) ? $widget_title_typography['fontSize']['tablet'] : 16;
 		$widget_title_typography_fontsize_mobile = ! empty( $widget_title_typography['fontSize'] ) ? $widget_title_typography['fontSize']['mobile'] : 16;
 
-		$widget_title_typography_lineheight = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['desktop'] : 1.7;
-		$widget_title_typography_lineheight_tablet = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['tablet'] : 1.7;
-		$widget_title_typography_lineheight_mobile = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['mobile'] : 1.7;
+		$widget_title_typography_lineheight = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['desktop'] : 1.78;
+		$widget_title_typography_lineheight_tablet = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['tablet'] : 1.78;
+		$widget_title_typography_lineheight_mobile = ! empty( $widget_title_typography['lineHeight'] ) ? $widget_title_typography['lineHeight']['mobile'] : 1.78;
 		
 		$widget_title_typography_fontweight = ! empty( $widget_title_typography['fontWeight'] ) ? $widget_title_typography['fontWeight'] : 700;
 		$widget_title_typography_texttransform = ! empty( $widget_title_typography['textTransform'] ) ? $widget_title_typography['textTransform'] : 'none';
@@ -189,9 +189,9 @@ trait Inline_Css_Js {
 		$widget_text_typography_fontsize_tablet = ! empty( $widget_text_typography['fontSize'] ) ? $widget_text_typography['fontSize']['tablet'] : 16;
 		$widget_text_typography_fontsize_mobile = ! empty( $widget_text_typography['fontSize'] ) ? $widget_text_typography['fontSize']['mobile'] : 16;
 
-		$widget_text_typography_lineheight = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['desktop'] : 1.7;
-		$widget_text_typography_lineheight_tablet = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['tablet'] : 1.7;
-		$widget_text_typography_lineheight_mobile = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['mobile'] : 1.7;
+		$widget_text_typography_lineheight = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['desktop'] : 1.78;
+		$widget_text_typography_lineheight_tablet = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['tablet'] : 1.78;
+		$widget_text_typography_lineheight_mobile = ! empty( $widget_text_typography['lineHeight'] ) ? $widget_text_typography['lineHeight']['mobile'] : 1.78;
 		
 		$widget_text_typography_fontweight = ! empty( $widget_text_typography['fontWeight'] ) ? $widget_text_typography['fontWeight'] : 400;
 		$widget_text_typography_texttransform = ! empty( $widget_text_typography['textTransform'] ) ? $widget_text_typography['textTransform'] : 'none';

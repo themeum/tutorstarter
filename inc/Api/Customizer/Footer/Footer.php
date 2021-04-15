@@ -238,9 +238,9 @@ class Footer {
 						'desktop' => 18,
 					),
 					'lineHeight' => array(
-						'mobile'  => 1.7,
-						'tablet'  => 1.7,
-						'desktop' => 1.7,
+						'mobile'  => 1.78,
+						'tablet'  => 1.78,
+						'desktop' => 1.78,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -273,9 +273,9 @@ class Footer {
 								'desktop' => 18,
 							),
 							'line_heights' => array(
-								'mobile'  => 1.7,
-								'tablet'  => 1.7,
-								'desktop' => 1.7,
+								'mobile'  => 1.78,
+								'tablet'  => 1.78,
+								'desktop' => 1.78,
 							)
 						),
 					),
@@ -297,9 +297,9 @@ class Footer {
 						'desktop' => 16,
 					),
 					'lineHeight' => array(
-						'mobile'  => 1.7,
-						'tablet'  => 1.7,
-						'desktop' => 1.7,
+						'mobile'  => 1.78,
+						'tablet'  => 1.78,
+						'desktop' => 1.78,
 					),
 				),
 				'sanitize_callback' => 'sanitize_select_range_value',
@@ -332,9 +332,9 @@ class Footer {
 								'desktop' => 16,
 							),
 							'line_heights' => array(
-								'mobile'  => 1.7,
-								'tablet'  => 1.7,
-								'desktop' => 1.7,
+								'mobile'  => 1.78,
+								'tablet'  => 1.78,
+								'desktop' => 1.78,
 							)
 						),
 					),
