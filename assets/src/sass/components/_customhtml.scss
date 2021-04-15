@@ -38,8 +38,9 @@
 		height: calc(100% - 16px);
 		transition: 0.2s linear;
 		&:hover,
-		&focus {
-			background: #0a083b;
+		&:focus {
+			background: #1950D1;
+			opacity: .85;
 		}
 	}
 }

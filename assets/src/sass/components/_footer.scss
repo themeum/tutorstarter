@@ -6,9 +6,8 @@ section.footer-widgets {
 	padding-top: 70px;
 	padding-bottom: 30px;
 	background: var(--footer-widget-bg-color);
-	& ul li {
+	ul li {
 		list-style: none;
-		
 		a {
 			color: var(--footer-widget-text-color);
 			font-size: var(--widget-text-font-size);
@@ -25,6 +24,9 @@ section.footer-widgets {
 			line-height: var(--widget-text-line-height);
 			font-weight: var(--widget-text-font-weight);
 			text-transform: var(--widget-text-transform);
+		}
+		.menu-item{
+			margin-bottom: 8px;
 		}
 	}
 	.widget-title {

@@ -3932,11 +3932,7 @@ TypographyComponent.propTypes = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/turtor-starter/wp-content/themes/tutorstarter/inc/Api/Customizer/reactjs/src/customizer-controls.js */"./inc/Api/Customizer/reactjs/src/customizer-controls.js");
-=======
-module.exports = __webpack_require__(/*! /Users/joomshaper/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Api/Customizer/reactjs/src/customizer-controls.js */"./inc/Api/Customizer/reactjs/src/customizer-controls.js");
->>>>>>> 6777815e30cfed35f3b65c6bd5b25e6ed72e6115
 
 
 /***/ }),
