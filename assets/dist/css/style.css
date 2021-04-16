@@ -6661,6 +6661,11 @@ h1.entry-title {
   padding: 5px 0;
 }
 
+.entry-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .entry-content p:after {
   content: "";
   clear: both;
