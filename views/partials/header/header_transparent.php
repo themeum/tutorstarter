@@ -19,7 +19,7 @@
         <div class="navbar-brand">
         <?php 
             $logo = get_theme_mod( 'transparent_logo' );
-            $logo_img = wp_get_attachment_image_src( $logo );
+            $logo_img = wp_get_attachment_image_src( $logo, 'full' );
         ?>
         <?php if ( $logo_img ) : ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
