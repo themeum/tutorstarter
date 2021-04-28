@@ -7494,7 +7494,7 @@ img.img-responsive {
 
 .tutor-option-field-row label,
 .tutor-form-group label {
-  color: #0A083B;
+  color: #0a083b;
 }
 
 .single_add_to_cart_button,
@@ -7505,8 +7505,8 @@ a.tutor-btn,
   font-size: 16px;
   padding: 15px 80px;
   border-radius: 33px;
-  background-color: #1950D1;
-  border: 1px solid #1950D1;
+  background-color: #1950d1;
+  border: 1px solid #1950d1;
 }
 
 .tutor-header-profile-photo img {
@@ -7514,6 +7514,26 @@ a.tutor-btn,
   max-height: 30px;
   max-width: 30px;
   border-radius: 50%;
+}
+
+.tutor-wrap .tutor-login-wrap {
+  margin-bottom: 70px;
+}
+
+form.tutor-ResetPassword.lost_reset_password {
+  padding: 50px 180px;
+}
+
+@media only screen and (max-width: 991px) {
+  form.tutor-ResetPassword.lost_reset_password {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  form.tutor-ResetPassword.lost_reset_password {
+    padding: 20px;
+  }
 }
 
 h1.entry-title {
