@@ -7,6 +7,8 @@
 
 namespace Tutor_Starter\Setup;
 
+use Tutor_Starter\Api\Updater\Updater;
+
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -21,6 +23,8 @@ class Setup {
 		add_action( 'after_setup_theme', array( $this, 'setup' ) );
 		add_filter( 'excerpt_more', array( $this, 'remove_excerpt_extra_char' ) );
 		add_filter( 'excerpt_length', array( $this, 'custom_excerpt_length' ), 999 );
+
+		//$this->update_theme();
 	}
 
 	/**
@@ -193,5 +197,21 @@ class Setup {
 	 */
 	public function remove_excerpt_extra_char( $more ) {
 		return '';
+	}
+
+	/**
+	 * Update theme
+	 */
+	public function update_theme() {
+		$args = array(
+			'product_title'      => 'Tutor Starter',
+			'product_slug'       => 'tutorstarter',
+			'product_basename'   => 'tutorstarter',
+			'product_type'       => 'theme',
+			'current_version'    => TUTOR_STARTER_VERSION,
+			'force_update_check' => false
+		);
+
+		new Updater( $args );
 	}
 }

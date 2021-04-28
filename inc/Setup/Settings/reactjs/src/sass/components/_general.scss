@@ -27,7 +27,7 @@ img {
     max-width: 100%;
     margin: 0 auto;
     @media screen and (min-width: 992px) {
-        width: 50%;
+        width: 80%;
     }
     @media screen and (max-width: 991px) {
         width: 100%;
@@ -63,26 +63,30 @@ img {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            flex-grow: 1;
             background: #ffffff;
             margin: 20px;
-            min-width: 150px;
-            min-height: 150px;
-            flex-basis: calc( 100% / 5 );
+            width: 25%;
+            min-height: 200px;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
             transition: 0.35s linear;
             text-decoration: none;
-             span {
-                 font-size: 25px;
-             }
+            span {
+                font-size: 25px;
+            }
 
-             p {
+            p {
                 font-size: 17px;
-             }
-             &:hover {
-                 box-shadow: 0px 30px 60px -10px rgb(0 28 73 / 15%);
-             }
+            }
+            &:hover {
+                box-shadow: 0px 30px 60px -10px rgb(0 28 73 / 15%);
+            }
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
         }
     }
 }
