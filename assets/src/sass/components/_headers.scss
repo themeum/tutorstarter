@@ -108,7 +108,7 @@
         .menu-item.current-menu-item {
             a {
                 color: var(--navDefaultHoverColor);
-				filter: drop-shadow(0px 0px 0px var(--navDefaultHoverColor));
+                filter: drop-shadow(0px 0px 0px var(--navDefaultHoverColor));
             }
             a:after {
                 width: 51.6% !important;
@@ -579,6 +579,8 @@
         }
     }
     .navbar {
+        grid-gap: 16px;
+
         .navbar-utils {
             a.btn-getstarted {
                 font-size: var(--cta-font-size-mobile);

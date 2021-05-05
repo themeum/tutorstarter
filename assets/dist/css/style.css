@@ -528,6 +528,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body.admin-bar header.header-transparent {
+  top: 20px;
+}
+
 /* Header Variations (bg color) */
 
 header.header-transparent {
@@ -784,6 +788,10 @@ header.header-default .utils-search {
 }
 
 @media (max-width: 767px) {
+  body.admin-bar header.sticky-on {
+    top: 0;
+  }
+
   .navbar-utils .tutor-header-profile-menu {
     display: none;
   }
@@ -848,10 +856,6 @@ header.header-default .utils-search {
   z-index: 2;
   left: 0;
   position: absolute;
-}
-
-body.admin-bar header.header-transparent {
-  top: 20px;
 }
 
 :root {
@@ -1435,6 +1439,10 @@ body.admin-bar header.header-transparent {
   .navbar-nav .menu-item a {
     font-size: var(--header-font-size-mobile);
     line-height: var(--header-font-lineheight-mobile);
+  }
+
+  .navbar {
+    grid-gap: 16px;
   }
 
   .navbar .navbar-utils a.btn-getstarted {
@@ -7522,6 +7530,10 @@ a.tutor-btn,
 
 form.tutor-ResetPassword.lost_reset_password {
   padding: 50px 180px;
+}
+
+.etlms-loop-cart-btn-wrap a.added_to_cart {
+  padding-left: 5px;
 }
 
 @media only screen and (max-width: 991px) {

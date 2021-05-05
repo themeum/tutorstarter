@@ -39,6 +39,11 @@ form.tutor-ResetPassword.lost_reset_password {
     padding: 50px 180px;
 }
 
+// Elementor Addon Style Overrides
+.etlms-loop-cart-btn-wrap a.added_to_cart {
+    padding-left: 5px;
+}
+
 @media only screen and (max-width: 991px) {
     form.tutor-ResetPassword.lost_reset_password {
         padding: 20px;

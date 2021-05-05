@@ -1,3 +1,6 @@
+body.admin-bar header.header-transparent {
+    top: 20px;
+}
 /* Header Variations (bg color) */
 header.header-transparent {
     position: absolute;
@@ -18,12 +21,16 @@ header.header-transparent {
                         color: var(--navTransColor);
                         &:hover {
                             color: var(--navTransHoverColor);
-                            filter: drop-shadow(0px 0px 0px var(--navTransHoverColor));
+                            filter: drop-shadow(
+                                0px 0px 0px var(--navTransHoverColor)
+                            );
                         }
                     }
                     &.current-menu-item {
                         a {
-                            filter: drop-shadow(0px 0px 0px var(--navTransHoverColor));
+                            filter: drop-shadow(
+                                0px 0px 0px var(--navTransHoverColor)
+                            );
                         }
                     }
                     &.icon > a:before {
@@ -247,6 +254,9 @@ header.header-default {
 }
 
 @media (max-width: 767px) {
+    body.admin-bar header.sticky-on {
+        top: 0;
+    }
     .navbar-utils {
         .tutor-header-profile-menu {
             display: none;
@@ -314,8 +324,4 @@ header.header-default {
             }
         }
     }
-}
-
-body.admin-bar header.header-transparent {
-    top: 20px;
 }
