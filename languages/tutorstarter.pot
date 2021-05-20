@@ -9,13 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-04-28T10:00:27+00:00\n"
+"POT-Creation-Date: 2021-05-20T07:54:06+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: tutorstarter\n"
 
 #. Theme Name of the theme
 #: inc/Setup/Dashboard.php:30
+#: inc/Setup/Settings/reactjs/src/general/index.js:12
 msgid "Tutor Starter"
 msgstr ""
 
@@ -71,6 +72,8 @@ msgid "Blog Layout"
 msgstr ""
 
 #: inc/Api/Customizer/Blog/Blog_Layout.php:53
+#: inc/Api/Customizer/reactjs/src/font-family/font-family-selector.js:56
+#: inc/Api/Customizer/reactjs/src/font-family/font-family-selector.js:168
 msgid "Default"
 msgstr ""
 
@@ -136,6 +139,7 @@ msgid "Custom Excerpt Length"
 msgstr ""
 
 #: inc/Api/Customizer/Blog/Sidebar.php:30
+#: inc/Setup/Settings/reactjs/src/general/index.js:44
 msgid "Blog"
 msgstr ""
 
@@ -150,16 +154,19 @@ msgstr ""
 
 #: inc/Api/Customizer/Blog/Sidebar.php:61
 #: inc/Api/Customizer/Blog/Sidebar.php:102
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:17
 msgid "No Sidebar"
 msgstr ""
 
 #: inc/Api/Customizer/Blog/Sidebar.php:65
 #: inc/Api/Customizer/Blog/Sidebar.php:106
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:18
 msgid "Left Sidebar"
 msgstr ""
 
 #: inc/Api/Customizer/Blog/Sidebar.php:69
 #: inc/Api/Customizer/Blog/Sidebar.php:110
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:19
 msgid "Right Sidebar"
 msgstr ""
 
@@ -174,6 +181,8 @@ msgstr ""
 
 #: inc/Api/Customizer/Footer/Footer.php:35
 #: inc/Setup/Menus.php:33
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:24
+#: inc/Setup/Settings/reactjs/src/general/index.js:36
 msgid "Footer"
 msgstr ""
 
@@ -202,22 +211,27 @@ msgid "Select Footer Type"
 msgstr ""
 
 #: inc/Api/Customizer/Footer/Footer.php:134
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:28
 msgid "Type 1"
 msgstr ""
 
 #: inc/Api/Customizer/Footer/Footer.php:138
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:29
 msgid "Type 2"
 msgstr ""
 
 #: inc/Api/Customizer/Footer/Footer.php:142
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:30
 msgid "Type 3"
 msgstr ""
 
 #: inc/Api/Customizer/Footer/Footer.php:146
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:31
 msgid "Type 4"
 msgstr ""
 
 #: inc/Api/Customizer/Footer/Footer.php:150
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:32
 msgid "Type 5"
 msgstr ""
 
@@ -257,6 +271,7 @@ msgid "Footer Bottom Text"
 msgstr ""
 
 #: inc/Api/Customizer/General/Colors.php:30
+#: inc/Setup/Settings/reactjs/src/general/index.js:24
 msgid "Colors"
 msgstr ""
 
@@ -293,6 +308,7 @@ msgid "Content Width (px)"
 msgstr ""
 
 #: inc/Api/Customizer/General/Typography.php:28
+#: inc/Setup/Settings/reactjs/src/general/index.js:40
 msgid "Typography"
 msgstr ""
 
@@ -346,6 +362,7 @@ msgid "H6 Typography"
 msgstr ""
 
 #: inc/Api/Customizer/Header/Header.php:36
+#: inc/Setup/Settings/reactjs/src/general/index.js:32
 msgid "Header"
 msgstr ""
 
@@ -495,6 +512,7 @@ msgid "Button Typography"
 msgstr ""
 
 #: inc/Core/Sidebar.php:30
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:13
 msgid "Sidebar"
 msgstr ""
 
@@ -1218,7 +1236,7 @@ msgstr ""
 
 #: page-templates/tpl-signin.php:41
 #: page-templates/tpl-signup.php:46
-#: assets/dist/js/tutorstarter-schema.js:237
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:171
 msgid "Email"
 msgstr ""
 
@@ -1414,7 +1432,7 @@ msgid "Update totals"
 msgstr ""
 
 #: woocommerce/checkout/review-order.php:23
-#: assets/dist/js/tutorstarter-schema.js:609
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:67
 msgid "Product"
 msgstr ""
 
@@ -1455,524 +1473,621 @@ msgstr ""
 msgid "Payment method:"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:133
-#: assets/dist/js/tutorstarter-schema.js:178
+#: inc/Api/Customizer/reactjs/src/common/responsive.js:20
+msgid "Desktop"
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/common/responsive.js:24
+msgid "Tablet"
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/common/responsive.js:28
+msgid "Mobile"
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/font-family/font-family-selector.js:55
+#: inc/Api/Customizer/reactjs/src/font-family/font-family-selector.js:167
+msgid "Inherit"
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/font-family/font-family-selector.js:119
+msgid "Search"
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/font-family/font-family-selector.js:141
+msgid "No results."
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/font-family/font-family-selector.js:155
+msgid "Font Family"
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/font-family/font-family-selector.js:184
+msgid "Loading..."
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/typography/typography-component.js:165
+msgid "Font Size"
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/typography/typography-component.js:200
+msgid "Line Height"
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/typography/typography-component.js:252
+msgid "Font Weight"
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/typography/typography-component.js:280
+msgid "Text Transform"
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/typography/typography-component.js:285
+msgid "None"
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/typography/typography-component.js:288
+msgid "Capitalize"
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/typography/typography-component.js:292
+msgid "Lowercase"
+msgstr ""
+
+#: inc/Api/Customizer/reactjs/src/typography/typography-component.js:296
+msgid "Uppercase"
+msgstr ""
+
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:16
+msgid "--Select Option--"
+msgstr ""
+
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:27
+msgid "--Select Footer--"
+msgstr ""
+
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:37
+msgid "Disable Title?"
+msgstr ""
+
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:42
+msgid "Disable Header?"
+msgstr ""
+
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:47
+msgid "Enable Transparent Header?"
+msgstr ""
+
+#: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:52
+msgid "Disable Footer?"
+msgstr ""
+
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:67
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:118
 msgid "Schema Type"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:141
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:73
 msgid "Title"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:142
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:74
 msgid "e.g: My Awesome Post"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:148
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:81
 msgid "Image URL"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:149
-#: assets/dist/js/tutorstarter-schema.js:273
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:82
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:215
 msgid "e.g: https://site.com/image-url.jpg"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:155
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:89
 msgid "Keywords"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:156
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:90
 msgid "e.g: seo wordpress blog"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:162
-#: assets/dist/js/tutorstarter-schema.js:279
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:97
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:224
 msgid "Description"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:163
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:98
 msgid "e.g: Awesome Description"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:169
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:105
 msgid "Article Body"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:170
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:106
 msgid "e.g: Awesome Post Content"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:181
-#: assets/dist/js/tutorstarter-schema.js:444
-#: assets/dist/js/tutorstarter-schema.js:568
-#: assets/dist/js/tutorstarter-schema.js:593
-#: assets/dist/js/tutorstarter-schema.js:606
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:122
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:4
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:48
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:59
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:66
 msgid "--Select--"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:184
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:123
 msgid "Local Business"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:187
-#: assets/dist/js/tutorstarter-schema.js:571
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:124
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:49
 msgid "Organization"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:190
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:125
 msgid "Web Page"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:193
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:126
 msgid "Video"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:196
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:127
 msgid "Review"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:199
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:128
 msgid "Person"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:202
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:129
 msgid "Course"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:209
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:136
 msgid "Gender"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:209
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:136
 msgid "Sub Schema Type"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:216
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:145
 msgid "Name"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:217
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:146
 msgid "e.g: John Doe"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:223
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:155
 msgid "Job Title"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:224
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:156
 msgid "e.g: Software Engineer"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:230
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:163
 msgid "Height"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:231
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:164
 msgid "e.g: 165 cm"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:238
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:172
 msgid "e.g: john@doe.com"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:244
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:179
 msgid "Birth Date"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:245
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:180
 msgid "e.g: YYYY-MM-DD"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:251
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:187
 msgid "Birth Place"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:252
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:188
 msgid "e.g: Zurich, Switzerland"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:258
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:195
 msgid "Nationality"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:259
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:196
 msgid "e.g: American"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:265
-#: assets/dist/js/tutorstarter-schema.js:286
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:203
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:234
 msgid "PO Box"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:266
-#: assets/dist/js/tutorstarter-schema.js:287
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:204
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:235
 msgid "e.g: 4521"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:272
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:214
 msgid "Thumbnail URL"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:272
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:214
 msgid "Logo/Image URL"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:280
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:225
 msgid "e.g: Awesome description"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:293
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:245
 msgid "Address"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:294
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:246
 msgid "e.g: 45, johnson road"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:300
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:253
 msgid "Phone Number"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:301
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:254
 msgid "e.g: +1 22 33 4567"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:307
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:261
 msgid "City"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:308
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:262
 msgid "e.g: New York"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:314
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:269
 msgid "State/Region"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:315
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:270
 msgid "e.g: California(CA)"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:321
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:277
 msgid "Zip/Postal Code"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:322
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:278
 msgid "e.g: 1234"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:328
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:285
 msgid "Country"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:329
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:286
 msgid "e.g: USA"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:335
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:297
 msgid "Upload Date"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:336
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:298
 msgid "Format it like this YYYY-MM-DD and the time with \"T then hour:minute:second+timezone\""
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:337
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:299
 msgid "e.g: 2020-10-10T08:00:00+08:00"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:343
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:306
 msgid "Duration"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:344
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:307
 msgid "Format it like this: PT then 1 minute and then 30 second"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:345
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:308
 msgid "e.g: PT1M30S"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:351
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:315
 msgid "Content URL"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:352
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:316
 msgid "e.g: https://example.com/video-url.mp4"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:358
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:323
 msgid "Embed URL"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:359
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:324
 msgid "e.g: https://example.com/videoplayer.swf?video=123"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:365
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:331
 msgid "Interaction Count"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:366
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:332
 msgid "e.g: 1254"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:372
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:343
 msgid "Rating Value"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:373
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:344
 msgid "e.g: 4"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:379
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:351
 msgid "Reviewed Item"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:380
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:352
 msgid "e.g: iPhone 11 Pro Case"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:386
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:359
 msgid "Reviewed By"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:387
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:360
 msgid "e.g: Mr John Doe"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:393
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:367
 msgid "Date Published"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:394
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:368
 msgid "Format it like this YYYY-MM-DD"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:395
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:369
 msgid "e.g: 2020-10-10"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:401
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:376
 msgid "Review Publisher Type"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:402
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:377
 msgid "e.g: Organization"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:408
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:384
 msgid "Publisher Name"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:409
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:385
 msgid "e.g: iPhone 11 Pro Case Inc."
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:415
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:396
 msgid "Provider Name"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:416
+#: inc/Custom/Schema/schemajs/src/schema/fields/schema-fields.js:397
 msgid "e.g: Awesome Course Org."
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:447
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:5
 msgid "Accounting Service"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:450
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:6
 msgid "Amusement Park"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:453
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:7
 msgid "Animal Shelter"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:456
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:8
 msgid "Art Gallery"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:459
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:9
 msgid "Automotive Business"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:462
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:10
 msgid "Auto Body Shop"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:465
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:11
 msgid "Auto Dealer"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:468
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:12
 msgid "Auto Parts Store"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:471
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:13
 msgid "Auto Rental"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:474
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:14
 msgid "Auto Repair"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:477
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:15
 msgid "Auto Wash"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:480
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:16
 msgid "Bakery"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:483
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:17
 msgid "Bar Or Pub"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:486
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:18
 msgid "Beauty Salon"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:489
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:19
 msgid "Cafe Or Coffee Shop"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:492
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:20
 msgid "Casino"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:495
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:21
 msgid "Child Care"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:498
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:22
 msgid "Comedy Club"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:501
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:23
 msgid "Day Spa"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:504
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:24
 msgid "Dry Cleaning Or Laundry"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:507
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:25
 msgid "Emergency Service"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:510
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:26
 msgid "Employment Agency"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:513
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:27
 msgid "Entertainment Business"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:516
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:28
 msgid "Fast Food Restaurant"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:519
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:29
 msgid "Fire Station"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:522
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:30
 msgid "Gas Station"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:525
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:31
 msgid "Hair Salon"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:528
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:32
 msgid "Health And Beauty Business"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:531
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:33
 msgid "Health Club"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:534
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:34
 msgid "Hospital"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:537
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:35
 msgid "Ice Cream Shop"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:540
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:36
 msgid "Insurance Agency"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:543
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:37
 msgid "Motorcycle Dealer"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:546
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:38
 msgid "Motorcycle Repair"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:549
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:39
 msgid "Movie Theater"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:552
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:40
 msgid "Nail Salon"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:555
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:41
 msgid "Night Club"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:558
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:42
 msgid "Police Station"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:561
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:43
 msgid "Restaurant"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:564
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:44
 msgid "Tatto Parlor"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:574
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:50
 msgid "Corporation"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:577
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:51
 msgid "Educational Organization"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:580
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:52
 msgid "Government Organization"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:583
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:53
 msgid "NGO"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:586
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:54
 msgid "Performing Group"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:589
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:55
 msgid "Sports Team"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:596
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:60
 msgid "Male"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:599
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:61
 msgid "Female"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:602
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:62
 msgid "Other"
 msgstr ""
 
-#: assets/dist/js/tutorstarter-schema.js:612
+#: inc/Custom/Schema/schemajs/src/schema/fields/select-options.js:68
 msgid "Book"
+msgstr ""
+
+#: inc/Setup/Settings/reactjs/src/general/index.js:17
+msgid "Customizer Quick Links"
+msgstr ""
+
+#: inc/Setup/Settings/reactjs/src/general/index.js:28
+msgid "Layouts"
 msgstr ""
