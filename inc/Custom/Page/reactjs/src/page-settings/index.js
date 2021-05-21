@@ -1,3 +1,4 @@
+const { __ } = wp.i18n;
 const { compose } = wp.compose;
 const { PluginDocumentSettingPanel } = wp.editPost;
 const { select, withSelect, withDispatch } = wp.data;
@@ -34,7 +35,7 @@ const TutorStarterPageSettingsPanel = () => {
     return (
         <PluginDocumentSettingPanel
             name='tutorstarter-settings-panel'
-            title='Tutor Starter Page Settings'
+            title={__( 'Tutor Starter Page Settings', 'tutorstarter' )}
         >
             <PageSettingsFieldsData />
         </PluginDocumentSettingPanel>

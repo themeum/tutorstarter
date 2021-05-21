@@ -25,13 +25,16 @@ class Enqueue {
 		}
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'load_dashboard_script_translations' ), 99 );
 		add_filter( 'style_loader_tag', array( $this, 'load_styles_deferred' ), 10, 4 );
 		if ( ! is_admin() && ! is_customize_preview() ) {
 			add_filter( 'script_loader_tag', array( $this, 'load_scripts_deferred' ), 10, 1 );
 		}
 		add_action( 'customize_preview_init', array( $this, 'enqueue_customize_preview' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_editor_assets' ) );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'load_editor_assets_translations' ), 99 );
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_customizer_controls_scripts' ) );
+		add_action( 'customize_controls_enqueue_scripts', array( $this, 'load_customizer_controls_scripts_translations' ), 99 );
 	}
 
 	/**
@@ -157,6 +160,14 @@ class Enqueue {
 			)
 		);
 	}
+	
+	/**
+	 * Load dashboard and schema script translations
+	 */
+	public function load_dashboard_script_translations() {
+		wp_set_script_translations( 'tutorstarter-dashboard', 'tutorstarter', get_template_directory() . '/languages' );
+		wp_set_script_translations( 'tutorstarter-schema-data', 'tutorstarter', get_template_directory() . '/languages' );
+	}
 
 	/**
 	 * Enqueue customizer controls
@@ -177,6 +188,13 @@ class Enqueue {
 	}
 
 	/**
+	 * Load customizer controls script translations
+	 */
+	public function load_customizer_controls_scripts_translations() {
+		wp_set_script_translations( 'tutorstarter-customizer', 'tutorstarter', get_template_directory() . '/languages' );
+	}
+
+	/**
 	 * Enqueue customizer preview
 	 */
 	public function enqueue_customize_preview() {
@@ -190,5 +208,12 @@ class Enqueue {
 		wp_enqueue_style( 'tutorstarter-admin', mix( 'css/admin.css' ), array(), TUTOR_STARTER_VERSION, 'all' );
 		wp_enqueue_script( 'tutorstarter-settings', mix( 'js/tutorstarter-page-settings.js' ), array( 'wp-i18n', 'wp-compose', 'wp-data', 'wp-components', 'wp-edit-post', 'wp-element', 'wp-plugins' ), TUTOR_STARTER_VERSION, true );
 		wp_localize_script( 'tutorstarter-settings', 'tutorstarter_admin_page', Inline_Css_Js::admin_localized_js() );
+	}
+
+	/**
+	 * Load page settings script translations
+	 */
+	public function load_editor_assets_translations() {
+		wp_set_script_translations( 'tutorstarter-settings', 'tutorstarter', get_template_directory() . '/languages' );
 	}
 }
