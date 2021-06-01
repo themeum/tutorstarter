@@ -65,7 +65,7 @@ class Updater {
 		);
 
 		// Make the POST request.
-		$request      = wp_remote_post( $this->api_end_point . 'check-update', $params );
+		$request      = wp_remote_post( $this->api_end_point . 'check-update-free', $params );
 		$request_body = false;
 		
 		// Check if response is valid.
