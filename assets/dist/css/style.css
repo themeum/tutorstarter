@@ -537,6 +537,11 @@ table {
   width: 100%;
 }
 
+table th,
+table td {
+  padding: 0.5em 1.41575em;
+}
+
 body.admin-bar header.header-transparent {
   top: 20px;
 }
