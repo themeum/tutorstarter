@@ -93,7 +93,8 @@ $blue: #1950D1;
 
 /* Single Course */
 .tutor-wrap.tutor-full-width-course-top {
-    padding-top: 90px;
+    // padding-top: 70px;
+	// padding-bottom: 70px;
 }
 .tutor-single-course-segment {
     font-size: 16px;
@@ -345,4 +346,43 @@ $blue: #1950D1;
             border: 1px solid #1950D1;
         }
     }
+}
+
+// Site-content spacing
+.single-courses .site-content {
+	padding: 40px 0;
+}
+
+// Announcements tab
+.tutor-announcements-wrap{
+    h2{
+        font-size: var(--h4-font-size);
+    }
+}
+
+// Assignment 
+.tutor-assignment-title, .tutor-assignment-content, .tutor-no-announcements{
+    h2{
+        font-size: var(--h4-font-size);
+    }
+}
+
+.tutor-assignment-start-btn-wrap{
+    margin-top: 2em;
+}
+
+.tutor-next-previous-pagination-wrap{
+    margin-top: 1em;
+}
+
+.tutor-quiz-builder-group>h4{
+    font-size: unset;
+}
+
+.tutor-metabox-add-topics h3 {
+	font-size: var(--h5-font-size);
+}
+
+.tutor-add-quiz-button-wrap a {
+	color: unset;
 }

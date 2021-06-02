@@ -6753,6 +6753,7 @@ h1.entry-title {
   height: auto;
   margin: 0;
   max-width: 98.5%;
+  max-width: 100%;
   padding: 0;
   width: auto;
 }
@@ -9170,10 +9171,6 @@ img {
 
 /* Single Course */
 
-.tutor-wrap.tutor-full-width-course-top {
-  padding-top: 90px;
-}
-
 .tutor-single-course-segment {
   font-size: 16px;
   font-weight: 400;
@@ -9424,6 +9421,40 @@ img {
   background: #1950D1;
   color: #ffffff;
   border: 1px solid #1950D1;
+}
+
+.single-courses .site-content {
+  padding: 40px 0;
+}
+
+.tutor-announcements-wrap h2 {
+  font-size: var(--h4-font-size);
+}
+
+.tutor-assignment-title h2,
+.tutor-assignment-content h2,
+.tutor-no-announcements h2 {
+  font-size: var(--h4-font-size);
+}
+
+.tutor-assignment-start-btn-wrap {
+  margin-top: 2em;
+}
+
+.tutor-next-previous-pagination-wrap {
+  margin-top: 1em;
+}
+
+.tutor-quiz-builder-group > h4 {
+  font-size: unset;
+}
+
+.tutor-metabox-add-topics h3 {
+  font-size: var(--h5-font-size);
+}
+
+.tutor-add-quiz-button-wrap a {
+  color: unset;
 }
 
 section.tutor-theme-getting-starter .getting-started-page-heading {
