@@ -528,6 +528,15 @@ html {
   scroll-behavior: smooth;
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
 body.admin-bar header.header-transparent {
   top: 20px;
 }
@@ -6800,10 +6809,6 @@ a.wp-block-button__link br {
 
 .wp-block-button:not(:last-child) {
   margin-bottom: 10px;
-}
-
-pre {
-  white-space: pre-wrap;
 }
 
 /*--------------------------------------------------------------

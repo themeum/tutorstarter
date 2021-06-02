@@ -1,13 +1,22 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+table {
+    margin: 0 0 1.5em;
+    width: 100%;
 }
