@@ -1973,8 +1973,8 @@ var ColorControl = wp.customize.Control.extend({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
 function _typeof(obj) {
   "@babel/helpers - typeof";
 
@@ -2206,11 +2206,11 @@ var ResponsiveControl = /*#__PURE__*/function (_Component) {
 }(Component);
 
 ResponsiveControl.propTypes = {
-  onChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  controlLabel: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
-  hideResponsive: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
-  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.any,
-  excluded: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array
+  onChange: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
+  controlLabel: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
+  hideResponsive: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
+  children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.any,
+  excluded: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.array
 };
 /* harmony default export */ __webpack_exports__["default"] = (ResponsiveControl);
 
@@ -2275,8 +2275,8 @@ var FontFamilyControl = wp.customize.Control.extend({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _font_family_selector_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./font-family-selector.js */ "./inc/Api/Customizer/reactjs/src/font-family/font-family-selector.js");
 function _typeof(obj) {
   "@babel/helpers - typeof";
@@ -2531,7 +2531,7 @@ var FontFamilyComponent = /*#__PURE__*/function (_Component) {
 }(Component);
 
 FontFamilyComponent.propTypes = {
-  control: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object.isRequired
+  control: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.object.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (FontFamilyComponent);
 
@@ -2546,11 +2546,11 @@ FontFamilyComponent.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _font_preview_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./font-preview-link */ "./inc/Api/Customizer/reactjs/src/font-family/font-preview-link.js");
-/* harmony import */ var react_visibility_sensor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-visibility-sensor */ "./inc/Api/Customizer/reactjs/node_modules/react-visibility-sensor/dist/visibility-sensor.js");
-/* harmony import */ var react_visibility_sensor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_visibility_sensor__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_visibility_sensor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-visibility-sensor */ "./inc/Api/Customizer/reactjs/node_modules/react-visibility-sensor/dist/visibility-sensor.js");
+/* harmony import */ var react_visibility_sensor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_visibility_sensor__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) {
   "@babel/helpers - typeof";
 
@@ -2773,7 +2773,7 @@ var FontFamilySelector = /*#__PURE__*/function (_Component) {
       });
 
       if (this.state.loadUntil < options.length && this.state.search === '') {
-        options.push( /*#__PURE__*/React.createElement(react_visibility_sensor__WEBPACK_IMPORTED_MODULE_3___default.a, {
+        options.push( /*#__PURE__*/React.createElement(react_visibility_sensor__WEBPACK_IMPORTED_MODULE_2___default.a, {
           key: "load-more",
           onChange: function onChange(isVisible) {
             if (isVisible) {
@@ -2864,10 +2864,10 @@ var FontFamilySelector = /*#__PURE__*/function (_Component) {
 }(Component);
 
 FontFamilySelector.propTypes = {
-  onFontChoice: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,
-  maybeGetTypekit: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,
-  inheritDefault: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool.isRequired,
-  selected: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool])
+  onFontChoice: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func.isRequired,
+  maybeGetTypekit: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func.isRequired,
+  inheritDefault: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool.isRequired,
+  selected: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool])
 };
 /* harmony default export */ __webpack_exports__["default"] = (FontFamilySelector);
 
@@ -2882,10 +2882,10 @@ FontFamilySelector.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_visibility_sensor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-visibility-sensor */ "./inc/Api/Customizer/reactjs/node_modules/react-visibility-sensor/dist/visibility-sensor.js");
-/* harmony import */ var react_visibility_sensor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_visibility_sensor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_visibility_sensor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-visibility-sensor */ "./inc/Api/Customizer/reactjs/node_modules/react-visibility-sensor/dist/visibility-sensor.js");
+/* harmony import */ var react_visibility_sensor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_visibility_sensor__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) {
   "@babel/helpers - typeof";
 
@@ -3040,7 +3040,7 @@ var FontPreviewLink = /*#__PURE__*/function (_Component) {
         }
       }, /*#__PURE__*/React.createElement("span", {
         className: "tutorstarter-font-family"
-      }, this.props.label || this.props.fontFace), /*#__PURE__*/React.createElement(react_visibility_sensor__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      }, this.props.label || this.props.fontFace), /*#__PURE__*/React.createElement(react_visibility_sensor__WEBPACK_IMPORTED_MODULE_1___default.a, {
         onChange: function onChange(isVisible) {
           if (isVisible) {
             _this2.setState({
@@ -3061,10 +3061,10 @@ var FontPreviewLink = /*#__PURE__*/function (_Component) {
 }(Component);
 
 FontPreviewLink.propTypes = {
-  fontFace: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
-  delayLoad: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool.isRequired,
-  onClick: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired,
-  label: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+  fontFace: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string.isRequired,
+  delayLoad: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool.isRequired,
+  onClick: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func.isRequired,
+  label: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string
 };
 /* harmony default export */ __webpack_exports__["default"] = (FontPreviewLink);
 
@@ -3102,10 +3102,10 @@ var RadioImageControl = wp.customize.Control.extend({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./inc/Api/Customizer/reactjs/node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./inc/Api/Customizer/reactjs/node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
@@ -3190,7 +3190,7 @@ var RadioImageComponent = function RadioImageComponent(_ref) {
       var _choices$choice = choices[choice],
           name = _choices$choice.name,
           image = _choices$choice.image;
-      var buttonClass = classnames__WEBPACK_IMPORTED_MODULE_2___default()([{
+      var buttonClass = classnames__WEBPACK_IMPORTED_MODULE_1___default()([{
         active: choice === value
       }]);
       return /*#__PURE__*/React.createElement("div", {
@@ -3219,7 +3219,7 @@ var RadioImageComponent = function RadioImageComponent(_ref) {
 };
 
 RadioImageComponent.propTypes = {
-  control: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired
+  control: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.object.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (RadioImageComponent);
 
@@ -3257,8 +3257,8 @@ var ToggleSwitchControl = wp.customize.Control.extend({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
@@ -3359,7 +3359,7 @@ var ToggleSwitchComponent = function ToggleSwitchComponent(_ref) {
 };
 
 ToggleSwitchComponent.propTypes = {
-  control: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired
+  control: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.object.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (ToggleSwitchComponent);
 
@@ -3398,11 +3398,11 @@ var TypographyControl = wp.customize.Control.extend({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./inc/Api/Customizer/reactjs/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _common_responsive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/responsive */ "./inc/Api/Customizer/reactjs/src/common/responsive.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./inc/Api/Customizer/reactjs/node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./inc/Api/Customizer/reactjs/node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) {
   "@babel/helpers - typeof";
 
@@ -3687,7 +3687,7 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
       return units.map(function (unit, index) {
         var currentDevice = _this2.state.currentDevice;
         var value = _this2.state[key];
-        var buttonClass = classnames__WEBPACK_IMPORTED_MODULE_3___default()({
+        var buttonClass = classnames__WEBPACK_IMPORTED_MODULE_2___default()({
           active: value[currentDevice + '-unit'] === unit
         });
         return /*#__PURE__*/React.createElement(Button, {
@@ -3919,7 +3919,7 @@ var TypographyComponent = /*#__PURE__*/function (_Component) {
 }(Component);
 
 TypographyComponent.propTypes = {
-  control: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object.isRequired
+  control: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.object.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (TypographyComponent);
 
@@ -3932,7 +3932,7 @@ TypographyComponent.propTypes = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/saief/Local Sites/tutorstarterfix/app/public/wp-content/themes/tutorstarter/inc/Api/Customizer/reactjs/src/customizer-controls.js */"./inc/Api/Customizer/reactjs/src/customizer-controls.js");
+module.exports = __webpack_require__(/*! /Users/joomshaper/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Api/Customizer/reactjs/src/customizer-controls.js */"./inc/Api/Customizer/reactjs/src/customizer-controls.js");
 
 
 /***/ }),
