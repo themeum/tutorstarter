@@ -94,11 +94,11 @@ h1.entry-title {
 .wp-caption {
     background: $white;
     border: 1px solid $light-grey;
-    max-width: 96%;
+    max-width: 100%;
 
     /* Image does not overflow the content area */
     padding: 5px 3px 10px;
-    text-align: center;
+    text-align: left;
 }
 
 .wp-caption.alignnone {

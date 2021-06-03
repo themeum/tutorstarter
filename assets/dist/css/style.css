@@ -6730,10 +6730,10 @@ h1.entry-title {
 .wp-caption {
   background: #ffffff;
   border: 1px solid #EAF1F8;
-  max-width: 96%;
+  max-width: 100%;
   /* Image does not overflow the content area */
   padding: 5px 3px 10px;
-  text-align: center;
+  text-align: left;
 }
 
 .wp-caption.alignnone {
@@ -7881,6 +7881,10 @@ h1.entry-title {
   text-align: center !important;
 }
 
+.cart-collaterals .woocommerce-message {
+  display: none;
+}
+
 .checkout-top-spacing {
   margin-top: 30px;
 }
@@ -7975,7 +7979,7 @@ fieldset#wc-stripe-cc-form label {
 .place_order {
   background: #1950D1 !important;
   border-radius: 33px !important;
-  padding: 20px 30px !important;
+  padding: 15px 20px !important;
   font-family: var(--body-font);
   font-weight: 600;
   font-size: 16px;
