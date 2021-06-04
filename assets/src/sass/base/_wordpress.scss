@@ -186,3 +186,10 @@ a.wp-block-button__link br {
 .wp-block-button:not(:last-child) {
     margin-bottom: 10px;
 }
+
+
+.comment-reply-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}

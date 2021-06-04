@@ -16,7 +16,7 @@ $blue: #1950D1;
     box-shadow: 0px 4px 10px rgb(39 57 101 / 10%);
     border-radius: 10px;
     &:hover {
-        box-shadow: 0px 4px 15px 4px rgb(39 57 101 / 12%);
+        box-shadow: 0px 4px 15px 4px rgb(39 57 101 / 12%) !important;
         transform: translateY(-2px);
     }
     .tutor-course-header a{
@@ -81,6 +81,10 @@ $blue: #1950D1;
                 &:before {
                     margin-right: 0;
                     margin-left: 5px;
+                    color: #57586e;
+                }
+                &:hover, &:hover:before{
+                    color: var(--tutor-primary-color);
                 }
             }
         }
@@ -385,4 +389,15 @@ $blue: #1950D1;
 
 .tutor-add-quiz-button-wrap a {
 	color: unset;
+}
+
+.tutor-course-loop-header-meta .tutor-course-wishlist {
+    a {
+        color: #1c52d8;    
+    }
+    &:hover{
+        a{
+            color: #fff;    
+        }
+    }
 }

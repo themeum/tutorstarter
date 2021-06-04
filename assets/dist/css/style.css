@@ -535,11 +535,18 @@ pre {
 table {
   margin: 0 0 1.5em;
   width: 100%;
+  border-collapse: collapse;
 }
 
 table th,
 table td {
   padding: 0.5em 1.41575em;
+  border: 1px solid var(--wc-secondary);
+}
+
+ul,
+ol {
+  padding-left: 17px;
 }
 
 body.admin-bar header.header-transparent {
@@ -6817,6 +6824,12 @@ a.wp-block-button__link br {
   margin-bottom: 10px;
 }
 
+.comment-reply-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /*--------------------------------------------------------------
 # Partials
 --------------------------------------------------------------*/
@@ -8860,6 +8873,7 @@ img {
 
 .comment-form textarea {
   height: 100px;
+  line-height: 1.3;
 }
 
 .comment-form .form-submit input[type=submit],
@@ -9090,7 +9104,7 @@ img {
 }
 
 .tutor-course-loop:hover {
-  box-shadow: 0px 4px 15px 4px rgba(39, 57, 101, 0.12);
+  box-shadow: 0px 4px 15px 4px rgba(39, 57, 101, 0.12) !important;
   transform: translateY(-2px);
 }
 
@@ -9167,6 +9181,12 @@ img {
 .tutor-course-loop .tutor-loop-course-footer .price a:before {
   margin-right: 0;
   margin-left: 5px;
+  color: #57586e;
+}
+
+.tutor-course-loop .tutor-loop-course-footer .price a:hover,
+.tutor-course-loop .tutor-loop-course-footer .price a:hover:before {
+  color: var(--tutor-primary-color);
 }
 
 .tutor-courses-wrap {
@@ -9459,6 +9479,14 @@ img {
 
 .tutor-add-quiz-button-wrap a {
   color: unset;
+}
+
+.tutor-course-loop-header-meta .tutor-course-wishlist a {
+  color: #1c52d8;
+}
+
+.tutor-course-loop-header-meta .tutor-course-wishlist:hover a {
+  color: #fff;
 }
 
 section.tutor-theme-getting-starter .getting-started-page-heading {

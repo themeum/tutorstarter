@@ -683,7 +683,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/joomshaper/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/assets/src/scripts/customizer-preview.js */"./assets/src/scripts/customizer-preview.js");
+module.exports = __webpack_require__(/*! /Users/saief/Local Sites/tutorstarterfix/app/public/wp-content/themes/tutorstarter/assets/src/scripts/customizer-preview.js */"./assets/src/scripts/customizer-preview.js");
 
 
 /***/ })
