@@ -81,6 +81,36 @@ class Footer {
 				array(
 					'label'           => esc_html__( 'Footer Bottom Logo', 'tutorstarter' ),
 					'section'         => 'tutorstarter_footer_section',
+					'active_callback' => 'control_active_callback_footer_layout',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'footer_retina_logo',
+			array(
+				'title'             => esc_html__( 'Footer Retina Logo', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'esc_url_raw',
+			)
+		);
+		$wp_customize->selective_refresh->add_partial(
+			'footer_retina_logo',
+			array(
+				'selector'            => '.site-info',
+				'container_inclusive' => true,
+				'render_callback'     => function() {
+					return true;
+				},
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'footer_retina_logo',
+				array(
+					'label'           => esc_html__( 'Footer Retina Logo', 'tutorstarter' ),
+					'section'         => 'tutorstarter_footer_section',
+					'active_callback' => 'control_active_callback_footer_layout',
 				)
 			)
 		);
@@ -108,6 +138,35 @@ class Footer {
 				'footer_logo_trans',
 				array(
 					'label'           => esc_html__( 'Footer Transparent Logo', 'tutorstarter' ),
+					'section'         => 'tutorstarter_footer_section',
+					'active_callback' => 'control_active_callback_footer_logo_trans',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'footer_retina_trans_logo',
+			array(
+				'title'             => esc_html__( 'Footer Transparent Retina Logo', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'esc_url_raw',
+			)
+		);
+		$wp_customize->selective_refresh->add_partial(
+			'footer_retina_trans_logo',
+			array(
+				'selector'            => '.site-info',
+				'container_inclusive' => true,
+				'render_callback'     => function() {
+					return true;
+				},
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'footer_retina_trans_logo',
+				array(
+					'label'           => esc_html__( 'Footer Transparent Retina Logo', 'tutorstarter' ),
 					'section'         => 'tutorstarter_footer_section',
 					'active_callback' => 'control_active_callback_footer_logo_trans',
 				)
