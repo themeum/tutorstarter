@@ -201,12 +201,12 @@
 
 .comment-reply-title,
 .comments-title {
-    font-family: var(--body-font);
-    font-size: 22px;
-    line-height: 1.6;
-    font-weight: 500;
-    letter-spacing: -0.562px;
-    margin-bottom: 20px;
+    color: #0A083B;
+	font-family: var(--body-font);
+	font-size: 32px;
+	line-height: 1.5;
+	font-weight: 700;
+	margin-bottom: 36px;
 }
 .comment-notes {
     margin-bottom: 20px;
@@ -279,6 +279,7 @@
 }
 
 .comment-list {
+    padding-left: 0;
     margin-bottom: 20px;
     .comment-author {
         display: flex;
@@ -288,6 +289,14 @@
         }
         img {
             border-radius: 50%;
+        }
+        &.vcard{
+            .says{display: none;}
+        }
+        .fn a{
+            font-size: 16px;
+            line-height: 1.37;
+            color: #283646;
         }
     }
     .comment {
@@ -301,10 +310,18 @@
             border-bottom: 1px solid rgb(10 8 59 / 5%);
         }
         .comment-metadata {
-            font-size: 14px;
-            opacity: 0.8;
             margin-bottom: 10px;
             margin-left: 40px;
+
+            font-size: 13px;
+            line-height: 1.5;
+           a { 
+               color: rgba(87, 88, 110, 0.5);
+            }
+            .comment-edit-link{
+                color: var(--link-color);
+                opacity: 1;
+            }
         }
         .comment-content {
             margin-bottom: 10px;
