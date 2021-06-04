@@ -81,6 +81,58 @@ class Header {
 			)
 		);
 		$wp_customize->add_setting(
+			'retina_logo',
+			array(
+				'title'             => esc_html__( 'Retina Logo', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'esc_url_raw',
+			)
+		);
+		$wp_customize->selective_refresh->add_partial(
+			'retina_logo',
+			array(
+				'selector'            => '.navbar-brand',
+				'container_inclusive' => true,
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'retina_logo',
+				array(
+					'label'           => esc_html__( 'Retina Logo', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback_std_menu',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'retina_trans_logo',
+			array(
+				'title'             => esc_html__( 'Transparent Retina Logo', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'esc_url_raw',
+			)
+		);
+		$wp_customize->selective_refresh->add_partial(
+			'retina_trans_logo',
+			array(
+				'selector'            => '.navbar-brand',
+				'container_inclusive' => true,
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'retina_trans_logo',
+				array(
+					'label'           => esc_html__( 'Transparent Retina Logo', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback_transparent',
+				)
+			)
+		);
+		$wp_customize->add_setting(
 			'header_type_select',
 			array(
 				'title'             => esc_html__( 'Select Header Type', 'tutorstarter' ),

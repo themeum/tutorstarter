@@ -8,19 +8,7 @@
     <!-- .navbar .navbar-center .navbar-right .has-search-field .full-width -->
     <nav class="navbar <?php echo tutorstarter_header_switcher(); ?> <?php echo 'navbar-right' === tutorstarter_header_switcher() ? 'has-search-field' : ''; ?>">
         <div class="navbar-brand">
-        <?php 
-            $logo = get_theme_mod( 'custom_logo' );
-            $logo_img = wp_get_attachment_image_src( $logo, 'full' );
-        ?>
-        <?php if ( $logo_img ) : ?>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img src="<?php echo esc_url( $logo_img[0] ); ?>" alt="<?php esc_attr_e( bloginfo( 'name' ) ); ?>" />
-            </a>
-        <?php else : ?>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-header.png' ); ?>" alt="<?php esc_attr_e( bloginfo( 'name' ) ); ?>" />
-            </a>
-        <?php endif; ?>
+            <?php tutorstarter_site_logo(); ?>
         </div>
         <!-- .has-search-field must use with .navbar-right -->
         <div class="search-field">
