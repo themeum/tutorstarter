@@ -626,6 +626,8 @@ header.header-transparent .navbar .navbar-utils a.btn-getstarted {
   text-transform: var(--cta-font-transform);
   color: var(--headerBtnColorTrans);
   background: var(--headerBtnBgColorTrans);
+  display: inline-block;
+  text-align: center;
 }
 
 header.header-transparent .navbar .toggle-icon span,
@@ -979,6 +981,8 @@ header.header-default .utils-search {
   line-height: var(--cta-font-lineheight);
   color: var(--headerBtnColor);
   background: var(--headerBtnBgColor);
+  display: inline-block;
+  text-align: center;
 }
 
 .navbar .btn-search {
@@ -9485,9 +9489,9 @@ img {
 
 .tutor-pagination-wrap .page-numbers:hover,
 .tutor-pagination-wrap .page-numbers.current {
-  background: #1950D1;
+  background: #1950d1;
   color: #ffffff;
-  border: 1px solid #1950D1;
+  border: 1px solid #1950d1;
 }
 
 .single-courses .site-content {
@@ -9650,7 +9654,7 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
 
 section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp label a {
   float: right;
-  color: #1950D1;
+  color: #1950d1;
   font-weight: normal;
 }
 
@@ -9727,7 +9731,7 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .already-have-account-l
 
 section.tutor-theme-signin .tutor-theme-signin-form-area .already-have-account-link a {
   text-align: center;
-  color: #1950D1;
+  color: #1950d1;
 }
 
 @media (max-width: 767px) {
@@ -9838,7 +9842,7 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-for
 }
 
 section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp.signup-form-terms-condition a {
-  color: #1950D1;
+  color: #1950d1;
   position: relative;
 }
 
@@ -9847,7 +9851,7 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-for
   position: absolute;
   width: 100%;
   height: 1px;
-  background: #1950D1;
+  background: #1950d1;
   bottom: 0px;
   left: 0;
 }
@@ -9896,7 +9900,7 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .already-have-account-l
 
 section.tutor-theme-signup .tutor-theme-signup-form-area .already-have-account-link a {
   text-align: center;
-  color: #1950D1;
+  color: #1950d1;
 }
 
 @media (max-width: 767px) {

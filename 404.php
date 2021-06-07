@@ -16,7 +16,7 @@ get_header();
 
 	<div class="row">
 
-		<div class="col-sm-8">
+		<div class="col-sm-10" style="padding:30px 0;">
 
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
@@ -26,10 +26,6 @@ get_header();
 				</main><!-- #main -->
 			</div><!-- #primary -->
 
-		</div><!-- .col- -->
-
-		<div class="col-sm-4">
-			<?php get_sidebar(); ?>
 		</div><!-- .col- -->
 
 	</div><!-- .row -->

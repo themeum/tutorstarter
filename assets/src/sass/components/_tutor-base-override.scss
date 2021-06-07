@@ -2,7 +2,7 @@
 $dark: #0a083b;
 $medium: #57586e;
 $light: rgb(87 88 110 / 50%);
-$blue: #1950D1;
+$blue: #1950d1;
 
 /* Tutor Course Listing */
 #home-4-featured {
@@ -19,8 +19,8 @@ $blue: #1950D1;
         box-shadow: 0px 4px 15px 4px rgb(39 57 101 / 12%) !important;
         transform: translateY(-2px);
     }
-    .tutor-course-header a{
-        transition: opacity .3s;
+    .tutor-course-header a {
+        transition: opacity 0.3s;
     }
     .tutor-course-loop-title {
         h2 {
@@ -83,7 +83,8 @@ $blue: #1950D1;
                     margin-left: 5px;
                     color: #57586e;
                 }
-                &:hover, &:hover:before{
+                &:hover,
+                &:hover:before {
                     color: var(--tutor-primary-color);
                 }
             }
@@ -98,7 +99,7 @@ $blue: #1950D1;
 /* Single Course */
 .tutor-wrap.tutor-full-width-course-top {
     // padding-top: 70px;
-	// padding-bottom: 70px;
+    // padding-bottom: 70px;
 }
 .tutor-single-course-segment {
     font-size: 16px;
@@ -345,59 +346,61 @@ $blue: #1950D1;
         transition: all 0.15s ease-in-out;
         &:hover,
         &.current {
-            background: #1950D1;
+            background: #1950d1;
             color: #ffffff;
-            border: 1px solid #1950D1;
+            border: 1px solid #1950d1;
         }
     }
 }
 
 // Site-content spacing
 .single-courses .site-content {
-	padding: 40px 0;
+    padding: 40px 0;
 }
 
 // Announcements tab
-.tutor-announcements-wrap{
-    h2{
+.tutor-announcements-wrap {
+    h2 {
         font-size: var(--h4-font-size);
     }
 }
 
-// Assignment 
-.tutor-assignment-title, .tutor-assignment-content, .tutor-no-announcements{
-    h2{
+// Assignment
+.tutor-assignment-title,
+.tutor-assignment-content,
+.tutor-no-announcements {
+    h2 {
         font-size: var(--h4-font-size);
     }
 }
 
-.tutor-assignment-start-btn-wrap{
+.tutor-assignment-start-btn-wrap {
     margin-top: 2em;
 }
 
-.tutor-next-previous-pagination-wrap{
+.tutor-next-previous-pagination-wrap {
     margin-top: 1em;
 }
 
-.tutor-quiz-builder-group>h4{
+.tutor-quiz-builder-group > h4 {
     font-size: unset;
 }
 
 .tutor-metabox-add-topics h3 {
-	font-size: var(--h5-font-size);
+    font-size: var(--h5-font-size);
 }
 
 .tutor-add-quiz-button-wrap a {
-	color: unset;
+    color: unset;
 }
 
 .tutor-course-loop-header-meta .tutor-course-wishlist {
     a {
-        color: #1c52d8;    
+        color: #1c52d8;
     }
-    &:hover{
-        a{
-            color: #fff;    
+    &:hover {
+        a {
+            color: #fff;
         }
     }
 }

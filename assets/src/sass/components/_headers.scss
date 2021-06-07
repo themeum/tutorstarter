@@ -87,6 +87,8 @@
             line-height: var(--cta-font-lineheight);
             color: var(--headerBtnColor);
             background: var(--headerBtnBgColor);
+            display: inline-block;
+            text-align: center;
         }
     }
 

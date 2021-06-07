@@ -77,6 +77,8 @@ header.header-transparent {
                 text-transform: var(--cta-font-transform);
                 color: var(--headerBtnColorTrans);
                 background: var(--headerBtnBgColorTrans);
+                display: inline-block;
+                text-align: center;
             }
         }
 

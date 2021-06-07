@@ -9,16 +9,19 @@
 
 defined( 'ABSPATH' ) || exit;
 
-get_header(); ?>
+get_header();
+$page_meta = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
+$sidebar   = ( ! empty( $page_meta ) ? $page_meta['sidebar_select'] : 'no-sidebar' );
+?>
 
 <div class="container">
 	<div class="row">
-		<?php if ( 'sidebar_left' === get_theme_mod( 'sidebar_type_select' ) ) : ?>
+		<?php if ( 'left-sidebar' === $sidebar ) ) : ?>
 			<div id="sidebar" class="col-sm-4">
-				<?php get_sidebar(); ?>
+				<?php dynamic_sidebar( 'tutorstarter-page-sidebar' ); ?>
 			</div><!-- .col- -->
 		<?php endif; ?>
-		<div class="<?php echo 'sidebar_none' === get_theme_mod( 'sidebar_type_select' ) ? 'col-lg-10 col-sm-10' : 'col-sm-8'; ?>">
+		<div class="<?php echo 'no-sidebar' === $sidebar || '' === $sidebar ? 'col-xl-12 col-lg-12 col-sm-12' : 'col-sm-8'; ?>">
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
 
@@ -56,13 +59,14 @@ get_header(); ?>
 				</main><!-- #main -->
 			</div><!-- #primary -->
 		</div><!-- .col- -->
-		<?php if ( 'sidebar_right' === get_theme_mod( 'sidebar_type_select' ) ) : ?>
+		<?php if ( 'right-sidebar' === $sidebar ) ) : ?>
 			<div id="sidebar" class="col-sm-4">
-				<?php get_sidebar(); ?>
+				<?php dynamic_sidebar( 'tutorstarter-page-sidebar' ); ?>
 			</div><!-- .col- -->
 		<?php endif; ?>
 	</div><!-- .row -->
 </div><!-- .container -->
+<div style="padding-bottom:30px"></div>
 
 <?php
 get_footer();
