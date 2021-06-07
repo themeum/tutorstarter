@@ -8868,12 +8868,14 @@ img {
 .comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=url]:focus::-webkit-input-placeholder,
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=url]:focus::-webkit-input-placeholder,
 .comment-form textarea:focus {
-  border-color: #1950D1;
+  border-color: #95C2FF;
 }
 
 .comment-form textarea {
   height: 100px;
   line-height: 1.3;
+  box-sizing: border-box;
+  border-radius: 6px;
 }
 
 .comment-form .form-submit input[type=submit],
@@ -8915,6 +8917,10 @@ img {
   margin-bottom: 20px;
 }
 
+.comment-form .logged-in-as a {
+  font-style: italic;
+}
+
 .comment-list {
   padding-left: 0;
   margin-bottom: 20px;
@@ -8926,7 +8932,7 @@ img {
 }
 
 .comment-list .comment-author > * {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .comment-list .comment-author img {
@@ -8952,14 +8958,18 @@ img {
 }
 
 .comment-list .comment .comment-body {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(10, 8, 59, 0.05);
+  margin-bottom: 33px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #CFD3D7;
+}
+
+.comment-list .comment .comment-body .reply {
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .comment-list .comment .comment-metadata {
   margin-bottom: 10px;
-  margin-left: 40px;
   font-size: 13px;
   line-height: 1.5;
 }
@@ -8975,6 +8985,19 @@ img {
 
 .comment-list .comment .comment-content {
   margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #77808B;
+}
+
+.comment-list .comment-metadata,
+.comment-list .comment-content,
+.comment-list .reply {
+  margin-left: 40px;
+}
+
+.comment-respond .form-submit {
+  text-align: right;
 }
 
 /* Blog Layout: override */
