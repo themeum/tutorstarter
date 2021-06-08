@@ -97,10 +97,7 @@ $blue: #1950d1;
 }
 
 /* Single Course */
-.tutor-wrap.tutor-full-width-course-top {
-    // padding-top: 70px;
-    // padding-bottom: 70px;
-}
+
 .tutor-single-course-segment {
     font-size: 16px;
     font-weight: 400;
@@ -402,5 +399,18 @@ $blue: #1950d1;
         a {
             color: #fff;
         }
+    }
+}
+
+// Elementor add-on hover override
+.etlms-course-list-col .etlms-card.hover-animation:hover {
+    top: unset !important;
+}
+.etlms-course-list-col .etlms-card.hover-animation {
+    box-shadow: 0px 4px 15px 4px rgb(39 57 101 / 10%) !important;
+    transition: 0.3s linear !important;
+    &:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0px 4px 10px rgb(39 57 101 / 12%) !important;
     }
 }

@@ -541,7 +541,6 @@ table {
 table th,
 table td {
   padding: 0.5em 1.41575em;
-  border: 1px solid var(--wc-secondary);
 }
 
 ul,
@@ -9534,6 +9533,20 @@ img {
 
 .tutor-course-loop-header-meta .tutor-course-wishlist:hover a {
   color: #fff;
+}
+
+.etlms-course-list-col .etlms-card.hover-animation:hover {
+  top: unset !important;
+}
+
+.etlms-course-list-col .etlms-card.hover-animation {
+  box-shadow: 0px 4px 15px 4px rgba(39, 57, 101, 0.1) !important;
+  transition: 0.3s linear !important;
+}
+
+.etlms-course-list-col .etlms-card.hover-animation:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0px 4px 10px rgba(39, 57, 101, 0.12) !important;
 }
 
 section.tutor-theme-getting-starter .getting-started-page-heading {
