@@ -10,8 +10,6 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-$page_meta = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
-$sidebar   = ( ! empty( $page_meta ) ? $page_meta['sidebar_select'] : 'no-sidebar' );
 ?>
 
 <div class="container">
