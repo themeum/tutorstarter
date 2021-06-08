@@ -7605,7 +7605,7 @@ h1.entry-title {
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .woocommerce input.button.alt:focus,
 .woocommerce .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.button.alt::-webkit-input-placeholder,
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .woocommerce input.button.alt::-webkit-input-placeholder {
-  background-color: #1950D1;
+  background-color: #1950d1;
   color: #fff;
   -webkit-font-smoothing: antialiased;
   -webkit-transition: all 0.3s ease-in-out;
@@ -7634,7 +7634,7 @@ h1.entry-title {
 }
 
 .woocommerce-message {
-  border-top-color: #1950D1;
+  border-top-color: #1950d1;
 }
 
 .woocommerce-message::before {
@@ -7677,7 +7677,7 @@ h1.entry-title {
 .tutorstarter-cart-container .cart-product-remove a {
   font-size: 16px;
   line-height: 19px;
-  color: #1950D1;
+  color: #1950d1;
 }
 
 .tutorstarter-cart-container .cart-product-price {
@@ -7751,7 +7751,8 @@ h1.entry-title {
 
 .tutorstarter-cart-container .cart-collaterals table.shop_table th,
 .tutorstarter-cart-container .cart-collaterals table.shop_table td {
-  padding: 18px 0px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .tutorstarter-cart-container .cart-collaterals table.shop_table th:last-child,
@@ -7838,7 +7839,7 @@ h1.entry-title {
 .tutorstarter-cart-container .cart-collaterals .cart-coupon form input:focus,
 .tutorstarter-cart-container .cart-collaterals .cart-coupon form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus::-webkit-input-placeholder,
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutorstarter-cart-container .cart-collaterals .cart-coupon form input:focus::-webkit-input-placeholder {
-  border-color: #1950D1;
+  border-color: #1950d1;
   color: #0a083b;
 }
 
@@ -7849,10 +7850,10 @@ h1.entry-title {
   font-weight: 600;
   font-size: 16px;
   line-height: 1.31;
-  background: #1950D1;
+  background: #1950d1;
   color: #fff;
   border-radius: 108px;
-  border: 1px solid #1950D1;
+  border: 1px solid #1950d1;
   padding: 10px 23.5px;
   right: 8px;
   top: 8px;
