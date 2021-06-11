@@ -426,8 +426,8 @@ class Footer {
 			array(
 				'title'             => esc_html__( 'Footer Bottom Text', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => '&copy; All rights reserved.',
-				'sanitize_callback' => 'wp_filter_nohtml_kses',
+				'default'           => 'All rights reserved.',
+				'sanitize_callback' => 'wp_kses_post',
 			)
 		);
 		$wp_customize->add_control(

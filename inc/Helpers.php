@@ -568,7 +568,7 @@ if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
 					
 				/>
 			</svg>
-			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart' ); ?>">
+			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'tutorstarter' ); ?>">
 				<span>(<?php echo WC()->cart->get_cart_contents_count(); ?>)</span>
 			</a>
 		</span>
@@ -586,7 +586,7 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
         global $woocommerce;
 		ob_start(); ?>
 		
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart' ); ?>">
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'tutorstarter' ); ?>">
 			<span>(<?php echo WC()->cart->get_cart_contents_count(); ?>)</span>
 		</a>
           

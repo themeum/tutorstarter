@@ -658,7 +658,7 @@
   });
   wp.customize('footer_bottom_text_color', function (value) {
     value.bind(function (updatedValue) {
-      var footerBottomText = document.querySelector('.site-footer .site-info span.copyright');
+      var footerBottomText = document.querySelector('.site-footer .container .footer-bottom-container .copyright-container span');
       var footerBottomMenu = document.querySelectorAll('#secondary-menu li a');
       footerBottomText.style.color = updatedValue;
       footerBottomMenu.forEach(function (item) {
