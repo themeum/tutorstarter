@@ -684,9 +684,9 @@ function tutorstarter_header_switcher() {
 if ( ! function_exists( 'tutorstarter_site_logo' ) ) {
 	function tutorstarter_site_logo() {
         $logo          = get_theme_mod( 'custom_logo' );
-        $logo_img      = wp_get_attachment_image_src( $logo, 'full' );
+        $logo_img      = ! empty( $logo ) ? wp_get_attachment_image_src( $logo, 'full' ) : false;
         $logo_retina   = get_theme_mod( 'retina_logo' );
-		$retina_imgset = 'srcset="' . esc_url( $logo_img[0] ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
+		$retina_imgset = 'srcset="' . true === $logo_img ? esc_url( $logo_img[0] ) : '' . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
 
         if ( $logo_img ) : ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
