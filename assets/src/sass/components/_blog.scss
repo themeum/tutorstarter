@@ -73,7 +73,10 @@
             color: rgba(10, 8, 59, 0.7);
             margin-bottom: 32px;
         }
-        h2, h2, h4, h5 {
+        h2,
+        h2,
+        h4,
+        h5 {
             font-family: var(--body-font);
             line-height: 1.6;
             font-weight: 500;
@@ -89,6 +92,7 @@
     .tags-links {
         display: block;
         padding-top: 10px;
+        padding-bottom: 30px;
         a {
             font-family: var(--body-font);
             font-size: 16px;
@@ -124,7 +128,7 @@
             color: rgba(10, 8, 59, 0.7);
         }
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             left: 0px;
             top: 7px;
@@ -156,7 +160,7 @@
         color: #0a083b;
         padding: 10px;
         &:focus {
-            border-color: #1950D1;
+            border-color: #1950d1;
         }
     }
 
@@ -170,11 +174,11 @@
         font-size: 16px;
         line-height: 1;
         text-transform: capitalize;
-        background-color: #1950D1;
+        background-color: #1950d1;
         color: #ffff;
         padding: 11px 26px;
         outline: 0;
-        border: 1px solid #1950D1;
+        border: 1px solid #1950d1;
         border-radius: 50px;
         cursor: pointer;
         transition: 0.2s linear;
@@ -201,12 +205,12 @@
 
 .comment-reply-title,
 .comments-title {
-    color: #0A083B;
-	font-family: var(--body-font);
-	font-size: 32px;
-	line-height: 1.5;
-	font-weight: 700;
-	margin-bottom: 36px;
+    color: #0a083b;
+    font-family: var(--body-font);
+    font-size: 32px;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-bottom: 36px;
 }
 .comment-notes {
     margin-bottom: 20px;
@@ -240,7 +244,7 @@
         margin-bottom: 20px;
 
         &:focus {
-            border-color: #95C2FF;
+            border-color: #95c2ff;
         }
     }
     textarea {
@@ -254,7 +258,7 @@
 
     .form-submit {
         input[type="submit"] {
-            background-color: #1950D1;
+            background-color: #1950d1;
             font-family: var(--body-font);
             font-weight: 600;
             font-size: 16px;
@@ -262,7 +266,7 @@
             color: #ffff;
             padding: 11px 26px;
             outline: 0;
-            border: 1px solid #1950D1;
+            border: 1px solid #1950d1;
             border-radius: 50px;
             cursor: pointer;
             transition: 0.2s linear;
@@ -297,10 +301,12 @@
         img {
             border-radius: 50%;
         }
-        &.vcard{
-            .says{display: none;}
+        &.vcard {
+            .says {
+                display: none;
+            }
         }
-        .fn a{
+        .fn a {
             font-size: 16px;
             line-height: 1.37;
             color: #283646;
@@ -314,8 +320,8 @@
         .comment-body {
             margin-bottom: 33px;
             padding-bottom: 22px;
-            border-bottom: 1px solid #CFD3D7;
-            .reply{
+            border-bottom: 1px solid #cfd3d7;
+            .reply {
                 font-size: 13px;
                 line-height: 1.5;
             }
@@ -326,10 +332,10 @@
 
             font-size: 13px;
             line-height: 1.5;
-           a { 
-               color: rgba(87, 88, 110, 0.5);
+            a {
+                color: rgba(87, 88, 110, 0.5);
             }
-            .comment-edit-link{
+            .comment-edit-link {
                 color: var(--link-color);
                 opacity: 1;
             }
@@ -338,20 +344,21 @@
             margin-bottom: 10px;
             font-size: 16px;
             line-height: 1.5;
-            color: #77808B;
+            color: #77808b;
         }
     }
-    .comment-metadata, .comment-content, .reply {
+    .comment-metadata,
+    .comment-content,
+    .reply {
         margin-left: 40px;
     }
 }
 
-.comment-respond{
+.comment-respond {
     .form-submit {
         text-align: right;
     }
 }
-
 
 /* Blog Layout: override */
 .blog-post-content {
@@ -409,7 +416,7 @@
     .read-more {
         font-weight: 600;
         font-size: 16px;
-        color: #1950D1;
+        color: #1950d1;
     }
 }
 
@@ -469,7 +476,7 @@
         transition: 0.2s linear;
         &.current,
         &:hover {
-            background: #1950D1;
+            background: #1950d1;
             border-color: #5454d4;
             color: #fff;
             opacity: 1;

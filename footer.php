@@ -19,6 +19,7 @@ defined( 'ABSPATH' ) || exit;
 	$disable_footer  = ( ! empty( $page_meta['footer_toggle'] ) ? $page_meta['footer_toggle'] : false );
 	$selected_footer = ( ! empty( $page_meta['footer_select'] ) ? $page_meta['footer_select'] : '' );
 	$footer_style    = get_theme_mod( 'footer_type_select', 'footer_four' );
+	$footer_text     = get_theme_mod( 'footer_bottom_text', '&copy; All rights reserved.' );
 
 if ( false === $disable_footer ) :
 	if ( ! empty( $selected_footer ) ) {
@@ -52,7 +53,7 @@ if ( false === $disable_footer ) :
 			</div><!-- .footer-menu-->
 			<?php endif; ?>
 			<div class="copyright-container">
-				<span class="copyright"><?php wp_kses_post( esc_html_e( get_theme_mod( 'footer_bottom_text', '&copy; All rights reserved.' ), 'tutorstarter' ) ); ?></span>
+				<span class="copyright"><?php echo wp_kses_post( $footer_text ); ?></span>
 			</div><!-- .footer-menu-->
 		</div><!-- .row -->
 	</div><!-- .container -->

@@ -686,15 +686,15 @@ if ( ! function_exists( 'tutorstarter_site_logo' ) ) {
         $logo          = get_theme_mod( 'custom_logo' );
         $logo_img      = ! empty( $logo ) ? wp_get_attachment_image_src( $logo, 'full' ) : false;
         $logo_retina   = get_theme_mod( 'retina_logo' );
-		$retina_imgset = 'srcset="' . true === $logo_img ? esc_url( $logo_img[0] ) : '' . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
-
-        if ( $logo_img ) : ?>
+		$retina_imgset = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
+        
+		if ( $logo_img ) : ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                 <img src="<?php echo esc_url( $logo_img[0] ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php esc_attr_e( bloginfo( 'name' ) ); ?>" />
             </a>
         <?php else : ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-header.png' ); ?>" srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-header.png' ); ?> 1x, <?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-header@2x.png' ); ?> 2x" alt="<?php esc_attr_e( bloginfo( 'name' ) ); ?>" />
+				<?php bloginfo( 'title' ); ?>
             </a>
         <?php endif; 
 	}
@@ -707,7 +707,7 @@ if ( ! function_exists( 'tutorstarter_transparent_logo' ) ) {
 	function tutorstarter_transparent_logo() {
 		$logo          = get_theme_mod( 'transparent_logo' );
         $logo_retina   = get_theme_mod( 'retina_trans_logo' );
-		$retina_imgset = 'srcset="' . esc_url( $logo ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
+		$retina_imgset = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
 
         if ( $logo ) : ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -715,8 +715,8 @@ if ( ! function_exists( 'tutorstarter_transparent_logo' ) ) {
             </a>
         <?php else : ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-white.png' ); ?>" srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-white.png' ); ?> 1x, <?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-white@2x.png' ); ?> 2x" alt="<?php esc_attr_e( bloginfo( 'name' ) ); ?>" />
-            </a>
+				<?php bloginfo( 'title' ); ?>
+			</a>
         <?php endif; 
 	}
 }
@@ -728,7 +728,7 @@ if ( ! function_exists( 'tutorstarter_footer_logo' ) ) {
 	function tutorstarter_footer_logo() {
 		$footer_logo   = get_theme_mod( 'footer_logo' );
 		$logo_retina   = get_theme_mod( 'footer_retina_logo' );
-		$retina_imgset = 'srcset="' . esc_url( $footer_logo ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
+		$retina_imgset = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
 		if ( ! empty( $footer_logo ) ) : ?>
 			<img height="24" width="92" class="logo-footer" src="<?php echo esc_url_raw( $footer_logo ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ) ?>">
 		<?php endif;
@@ -742,7 +742,7 @@ if ( ! function_exists( 'tutorstarter_footer_trans_logo' ) ) {
 	function tutorstarter_footer_trans_logo() {
 		$footer_logo_trans = get_theme_mod( 'footer_logo_trans' );
 		$logo_retina       = get_theme_mod( 'footer_retina_trans_logo' );
-		$retina_imgset     = 'srcset="' . esc_url( $footer_logo_trans ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
+		$retina_imgset     = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
 		if ( ! empty( $footer_logo_trans ) ) : ?>
 			<img height="24" width="92" class="logo-footer trans" src="<?php echo esc_url_raw( $footer_logo_trans ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ) ?>">
 		<?php endif;

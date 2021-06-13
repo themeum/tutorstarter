@@ -8640,6 +8640,7 @@ img {
 .single-post .tags-links {
   display: block;
   padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .single-post .tags-links a {
@@ -8733,7 +8734,7 @@ img {
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .page-content input[type=search]:focus,
 .page-content .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=search]:focus::-webkit-input-placeholder,
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .page-content input[type=search]:focus::-webkit-input-placeholder {
-  border-color: #1950D1;
+  border-color: #1950d1;
 }
 
 .widget input.search-submit,
@@ -8755,11 +8756,11 @@ img {
   font-size: 16px;
   line-height: 1;
   text-transform: capitalize;
-  background-color: #1950D1;
+  background-color: #1950d1;
   color: #ffff;
   padding: 11px 26px;
   outline: 0;
-  border: 1px solid #1950D1;
+  border: 1px solid #1950d1;
   border-radius: 50px;
   cursor: pointer;
   -webkit-transition: 0.2s linear;
@@ -8803,7 +8804,7 @@ img {
 
 .comment-reply-title,
 .comments-title {
-  color: #0A083B;
+  color: #0a083b;
   font-family: var(--body-font);
   font-size: 32px;
   line-height: 1.5;
@@ -8872,7 +8873,7 @@ img {
 .comment-form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=url]:focus::-webkit-input-placeholder,
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form input[type=url]:focus::-webkit-input-placeholder,
 .comment-form textarea:focus {
-  border-color: #95C2FF;
+  border-color: #95c2ff;
 }
 
 .comment-form textarea {
@@ -8887,7 +8888,7 @@ img {
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form .form-submit input[type=submit]:focus,
 .comment-form .form-submit .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type=submit]::-webkit-input-placeholder,
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form .form-submit input[type=submit]::-webkit-input-placeholder {
-  background-color: #1950D1;
+  background-color: #1950d1;
   font-family: var(--body-font);
   font-weight: 600;
   font-size: 16px;
@@ -8895,7 +8896,7 @@ img {
   color: #ffff;
   padding: 11px 26px;
   outline: 0;
-  border: 1px solid #1950D1;
+  border: 1px solid #1950d1;
   border-radius: 50px;
   cursor: pointer;
   -webkit-transition: 0.2s linear;
@@ -8964,7 +8965,7 @@ img {
 .comment-list .comment .comment-body {
   margin-bottom: 33px;
   padding-bottom: 22px;
-  border-bottom: 1px solid #CFD3D7;
+  border-bottom: 1px solid #cfd3d7;
 }
 
 .comment-list .comment .comment-body .reply {
@@ -8991,7 +8992,7 @@ img {
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 1.5;
-  color: #77808B;
+  color: #77808b;
 }
 
 .comment-list .comment-metadata,
@@ -9064,7 +9065,7 @@ img {
 .blog-post-content .read-more {
   font-weight: 600;
   font-size: 16px;
-  color: #1950D1;
+  color: #1950d1;
 }
 
 .blog-grid-post-item .post-thumbnail {
@@ -9128,7 +9129,7 @@ img {
 
 .tutorstarter-pagination .page-numbers.current,
 .tutorstarter-pagination .page-numbers:hover {
-  background: #1950D1;
+  background: #1950d1;
   border-color: #5454d4;
   color: #fff;
   opacity: 1;
