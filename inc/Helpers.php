@@ -388,58 +388,6 @@ if ( ! function_exists( 'tutorstarter_post_pagination' ) ) {
 }
 
 /**
- * TGMPA Plugin Activation
- */
-add_action( 'tgmpa_register', 'tutorstarter_plugin_activation' );
-
-if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
-
-	/**
-	 * Plugin activation
-	 *
-	 * @return void
-	 */
-	function tutorstarter_plugin_activation() {
-		$plugins = array(
-			array(
-				'name'               => esc_html__( 'Tutormate', 'tutorstarter' ),
-				'slug'               => 'tutormate',
-				'required'           => false,
-				'version'            => '1.0.0',
-				'force_activation'   => false,
-				'force_deactivation' => false,
-				'external_url'       => esc_url( 'https://api.tutorlms.com/wp-content/uploads/resources/tutormate.zip' ),
-				'source'             => esc_url( 'https://api.tutorlms.com/wp-content/uploads/resources/tutormate.zip' ),
-			),
-		);
-
-		$config = array(
-			'id'               => 'tutorstarter',
-			'default_path'     => '',
-			'parent_menu_slug' => 'themes.php',
-			'parent_url_slug'  => 'themes.php',
-			'menu'             => 'install-required-plugins',
-			'has_notices'      => true,
-			'is_automatic'     => false,
-			'message'          => '',
-			'strings'          => array(
-				'page_title'       => esc_html__( 'Install Required Plugins', 'tutorstarter' ),
-				'menu_title'       => esc_html__( 'Install Plugins', 'tutorstarter' ),
-				// Translators: installing plugin translation.
-				'installing'       => esc_html__( 'Installing Plugin: %s', 'tutorstarter' ),
-				'oops'             => esc_html__( 'Something went wrong with the plugin API.', 'tutorstarter' ),
-				'return'           => esc_html__( 'Return to Required Plugins Installer', 'tutorstarter' ),
-				'plugin_activated' => esc_html__( 'Plugin activated successfully.', 'tutorstarter' ),
-				// Translators: plugin installation complete translation.
-				'complete'         => esc_html__( 'All plugins installed and activated successfully. %s', 'tutorstarter' ),
-			),
-		);
-
-		tgmpa( $plugins, $config );
-	}
-endif;
-
-/**
  * Tutor starter ajax signup
  */
 add_action( 'wp_ajax_nopriv_ajaxregister', 'tutor_theme_ajax_register_new_user' );
