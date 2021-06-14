@@ -690,7 +690,7 @@ if ( ! function_exists( 'tutorstarter_site_logo' ) ) {
         
 		if ( $logo_img ) : ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img src="<?php echo esc_url( $logo_img[0] ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php esc_attr_e( bloginfo( 'name' ) ); ?>" />
+                <img src="<?php echo esc_url( $logo_img[0] ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php printf( esc_attr__( '%s', 'tutorstarter' ), bloginfo( 'name' ) ); ?>" />
             </a>
         <?php else : ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -711,7 +711,7 @@ if ( ! function_exists( 'tutorstarter_transparent_logo' ) ) {
 
         if ( $logo ) : ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img src="<?php echo esc_url( $logo ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php esc_attr_e( bloginfo( 'name' ) ); ?>" />
+                <img src="<?php echo esc_url( $logo ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php printf( esc_attr__( '%s', 'tutorstarter' ), bloginfo( 'name' ) ); ?>" />
             </a>
         <?php else : ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">

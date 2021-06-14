@@ -89,7 +89,7 @@
             <?php endif; ?>
             <?php if ( ! is_user_logged_in() || is_customize_preview() ) : ?>
                 <?php if ( true === get_theme_mod( 'cta_text_toggle', true ) ) : ?>
-                    <div class="utils-btn"><a class="btn-getstarted" href="<?php echo esc_url( home_url() . get_theme_mod( 'cta_text_link', '#' ) ); ?>"><?php echo esc_html__( get_theme_mod( 'cta_text', 'Getting Started' ), 'tutorstarter' ); ?></a></div>
+                    <div class="utils-btn"><a class="btn-getstarted" href="<?php echo esc_url( home_url() . get_theme_mod( 'cta_text_link', '#' ) ); ?>"><?php printf( esc_html__( '%s', 'tutorstarter' ), get_theme_mod( 'cta_text', 'Getting Started' ) ); ?></a></div>
                 <?php endif; ?>
             <?php endif; ?>
         </div>
