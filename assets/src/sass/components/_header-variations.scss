@@ -69,20 +69,9 @@ header.header-transparent {
                 color: var(--navCartColorTrans);
             }
             a.btn-getstarted {
-                border: var(--cta-border-width) solid
-                    var(--headerBtnBorderColorTrans);
-                border-radius: var(--cta-border-radius);
-                padding: 12px 28px;
-                font-style: normal;
-                font-family: inherit;
-                font-weight: var(--cta-font-weight);
-                font-size: var(--cta-font-size);
-                line-height: var(--cta-font-lineheight);
-                text-transform: var(--cta-font-transform);
+                border-color: var(--headerBtnBorderColorTrans);
                 color: var(--headerBtnColorTrans);
                 background: var(--headerBtnBgColorTrans);
-                display: inline-block;
-                text-align: center;
             }
         }
 
