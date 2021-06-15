@@ -1,6 +1,10 @@
 body.admin-bar header.header-transparent {
     top: 20px;
+    .navbar-nav{
+        top: 30px;
+    }
 }
+
 /* Header Variations (bg color) */
 header.header-transparent {
     position: absolute;
