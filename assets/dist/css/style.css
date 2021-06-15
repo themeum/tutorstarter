@@ -548,6 +548,11 @@ ol {
   padding-left: 17px;
 }
 
+.entry-content table th,
+.entry-content table td {
+  border: 1px solid #eee;
+}
+
 body.admin-bar header.header-transparent {
   top: 20px;
 }
@@ -968,11 +973,11 @@ header.header-default .utils-search {
   font-family: inherit;
   display: inline-block;
   text-align: center;
+  border-radius: var(--cta-border-radius);
   text-transform: var(--cta-font-transform);
   font-weight: var(--cta-font-weight);
   font-size: var(--cta-font-size);
   line-height: var(--cta-font-lineheight);
-  border-radius: var(--cta-border-radius);
   color: var(--headerBtnColor);
   background: var(--headerBtnBgColor);
   border: var(--cta-border-width) solid var(--cta-border-color);
@@ -980,7 +985,7 @@ header.header-default .utils-search {
 
 @media (max-width: 992px) {
   .navbar .navbar-utils a.btn-getstarted {
-    padding: 12px 20px;
+    padding: 9px 18px;
   }
 }
 
@@ -7135,6 +7140,7 @@ a:hover,
 a:focus {
   text-decoration: none;
   opacity: 0.85;
+  text-decoration: underline;
 }
 
 /* Lists (Nested) */
@@ -7766,10 +7772,24 @@ h1.entry-title {
   border-collapse: collapse;
 }
 
+.tutorstarter-cart-container .cart-collaterals table.shop_table tr:first-child:not(.cart-subtotal) th,
+.tutorstarter-cart-container .cart-collaterals table.shop_table tr:first-child:not(.cart-subtotal) td {
+  border-top: unset;
+}
+
+.tutorstarter-cart-container .cart-collaterals table.shop_table tr:last-child th,
+.tutorstarter-cart-container .cart-collaterals table.shop_table tr:last-child td {
+  border-bottom: unset;
+}
+
 .tutorstarter-cart-container .cart-collaterals table.shop_table th,
 .tutorstarter-cart-container .cart-collaterals table.shop_table td {
   padding-top: 18px;
   padding-bottom: 18px;
+  padding-left: unset;
+  padding-right: unset;
+  border-left: unset;
+  border-right: unset;
 }
 
 .tutorstarter-cart-container .cart-collaterals table.shop_table th:last-child,
