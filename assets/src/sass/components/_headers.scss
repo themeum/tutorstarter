@@ -81,18 +81,18 @@
             font-family: inherit;
             display: inline-block;
             text-align: center;
+            border-radius: var(--cta-border-radius);
             text-transform: var(--cta-font-transform);
             font-weight: var(--cta-font-weight);
             font-size: var(--cta-font-size);
             line-height: var(--cta-font-lineheight);
-            border-radius: var(--cta-border-radius);
             
             color: var(--headerBtnColor);
             background: var(--headerBtnBgColor);
             border: var(--cta-border-width) solid var(--cta-border-color);
 
             @media (max-width: 992px){
-                padding: 12px 20px;
+                padding: 9px 18px;
             }
         }
     }
