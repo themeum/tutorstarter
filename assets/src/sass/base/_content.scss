@@ -1,4 +1,4 @@
-a{
+a {
     cursor: pointer;
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
@@ -14,8 +14,9 @@ table {
     }
 }
 
-ul, ol,
-li > ul, 
+ul,
+ol,
+li > ul,
 li > ol {
     padding-left: 2rem;
 }
@@ -24,17 +25,15 @@ ul ul {
     list-style-type: circle;
 }
 
-
 blockquote {
     font-size: 1.1em;
     line-height: 1.5;
-    font-style: italic;
     font-weight: 600;
     position: relative;
     margin: 1em 0;
     padding-left: 1em;
     &:before {
-        content: "\"";
+        content: '"';
         position: absolute;
         font-size: 1.5em;
         line-height: 1.1;
@@ -43,28 +42,34 @@ blockquote {
     }
 }
 
-dl{
+dl {
     dt {
         font-size: 1.2em;
         line-height: 2;
         font-weight: bold;
     }
-    
+
     dd {
         padding-left: 2em;
     }
 }
 
-code, kbd, samp {
+code,
+kbd,
+samp {
     font-family: monospace;
     font-size: 1em;
 }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
     font-style: italic;
 }
 
-abbr[title], acronym[title] {
+abbr[title],
+acronym[title] {
     text-underline-offset: 3px;
     text-decoration-thickness: 2px;
     cursor: help;
@@ -72,7 +77,7 @@ abbr[title], acronym[title] {
 
 hr {
     border-style: none;
-    border-bottom: 1px solid var(--dark-grey);
+    border-bottom: 1px solid #eeeeee;
     margin: 15px 0;
 }
 
@@ -81,7 +86,7 @@ address {
     font-style: italic;
 }
 
-figure{
+figure {
     margin-left: 0;
     margin-right: 0;
 }

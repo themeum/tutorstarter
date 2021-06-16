@@ -117,11 +117,14 @@
             }
         }
     }
-    .wp-block-pullquote{
+    .wp-block-pullquote {
         border: none !important;
     }
 
-    blockquote, .wp-block-quote.is-large, .wp-block-quote.is-style-large, .wp-block-quote.has-text-align-right {
+    blockquote,
+    .wp-block-quote.is-large,
+    .wp-block-quote.is-style-large,
+    .wp-block-quote.has-text-align-right {
         position: relative;
         border: none;
         padding-left: 52px;
@@ -394,14 +397,17 @@
             transform: scale(1);
         }
     }
-
+    .blog-post-default {
+        .entry-title {
+            padding: 0 30px;
+        }
+    }
     .entry-title {
         font-size: 18px;
         line-height: 1.61111em;
         letter-spacing: -0.66px;
         margin-bottom: 18px;
         word-break: break-word;
-        padding: 0px 30px;
     }
 
     .entry-meta {

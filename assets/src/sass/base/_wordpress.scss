@@ -113,7 +113,6 @@ h1.entry-title {
     margin: ($gutter / 2) 0 ($gutter * 2) ($gutter * 2);
 }
 
-
 .wp-caption img {
     border: 0 none;
     height: auto;
@@ -183,22 +182,22 @@ a.wp-block-button__link br {
     margin-bottom: 10px;
 }
 
-
 .comment-reply-title {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .entry-content {
-    P{
+    p {
         padding: 10px 0;
         word-wrap: break-word;
         line-height: 1.8;
     }
 
     table {
-        th,td{
+        th,
+        td {
             border: 1px solid #eee;
         }
     }
@@ -217,11 +216,10 @@ a.wp-block-button__link br {
         max-width: 100%;
         margin: 0 auto;
     }
-    
 }
 
 .wp-block-table.is-style-stripes td,
-.wp-block-table.is-style-stripes th{
+.wp-block-table.is-style-stripes th {
     border-color: #eee;
 }
 
@@ -241,8 +239,8 @@ figure.wp-block-gallery {
     margin-top: 30px;
 }
 
-.post-password-form{
-    label{
+.post-password-form {
+    label {
         display: inline-block;
     }
 
@@ -257,11 +255,11 @@ figure.wp-block-gallery {
         margin-bottom: 20px;
         margin-right: 6px;
     }
-    
+
     input[name="post_password"]:focus {
         border-color: #95c2ff;
     }
-    
+
     input[type="submit"] {
         background-color: #1950d1;
         font-family: var(--body-font);
@@ -274,9 +272,9 @@ figure.wp-block-gallery {
         border: 1px solid #1950d1;
         border-radius: 50px;
         cursor: pointer;
-        transition: .3s;
+        transition: 0.3s;
     }
-    
+
     input[type="submit"]:hover {
         background-color: #0a083b;
         border-color: #0a083b;

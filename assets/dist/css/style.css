@@ -6677,7 +6677,6 @@ ul ul {
 blockquote {
   font-size: 1.1em;
   line-height: 1.5;
-  font-style: italic;
   font-weight: 600;
   position: relative;
   margin: 1em 0;
@@ -6726,7 +6725,7 @@ acronym[title] {
 
 hr {
   border-style: none;
-  border-bottom: 1px solid var(--dark-grey);
+  border-bottom: 1px solid #eeeeee;
   margin: 15px 0;
 }
 
@@ -6932,7 +6931,7 @@ a.wp-block-button__link br {
   justify-content: space-between;
 }
 
-.entry-content P {
+.entry-content p {
   padding: 10px 0;
   word-wrap: break-word;
   line-height: 1.8;
@@ -8562,6 +8561,10 @@ img {
   padding: 30px 0;
 }
 
+.blog-post-content a {
+  text-decoration: none;
+}
+
 .blog-post-item {
   display: grid;
   grid-gap: 20px;
@@ -9250,13 +9253,16 @@ img {
   transform: scale(1);
 }
 
+.blog-post-content .blog-post-default .entry-title {
+  padding: 0 30px;
+}
+
 .blog-post-content .entry-title {
   font-size: 18px;
   line-height: 1.61111em;
   letter-spacing: -0.66px;
   margin-bottom: 18px;
   word-break: break-word;
-  padding: 0px 30px;
 }
 
 .blog-post-content .entry-meta {
