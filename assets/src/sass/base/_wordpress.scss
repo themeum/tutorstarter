@@ -189,3 +189,96 @@ a.wp-block-button__link br {
 	align-items: center;
 	justify-content: space-between;
 }
+
+.entry-content {
+    P{
+        padding: 10px 0;
+        word-wrap: break-word;
+        line-height: 1.8;
+    }
+
+    table {
+        th,td{
+            border: 1px solid #eee;
+        }
+    }
+    .wp-block-cover {
+        color: #fff;
+    }
+    .has-large-font-size {
+        font-size: 1.6875em;
+    }
+    .has-background {
+        padding: 20px 30px;
+    }
+
+    iframe {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+}
+
+.wp-block-table.is-style-stripes td,
+.wp-block-table.is-style-stripes th{
+    border-color: #eee;
+}
+
+.site-content {
+    padding-bottom: 60px;
+}
+
+.entry-content .wp-block-pullquote p {
+    font-size: 1.3em;
+    font-style: italic;
+    line-height: 1.3;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+figure.wp-block-gallery {
+    margin-top: 30px;
+}
+
+.post-password-form{
+    label{
+        display: inline-block;
+    }
+
+    input[name="post_password"] {
+        height: 40px;
+        border: 1px solid rgba(10, 8, 59, 0.1);
+        border-radius: 6px;
+        background: #fff;
+        outline: none;
+        color: #0a083b;
+        padding: 10px;
+        margin-bottom: 20px;
+        margin-right: 6px;
+    }
+    
+    input[name="post_password"]:focus {
+        border-color: #95c2ff;
+    }
+    
+    input[type="submit"] {
+        background-color: #1950d1;
+        font-family: var(--body-font);
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffff;
+        padding: 11px 26px;
+        outline: 0;
+        border: 1px solid #1950d1;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: .3s;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #0a083b;
+        border-color: #0a083b;
+    }
+}

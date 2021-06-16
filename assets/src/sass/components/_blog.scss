@@ -34,6 +34,7 @@
             letter-spacing: -0.656526px;
             color: rgb(10 8 59 / 0.7);
             padding-right: 20px;
+            text-decoration: none;
         }
         span {
             position: relative;
@@ -64,15 +65,15 @@
         max-width: 720px;
         margin: 0 auto;
         font-family: var(--body-font);
-        p {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 1.72;
-            letter-spacing: -0.562737px;
-            color: rgba(10, 8, 59, 0.7);
-            margin-bottom: 32px;
-        }
+        // p {
+        //     font-style: normal;
+        //     font-weight: 400;
+        //     font-size: 18px;
+        //     line-height: 1.72;
+        //     letter-spacing: -0.562737px;
+        //     color: rgba(10, 8, 59, 0.7);
+        //     margin-bottom: 32px;
+        // }
         h2,
         h2,
         h4,
@@ -94,6 +95,7 @@
         padding-top: 10px;
         padding-bottom: 30px;
         a {
+            text-decoration: none;
             font-family: var(--body-font);
             font-size: 16px;
             font-weight: 500;
@@ -115,18 +117,23 @@
             }
         }
     }
+    .wp-block-pullquote{
+        border: none !important;
+    }
 
-    blockquote {
+    blockquote, .wp-block-quote.is-large, .wp-block-quote.is-style-large, .wp-block-quote.has-text-align-right {
         position: relative;
-        border-left: none;
+        border: none;
         padding-left: 52px;
-        p {
-            font-size: 21px;
-            font-weight: 500;
-            line-height: 1.62;
-            letter-spacing: -0.656px;
-            color: rgba(10, 8, 59, 0.7);
-        }
+        margin-top: 1em;
+        margin-bottom: 1em;
+        // p {
+        //     font-size: 21px;
+        //     font-weight: 500;
+        //     line-height: 1.62;
+        //     letter-spacing: -0.656px;
+        //     color: rgba(10, 8, 59, 0.7);
+        // }
         &::before {
             content: "";
             position: absolute;
@@ -292,6 +299,9 @@
 .comment-list {
     padding-left: 0;
     margin-bottom: 20px;
+    a {
+        text-decoration: none;
+    }
     .comment-author {
         display: flex;
         align-items: center;
@@ -391,6 +401,7 @@
         letter-spacing: -0.66px;
         margin-bottom: 18px;
         word-break: break-word;
+        padding: 0px 30px;
     }
 
     .entry-meta {
@@ -474,6 +485,7 @@
         border-radius: 5px;
         padding: 8px 12.489px;
         transition: 0.2s linear;
+        text-decoration: none;
         &.current,
         &:hover {
             background: #1950d1;

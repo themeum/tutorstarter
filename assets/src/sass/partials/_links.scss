@@ -1,12 +1,9 @@
 a {
 	color: var(--link-color);
-	text-decoration: none;
 	//@include transition(all $time $ease);
-
+	text-decoration: underline;
 	&:hover,
 	&:focus {
-		text-decoration: none;
 		opacity: 0.85;
-		text-decoration: underline;
 	}
 }

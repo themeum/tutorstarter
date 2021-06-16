@@ -16,24 +16,3 @@ pre {
     white-space: pre-wrap;
 }
 
-table {
-    margin: 0 0 1.5em;
-    width: 100%;
-    border-collapse: collapse;
-    th,
-    td {
-        padding: 0.5em 1.41575em;
-    }
-}
-
-ul,
-ol {
-    padding-left: 17px;
-}
-
-
-.entry-content table {
-    th,td{
-        border: 1px solid #eee;
-    }
-}

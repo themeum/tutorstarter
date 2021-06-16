@@ -35,6 +35,9 @@
     grid-auto-flow: column;
     grid-gap: 30px;
     align-items: center;
+    a {
+        text-decoration: none;
+    }
     &.full-width {
         max-width: 100%;
     }

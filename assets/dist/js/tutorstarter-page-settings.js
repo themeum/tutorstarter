@@ -320,7 +320,7 @@ if ('1' === is_page) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/saief/Local Sites/turorstarterhotfix/app/public/wp-content/themes/tutorstarter/inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js */"./inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js");
+module.exports = __webpack_require__(/*! /Users/saief/Local Sites/tutorstarter/app/public/wp-content/themes/tutorstarter/inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js */"./inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js");
 
 
 /***/ })
