@@ -20,8 +20,20 @@ Tutor Starter WordPress theme, Copyright 2021 Themeum
 Tutor Starter is distributed under the terms of the GNU GPLv2 or later
 
 == Screenshots ==
+Image for theme screenshot, Credit K. Mitch Hodge
+License: CC0 1.0 Universal (CC0 1.0)
+License URL: https://unsplash.com/license
+Source: https://unsplash.com/photos/sQOiWOX5NFM
 
 == Frequently Asked Questions ==
+= Can I use this theme with Tutor LMS Only? =
+We have designed the theme for Tutor LMS and keeping eLearning sites in mind. You're free to use it for any purpose you want.
+
+= Where can I find the documentation? =
+Our documentation can be found in this link- https://docs.themeum.com/themes/tutor-starter/
+
+= Where can I get support? =
+If you found any bugs or issues, please let us know by posting on the support section of this theme on WordPress theme directory or use the contact form on our website https://www.themeum.com/contact-us/
 
 == Upgrade Notice ==
 
