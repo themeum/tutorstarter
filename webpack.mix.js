@@ -40,5 +40,4 @@ mix.disableNotifications();
 // Add versioning to assets in production environment
 if (mix.inProduction()) {
 	mix.version();
-	mix.sourceMaps('source-maps');
 }

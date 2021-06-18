@@ -299,10 +299,10 @@ if ( ! function_exists( 'mix' ) ) {
 	 */
 	function mix( $path, $manifest_directory = '' ) {
 
-		global $wp_filesystem;
+		// global $wp_filesystem;
 
-		require_once ABSPATH . '/wp-admin/includes/file.php';
-		WP_Filesystem();
+		// require_once ABSPATH . '/wp-admin/includes/file.php';
+		// WP_Filesystem();
 
 		if ( ! $manifest_directory ) {
 			// Setup path for standard Tutor_Starter-Folder-Structure.
@@ -324,7 +324,7 @@ if ( ! function_exists( 'mix' ) ) {
 			if ( ! file_exists( $manifest_path ) ) {
 				throw new Exception( 'The Mix manifest does not exist.' );
 			}
-			$manifest = json_decode( $wp_filesystem->get_contents( $manifest_path ), true );
+			$manifest = json_decode( file_get_contents( $manifest_path ), true );
 		}
 
 		if ( starts_with( $manifest[ $path ], '/' ) ) {
