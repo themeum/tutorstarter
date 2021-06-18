@@ -89,12 +89,12 @@
             font-weight: var(--cta-font-weight);
             font-size: var(--cta-font-size);
             line-height: var(--cta-font-lineheight);
-            
+
             color: var(--headerBtnColor);
             background: var(--headerBtnBgColor);
             border: var(--cta-border-width) solid var(--cta-border-color);
 
-            @media (max-width: 992px){
+            @media (max-width: 992px) {
                 padding: 9px 18px;
             }
         }
@@ -603,9 +603,8 @@
     }
 }
 
-
 // Header getStarted btn responsive
-@media (max-width: 500px){
+@media (max-width: 500px) {
     .navbar {
         padding-left: 15px;
         padding-right: 15px;
@@ -615,5 +614,5 @@
         .navbar-toggler {
             margin-right: unset;
         }
-    } 
+    }
 }
