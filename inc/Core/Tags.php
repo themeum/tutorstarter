@@ -40,7 +40,7 @@ class Tags {
 			esc_attr( get_the_modified_date( 'c' ) ),
 			esc_html( get_the_modified_date() )
 		);
-		$categories_list = get_the_category_list( esc_html__( ', ', 'tutorstarter' ) );
+		$categories_list = get_the_category_list( esc_html__( ' ', 'tutorstarter' ) );
 		$categories      = sprintf(
 			// Translators: translatable string for post categories.
 			'<span class="cat-links blog-cats">' . esc_html_x( ' %1$s', 'post categories', 'tutorstarter' ) . '</span>',

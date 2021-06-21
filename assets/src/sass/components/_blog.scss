@@ -302,9 +302,7 @@
 .comment-list {
     padding-left: 0;
     margin-bottom: 20px;
-    a {
-        text-decoration: none;
-    }
+
     .comment-author {
         display: flex;
         align-items: center;
@@ -323,6 +321,7 @@
             font-size: 16px;
             line-height: 1.37;
             color: #283646;
+            text-decoration: none;
         }
     }
     .comment {
@@ -337,6 +336,10 @@
             .reply {
                 font-size: 13px;
                 line-height: 1.5;
+
+                a {
+                    text-decoration: none;
+                }
             }
         }
         .comment-metadata {
@@ -347,6 +350,7 @@
             line-height: 1.5;
             a {
                 color: rgba(87, 88, 110, 0.5);
+                text-decoration: none;
             }
             .comment-edit-link {
                 color: var(--link-color);
@@ -358,6 +362,15 @@
             font-size: 16px;
             line-height: 1.5;
             color: #77808b;
+
+            table {
+                border: 1px solid #eeeeee;
+                tbody th,
+                tr,
+                td {
+                    border: 1px solid #eeeeee;
+                }
+            }
         }
     }
     .comment-metadata,
@@ -368,6 +381,11 @@
 }
 
 .comment-respond {
+    .comment-form {
+        p.logged-in-as a {
+            text-decoration: none;
+        }
+    }
     .form-submit {
         text-align: right;
     }

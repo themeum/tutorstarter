@@ -465,16 +465,6 @@
             }
         })
     });
-    wp.customize('footer_logo', function (value) {
-        value.bind(function (updatedValue) {
-            let footerLogo = document.querySelector('.site-info img#logo-footer');
-            if (null !== updatedValue) {
-                footerLogo.src = updatedValue;
-            } else {
-                footerLogo.src = tutorstarter_vars.site_url + '/wp-content/themes/qubely-starters/assets/dist/images/zeus.png';
-            }
-        })
-    });
     wp.customize('footer_widgets_bg_color', function (value) {
         value.bind(function (updatedValue) {
             let widgetSection = document.querySelector('.footer-widgets');

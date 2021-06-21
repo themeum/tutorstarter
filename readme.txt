@@ -3,7 +3,7 @@ Contributors: themeum
 Tags: education, e-commerce, blog, custom-logo, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, wide-blocks, block-styles, footer-widgets, left-sidebar, right-sidebar
 Requires at least: 5.0
 Tested up to: 5.7.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 7.0.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -23,15 +23,15 @@ Tutor Starter is distributed under the terms of the GNU GPLv3 or later
 GitHub Repo: https://github.com/themeum/tutorstarter/
 
 == Screenshots ==
-Image for theme screenshot, Credit K. Mitch Hodge
+Image for theme screenshot, Credit Vadim Sherbakov
 License: CC0 1.0 Universal (CC0 1.0)
-License URL: https://unsplash.com/license
-Source: https://unsplash.com/photos/sQOiWOX5NFM
+License URL: https://stocksnap.io/license
+Source: https://stocksnap.io/photo/blue-sky-E1C34B4580
 
-Image for theme screenshot, Credit Kelly Sikkema
+Image for theme screenshot, Credit Andrea Piacquadio
 License: CC0 1.0 Universal (CC0 1.0)
-License URL: https://unsplash.com/license
-Source: https://unsplash.com/photos/sX_OIy4_HF8
+License URL: https://www.pexels.com/license/
+Source: https://www.pexels.com/photo/woman-in-black-shirt-wearing-white-headphones-3765137/
 
 Image for theme screenshot, Credit cottonbro
 License: CC0 1.0 Universal (CC0 1.0)
@@ -84,6 +84,6 @@ If you found any bugs or issues, please let us know by posting on the support se
 
 == Changelog ==
 
-##### [Version 1.0.0](https://github.com/themeum/tutorstarter/)
+##### [Version 1.0.1](https://github.com/themeum/tutorstarter/)
 
 - Initial Release

@@ -122,32 +122,32 @@ var General = function General() {
     className: "tutorstarter-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_colors_section")
   }, /*#__PURE__*/React.createElement("span", {
-    "class": "dashicons dashicons-color-picker"
+    className: "dashicons dashicons-color-picker"
   }), /*#__PURE__*/React.createElement("p", null, __('Colors', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
     className: "tutorstarter-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_layout_section")
   }, /*#__PURE__*/React.createElement("span", {
-    "class": "dashicons dashicons-layout"
+    className: "dashicons dashicons-layout"
   }), /*#__PURE__*/React.createElement("p", null, __('Layouts', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
     className: "tutorstarter-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_header_section")
   }, /*#__PURE__*/React.createElement("span", {
-    "class": "dashicons dashicons-archive"
+    className: "dashicons dashicons-archive"
   }), /*#__PURE__*/React.createElement("p", null, __('Header', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
     className: "tutorstarter-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_footer_section")
   }, /*#__PURE__*/React.createElement("span", {
-    "class": "dashicons dashicons-table-row-before"
+    className: "dashicons dashicons-table-row-before"
   }), /*#__PURE__*/React.createElement("p", null, __('Footer', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
     className: "tutorstarter-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_typography_section")
   }, /*#__PURE__*/React.createElement("span", {
-    "class": "dashicons dashicons-editor-spellcheck"
+    className: "dashicons dashicons-editor-spellcheck"
   }), /*#__PURE__*/React.createElement("p", null, __('Typography', 'tutorstarter'))), /*#__PURE__*/React.createElement("a", {
     className: "tutorstarter-opt-card",
     href: "".concat(adminUrl, "customize.php?autofocus[section]=tutorstarter_blog_section")
   }, /*#__PURE__*/React.createElement("span", {
-    "class": "dashicons dashicons-edit-page"
+    className: "dashicons dashicons-edit-page"
   }), /*#__PURE__*/React.createElement("p", null, __('Blog', 'tutorstarter'))))));
 };
 

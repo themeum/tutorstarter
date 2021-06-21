@@ -8,24 +8,6 @@
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! function_exists( 'starts_with' ) ) {
-	/**
-	 * Determine if a given string starts with a given substring.
-	 *
-	 * @param string       $haystack search arg.
-	 * @param string|array $needles search term.
-	 * @return bool
-	 */
-	function starts_with( $haystack, $needles ) {
-		foreach ( (array) $needles as $needle ) {
-			if ( '' !== $needle && substr( $haystack, 0, strlen( $needle ) ) === (string) $needle ) {
-				return true;
-			}
-		}
-		return false;
-	}
-}
-
 if ( ! function_exists( 'control_active_callback' ) ) {
 	/**
 	 * Control active callback
@@ -284,86 +266,6 @@ if ( ! function_exists( 'allowed_html' ) ) {
 		);
 
 		return $allowed_html;
-	}
-}
-
-if ( ! function_exists( 'mix' ) ) {
-	/**
-	 * Get the path to a versioned Mix file.
-	 *
-	 * @param  string $path path of arg.
-	 * @param  string $manifest_directory manifest.json.
-	 * @return \Illuminate\Support\HtmlString
-	 *
-	 * @throws \Exception Throws exception.
-	 */
-	function mix( $path, $manifest_directory = '' ) {
-
-		// global $wp_filesystem;
-
-		// require_once ABSPATH . '/wp-admin/includes/file.php';
-		// WP_Filesystem();
-
-		if ( ! $manifest_directory ) {
-			// Setup path for standard Tutor_Starter-Folder-Structure.
-			$manifest_directory = 'assets/dist/';
-		}
-		static $manifest;
-		if ( ! starts_with( $path, '/' ) ) {
-			$path = "/{$path}";
-		}
-		if ( $manifest_directory && ! starts_with( $manifest_directory, '/' ) ) {
-			$manifest_directory = "/{$manifest_directory}";
-		}
-		$root_dir = dirname( __FILE__, 2 );
-		if ( file_exists( $root_dir . '/' . $manifest_directory . '/hot' ) ) {
-			return getenv( 'WP_SITEURL' ) . ':8080' . $path;
-		}
-		if ( ! $manifest ) {
-			$manifest_path = $root_dir . $manifest_directory . 'mix-manifest.json';
-			if ( ! file_exists( $manifest_path ) ) {
-				throw new Exception( 'The Mix manifest does not exist.' );
-			}
-			$manifest = json_decode( file_get_contents( $manifest_path ), true );
-		}
-
-		if ( starts_with( $manifest[ $path ], '/' ) ) {
-			$manifest[ $path ] = ltrim( $manifest[ $path ], '/' );
-		}
-
-		$path = $manifest_directory . $manifest[ $path ];
-
-		return get_template_directory_uri() . $path;
-	}
-}
-
-if ( ! function_exists( 'assets' ) ) {
-	/**
-	 * Easily point to the assets dist folder.
-	 *
-	 * @param  string $path as arg.
-	 */
-	function assets( $path ) {
-		if ( ! $path ) {
-			return;
-		}
-
-		echo esc_attr( get_template_directory_uri() . '/assets/dist/' . $path );
-	}
-}
-
-if ( ! function_exists( 'svg' ) ) {
-	/**
-	 * Easily point to the assets dist folder.
-	 *
-	 * @param string $path as arg.
-	 */
-	function svg( $path ) {
-		if ( ! $path ) {
-			return;
-		}
-
-		echo esc_attr( get_template_part( 'assets/dist/svg/inline', $path . '.svg' ) );
 	}
 }
 

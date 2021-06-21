@@ -20,27 +20,27 @@ const General = () => {
             <main className="tutorstarter-opt-container">
                 <div className="tutorstarter-opt-content">
                     <a className="tutorstarter-opt-card" href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_colors_section`}>
-                        <span class="dashicons dashicons-color-picker"></span>
+                        <span className="dashicons dashicons-color-picker"></span>
                         <p>{__('Colors', 'tutorstarter')}</p>
                     </a>
                     <a className="tutorstarter-opt-card" href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_layout_section`}>
-                        <span class="dashicons dashicons-layout"></span>
+                        <span className="dashicons dashicons-layout"></span>
                         <p>{__('Layouts', 'tutorstarter')}</p>
                     </a>
                     <a className="tutorstarter-opt-card" href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_header_section`}>
-                        <span class="dashicons dashicons-archive"></span>
+                        <span className="dashicons dashicons-archive"></span>
                         <p>{__('Header', 'tutorstarter')}</p>
                     </a>
                     <a className="tutorstarter-opt-card" href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_footer_section`}>
-                        <span class="dashicons dashicons-table-row-before"></span>
+                        <span className="dashicons dashicons-table-row-before"></span>
                         <p>{__('Footer', 'tutorstarter')}</p>
                     </a>
                     <a className="tutorstarter-opt-card" href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_typography_section`}>
-                        <span class="dashicons dashicons-editor-spellcheck"></span>      
+                        <span className="dashicons dashicons-editor-spellcheck"></span>      
                         <p>{__('Typography', 'tutorstarter')}</p>
                     </a>
                     <a className="tutorstarter-opt-card" href={`${adminUrl}customize.php?autofocus[section]=tutorstarter_blog_section`}>
-                        <span class="dashicons dashicons-edit-page"></span>
+                        <span className="dashicons dashicons-edit-page"></span>
                         <p>{__('Blog', 'tutorstarter')}</p>
                     </a>
                 </div>
