@@ -15,10 +15,17 @@ if ( ! isset( $content_width ) )
 $theme = wp_get_theme();
 define( 'TUTOR_STARTER_VERSION', $theme->get( 'Version' ) );
 
+// Load autoloader.
 if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) :
 	require_once dirname( __FILE__ ) . '/vendor/autoload.php';
 endif;
 
+// Include TGMPA class.
+if ( file_exists( dirname( __FILE__ ) . '/inc/Custom/class-tgm-plugin-activation.php' ) ) :
+	require_once dirname( __FILE__ ) . '/inc/Custom/class-tgm-plugin-activation.php';
+endif;
+
+// Register services.
 if ( class_exists( 'Tutor_Starter\\Init' ) ) :
 	Tutor_Starter\Init::register_services();
 endif;
