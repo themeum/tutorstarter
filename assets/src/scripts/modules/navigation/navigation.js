@@ -80,7 +80,7 @@
             lastMenuItem.removeEventListener('keydown', addTabLoopFeature, false);
         }
     });
-    
+
     function addTabLoopFeature(e) {
         e.preventDefault();
         navCloseBtn.focus();

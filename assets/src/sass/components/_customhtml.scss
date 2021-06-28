@@ -1,62 +1,104 @@
 .tutor-starter-custom-subscription {
-	position: relative;
-	input[type='email'] {
-		font-weight: 400;
-		font-size: 16px;
-		line-height: 19px;
+    position: relative;
+    input[type="email"] {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
 
-		width: 478px;
-		width: 100%;
-		height: 58px;
+        width: 478px;
+        width: 100%;
+        height: 58px;
 
-		color: rgba(10, 8, 59, 0.5);
-		background: #ffffff;
-		border: 1.5px solid rgba(10, 8, 59, 0.1);
-		border-radius: 40px;
-		outline: none;
-		padding: 10px 22px;
-		position: relative;
-		&:focus {
-			border-color: #1950D1;
-			color: #0a083b;
-		}
-	}
-	button {
-		cursor: pointer;
-		position: absolute;
-		outline: none;
-		font-weight: 600;
-		font-size: 16px;
-		line-height: 21px;
-		background: #1950D1;
-		color: #fff;
-		border-radius: 108px;
-		border: 1px solid #1950D1;
-		padding: 10px 36px;
-		right: 8px;
-		top: 8px;
-		height: calc(100% - 16px);
-		transition: 0.2s linear;
-		&:hover,
-		&:focus {
-			background: #1950D1;
-			opacity: .85;
-		}
-	}
+        color: rgba(10, 8, 59, 0.5);
+        background: #ffffff;
+        border: 1.5px solid rgba(10, 8, 59, 0.1);
+        border-radius: 40px;
+        outline: none;
+        padding: 10px 22px;
+        position: relative;
+        &:focus {
+            border-color: #1950d1;
+            color: #0a083b;
+        }
+    }
+    button {
+        cursor: pointer;
+        position: absolute;
+        outline: none;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        background: #1950d1;
+        color: #fff;
+        border-radius: 108px;
+        border: 1px solid #1950d1;
+        padding: 10px 36px;
+        right: 8px;
+        top: 8px;
+        height: calc(100% - 16px);
+        transition: 0.2s linear;
+        &:hover,
+        &:focus {
+            background: #1950d1;
+            opacity: 0.85;
+        }
+    }
 }
 
 @media screen and (max-width: 567px) {
-	.tutor-starter-custom-subscription button {
-		position: unset;
-		margin-top: 10px;
-		font-size: 14px;
-		padding: 8px 15px;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		width: 100%;
-	}
-	.tutor-starter-custom-subscription input[type=email] {
-		height: 45px;
-	}
+    .tutor-starter-custom-subscription button {
+        position: unset;
+        margin-top: 10px;
+        font-size: 14px;
+        padding: 8px 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .tutor-starter-custom-subscription input[type="email"] {
+        height: 45px;
+    }
+}
+
+/* Accessibility */
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    right: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+    outline: 0;
 }

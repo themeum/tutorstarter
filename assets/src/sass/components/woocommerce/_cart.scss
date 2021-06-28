@@ -77,11 +77,13 @@ h1.entry-title {
         font-size: 16px;
         line-height: 1.5;
         color: #0a083b;
+        text-decoration: none;
     }
     .cart-product-remove a {
         font-size: 16px;
         line-height: 19px;
         color: #1950d1;
+        text-decoration: none;
     }
     .cart-product-price {
         margin-bottom: 4px;
@@ -140,13 +142,13 @@ h1.entry-title {
             border: none;
             box-shadow: none;
             border-collapse: collapse;
-            tr{
+            tr {
                 &:first-child:not(.cart-subtotal) th,
-                &:first-child:not(.cart-subtotal) td{
+                &:first-child:not(.cart-subtotal) td {
                     border-top: unset;
                 }
                 &:last-child th,
-                &:last-child td{
+                &:last-child td {
                     border-bottom: unset;
                 }
             }
