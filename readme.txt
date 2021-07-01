@@ -3,7 +3,7 @@ Contributors: themeum
 Tags: education, e-commerce, blog, custom-logo, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, wide-blocks, block-styles, footer-widgets, left-sidebar, right-sidebar
 Requires at least: 5.0
 Tested up to: 5.7
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 Requires PHP: 7.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -83,6 +83,9 @@ If you found any bugs or issues, please let us know by posting on the support se
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 1.0.4 =
+- Added TGMPA for TutorMate as recommended plugin
 
 ##### [Version 1.0.3](https://github.com/themeum/tutorstarter/)
 
