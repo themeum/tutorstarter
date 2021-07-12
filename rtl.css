@@ -11,3 +11,40 @@
  * Tags: education, e-commerce, blog, custom-logo, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, footer-widgets, left-sidebar, right-sidebar
  * Text Domain: tutorstarter
  */
+
+body {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+.navbar-nav .menu-item a {
+    margin-left: 15px;
+}
+
+.navbar-nav .menu-item .sub-menu a:after {
+    right: 5px;
+}
+
+.navbar-nav .menu-item.icon > a:before {
+    right: auto;
+    left: -8px !important;
+}
+
+.menu-item .sub-menu > .menu-item .sub-menu {
+    right: calc(100% + 14px);
+}
+
+.wp-caption {
+    text-align: right;
+}
+
+li > ol,
+li > ul,
+ol,
+ul {
+    padding-right: 2rem;
+}
+
+.tutorstarter-cart-container .cart-collaterals table.shop_table td:first-child {
+    text-align: right !important;
+}

@@ -190,9 +190,13 @@ class Enqueue {
 	 * Enqueue Editor scripts and assets
 	 */
 	public function enqueue_editor_assets() {
+		global $pagenow;
+		
 		wp_enqueue_style( 'tutorstarter-admin', get_template_directory_uri() . '/assets/dist/css/admin.min.css', array(), TUTOR_STARTER_VERSION, 'all' );
-		wp_enqueue_script( 'tutorstarter-settings', get_template_directory_uri() . '/assets/dist/js/tutorstarter-page-settings.js', array( 'wp-i18n', 'wp-compose', 'wp-data', 'wp-components', 'wp-edit-post', 'wp-element', 'wp-plugins' ), TUTOR_STARTER_VERSION, true );
-		wp_localize_script( 'tutorstarter-settings', 'tutorstarter_admin_page', Inline_Css_Js::admin_localized_js() );
+		if ( 'widgets.php' !== $pagenow ) {
+			wp_enqueue_script( 'tutorstarter-settings', get_template_directory_uri() . '/assets/dist/js/tutorstarter-page-settings.js', array( 'wp-i18n', 'wp-compose', 'wp-data', 'wp-components', 'wp-edit-post', 'wp-element', 'wp-plugins' ), TUTOR_STARTER_VERSION, true );
+			wp_localize_script( 'tutorstarter-settings', 'tutorstarter_admin_page', Inline_Css_Js::admin_localized_js() );
+		}
 	}
 
 	/**
