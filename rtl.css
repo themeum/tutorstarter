@@ -5,7 +5,7 @@
  * Description: Tutor Starter is a free WordPress LMS theme powered by Tutor LMS, the popular eLearning plugin for WordPress. It is designed to let Tutor LMS take center stage while also letting you pick what feels right. Tutor Starter is created with the same Unified Design System from Tutor LMS making it the perfect companion eLearning theme for Tutor LMS. Tutor Starter is also highly specialized for speed and efficiency, with all of its components optimized to give your eLearning website a great score on Google's PageSpeed. Tutor Starter pages are also schema ready and SEO optimized to make ranking on search engines as easy as pie! It also boasts an impressive blog single page for perfect readability. With full support for both Elementor and Gutenberg, Tutor Starter hopes to cater to the largest audience of both classic page builders and modern Gutenberg based builders. It comes with customizer settings for headers, footers, and everything in between. With several header and footer variations, advanced typography settings, and contextual page settings, create the eLearning website of your dreams with this free LMS theme. Tutor Starter features 3 modern and pre-built home layouts with fully functioning inner pages for both Elementor and Gutenberg to let you get started in no time. Tutor Starter also features a clean and light one-click demo importer to import all these pre-built home layouts for Gutenberg and Elementor. This, along with deep ties with Tutor LMS makes it a no-brainer WordPress LMS theme. Please Check theme demo here https://preview.tutorlms.com/
  * Tested up to:   5.7
  * Requires PHP:   7.0
- * Version: 1.0.5
+ * Version: 1.0.6
  * License: GNU General Public License v3 or later
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  * Tags: education, e-commerce, blog, custom-logo, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, footer-widgets, left-sidebar, right-sidebar
@@ -47,4 +47,45 @@ ul {
 
 .tutorstarter-cart-container .cart-collaterals table.shop_table td:first-child {
     text-align: right !important;
+}
+
+.tutor-course-loop-price > .price .tutor-loop-cart-btn-wrap,
+.tutor-course-loop-price .tutor-public-course-start-learning {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+a.qubely-postgrid-btn:after {
+    right: auto !important;
+    left: -23px;
+    transform: rotate(180deg);
+}
+
+.qubely-block-contact-form .qubely-form .qubely-form-group .qubely-form-label {
+    text-align: right;
+}
+
+div#content p,
+.wp-block-qubely-heading,
+.wp-block-qubely-text .qubely-block-text,
+.wp-block-qubely-text .qubely-block-text p,
+.wp-block-qubely-pricing .qubely-block-pricing {
+    text-align: right !important;
+}
+
+.qubely-postgrid-pagination .page-numbers span {
+    transform: rotate(180deg);
+}
+
+.qubely-list-item-icon {
+    margin-left: 8px;
+}
+
+.tutor-starter-custom-subscription button {
+    right: auto;
+    left: 8px;
+}
+
+.qubely-block-info-box .qubely-info-box-media {
+    margin-left: 10px;
 }
