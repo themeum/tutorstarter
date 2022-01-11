@@ -6,7 +6,7 @@
 
 <!-- Search popup for .header-transparent -->
 <div class="search-field-popup">
-	<form>
+	<form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		<div>
 			<button class="close-btn">+</button>
 			<input type="search" name="s" value="<?php echo get_search_query(); ?>" placeholder="<?php esc_attr_e( 'Search...', 'tutorstarter' ); ?>" />

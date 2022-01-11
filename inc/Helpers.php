@@ -394,10 +394,11 @@ function tutor_theme_ajax_register_new_user() {
 		}
 	}
 }
+
 /**
  * Tutor starter ajax signin
  */
-add_action('wp_ajax_nopriv_ajaxlogin', 'tutor_theme_ajax_login');
+add_action( 'wp_ajax_nopriv_ajaxlogin', 'tutor_theme_ajax_login' );
 
 function tutor_theme_ajax_login() {
 	if ( ! check_ajax_referer( 'tutor-starter-signin-nonce', 'signinNonce' ) ) {
@@ -475,39 +476,6 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
         $fragments['a.cart-contents'] = ob_get_clean();
         return $fragments;
     }
-}
-
-/**
- * Disabling checkout billing fields for digital products
- */
-add_filter( 'woocommerce_checkout_fields' , 'tutorstarter_unset_checkout_fields' );
-
-if ( ! function_exists( 'tutorstarter_unset_checkout_fields' ) ) {
-	function tutorstarter_unset_checkout_fields( $fields ) {
-		$only_virtual = true;
-    
-		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-			// Check if there are non-virtual products
-			if ( ! $cart_item['data']->is_virtual() && ! $cart_item['data']->is_downloadable() ) $only_virtual = false;   
-		}
-		
-		if ( $only_virtual ) {
-			unset( $fields['billing']['billing_first_name'] );
-			unset( $fields['billing']['billing_last_name'] );
-			unset( $fields['billing']['billing_email'] );
-			unset( $fields['billing']['billing_company'] );
-			unset( $fields['billing']['billing_address_1'] );
-			unset( $fields['billing']['billing_address_2'] );
-			unset( $fields['billing']['billing_city'] );
-			unset( $fields['billing']['billing_postcode'] );
-			unset( $fields['billing']['billing_country'] );
-			unset( $fields['billing']['billing_state'] );
-			unset( $fields['billing']['billing_phone'] );
-			add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
-		}
-     
-     return $fields;
-	}
 }
 
 /**
@@ -617,7 +585,7 @@ if ( ! function_exists( 'tutorstarter_footer_logo' ) ) {
 }
 
 /**
- * Footer logo parser
+ * Footer transparent logo parser
  */
 if ( ! function_exists( 'tutorstarter_footer_trans_logo' ) ) {
 	function tutorstarter_footer_trans_logo() {

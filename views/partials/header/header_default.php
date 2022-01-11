@@ -12,7 +12,7 @@
         </div>
         <!-- .has-search-field must use with .navbar-right -->
         <div class="search-field">
-            <form>
+            <form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <input type="search" name="s" value="<?php echo get_search_query(); ?>" placeholder="<?php esc_attr_e( 'Search...', 'tutorstarter' ); ?>" />
             </form>
         </div>

@@ -1,15 +1,15 @@
-# Copyright (C) 2021 Themeum
+# Copyright (C) 2022 Themeum
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: TutorStarter 1.0.7\n"
+"Project-Id-Version: TutorStarter 1.0.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tutorstarter\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-08-20T04:02:33+00:00\n"
+"POT-Creation-Date: 2022-01-11T10:47:00+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: tutorstarter\n"
@@ -1061,7 +1061,7 @@ msgid ">"
 msgstr ""
 
 #: inc/Helpers.php:330
-#: inc/Helpers.php:404
+#: inc/Helpers.php:405
 msgid "Cheating huh?"
 msgstr ""
 
@@ -1113,34 +1113,34 @@ msgstr ""
 msgid "Incorrect username or password."
 msgstr ""
 
-#: inc/Helpers.php:411
+#: inc/Helpers.php:412
 msgid "Email is not valid."
 msgstr ""
 
-#: inc/Helpers.php:414
+#: inc/Helpers.php:415
 msgid "Password field is empty."
 msgstr ""
 
-#: inc/Helpers.php:425
+#: inc/Helpers.php:426
 msgid "Invalid login details"
 msgstr ""
 
-#: inc/Helpers.php:428
+#: inc/Helpers.php:429
 msgid "Signin successful, redirecting..."
 msgstr ""
 
-#: inc/Helpers.php:452
-#: inc/Helpers.php:470
+#: inc/Helpers.php:453
+#: inc/Helpers.php:471
 msgid "View your shopping cart"
 msgstr ""
 
-#: inc/Helpers.php:522
+#: inc/Helpers.php:490
 #: woocommerce/checkout/form-checkout.php:21
 msgid "Complete Payment"
 msgstr ""
 
-#: inc/Helpers.php:574
-#: inc/Helpers.php:595
+#: inc/Helpers.php:542
+#: inc/Helpers.php:563
 #: views/partials/header/header_default.php:92
 #: views/partials/header/header_transparent.php:113
 msgid "%s"
@@ -1399,7 +1399,7 @@ msgid "Total"
 msgstr ""
 
 #: woocommerce/cart/cart.php:61
-#: woocommerce/checkout/form-checkout.php:88
+#: woocommerce/checkout/form-checkout.php:81
 msgid "Available on backorder"
 msgstr ""
 
@@ -1412,7 +1412,7 @@ msgid "Remove"
 msgstr ""
 
 #: woocommerce/cart/cart.php:98
-#: woocommerce/checkout/form-checkout.php:109
+#: woocommerce/checkout/form-checkout.php:102
 msgid "Summary"
 msgstr ""
 
@@ -1428,7 +1428,7 @@ msgstr ""
 msgid "You must be logged in to checkout."
 msgstr ""
 
-#: woocommerce/checkout/form-checkout.php:50
+#: woocommerce/checkout/form-checkout.php:43
 msgid "Order Details"
 msgstr ""
 

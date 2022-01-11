@@ -3,7 +3,7 @@ Contributors: themeum
 Tags: education, e-commerce, blog, custom-logo, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, footer-widgets, left-sidebar, right-sidebar
 Requires at least: 5.0
 Tested up to: 5.8
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 Requires PHP: 7.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -83,6 +83,13 @@ If you found any bugs or issues, please let us know by posting on the support se
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 1.0.8 =
+- Enabled Billing Details in Checkout Page
+- Fixed Repeating Chekout Button Markup when Adding More Than One Product in Cart Page
+- Fixed Few Design Issues with Tutor 2.0
+- Fixed Country and State/District Input Field Height Issue in Checkout Page
+- Improvements in Search Functionality
 
 = 1.0.7 =
 - Updated WordPress 5.8 Compatibility Tag
