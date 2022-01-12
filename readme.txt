@@ -86,7 +86,7 @@ If you found any bugs or issues, please let us know by posting on the support se
 
 = 1.0.8 =
 - Enabled Billing Details in Checkout Page
-- Fixed Repeating Chekout Button Markup when Adding More Than One Product in Cart Page
+- Fixed Repeating Checkout Button Markup when Adding More Than One Product in Cart Page
 - Fixed Few Design Issues with Tutor 2.0
 - Fixed Country and State/District Input Field Height Issue in Checkout Page
 - Improvements in Search Functionality
