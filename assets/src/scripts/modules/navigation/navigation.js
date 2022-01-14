@@ -66,7 +66,7 @@
     }
 
     const navbarToggler = document.querySelector('.navbar-toggler');
-    if (null !== navbarToggler) {
+    if (null !== navbarToggler || undefined !== navbarToggler || 'undefined' !== navbarToggler) {
         window.addEventListener('resize', () => {
             if (mediaQuery.matches) {
                 navbarToggler.addEventListener('click', (e) => {
@@ -77,7 +77,7 @@
                     });
                 });
             } else {
-                if (null !== lastMenuItem) {
+                if (null !== lastMenuItem || undefined !== lastMenuItem || 'undefined' !== lastMenuItem) {
                     lastMenuItem.removeEventListener('keydown', addTabLoopFeature, false);
                 }
             }
