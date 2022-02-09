@@ -30,6 +30,9 @@ $trans_header_toggle = ( ! empty( $page_meta['header_trans_toggle'] ) ? $page_me
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">
+		<?php _e( 'Skip to content', 'tutorstarter' ); ?>
+	</a>
 
 <?php if ( false === $disable_header ) {
 	if ( true === $trans_header_toggle ) {

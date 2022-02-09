@@ -12,7 +12,7 @@
         </div>
         <!-- .has-search-field must use with .navbar-right -->
         <div class="search-field">
-            <form>
+            <form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <input type="search" name="s" value="<?php echo get_search_query(); ?>" placeholder="<?php esc_attr_e( 'Search...', 'tutorstarter' ); ?>" />
             </form>
         </div>
@@ -53,14 +53,13 @@
                         <?php
                             if ( function_exists( 'tutor_utils' ) ) {
                                 $dashboard_page_id = tutor_utils()->get_option( 'tutor_dashboard_page_id' );
-                                $dashboard_pages = tutor_utils()->tutor_dashboard_pages();
+                                $dashboard_pages = tutor_utils()->tutor_dashboard_nav_ui_items();
         
                                 foreach ( $dashboard_pages as $dashboard_key => $dashboard_page ) {
                                     $menu_title = $dashboard_page;
                                     $menu_link = tutils()->get_tutor_dashboard_page_permalink( $dashboard_key );
                                     $separator = false;
                                     if ( is_array( $dashboard_page ) ) {
-                                        if ( ! current_user_can( tutor()->instructor_role ) ) continue;
                                         $menu_title = tutor_utils()->array_get( 'title', $dashboard_page );
                                         /**
                                          * Add new menu item property "url" for custom link

@@ -1,15 +1,122 @@
-/*
-Theme Name: Tutor Starter
-
-Adding support for language written in a Right To Left (RTL) direction is easy -
-it's just a matter of overwriting all the horizontal positioning attributes
-of your CSS stylesheet in a separate stylesheet file named rtl.css.
-
-https://codex.wordpress.org/Right_to_Left_Language_Support
-
-*/
+/**
+ * Theme Name: TutorStarter
+ * Author: Themeum
+ * Author URI: https://www.themeum.com
+ * Description: Tutor Starter is a free WordPress LMS theme powered by Tutor LMS, the popular eLearning plugin for WordPress. It is designed to let Tutor LMS take center stage while also letting you pick what feels right. Tutor Starter is created with the same Unified Design System from Tutor LMS making it the perfect companion eLearning theme for Tutor LMS. Tutor Starter is also highly specialized for speed and efficiency, with all of its components optimized to give your eLearning website a great score on Google's PageSpeed. Tutor Starter pages are also schema ready and SEO optimized to make ranking on search engines as easy as pie! It also boasts an impressive blog single page for perfect readability. With full support for both Elementor and Gutenberg, Tutor Starter hopes to cater to the largest audience of both classic page builders and modern Gutenberg based builders. It comes with customizer settings for headers, footers, and everything in between. With several header and footer variations, advanced typography settings, and contextual page settings, create the eLearning website of your dreams with this free LMS theme. Tutor Starter features 3 modern and pre-built home layouts with fully functioning inner pages for both Elementor and Gutenberg to let you get started in no time. Tutor Starter also features a clean and light one-click demo importer to import all these pre-built home layouts for Gutenberg and Elementor. This, along with deep ties with Tutor LMS makes it a no-brainer WordPress LMS theme. Please Check theme demo here https://preview.tutorlms.com/
+ * Tested up to:   5.9
+ * Requires PHP:   7.0
+ * Version: 1.0.8
+ * License: GNU General Public License v3 or later
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ * Tags: education, e-commerce, blog, custom-logo, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, footer-widgets, left-sidebar, right-sidebar
+ * Text Domain: tutorstarter
+ */
 
 body {
-	direction: rtl;
-	unicode-bidi: embed;
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+.navbar-nav .menu-item a {
+    margin-left: 15px;
+}
+
+.navbar-nav .menu-item .sub-menu a:after {
+    right: 5px;
+}
+
+.navbar-nav .menu-item.icon > a:before {
+    right: auto;
+    left: -8px !important;
+}
+
+.menu-item .sub-menu > .menu-item .sub-menu {
+    right: calc(100% + 14px);
+}
+
+.wp-caption {
+    text-align: right;
+}
+
+li > ol,
+li > ul,
+ol,
+ul {
+    padding-right: 2rem;
+}
+
+.tutorstarter-cart-container .cart-collaterals table.shop_table td:first-child {
+    text-align: right !important;
+}
+
+.tutor-course-loop-price > .price .tutor-loop-cart-btn-wrap,
+.tutor-course-loop-price .tutor-public-course-start-learning {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+a.qubely-postgrid-btn:after {
+    right: auto !important;
+    left: -23px;
+    transform: rotate(180deg);
+}
+
+.qubely-block-contact-form .qubely-form .qubely-form-group .qubely-form-label {
+    text-align: right !important;
+}
+
+div#content p,
+.wp-block-qubely-heading,
+.wp-block-qubely-text .qubely-block-text,
+.wp-block-qubely-text .qubely-block-text p,
+.wp-block-qubely-pricing .qubely-block-pricing {
+    text-align: right !important;
+}
+
+.qubely-postgrid-pagination .page-numbers span {
+    transform: rotate(180deg);
+}
+
+.qubely-list-item-icon {
+    margin-left: 8px;
+}
+
+.tutor-starter-custom-subscription button {
+    right: auto !important;
+    left: 8px !important;
+}
+
+.qubely-block-info-box .qubely-info-box-media {
+    margin-left: 10px !important;
+}
+
+.tutorstarter-cart-container .cart-collaterals .cart-coupon form button {
+    right: auto !important;
+    left: 8px;
+}
+
+.elementor-widget-heading {
+    text-align: right !important;
+    padding-right: 15px;
+}
+
+.elementor-widget-container,
+.elementor-widget-container p {
+    text-align: right !important;
+    padding-right: 15px;
+}
+
+.elementor-icon-box-content {
+    text-align: right !important;
+    margin-right: 10px;
+}
+
+.elementor-button-wrapper a {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.elementor-button-icon {
+    padding-right: 3px;
+    transform: rotate(180deg);
 }

@@ -16,7 +16,7 @@
 // a.tutor-button,
 // .tutor-button,
 // a.tutor-btn,
-.single_add_to_cart_button{
+.single_add_to_cart_button {
     font-size: 16px;
     padding: 15px 80px;
     border-radius: 33px;
@@ -29,6 +29,11 @@
     max-height: 30px;
     max-width: 30px;
     border-radius: 50%;
+}
+
+.tutor-site-wrap a,
+.tutor-wrap a {
+    text-decoration: none;
 }
 
 .tutor-wrap .tutor-login-wrap {
@@ -53,5 +58,34 @@ form.tutor-ResetPassword.lost_reset_password {
 @media only screen and (max-width: 767px) {
     form.tutor-ResetPassword.lost_reset_password {
         padding: 20px;
+    }
+}
+
+.theme-tutorstarter {
+    .tutor-courses-wrap {
+        .list-item-button {
+            .added_to_cart {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .select2-selection {
+        height: 40px;
+        .select2-selection__rendered,
+        .select2-selection__arrow {
+            height: 40px;
+            line-height: 2.4em;
+        }
+    }
+
+    .tutor-course-details-page {
+        .tutor-course-author {
+            display: flex;
+            align-items: center;
+            span {
+                padding-right: 5px;
+            }
+        }
     }
 }

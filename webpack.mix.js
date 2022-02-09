@@ -23,16 +23,16 @@ mix.autoload({
 mix.setPublicPath('./assets/dist');
 
 // Compile assets
-mix.js('assets/src/scripts/app.js', 'assets/dist/js')
-	.js('assets/src/scripts/customizer-preview.js', 'assets/dist/js')
+mix.js('assets/src/scripts/app.js', 'assets/dist/js/app.min.js')
+	.js('assets/src/scripts/customizer-preview.js', 'assets/dist/js/customizer-preview.min.js')
 	.react('inc/Api/Customizer/reactjs/src/customizer-controls.js', 'assets/dist/js')
 	.react('inc/Custom/Schema/schemajs/src/tutor-schema.js', 'assets/dist/js')
 	.react('inc/Custom/Page/reactjs/src/tutorstarter-page-settings.js', 'assets/dist/js')
 	.react('inc/Setup/Settings/reactjs/src/tutorstarter-dashboard.js', 'assets/dist/js')
-	.sass('assets/src/sass/style.scss', 'assets/dist/css')
-	.sass('assets/src/sass/admin.scss', 'assets/dist/css')
-	.sass('inc/Api/Customizer/reactjs/src/sass/all-controls.scss', 'assets/dist/css')
-	.sass('inc/Setup/Settings/reactjs/src/sass/dashboard.scss', 'assets/dist/css')
+	.sass('assets/src/sass/style.scss', 'assets/dist/css/style.min.css')
+	.sass('assets/src/sass/admin.scss', 'assets/dist/css/admin.min.css')
+	.sass('inc/Api/Customizer/reactjs/src/sass/all-controls.scss', 'assets/dist/css/all-controls.min.css')
+	.sass('inc/Setup/Settings/reactjs/src/sass/dashboard.scss', 'assets/dist/css/dashboard.min.css')
 
 // Disable notification
 mix.disableNotifications();

@@ -1,29 +1,42 @@
 <?php
 /**
  * Helpers methods
- * List all static functions for global use
+ * List of all functions for global use
  *
  * @package Tutor_Starter
  */
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! function_exists( 'starts_with' ) ) {
-	/**
-	 * Determine if a given string starts with a given substring.
-	 *
-	 * @param string       $haystack search arg.
-	 * @param string|array $needles search term.
-	 * @return bool
-	 */
-	function starts_with( $haystack, $needles ) {
-		foreach ( (array) $needles as $needle ) {
-			if ( '' !== $needle && substr( $haystack, 0, strlen( $needle ) ) === (string) $needle ) {
-				return true;
-			}
-		}
-		return false;
-	}
+add_action( 'tgmpa_register', 'tutorstarter_register_required_plugins' );
+
+/**
+ * Register the required plugins for this theme.
+ */
+function tutorstarter_register_required_plugins() {
+
+	// Array of plugin arrays. Required keys are name and slug.
+	$plugins = array(
+		array(
+			'name'     => 'TutorMate',
+			'slug'     => 'tutormate',
+			'required' => false,
+		),
+	);
+
+	// Array of configuration settings.
+	$config = array(
+		'id'           => 'tutorstarter',
+		'default_path' => '',
+		'menu'         => 'tgmpa-install-plugins',
+		'has_notices'  => true,
+		'dismissable'  => true,
+		'dismiss_msg'  => '',
+		'is_automatic' => false,
+		'message'      => '',
+	);
+
+	tgmpa( $plugins, $config );
 }
 
 if ( ! function_exists( 'control_active_callback' ) ) {
@@ -287,86 +300,6 @@ if ( ! function_exists( 'allowed_html' ) ) {
 	}
 }
 
-if ( ! function_exists( 'mix' ) ) {
-	/**
-	 * Get the path to a versioned Mix file.
-	 *
-	 * @param  string $path path of arg.
-	 * @param  string $manifest_directory manifest.json.
-	 * @return \Illuminate\Support\HtmlString
-	 *
-	 * @throws \Exception Throws exception.
-	 */
-	function mix( $path, $manifest_directory = '' ) {
-
-		global $wp_filesystem;
-
-		require_once ABSPATH . '/wp-admin/includes/file.php';
-		WP_Filesystem();
-
-		if ( ! $manifest_directory ) {
-			// Setup path for standard Tutor_Starter-Folder-Structure.
-			$manifest_directory = 'assets/dist/';
-		}
-		static $manifest;
-		if ( ! starts_with( $path, '/' ) ) {
-			$path = "/{$path}";
-		}
-		if ( $manifest_directory && ! starts_with( $manifest_directory, '/' ) ) {
-			$manifest_directory = "/{$manifest_directory}";
-		}
-		$root_dir = dirname( __FILE__, 2 );
-		if ( file_exists( $root_dir . '/' . $manifest_directory . '/hot' ) ) {
-			return getenv( 'WP_SITEURL' ) . ':8080' . $path;
-		}
-		if ( ! $manifest ) {
-			$manifest_path = $root_dir . $manifest_directory . 'mix-manifest.json';
-			if ( ! file_exists( $manifest_path ) ) {
-				throw new Exception( 'The Mix manifest does not exist.' );
-			}
-			$manifest = json_decode( $wp_filesystem->get_contents( $manifest_path ), true );
-		}
-
-		if ( starts_with( $manifest[ $path ], '/' ) ) {
-			$manifest[ $path ] = ltrim( $manifest[ $path ], '/' );
-		}
-
-		$path = $manifest_directory . $manifest[ $path ];
-
-		return get_template_directory_uri() . $path;
-	}
-}
-
-if ( ! function_exists( 'assets' ) ) {
-	/**
-	 * Easily point to the assets dist folder.
-	 *
-	 * @param  string $path as arg.
-	 */
-	function assets( $path ) {
-		if ( ! $path ) {
-			return;
-		}
-
-		echo esc_attr( get_template_directory_uri() . '/assets/dist/' . $path );
-	}
-}
-
-if ( ! function_exists( 'svg' ) ) {
-	/**
-	 * Easily point to the assets dist folder.
-	 *
-	 * @param string $path as arg.
-	 */
-	function svg( $path ) {
-		if ( ! $path ) {
-			return;
-		}
-
-		echo esc_attr( get_template_part( 'assets/dist/svg/inline', $path . '.svg' ) );
-	}
-}
-
 if ( ! function_exists( 'tutorstarter_post_pagination' ) ) {
 	/**
 	 * Custom pagination
@@ -386,58 +319,6 @@ if ( ! function_exists( 'tutorstarter_post_pagination' ) ) {
 		 ) );
 	}
 }
-
-/**
- * TGMPA Plugin Activation
- */
-add_action( 'tgmpa_register', 'tutorstarter_plugin_activation' );
-
-if ( ! function_exists( 'tutorstarter_plugin_activation' ) ) :
-
-	/**
-	 * Plugin activation
-	 *
-	 * @return void
-	 */
-	function tutorstarter_plugin_activation() {
-		$plugins = array(
-			array(
-				'name'               => esc_html__( 'Tutormate', 'tutorstarter' ),
-				'slug'               => 'tutormate',
-				'required'           => false,
-				'version'            => '1.0.0',
-				'force_activation'   => false,
-				'force_deactivation' => false,
-				'external_url'       => esc_url( 'https://api.tutorlms.com/wp-content/uploads/resources/tutormate.zip' ),
-				'source'             => esc_url( 'https://api.tutorlms.com/wp-content/uploads/resources/tutormate.zip' ),
-			),
-		);
-
-		$config = array(
-			'id'               => 'tutorstarter',
-			'default_path'     => '',
-			'parent_menu_slug' => 'themes.php',
-			'parent_url_slug'  => 'themes.php',
-			'menu'             => 'install-required-plugins',
-			'has_notices'      => true,
-			'is_automatic'     => false,
-			'message'          => '',
-			'strings'          => array(
-				'page_title'       => esc_html__( 'Install Required Plugins', 'tutorstarter' ),
-				'menu_title'       => esc_html__( 'Install Plugins', 'tutorstarter' ),
-				// Translators: installing plugin translation.
-				'installing'       => esc_html__( 'Installing Plugin: %s', 'tutorstarter' ),
-				'oops'             => esc_html__( 'Something went wrong with the plugin API.', 'tutorstarter' ),
-				'return'           => esc_html__( 'Return to Required Plugins Installer', 'tutorstarter' ),
-				'plugin_activated' => esc_html__( 'Plugin activated successfully.', 'tutorstarter' ),
-				// Translators: plugin installation complete translation.
-				'complete'         => esc_html__( 'All plugins installed and activated successfully. %s', 'tutorstarter' ),
-			),
-		);
-
-		tgmpa( $plugins, $config );
-	}
-endif;
 
 /**
  * Tutor starter ajax signup
@@ -513,10 +394,11 @@ function tutor_theme_ajax_register_new_user() {
 		}
 	}
 }
+
 /**
  * Tutor starter ajax signin
  */
-add_action('wp_ajax_nopriv_ajaxlogin', 'tutor_theme_ajax_login');
+add_action( 'wp_ajax_nopriv_ajaxlogin', 'tutor_theme_ajax_login' );
 
 function tutor_theme_ajax_login() {
 	if ( ! check_ajax_referer( 'tutor-starter-signin-nonce', 'signinNonce' ) ) {
@@ -597,39 +479,6 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
 }
 
 /**
- * Disabling checkout billing fields for digital products
- */
-add_filter( 'woocommerce_checkout_fields' , 'tutorstarter_unset_checkout_fields' );
-
-if ( ! function_exists( 'tutorstarter_unset_checkout_fields' ) ) {
-	function tutorstarter_unset_checkout_fields( $fields ) {
-		$only_virtual = true;
-    
-		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-			// Check if there are non-virtual products
-			if ( ! $cart_item['data']->is_virtual() && ! $cart_item['data']->is_downloadable() ) $only_virtual = false;   
-		}
-		
-		if ( $only_virtual ) {
-			unset( $fields['billing']['billing_first_name'] );
-			unset( $fields['billing']['billing_last_name'] );
-			unset( $fields['billing']['billing_email'] );
-			unset( $fields['billing']['billing_company'] );
-			unset( $fields['billing']['billing_address_1'] );
-			unset( $fields['billing']['billing_address_2'] );
-			unset( $fields['billing']['billing_city'] );
-			unset( $fields['billing']['billing_postcode'] );
-			unset( $fields['billing']['billing_country'] );
-			unset( $fields['billing']['billing_state'] );
-			unset( $fields['billing']['billing_phone'] );
-			add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
-		}
-     
-     return $fields;
-	}
-}
-
-/**
  * Changing order button html output
  */
 add_filter( 'woocommerce_order_button_html', 'tutorstarter_order_btn_html' );
@@ -684,13 +533,13 @@ function tutorstarter_header_switcher() {
 if ( ! function_exists( 'tutorstarter_site_logo' ) ) {
 	function tutorstarter_site_logo() {
         $logo          = get_theme_mod( 'custom_logo' );
-        $logo_img      = ! empty( $logo ) ? wp_get_attachment_image_src( $logo, 'full' ) : false;
+        $logo_img      = ! empty( $logo ) ? wp_get_attachment_image_url( $logo, 'full' ) : false;
         $logo_retina   = get_theme_mod( 'retina_logo' );
 		$retina_imgset = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
         
 		if ( $logo_img ) : ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img src="<?php echo esc_url( $logo_img[0] ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php printf( esc_attr__( '%s', 'tutorstarter' ), bloginfo( 'name' ) ); ?>" />
+                <img src="<?php echo esc_url( $logo_img ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php printf( esc_attr__( '%s', 'tutorstarter' ), bloginfo( 'name' ) ); ?>" />
             </a>
         <?php else : ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -730,13 +579,13 @@ if ( ! function_exists( 'tutorstarter_footer_logo' ) ) {
 		$logo_retina   = get_theme_mod( 'footer_retina_logo' );
 		$retina_imgset = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
 		if ( ! empty( $footer_logo ) ) : ?>
-			<img height="24" width="92" class="logo-footer" src="<?php echo esc_url_raw( $footer_logo ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ) ?>">
+			<img height="24" width="92" class="logo-footer" src="<?php echo esc_url( $footer_logo ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ) ?>">
 		<?php endif;
 	}
 }
 
 /**
- * Footer logo parser
+ * Footer transparent logo parser
  */
 if ( ! function_exists( 'tutorstarter_footer_trans_logo' ) ) {
 	function tutorstarter_footer_trans_logo() {
@@ -744,7 +593,25 @@ if ( ! function_exists( 'tutorstarter_footer_trans_logo' ) ) {
 		$logo_retina       = get_theme_mod( 'footer_retina_trans_logo' );
 		$retina_imgset     = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
 		if ( ! empty( $footer_logo_trans ) ) : ?>
-			<img height="24" width="92" class="logo-footer trans" src="<?php echo esc_url_raw( $footer_logo_trans ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ) ?>">
+			<img height="24" width="92" class="logo-footer trans" src="<?php echo esc_url( $footer_logo_trans ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ) ?>">
 		<?php endif;
 	}
 }
+
+/**
+ * Fix skip link focus in IE11.
+ *
+ * This does not enqueue the script because it is tiny and because it is only for IE11,
+ * thus it does not warrant having an entire dedicated blocking script being loaded.
+ *
+ * @link https://git.io/vWdr2
+ */
+function tutorstarter_skip_link_focus_fix() {
+	// The following is minified via `terser --compress --mangle -- js/skip-link-focus-fix.js`.
+	?>
+	<script>
+		/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<?php
+}
+add_action( 'wp_print_footer_scripts', 'tutorstarter_skip_link_focus_fix' );
