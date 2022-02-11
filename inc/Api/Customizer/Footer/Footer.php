@@ -51,8 +51,9 @@ class Footer {
 				$wp_customize,
 				'footer_socialmedia_toggle',
 				array(
-					'label'   => esc_html__( 'Show Social Media Icons?', 'tutorstarter' ),
-					'section' => 'tutorstarter_footer_section',
+					'label'           => esc_html__( 'Show Social Media Icons?', 'tutorstarter' ),
+					'section'         => 'tutorstarter_footer_section',
+					'active_callback' => 'control_active_callback_footer_layout',
 				)
 			)
 		);
@@ -208,6 +209,10 @@ class Footer {
 						'footer_five' => array(
 							'name'  => esc_html__( 'Type 5', 'tutorstarter' ),
 							'image' => get_template_directory_uri() . '/assets/dist/images/four-columns-extended-left.svg',
+						),
+						'footer_six'   => array(
+							'name'  => esc_html__( 'Type 6', 'tutorstarter' ),
+							'image' => get_template_directory_uri() . '/assets/dist/images/single-column.svg',
 						),
 					),
 				)

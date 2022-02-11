@@ -208,7 +208,7 @@ if ( ! function_exists( 'control_active_callback_footer_layout' ) ) {
 	function control_active_callback_footer_layout() {
 		// Get the appropriate theme mod.
 		$selected_footer = get_theme_mod( 'footer_type_select' );
-		if ( 'footer_five' === $selected_footer ) {
+		if ( 'footer_five' === $selected_footer || 'footer_six' === $selected_footer ) {
 			return false;
 		}
 		return true;
@@ -222,7 +222,7 @@ if ( ! function_exists( 'control_active_callback_footer_logo_trans' ) ) {
 	function control_active_callback_footer_logo_trans() {
 		// Get the appropriate theme mod.
 		$selected_footer = get_theme_mod( 'footer_type_select' );
-		if ( 'footer_five' === $selected_footer ) {
+		if ( 'footer_five' === $selected_footer || 'footer_six' === $selected_footer ) {
 			return true;
 		}
 		return false;

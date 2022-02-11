@@ -231,6 +231,19 @@ section.footer-widgets {
     }
 }
 
+.site-info-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-six-variation {
+    li {
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
 @media (min-width: 992px) {
     .footer-widgets.footer-alternative {
         overflow: hidden;
