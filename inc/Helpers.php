@@ -62,11 +62,11 @@ if ( ! function_exists( 'control_active_cart_callback' ) ) {
 	function control_active_cart_callback() {
 		// Get the appropriate theme mod.
 		$header_type = get_theme_mod( 'header_type_select' );
-		if ( class_exists( 'woocommerce' ) && 'header_default' === $header_type ) {
+		if ( class_exists( 'WooCommerce' ) && 'header_default' === $header_type ) {
 			return true;
-		} elseif ( class_exists( 'woocommerce' ) && 'header_right' === $header_type ) {
+		} elseif ( class_exists( 'WooCommerce' ) && 'header_right' === $header_type ) {
 			return true;
-		} elseif ( class_exists( 'woocommerce' ) && 'header_fullwidth' === $header_type ) {
+		} elseif ( class_exists( 'WooCommerce' ) && 'header_fullwidth' === $header_type ) {
 			return true;
 		} else {
 			return false;
@@ -81,7 +81,7 @@ if ( ! function_exists( 'control_active_cart_trans_callback' ) ) {
 	function control_active_cart_trans_callback() {
 		// Get the appropriate theme mod.
 		$header_type = get_theme_mod( 'header_type_select' );
-		if ( class_exists( 'woocommerce' ) && 'header_transparent' === $header_type ) {
+		if ( class_exists( 'WooCommerce' ) && 'header_transparent' === $header_type ) {
 			return true;
 		} else {
 			return false;
@@ -132,6 +132,8 @@ if ( ! function_exists( 'control_active_callback_std_menu' ) ) {
 			return true;
 		} elseif ( 'header_fullwidth' === $header_type ) {
 			return true;
+		} elseif ( 'header_fullwidth_center' === $header_type ) {
+			return true;
 		} else {
 			return false;
 		}
@@ -181,6 +183,8 @@ if ( ! function_exists( 'control_active_callback_non_trans' ) ) {
 		} elseif ( 'header_right' === $header_type ) {
 			return true;
 		} elseif ( 'header_fullwidth' === $header_type ) {
+			return true;
+		} elseif ( 'header_fullwidth_center' === $header_type ) {
 			return true;
 		} else {
 			return false;
@@ -520,6 +524,9 @@ function tutorstarter_header_switcher() {
 				break;
 			case 'header_fullwidth':
 				$active_header_class = 'navbar-right full-width';
+				break;
+			case 'header_fullwidth_center':
+				$active_header_class = 'navbar-center full-width';
 				break;
 		}
 	}

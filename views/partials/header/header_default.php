@@ -2,6 +2,9 @@
 /**
  * Header default
  */
+
+use Tutor_Starter\Traits\Header_Components;
+
 ?>
 
 <header class="header-default">
@@ -32,58 +35,14 @@
             endif;
         ?>
         <div class="navbar-utils">
-            <?php if ( class_exists( 'woocommerce' ) ) : ?>
+            <?php if ( class_exists( 'WooCommerce' ) && 'header_fullwidth_center' !== get_theme_mod( 'header_type_select' ) ) : ?>
             <div class="utils-cart">
                 <?php echo tutor_starter_header_cart(); ?>
             </div>
             <?php endif; ?>
             <?php if ( class_exists( '\TUTOR\Utils' ) && is_user_logged_in() ) : ?>
-                <div class="tutor-header-profile-menu">
-                    <div class="tutor-header-profile-photo">
-                        <?php
-                            if ( function_exists( 'tutor_utils' ) ){
-                                echo tutor_utils()->get_tutor_avatar( get_current_user_id(), 'thumbnail' );
-                            } else {
-                                $get_avatar_url = get_avatar_url( get_current_user_id(), 'thumbnail' );
-                                echo "<img alt='' src='$get_avatar_url' />";
-                            }
-                        ?>
-                    </div><!-- .tutor-header-profile-photo -->
-                    <ul>
-                        <?php
-                            if ( function_exists( 'tutor_utils' ) ) {
-                                $dashboard_page_id = tutor_utils()->get_option( 'tutor_dashboard_page_id' );
-                                $dashboard_pages = tutor_utils()->tutor_dashboard_nav_ui_items();
-        
-                                foreach ( $dashboard_pages as $dashboard_key => $dashboard_page ) {
-                                    $menu_title = $dashboard_page;
-                                    $menu_link = tutils()->get_tutor_dashboard_page_permalink( $dashboard_key );
-                                    $separator = false;
-                                    if ( is_array( $dashboard_page ) ) {
-                                        $menu_title = tutor_utils()->array_get( 'title', $dashboard_page );
-                                        /**
-                                         * Add new menu item property "url" for custom link
-                                         */
-                                        if ( isset( $dashboard_page['url'] ) ) {
-                                            $menu_link = $dashboard_page['url'];
-                                        }
-                                        if ( isset( $dashboard_page['type'] ) && $dashboard_page['type'] === 'separator' ) {
-                                            $separator = true;
-                                        }
-                                    }
-                                    if ( $separator ) {
-                                        echo '<li class="tutor-dashboard-menu-divider"></li>';
-                                        if ( $menu_title ) {
-                                            echo "<li class='tutor-dashboard-menu-divider-header'>$menu_title</li>";
-                                        }
-                                    } else {
-                                        if ( $dashboard_key === 'index') $dashboard_key = '';
-                                        echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . " </a></li>";
-                                    }
-                                }
-                            }
-                        ?>
-                    </ul>
+                <div class="tutor-header-profile-menu-items">
+                    <?php Header_Components::tutor_multi_column_dropdown(); ?>
                 </div><!-- .tutor-header-profile-menu -->
             <?php endif; ?>
             <?php if ( ! is_user_logged_in() || is_customize_preview() ) : ?>

@@ -137,7 +137,7 @@ class Header {
 			array(
 				'title'             => esc_html__( 'Select Header Type', 'tutorstarter' ),
 				'transport'         => 'postMessage',
-				'default'           => 'header_one',
+				'default'           => 'header_default',
 				'sanitize_callback' => 'sanitize_select_radio',
 			)
 		);
@@ -163,6 +163,10 @@ class Header {
 						),
 						'header_fullwidth'   => array(
 							'name'  => esc_html__( 'Header Fullwidth', 'tutorstarter' ),
+							'image' => get_template_directory_uri() . '/assets/dist/images/header-full-width.svg',
+						),
+						'header_fullwidth_center'   => array(
+							'name'  => esc_html__( 'Header Fullwidth Center', 'tutorstarter' ),
 							'image' => get_template_directory_uri() . '/assets/dist/images/header-full-width.svg',
 						),
 					),

@@ -89,4 +89,12 @@
         navCloseBtn.focus();
     }
 
+    const subMenu = document.querySelector('.tutor-header-profile-menu-items');
+
+    if (null !== subMenu) {
+        subMenu.addEventListener('click', function () {
+            subMenu.classList.toggle('active');
+        })
+    }
+
 })();
