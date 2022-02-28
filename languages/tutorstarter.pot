@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-01-14T11:58:47+00:00\n"
+"POT-Creation-Date: 2022-02-28T11:19:00+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: tutorstarter\n"
@@ -193,88 +193,92 @@ msgstr ""
 msgid "Show Social Media Icons?"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:62
-#: inc/Api/Customizer/Footer/Footer.php:82
+#: inc/Api/Customizer/Footer/Footer.php:63
+#: inc/Api/Customizer/Footer/Footer.php:83
 msgid "Footer Bottom Logo"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:91
-#: inc/Api/Customizer/Footer/Footer.php:111
+#: inc/Api/Customizer/Footer/Footer.php:92
+#: inc/Api/Customizer/Footer/Footer.php:112
 msgid "Footer Retina Logo"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:120
-#: inc/Api/Customizer/Footer/Footer.php:140
+#: inc/Api/Customizer/Footer/Footer.php:121
+#: inc/Api/Customizer/Footer/Footer.php:141
 msgid "Footer Transparent Logo"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:149
-#: inc/Api/Customizer/Footer/Footer.php:169
+#: inc/Api/Customizer/Footer/Footer.php:150
+#: inc/Api/Customizer/Footer/Footer.php:170
 msgid "Footer Transparent Retina Logo"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:178
-#: inc/Api/Customizer/Footer/Footer.php:189
+#: inc/Api/Customizer/Footer/Footer.php:179
+#: inc/Api/Customizer/Footer/Footer.php:190
 msgid "Select Footer Type"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:193
+#: inc/Api/Customizer/Footer/Footer.php:194
 #: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:28
 msgid "Type 1"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:197
+#: inc/Api/Customizer/Footer/Footer.php:198
 #: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:29
 msgid "Type 2"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:201
+#: inc/Api/Customizer/Footer/Footer.php:202
 #: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:30
 msgid "Type 3"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:205
+#: inc/Api/Customizer/Footer/Footer.php:206
 #: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:31
 msgid "Type 4"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:209
+#: inc/Api/Customizer/Footer/Footer.php:210
 #: inc/Custom/Page/reactjs/src/page-settings/fields/page-settings-fields.js:32
 msgid "Type 5"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:229
-#: inc/Api/Customizer/Footer/Footer.php:240
+#: inc/Api/Customizer/Footer/Footer.php:214
+msgid "Type 6"
+msgstr ""
+
+#: inc/Api/Customizer/Footer/Footer.php:234
+#: inc/Api/Customizer/Footer/Footer.php:245
 msgid "Widgets Background Color"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:249
-#: inc/Api/Customizer/Footer/Footer.php:260
+#: inc/Api/Customizer/Footer/Footer.php:254
+#: inc/Api/Customizer/Footer/Footer.php:265
 msgid "Footer Bottom BG Color"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:269
-#: inc/Api/Customizer/Footer/Footer.php:280
+#: inc/Api/Customizer/Footer/Footer.php:274
+#: inc/Api/Customizer/Footer/Footer.php:285
 msgid "Widgets Text Color"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:289
-#: inc/Api/Customizer/Footer/Footer.php:313
+#: inc/Api/Customizer/Footer/Footer.php:294
+#: inc/Api/Customizer/Footer/Footer.php:318
 msgid "Widget Title Typography"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:348
-#: inc/Api/Customizer/Footer/Footer.php:372
+#: inc/Api/Customizer/Footer/Footer.php:353
+#: inc/Api/Customizer/Footer/Footer.php:377
 msgid "Widget Text Typography"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:407
-#: inc/Api/Customizer/Footer/Footer.php:418
+#: inc/Api/Customizer/Footer/Footer.php:412
+#: inc/Api/Customizer/Footer/Footer.php:423
 msgid "Footer Bottom Text Color"
 msgstr ""
 
-#: inc/Api/Customizer/Footer/Footer.php:427
-#: inc/Api/Customizer/Footer/Footer.php:438
+#: inc/Api/Customizer/Footer/Footer.php:432
+#: inc/Api/Customizer/Footer/Footer.php:443
 msgid "Footer Bottom Text"
 msgstr ""
 
@@ -414,118 +418,122 @@ msgstr ""
 msgid "Header Fullwidth"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:182
-#: inc/Api/Customizer/Header/Header.php:193
+#: inc/Api/Customizer/Header/Header.php:169
+msgid "Header Fullwidth Center"
+msgstr ""
+
+#: inc/Api/Customizer/Header/Header.php:186
+#: inc/Api/Customizer/Header/Header.php:197
 msgid "Header BG Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:202
-#: inc/Api/Customizer/Header/Header.php:213
+#: inc/Api/Customizer/Header/Header.php:206
+#: inc/Api/Customizer/Header/Header.php:217
 msgid "Menu Link Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:222
-#: inc/Api/Customizer/Header/Header.php:233
+#: inc/Api/Customizer/Header/Header.php:226
+#: inc/Api/Customizer/Header/Header.php:237
 msgid "Transparent Menu Link Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:242
-#: inc/Api/Customizer/Header/Header.php:260
+#: inc/Api/Customizer/Header/Header.php:246
+#: inc/Api/Customizer/Header/Header.php:264
 msgid "Menu Link Active and Hover Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:269
-#: inc/Api/Customizer/Header/Header.php:287
+#: inc/Api/Customizer/Header/Header.php:273
+#: inc/Api/Customizer/Header/Header.php:291
 msgid "Transparent Link Active and Hover Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:296
-#: inc/Api/Customizer/Header/Header.php:320
+#: inc/Api/Customizer/Header/Header.php:300
+#: inc/Api/Customizer/Header/Header.php:324
 msgid "Menu Typography"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:354
-#: inc/Api/Customizer/Header/Header.php:365
+#: inc/Api/Customizer/Header/Header.php:358
+#: inc/Api/Customizer/Header/Header.php:369
 msgid "Show Search Icon?"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:374
-#: inc/Api/Customizer/Header/Header.php:392
+#: inc/Api/Customizer/Header/Header.php:378
+#: inc/Api/Customizer/Header/Header.php:396
 msgid "Make Header Sticky?"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:401
-#: inc/Api/Customizer/Header/Header.php:419
+#: inc/Api/Customizer/Header/Header.php:405
+#: inc/Api/Customizer/Header/Header.php:423
 msgid "Sticky Header BG Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:428
-#: inc/Api/Customizer/Header/Header.php:439
+#: inc/Api/Customizer/Header/Header.php:432
+#: inc/Api/Customizer/Header/Header.php:443
 msgid "Cart Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:448
-#: inc/Api/Customizer/Header/Header.php:459
+#: inc/Api/Customizer/Header/Header.php:452
+#: inc/Api/Customizer/Header/Header.php:463
 msgid "Transparent Cart Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:468
-#: inc/Api/Customizer/Header/Header.php:479
+#: inc/Api/Customizer/Header/Header.php:472
+#: inc/Api/Customizer/Header/Header.php:483
 msgid "Show Starter Button?"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:488
-#: inc/Api/Customizer/Header/Header.php:499
+#: inc/Api/Customizer/Header/Header.php:492
+#: inc/Api/Customizer/Header/Header.php:503
 msgid "Button BG Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:508
-#: inc/Api/Customizer/Header/Header.php:526
+#: inc/Api/Customizer/Header/Header.php:512
+#: inc/Api/Customizer/Header/Header.php:530
 msgid "Transparent Btn BG Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:535
-#: inc/Api/Customizer/Header/Header.php:546
+#: inc/Api/Customizer/Header/Header.php:539
+#: inc/Api/Customizer/Header/Header.php:550
 msgid "Border Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:555
-#: inc/Api/Customizer/Header/Header.php:566
+#: inc/Api/Customizer/Header/Header.php:559
+#: inc/Api/Customizer/Header/Header.php:570
 msgid "Transparent Border Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:575
-#: inc/Api/Customizer/Header/Header.php:586
+#: inc/Api/Customizer/Header/Header.php:579
+#: inc/Api/Customizer/Header/Header.php:590
 msgid "Border Width"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:596
-#: inc/Api/Customizer/Header/Header.php:607
+#: inc/Api/Customizer/Header/Header.php:600
+#: inc/Api/Customizer/Header/Header.php:611
 msgid "Border Radius"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:617
-#: inc/Api/Customizer/Header/Header.php:628
+#: inc/Api/Customizer/Header/Header.php:621
+#: inc/Api/Customizer/Header/Header.php:632
 msgid "Button Text Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:637
-#: inc/Api/Customizer/Header/Header.php:648
+#: inc/Api/Customizer/Header/Header.php:641
+#: inc/Api/Customizer/Header/Header.php:652
 msgid "Transparent Button Text Color"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:657
-#: inc/Api/Customizer/Header/Header.php:668
+#: inc/Api/Customizer/Header/Header.php:661
+#: inc/Api/Customizer/Header/Header.php:672
 msgid "Button Text"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:678
-#: inc/Api/Customizer/Header/Header.php:689
+#: inc/Api/Customizer/Header/Header.php:682
+#: inc/Api/Customizer/Header/Header.php:693
 msgid "Button Link"
 msgstr ""
 
-#: inc/Api/Customizer/Header/Header.php:699
-#: inc/Api/Customizer/Header/Header.php:723
+#: inc/Api/Customizer/Header/Header.php:703
+#: inc/Api/Customizer/Header/Header.php:727
 msgid "Button Typography"
 msgstr ""
 
@@ -1052,97 +1060,97 @@ msgstr ""
 msgid "Tutor Starter Schema"
 msgstr ""
 
-#: inc/Helpers.php:316
+#: inc/Helpers.php:320
 msgid "<"
 msgstr ""
 
-#: inc/Helpers.php:317
+#: inc/Helpers.php:321
 msgid ">"
 msgstr ""
 
-#: inc/Helpers.php:330
-#: inc/Helpers.php:405
+#: inc/Helpers.php:334
+#: inc/Helpers.php:409
 msgid "Cheating huh?"
 msgstr ""
 
-#: inc/Helpers.php:339
+#: inc/Helpers.php:343
 msgid "Please provide a username."
 msgstr ""
 
-#: inc/Helpers.php:342
+#: inc/Helpers.php:346
 msgid "A valid email is required."
 msgstr ""
 
-#: inc/Helpers.php:345
+#: inc/Helpers.php:349
 msgid "Please provide a strong password."
 msgstr ""
 
-#: inc/Helpers.php:348
+#: inc/Helpers.php:352
 msgid "Please confirm the password."
 msgstr ""
 
-#: inc/Helpers.php:352
+#: inc/Helpers.php:356
 msgid "Username already exists."
 msgstr ""
 
-#: inc/Helpers.php:355
+#: inc/Helpers.php:359
 msgid "Email address is not valid."
 msgstr ""
 
-#: inc/Helpers.php:358
+#: inc/Helpers.php:362
 msgid "This Email already exists."
 msgstr ""
 
-#: inc/Helpers.php:361
+#: inc/Helpers.php:365
 msgid "Password must be 7 characters or more."
 msgstr ""
 
-#: inc/Helpers.php:364
+#: inc/Helpers.php:368
 msgid "Password does not match."
 msgstr ""
 
-#: inc/Helpers.php:384
+#: inc/Helpers.php:388
 msgid "Something went wrong! Please try again later."
 msgstr ""
 
-#: inc/Helpers.php:387
+#: inc/Helpers.php:391
 msgid "Registration successful, redirecting..."
 msgstr ""
 
-#: inc/Helpers.php:391
+#: inc/Helpers.php:395
 msgid "Incorrect username or password."
 msgstr ""
 
-#: inc/Helpers.php:412
+#: inc/Helpers.php:416
 msgid "Email is not valid."
 msgstr ""
 
-#: inc/Helpers.php:415
+#: inc/Helpers.php:419
 msgid "Password field is empty."
 msgstr ""
 
-#: inc/Helpers.php:426
+#: inc/Helpers.php:430
 msgid "Invalid login details"
 msgstr ""
 
-#: inc/Helpers.php:429
+#: inc/Helpers.php:433
 msgid "Signin successful, redirecting..."
 msgstr ""
 
-#: inc/Helpers.php:453
-#: inc/Helpers.php:471
+#: inc/Helpers.php:457
+#: inc/Helpers.php:475
 msgid "View your shopping cart"
 msgstr ""
 
-#: inc/Helpers.php:490
+#: inc/Helpers.php:494
 #: woocommerce/checkout/form-checkout.php:21
 msgid "Complete Payment"
 msgstr ""
 
-#: inc/Helpers.php:542
-#: inc/Helpers.php:563
-#: views/partials/header/header_default.php:91
-#: views/partials/header/header_transparent.php:112
+#: inc/Helpers.php:549
+#: inc/Helpers.php:570
+#: views/partials/header/header_default.php:56
+#: views/partials/header/header_transparent.php:77
 msgid "%s"
 msgstr ""
 
@@ -1209,6 +1217,26 @@ msgstr ""
 
 #: inc/Setup/Setup.php:114
 msgid "Huge"
+msgstr ""
+
+#: inc/Traits/Header_Components.php:47
+msgid "Hello"
+msgstr ""
+
+#: inc/Traits/Header_Components.php:62
+msgid "Create a<br />New Course"
+msgstr ""
+
+#: inc/Traits/Header_Components.php:63
+msgid "Get started with topics,<br />lessons and more"
+msgstr ""
+
+#: inc/Traits/Header_Components.php:89
+msgid "Let's Start<br />Learning"
+msgstr ""
+
+#: inc/Traits/Header_Components.php:90
+msgid "Explore courses that will<br />unlock your potential."
 msgstr ""
 
 #. Template Name of the theme
@@ -1370,9 +1398,19 @@ msgstr ""
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: views/partials/header/header_default.php:16
-#: views/partials/header/header_transparent.php:12
+#: views/partials/header/header_default.php:19
+#: views/partials/header/header_transparent.php:15
 msgid "Search..."
+msgstr ""
+
+#: views/partials/header/header_default.php:45
+#: views/partials/header/header_transparent.php:66
+msgid "Want to Explore!"
+msgstr ""
+
+#: views/partials/header/header_default.php:46
+#: views/partials/header/header_transparent.php:67
+msgid "Instant Login"
 msgstr ""
 
 #: woocommerce/cart/cart-totals.php:30

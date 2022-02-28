@@ -400,7 +400,7 @@
 @media (max-width: 991px) {
     .navbar-toggler {
         display: block;
-        justify-self: flex-start;
+        justify-self: right;
     }
     .navbar-nav {
         background: #ffffff;
@@ -601,6 +601,17 @@
             }
         }
     }
+
+    .navbar-brand {
+        order: 1;
+    }
+    button.navbar-toggler {
+        order: 2;
+        justify-self: center;
+    }
+    .navbar-utils {
+        order: 3;
+    }
 }
 
 // Header getStarted btn responsive
@@ -613,6 +624,7 @@
         justify-content: space-evenly;
         .navbar-toggler {
             margin-right: unset;
+            margin-left: 5px;
         }
     }
 }

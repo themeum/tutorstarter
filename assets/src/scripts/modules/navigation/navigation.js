@@ -11,7 +11,7 @@
     const navCloseBtn = document.querySelector('.btn-nav-close');
     const searchCloseBtn = document.querySelector('.search-field-popup .close-btn');
     const mediaQuery = window.matchMedia('(max-width: 991px)');
-    let lastMenuItem = [...document.querySelectorAll('#menu-all-pages li')];
+    let lastMenuItem = [...document.querySelectorAll('#menu-primary li')];
     lastMenuItem = lastMenuItem[lastMenuItem.length - 1];
 
 
@@ -70,7 +70,9 @@
         window.addEventListener('resize', () => {
             if (mediaQuery.matches) {
                 navbarToggler.addEventListener('click', (e) => {
-                    lastMenuItem.addEventListener('keydown', addTabLoopFeature, false);
+                    if (null !== lastMenuItem || undefined !== lastMenuItem || 'undefined' !== lastMenuItem) {
+                        lastMenuItem.addEventListener('keydown', addTabLoopFeature, false);
+                    }
                     navCloseBtn.addEventListener('click', () => {
                         const firstLink = document.querySelector('header + div a');
                         firstLink.focus();

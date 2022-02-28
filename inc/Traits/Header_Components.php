@@ -53,29 +53,59 @@ trait Header_Components {
 		</div>
 		<div class="tutor-header-submenu">
 			<?php if ( self::is_user_priviledged() && is_user_logged_in() ) : ?>
-			<div class="tutor-submenu-login-section">
-				<div class="tutor-submenu-login-avatar">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-submenu-login-avatar.svg' ); ?>" alt="profile avatar">
-				</div>
-				<div class="tutor-submenu-login-content">
-					Login as a <div class="tutor-submenu-login-profile">Student</div>
-				</div>
-				<div class="tutor-submenu-login-btn">
-					<a class="student-login tutor-submenu-login tutor-icon-icon-light-right-line tutor-font-size-30 tutor-text-bold" href="#"></a>
-				</div>
-			</div>
+				<?php if ( ! is_plugin_active( 'tutor-demo-controller/tutor-demo-controller.php' ) ) : ?>
+					<div class="tutor-submenu-login-section-instructor">
+						<div class="tutor-submenu-login-avatar">
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/instructor-submenu-icon.svg' ); ?>" alt="profile avatar">
+						</div>
+						<div class="tutor-submenu-login-content">
+							<div class="tutor-submenu-login-profile tutor-mt-10"><?php wp_kses_post( _e( 'Create a<br />New Course', 'tutorstarter' ) ) ?></div>
+							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em"><?php wp_kses_post( _e( 'Get started with topics,<br />lessons and more', 'tutorstarter' ) ); ?></p>
+						</div>
+						<div class="tutor-submenu-login-btn">
+							<a class="tutor-submenu-login tutor-icon-icon-light-right-line tutor-font-size-30 tutor-text-bold" href="<?php echo esc_url( apply_filters( 'frontend_course_create_url', admin_url( 'post-new.php?post_type=' . tutor()->course_post_type ) ) ); ?>"></a>
+						</div>
+					</div>
+				<?php else : ?>
+					<div class="tutor-submenu-login-section">
+						<div class="tutor-submenu-login-avatar">
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-submenu-login-avatar.svg' ); ?>" alt="profile avatar">
+						</div>
+						<div class="tutor-submenu-login-content">
+							Login as a <div class="tutor-submenu-login-profile">Student</div>
+						</div>
+						<div class="tutor-submenu-login-btn">
+							<a class="student-login tutor-submenu-login tutor-icon-icon-light-right-line tutor-font-size-30 tutor-text-bold" href="#"></a>
+						</div>
+					</div>
+				<?php endif; ?>
 			<?php else : ?>
-			<div class="tutor-submenu-login-section-instructor">
-				<div class="tutor-submenu-login-avatar">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-submenu-login-instructor-avatar.svg' ); ?>" alt="profile avatar">
+				<?php if ( ! is_plugin_active( 'tutor-demo-controller/tutor-demo-controller.php' ) ) : ?>
+					<div class="tutor-submenu-login-section">
+						<div class="tutor-submenu-login-avatar">
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/student-sub-menu-icon.svg' ); ?>" alt="profile avatar">
+						</div>
+						<div class="tutor-submenu-login-content">
+							<div class="tutor-submenu-login-profile tutor-mt-10"><?php wp_kses_post( _e( 'Let\'s Start<br />Learning', 'tutorstarter' ) ); ?></div>
+							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em"><?php wp_kses_post( _e( 'Explore courses that will<br />unlock your potential.', 'tutorstarter' ) ); ?></p>
+						</div>
+						<div class="tutor-submenu-login-btn">
+							<a class="tutor-submenu-login tutor-icon-icon-light-right-line tutor-font-size-30 tutor-text-bold" href="<?php echo esc_url( tutor_utils()->course_archive_page_url() ) ?>"></a>
+						</div>
+					</div>
+				<?php else : ?>
+					<div class="tutor-submenu-login-section-instructor">
+					<div class="tutor-submenu-login-avatar">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-submenu-login-instructor-avatar.svg' ); ?>" alt="profile avatar">
+					</div>
+					<div class="tutor-submenu-login-content">
+						Login as a <div class="tutor-submenu-login-profile">Instructor</div>
+					</div>
+					<div class="tutor-submenu-login-btn">
+						<a class="instructor-login tutor-submenu-login tutor-icon-icon-light-right-line tutor-font-size-30 tutor-text-bold" href="#"></a>
+					</div>
 				</div>
-				<div class="tutor-submenu-login-content">
-					Login as a <div class="tutor-submenu-login-profile">Instructor</div>
-				</div>
-				<div class="tutor-submenu-login-btn">
-					<a class="instructor-login tutor-submenu-login tutor-icon-icon-light-right-line tutor-font-size-30 tutor-text-bold" href="#"></a>
-				</div>
-			</div>
+				<?php endif; ?>
 			<?php endif; ?>
 			<div class="tutor-submenu-links">
 				<ul>
