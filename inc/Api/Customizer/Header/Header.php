@@ -167,7 +167,7 @@ class Header {
 						),
 						'header_fullwidth_center'   => array(
 							'name'  => esc_html__( 'Header Fullwidth Center', 'tutorstarter' ),
-							'image' => get_template_directory_uri() . '/assets/dist/images/header-full-width.svg',
+							'image' => get_template_directory_uri() . '/assets/dist/images/header-fullwidth-center.svg',
 						),
 					),
 				)

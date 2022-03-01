@@ -25,7 +25,7 @@ trait Header_Components {
 	}
 
 	/**
-	 * Tutor Multi column dropdown menu
+	 * Tutor multi-column dropdown menu
 	 */
 	public static function tutor_multi_column_dropdown() {
 		if ( ! class_exists( '\TUTOR\Utils' ) ) return;
@@ -99,7 +99,7 @@ trait Header_Components {
 						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-submenu-login-instructor-avatar.svg' ); ?>" alt="profile avatar">
 					</div>
 					<div class="tutor-submenu-login-content">
-						Login as a <div class="tutor-submenu-login-profile">Instructor</div>
+						Login as an <div class="tutor-submenu-login-profile">Instructor</div>
 					</div>
 					<div class="tutor-submenu-login-btn">
 						<a class="instructor-login tutor-submenu-login tutor-icon-icon-light-right-line tutor-font-size-30 tutor-text-bold" href="#"></a>
@@ -161,6 +161,8 @@ trait Header_Components {
 
 	/**
 	 * Filtered nav items based on capabilities
+	 * 
+	 * @return array
 	 */
 	public static function filtered_nav() {
 		if ( ! class_exists( '\TUTOR\Utils' ) ) return;
@@ -198,6 +200,8 @@ trait Header_Components {
 
 	/**
 	 * Check role
+	 * 
+	 * @return bool
 	 */
 	public static function is_user_priviledged() {
 		$user_is_priviledged = false;

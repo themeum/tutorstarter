@@ -65,7 +65,7 @@ if ( false === $disable_footer ) :
 <?php if ( 'footer_six' === $footer_style ) : ?>
 	<footer id="colophon" class="site-footer container-fluid pt-2 pb-2" role="contentinfo">
 		<div class="container">
-			<div class="row align-middle justify-between footer-bottom-container">
+			<div class="row align-middle justify-between footer-bottom-container footer-six">
 				<div class="site-info-wrapper">
 					<div class="site-info">
 						<?php tutorstarter_footer_trans_logo(); ?>
@@ -76,13 +76,13 @@ if ( false === $disable_footer ) :
 				</div>
 				<!-- .site-info-wrapper -->
 				<?php if ( has_nav_menu( 'secondary' ) ) : ?>
-				<div class="footer-menu">
+				<div class="footer-menu footer-six-menu">
 					<?php
 						wp_nav_menu(
 							array(
 								'theme_location' => 'secondary',
 								'menu_id'        => 'secondary-menu',
-								'menu_class'     => 'row menu-footer-menu footer-six-variation',
+								'menu_class'     => 'row footer-six-variation',
 							)
 						);
 					?>
