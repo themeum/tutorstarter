@@ -30,7 +30,7 @@ trait Header_Components {
 	public static function tutor_multi_column_dropdown() {
 		if ( ! class_exists( '\TUTOR\Utils' ) ) return;
 
-		$default_menus = apply_filters( 'tutor_dashboard/nav_items', tutor_utils()->default_menus() );
+		$default_menus = apply_filters( 'tutor_dashboard/nav_items', self::default_menus() );
 		$current_user = wp_get_current_user();
 		?>
 		<div class="tutor-header-profile-photo">
@@ -59,11 +59,11 @@ trait Header_Components {
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/instructor-submenu-icon.svg' ); ?>" alt="profile avatar">
 						</div>
 						<div class="tutor-submenu-login-content">
-							<div class="tutor-submenu-login-profile tutor-mt-10"><?php wp_kses_post( _e( 'Create a<br />New Course', 'tutorstarter' ) ) ?></div>
-							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em"><?php wp_kses_post( _e( 'Get started with topics,<br />lessons and more', 'tutorstarter' ) ); ?></p>
+							<div class="tutor-submenu-login-profile" style="margin-top: 10px;"><?php wp_kses_post( _e( 'Create a<br />New Course', 'tutorstarter' ) ) ?></div>
+							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em; font-size:14px; margin-top:10px;"><?php wp_kses_post( _e( 'Get started with topics,<br />lessons and more', 'tutorstarter' ) ); ?></p>
 						</div>
 						<div class="tutor-submenu-login-btn">
-							<a class="tutor-submenu-login tutor-icon-icon-light-right-line tutor-font-size-30 tutor-text-bold" href="<?php echo esc_url( apply_filters( 'frontend_course_create_url', admin_url( 'post-new.php?post_type=' . tutor()->course_post_type ) ) ); ?>"></a>
+							<a class="tutor-submenu-login" href="<?php echo esc_url( apply_filters( 'frontend_course_create_url', admin_url( 'post-new.php?post_type=' . tutor()->course_post_type ) ) ); ?>"><span class="dashicons dashicons-arrow-right-alt2" style="font-weight: bold;"></span></a>
 						</div>
 					</div>
 				<?php else : ?>
@@ -86,11 +86,11 @@ trait Header_Components {
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/student-sub-menu-icon.svg' ); ?>" alt="profile avatar">
 						</div>
 						<div class="tutor-submenu-login-content">
-							<div class="tutor-submenu-login-profile tutor-mt-10"><?php wp_kses_post( _e( 'Let\'s Start<br />Learning', 'tutorstarter' ) ); ?></div>
-							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em"><?php wp_kses_post( _e( 'Explore courses that will<br />unlock your potential.', 'tutorstarter' ) ); ?></p>
+							<div class="tutor-submenu-login-profile" style="margin-top: 10px;"><?php wp_kses_post( _e( 'Let\'s Start<br />Learning', 'tutorstarter' ) ); ?></div>
+							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em; font-size:14px; margin-top:10px;"><?php wp_kses_post( _e( 'Explore courses that will<br />unlock your potential.', 'tutorstarter' ) ); ?></p>
 						</div>
 						<div class="tutor-submenu-login-btn">
-							<a class="tutor-submenu-login tutor-icon-icon-light-right-line tutor-font-size-30 tutor-text-bold" href="<?php echo esc_url( tutor_utils()->course_archive_page_url() ) ?>"></a>
+							<a class="tutor-submenu-login" href="<?php echo esc_url( tutor_utils()->course_archive_page_url() ) ?>"><span class="dashicons dashicons-arrow-right-alt2" style="font-weight: bold;"></span></a>
 						</div>
 					</div>
 				<?php else : ?>
@@ -167,7 +167,7 @@ trait Header_Components {
 	public static function filtered_nav() {
 		if ( ! class_exists( '\TUTOR\Utils' ) ) return;
 
-		$instructor_menu = apply_filters( 'tutor_dashboard/instructor_nav_items', tutor_utils()->instructor_menus() );
+		$instructor_menu = apply_filters( 'tutor_dashboard/instructor_nav_items', self::instructor_menus() );
 		$common_navs     = array(
 			'settings' => array(
 				'title' => __( 'Settings', 'tutor' ),
@@ -218,5 +218,83 @@ trait Header_Components {
 		}
 
 		return $user_is_priviledged;
+	}
+
+	/**
+	 * Default Menus
+	 */
+	public static function default_menus() {
+		return array(
+			'index'            => array(
+				'title' => __( 'Dashboard', 'tutor' ),
+				'icon'  => 'tutor-icon-dashboard-filled',
+			),
+			'my-profile'       => array(
+				'title' => __( 'My Profile', 'tutor' ),
+				'icon'  => 'tutor-icon-man-user-filled',
+			),
+			'enrolled-courses' => array(
+				'title' => __( 'Enrolled  Courses', 'tutor' ),
+				'icon'  => 'tutor-icon-college-graduation-filled',
+			),
+			'wishlist'         => array(
+				'title' => __( 'Wishlist', 'tutor' ),
+				'icon'  => 'tutor-icon-fav-full-filled',
+			),
+			'reviews'          => array(
+				'title' => __( 'Reviews', 'tutor' ),
+				'icon'  => 'tutor-icon-star-full-filled',
+			),
+			'my-quiz-attempts' => array(
+				'title' => __( 'My Quiz Attempts', 'tutor' ),
+				'icon'  => 'tutor-icon-quiz-attempt-filled',
+			),
+			'purchase_history' => array(
+				'title' => __( 'Order History', 'tutor' ),
+				'icon'  => 'tutor-icon-cart-filled',
+			),
+			'question-answer'  => array(
+				'title' => __( 'Question & Answer', 'tutor' ),
+				'icon'  => 'tutor-icon-question-filled',
+			),
+		);
+	}
+
+	/**
+	 * Instructor Menus
+	 */
+	public static function instructor_menus() {
+		return array(
+			'separator-1'   => array(
+				'title'    => __( 'Instructor', 'tutor' ),
+				'auth_cap' => tutor()->instructor_role,
+				'type'     => 'separator',
+			),
+			'create-course' => array(
+				'title'    => __( 'Create Course', 'tutor' ),
+				'show_ui'  => false,
+				'auth_cap' => tutor()->instructor_role,
+			),
+			'my-courses'    => array(
+				'title'    => __( 'My Courses', 'tutor' ),
+				'auth_cap' => tutor()->instructor_role,
+				'icon'     => 'tutor-icon-space-filled',
+			),
+			'announcements' => array(
+				'title'    => __( 'Announcements', 'tutor' ),
+				'auth_cap' => tutor()->instructor_role,
+				'icon'     => 'tutor-icon-speaker-filled',
+			),
+			'withdraw'      => array(
+				'title'    => __( 'Withdrawals', 'tutor' ),
+				'auth_cap' => tutor()->instructor_role,
+				'icon'     => 'tutor-icon-wallet-filled',
+			),
+			'quiz-attempts' => array(
+				'title'    => __( 'Quiz Attempts', 'tutor' ),
+				'auth_cap' => tutor()->instructor_role,
+				'icon'     => 'tutor-icon-quiz-filled',
+			),
+		);
 	}
 }
