@@ -72,7 +72,7 @@ trait Header_Components {
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-submenu-login-avatar.svg' ); ?>" alt="profile avatar">
 						</div>
 						<div class="tutor-submenu-login-content">
-							Login as a <div class="tutor-submenu-login-profile">Student</div>
+							<?php esc_html_x( 'Login as a ', 'Login as a student text', 'tutorstarter' ); ?><div class="tutor-submenu-login-profile"><?php esc_html_e( 'Student', 'tutorstarter' ); ?></div>
 						</div>
 						<div class="tutor-submenu-login-btn">
 							<a class="student-login tutor-submenu-login tutor-icon-icon-light-right-line tutor-font-size-30 tutor-text-bold" href="#"></a>
@@ -99,7 +99,7 @@ trait Header_Components {
 						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-submenu-login-instructor-avatar.svg' ); ?>" alt="profile avatar">
 					</div>
 					<div class="tutor-submenu-login-content">
-						Login as an <div class="tutor-submenu-login-profile">Instructor</div>
+						<?php esc_html_x( 'Login as an ', 'Login as an instructor text', 'tutorstarter' ); ?> <div class="tutor-submenu-login-profile"><?php esc_html_e( 'Instructor', 'tutorstarter' ); ?></div>
 					</div>
 					<div class="tutor-submenu-login-btn">
 						<a class="instructor-login tutor-submenu-login tutor-icon-icon-light-right-line tutor-font-size-30 tutor-text-bold" href="#"></a>
