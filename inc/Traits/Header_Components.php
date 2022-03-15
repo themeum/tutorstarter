@@ -170,11 +170,11 @@ trait Header_Components {
 		$instructor_menu = apply_filters( 'tutor_dashboard/instructor_nav_items', self::instructor_menus() );
 		$common_navs     = array(
 			'settings' => array(
-				'title' => __( 'Settings', 'tutor' ),
+				'title' => __( 'Settings', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-settings-filled',
 			),
 			'logout'   => array(
-				'title' => __( 'Logout', 'tutor' ),
+				'title' => __( 'Logout', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-signout-filled',
 			),
 		);
@@ -226,35 +226,35 @@ trait Header_Components {
 	public static function default_menus() {
 		return array(
 			'index'            => array(
-				'title' => __( 'Dashboard', 'tutor' ),
+				'title' => __( 'Dashboard', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-dashboard-filled',
 			),
 			'my-profile'       => array(
-				'title' => __( 'My Profile', 'tutor' ),
+				'title' => __( 'My Profile', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-man-user-filled',
 			),
 			'enrolled-courses' => array(
-				'title' => __( 'Enrolled  Courses', 'tutor' ),
+				'title' => __( 'Enrolled  Courses', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-college-graduation-filled',
 			),
 			'wishlist'         => array(
-				'title' => __( 'Wishlist', 'tutor' ),
+				'title' => __( 'Wishlist', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-fav-full-filled',
 			),
 			'reviews'          => array(
-				'title' => __( 'Reviews', 'tutor' ),
+				'title' => __( 'Reviews', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-star-full-filled',
 			),
 			'my-quiz-attempts' => array(
-				'title' => __( 'My Quiz Attempts', 'tutor' ),
+				'title' => __( 'My Quiz Attempts', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-quiz-attempt-filled',
 			),
 			'purchase_history' => array(
-				'title' => __( 'Order History', 'tutor' ),
+				'title' => __( 'Order History', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-cart-filled',
 			),
 			'question-answer'  => array(
-				'title' => __( 'Question & Answer', 'tutor' ),
+				'title' => __( 'Question & Answer', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-question-filled',
 			),
 		);
@@ -266,32 +266,32 @@ trait Header_Components {
 	public static function instructor_menus() {
 		return array(
 			'separator-1'   => array(
-				'title'    => __( 'Instructor', 'tutor' ),
+				'title'    => __( 'Instructor', 'tutorstarter' ),
 				'auth_cap' => tutor()->instructor_role,
 				'type'     => 'separator',
 			),
 			'create-course' => array(
-				'title'    => __( 'Create Course', 'tutor' ),
+				'title'    => __( 'Create Course', 'tutorstarter' ),
 				'show_ui'  => false,
 				'auth_cap' => tutor()->instructor_role,
 			),
 			'my-courses'    => array(
-				'title'    => __( 'My Courses', 'tutor' ),
+				'title'    => __( 'My Courses', 'tutorstarter' ),
 				'auth_cap' => tutor()->instructor_role,
 				'icon'     => 'tutor-icon-space-filled',
 			),
 			'announcements' => array(
-				'title'    => __( 'Announcements', 'tutor' ),
+				'title'    => __( 'Announcements', 'tutorstarter' ),
 				'auth_cap' => tutor()->instructor_role,
 				'icon'     => 'tutor-icon-speaker-filled',
 			),
 			'withdraw'      => array(
-				'title'    => __( 'Withdrawals', 'tutor' ),
+				'title'    => __( 'Withdrawals', 'tutorstarter' ),
 				'auth_cap' => tutor()->instructor_role,
 				'icon'     => 'tutor-icon-wallet-filled',
 			),
 			'quiz-attempts' => array(
-				'title'    => __( 'Quiz Attempts', 'tutor' ),
+				'title'    => __( 'Quiz Attempts', 'tutorstarter' ),
 				'auth_cap' => tutor()->instructor_role,
 				'icon'     => 'tutor-icon-quiz-filled',
 			),
