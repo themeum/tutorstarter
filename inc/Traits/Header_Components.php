@@ -206,10 +206,10 @@ trait Header_Components {
 	public static function is_user_priviledged() {
 		$user_is_priviledged = false;
 		$current_user = wp_get_current_user();
-		$predefined_roles = array(
+		$predefined_roles = apply_filters( 'tutor_user_is_priviledged', array(
 			'administrator',
 			'tutor_instructor'
-		);
+		) );
 
 		if ( array_intersect( $current_user->roles, $predefined_roles ) ) {
 			$user_is_priviledged = true;

@@ -237,6 +237,33 @@ body.woocommerce-page {
     }
 }
 
+.tutorstarter-woocommerce {
+    a {
+        text-decoration: none;
+    }
+    .woocommerce {
+        margin-bottom: 50px;
+    }
+    .woocommerce-product-gallery--with-images .flex-control-thumbs {
+        margin-top: 10px !important;
+
+        li {
+            padding: 2px;
+        }
+    }
+    .woocommerce-ordering select.orderby {
+        padding: 5px 10px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+    }
+    .tutorstarter-cart-container {
+        margin-bottom: 50px;
+    }
+    form.cart .single_add_to_cart_button {
+        border-radius: 30px;
+    }
+}
+
 .tutorstarter-order-receipt-container {
     .woocommerce-thankyou-order-received {
         font-size: 20px;
