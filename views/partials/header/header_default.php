@@ -40,7 +40,7 @@ use Tutor_Starter\Traits\Header_Components;
                 <?php echo tutor_starter_header_cart(); ?>
             </div>
             <?php endif; ?>
-            <?php if ( is_plugin_active( 'tutor-demo-controller/tutor-demo-controller.php' ) && ! is_user_logged_in() ) : ?>
+            <?php if ( defined( 'TDC_VERSION' ) && ! is_user_logged_in() ) : ?>
                 <div class="tutor-landing-explore">
                     <span><?php esc_html_e( 'Want to Explore!', 'tutorstarter' ); ?></span>
                     <a class="tutor-version-new-btn" href="<?php echo esc_url( home_url() . '/login' ); ?>"><?php esc_html_e( 'Instant Login', 'tutorstarter' ); ?></a>

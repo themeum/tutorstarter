@@ -53,7 +53,7 @@ trait Header_Components {
 		</div>
 		<div class="tutor-header-submenu">
 			<?php if ( self::is_user_priviledged() && is_user_logged_in() ) : ?>
-				<?php if ( ! is_plugin_active( 'tutor-demo-controller/tutor-demo-controller.php' ) ) : ?>
+				<?php if ( ! defined( 'TDC_VERSION' ) ) : ?>
 					<div class="tutor-submenu-login-section-instructor">
 						<div class="tutor-submenu-login-avatar">
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/instructor-submenu-icon.svg' ); ?>" alt="profile avatar">
@@ -80,7 +80,7 @@ trait Header_Components {
 					</div>
 				<?php endif; ?>
 			<?php else : ?>
-				<?php if ( ! is_plugin_active( 'tutor-demo-controller/tutor-demo-controller.php' ) ) : ?>
+				<?php if ( ! defined( 'TDC_VERSION' ) ) : ?>
 					<div class="tutor-submenu-login-section">
 						<div class="tutor-submenu-login-avatar">
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/student-sub-menu-icon.svg' ); ?>" alt="profile avatar">
