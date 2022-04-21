@@ -28,19 +28,19 @@ trait Header_Components {
 	 * Tutor multi-column dropdown menu
 	 */
 	public static function tutor_multi_column_dropdown() {
-		if ( ! class_exists( '\TUTOR\Utils' ) ) return;
+		if ( ! class_exists( '\TUTOR\Utils' ) ) return; // @todo: cross check
 
 		$default_menus = apply_filters( 'tutor_dashboard/nav_items', self::default_menus() );
 		$current_user = wp_get_current_user();
 		?>
 		<div class="tutor-header-profile-photo">
 			<?php
-				if ( function_exists( 'tutor_utils' ) ) {
-					echo tutor_utils()->get_tutor_avatar( get_current_user_id(), 'thumbnail' );
-				} else {
-					$get_avatar_url = get_avatar_url( get_current_user_id(), 'thumbnail' );
-					echo "<img alt='' src='$get_avatar_url' />";
-				}
+				// if ( function_exists( 'tutor_utils' ) ) {
+					echo tutor_utils()->get_tutor_avatar( get_current_user_id() );
+				// } else {
+				// 	$get_avatar_url = get_avatar_url( get_current_user_id(), 'thumbnail' );
+				// 	echo "<img src='$get_avatar_url' />";
+				// }
 			?>
 		</div><!-- .tutor-header-profile-photo -->
 		<div class="tutor-header-profile-content">

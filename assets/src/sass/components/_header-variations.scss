@@ -263,18 +263,6 @@ header.header-default {
     .tutor-header-profile-menu {
         position: relative;
         cursor: pointer;
-        .tutor-header-profile-photo {
-            span {
-                &.tutor-text-avatar {
-                    display: inline-block;
-                    text-align: center;
-                    line-height: 30px;
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 50%;
-                }
-            }
-        }
         &:hover ul {
             opacity: 1;
             visibility: visible;

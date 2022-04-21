@@ -41,17 +41,6 @@ $blue: #1950d1;
     .tutor-loop-course-footer {
         padding: 11px 24px;
     }
-    .tutor-loop-author {
-        font-family: var(--body-font);
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.5;
-
-        color: $medium;
-        span {
-            color: inherit;
-        }
-    }
     .tutor-loop-rating-wrap {
         .tutor-rating-count {
             margin-left: 2px;
@@ -284,6 +273,7 @@ $blue: #1950d1;
     color: rgba(87, 88, 110, 0.5);
 }
 
+// @todo: to be removed
 .tutor-course-filter-wrapper {
     > div:last-child select[name="tutor_course_filter"] {
         font-family: var(--body-font);
