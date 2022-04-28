@@ -84,6 +84,9 @@ If you found any bugs or issues, please let us know by posting on the support se
 
 == Changelog ==
 
+= 1.1.0 =
+* Update: Compatibility fixes for Tutor LMS 2.0.2
+
 = 1.0.9 =
 Fix: Known Functional Issues
 
