@@ -84,6 +84,13 @@ If you found any bugs or issues, please let us know by posting on the support se
 
 == Changelog ==
 
+= 1.1.1 =
+Fix: While creating a new course it was showing "Access Denied" error
+Fix: In the Single Course page, the "Enroll Now" button was not  appearing in some cases
+Fix: In the Course List page, the "Enrol Now" and "Add to Cart" button was not appearing in some cases
+Fix: In the University Layout the Page Width was not proper
+Fix: Tutor Starter Menu was not being Translated
+
 = 1.0.9 =
 Fix: Known Functional Issues
 
