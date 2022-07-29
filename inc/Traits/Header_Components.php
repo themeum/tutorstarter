@@ -33,7 +33,7 @@ trait Header_Components {
 		$default_menus = apply_filters( 'tutor_dashboard/nav_items', self::default_menus() );
 		$current_user = wp_get_current_user();
 		?>
-		<div class="tutor-header-profile-photo">
+		<div class="tutor-header-profile-photo tutor-d-flex">
 			<?php
 				if ( function_exists( 'tutor_utils' ) ) {
 					echo tutor_utils()->get_tutor_avatar( get_current_user_id(), 'thumbnail' );
