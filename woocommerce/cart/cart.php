@@ -123,7 +123,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				?>
 			</div>
 
-			
+			<!-- .cart-coupon -->
 			<div class="cart-coupon">
 				<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 					<?php if ( wc_coupons_enabled() ) { ?>
@@ -138,7 +138,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
 				</form>
 				<div class="cart-notices"><?php do_action( 'woocommerce_before_cart' ); ?></div>
-			</div><!-- .cart-coupon -->
+			</div>
 		</div><!-- .cart-collaterals -->
 	</div><!-- .cart-collaterals-container -->	
 </div><!-- .tutorstarter-cart-container-->	
