@@ -21,6 +21,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<form class="woocommerce-cart-form form-container" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
 			<h2 class="cart-page-heading"><?php esc_html( the_title() ); ?></h2>
+
+			<!-- .cart-contents-wrapper -->
 			<div class="cart-contents-wrapper">
 			<?php
 				foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
