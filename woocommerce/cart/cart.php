@@ -143,8 +143,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<div class="cart-notices"><?php do_action( 'woocommerce_before_cart' ); ?></div>
 			</div>
 		</div>
-
 	</div>	
-</div><!-- .tutorstarter-cart-container-->	
+</div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
