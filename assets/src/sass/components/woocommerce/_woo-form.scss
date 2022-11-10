@@ -1,7 +1,7 @@
 .woocommerce {
     &-Button {
         &.button{
-            background: #1950D1 !important;
+            background: var(--link-color);
             width: 230px;
             border-radius: 33px !important;
             padding: 20px 30px !important;
@@ -14,7 +14,7 @@
             margin-top: 20px;
 
             &:hover {
-                background: #1950D1;
+                background: var(--link-color);
                 color: #fff;
                 opacity: 0.8;
             }
