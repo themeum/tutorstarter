@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
-<table class="shop_table shop_table_responsive">
+<table class="shop_table woocommerce-checkout-review-order-table shop_table_responsive">
 	<thead>
 		<tr>
 			<th class="product-name"><?php esc_html_e( 'Product', 'tutorstarter' ); ?></th>
@@ -44,17 +44,19 @@ defined( 'ABSPATH' ) || exit;
 	</tbody>
 	<tfoot>
 
-		<tr class="cart-subtotal">
-			<th><?php esc_html_e( 'Subtotal', 'tutorstarter' ); ?></th>
-			<td><?php wc_cart_totals_subtotal_html(); ?></td>
-		</tr>
+		
+				
+	<tr class="cart-subtotal">
+		<th><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
+		<td><?php wc_cart_totals_subtotal_html(); ?></td>
+	</tr>
 
-		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
-			<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
-				<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
-				<td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
-			</tr>
-		<?php endforeach; ?>
+	<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
+		<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+			<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
+			<td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
+		</tr>
+	<?php endforeach; ?>
 
 		<?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
 
