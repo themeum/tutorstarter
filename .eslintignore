@@ -1,5 +1,0 @@
-/node_modules/**
-/vendor/**
-/assets/dist/**
-
-webpack.mix.js
