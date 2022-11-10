@@ -2,7 +2,7 @@
 $dark: #0a083b;
 $medium: #57586e;
 $light: rgb(87 88 110 / 50%);
-$blue: #1950d1;
+$blue: var(--link-color);
 
 .tutor-courses-wrap {
     margin-top: 50px;
@@ -151,9 +151,9 @@ $blue: #1950d1;
         transition: all 0.15s ease-in-out;
         &:hover,
         &.current {
-            background: #1950d1;
+            background: var(--link-color);
             color: #ffffff;
-            border: 1px solid #1950d1;
+            border: 1px solid var(--link-color);
         }
     }
 }
