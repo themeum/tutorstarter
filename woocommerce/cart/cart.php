@@ -94,7 +94,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 					</div>
 				</div>
-			</div><!-- .cart-contents -->
+			</div>
 			<?php }
 		} ?>
 		</div> <!-- .cart-contents-wrapper -->
