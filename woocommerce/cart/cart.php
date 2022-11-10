@@ -98,9 +98,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 						</div>
 					</div>
 				</div>
+			</div>
 			<?php }
 		} ?>
-		</div>
 		<?php do_action( 'woocommerce_after_cart_table' ); ?>
 	</form>
 
