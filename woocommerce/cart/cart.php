@@ -45,7 +45,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					?>
 				</div>
 
-
+				<!-- .cart-product-title -->
 				<div class="cart-product-title">
 					<?php
 						if ( ! $product_permalink ) {
