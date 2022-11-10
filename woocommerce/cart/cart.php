@@ -17,6 +17,7 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_cart' ); ?>
 
+<!-- .tutorstarter-cart-container-->	
 <div class="tutorstarter-cart-container">
 	<form class="woocommerce-cart-form form-container" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
