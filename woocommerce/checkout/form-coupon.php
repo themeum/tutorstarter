@@ -28,10 +28,10 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 <div class="woocommerce-coupon-form">
 	<form class="checkout_coupon woocommerce-form-coupon" method="post" style="display:none">
 
-		<p><?php esc_html_e( 'If you have a coupon code, please apply it below.', 'tutorstarter' ); ?></p>
-
 		<p class="form-row form-row-first">
-			<label for="coupon_code" class="screen-reader-text"><?php esc_html_e( 'Coupon:', 'tutorstarter' ); ?></label>
+			<label><?php esc_html_e( 'If you have a coupon code, please apply it below.', 'tutorstarter' ); ?></label>
+		</p>
+		<p class="form-row form-row-first">
 			<input type="text" name="coupon_code" class="input-text" placeholder="<?php esc_attr_e( 'Coupon code', 'tutorstarter' ); ?>" id="coupon_code" value="" />
 		</p>
 
