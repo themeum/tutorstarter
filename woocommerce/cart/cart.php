@@ -31,7 +31,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 				?>
 			<div class="cart-contents">
-				
+
 				<!-- .cart-product-image -->
 				<div class="cart-product-image">
 					<?php
@@ -44,6 +44,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						}
 					?>
 				</div>
+				
 				<div class="cart-product-title">
 					<?php
 						if ( ! $product_permalink ) {
