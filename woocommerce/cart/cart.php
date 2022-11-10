@@ -66,6 +66,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					?>
 				</div>
 
+				<!-- .cart-product-actions -->
 				<div class="cart-product-actions">
 
 					<!-- .cart-product-price -->
