@@ -105,7 +105,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	</form>
 
 	<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
-
+	
 	<div class="cart-collaterals-container">
 		<h2 class="cart-page-heading"><?php esc_html_e( 'Summary', 'tutorstarter' ); ?></h2>
 
@@ -142,7 +142,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<div class="cart-notices"><?php do_action( 'woocommerce_before_cart' ); ?></div>
 			</div>
 		</div>
-	</div><!-- .cart-collaterals-container -->	
+
+	</div>	
 </div><!-- .tutorstarter-cart-container-->	
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
