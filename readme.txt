@@ -2,8 +2,8 @@
 Contributors: themeum
 Tags: education, e-commerce, blog, custom-logo, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, footer-widgets, left-sidebar, right-sidebar
 Requires at least: 5.0
-Tested up to: 5.9
-Stable tag: 1.0.9
+Tested up to: 6.0
+Stable tag: 1.1.2
 Requires PHP: 7.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -84,8 +84,15 @@ If you found any bugs or issues, please let us know by posting on the support se
 
 == Changelog ==
 
-= 1.1.0 =
-* Update: Compatibility fixes for Tutor LMS 2.0.2
+= 1.1.2 = 
+Fix: Known functional bug is fixed
+
+= 1.1.1 =
+Fix: While creating a new course it was showing "Access Denied" error
+Fix: In the Single Course page, the "Enroll Now" button was not  appearing in some cases
+Fix: In the Course List page, the "Enrol Now" and "Add to Cart" button was not appearing in some cases
+Fix: In the University Layout the Page Width was not proper
+Fix: Tutor Starter Menu was not being Translated
 
 = 1.0.9 =
 Fix: Known Functional Issues

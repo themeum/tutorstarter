@@ -28,19 +28,19 @@ trait Header_Components {
 	 * Tutor multi-column dropdown menu
 	 */
 	public static function tutor_multi_column_dropdown() {
-		if ( ! class_exists( '\TUTOR\Utils' ) ) return; // @todo: cross check
+		if ( ! class_exists( '\TUTOR\Utils' ) ) return;
 
 		$default_menus = apply_filters( 'tutor_dashboard/nav_items', self::default_menus() );
 		$current_user = wp_get_current_user();
 		?>
 		<div class="tutor-header-profile-photo">
 			<?php
-				// if ( function_exists( 'tutor_utils' ) ) {
-					echo tutor_utils()->get_tutor_avatar( get_current_user_id() );
-				// } else {
-				// 	$get_avatar_url = get_avatar_url( get_current_user_id(), 'thumbnail' );
-				// 	echo "<img src='$get_avatar_url' />";
-				// }
+				if ( function_exists( 'tutor_utils' ) ) {
+					echo tutor_utils()->get_tutor_avatar( get_current_user_id(), 'thumbnail' );
+				} else {
+					$get_avatar_url = get_avatar_url( get_current_user_id(), 'thumbnail' );
+					echo "<img alt='' src='$get_avatar_url' />";
+				}
 			?>
 		</div><!-- .tutor-header-profile-photo -->
 		<div class="tutor-header-profile-content">
@@ -63,7 +63,7 @@ trait Header_Components {
 							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em; font-size:14px; margin-top:10px;"><?php wp_kses_post( _e( 'Get started with topics,<br />lessons and more', 'tutorstarter' ) ); ?></p>
 						</div>
 						<div class="tutor-submenu-login-btn">
-							<a class="tutor-submenu-login" href="<?php echo esc_url( apply_filters( 'frontend_course_create_url', admin_url( 'post-new.php?post_type=' . tutor()->course_post_type ) ) ); ?>"><span class="dashicons dashicons-arrow-right-alt2" style="font-weight: bold;"></span></a>
+							<a id="tutor-starter-create-course" class="tutor-submenu-login" href="<?php echo admin_url( 'post-new.php?post_type=' . tutor()->course_post_type ); ?>"><span class="dashicons dashicons-arrow-right-alt2" style="font-weight: bold;"></span></a>
 						</div>
 					</div>
 				<?php else : ?>
