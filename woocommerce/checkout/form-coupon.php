@@ -25,8 +25,7 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 <div class="woocommerce-form-coupon-toggle">
 	<?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', esc_html__( 'Have a coupon?', 'tutorstarter' ) . ' <a href="#" class="showcoupon">' . esc_html__( 'Click here to enter your code', 'tutorstarter' ) . '</a>' ), 'notice' ); ?>
 </div>
-<div class="tutorstarter-checkout-container tutorstarter-cart-container">
-	<form class="checkout_coupon woocommerce-form-coupon" method="post" style="display:none">
+	<form class="checkout_coupon woocommerce-form-coupon woocommerce-billing-fields__field-wrapper" method="post" style="display:none">
 
 		<p><?php esc_html_e( 'If you have a coupon code, please apply it below.', 'tutorstarter' ); ?></p>
 
@@ -41,5 +40,4 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 
 		<div class="clear"></div>
 	</form>
-</div>
 
