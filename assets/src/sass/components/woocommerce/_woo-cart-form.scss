@@ -1,7 +1,7 @@
 .checkout-button,
 .button.wc-backward,
 .place_order {
-	background: #1950D1 !important;
+	background: var(--link-color);
 	border-radius: 33px !important;
 	padding: 15px 20px !important;
 	font-family: var(--body-font);
