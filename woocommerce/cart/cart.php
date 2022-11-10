@@ -44,7 +44,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 						}
 					?>
 				</div>
-				
+
+
 				<div class="cart-product-title">
 					<?php
 						if ( ! $product_permalink ) {
@@ -63,7 +64,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'tutorstarter' ) . '</p>', $product_id ) );
 						}
 					?>
-				</div><!-- .cart-product-title -->
+				</div>
 				<div class="cart-product-actions">
 					<div class="cart-product-price">
 						<?php
