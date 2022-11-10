@@ -106,6 +106,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 	<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 	
+	<!-- .cart-collaterals-container -->
 	<div class="cart-collaterals-container">
 		<h2 class="cart-page-heading"><?php esc_html_e( 'Summary', 'tutorstarter' ); ?></h2>
 
