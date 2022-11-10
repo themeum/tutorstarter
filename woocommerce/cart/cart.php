@@ -139,7 +139,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				</form>
 				<div class="cart-notices"><?php do_action( 'woocommerce_before_cart' ); ?></div>
 			</div>
-		</div><!-- .cart-collaterals -->
+		</div>
 	</div><!-- .cart-collaterals-container -->	
 </div><!-- .tutorstarter-cart-container-->	
 
