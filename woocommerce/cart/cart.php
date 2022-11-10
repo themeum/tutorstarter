@@ -92,7 +92,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							);
 						?>
 					</div>
-				</div><!-- .cart-product-actions -->
+				</div>
 			</div><!-- .cart-contents -->
 			<?php }
 		} ?>
