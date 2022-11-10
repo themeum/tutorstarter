@@ -41,7 +41,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
 						}
 					?>
-				</div><!-- .cart-product-image -->
+				</div>
 				<div class="cart-product-title">
 					<?php
 						if ( ! $product_permalink ) {
