@@ -233,7 +233,7 @@ header.header-default {
                 border-top: 0;
             }
             &:not(.icon) a::after {
-                background: #1950d1;
+                background: var(--link-color);
             }
         }
     }
