@@ -122,6 +122,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 					do_action( 'woocommerce_cart_collaterals' );
 				?>
 			</div>
+
+			
 			<div class="cart-coupon">
 				<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 					<?php if ( wc_coupons_enabled() ) { ?>
