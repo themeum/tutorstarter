@@ -66,13 +66,13 @@ do_action( 'woocommerce_before_cart' ); ?>
 					?>
 				</div>
 
-				
+
 				<div class="cart-product-actions">
 					<div class="cart-product-price">
 						<?php
 							echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 						?>
-					</div><!-- .cart-product-price -->
+					</div>
 					<div class="cart-product-remove">
 						<?php
 							echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
