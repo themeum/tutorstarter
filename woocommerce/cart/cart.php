@@ -30,6 +30,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 						$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 				?>
+			<!-- .cart-contents -->
 			<div class="cart-contents">
 
 				<!-- .cart-product-image -->
@@ -97,7 +98,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			</div>
 			<?php }
 		} ?>
-		</div> <!-- .cart-contents-wrapper -->
+		</div>
 		<?php do_action( 'woocommerce_after_cart_table' ); ?>
 	</form>
 
