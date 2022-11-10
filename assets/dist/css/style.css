@@ -408,7 +408,7 @@ header.header-default .utils-search {
         border-top: 0;
     }
     .navbar.navbar-right .menu-item:not(.icon) a:after {
-        background: #1950d1;
+        background: var(--link-color);
     }
 }
 @media (max-width: 991px) {
@@ -495,7 +495,7 @@ header.header-default .utils-search {
     --navTransColor: var(--menu-link-color-trans);
     --navTransHoverColor: var(--active-menu-color-trans);
     --navSubmenuColor: #0a083b;
-    --navSubmenuHoverColor: #1950d1;
+    --navSubmenuHoverColor: var(--link-color);
     --navCartColor: var(--cart-color);
     --navCartColorTrans: var(--cart-color-trans);
 }
@@ -858,7 +858,7 @@ header.header-default .utils-search {
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
     .navbar-nav .menu-item:hover > a {
-        color: #1950d1;
+        color: var(--link-color);
     }
     .navbar-nav > .menu-item:after {
         display: none;
@@ -5311,7 +5311,7 @@ figure.wp-block-gallery {
 .post-password-form input[type="submit"],
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .post-password-form input[type="submit"]::-webkit-input-placeholder,
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .post-password-form input[type="submit"]:focus {
-    background-color: #1950d1;
+    background-color: var(--link-color);
     font-family: var(--body-font);
     font-weight: 600;
     font-size: 16px;
@@ -5319,7 +5319,7 @@ figure.wp-block-gallery {
     color: #fff;
     padding: 11px 26px;
     outline: 0;
-    border: 1px solid #1950d1;
+    border: 1px solid var(--link-color);
     border-radius: 50px;
     cursor: pointer;
     -webkit-transition: 0.3s;
@@ -5575,13 +5575,13 @@ a:hover {
     padding-left: 0;
 }
 .text-medium-blue {
-    color: #1950d1;
+    color: var(--link-color);
 }
 .background-medium-blue {
-    background-color: #1950d1;
+    background-color: var(--link-color);
 }
 .border-medium-blue {
-    border-color: #1950d1;
+    border-color: var(--link-color);
 }
 .text-dark-navyblue {
     color: #0a083b;
@@ -5665,10 +5665,10 @@ a:hover {
     border-color: navy;
 }
 .has-medium-blue-background-color {
-    background-color: #1950d1;
+    background-color: var(--link-color);
 }
 .has-medium-blue-color {
-    color: #1950d1;
+    color: var(--link-color);
 }
 .has-deep-navyblue-background-color {
     background-color: #0a083b;
@@ -6045,7 +6045,7 @@ header.header-default {
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input[type="submit"]::-webkit-input-placeholder,
 .tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type="submit"]::-webkit-input-placeholder,
 .tutor-wrap .tutor-login-wrap .tutor-template-login-form .tutor-login-form-wrap form input[type="submit"] {
-    background: #1950d1;
+    background: var(--link-color);
     border-radius: 33px;
     padding: 15px 25px;
     width: 100%;
@@ -6134,8 +6134,8 @@ header.header-default {
     font-size: 16px;
     padding: 15px 80px;
     border-radius: 33px;
-    background-color: #1950d1;
-    border: 1px solid #1950d1;
+    background-color: var(--link-color);
+    border: 1px solid var(--link-color);
 }
 .tutor-header-profile-photo img {
     line-height: 30px;
@@ -6219,7 +6219,7 @@ h1.entry-title {
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-    background-color: #1950d1;
+    background-color: var(--link-color);
     color: #fff;
     -webkit-font-smoothing: antialiased;
     -webkit-transition: all 0.3s ease-in-out;
@@ -6244,7 +6244,7 @@ h1.entry-title {
     background: #d04242;
 }
 .woocommerce-message {
-    border-top-color: #1950d1;
+    border-top-color: var(--link-color);
 }
 .woocommerce-message:before {
     content: "\E015";
@@ -6280,7 +6280,7 @@ h1.entry-title {
 .tutorstarter-cart-container .cart-product-remove a {
     font-size: 16px;
     line-height: 19px;
-    color: #1950d1;
+    color: var(--link-color);
     text-decoration: none;
 }
 .tutorstarter-cart-container .cart-product-price {
@@ -6442,7 +6442,7 @@ h1.entry-title {
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .tutorstarter-cart-container .cart-collaterals .cart-coupon form input:focus::-webkit-input-placeholder,
 .tutorstarter-cart-container .cart-collaterals .cart-coupon form .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input:focus::-webkit-input-placeholder,
 .tutorstarter-cart-container .cart-collaterals .cart-coupon form input:focus {
-    border-color: #1950d1;
+    border-color: var(--link-color);
     color: #0a083b;
 }
 .tutorstarter-cart-container .cart-collaterals .cart-coupon form button {
@@ -6452,10 +6452,10 @@ h1.entry-title {
     font-weight: 600;
     font-size: 16px;
     line-height: 1.31;
-    background: #1950d1;
+    background: var(--link-color);
     color: #fff;
     border-radius: 108px;
-    border: 1px solid #1950d1;
+    border: 1px solid var(--link-color);
     padding: 10px 23.5px;
     right: 8px;
     top: 8px;
@@ -6541,7 +6541,7 @@ h1.entry-title {
 }
 .wc-stripe-elements-field:focus,
 .wc-stripe-elements-field:hover {
-    border-color: #1950d1;
+    border-color: var(--link-color);
 }
 fieldset#wc-stripe-cc-form .form-row {
     padding: 0 !important;
@@ -6554,7 +6554,7 @@ fieldset#wc-stripe-cc-form label {
     margin-bottom: 14px;
 }
 .woocommerce .woocommerce-Button.button[value="Save"] {
-    background: #1950d1 !important;
+    background: var(--link-color);
     width: 170px;
     border-radius: 33px !important;
     padding: 18px 30px !important;
@@ -6571,7 +6571,7 @@ fieldset#wc-stripe-cc-form label {
 .checkout-button,
 .place_order,
 .coupon-button {
-    background: #1950d1 !important;
+    background: var(--link-color);
     border-radius: 33px !important;
     padding: 15px 20px !important;
     font-family: var(--body-font);
@@ -6587,7 +6587,7 @@ fieldset#wc-stripe-cc-form label {
     margin-top: 10px;
 }
 .woocommerce .woocommerce-Button.button {
-    background: #1950d1 !important;
+    background: var(--link-color);
     width: 230px;
     border-radius: 33px !important;
     padding: 20px 30px !important;
@@ -6600,7 +6600,7 @@ fieldset#wc-stripe-cc-form label {
     margin-top: 20px;
 }
 .woocommerce .woocommerce-Button.button:hover {
-    background: #1950d1;
+    background: var(--link-color);
     color: #fff;
     opacity: 0.8;
 }
@@ -7212,7 +7212,7 @@ img {
 .widget .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type="search"]:focus,
 .widget .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type="search"]:focus::-webkit-input-placeholder,
 .widget input[type="search"]:focus {
-    border-color: #1950d1;
+    border-color: var(--link-color);
 }
 .page-content .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.search-submit::-webkit-input-placeholder,
 .page-content .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input.search-submit:focus,
@@ -7233,11 +7233,11 @@ img {
     font-size: 16px;
     line-height: 1;
     text-transform: capitalize;
-    background-color: #1950d1;
+    background-color: var(--link-color);
     color: #fff;
     padding: 11px 26px;
     outline: 0;
-    border: 1px solid #1950d1;
+    border: 1px solid var(--link-color);
     border-radius: 50px;
     cursor: pointer;
     -webkit-transition: 0.2s linear;
@@ -7351,7 +7351,7 @@ img {
 .comment-form .form-submit input[type="submit"],
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form .form-submit input[type="submit"]::-webkit-input-placeholder,
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field .comment-form .form-submit input[type="submit"]:focus {
-    background-color: #1950d1;
+    background-color: var(--link-color);
     font-family: var(--body-font);
     font-weight: 600;
     font-size: 16px;
@@ -7359,7 +7359,7 @@ img {
     color: #fff;
     padding: 11px 26px;
     outline: 0;
-    border: 1px solid #1950d1;
+    border: 1px solid var(--link-color);
     border-radius: 50px;
     cursor: pointer;
     -webkit-transition: 0.2s linear;
@@ -7513,7 +7513,7 @@ img {
 .blog-post-content .read-more {
     font-weight: 600;
     font-size: 16px;
-    color: #1950d1;
+    color: var(--link-color);
 }
 .blog-grid-post-item .post-thumbnail,
 .blog-grid-post-item .post-thumbnail img {
@@ -7561,7 +7561,7 @@ img {
 }
 .tutorstarter-pagination .page-numbers.current,
 .tutorstarter-pagination .page-numbers:hover {
-    background: #1950d1;
+    background: var(--link-color);
     border-color: #5454d4;
     color: #fff;
     opacity: 1;
@@ -7866,9 +7866,9 @@ img {
 }
 .tutor-pagination-wrap .page-numbers.current,
 .tutor-pagination-wrap .page-numbers:hover {
-    background: #1950d1;
+    background: var(--link-color);
     color: #fff;
-    border: 1px solid #1950d1;
+    border: 1px solid var(--link-color);
 }
 .single-courses .site-content {
     padding: 40px 0;
@@ -8026,7 +8026,7 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
 }
 section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp label a {
     float: right;
-    color: #1950d1;
+    color: var(--link-color);
     font-weight: 400;
 }
 .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form .form-grp input::-webkit-input-placeholder,
@@ -8091,7 +8091,7 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-for
     border: 1.5px solid rgba(10, 8, 59, 0.25);
 }
 section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row .tutor-theme-signin-form form button {
-    background: #1950d1;
+    background: var(--link-color);
     border-radius: 33px;
     width: 100%;
     font-family: var(--body-font);
@@ -8131,7 +8131,7 @@ section.tutor-theme-signin .tutor-theme-signin-form-area .already-have-account-l
 }
 section.tutor-theme-signin .tutor-theme-signin-form-area .already-have-account-link a {
     text-align: center;
-    color: #1950d1;
+    color: var(--link-color);
 }
 @media (max-width: 767px) {
     section.tutor-theme-signin .tutor-theme-signin-form-area .tutor-theme-signin-form-area-row,
@@ -8259,7 +8259,7 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-for
     padding: 0 10px;
 }
 section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp.signup-form-terms-condition a {
-    color: #1950d1;
+    color: var(--link-color);
     position: relative;
 }
 section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form .form-grp.signup-form-terms-condition a:after {
@@ -8267,12 +8267,12 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-for
     position: absolute;
     width: 100%;
     height: 1px;
-    background: #1950d1;
+    background: var(--link-color);
     bottom: 0;
     left: 0;
 }
 section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row .tutor-theme-signup-form form button {
-    background: #1950d1;
+    background: var(--link-color);
     border-radius: 33px;
     width: 100%;
     font-family: var(--body-font);
@@ -8311,7 +8311,7 @@ section.tutor-theme-signup .tutor-theme-signup-form-area .already-have-account-l
 }
 section.tutor-theme-signup .tutor-theme-signup-form-area .already-have-account-link a {
     text-align: center;
-    color: #1950d1;
+    color: var(--link-color);
 }
 @media (max-width: 767px) {
     section.tutor-theme-signup .tutor-theme-signup-form-area .tutor-theme-signup-form-area-row {
@@ -8484,7 +8484,7 @@ body.woocommerce-page .site-content {
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
-    background: #1950d1;
+    background: var(--link-color);
     border-radius: 33px;
     padding: 10px 25px;
     color: #fff;
@@ -8559,7 +8559,7 @@ body.woocommerce-page .site-content {
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
-    background: #1950d1;
+    background: var(--link-color);
     border-radius: 33px;
     padding: 10px 25px;
     color: #fff;
@@ -8627,7 +8627,7 @@ body.woocommerce-page .site-content {
 .tutor-starter-custom-subscription .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type="email"]:focus,
 .tutor-starter-custom-subscription .tutor-course-filter-wrapper > div:first-child .tutor-course-search-field input[type="email"]:focus::-webkit-input-placeholder,
 .tutor-starter-custom-subscription input[type="email"]:focus {
-    border-color: #1950d1;
+    border-color: var(--link-color);
     color: #0a083b;
 }
 .tutor-starter-custom-subscription button {
@@ -8637,10 +8637,10 @@ body.woocommerce-page .site-content {
     font-weight: 600;
     font-size: 16px;
     line-height: 21px;
-    background: #1950d1;
+    background: var(--link-color);
     color: #fff;
     border-radius: 108px;
-    border: 1px solid #1950d1;
+    border: 1px solid var(--link-color);
     padding: 10px 36px;
     right: 8px;
     top: 8px;
@@ -8649,7 +8649,7 @@ body.woocommerce-page .site-content {
 }
 .tutor-starter-custom-subscription button:focus,
 .tutor-starter-custom-subscription button:hover {
-    background: #1950d1;
+    background: var(--link-color);
     opacity: 0.85;
 }
 @media screen and (max-width: 567px) {
