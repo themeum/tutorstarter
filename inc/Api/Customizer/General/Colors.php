@@ -73,7 +73,7 @@ class Colors {
 		$wp_customize->add_setting(
 			'link_color',
 			array(
-				'title'             => esc_html__( 'Link Color', 'tutorstarter' ),
+				'title'             => esc_html__( 'Primary Color', 'tutorstarter' ),
 				'transport'         => 'postMessage',
 				'default'           => '#1950D1',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -84,7 +84,7 @@ class Colors {
 				$wp_customize,
 				'link_color',
 				array(
-					'label'   => esc_html__( 'Link Color', 'tutorstarter' ),
+					'label'   => esc_html__( 'Primary Color', 'tutorstarter' ),
 					'section' => 'tutorstarter_colors_section',
 				)
 			)
