@@ -119,3 +119,8 @@ div#content p,
     padding-right: 3px;
     transform: rotate(180deg);
 }
+form .form-btn {
+    float: left !important;
+    left: 9px !important;
+	right:70% !important;
+}
