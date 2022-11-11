@@ -30,7 +30,8 @@ defined( 'ABSPATH' ) || exit;
 				<td data-title="<?php echo esc_attr( wc_cart_totals_coupon_label( $coupon, false ) ); ?>"><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
 			</tr>
 		<?php endforeach; ?>
-
+		
+		<!-- Shipping -->
 		<?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
 
 			<?php do_action( 'woocommerce_cart_totals_before_shipping' ); ?>
@@ -47,6 +48,7 @@ defined( 'ABSPATH' ) || exit;
 			</tr>
 
 		<?php endif; ?>
+		<!-- Shipping /-->
 		
 		<!-- Fee -->
 		<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
