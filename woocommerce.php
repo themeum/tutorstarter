@@ -27,6 +27,7 @@ get_header();
 						<?php woocommerce_content(); ?>
 					</div>
 				</main>
+				<!-- #main /-->
 			</div>
 			<!-- #primary /-->
 		</div>
