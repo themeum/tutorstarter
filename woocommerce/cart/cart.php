@@ -93,7 +93,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 						</div>
 					</div>
 				</div>
+				<!-- .cart-contents -->
 			</div>
+			<!-- .cart-contents-wrapper -->
 			<?php }
 		} ?>
 		<?php do_action( 'woocommerce_after_cart_table' ); ?>
@@ -140,5 +142,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 		</div>
 	</div>	
 </div>
+<!-- .tutorstarter-cart-container /-->
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
