@@ -17,6 +17,7 @@ get_header();
 <div class="container">
 	<div class="row">
 		<div class="col-xl-12 col-lg-12 col-sm-12">
+			<!-- #primary -->
 			<div id="primary" class="content-area">
 				<!-- #main -->
 				<main id="main" class="site-main" role="main">
@@ -24,7 +25,7 @@ get_header();
 						<?php woocommerce_content(); ?>
 					</div>
 				</main>
-			</div><!-- #primary -->
+			</div>
 		</div><!-- .col- -->
 	</div><!-- .row -->
 </div><!-- .container -->
