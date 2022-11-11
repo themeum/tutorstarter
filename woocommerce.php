@@ -30,7 +30,7 @@ get_header();
 			</div>
 		</div>
 	</div>
-	<!-- .row -->
+	<!-- .row /-->
 </div>
 <!-- .container /-->
 <?php
