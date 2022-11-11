@@ -22,7 +22,6 @@ body {
 .navbar-nav .menu-item .sub-menu a:after {
     right: 5px;
 }
-
 .navbar-nav .menu-item.icon > a:before {
     right: auto;
     left: -8px !important;
