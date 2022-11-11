@@ -26,7 +26,6 @@ body {
     right: auto;
     left: -8px !important;
 }
-
 .menu-item .sub-menu > .menu-item .sub-menu {
     right: calc(100% + 14px);
 }
