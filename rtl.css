@@ -29,7 +29,6 @@ body {
 .menu-item .sub-menu > .menu-item .sub-menu {
     right: calc(100% + 14px);
 }
-
 .wp-caption {
     text-align: right;
 }
