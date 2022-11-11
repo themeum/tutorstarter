@@ -13,9 +13,11 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 ?>
-
+<!-- .container -->
 <div class="container">
+	<!-- .row -->
 	<div class="row">
+		<!-- .col- -->
 		<div class="col-xl-12 col-lg-12 col-sm-12">
 			<!-- #primary -->
 			<div id="primary" class="content-area">
@@ -26,9 +28,9 @@ get_header();
 					</div>
 				</main>
 			</div>
-		</div><!-- .col- -->
-	</div><!-- .row -->
-</div><!-- .container -->
-
+		</div>
+	</div>
+</div>
+<!-- .container /-->
 <?php
 get_footer();
