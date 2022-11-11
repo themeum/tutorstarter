@@ -28,6 +28,7 @@ get_header();
 					</div>
 				</main>
 			</div>
+			<!-- #primary /-->
 		</div>
 		<!-- .col- /-->
 	</div>
