@@ -16,7 +16,6 @@ body {
     direction: rtl;
     unicode-bidi: embed;
 }
-
 .navbar-nav .menu-item a {
     margin-left: 15px;
 }
