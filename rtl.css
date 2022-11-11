@@ -19,7 +19,6 @@ body {
 .navbar-nav .menu-item a {
     margin-left: 15px;
 }
-
 .navbar-nav .menu-item .sub-menu a:after {
     right: 5px;
 }
