@@ -29,6 +29,7 @@ get_header();
 				</main>
 			</div>
 		</div>
+		<!-- .col- /-->
 	</div>
 	<!-- .row /-->
 </div>
