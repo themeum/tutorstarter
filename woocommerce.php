@@ -18,11 +18,12 @@ get_header();
 	<div class="row">
 		<div class="col-xl-12 col-lg-12 col-sm-12">
 			<div id="primary" class="content-area">
+				<!-- #main -->
 				<main id="main" class="site-main" role="main">
 					<div class="tutorstarter-woocommerce">
 						<?php woocommerce_content(); ?>
 					</div>
-				</main><!-- #main -->
+				</main>
 			</div><!-- #primary -->
 		</div><!-- .col- -->
 	</div><!-- .row -->
