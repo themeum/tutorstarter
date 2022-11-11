@@ -19,17 +19,21 @@ defined( 'ABSPATH' ) || exit;
 	<!-- Shop Table -->
 	<table cellspacing="0" class="shop_table shop_table_responsive">
 
+		<!-- Subtotal -->
 		<tr class="cart-subtotal">
 			<th><?php esc_html_e( 'Subtotal', 'tutorstarter' ); ?></th>
 			<th data-title="<?php esc_attr_e( 'Subtotal', 'tutorstarter' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></th>
 		</tr>
+		<!-- Subtotal /-->
 
+		<!-- Coupon -->
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
 			<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
 				<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
 				<td data-title="<?php echo esc_attr( wc_cart_totals_coupon_label( $coupon, false ) ); ?>"><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
 			</tr>
 		<?php endforeach; ?>
+		<!-- Coupon /-->
 		
 		<!-- Shipping -->
 		<?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
