@@ -124,11 +124,6 @@ form .form-btn {
     left: 9px !important;
 	right:70% !important;
 }
-.tutor-header-profile-content{
-	padding-left:0px;
-	padding-right:7px;
-}
-.tutor-header-profile-menu-items .tutor-header-submenu {
-    top: 62px;
-    left: -35px;
+header{
+    direction: ltr;
 }
