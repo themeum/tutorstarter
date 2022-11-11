@@ -85,14 +85,14 @@ defined( 'ABSPATH' ) || exit;
 		}
 		?>
 
+		<!-- Order Total -->
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
-
-		<tr class="order-total">
-			<th><?php esc_html_e( 'Total', 'tutorstarter' ); ?></th>
-			<td data-title="<?php esc_attr_e( 'Total', 'tutorstarter' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
-		</tr>
-
+			<tr class="order-total">
+				<th><?php esc_html_e( 'Total', 'tutorstarter' ); ?></th>
+				<td data-title="<?php esc_attr_e( 'Total', 'tutorstarter' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
+			</tr>
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
+		<!-- Order Total /-->
 
 	</table>
 	<!-- Shop Table /-->
