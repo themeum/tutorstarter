@@ -17,7 +17,7 @@
         padding: 10px 22px;
         position: relative;
         &:focus {
-            border-color: #1950d1;
+            border-color: var(--link-color);
             color: #0a083b;
         }
     }
@@ -28,10 +28,10 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 21px;
-        background: #1950d1;
+        background: var(--link-color);
         color: #fff;
         border-radius: 108px;
-        border: 1px solid #1950d1;
+        border: 1px solid var(--link-color);
         padding: 10px 36px;
         right: 8px;
         top: 8px;
@@ -39,7 +39,7 @@
         transition: 0.2s linear;
         &:hover,
         &:focus {
-            background: #1950d1;
+            background: var(--link-color);
             opacity: 0.85;
         }
     }

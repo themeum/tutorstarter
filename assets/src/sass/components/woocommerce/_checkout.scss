@@ -51,7 +51,7 @@
     transition: 0.2s linear;
     &:hover,
     &:focus {
-        border-color: #1950D1;
+        border-color: var(--link-color);
     }
 }
 

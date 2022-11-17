@@ -261,7 +261,7 @@ figure.wp-block-gallery {
     }
 
     input[type="submit"] {
-        background-color: #1950d1;
+        background-color: var(--link-color);
         font-family: var(--body-font);
         font-weight: 600;
         font-size: 16px;
@@ -269,7 +269,7 @@ figure.wp-block-gallery {
         color: #ffff;
         padding: 11px 26px;
         outline: 0;
-        border: 1px solid #1950d1;
+        border: 1px solid var(--link-color);
         border-radius: 50px;
         cursor: pointer;
         transition: 0.3s;
