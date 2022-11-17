@@ -142,8 +142,7 @@ header.header-default {
 }
 
 .navbar.navbar-center {
-    // grid-template-columns: repeat(3, 1fr);
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
     @media (min-width: 992px) {
         .navbar-nav {
             justify-content: center;
@@ -234,7 +233,7 @@ header.header-default {
                 border-top: 0;
             }
             &:not(.icon) a::after {
-                background: #1950d1;
+                background: var(--link-color);
             }
         }
     }
@@ -264,18 +263,6 @@ header.header-default {
     .tutor-header-profile-menu {
         position: relative;
         cursor: pointer;
-        .tutor-header-profile-photo {
-            span {
-                &.tutor-text-avatar {
-                    display: inline-block;
-                    text-align: center;
-                    line-height: 30px;
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 50%;
-                }
-            }
-        }
         &:hover ul {
             opacity: 1;
             visibility: visible;

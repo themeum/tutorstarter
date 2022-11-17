@@ -1,5 +1,5 @@
 .woocommerce .woocommerce-Button.button[value="Save"] {
-    background: #1950D1 !important;
+    background: var(--link-color);
     width: 170px;
     border-radius: 33px !important;
     padding: 18px 30px !important;

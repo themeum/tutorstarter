@@ -16,7 +16,7 @@
     --navTransColor: var(--menu-link-color-trans);
     --navTransHoverColor: var(--active-menu-color-trans);
     --navSubmenuColor: #0a083b;
-    --navSubmenuHoverColor: #1950d1;
+    --navSubmenuHoverColor: var(--link-color);
     --navCartColor: var(--cart-color);
     --navCartColorTrans: var(--cart-color-trans);
 }
@@ -132,7 +132,6 @@
     display: flex;
     list-style: none;
     padding: 0;
-    flex-wrap: wrap;
     .menu-item {
         a {
             padding: 5px;
@@ -449,7 +448,7 @@
                 border-bottom: 1px solid rgba(#000, 0.1);
             }
             &:hover > a {
-                color: #1950d1;
+                color: var(--link-color);
             }
         }
         > .menu-item:after {

@@ -23,7 +23,7 @@ h1.entry-title {
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-    background-color: #1950d1;
+    background-color: var(--link-color);
     color: #fff;
     -webkit-font-smoothing: antialiased;
     transition: all 0.3s ease-in-out;
@@ -44,7 +44,7 @@ h1.entry-title {
 }
 
 .woocommerce-message {
-    border-top-color: #1950d1;
+    border-top-color: var(--link-color);
 }
 
 .woocommerce-message::before {
@@ -82,7 +82,7 @@ h1.entry-title {
     .cart-product-remove a {
         font-size: 16px;
         line-height: 19px;
-        color: #1950d1;
+        color: var(--link-color);
         text-decoration: none;
     }
     .cart-product-price {
@@ -232,7 +232,7 @@ h1.entry-title {
                     padding: 10px 22px;
                     position: relative;
                     &:focus {
-                        border-color: #1950d1;
+                        border-color: var(--link-color);
                         color: #0a083b;
                     }
                 }
@@ -243,10 +243,10 @@ h1.entry-title {
                     font-weight: 600;
                     font-size: 16px;
                     line-height: 1.31;
-                    background: #1950d1;
+                    background: var(--link-color);
                     color: #fff;
                     border-radius: 108px;
-                    border: 1px solid #1950d1;
+                    border: 1px solid var(--link-color);
                     padding: 10px 23.5px;
                     right: 8px;
                     top: 8px;
