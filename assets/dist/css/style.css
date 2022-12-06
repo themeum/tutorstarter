@@ -6274,7 +6274,7 @@ h1.entry-title {
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
-    color: #0a083b;
+    color: var(--link-color);
     text-decoration: none;
 }
 .tutorstarter-cart-container .cart-product-remove a {
@@ -6334,7 +6334,7 @@ h1.entry-title {
 .tutorstarter-cart-container .cart-collaterals .wc-proceed-to-checkout .checkout-button:hover, 
 .woocommerce-coupon-form .coupon-button:focus, 
 .woocommerce-coupon-form .coupon-button:hover {
-    background: #0a083b !important;
+    background: var(--link-color)
 }
 .woocommerce-coupon-form .form-row-first{
     width: 79% !important;
@@ -8739,4 +8739,7 @@ body.woocommerce-page .site-content {
     font-size: 16px;
     background: #3e64de;
     color: #fff;
+}
+button, .button, .checkout-button{
+    background: var(--link-color);
 }
