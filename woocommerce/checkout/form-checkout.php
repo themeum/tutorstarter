@@ -29,9 +29,9 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	<div class="tutorstarter-checkout-container tutorstarter-cart-container">
 		<div class="checkout-contents" id="customer_details">
 			<div class="checkout-payment">
-				<h2 class="checkout-heading"><?php esc_html( the_title() ); ?></h2>
+				<h2 class="order-details-heading cart-page-heading"><?php esc_html( the_title() ); ?></h2>
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
-				<?php wc_get_template( 'checkout/payment.php' ); ?>
+				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 				<h2 class="order-details-heading cart-page-heading"><?php esc_html_e( 'Order Details', 'tutorstarter' ); ?></h2>
 				<div class="cart-contents-wrapper">
 				<?php
@@ -98,14 +98,12 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 			<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 	
 			<div id="order_review" class="woocommerce-checkout-review-order">
-				<?php wc_get_template( 'checkout/review-order.php' ); ?>
+				<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 			</div>
 			
 			<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 	
 			<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
-	
-			<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' ); // @codingStandardsIgnoreLine ?>
 	
 			<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 	
