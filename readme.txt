@@ -84,6 +84,15 @@ If you found any bugs or issues, please let us know by posting on the support se
 
 == Changelog ==
 
+= 1.1.3 = 
+
+New: Introduced Coupon Form on the Checkout page
+Update: The RTL Design is improved
+Update: Compatibility and Template update is introduced for the latest WooCommerce
+Update: WooCommerce Coupon System was not functioning well on the Cart page
+Fix: The Header section Profile Picture design was broken
+Fix: The Cart Page design appears broken when multiple Course is on the Cart
+
 = 1.1.2 = 
 Fix: Known functional bug is fixed
 
