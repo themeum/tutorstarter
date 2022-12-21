@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-11-22T07:10:06+00:00\n"
+"POT-Creation-Date: 2022-12-21T07:55:57+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: tutorstarter\n"
@@ -1566,23 +1566,6 @@ msgstr ""
 
 #: woocommerce/checkout/form-coupon.php:31
 msgid "Apply coupon"
-msgstr ""
-
-#: woocommerce/checkout/payment.php:25
-msgid "Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements."
-msgstr ""
-
-#: woocommerce/checkout/payment.php:25
-msgid "Please fill in your details above to see available payment methods."
-msgstr ""
-
-#. translators: $1 and $2 opening and closing emphasis tags respectively
-#: woocommerce/checkout/payment.php:34
-msgid "Since your browser does not support JavaScript, or it is disabled, please ensure you click the %1$sUpdate Totals%2$s button before placing your order. You may be charged more than the amount stated above if you fail to do so."
-msgstr ""
-
-#: woocommerce/checkout/payment.php:36
-msgid "Update totals"
 msgstr ""
 
 #: woocommerce/checkout/review-order.php:15

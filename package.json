@@ -41,7 +41,10 @@
   "author": "Themeum <hello@themeum.com> (https://themeum.com)",
   "license": "GPL-3.0",
   "dependencies": {
+    "classnames": "^2.3.2",
     "eslint-config-wordpress": "^2.0.0",
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "prop-types": "^15.8.1",
+    "react-visibility-sensor": "^5.1.1"
   }
 }
