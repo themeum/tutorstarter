@@ -63,7 +63,7 @@ trait Header_Components {
 							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em; font-size:14px; margin-top:10px;"><?php wp_kses_post( _e( 'Get started with topics,<br />lessons and more', 'tutorstarter' ) ); ?></p>
 						</div>
 						<div class="tutor-submenu-login-btn">
-							<a class="tutor-submenu-login" href="<?php echo esc_url( apply_filters( 'frontend_course_create_url', admin_url( 'post-new.php?post_type=' . tutor()->course_post_type ) ) ); ?>"><span class="dashicons dashicons-arrow-right-alt2" style="font-weight: bold;"></span></a>
+							<a id="tutor-starter-create-course" class="tutor-submenu-login" href="<?php echo admin_url( 'post-new.php?post_type=' . tutor()->course_post_type ); ?>"><span class="dashicons dashicons-arrow-right-alt2" style="font-weight: bold;"></span></a>
 						</div>
 					</div>
 				<?php else : ?>
