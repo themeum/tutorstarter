@@ -24,6 +24,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
+<<<<<<< Updated upstream
 		<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 			<thead>
 				<tr>
@@ -66,6 +67,26 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 							<td class="product-thumbnail">
 							<?php
+=======
+			<?php do_action( 'woocommerce_before_cart_contents' ); ?>
+
+			<?php
+			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+				$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+				$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+
+				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
+					?>
+			<!-- .cart-contents-wrapper -->
+			<div class="cart-contents-wrapper mb-3">
+				<!-- .cart-contents -->
+				<div class="cart-contents">
+
+					<!-- .cart-product-image -->
+					<div class="cart-product-image">
+						<?php
+>>>>>>> Stashed changes
 							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
 							if ( ! $product_permalink ) {
@@ -96,6 +117,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 							</td>
 
+<<<<<<< Updated upstream
 							<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
 								<?php
 									echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
@@ -164,6 +186,77 @@ do_action( 'woocommerce_before_cart' ); ?>
 		</table>
 		<?php do_action( 'woocommerce_after_cart_table' ); ?>
 	</form>
+=======
+						<!-- .cart-product-remove -->
+						<div class="cart-product-remove">
+						<?php
+								echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+									'woocommerce_cart_item_remove_link',
+									sprintf(
+										'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+										esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
+										esc_html__( 'Remove this item', 'tutorstarter' ),
+										esc_attr( $product_id ),
+										esc_attr( $_product->get_sku() )
+									),
+									$cart_item_key
+								);
+							?>
+						</div>
+					</div>
+				</div>
+				<?php do_action( 'woocommerce_cart_contents' ); ?>
+				<!-- .cart-contents -->
+			</div>
+			<!-- .cart-contents-wrapper -->
+			<?php }
+		} ?>
+		<?php do_action( 'woocommerce_after_cart_table' ); ?>
+	</form>
+
+	<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
+	
+	<!-- .cart-collaterals-container -->
+	<div class="cart-collaterals-container">
+		<h2 class="cart-page-heading"><?php esc_html_e( 'Summary', 'tutorstarter' ); ?></h2>
+
+		<!-- .cart-collaterals -->
+		<div class="cart-collaterals">
+
+			<!-- .cart-summary -->
+			<div class="cart-summary">
+				<?php
+					/**
+					 * Cart collaterals hook.
+					 *
+					 * @hooked woocommerce_cross_sell_display
+					 * @hooked woocommerce_cart_totals - 10
+					 */
+					do_action( 'woocommerce_cart_collaterals' );
+				?>
+			</div>
+
+			<!-- .cart-coupon -->
+			<div class="cart-coupon">
+				<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+					<?php if ( wc_coupons_enabled() ) { ?>
+						<div class="coupon">
+							<label for="coupon_code" class="screen-reader-text"><?php esc_html_e( 'Coupon:', 'tutorstarter' ); ?></label> 
+							<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'tutorstarter' ); ?>" /> 
+							<button type="submit" class="button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'tutorstarter' ); ?>"><?php esc_attr_e( 'Apply coupon', 'tutorstarter' ); ?></button>
+							<?php do_action( 'woocommerce_cart_coupon' ); ?>
+						</div>
+					<?php } ?>
+
+					<?php do_action( 'woocommerce_cart_actions' ); ?>
+
+					<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
+				</form>
+				<div class="cart-notices"><?php do_action( 'woocommerce_before_cart' ); ?></div>
+			</div>
+		</div>
+	</div>	
+>>>>>>> Stashed changes
 </div>
 
 <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
