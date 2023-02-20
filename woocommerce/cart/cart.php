@@ -4,7 +4,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 7.0.1
+ * @version 7.4.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -28,6 +28,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<!-- .cart-contents-wrapper -->
 			<div class="cart-contents-wrapper mb-3">
 				<!-- .cart-contents -->
+				<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 				<div class="cart-contents">
 
 					<!-- .cart-product-image -->
@@ -94,6 +95,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 					</div>
 				</div>
 				<!-- .cart-contents -->
+				<?php do_action( 'woocommerce_cart_contents' ); ?>
+				<?php do_action( 'woocommerce_after_cart_contents' ); ?>
 			</div>
 			<!-- .cart-contents-wrapper -->
 			<?php }

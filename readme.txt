@@ -84,7 +84,7 @@ If you found any bugs or issues, please let us know by posting on the support se
 
 == Changelog ==
 
-= 1.1.4 =
+= 1.1.4 = 
 
 Fix: Checkout page was not showing Pay button in some cases
 
