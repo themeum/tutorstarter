@@ -29,3 +29,4 @@ vendor/
 *.log
 *.sql
 *.sqlite
+package-lock.json
