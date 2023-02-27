@@ -70,7 +70,7 @@
         window.addEventListener('resize', () => {
             if (mediaQuery.matches) {
                 navbarToggler.addEventListener('click', (e) => {
-                    if (null !== lastMenuItem || undefined !== lastMenuItem || 'undefined' !== lastMenuItem) {
+                    if (lastMenuItem) {
                         lastMenuItem.addEventListener('keydown', addTabLoopFeature, false);
                     }
                     navCloseBtn.addEventListener('click', () => {
@@ -79,7 +79,7 @@
                     });
                 });
             } else {
-                if (null !== lastMenuItem || undefined !== lastMenuItem || 'undefined' !== lastMenuItem) {
+                if (lastMenuItem) {
                     lastMenuItem.removeEventListener('keydown', addTabLoopFeature, false);
                 }
             }
