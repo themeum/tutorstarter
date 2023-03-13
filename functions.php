@@ -29,3 +29,13 @@ endif;
 if ( class_exists( 'Tutor_Starter\\Init' ) ) :
 	Tutor_Starter\Init::register_services();
 endif;
+
+?>
+
+<?php
+
+add_filter('tutor_dashboard/nav_items', 'remove_some_links');
+function remove_some_links($links) {
+	unset($links['analytics']);
+	return $links;
+}
