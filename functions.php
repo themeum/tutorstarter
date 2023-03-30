@@ -29,3 +29,6 @@ endif;
 if ( class_exists( 'Tutor_Starter\\Init' ) ) :
 	Tutor_Starter\Init::register_services();
 endif;
+
+
+

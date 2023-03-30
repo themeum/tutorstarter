@@ -30,7 +30,7 @@ class FontPreviewLink extends Component {
                     {
                         (this.state.previewWasRendered || this.props.delayLoad === false)
                             ? <span className='tutorstarter-font-preview' style={style}>Abc</span>
-                            : <span className='tutorstarter-font-preview '>...</span>
+                            : <span className='tutorstarter-font-preview'>...</span>
                     }
                 </VisibilitySensor>
             </a>

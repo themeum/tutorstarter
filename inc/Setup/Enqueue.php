@@ -59,8 +59,11 @@ class Enqueue {
 		// JS.
 		wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/dist/js/app.min.js', array(), TUTOR_STARTER_VERSION, true );
 
-		// Just in time preloading pages on hover.
-		wp_enqueue_script( 'instant-page', '//instant.page/5.1.0', array(), TUTOR_STARTER_VERSION, true );
+		// Just in time preloading pages on hover. preload page onhover
+		if ( is_user_logged_in() ) {
+			wp_enqueue_script( 'instant-page', '//instant.page/5.1.0', array(), TUTOR_STARTER_VERSION, true );
+		}
+		
 
 		// Extra.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

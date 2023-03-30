@@ -8399,3 +8399,47 @@ form.woocommerce-cart-form td {
     background: #3e64de;
     color: #fff
 }
+.category-starter{
+    position: relative;
+    display: inline-block;  
+    border-radius: 12px;
+    overflow: hidden;
+    filter: drop-shadow(0px 0px 0px rgba(0,0,0,0));
+    height: 100px;
+  }
+  
+  .category-starter img {
+    display: block;
+    transition: .3s ease-in-out;
+  }
+  .category-starter:hover img {
+          transform: scale(1.2);
+      }
+  .category-starter .imgoverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    transition: .3s linear;
+    backdrop-filter: blur(0px);
+    
+  }
+  
+  .category-starter h3 {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .category-starter:hover {
+  filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.15));
+  }
+  
+  

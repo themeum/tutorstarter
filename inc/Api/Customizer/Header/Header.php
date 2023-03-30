@@ -467,6 +467,26 @@ class Header {
 			)
 		);
 		$wp_customize->add_setting(
+			'cart_btn_toggle',
+			array(
+				'title'             => esc_html__( 'Show cart Button only added to cart?', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => false,
+				'sanitize_callback' => isset( $input ) ? true : false,
+			)
+		);
+		$wp_customize->add_control(
+			new Toggle_Switch_Control(
+				$wp_customize,
+				'cart_btn_toggle',
+				array(
+					'label'           => esc_html__( 'Show cart Button only added to cart?', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_callback',
+				)
+			)
+		);
+		$wp_customize->add_setting(
 			'cta_text_toggle',
 			array(
 				'title'             => esc_html__( 'Show Starter Button?', 'tutorstarter' ),

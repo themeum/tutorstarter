@@ -35,10 +35,27 @@ use Tutor_Starter\Traits\Header_Components;
             endif;
         ?>
         <div class="navbar-utils">
-            <?php if ( class_exists( 'WooCommerce' ) && 'header_fullwidth_center' !== get_theme_mod( 'header_type_select' ) ) : ?>
-            <div class="utils-cart">
-                <?php echo tutor_starter_header_cart(); ?>
+            <?php if ( class_exists( 'WooCommerce' ) && 'header_fullwidth_center' !== get_theme_mod( 'header_type_select' ) ) : 
+            global $woocommerce;
+            $items = $woocommerce->cart->get_cart();
+                ?>
+                <?php if ( true === get_theme_mod( 'cart_btn_toggle', true ) ) :
+                     if( $items): ?>
+                    
+                    <div class="utils-cart">
+                <?php echo tutor_starter_header_cart();  
+                 ?>
             </div>
+
+                <?php
+              
+
+             endif; ?>
+            
+                
+               <?php else:echo tutor_starter_header_cart(); endif;?>
+              
+           
             <?php endif; ?>
             <?php if ( defined( 'TDC_VERSION' ) && ! is_user_logged_in() ) : ?>
                 <div class="tutor-landing-explore">
