@@ -469,7 +469,7 @@ class Header {
 		$wp_customize->add_setting(
 			'cart_btn_toggle',
 			array(
-				'title'             => esc_html__( 'Show cart Button only added to cart?', 'tutorstarter' ),
+				'title'             => esc_html__( 'Display cart button when product added?', 'tutorstarter' ),
 				'transport'         => 'postMessage',
 				'default'           => false,
 				'sanitize_callback' => isset( $input ) ? true : false,
@@ -480,7 +480,7 @@ class Header {
 				$wp_customize,
 				'cart_btn_toggle',
 				array(
-					'label'           => esc_html__( 'Show cart Button only added to cart?', 'tutorstarter' ),
+					'label'           => esc_html__( 'Display cart button when product added?', 'tutorstarter' ),
 					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback',
 				)
