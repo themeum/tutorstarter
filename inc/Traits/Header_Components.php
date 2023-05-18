@@ -166,8 +166,8 @@ trait Header_Components {
 	 */
 	public static function filtered_nav() {
 		if ( ! class_exists( '\TUTOR\Utils' ) ) return;
-
-		$instructor_menu = apply_filters( 'tutor_dashboard/instructor_nav_items', self::instructor_menus() );
+		$ins_menu = new \TUTOR\Utils;
+		$instructor_menu = apply_filters( 'tutor_dashboard/instructor_nav_items',  $ins_menu->instructor_menus() );
 		$common_navs     = array(
 			'settings' => array(
 				'title' => __( 'Settings', 'tutorstarter' ),
@@ -260,41 +260,4 @@ trait Header_Components {
 		);
 	}
 
-	/**
-	 * Instructor Menus
-	 */
-	public static function instructor_menus() {
-		return array(
-			'separator-1'   => array(
-				'title'    => __( 'Instructor', 'tutorstarter' ),
-				'auth_cap' => tutor()->instructor_role,
-				'type'     => 'separator',
-			),
-			'create-course' => array(
-				'title'    => __( 'Create Course', 'tutorstarter' ),
-				'show_ui'  => false,
-				'auth_cap' => tutor()->instructor_role,
-			),
-			'my-courses'    => array(
-				'title'    => __( 'My Courses', 'tutorstarter' ),
-				'auth_cap' => tutor()->instructor_role,
-				'icon'     => 'tutor-icon-space-filled',
-			),
-			'announcements' => array(
-				'title'    => __( 'Announcements', 'tutorstarter' ),
-				'auth_cap' => tutor()->instructor_role,
-				'icon'     => 'tutor-icon-speaker-filled',
-			),
-			'withdraw'      => array(
-				'title'    => __( 'Withdrawals', 'tutorstarter' ),
-				'auth_cap' => tutor()->instructor_role,
-				'icon'     => 'tutor-icon-wallet-filled',
-			),
-			'quiz-attempts' => array(
-				'title'    => __( 'Quiz Attempts', 'tutorstarter' ),
-				'auth_cap' => tutor()->instructor_role,
-				'icon'     => 'tutor-icon-quiz-filled',
-			),
-		);
-	}
 }
