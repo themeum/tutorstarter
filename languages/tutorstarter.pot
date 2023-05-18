@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-03-24T09:32:18+00:00\n"
+"POT-Creation-Date: 2023-05-18T07:15:44+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: tutorstarter\n"
@@ -1259,7 +1259,6 @@ msgid "Login as an "
 msgstr ""
 
 #: inc/Traits/Header_Components.php:102
-#: inc/Traits/Header_Components.php:269
 msgid "Instructor"
 msgstr ""
 
@@ -1301,26 +1300,6 @@ msgstr ""
 
 #: inc/Traits/Header_Components.php:257
 msgid "Question & Answer"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:274
-msgid "Create Course"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:279
-msgid "My Courses"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:284
-msgid "Announcements"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:289
-msgid "Withdrawals"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:294
-msgid "Quiz Attempts"
 msgstr ""
 
 #. Template Name of the theme

@@ -166,8 +166,8 @@ trait Header_Components {
 	 */
 	public static function filtered_nav() {
 		if ( ! class_exists( '\TUTOR\Utils' ) ) return;
-		$ins_menu = new \TUTOR\Utils;
-		$instructor_menu = apply_filters( 'tutor_dashboard/instructor_nav_items',  $ins_menu->instructor_menus() );
+		
+		$instructor_menu = apply_filters( 'tutor_dashboard/instructor_nav_items',   tutor_utils()->instructor_menus() );
 		$common_navs     = array(
 			'settings' => array(
 				'title' => __( 'Settings', 'tutorstarter' ),
