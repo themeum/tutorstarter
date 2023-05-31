@@ -9,7 +9,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-05-25T09:29:24+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: tutorstarter\n"
@@ -479,7 +478,7 @@ msgstr ""
 
 #: inc/Api/Customizer/Header/Header.php:472
 #: inc/Api/Customizer/Header/Header.php:483
-msgid "Show cart Button only added to cart?"
+msgid "Display cart button when product added?"
 msgstr ""
 
 #: inc/Api/Customizer/Header/Header.php:492
