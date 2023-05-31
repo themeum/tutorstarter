@@ -2,8 +2,8 @@
 Contributors: themeum
 Tags: education, e-commerce, blog, custom-logo, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, footer-widgets, left-sidebar, right-sidebar
 Requires at least: 5.0
-Tested up to: 6.1
-Stable tag: 1.1.5
+Tested up to: 6.2
+Stable tag: 1.1.7
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -83,6 +83,17 @@ If you found any bugs or issues, please let us know by posting on the support se
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 1.1.7 = 
+
+Update: Compatibility with latest tutor update
+Fix: Header Menu issue fixed
+
+= 1.1.6 = 
+
+New: Added 'Display cart button when product added' button on the customizer page. When enabled, the Cart button will be visible only after the customer adds products to their cart.
+Fix: Resolved the compatibility issues with the latest Tutor LMS version
+Fix: Fixed various CSS issues to enhance the visual presentation.
 
 = 1.1.5 = 
 
