@@ -1,12 +1,12 @@
 {
-    "/js/app.min.js": "/js/app.min.js?id=b34a86a4da12d040670f",
-    "/css/style.min.css": "/css/style.min.css?id=42ebc5606780770c23aa",
-    "/css/admin.min.css": "/css/admin.min.css?id=941b28c10c88d51f4b00",
-    "/css/all-controls.min.css": "/css/all-controls.min.css?id=69d3124b4286ed252246",
-    "/css/dashboard.min.css": "/css/dashboard.min.css?id=bc54822321d5ba2b3277",
-    "/js/customizer-controls.js": "/js/customizer-controls.js?id=044212e5d01bc203874d",
-    "/js/customizer-preview.min.js": "/js/customizer-preview.min.js?id=ffbb2be929e5c175721b",
-    "/js/tutor-schema.js": "/js/tutor-schema.js?id=a2cf2264c216ad31d97f",
-    "/js/tutorstarter-dashboard.js": "/js/tutorstarter-dashboard.js?id=525f2228737c499e3748",
-    "/js/tutorstarter-page-settings.js": "/js/tutorstarter-page-settings.js?id=c82eb561faf32c141709"
+    "/js/app.min.js": "/js/app.min.js",
+    "/css/style.min.css": "/css/style.min.css",
+    "/css/admin.min.css": "/css/admin.min.css",
+    "/css/all-controls.min.css": "/css/all-controls.min.css",
+    "/css/dashboard.min.css": "/css/dashboard.min.css",
+    "/js/customizer-controls.js": "/js/customizer-controls.js",
+    "/js/customizer-preview.min.js": "/js/customizer-preview.min.js",
+    "/js/tutor-schema.js": "/js/tutor-schema.js",
+    "/js/tutorstarter-dashboard.js": "/js/tutorstarter-dashboard.js",
+    "/js/tutorstarter-page-settings.js": "/js/tutorstarter-page-settings.js"
 }

@@ -289,3 +289,11 @@ body.woocommerce-page {
         font-size: 18px;
         color: white;
     }
+    .theme-tutorstarter .woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+        padding: 12px;
+        border-radius: 6px;
+        width: 90%;
+    }
+    .theme-tutorstarter .woocommerce form .show-password-input, .woocommerce-page form .show-password-input {
+        top: 12px;
+    }
