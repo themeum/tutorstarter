@@ -441,6 +441,7 @@ function tutor_theme_ajax_login() {
  */
 if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
 	function tutor_starter_header_cart() { ?>
+	<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'tutorstarter' ); ?>">
 		<span class="btn-cart">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -454,10 +455,10 @@ if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
 					
 				/>
 			</svg>
-			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'tutorstarter' ); ?>">
 				<span>(<?php echo WC()->cart->get_cart_contents_count(); ?>)</span>
-			</a>
+			
 		</span>
+	</a>
         <?php
     }
 }
