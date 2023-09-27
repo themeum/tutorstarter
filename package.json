@@ -1,6 +1,6 @@
 {
   "name": "tutorstarter",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "Modern WordPress Theme for Tutor LMS",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "makepot": "wp i18n make-pot --exclude='node_modules,vendor' . languages/tutorstarter.pot",
     "bundle": "dir-archiver --src . --dest ../tutorstarter.zip --exclude .DS_Store .ds_store .keep mix-manifest.json .eslintrc.json .eslintignore .git .gitattributes .github .gitignore phpcs.xml README.md composer.json composer.lock node_modules package-lock.json package.json webpack.mix.js sass reactjs src",
     "lint": "eslint \"./**/*.js\"",
-    "plugin-build": "npm run production && npm run makepot && npm run bundle"
+    "build": "npm run production && npm run makepot && npm run bundle"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.12.10",
