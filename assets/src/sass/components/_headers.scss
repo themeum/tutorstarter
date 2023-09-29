@@ -629,3 +629,23 @@
         }
     }
 }
+
+.rtl .tutor-header-profile-menu-items .tutor-header-submenu {
+    position: absolute;
+    z-index: 999;
+    width: 698px;
+    top: 50px;
+ right: -260%;
+  
+}
+
+
+.rtl .tutor-submenu-login-section, .tutor-submenu-login-section-instructor {
+    width: 33.33%;
+    padding-left: 16px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+}
