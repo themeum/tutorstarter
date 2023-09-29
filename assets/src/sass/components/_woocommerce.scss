@@ -275,3 +275,25 @@ body.woocommerce-page {
         margin-bottom: 25px;
     }
 }
+
+    .checkout_coupon input#coupon_code {
+        padding: 12px;
+        border-radius: 6px;
+        width: 90%;
+    }
+   .checkout_coupon button.coupon-button {
+        background-color: #1950d1;
+        padding: 15px 38px;
+        border: none;
+        border-radius: 32px;
+        font-size: 18px;
+        color: white;
+    }
+    .theme-tutorstarter .woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+        padding: 12px;
+        border-radius: 6px;
+        width: 90%;
+    }
+    .theme-tutorstarter .woocommerce form .show-password-input, .woocommerce-page form .show-password-input {
+        top: 12px;
+    }
