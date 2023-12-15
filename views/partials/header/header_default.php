@@ -4,7 +4,12 @@
  */
 
 use Tutor_Starter\Traits\Header_Components;
+class Header_COMP {
+    use Header_Components;
 
+    // Rest of your class implementation
+}
+$obj = new Header_COMP();
 ?>
 
 <header class="header-default">
@@ -65,7 +70,7 @@ use Tutor_Starter\Traits\Header_Components;
             <?php endif; ?>
             <?php if ( class_exists( '\TUTOR\Utils' ) && is_user_logged_in() ) : ?>
                 <div class="tutor-header-profile-menu-items">
-                    <?php Header_Components::tutor_multi_column_dropdown(); ?>
+                    <?php $obj->tutor_multi_column_dropdown(); ?>
                 </div><!-- .tutor-header-profile-menu -->
             <?php endif; ?>
             <?php if ( ! is_user_logged_in() || is_customize_preview() ) : ?>

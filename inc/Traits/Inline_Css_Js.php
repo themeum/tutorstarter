@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
  * Inline CSS and JS
  */
 trait Inline_Css_Js {
-
+use Fonts;
 	/**
 	 * Get theme mods value for custom css that
 	 * are configured through customizer
@@ -408,7 +408,7 @@ trait Inline_Css_Js {
 	public static function get_google_fonts() {
 		return apply_filters(
 			'tutorstarter_google_fonts_array',
-			Fonts::google_fonts_list()
+			self::google_fonts_list()
 		);
 	}
 }

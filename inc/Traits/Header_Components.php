@@ -59,8 +59,8 @@ trait Header_Components {
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/instructor-submenu-icon.svg' ); ?>" alt="profile avatar">
 						</div>
 						<div class="tutor-submenu-login-content">
-							<div class="tutor-submenu-login-profile" style="margin-top: 10px;"><?php wp_kses_post( _e( 'Create a<br />New Course', 'tutorstarter' ) ) ?></div>
-							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em; font-size:14px; margin-top:10px;"><?php wp_kses_post( _e( 'Get started with topics,<br />lessons and more', 'tutorstarter' ) ); ?></p>
+							<div class="tutor-submenu-login-profile" style="margin-top: 10px;"><?php  esc_html_e( 'Create a<br />New Course', 'tutorstarter' ); ?></div>
+							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em; font-size:14px; margin-top:10px;"><?php esc_html_e( 'Get started with topics,<br />lessons and more', 'tutorstarter' ); ?></p>
 						</div>
 						<div class="tutor-submenu-login-btn">
 							<a id="tutor-starter-create-course" class="tutor-submenu-login" href="<?php echo admin_url( 'post-new.php?post_type=' . tutor()->course_post_type ); ?>"><span class="dashicons dashicons-arrow-right-alt2" style="font-weight: bold;"></span></a>
