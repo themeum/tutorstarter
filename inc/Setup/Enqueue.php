@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
  * Enqueue class
  */
 class Enqueue {
-use Inline_Css_Js;
+	use	Inline_Css_Js;
 	/**
 	 * Register default hooks and actions for WordPress
 	 */
