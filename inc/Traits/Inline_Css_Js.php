@@ -15,7 +15,14 @@ defined( 'ABSPATH' ) || exit;
  * Inline CSS and JS
  */
 trait Inline_Css_Js {
+
+	/**
+	 * Fonts
+	 *
+	 * @var trait
+	 */
 	use Fonts;
+
 	/**
 	 * Get theme mods value for custom css that
 	 * are configured through customizer
@@ -395,7 +402,7 @@ trait Inline_Css_Js {
 	public static function get_standard_fonts() {
 		return apply_filters(
 			'tutorstarter_standard_fonts_array',
-			Fonts::system_fonts_list()
+			self::system_fonts_list()
 		);
 	}
 
