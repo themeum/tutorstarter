@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
  * Schema class
  */
 class Schema {
-
+	use Schema_Template;
 	/**
 	 * Register
 	 */
@@ -37,25 +37,25 @@ class Schema {
 			$type = $post_meta['main_schema_select'];
 
 			if ( 'WebPage' === $type ) {
-				$schema = Schema_Template::web_page( $type );
+				$schema = $this->web_page( $type );
 			} elseif ( 'Organization' === $type ) {
-				$schema = Schema_Template::organization( $type );
+				$schema = $this->organization( $type );
 			} elseif ( 'LocalBusiness' === $type ) {
-				$schema = Schema_Template::local_business( $type );
+				$schema = $this->local_business( $type );
 			} elseif ( 'Person' === $type ) {
-				$schema = Schema_Template::person( $type );
+				$schema = $this->person( $type );
 			} elseif ( 'Video' === $type ) {
-				$schema = Schema_Template::video( $type );
+				$schema = $this->video( $type );
 			} elseif ( 'Review' === $type ) {
-				$schema = Schema_Template::review( $type );
-			} elseif( 'Course' === $type ) {
-				$schema = Schema_Template::course( $type );
+				$schema = $this->review( $type );
+			} elseif ( 'Course' === $type ) {
+				$schema = $this->course( $type );
 			} elseif ( 'post' === get_post_type() ) {
-				$schema = Schema_Template::blog_post();
+				$schema = $this->blog_post();
 			}
 		} else {
 			if ( 'post' === get_post_type() ) {
-				$schema = Schema_Template::blog_post();
+				$schema = $this->blog_post();
 			}
 		}
 

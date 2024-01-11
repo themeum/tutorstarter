@@ -161,7 +161,7 @@ if ( ! function_exists( 'control_active_callback_sticky_header' ) ) {
 	 */
 	function control_active_callback_sticky_header() {
 		// Get the appropriate theme mod.
-		$header_type = get_theme_mod( 'header_type_select' );
+		$header_type      = get_theme_mod( 'header_type_select' );
 		$header_sticky_on = get_theme_mod( 'header_sticky_toggle' );
 		if ( true === $header_sticky_on && 'header_transparent' === $header_type ) {
 			return true;
@@ -197,7 +197,7 @@ if ( ! function_exists( 'tutorstarter_sanitize_color' ) ) {
 	 * Sanitize colors.
 	 *
 	 * @param array $value The color.
-	 * 
+	 *
 	 * @return array
 	 */
 	function tutorstarter_sanitize_color( $value ) {
@@ -270,7 +270,7 @@ if ( ! function_exists( 'sanitize_select_range_value' ) ) {
 	 * @return string|int
 	 */
 	function sanitize_select_range_value( $input ) {
-	
+
 		return $input;
 	}
 }
@@ -309,18 +309,20 @@ if ( ! function_exists( 'tutorstarter_post_pagination' ) ) {
 	 * Custom pagination
 	 */
 	function tutorstarter_post_pagination() {
-	  global $wp_query;
-	  $paged = 999999999; // need an unlikely integer
-  
-		 echo paginate_links( array(
-			  'base' => str_replace( $paged, '%#%', esc_url( get_pagenum_link( $paged ) ) ),
-			  'format' => '?paged=%#%',
-			  'current' => max( 1, get_query_var('paged') ),
-			  'mid_size' => 2,
-			  'prev_text' => __( '<', 'tutorstarter' ),
-			  'next_text' => __( '>', 'tutorstarter' ),
-			  'total' => $wp_query->max_num_pages
-		 ) );
+		global $wp_query;
+		$paged = 999999999; // need an unlikely integer
+
+		echo paginate_links(
+			array(
+				'base'      => str_replace( $paged, '%#%', esc_url( get_pagenum_link( $paged ) ) ),
+				'format'    => '?paged=%#%',
+				'current'   => max( 1, get_query_var( 'paged' ) ),
+				'mid_size'  => 2,
+				'prev_text' => __( '<', 'tutorstarter' ),
+				'next_text' => __( '>', 'tutorstarter' ),
+				'total'     => $wp_query->max_num_pages,
+			)
+		);
 	}
 }
 
@@ -329,70 +331,174 @@ if ( ! function_exists( 'tutorstarter_post_pagination' ) ) {
  */
 add_action( 'wp_ajax_nopriv_ajaxregister', 'tutor_theme_ajax_register_new_user' );
 
-function tutor_theme_ajax_register_new_user() {	
-	if ( ! check_ajax_referer( 'tutor-starter-signup-nonce','signupNonce' ) ) {
-		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Cheating huh?', 'tutorstarter' ) ) );
+function tutor_theme_ajax_register_new_user() {
+	if ( ! check_ajax_referer( 'tutor-starter-signup-nonce', 'signupNonce' ) ) {
+		echo json_encode(
+			array(
+				'loggedin' => false,
+				'message'  => __(
+					'Cheating huh?',
+					'tutorstarter'
+				),
+			)
+		);
 		die();
 	}
-	$username 		  = isset( $_POST['username'] ) ? sanitize_text_field( $_POST['username'] ) : '';
-	$email 			  = isset( $_POST['email'] ) ? sanitize_email( $_POST['email'] ) : '';
-	$password 		  = isset( $_POST['password'] ) ? sanitize_text_field( $_POST['password'] ) : '';
+	$username         = isset( $_POST['username'] ) ? sanitize_text_field( $_POST['username'] ) : '';
+	$email            = isset( $_POST['email'] ) ? sanitize_email( $_POST['email'] ) : '';
+	$password         = isset( $_POST['password'] ) ? sanitize_text_field( $_POST['password'] ) : '';
 	$confirm_password = isset( $_POST['confirm_password'] ) ? sanitize_text_field( $_POST['confirm_password'] ) : '';
 
 	if ( ! $username ) {
-		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Please provide a username.', 'tutorstarter' ) ) );
+		echo json_encode(
+			array(
+				'loggedin' => false,
+				'message'  => __(
+					'Please provide a username.',
+					'tutorstarter'
+				),
+			)
+		);
 		die();
 	} elseif ( ! $email ) {
-		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'A valid email is required.', 'tutorstarter' ) ) );
+		echo json_encode(
+			array(
+				'loggedin' => false,
+				'message'  => __(
+					'A valid email is required.',
+					'tutorstarter'
+				),
+			)
+		);
 		die();
 	} elseif ( ! $password ) {
-		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Please provide a strong password.', 'tutorstarter' ) ) );
+		echo json_encode(
+			array(
+				'loggedin' => false,
+				'message'  => __(
+					'Please provide a strong password.',
+					'tutorstarter'
+				),
+			)
+		);
 		die();
 	} elseif ( ! $confirm_password ) {
-		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Please confirm the password.', 'tutorstarter' ) ) );
+		echo json_encode(
+			array(
+				'loggedin' => false,
+				'message'  => __(
+					'Please confirm the password.',
+					'tutorstarter'
+				),
+			)
+		);
 		die();
 	} else {
 		if ( username_exists( $username ) ) {
-			echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Username already exists.', 'tutorstarter' ) ) );
+			echo json_encode(
+				array(
+					'loggedin' => false,
+					'message'  => __(
+						'Username already exists.',
+						'tutorstarter'
+					),
+				)
+			);
 			die();
-		} elseif (! is_email( $email ) ) {
-			echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Email address is not valid.', 'tutorstarter' ) ) );
+		} elseif ( ! is_email( $email ) ) {
+			echo json_encode(
+				array(
+					'loggedin' => false,
+					'message'  => __(
+						'Email address is not valid.',
+						'tutorstarter'
+					),
+				)
+			);
 			die();
 		} elseif ( email_exists( $email ) ) {
-			echo json_encode( array( 'loggedin' => false, 'message'=> __( 'This Email already exists.', 'tutorstarter' ) ) );
+			echo json_encode(
+				array(
+					'loggedin' => false,
+					'message'  => __(
+						'This Email already exists.',
+						'tutorstarter'
+					),
+				)
+			);
 			die();
 		} elseif ( strlen( $password ) <= 6 ) {
-			echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Password must be 7 characters or more.', 'tutorstarter' ) ) );
+			echo json_encode(
+				array(
+					'loggedin' => false,
+					'message'  => __(
+						'Password must be 7 characters or more.',
+						'tutorstarter'
+					),
+				)
+			);
 			die();
 		} elseif ( strcmp( $password, $confirm_password ) !== 0 ) {
-			echo json_encode( array( 'loggedin' => false, 'message' => __( 'Password does not match.', 'tutorstarter' ) ) );
+			echo json_encode(
+				array(
+					'loggedin' => false,
+					'message'  => __(
+						'Password does not match.',
+						'tutorstarter'
+					),
+				)
+			);
 			die();
 		} else {
-			$user_input = array (
-				'user_login'   =>  $username,
-				'display_name' =>  $username,
-				'user_email'   =>  $email,
-				'user_pass'    =>  $password
+			$user_input = array(
+				'user_login'   => $username,
+				'display_name' => $username,
+				'user_email'   => $email,
+				'user_pass'    => $password,
 			);
 
 			$user_id = wp_insert_user( $user_input );
 			if ( ! is_wp_error( $user_id ) ) {
-				$login_data                  = array();  
-				$login_data['user_login']    = $username;  
-				$login_data['user_password'] = $password;  
-				$login_data['remember']      = false;  
-			
+				$login_data                  = array();
+				$login_data['user_login']    = $username;
+				$login_data['user_password'] = $password;
+				$login_data['remember']      = false;
+
 				$user_verify = wp_signon( $login_data, false );
-			
+
 				if ( is_wp_error( $user_verify ) ) {
-					echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Something went wrong! Please try again later.', 'tutorstarter' ) ) );
+					echo json_encode(
+						array(
+							'loggedin' => false,
+							'message'  => __(
+								'Something went wrong! Please try again later.',
+								'tutorstarter'
+							),
+						)
+					);
 					die();
 				} else {
-					echo json_encode( array( 'loggedin' => true, 'message'=> __( 'Registration successful, redirecting...', 'tutorstarter' ) ) );
+					echo json_encode(
+						array(
+							'loggedin' => true,
+							'message'  => __(
+								'Registration successful, redirecting...',
+								'tutorstarter'
+							),
+						)
+					);
 					die();
 				}
 			} else {
-				echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Incorrect username or password.', 'tutorstarter' ) ) );
+				echo json_encode(
+					array(
+						'loggedin' => false,
+						'message'  => __(
+							'Incorrect username or password.',
+							'tutorstarter'
+						),
+					)
+				);
 				die();
 			}
 		}
@@ -406,31 +512,71 @@ add_action( 'wp_ajax_nopriv_ajaxlogin', 'tutor_theme_ajax_login' );
 
 function tutor_theme_ajax_login() {
 	if ( ! check_ajax_referer( 'tutor-starter-signin-nonce', 'signinNonce' ) ) {
-		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Cheating huh?', 'tutorstarter') ) );
+		echo json_encode(
+			array(
+				'loggedin' => false,
+				'message'  => __(
+					'Cheating huh?',
+					'tutorstarter'
+				),
+			)
+		);
 		die();
 	}
-	$email 	  = isset( $_POST['email'] ) ? sanitize_email( $_POST['email'] ) : '';
+	$email    = isset( $_POST['email'] ) ? sanitize_email( $_POST['email'] ) : '';
 	$password = isset( $_POST['password'] ) ? sanitize_text_field( $_POST['password'] ) : '';
-	
+
 	if ( ! $email ) {
-		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Email is not valid.', 'tutorstarter' ) ) );
+		echo json_encode(
+			array(
+				'loggedin' => false,
+				'message'  => __(
+					'Email is not valid.',
+					'tutorstarter'
+				),
+			)
+		);
 		die();
 	} elseif ( ! $password ) {
-		echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Password field is empty.', 'tutorstarter' ) ) );
+		echo json_encode(
+			array(
+				'loggedin' => false,
+				'message'  => __(
+					'Password field is empty.',
+					'tutorstarter'
+				),
+			)
+		);
 		die();
 	} else {
-		$login_data                  = array();  
+		$login_data                  = array();
 		$login_data['user_login']    = $email;
 		$login_data['user_password'] = $password;
 		$login_data['remember']      = false;
-	
+
 		$user_verify = wp_signon( $login_data, false );
-	
+
 		if ( is_wp_error( $user_verify ) ) {
-			echo json_encode( array( 'loggedin' => false, 'message'=> __( 'Invalid login details', 'tutorstarter' ) ) );
-			die();			
+			echo json_encode(
+				array(
+					'loggedin' => false,
+					'message'  => __(
+						'Invalid login details',
+						'tutorstarter'
+					),
+				)
+			);
+			die();
 		} else {
-			echo json_encode( array( 'loggedin' => true, 'message'=> __( 'Signin successful, redirecting...', 'tutorstarter' ) ) );
+			echo json_encode(
+				array(
+					'loggedin' => true,
+					'message'  => __(
+						'Signin successful, redirecting...',
+						'tutorstarter'
+					),
+				)
+			);
 			die();
 		}
 	}
@@ -459,8 +605,8 @@ if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
 			
 		</span>
 	</a>
-        <?php
-    }
+		<?php
+	}
 }
 
 /**
@@ -469,18 +615,19 @@ if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
 add_filter( 'woocommerce_add_to_cart_fragments', 'tutor_starter_cart_link_fragment' );
 
 if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
-    function tutor_starter_cart_link_fragment( $fragments ) {
-        global $woocommerce;
-		ob_start(); ?>
+	function tutor_starter_cart_link_fragment( $fragments ) {
+		global $woocommerce;
+		ob_start();
+		?>
 		
 		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'tutorstarter' ); ?>">
 			<span>(<?php echo WC()->cart->get_cart_contents_count(); ?>)</span>
 		</a>
-          
-        <?php
-        $fragments['a.cart-contents'] = ob_get_clean();
-        return $fragments;
-    }
+		  
+		<?php
+		$fragments['a.cart-contents'] = ob_get_clean();
+		return $fragments;
+	}
 }
 
 /**
@@ -489,13 +636,13 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
 add_filter( 'woocommerce_order_button_html', 'tutorstarter_order_btn_html' );
 
 if ( ! function_exists( 'tutorstarter_order_btn_html' ) ) {
- 
+
 	function tutorstarter_order_btn_html( $button ) {
-		
+
 		$order_button_text = __( 'Complete Payment', 'tutorstarter' );
 
 		$button = '<input type="submit" class="checkout-order-button checkout-button" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '" />';
-		
+
 		return $button;
 	}
 }
@@ -504,8 +651,8 @@ if ( ! function_exists( 'tutorstarter_order_btn_html' ) ) {
  * Header switcher
  */
 function tutorstarter_header_switcher() {
-	$page_meta            = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
-	$trans_header_toggle  = ( ! empty( $page_meta['header_trans_toggle'] ) ? $page_meta['header_trans_toggle'] : false );
+	$page_meta           = get_post_meta( get_the_ID(), '_tutorstarter_page_metadata', true );
+	$trans_header_toggle = ( ! empty( $page_meta['header_trans_toggle'] ) ? $page_meta['header_trans_toggle'] : false );
 
 	$selected_header     = get_theme_mod( 'header_type_select', 'header_default' );
 	$active_header_class = 'navbar-center';
@@ -540,20 +687,22 @@ function tutorstarter_header_switcher() {
  */
 if ( ! function_exists( 'tutorstarter_site_logo' ) ) {
 	function tutorstarter_site_logo() {
-        $logo          = get_theme_mod( 'custom_logo' );
-        $logo_img      = ! empty( $logo ) ? wp_get_attachment_image_url( $logo, 'full' ) : false;
-        $logo_retina   = get_theme_mod( 'retina_logo' );
+		$logo          = get_theme_mod( 'custom_logo' );
+		$logo_img      = ! empty( $logo ) ? wp_get_attachment_image_url( $logo, 'full' ) : false;
+		$logo_retina   = get_theme_mod( 'retina_logo' );
 		$retina_imgset = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
-        
-		if ( $logo_img ) : ?>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img src="<?php echo esc_url( $logo_img ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php printf( esc_attr__( '%s', 'tutorstarter' ), bloginfo( 'name' ) ); ?>" />
-            </a>
-        <?php else : ?>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+
+		if ( $logo_img ) :
+			?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img src="<?php echo esc_url( $logo_img ); ?>" <?php echo $logo_retina ? $retina_imgset : ''; ?> alt="<?php printf( esc_attr__( '%s', 'tutorstarter' ), bloginfo( 'name' ) ); ?>" />
+			</a>
+		<?php else : ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<?php bloginfo( 'title' ); ?>
-            </a>
-        <?php endif; 
+			</a>
+			<?php
+		endif;
 	}
 }
 
@@ -563,18 +712,20 @@ if ( ! function_exists( 'tutorstarter_site_logo' ) ) {
 if ( ! function_exists( 'tutorstarter_transparent_logo' ) ) {
 	function tutorstarter_transparent_logo() {
 		$logo          = get_theme_mod( 'transparent_logo' );
-        $logo_retina   = get_theme_mod( 'retina_trans_logo' );
+		$logo_retina   = get_theme_mod( 'retina_trans_logo' );
 		$retina_imgset = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
 
-        if ( $logo ) : ?>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img src="<?php echo esc_url( $logo ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php printf( esc_attr__( '%s', 'tutorstarter' ), bloginfo( 'name' ) ); ?>" />
-            </a>
-        <?php else : ?>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+		if ( $logo ) :
+			?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img src="<?php echo esc_url( $logo ); ?>" <?php echo $logo_retina ? $retina_imgset : ''; ?> alt="<?php printf( esc_attr__( '%s', 'tutorstarter' ), bloginfo( 'name' ) ); ?>" />
+			</a>
+		<?php else : ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<?php bloginfo( 'title' ); ?>
 			</a>
-        <?php endif; 
+			<?php
+		endif;
 	}
 }
 
@@ -586,9 +737,11 @@ if ( ! function_exists( 'tutorstarter_footer_logo' ) ) {
 		$footer_logo   = get_theme_mod( 'footer_logo' );
 		$logo_retina   = get_theme_mod( 'footer_retina_logo' );
 		$retina_imgset = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
-		if ( ! empty( $footer_logo ) ) : ?>
-			<img height="24" width="92" class="logo-footer" src="<?php echo esc_url( $footer_logo ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ) ?>">
-		<?php endif;
+		if ( ! empty( $footer_logo ) ) :
+			?>
+			<img height="24" width="92" class="logo-footer" src="<?php echo esc_url( $footer_logo ); ?>" <?php echo $logo_retina ? $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
+			<?php
+		endif;
 	}
 }
 
@@ -600,9 +753,11 @@ if ( ! function_exists( 'tutorstarter_footer_trans_logo' ) ) {
 		$footer_logo_trans = get_theme_mod( 'footer_logo_trans' );
 		$logo_retina       = get_theme_mod( 'footer_retina_trans_logo' );
 		$retina_imgset     = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
-		if ( ! empty( $footer_logo_trans ) ) : ?>
-			<img height="24" width="92" class="logo-footer trans" src="<?php echo esc_url( $footer_logo_trans ); ?>" <?php echo $logo_retina ?  $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ) ?>">
-		<?php endif;
+		if ( ! empty( $footer_logo_trans ) ) :
+			?>
+			<img height="24" width="92" class="logo-footer trans" src="<?php echo esc_url( $footer_logo_trans ); ?>" <?php echo $logo_retina ? $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
+			<?php
+		endif;
 	}
 }
 

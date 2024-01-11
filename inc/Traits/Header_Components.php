@@ -28,18 +28,20 @@ trait Header_Components {
 	 * Tutor multi-column dropdown menu
 	 */
 	public static function tutor_multi_column_dropdown() {
-		if ( ! class_exists( '\TUTOR\Utils' ) ) return; // @todo: cross check
+		if ( ! class_exists( '\TUTOR\Utils' ) ) {
+			return; // @todo: cross check
+		}
 
 		$default_menus = apply_filters( 'tutor_dashboard/nav_items', self::default_menus() );
-		$current_user = wp_get_current_user();
+		$current_user  = wp_get_current_user();
 		?>
 		<div class="tutor-header-profile-photo">
 			<?php
 				// if ( function_exists( 'tutor_utils' ) ) {
 					echo tutor_utils()->get_tutor_avatar( get_current_user_id() );
 				// } else {
-				// 	$get_avatar_url = get_avatar_url( get_current_user_id(), 'thumbnail' );
-				// 	echo "<img src='$get_avatar_url' />";
+				// $get_avatar_url = get_avatar_url( get_current_user_id(), 'thumbnail' );
+				// echo "<img src='$get_avatar_url' />";
 				// }
 			?>
 		</div><!-- .tutor-header-profile-photo -->
@@ -59,8 +61,8 @@ trait Header_Components {
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/instructor-submenu-icon.svg' ); ?>" alt="profile avatar">
 						</div>
 						<div class="tutor-submenu-login-content">
-							<div class="tutor-submenu-login-profile" style="margin-top: 10px;"><?php wp_kses_post( _e( 'Create a<br />New Course', 'tutorstarter' ) ) ?></div>
-							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em; font-size:14px; margin-top:10px;"><?php wp_kses_post( _e( 'Get started with topics,<br />lessons and more', 'tutorstarter' ) ); ?></p>
+							<div class="tutor-submenu-login-profile" style="margin-top: 10px;"><?php _e( 'Create a<br />New Course', 'tutorstarter' ); ?></div>
+							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em; font-size:14px; margin-top:10px;"><?php _e( 'Get started with topics,<br />lessons and more', 'tutorstarter' ); ?></p>
 						</div>
 						<div class="tutor-submenu-login-btn">
 							<a id="tutor-starter-create-course" class="tutor-submenu-login" href="<?php echo admin_url( 'post-new.php?post_type=' . tutor()->course_post_type ); ?>"><span class="dashicons dashicons-arrow-right-alt2" style="font-weight: bold;"></span></a>
@@ -90,7 +92,7 @@ trait Header_Components {
 							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em; font-size:14px; margin-top:10px;"><?php wp_kses_post( _e( 'Explore courses that will<br />unlock your potential.', 'tutorstarter' ) ); ?></p>
 						</div>
 						<div class="tutor-submenu-login-btn">
-							<a class="tutor-submenu-login" href="<?php echo esc_url( tutor_utils()->course_archive_page_url() ) ?>"><span class="dashicons dashicons-arrow-right-alt2" style="font-weight: bold;"></span></a>
+							<a class="tutor-submenu-login" href="<?php echo esc_url( tutor_utils()->course_archive_page_url() ); ?>"><span class="dashicons dashicons-arrow-right-alt2" style="font-weight: bold;"></span></a>
 						</div>
 					</div>
 				<?php else : ?>
@@ -116,14 +118,16 @@ trait Header_Components {
 
 						if ( is_array( $menu_item ) ) {
 							$menu_title = tutor_utils()->array_get( 'title', $menu_item );
-							
+
 							if ( isset( $menu_item['url'] ) ) {
 								$menu_link = $menu_item['url'];
 							}
 						}
 
-						if ( $menu_key === 'index' ) $menu_key = '';
-						echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . " </a></li>";
+						if ( $menu_key === 'index' ) {
+							$menu_key = '';
+						}
+						echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . ' </a></li>';
 
 					}
 					?>
@@ -140,7 +144,7 @@ trait Header_Components {
 
 						if ( is_array( $nav_item ) ) {
 							$menu_title = tutor_utils()->array_get( 'title', $nav_item );
-							
+
 							if ( isset( $nav_item['url'] ) ) {
 								$menu_link = $nav_item['url'];
 							}
@@ -149,7 +153,7 @@ trait Header_Components {
 						if ( isset( $nav_item['type'] ) && 'separator' === $nav_item['type'] ) {
 							echo '';
 						} else {
-							echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . " </a></li>";
+							echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . ' </a></li>';
 						}
 					}
 					?>
@@ -157,17 +161,20 @@ trait Header_Components {
 			</div>
 		</div>
 
-	<?php }
+		<?php
+	}
 
 	/**
 	 * Filtered nav items based on capabilities
-	 * 
+	 *
 	 * @return array
 	 */
 	public static function filtered_nav() {
-		if ( ! class_exists( '\TUTOR\Utils' ) ) return;
-		
-		$instructor_menu = apply_filters( 'tutor_dashboard/instructor_nav_items',   tutor_utils()->instructor_menus() );
+		if ( ! class_exists( '\TUTOR\Utils' ) ) {
+			return;
+		}
+
+		$instructor_menu = apply_filters( 'tutor_dashboard/instructor_nav_items', tutor_utils()->instructor_menus() );
 		$common_navs     = array(
 			'settings' => array(
 				'title' => __( 'Settings', 'tutorstarter' ),
@@ -200,16 +207,19 @@ trait Header_Components {
 
 	/**
 	 * Check role
-	 * 
+	 *
 	 * @return bool
 	 */
 	public static function is_user_priviledged() {
 		$user_is_priviledged = false;
-		$current_user = wp_get_current_user();
-		$predefined_roles = apply_filters( 'tutor_user_is_priviledged', array(
-			'administrator',
-			'tutor_instructor'
-		) );
+		$current_user        = wp_get_current_user();
+		$predefined_roles    = apply_filters(
+			'tutor_user_is_priviledged',
+			array(
+				'administrator',
+				'tutor_instructor',
+			)
+		);
 
 		if ( array_intersect( $current_user->roles, $predefined_roles ) ) {
 			$user_is_priviledged = true;

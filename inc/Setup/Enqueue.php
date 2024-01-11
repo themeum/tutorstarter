@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
  * Enqueue class
  */
 class Enqueue {
-
+	use	Inline_Css_Js;
 	/**
 	 * Register default hooks and actions for WordPress
 	 */
@@ -44,12 +44,12 @@ class Enqueue {
 		$body_font_url    = '';
 		$heading_font_url = '';
 
-		if ( ! empty( $body_font ) && in_array( $body_font, Inline_Css_Js::get_google_fonts(), true ) ) {
+		if ( ! empty( $body_font ) && in_array( $body_font, $this->get_google_fonts(), true ) ) {
 			$body_font_url = 'family=' . $body_font . ':wght@100;300;400;500;700;900';
 			wp_enqueue_style( 'gfonts', 'https://fonts.googleapis.com/css2?' . $body_font_url . '&display=swap', array(), TUTOR_STARTER_VERSION, 'all' );
 		}
 
-		if ( ! empty( $heading_font ) && in_array( $heading_font, Inline_Css_Js::get_google_fonts(), true ) && $body_font !== $heading_font ) {
+		if ( ! empty( $heading_font ) && in_array( $heading_font, $this->get_google_fonts(), true ) && $body_font !== $heading_font ) {
 			$heading_font_url = 'family=' . $heading_font . ':wght@100;300;400;500;700;900';
 			wp_enqueue_style( 'gfonts-heading', 'https://fonts.googleapis.com/css2?' . $heading_font_url . '&display=swap', array(), TUTOR_STARTER_VERSION, 'all' );
 		}
@@ -71,10 +71,10 @@ class Enqueue {
 		}
 
 		// Localizable data.
-		wp_localize_script( 'main', 'tutorstarter_vars', Inline_Css_Js::localized_js() );
+		wp_localize_script( 'main', 'tutorstarter_vars', $this->localized_js() );
 
 		// Add all inline css that uses customizer settings.
-		wp_add_inline_style( 'main', Inline_Css_Js::output_css() );
+		wp_add_inline_style( 'main', $this->output_css() );
 
 	}
 
