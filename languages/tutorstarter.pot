@@ -1,14 +1,15 @@
-# Copyright (C) 2023 Themeum
+# Copyright (C) 2024 Themeum
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: TutorStarter 1.1.9\n"
+"Project-Id-Version: TutorStarter 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tutorstarter\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-01-11T11:40:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: tutorstarter\n"
@@ -1064,97 +1065,97 @@ msgstr ""
 msgid "Tutor Starter Schema"
 msgstr ""
 
-#: inc/Helpers.php:320
+#: inc/Helpers.php:321
 msgid "<"
 msgstr ""
 
-#: inc/Helpers.php:321
+#: inc/Helpers.php:322
 msgid ">"
 msgstr ""
 
-#: inc/Helpers.php:334
-#: inc/Helpers.php:409
+#: inc/Helpers.php:339
+#: inc/Helpers.php:518
 msgid "Cheating huh?"
 msgstr ""
 
-#: inc/Helpers.php:343
+#: inc/Helpers.php:356
 msgid "Please provide a username."
 msgstr ""
 
-#: inc/Helpers.php:346
+#: inc/Helpers.php:367
 msgid "A valid email is required."
 msgstr ""
 
-#: inc/Helpers.php:349
+#: inc/Helpers.php:378
 msgid "Please provide a strong password."
 msgstr ""
 
-#: inc/Helpers.php:352
+#: inc/Helpers.php:389
 msgid "Please confirm the password."
 msgstr ""
 
-#: inc/Helpers.php:356
+#: inc/Helpers.php:401
 msgid "Username already exists."
 msgstr ""
 
-#: inc/Helpers.php:359
+#: inc/Helpers.php:412
 msgid "Email address is not valid."
 msgstr ""
 
-#: inc/Helpers.php:362
+#: inc/Helpers.php:423
 msgid "This Email already exists."
 msgstr ""
 
-#: inc/Helpers.php:365
+#: inc/Helpers.php:434
 msgid "Password must be 7 characters or more."
 msgstr ""
 
-#: inc/Helpers.php:368
+#: inc/Helpers.php:445
 msgid "Password does not match."
 msgstr ""
 
-#: inc/Helpers.php:388
+#: inc/Helpers.php:473
 msgid "Something went wrong! Please try again later."
 msgstr ""
 
-#: inc/Helpers.php:391
+#: inc/Helpers.php:484
 msgid "Registration successful, redirecting..."
 msgstr ""
 
-#: inc/Helpers.php:395
+#: inc/Helpers.php:496
 msgid "Incorrect username or password."
 msgstr ""
 
-#: inc/Helpers.php:416
+#: inc/Helpers.php:533
 msgid "Email is not valid."
 msgstr ""
 
-#: inc/Helpers.php:419
+#: inc/Helpers.php:544
 msgid "Password field is empty."
 msgstr ""
 
-#: inc/Helpers.php:430
+#: inc/Helpers.php:563
 msgid "Invalid login details"
 msgstr ""
 
-#: inc/Helpers.php:433
+#: inc/Helpers.php:574
 msgid "Signin successful, redirecting..."
 msgstr ""
 
-#: inc/Helpers.php:457
-#: inc/Helpers.php:475
+#: inc/Helpers.php:590
+#: inc/Helpers.php:623
 msgid "View your shopping cart"
 msgstr ""
 
-#: inc/Helpers.php:494
+#: inc/Helpers.php:642
 #: woocommerce/checkout/form-checkout.php:13
 msgid "Complete Payment"
 msgstr ""
 
-#: inc/Helpers.php:549
-#: inc/Helpers.php:570
-#: views/partials/header/header_default.php:73
-#: views/partials/header/header_transparent.php:97
+#: inc/Helpers.php:698
+#: inc/Helpers.php:721
+#: views/partials/header/header_default.php:89
+#: views/partials/header/header_transparent.php:113
 msgid "%s"
 msgstr ""
 
@@ -1223,81 +1224,81 @@ msgstr ""
 msgid "Huge"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:47
+#: inc/Traits/Header_Components.php:49
 msgid "Hello"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:62
+#: inc/Traits/Header_Components.php:64
 msgid "Create a<br />New Course"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:63
+#: inc/Traits/Header_Components.php:65
 msgid "Get started with topics,<br />lessons and more"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:75
+#: inc/Traits/Header_Components.php:77
 msgctxt "Login as a student text"
 msgid "Login as a "
 msgstr ""
 
-#: inc/Traits/Header_Components.php:75
+#: inc/Traits/Header_Components.php:77
 msgid "Student"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:89
+#: inc/Traits/Header_Components.php:91
 msgid "Let's Start<br />Learning"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:90
+#: inc/Traits/Header_Components.php:92
 msgid "Explore courses that will<br />unlock your potential."
 msgstr ""
 
-#: inc/Traits/Header_Components.php:102
+#: inc/Traits/Header_Components.php:104
 msgctxt "Login as an instructor text"
 msgid "Login as an "
 msgstr ""
 
-#: inc/Traits/Header_Components.php:102
+#: inc/Traits/Header_Components.php:104
 msgid "Instructor"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:173
+#: inc/Traits/Header_Components.php:180
 msgid "Settings"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:177
+#: inc/Traits/Header_Components.php:184
 msgid "Logout"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:229
+#: inc/Traits/Header_Components.php:239
 msgid "Dashboard"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:233
+#: inc/Traits/Header_Components.php:243
 msgid "My Profile"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:237
+#: inc/Traits/Header_Components.php:247
 msgid "Enrolled  Courses"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:241
+#: inc/Traits/Header_Components.php:251
 msgid "Wishlist"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:245
+#: inc/Traits/Header_Components.php:255
 msgid "Reviews"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:249
+#: inc/Traits/Header_Components.php:259
 msgid "My Quiz Attempts"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:253
+#: inc/Traits/Header_Components.php:263
 msgid "Order History"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:257
+#: inc/Traits/Header_Components.php:267
 msgid "Question & Answer"
 msgstr ""
 
@@ -1460,18 +1461,18 @@ msgstr ""
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: views/partials/header/header_default.php:19
-#: views/partials/header/header_transparent.php:15
+#: views/partials/header/header_default.php:26
+#: views/partials/header/header_transparent.php:22
 msgid "Search..."
 msgstr ""
 
-#: views/partials/header/header_default.php:62
-#: views/partials/header/header_transparent.php:86
+#: views/partials/header/header_default.php:78
+#: views/partials/header/header_transparent.php:102
 msgid "Want to Explore!"
 msgstr ""
 
-#: views/partials/header/header_default.php:63
-#: views/partials/header/header_transparent.php:87
+#: views/partials/header/header_default.php:79
+#: views/partials/header/header_transparent.php:103
 msgid "Instant Login"
 msgstr ""
 
