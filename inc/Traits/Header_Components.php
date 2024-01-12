@@ -88,8 +88,8 @@ trait Header_Components {
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/student-sub-menu-icon.svg' ); ?>" alt="profile avatar">
 						</div>
 						<div class="tutor-submenu-login-content">
-							<div class="tutor-submenu-login-profile" style="margin-top: 10px;"><?php wp_kses_post( _e( 'Let\'s Start<br />Learning', 'tutorstarter' ) ); ?></div>
-							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em; font-size:14px; margin-top:10px;"><?php wp_kses_post( _e( 'Explore courses that will<br />unlock your potential.', 'tutorstarter' ) ); ?></p>
+							<div class="tutor-submenu-login-profile" style="margin-top: 10px;"><?php echo wp_kses_post( __( 'Let\'s Start<br />Learning', 'tutorstarter' ) ); ?></div>
+							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em; font-size:14px; margin-top:10px;"><?php echo wp_kses_post( __( 'Explore courses that will<br />unlock your potential.', 'tutorstarter' ) ); ?></p>
 						</div>
 						<div class="tutor-submenu-login-btn">
 							<a class="tutor-submenu-login" href="<?php echo esc_url( tutor_utils()->course_archive_page_url() ); ?>"><span class="dashicons dashicons-arrow-right-alt2" style="font-weight: bold;"></span></a>
