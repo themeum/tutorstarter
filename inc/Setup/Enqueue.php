@@ -21,7 +21,7 @@ class Enqueue {
 	 *
 	 * @var trait
 	 */
-	use	Inline_Css_Js;
+	use Inline_Css_Js;
 
 	/**
 	 * Register default hooks and actions for WordPress
@@ -70,7 +70,6 @@ class Enqueue {
 		if ( is_user_logged_in() ) {
 			wp_enqueue_script( 'instant-page', '//instant.page/5.1.0', array(), TUTOR_STARTER_VERSION, true );
 		}
-		
 
 		// Extra.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -82,7 +81,6 @@ class Enqueue {
 
 		// Add all inline css that uses customizer settings.
 		wp_add_inline_style( 'main', $this->output_css() );
-
 	}
 
 	/**
@@ -97,7 +95,7 @@ class Enqueue {
 	 */
 	public function load_styles_deferred( $html, $handle, $href, $media ) {
 
-		$handles = array( 
+		$handles = array(
 			'gfonts',
 			'gfonts-heading',
 			'qubely-font-awesome',
@@ -109,7 +107,7 @@ class Enqueue {
 			'woocommerce-layout',
 			'wc-block-vendors-style',
 			'woocommerce-general',
-		 );
+		);
 
 		if ( ! in_array( $handle, $handles, true ) ) {
 			return $html;
@@ -138,9 +136,9 @@ class Enqueue {
 
 		if ( 'post.php' === $hook || 'post-new.php' === $hook ) {
 			wp_enqueue_script( 'tutorstarter-schema-data', get_template_directory_uri() . '/assets/dist/js/tutor-schema.js', array( 'wp-i18n', 'wp-components', 'wp-element' ), TUTOR_STARTER_VERSION, true );
-			wp_localize_script( 'tutorstarter-schema-data', 'tutorstarter_admin_schema', Self::admin_localized_js() );
+			wp_localize_script( 'tutorstarter-schema-data', 'tutorstarter_admin_schema', self::admin_localized_js() );
 		}
-		
+
 		if ( ! isset( $_GET['page'] ) || 'tutorstarter' !== $_GET['page'] ) {
 			return;
 		}
@@ -155,7 +153,7 @@ class Enqueue {
 			)
 		);
 	}
-	
+
 	/**
 	 * Load dashboard and schema script translations
 	 */
@@ -172,14 +170,14 @@ class Enqueue {
 
 		$saved_fonts = get_transient( 'google_fonts' );
 		if ( false === $saved_fonts ) {
-			set_transient( 'google_fonts', Self::get_google_fonts(), DAY_IN_SECONDS );
+			set_transient( 'google_fonts', self::get_google_fonts(), DAY_IN_SECONDS );
 		}
 
 		if ( ! empty( $saved_fonts ) && is_array( $saved_fonts ) ) {
 			wp_enqueue_style( 'tutorstarter-control-gfonts', 'https://fonts.googleapis.com/css?family=' . join( '|', $saved_fonts ) . '&text=Abc&display=swap"', array(), TUTOR_STARTER_VERSION );
 		}
 		wp_enqueue_script( 'tutorstarter-customizer', get_template_directory_uri() . '/assets/dist/js/customizer-controls.js', array( 'jquery', 'customize-controls', 'wp-i18n', 'wp-components', 'wp-compose', 'wp-edit-post', 'wp-element' ), TUTOR_STARTER_VERSION, true );
-		wp_localize_script( 'tutorstarter-customizer', 'tutorstarter_customizer', Self::customizer_localized_js() );
+		wp_localize_script( 'tutorstarter-customizer', 'tutorstarter_customizer', self::customizer_localized_js() );
 	}
 
 	/**
@@ -201,11 +199,11 @@ class Enqueue {
 	 */
 	public function enqueue_editor_assets() {
 		global $pagenow;
-		
+
 		wp_enqueue_style( 'tutorstarter-admin', get_template_directory_uri() . '/assets/dist/css/admin.min.css', array(), TUTOR_STARTER_VERSION, 'all' );
 		if ( 'widgets.php' !== $pagenow ) {
 			wp_enqueue_script( 'tutorstarter-settings', get_template_directory_uri() . '/assets/dist/js/tutorstarter-page-settings.js', array( 'wp-i18n', 'wp-compose', 'wp-data', 'wp-components', 'wp-edit-post', 'wp-element', 'wp-plugins' ), TUTOR_STARTER_VERSION, true );
-			wp_localize_script( 'tutorstarter-settings', 'tutorstarter_admin_page', Self::admin_localized_js() );
+			wp_localize_script( 'tutorstarter-settings', 'tutorstarter_admin_page', self::admin_localized_js() );
 		}
 	}
 
