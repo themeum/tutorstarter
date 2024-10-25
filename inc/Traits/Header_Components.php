@@ -32,18 +32,12 @@ trait Header_Components {
 			return; // @todo: cross check
 		}
 
-		$default_menus = apply_filters( 'tutor_dashboard/nav_items', self::default_menus() );
+		// $default_menus = apply_filters( 'tutor_dashboard/nav_items', self::default_menus() );
+		$default_menus = self::default_menus();
 		$current_user  = wp_get_current_user();
 		?>
 		<div class="tutor-header-profile-photo">
-			<?php
-				// if ( function_exists( 'tutor_utils' ) ) {
-					echo tutor_utils()->get_tutor_avatar( get_current_user_id() );
-				// } else {
-				// $get_avatar_url = get_avatar_url( get_current_user_id(), 'thumbnail' );
-				// echo "<img src='$get_avatar_url' />";
-				// }
-			?>
+			<?php  tutor_utils()->get_tutor_avatar( get_current_user_id() ); ?>
 		</div><!-- .tutor-header-profile-photo -->
 		<div class="tutor-header-profile-content">
 			<div class="tutor-header-profile-content-text"><?php esc_html_e( 'Hello', 'tutorstarter' ); ?></div>
@@ -54,116 +48,36 @@ trait Header_Components {
 			</div>
 		</div>
 		<div class="tutor-header-submenu">
-			<?php if ( self::is_user_priviledged() && is_user_logged_in() ) : ?>
-				<?php if ( ! defined( 'TDC_VERSION' ) ) : ?>
-					<div class="tutor-submenu-login-section-instructor">
-						<div class="tutor-submenu-login-avatar">
-							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/instructor-submenu-icon.svg' ); ?>" alt="profile avatar">
-						</div>
-						<div class="tutor-submenu-login-content">
-							<div class="tutor-submenu-login-profile" style="margin-top: 10px;"><?php _e( 'Create a<br />New Course', 'tutorstarter' ); ?></div>
-							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em; font-size:14px; margin-top:10px;"><?php _e( 'Get started with topics,<br />lessons and more', 'tutorstarter' ); ?></p>
-						</div>
-						<div class="tutor-submenu-login-btn">
-							<a id="tutor-starter-create-course" class="tutor-submenu-login" href="<?php echo admin_url( 'post-new.php?post_type=' . tutor()->course_post_type ); ?>"><span class="dashicons dashicons-arrow-right-alt2" style="font-weight: bold;"></span></a>
-						</div>
-					</div>
-				<?php else : ?>
-					<div class="tutor-submenu-login-section">
-						<div class="tutor-submenu-login-avatar">
-							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-submenu-login-avatar.svg' ); ?>" alt="profile avatar">
-						</div>
-						<div class="tutor-submenu-login-content">
-							<?php echo esc_html_x( 'Login as a ', 'Login as a student text', 'tutorstarter' ); ?><div class="tutor-submenu-login-profile"><?php esc_html_e( 'Student', 'tutorstarter' ); ?></div>
-						</div>
-						<div class="tutor-submenu-login-btn">
-							<a class="student-login tutor-submenu-login tutor-icon-icon-light-right-line tutor-font-size-30 tutor-text-bold" href="#"></a>
-						</div>
-					</div>
-				<?php endif; ?>
-			<?php else : ?>
-				<?php if ( ! defined( 'TDC_VERSION' ) ) : ?>
-					<div class="tutor-submenu-login-section">
-						<div class="tutor-submenu-login-avatar">
-							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/student-sub-menu-icon.svg' ); ?>" alt="profile avatar">
-						</div>
-						<div class="tutor-submenu-login-content">
-							<div class="tutor-submenu-login-profile" style="margin-top: 10px;"><?php echo wp_kses_post( __( 'Let\'s Start<br />Learning', 'tutorstarter' ) ); ?></div>
-							<p class="tutor-mt-10 tutor-font-size-14" style="line-height: 1.5em; font-size:14px; margin-top:10px;"><?php echo wp_kses_post( __( 'Explore courses that will<br />unlock your potential.', 'tutorstarter' ) ); ?></p>
-						</div>
-						<div class="tutor-submenu-login-btn">
-							<a class="tutor-submenu-login" href="<?php echo esc_url( tutor_utils()->course_archive_page_url() ); ?>"><span class="dashicons dashicons-arrow-right-alt2" style="font-weight: bold;"></span></a>
-						</div>
-					</div>
-				<?php else : ?>
-					<div class="tutor-submenu-login-section-instructor">
-					<div class="tutor-submenu-login-avatar">
-						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/dist/images/tutor-submenu-login-instructor-avatar.svg' ); ?>" alt="profile avatar">
-					</div>
-					<div class="tutor-submenu-login-content">
-						<?php echo esc_html_x( 'Login as an ', 'Login as an instructor text', 'tutorstarter' ); ?> <div class="tutor-submenu-login-profile"><?php esc_html_e( 'Instructor', 'tutorstarter' ); ?></div>
-					</div>
-					<div class="tutor-submenu-login-btn">
-						<a class="instructor-login tutor-submenu-login tutor-icon-icon-light-right-line tutor-font-size-30 tutor-text-bold" href="#"></a>
-					</div>
+			<?php if (is_user_logged_in() ) : ?>
+				<div class="tutor-submenu-links">
+					<ul>
+						<?php
+							foreach ( $default_menus as $menu_key => $menu_item ) {
+								$menu_title = $menu_item;
+								$menu_link  = tutor_utils()->get_tutor_dashboard_page_permalink( $menu_key );
+
+								if ( is_array( $menu_item ) ) {
+									$menu_title = tutor_utils()->array_get( 'title', $menu_item );
+
+									if ( isset( $menu_item['url'] ) ) {
+										$menu_link = $menu_item['url'];
+									}
+								}
+
+								if ( $menu_key === 'index' ) {
+									$menu_key = '';
+								}
+								echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . ' </a></li>';
+
+							}
+						?>
+					</ul>
 				</div>
-				<?php endif; ?>
+			<?php else : ?>
 			<?php endif; ?>
-			<div class="tutor-submenu-links">
-				<ul>
-					<?php
-					foreach ( $default_menus as $menu_key => $menu_item ) {
-						$menu_title = $menu_item;
-						$menu_link  = tutor_utils()->get_tutor_dashboard_page_permalink( $menu_key );
-
-						if ( is_array( $menu_item ) ) {
-							$menu_title = tutor_utils()->array_get( 'title', $menu_item );
-
-							if ( isset( $menu_item['url'] ) ) {
-								$menu_link = $menu_item['url'];
-							}
-						}
-
-						if ( $menu_key === 'index' ) {
-							$menu_key = '';
-						}
-						echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . ' </a></li>';
-
-					}
-					?>
-				</ul>
-			</div>
-			<div class="tutor-submenu-links">
-				<ul>
-					<?php
-					$filtered_nav_items = self::filtered_nav();
-
-					foreach ( $filtered_nav_items as $nav_key => $nav_item ) {
-						$menu_title = $nav_item;
-						$menu_link  = tutor_utils()->get_tutor_dashboard_page_permalink( $nav_key );
-
-						if ( is_array( $nav_item ) ) {
-							$menu_title = tutor_utils()->array_get( 'title', $nav_item );
-
-							if ( isset( $nav_item['url'] ) ) {
-								$menu_link = $nav_item['url'];
-							}
-						}
-
-						if ( isset( $nav_item['type'] ) && 'separator' === $nav_item['type'] ) {
-							echo '';
-						} else {
-							echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . ' </a></li>';
-						}
-					}
-					?>
-				</ul>
-			</div>
 		</div>
-
-		<?php
+		<?php 
 	}
-
 	/**
 	 * Filtered nav items based on capabilities
 	 *
@@ -176,8 +90,12 @@ trait Header_Components {
 
 		$instructor_menu = apply_filters( 'tutor_dashboard/instructor_nav_items', tutor_utils()->instructor_menus() );
 		$common_navs     = array(
+			'dashboard-page' => array(
+				'title' => __( 'Dashboard', 'tutorstarter' ),
+				'icon'  => 'tutor-icon-settings-filled',
+			),
 			'settings' => array(
-				'title' => __( 'Settings', 'tutorstarter' ),
+				'title' => __( 'Account Settings', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-settings-filled',
 			),
 			'logout'   => array(
@@ -235,39 +153,18 @@ trait Header_Components {
 	 */
 	public static function default_menus() {
 		return array(
-			'index'            => array(
+			'dashboard-page' => array(
 				'title' => __( 'Dashboard', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-dashboard-filled',
+				'icon'  => 'tutor-icon-settings-filled',
 			),
-			'my-profile'       => array(
-				'title' => __( 'My Profile', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-man-user-filled',
+			'settings' => array(
+				'title' => __( 'Account Settings', 'tutorstarter' ),
+				'icon'  => 'tutor-icon-settings-filled',
 			),
-			'enrolled-courses' => array(
-				'title' => __( 'Enrolled  Courses', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-college-graduation-filled',
-			),
-			'wishlist'         => array(
-				'title' => __( 'Wishlist', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-fav-full-filled',
-			),
-			'reviews'          => array(
-				'title' => __( 'Reviews', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-star-full-filled',
-			),
-			'my-quiz-attempts' => array(
-				'title' => __( 'My Quiz Attempts', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-quiz-attempt-filled',
-			),
-			'purchase_history' => array(
-				'title' => __( 'Order History', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-cart-filled',
-			),
-			'question-answer'  => array(
-				'title' => __( 'Question & Answer', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-question-filled',
+			'logout'   => array(
+				'title' => __( 'Logout', 'tutorstarter' ),
+				'icon'  => 'tutor-icon-signout-filled',
 			),
 		);
 	}
-
 }

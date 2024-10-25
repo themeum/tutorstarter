@@ -7659,12 +7659,13 @@ header.header-default {
 .tutor-header-profile-menu-items .tutor-header-submenu {
   position: absolute;
   z-index: 999;
-  width: 655px;
+  width: 250px;
   top: 50px;
   right: -35px;
   transition: 300ms;
   height: auto;
   visibility: hidden;
+  box-shadow: 4px 10px 20px rgba(39, 57, 101, 0.2);
 }
 
 .tutor-header-profile-menu-items:hover .tutor-header-submenu {
@@ -7716,9 +7717,12 @@ header.header-default {
 }
 
 .tutor-submenu-links {
-  width: 33.33%;
   position: relative;
-  padding: 30px 10px;
+  padding: 10px 20px;
+}
+
+.tutor-submenu-links ul {
+  padding: 0px;
 }
 
 .tutor-header-submenu .tutor-submenu-links ul li a {
@@ -7807,11 +7811,6 @@ header.header-default {
     display: block;
   }
 
-  .tutor-header-submenu {
-    display: grid;
-    width: 300px !important;
-  }
-
   .tutor-submenu-login-section {
     width: 100%;
     padding-left: 25px;
@@ -7828,7 +7827,7 @@ header.header-default {
 
   .tutor-submenu-links {
     width: 100%;
-    padding: 0px 0px;
+    padding: 0px 10px 20px;
     order: 1;
   }
 
