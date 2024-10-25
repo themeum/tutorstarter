@@ -670,6 +670,14 @@ header.header-default .utils-search {
   display: none;
 }
 
+<<<<<<< HEAD
+=======
+.navbar.navbar-left {
+  grid-template-areas: "col1 col2";
+  justify-content: space-between;
+}
+
+>>>>>>> dev
 .navbar.navbar-left .navbar-brand {
   grid-area: col2;
   justify-self: center;
@@ -879,7 +887,10 @@ header.header-default .utils-search {
   position: relative;
   transition: 0.3s linear;
   display: grid;
+<<<<<<< HEAD
   grid-template-areas: "col1 col2 col3";
+=======
+>>>>>>> dev
   grid-auto-flow: column;
   grid-gap: 30px;
   align-items: center;
@@ -7655,12 +7666,20 @@ header.header-default {
 .tutor-header-profile-menu-items .tutor-header-submenu {
   position: absolute;
   z-index: 999;
+<<<<<<< HEAD
   width: 655px;
+=======
+  width: 250px;
+>>>>>>> dev
   top: 50px;
   right: -35px;
   transition: 300ms;
   height: auto;
   visibility: hidden;
+<<<<<<< HEAD
+=======
+  box-shadow: 4px 10px 20px rgba(39, 57, 101, 0.2);
+>>>>>>> dev
 }
 
 .tutor-header-profile-menu-items:hover .tutor-header-submenu {
@@ -7712,9 +7731,18 @@ header.header-default {
 }
 
 .tutor-submenu-links {
+<<<<<<< HEAD
   width: 33.33%;
   position: relative;
   padding: 30px 10px;
+=======
+  position: relative;
+  padding: 10px 20px;
+}
+
+.tutor-submenu-links ul {
+  padding: 0px;
+>>>>>>> dev
 }
 
 .tutor-header-submenu .tutor-submenu-links ul li a {
@@ -7803,11 +7831,14 @@ header.header-default {
     display: block;
   }
 
+<<<<<<< HEAD
   .tutor-header-submenu {
     display: grid;
     width: 300px !important;
   }
 
+=======
+>>>>>>> dev
   .tutor-submenu-login-section {
     width: 100%;
     padding-left: 25px;
@@ -7824,7 +7855,11 @@ header.header-default {
 
   .tutor-submenu-links {
     width: 100%;
+<<<<<<< HEAD
     padding: 0px 0px;
+=======
+    padding: 0px 10px 20px;
+>>>>>>> dev
     order: 1;
   }
 

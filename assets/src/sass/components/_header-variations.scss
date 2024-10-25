@@ -135,6 +135,8 @@ header.header-default {
 }
 
 .navbar.navbar-left {
+    grid-template-areas: "col1 col2";
+    justify-content: space-between;
     .navbar-brand {
         grid-area: col2;
         justify-self: center;
