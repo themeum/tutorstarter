@@ -37,7 +37,7 @@ trait Header_Components {
 		$current_user  = wp_get_current_user();
 		?>
 		<div class="tutor-header-profile-photo">
-			<?php  tutor_utils()->get_tutor_avatar( get_current_user_id() ); ?>
+			<?php tutor_utils()->get_tutor_avatar( get_current_user_id() ); ?>
 		</div><!-- .tutor-header-profile-photo -->
 		<div class="tutor-header-profile-content">
 			<div class="tutor-header-profile-content-text"><?php esc_html_e( 'Hello', 'tutorstarter' ); ?></div>
@@ -48,35 +48,32 @@ trait Header_Components {
 			</div>
 		</div>
 		<div class="tutor-header-submenu">
-			<?php if (is_user_logged_in() ) : ?>
+			<?php if ( is_user_logged_in() ) : ?>
 				<div class="tutor-submenu-links">
 					<ul>
 						<?php
-							foreach ( $default_menus as $menu_key => $menu_item ) {
-								$menu_title = $menu_item;
-								$menu_link  = tutor_utils()->get_tutor_dashboard_page_permalink( $menu_key );
+						foreach ( $default_menus as $menu_key => $menu_item ) {
+							$menu_title = $menu_item;
+							$menu_link  = tutor_utils()->get_tutor_dashboard_page_permalink( $menu_key );
+							if ( is_array( $menu_item ) ) {
+								$menu_title = tutor_utils()->array_get( 'title', $menu_item );
 
-								if ( is_array( $menu_item ) ) {
-									$menu_title = tutor_utils()->array_get( 'title', $menu_item );
-
-									if ( isset( $menu_item['url'] ) ) {
-										$menu_link = $menu_item['url'];
-									}
+								if ( isset( $menu_item['url'] ) ) {
+									$menu_link = $menu_item['url'];
 								}
-
-								if ( $menu_key === 'index' ) {
-									$menu_key = '';
-								}
-								echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . ' </a></li>';
-
 							}
+							if ( 'index' === $menu_key ) {
+								$menu_key = '';
+							}
+							echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . ' </a></li>';
+						}
 						?>
 					</ul>
 				</div>
 			<?php else : ?>
 			<?php endif; ?>
 		</div>
-		<?php 
+		<?php
 	}
 	/**
 	 * Filtered nav items based on capabilities
@@ -94,11 +91,11 @@ trait Header_Components {
 				'title' => __( 'Dashboard', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-settings-filled',
 			),
-			'settings' => array(
+			'settings'       => array(
 				'title' => __( 'Account Settings', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-settings-filled',
 			),
-			'logout'   => array(
+			'logout'         => array(
 				'title' => __( 'Logout', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-signout-filled',
 			),
@@ -157,11 +154,11 @@ trait Header_Components {
 				'title' => __( 'Dashboard', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-settings-filled',
 			),
-			'settings' => array(
+			'settings'       => array(
 				'title' => __( 'Account Settings', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-settings-filled',
 			),
-			'logout'   => array(
+			'logout'         => array(
 				'title' => __( 'Logout', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-signout-filled',
 			),
