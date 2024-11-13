@@ -22,6 +22,28 @@ header.header-default {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	gap: 7px;
+	.profile-initials {
+		width: 32px;
+		min-width: 32px;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #0049f8;
+		color: #ffffff;
+		text-transform: uppercase;
+		font-size: 12px;
+		line-height: 20px;
+		font-weight: 600;
+		border-radius: 50%;
+	}
+	span {
+		color: rgba($color: #000000, $alpha: 0.8);
+		svg {
+			color: rgba($color: #000000, $alpha: 0.8);
+		}
+	}
 }
 .tutor-header-profile-name {
 	line-height: 1.2;
@@ -44,13 +66,15 @@ header.header-default {
 .tutor-header-profile-menu-items .tutor-header-submenu {
 	position: absolute;
 	z-index: 999;
-	width: 250px;
-	top: 50px;
+	width: 240px;
+	top: 48px;
 	right: -35px;
 	transition: 300ms;
 	height: auto;
 	visibility: hidden;
-	box-shadow: 4px 10px 20px rgba(39, 57, 101, 0.2);
+	// box-shadow: 4px 10px 20px rgba(39, 57, 101, 0.2);
+	box-shadow: 0px 0px 3px 0px #00000033;
+	background-color: white;
 }
 .tutor-header-profile-menu-items:hover .tutor-header-submenu {
 	opacity: 1;
@@ -95,37 +119,64 @@ header.header-default {
 	justify-content: center;
 }
 .tutor-submenu-links {
+	width: 100%;
 	position: relative;
-	padding: 10px 20px;
+	padding: 20px 20px;
 	ul {
 		padding: 0px;
+		.profile-name {
+			font-family: Inter;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 24px;
+			color: #000;
+			text-align: center;
+			text-decoration-skip-ink: none;
+			border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+			text-align: left;
+			padding-bottom: 8px;
+			margin-bottom: 8px;
+		}
+		// li a {
+		// 	color: #161616;
+		// }
 	}
 }
 
 .tutor-header-submenu .tutor-submenu-links ul li a {
-	display: block;
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 400;
-	color: #212327;
-	line-height: 1.75em;
-	padding: 6px;
+	color: #161616;
+	line-height: 24px;
+	padding: 2px 0px;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
 }
 .tutor-header-profile-menu-items ul li a:hover {
-	color: #456bed;
+	// color: #456bed;
+	color: #1950d1;
+	svg {
+		color: #1950d1;
+		path {
+			color: #1950d1;
+		}
+	}
 }
-.tutor-header-submenu:before {
-	content: '';
-	position: absolute;
-	top: -20px;
-	right: 45px;
-	z-index: 1024;
-	border-style: solid;
-	border-width: 10px 12px 10px 12px;
-	border-left-color: #ff000000;
-	border-right-color: #66339900;
-	border-bottom-color: #f5f7fa;
-	border-top-color: #0000ff00;
-}
+// .tutor-header-submenu:before {
+// 	content: '';
+// 	position: absolute;
+// 	top: -20px;
+// 	right: 45px;
+// 	z-index: 1024;
+// 	border-style: solid;
+// 	border-width: 10px 12px 10px 12px;
+// 	border-left-color: #ff000000;
+// 	border-right-color: #66339900;
+// 	border-bottom-color: #f5f7fa;
+// 	border-top-color: #0000ff00;
+// }
 .burger-icon {
 	width: 30px;
 	cursor: pointer;
@@ -233,6 +284,9 @@ header.header-default {
 	//end of submenu
 }
 @media (max-width: 500px) {
+	.tutor-header-profile-menu-items {
+		margin-left: 5px !important;
+	}
 	.navbar {
 		display: grid;
 		grid-gap: 0px;

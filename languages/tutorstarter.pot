@@ -9,24 +9,28 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-01-12T11:31:56+00:00\n"
+"POT-Creation-Date: 2024-11-13T09:51:43+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: tutorstarter\n"
 
 #. Theme Name of the theme
+#: style.css
 msgid "TutorStarter"
 msgstr ""
 
 #. Description of the theme
+#: style.css
 msgid "Tutor Starter is a free WordPress LMS theme powered by Tutor LMS, the popular eLearning plugin for WordPress. It is designed to let Tutor LMS take center stage while also letting you pick what feels right. Tutor Starter is created with the same Unified Design System from Tutor LMS making it the perfect companion eLearning theme for Tutor LMS. Tutor Starter is also highly specialized for speed and efficiency, with all of its components optimized to give your eLearning website a great score on Google's PageSpeed. Tutor Starter pages are also schema ready and SEO optimized to make ranking on search engines as easy as pie! It also boasts an impressive blog single page for perfect readability. With full support for both Elementor and Gutenberg, Tutor Starter hopes to cater to the largest audience of both classic page builders and modern Gutenberg based builders. It comes with customizer settings for headers, footers, and everything in between. With several header and footer variations, advanced typography settings, and contextual page settings, create the eLearning website of your dreams with this free LMS theme. Tutor Starter features 3 modern and pre-built home layouts with fully functioning inner pages for both Elementor and Gutenberg to let you get started in no time. Tutor Starter also features a clean and light one-click demo importer to import all these pre-built home layouts for Gutenberg and Elementor. This, along with deep ties with Tutor LMS makes it a no-brainer WordPress LMS theme. Please Check theme demo here https://preview.tutorlms.com/"
 msgstr ""
 
 #. Author of the theme
+#: style.css
 msgid "Themeum"
 msgstr ""
 
 #. Author URI of the theme
+#: style.css
 msgid "https://www.themeum.com"
 msgstr ""
 
@@ -1074,7 +1078,7 @@ msgid ">"
 msgstr ""
 
 #: inc/Helpers.php:339
-#: inc/Helpers.php:518
+#: inc/Helpers.php:516
 msgid "Cheating huh?"
 msgstr ""
 
@@ -1094,68 +1098,71 @@ msgstr ""
 msgid "Please confirm the password."
 msgstr ""
 
-#: inc/Helpers.php:401
+#: inc/Helpers.php:400
 msgid "Username already exists."
 msgstr ""
 
-#: inc/Helpers.php:412
+#: inc/Helpers.php:411
 msgid "Email address is not valid."
 msgstr ""
 
-#: inc/Helpers.php:423
+#: inc/Helpers.php:422
 msgid "This Email already exists."
 msgstr ""
 
-#: inc/Helpers.php:434
+#: inc/Helpers.php:433
 msgid "Password must be 7 characters or more."
 msgstr ""
 
-#: inc/Helpers.php:445
+#: inc/Helpers.php:444
 msgid "Password does not match."
 msgstr ""
 
-#: inc/Helpers.php:473
+#: inc/Helpers.php:472
 msgid "Something went wrong! Please try again later."
 msgstr ""
 
-#: inc/Helpers.php:484
+#: inc/Helpers.php:483
 msgid "Registration successful, redirecting..."
 msgstr ""
 
-#: inc/Helpers.php:496
+#: inc/Helpers.php:495
 msgid "Incorrect username or password."
 msgstr ""
 
-#: inc/Helpers.php:533
+#: inc/Helpers.php:531
 msgid "Email is not valid."
 msgstr ""
 
-#: inc/Helpers.php:544
+#: inc/Helpers.php:542
 msgid "Password field is empty."
 msgstr ""
 
-#: inc/Helpers.php:563
+#: inc/Helpers.php:561
 msgid "Invalid login details"
 msgstr ""
 
-#: inc/Helpers.php:574
+#: inc/Helpers.php:572
 msgid "Signin successful, redirecting..."
 msgstr ""
 
 #: inc/Helpers.php:590
-#: inc/Helpers.php:623
+#: inc/Helpers.php:615
+#: inc/Helpers.php:626
+#: views/partials/header/header_default.php:83
+#: views/partials/header/header_transparent.php:92
 msgid "View your shopping cart"
 msgstr ""
 
-#: inc/Helpers.php:642
+#: inc/Helpers.php:644
 #: woocommerce/checkout/form-checkout.php:13
 msgid "Complete Payment"
 msgstr ""
 
-#: inc/Helpers.php:698
-#: inc/Helpers.php:721
-#: views/partials/header/header_default.php:89
-#: views/partials/header/header_transparent.php:113
+#: inc/Helpers.php:701
+#: inc/Helpers.php:725
+#: views/partials/header/header_default.php:111
+#: views/partials/header/header_transparent.php:129
 msgid "%s"
 msgstr ""
 
@@ -1224,82 +1231,23 @@ msgstr ""
 msgid "Huge"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:49
-msgid "Hello"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:64
-msgid "Create a<br />New Course"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:65
-msgid "Get started with topics,<br />lessons and more"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:77
-msgctxt "Login as a student text"
-msgid "Login as a "
-msgstr ""
-
-#: inc/Traits/Header_Components.php:77
-msgid "Student"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:91
-msgid "Let's Start<br />Learning"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:92
-msgid "Explore courses that will<br />unlock your potential."
-msgstr ""
-
-#: inc/Traits/Header_Components.php:104
-msgctxt "Login as an instructor text"
-msgid "Login as an "
-msgstr ""
-
-#: inc/Traits/Header_Components.php:104
-msgid "Instructor"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:180
-msgid "Settings"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:184
-msgid "Logout"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:239
+#: inc/Traits/Header_Components.php:107
+#: inc/Traits/Header_Components.php:170
 msgid "Dashboard"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:243
-msgid "My Profile"
+#: inc/Traits/Header_Components.php:111
+#: inc/Traits/Header_Components.php:178
+msgid "Account Settings"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:247
-msgid "Enrolled  Courses"
+#: inc/Traits/Header_Components.php:115
+#: inc/Traits/Header_Components.php:182
+msgid "Logout"
 msgstr ""
 
-#: inc/Traits/Header_Components.php:251
-msgid "Wishlist"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:255
-msgid "Reviews"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:259
-msgid "My Quiz Attempts"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:263
-msgid "Order History"
-msgstr ""
-
-#: inc/Traits/Header_Components.php:267
-msgid "Question & Answer"
+#: inc/Traits/Header_Components.php:174
+msgid "My profile"
 msgstr ""
 
 #. Template Name of the theme
@@ -1461,18 +1409,22 @@ msgstr ""
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: views/partials/header/header_default.php:26
-#: views/partials/header/header_transparent.php:22
+#: views/partials/header/header_default.php:29
+#: views/partials/header/header_transparent.php:25
 msgid "Search..."
 msgstr ""
 
-#: views/partials/header/header_default.php:78
-#: views/partials/header/header_transparent.php:102
+#: views/partials/header/header_default.php:66
+#: views/partials/header/header_default.php:98
+#: views/partials/header/header_transparent.php:107
+#: views/partials/header/header_transparent.php:117
 msgid "Want to Explore!"
 msgstr ""
 
-#: views/partials/header/header_default.php:79
-#: views/partials/header/header_transparent.php:103
+#: views/partials/header/header_default.php:68
+#: views/partials/header/header_default.php:100
+#: views/partials/header/header_transparent.php:109
+#: views/partials/header/header_transparent.php:119
 msgid "Instant Login"
 msgstr ""
 

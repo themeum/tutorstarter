@@ -10,8 +10,6 @@ use Tutor_Starter\Traits\Header_Components;
  * For php8.1&8.2 compatibility
  */
 class Header_COMP {
-
-
 	use Header_Components;
 }
 $obj = new Header_COMP();

@@ -18,9 +18,7 @@ trait Header_Components {
 	 * Navbar toggler
 	 */
 	public static function navbar_toggler() {
-
 		$toggler_html = '<li class="nav-close"><button class="btn-nav-close"><span class="close-btn">+</span></button></li>';
-
 		return $toggler_html;
 	}
 
@@ -40,24 +38,33 @@ trait Header_Components {
 			<?php tutor_utils()->get_tutor_avatar( get_current_user_id() ); ?>
 		</div><!-- .tutor-header-profile-photo -->
 		<div class="tutor-header-profile-content">
-			<div class="tutor-header-profile-content-text"><?php esc_html_e( 'Hello', 'tutorstarter' ); ?></div>
 			<div class="tutor-header-profile-submenu">
-				<div class="tutor-header-profile-name"><?php echo esc_html( ucfirst( $current_user->display_name ) ); ?></div>
-				<div class="tutor-header-submenu-icon tutor-icon-icon-light-down-line tutor-font-size-20 tutor-text-400">
-				</div>
+				<div class="profile-initials">NU</div>
+				<span role="button" class="d-flex align-items-center gap-1 fs-5 py-3 text-black-80" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+					<?php echo esc_html( ucfirst( $current_user->display_name ) ); ?>
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5.11285 6.29697L8.17285 9.3503L11.2329 6.29697L12.1729 7.23697L8.17285 11.237L4.17285 7.23697L5.11285 6.29697Z" fill="currentColor"></path>
+					</svg>
+				</span>
+				<!-- <div class="tutor-header-profile-name">
+				</div> -->
+				<!-- <div class="tutor-header-submenu-icon tutor-icon-icon-light-down-line tutor-font-size-20 tutor-text-400">
+				</div> -->
 			</div>
 		</div>
 		<div class="tutor-header-submenu">
 			<?php if ( is_user_logged_in() ) : ?>
 				<div class="tutor-submenu-links">
 					<ul>
+						<div class="profile-name">
+							<?php echo esc_html( ucfirst( $current_user->display_name ) ); ?>
+						</div>
 						<?php
 						foreach ( $default_menus as $menu_key => $menu_item ) {
 							$menu_title = $menu_item;
 							$menu_link  = tutor_utils()->get_tutor_dashboard_page_permalink( $menu_key );
 							if ( is_array( $menu_item ) ) {
 								$menu_title = tutor_utils()->array_get( 'title', $menu_item );
-
 								if ( isset( $menu_item['url'] ) ) {
 									$menu_link = $menu_item['url'];
 								}
@@ -65,7 +72,16 @@ trait Header_Components {
 							if ( 'index' === $menu_key ) {
 								$menu_key = '';
 							}
-							echo "<li><a href='" . esc_url( $menu_link ) . "'>" . esc_html( $menu_title ) . ' </a></li>';
+							ob_start();?>
+							<li>
+								<a href="<?php echo esc_url( $menu_link ) ?>"> 
+									<span class="tutor-dashboard-menu-item-icon <?php echo $menu_item['icon'];  ?>"></span>
+									<?php echo esc_html( $menu_title ); ?>
+								</a>
+							</li>
+							<?php
+							$menu_list_item = ob_get_clean();
+							echo $menu_list_item;
 						}
 						?>
 					</ul>
@@ -89,15 +105,15 @@ trait Header_Components {
 		$common_navs     = array(
 			'dashboard-page' => array(
 				'title' => __( 'Dashboard', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-settings-filled',
+				'icon'  => 'tutor-icon-settings',
 			),
 			'settings'       => array(
 				'title' => __( 'Account Settings', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-settings-filled',
+				'icon'  => 'tutor-icon-settings',
 			),
 			'logout'         => array(
 				'title' => __( 'Logout', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-signout-filled',
+				'icon'  => 'tutor-icon-signout',
 			),
 		);
 
@@ -150,17 +166,21 @@ trait Header_Components {
 	 */
 	public static function default_menus() {
 		return array(
-			'dashboard-page' => array(
+			'' => array(
 				'title' => __( 'Dashboard', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-settings-filled',
+				'icon'  => 'tutor-icon-dashboard',
+			),
+			'my-profile'       => array(
+				'title' => __( 'My profile', 'tutorstarter' ),
+				'icon'  => 'tutor-icon-user-bold',
 			),
 			'settings'       => array(
 				'title' => __( 'Account Settings', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-settings-filled',
+				'icon'  => 'tutor-icon-gear',
 			),
 			'logout'         => array(
 				'title' => __( 'Logout', 'tutorstarter' ),
-				'icon'  => 'tutor-icon-signout-filled',
+				'icon'  => 'tutor-icon-signout',
 			),
 		);
 	}

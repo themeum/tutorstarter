@@ -23,7 +23,7 @@
 
 /* Main CSS */
 .navbar {
-	max-width: 1170px;
+	max-width: 1280px;
 	margin: 0 auto;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -70,6 +70,7 @@
 			line-height: 1.67;
 			text-align: center;
 			letter-spacing: 0.3px;
+			gap: 3px;
 			span {
 				margin-left: 2px;
 				color: var(--navDefaultColor);
@@ -79,7 +80,7 @@
 			}
 		}
 		a.btn-getstarted {
-			padding: 12px 28px;
+			padding: 9px 28px;
 			font-style: normal;
 			font-family: inherit;
 			display: inline-block;

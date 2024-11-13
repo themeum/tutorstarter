@@ -596,7 +596,7 @@ if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
 				<span>(<?php echo WC()->cart->get_cart_contents_count(); ?>)</span>
 			</span>
 		</a>
-	<?php
+		<?php
 	}
 }
 
@@ -626,7 +626,7 @@ if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
 			title="<?php esc_attr_e( 'View your shopping cart', 'tutorstarter' ); ?>">
 			<span>(<?php echo WC()->cart->get_cart_contents_count(); ?>)</span>
 		</a> -->
-	<?php
+		<?php
 		$fragments['a.cart-contents'] = ob_get_clean();
 		return $fragments;
 	}
@@ -694,7 +694,8 @@ if ( ! function_exists( 'tutorstarter_site_logo' ) ) {
 		$logo_retina   = get_theme_mod( 'retina_logo' );
 		$retina_imgset = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
 
-		if ( $logo_img ) : ?>
+		if ( $logo_img ) :
+			?>
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<img src="<?php echo esc_url( $logo_img ); ?>" <?php echo $logo_retina ? $retina_imgset : ''; ?>
 				alt="<?php printf( esc_attr__( '%s', 'tutorstarter' ), bloginfo( 'name' ) ); ?>" />
@@ -703,7 +704,8 @@ if ( ! function_exists( 'tutorstarter_site_logo' ) ) {
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<?php bloginfo( 'title' ); ?>
 		</a>
-		<?php endif; 
+			<?php
+		endif;
 	}
 }
 
@@ -726,7 +728,7 @@ if ( ! function_exists( 'tutorstarter_transparent_logo' ) ) {
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<?php bloginfo( 'title' ); ?>
 		</a>
-		<?php
+			<?php
 		endif;
 	}
 }
@@ -760,7 +762,8 @@ if ( ! function_exists( 'tutorstarter_footer_trans_logo' ) ) {
 			?>
 			<img height="24" width="92" class="logo-footer trans" src="<?php echo esc_url( $footer_logo_trans ); ?>"
 				<?php echo $logo_retina ? $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
-		<?php endif;
+			<?php
+		endif;
 	}
 }
 
@@ -783,6 +786,6 @@ function tutorstarter_skip_link_focus_fix() {
 			.test(t.tagName) || (t.tabIndex = -1), t.focus())
 	}, !1);
 </script>
-<?php
+	<?php
 }
 add_action( 'wp_print_footer_scripts', 'tutorstarter_skip_link_focus_fix' );
