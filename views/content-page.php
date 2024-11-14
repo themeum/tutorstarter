@@ -15,7 +15,7 @@ $hide_title = ( ! empty( $page_meta ) ? $page_meta['page_title_toggle'] : false 
 
 <article id="post-<?php the_ID(); ?>"<?php post_class(); ?>>
 <?php if ( false === $hide_title ) : ?>
-	<?php if ( ! class_exists( 'woocommerce' ) ) : ?>
+	<?php if ( ! class_exists( 'woocommerce' ) || ( class_exists( 'Tutor\Ecommerce\CartController' ) && 'tutor' == tutor_utils()->get_option( 'monetize_by' ) ) ) : ?>
 		<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
