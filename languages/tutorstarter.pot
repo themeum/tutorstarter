@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: TutorStarter 1.2.0\n"
+"Project-Id-Version: TutorStarter 1.2.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tutorstarter\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-14T05:27:55+00:00\n"
+"POT-Creation-Date: 2024-11-16T03:23:50+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: tutorstarter\n"
@@ -1147,22 +1147,22 @@ msgid "Signin successful, redirecting..."
 msgstr ""
 
 #: inc/Helpers.php:590
-#: inc/Helpers.php:615
-#: inc/Helpers.php:626
+#: inc/Helpers.php:614
+#: inc/Helpers.php:624
 #: views/partials/header/header_default.php:83
 #: views/partials/header/header_transparent.php:92
 msgid "View your shopping cart"
 msgstr ""
 
-#: inc/Helpers.php:644
+#: inc/Helpers.php:642
 #: woocommerce/checkout/form-checkout.php:13
 msgid "Complete Payment"
 msgstr ""
 
-#: inc/Helpers.php:701
-#: inc/Helpers.php:725
-#: views/partials/header/header_default.php:111
-#: views/partials/header/header_transparent.php:129
+#: inc/Helpers.php:699
+#: inc/Helpers.php:723
+#: views/partials/header/header_default.php:110
+#: views/partials/header/header_transparent.php:128
 msgid "%s"
 msgstr ""
 
@@ -1415,16 +1415,16 @@ msgid "Search..."
 msgstr ""
 
 #: views/partials/header/header_default.php:66
-#: views/partials/header/header_default.php:98
-#: views/partials/header/header_transparent.php:107
-#: views/partials/header/header_transparent.php:117
+#: views/partials/header/header_default.php:97
+#: views/partials/header/header_transparent.php:106
+#: views/partials/header/header_transparent.php:116
 msgid "Want to Explore!"
 msgstr ""
 
 #: views/partials/header/header_default.php:68
-#: views/partials/header/header_default.php:100
-#: views/partials/header/header_transparent.php:109
-#: views/partials/header/header_transparent.php:119
+#: views/partials/header/header_default.php:99
+#: views/partials/header/header_transparent.php:108
+#: views/partials/header/header_transparent.php:118
 msgid "Instant Login"
 msgstr ""
 

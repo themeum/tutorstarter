@@ -17,6 +17,14 @@ header.header-transparent {
 		padding-top: 33px;
 		padding-bottom: 33px;
 	}
+	.navbar.navbar-left {
+		grid-template-areas: 'col2 col1';
+		justify-content: space-between;
+		.navbar-brand {
+			grid-area: col2;
+			justify-self: center;
+		}
+	}
 	.navbar {
 		@media (min-width: 992px) {
 			.navbar-nav {

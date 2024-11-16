@@ -30,7 +30,7 @@ header.header-default {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: #0049f8;
+		background-color: var(--navCartColor);
 		color: #ffffff;
 		text-transform: uppercase;
 		font-size: 12px;
@@ -155,12 +155,12 @@ header.header-default {
 	align-items: center;
 }
 .tutor-header-profile-menu-items ul li a:hover {
-	// color: #456bed;
-	color: #1950d1;
+	// color: #1950d1;
+	color: var(--navDefaultHoverColor);
 	svg {
-		color: #1950d1;
+		color: var(--navDefaultHoverColor);
 		path {
-			color: #1950d1;
+			color: var(--navDefaultHoverColor);
 		}
 	}
 }

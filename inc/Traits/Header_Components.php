@@ -39,7 +39,7 @@ trait Header_Components {
 		</div><!-- .tutor-header-profile-photo -->
 		<div class="tutor-header-profile-content">
 			<div class="tutor-header-profile-submenu">
-				<div class="profile-initials">NU</div>
+				<div class="profile-initials"><?php echo esc_html( ucfirst( substr($current_user->display_name, 0, 2) ) ); ?></div>
 				<span role="button" class="d-flex align-items-center gap-1 fs-5 py-3 text-black-80" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
 					<?php echo esc_html( ucfirst( $current_user->display_name ) ); ?>
 					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
