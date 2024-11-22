@@ -1,6 +1,6 @@
 {
 	"name": "tutorstarter",
-	"version": "1.2.1",
+	"version": "3.0.0",
 	"description": "Modern WordPress Theme for Tutor LMS",
 	"main": "index.js",
 	"scripts": {
@@ -10,9 +10,9 @@
 		"prod": "npm run production",
 		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"makepot": "wp i18n make-pot --exclude='node_modules,vendor' . languages/tutorstarter.pot",
-		"bundle": "mkdir -p ../tutorstarter-temp/tutorstarter && rsync -av --exclude='.DS_Store' --exclude='.git*' --exclude='node_modules' --exclude='composer.json' --exclude='composer.lock' --exclude='package-lock.json' --exclude='package.json' --exclude='webpack.mix.js' --exclude='sass' --exclude='reactjs' --exclude='assets/src' ./ ../tutorstarter-temp/tutorstarter && cd ../tutorstarter-temp && zip -r ../tutorstarter.${npm_package_version}.zip tutorstarter && cd - && rm -rf ../tutorstarter-temp",
+		"bundle": "mkdir -p ../tutorstarter-temp/tutorstarter && rsync -av --exclude='.DS_Store' --exclude='.git*' --exclude='README.md' --exclude='mix-manifest.json' --exclude='phpcs.xml' --exclude='node_modules' --exclude='composer.json' --exclude='composer.lock' --exclude='package-lock.json' --exclude='package.json' --exclude='webpack.mix.js' --exclude='sass' --exclude='reactjs' --exclude='inc/Custom/Schema/schemajs' --exclude='assets/src' ./ ../tutorstarter-temp/tutorstarter && cd ../tutorstarter-temp && zip -r ../tutorstarter.${npm_package_version}.zip tutorstarter && cd - && rm -rf ../tutorstarter-temp",
 		"lint": "eslint \"./**/*.js\"",
-		"build": "npm run production && npm run makepot && npm run bundle"
+		"build": "composer i --no-dev && npm run production && npm run makepot && npm run bundle"
 	},
 	"devDependencies": {
 		"@babel/preset-react": "^7.12.10",
@@ -20,7 +20,6 @@
 		"browser-sync": "^2.26.13",
 		"browser-sync-webpack-plugin": "^2.2.2",
 		"cross-env": "^7.0.3",
-		"dir-archiver": "^1.1.2",
 		"eslint": "^7.15.0",
 		"eslint-config-standard": "^16.0.2",
 		"eslint-plugin-import": "^2.22.1",

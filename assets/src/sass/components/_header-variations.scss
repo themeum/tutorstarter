@@ -13,6 +13,12 @@ header.header-transparent {
 	right: 0;
 	background: transparent;
 	z-index: 999;
+	.tutor-header-profile-submenu {
+		span[role='button'] {
+			// color: var(--navTransHoverColor);
+			color: var(--navTransColor);
+		}
+	}
 	.navbar {
 		padding-top: 33px;
 		padding-bottom: 33px;
@@ -115,6 +121,11 @@ header.header-sticky {
 
 header.header-default {
 	background: var(--headerDefaultBg);
+	.tutor-header-profile-submenu {
+		span[role='button'] {
+			color: var(--navDefaultColor);
+		}
+	}
 	.navbar-nav {
 		> .menu-item {
 			@media (min-width: 992px) {

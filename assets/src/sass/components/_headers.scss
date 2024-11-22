@@ -111,7 +111,8 @@
 	}
 	.navbar-brand {
 		img {
-			max-width: unset;
+			// max-width: unset;
+			max-height: 30px;
 		}
 	}
 	.navbar-nav {

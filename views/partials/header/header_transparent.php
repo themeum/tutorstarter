@@ -32,6 +32,7 @@ $obj = new Header_COMP();
 	<nav class="navbar <?php echo tutorstarter_header_switcher(); ?>">
 		<div class="navbar-brand">
 			<?php tutorstarter_transparent_logo(); ?>
+			<!-- <?php tutorstarter_site_logo(); ?> -->
 		</div>
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 			<button class="navbar-toggler">

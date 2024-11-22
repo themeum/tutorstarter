@@ -23,27 +23,6 @@ header.header-default {
 	align-items: center;
 	justify-content: center;
 	gap: 7px;
-	.profile-initials {
-		width: 32px;
-		min-width: 32px;
-		height: 32px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: var(--navCartColor);
-		color: #ffffff;
-		text-transform: uppercase;
-		font-size: 12px;
-		line-height: 20px;
-		font-weight: 600;
-		border-radius: 50%;
-	}
-	span {
-		color: rgba($color: #000000, $alpha: 0.8);
-		svg {
-			color: rgba($color: #000000, $alpha: 0.8);
-		}
-	}
 }
 .tutor-header-profile-name {
 	line-height: 1.2;
