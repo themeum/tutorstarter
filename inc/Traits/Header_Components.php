@@ -35,8 +35,8 @@ trait Header_Components {
 		$current_user  = wp_get_current_user();
 		?>
 		<div class="tutor-header-profile-photo">
-			<?php 
-			$profile_pic = tutor_utils()->get_tutor_avatar( get_current_user_id() ); 
+			<?php
+			$profile_pic = tutor_utils()->get_tutor_avatar( get_current_user_id() );
 			?>
 		</div><!-- .tutor-header-profile-photo -->
 		<div class="tutor-header-profile-content">

@@ -1,6 +1,6 @@
 {
 	"name": "tutorstarter",
-	"version": "3.0.0",
+	"version": "3.0.2",
 	"description": "Modern WordPress Theme for Tutor LMS",
 	"main": "index.js",
 	"scripts": {
@@ -10,7 +10,7 @@
 		"prod": "npm run production",
 		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"makepot": "wp i18n make-pot --exclude='node_modules,vendor' . languages/tutorstarter.pot",
-		"bundle": "mkdir -p ../tutorstarter-temp/tutorstarter && rsync -av --exclude='.DS_Store' --exclude='.git*' --exclude='README.md' --exclude='mix-manifest.json' --exclude='phpcs.xml' --exclude='node_modules' --exclude='composer.json' --exclude='composer.lock' --exclude='package-lock.json' --exclude='package.json' --exclude='webpack.mix.js' --exclude='sass' --exclude='reactjs' --exclude='inc/Custom/Schema/schemajs' --exclude='assets/src' ./ ../tutorstarter-temp/tutorstarter && cd ../tutorstarter-temp && zip -r ../tutorstarter.${npm_package_version}.zip tutorstarter && cd - && rm -rf ../tutorstarter-temp",
+		"bundle": "wp dist-archive . . && mv tutorstarter.1.0.0.zip tutorstarter-$(grep 'Version:' style.css | awk '{print $3}').zip && mv tutorstarter-*.zip ../",
 		"lint": "eslint \"./**/*.js\"",
 		"build": "composer i --no-dev && npm run production && npm run makepot && npm run bundle"
 	},
@@ -20,6 +20,7 @@
 		"browser-sync": "^2.26.13",
 		"browser-sync-webpack-plugin": "^2.2.2",
 		"cross-env": "^7.0.3",
+		"dir-archiver": "^2.1.0",
 		"eslint": "^7.15.0",
 		"eslint-config-standard": "^16.0.2",
 		"eslint-plugin-import": "^2.22.1",
