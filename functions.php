@@ -97,7 +97,7 @@ function tutorstarter_demo_import_files() {
 		'local_import_file'            => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/university/demo-content.xml',
 		'local_import_widget_file'     => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/university/widgets.wie',
 		'local_import_customizer_file' => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/university/customizer.dat',
-		'import_preview_image_url'     => 'https://tutorlms.com/wp-content/uploads/2021/07/tutor-starter-video-thumbnail.jpg',
+		'import_preview_image_url'     => 'https://raw.githubusercontent.com/themeum/tutorstarter/refs/heads/dev/inc/demos/elementor/university/preview.jpg',
 		'preview_url'                  => 'https://preview.tutorlms.com/university',
 	  ],
 	  [
@@ -105,7 +105,7 @@ function tutorstarter_demo_import_files() {
 		'local_import_file'            => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/marketplace/demo-content.xml',
 		'local_import_widget_file'     => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/marketplace/widgets.wie',
 		'local_import_customizer_file' => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/marketplace/customizer.dat',
-		'import_preview_image_url'     => 'https://tutorlms.com/wp-content/uploads/2021/07/tutor-starter-video-thumbnail.jpg',
+		'import_preview_image_url'     => 'https://raw.githubusercontent.com/themeum/tutorstarter/refs/heads/dev/inc/demos/elementor/marketplace/preview.jpg',
 		'preview_url'                  => 'https://preview.tutorlms.com/marketplace/',
 	  ],
 	  [
@@ -113,7 +113,7 @@ function tutorstarter_demo_import_files() {
 		'local_import_file'            => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/instructor/demo-content.xml',
 		'local_import_widget_file'     => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/instructor/widgets.wie',
 		'local_import_customizer_file' => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/instructor/customizer.dat',
-		'import_preview_image_url'     => 'https://tutorlms.com/wp-content/uploads/2021/07/tutor-starter-video-thumbnail.jpg',
+		'import_preview_image_url'     => 'https://raw.githubusercontent.com/themeum/tutorstarter/refs/heads/dev/inc/demos/elementor/instructor/preview.jpg',
 		'preview_url'                  => 'https://preview.tutorlms.com/instructor/',
 	  ],
 	  [
@@ -121,7 +121,7 @@ function tutorstarter_demo_import_files() {
 		'local_import_file'            => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/single-course/demo-content.xml',
 		'local_import_widget_file'     => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/single-course/widgets.wie',
 		'local_import_customizer_file' => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/single-course/customizer.dat',
-		'import_preview_image_url'     => 'https://tutorlms.com/wp-content/uploads/2021/07/tutor-starter-video-thumbnail.jpg',
+		'import_preview_image_url'     => 'https://raw.githubusercontent.com/themeum/tutorstarter/refs/heads/dev/inc/demos/elementor/single-course/preview.jpg',
 		'preview_url'                  => 'https://preview.tutorlms.com/single-course/',
 	  ],
 
