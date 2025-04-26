@@ -35,11 +35,50 @@ endif;
 * Tutor Start Demo Import
 */
 
+// Install and Activate Demo Importer
+
+add_action( 'after_switch_theme', 'tutorstarter_install_ocdi_plugin' );
+
+function tutorstarter_install_ocdi_plugin() {
+    
+    // Check if One Click Demo Import is already installed
+    if ( ! class_exists( 'OCDI_Plugin' ) ) {
+
+        include_once( ABSPATH . 'wp-admin/includes/plugin-install.php' );
+        include_once( ABSPATH . 'wp-admin/includes/file.php' );
+        include_once( ABSPATH . 'wp-admin/includes/misc.php' );
+        include_once( ABSPATH . 'wp-admin/includes/class-wp-upgrader.php' );
+
+        $plugin_slug = 'one-click-demo-import'; // Plugin slug from WordPress.org
+        $plugin_file = 'one-click-demo-import/one-click-demo-import.php'; // Plugin main file path
+
+        // Install the plugin
+        $api = plugins_api( 'plugin_information', array(
+            'slug' => $plugin_slug,
+            'fields' => array(
+                'sections' => false,
+            ),
+        ) );
+
+        if ( is_wp_error( $api ) ) {
+            return;
+        }
+
+        $upgrader = new Plugin_Upgrader( new Automatic_Upgrader_Skin() );
+        $upgrader->install( $api->download_link );
+
+        // Activate the plugin
+        if ( file_exists( WP_PLUGIN_DIR . '/' . $plugin_file ) ) {
+            activate_plugin( $plugin_file );
+        }
+    }
+}
+
 // Chnage Slug
 function tutorstarter_demo_import_page_setup( $default_settings ) {
-    $default_settings['parent_slug'] = 'themes.php'; // No parent, making it a top-level menu item
-    $default_settings['page_title']  = esc_html__( 'TutorStarter Demo', 'one-click-demo-import' );
-    $default_settings['menu_title']  = esc_html__( 'TutorStarter Demo', 'one-click-demo-import' );
+    $default_settings['parent_slug'] = 'tutorstarter'; // No parent, making it a top-level menu item
+    $default_settings['page_title']  = esc_html__( 'Starter Sites', 'tutorstarter' );
+    $default_settings['menu_title']  = esc_html__( 'Starter Sites', 'tutorstarter' );
     $default_settings['capability']  = 'import';
     $default_settings['menu_slug']   = 'tutorstarter-demo-import';
     $default_settings['menu_position'] = 59; // Just above Appearance (Appearance is 60)
@@ -48,46 +87,42 @@ function tutorstarter_demo_import_page_setup( $default_settings ) {
 }
 add_filter( 'ocdi/plugin_page_setup', 'tutorstarter_demo_import_page_setup' );
 
+
 // Demo Content
 function tutorstarter_demo_import_files() {
 	return [
 	  // Elementor
 	  [
-		'import_file_name'             => 'University (Elementor)',
-		'categories'                   => [ 'Elementor' ],
-		'local_import_file'            => trailingslashit( get_template_directory() ) . 'inc/demos/elementore/university/demo-content.xml',
-		'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'inc/demos/elementore/university/widgets.wie',
-		'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'inc/demos/elementore/university/customizer.dat',
+		'import_file_name'             => 'University',
+		'local_import_file'            => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/university/demo-content.xml',
+		'local_import_widget_file'     => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/university/widgets.wie',
+		'local_import_customizer_file' => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/university/customizer.dat',
 		'import_preview_image_url'     => 'https://tutorlms.com/wp-content/uploads/2021/07/tutor-starter-video-thumbnail.jpg',
-		'preview_url'                  => 'http://www.your_domain.com/my-demo-1',
-		'import_plugin_icon'          => '<i class="fab fa-elementor" style="color:#9146ff;"></i>', // Elementor FA icon
+		'preview_url'                  => 'https://preview.tutorlms.com/university',
 	  ],
 	  [
-		'import_file_name'             => 'Marketplace (Elementor)',
-		'categories'                   => [ 'Elementor' ],
-		'local_import_file'            => trailingslashit( get_template_directory() ) . 'inc/demos/elementore/marketplace/demo-content.xml',
-		'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'demos/marketplace/widgets.wie',
-		'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'demos/marketplace/customizer.dat',
+		'import_file_name'             => 'Marketplace',
+		'local_import_file'            => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/marketplace/demo-content.xml',
+		'local_import_widget_file'     => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/marketplace/widgets.wie',
+		'local_import_customizer_file' => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/marketplace/customizer.dat',
 		'import_preview_image_url'     => 'https://tutorlms.com/wp-content/uploads/2021/07/tutor-starter-video-thumbnail.jpg',
-		'preview_url'                  => 'http://www.your_domain.com/my-demo-1',
+		'preview_url'                  => 'https://preview.tutorlms.com/marketplace/',
 	  ],
 	  [
-		'import_file_name'             => 'Instructor (Elementor)',
-		'categories'                   => [ 'Elementor' ],
-		'local_import_file'            => trailingslashit( get_template_directory() ) . 'inc/demos/elementore/instructor/demo-content.xml',
-		'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'inc/demos/elementore/instructor/widgets.wie',
-		'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'inc/demos/elementore/instructor/customizer.dat',
+		'import_file_name'             => 'Instructor',
+		'local_import_file'            => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/instructor/demo-content.xml',
+		'local_import_widget_file'     => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/instructor/widgets.wie',
+		'local_import_customizer_file' => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/instructor/customizer.dat',
 		'import_preview_image_url'     => 'https://tutorlms.com/wp-content/uploads/2021/07/tutor-starter-video-thumbnail.jpg',
-		'preview_url'                  => 'http://www.your_domain.com/my-demo-1',
+		'preview_url'                  => 'https://preview.tutorlms.com/instructor/',
 	  ],
 	  [
-		'import_file_name'             => 'Single Course (Elementor)',
-		'categories'                   => [ 'Elementor' ],
-		'local_import_file'            => trailingslashit( get_template_directory() ) . 'inc/demos/elementore/single-course/demo-content.xml',
-		'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'inc/demos/elementore/single-course/widgets.wie',
-		'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'inc/demos/elementore/single-course/customizer.dat',
+		'import_file_name'             => 'Single Course',
+		'local_import_file'            => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/single-course/demo-content.xml',
+		'local_import_widget_file'     => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/single-course/widgets.wie',
+		'local_import_customizer_file' => 'https://preview.tutorlms.com/tutorstarter-demos/elementor/single-course/customizer.dat',
 		'import_preview_image_url'     => 'https://tutorlms.com/wp-content/uploads/2021/07/tutor-starter-video-thumbnail.jpg',
-		'preview_url'                  => 'http://www.your_domain.com/my-demo-1',
+		'preview_url'                  => 'https://preview.tutorlms.com/single-course/',
 	  ],
 
 	];
@@ -112,6 +147,11 @@ function tutorstarter_register_plugins( $plugins ) {
 	  [ // A WordPress.org plugin repository example.
 		'name'     => 'TutorMate', 	// Name of the plugin.
 		'slug'     => 'tutormate', 	// Plugin slug - the same as on WordPress.org plugin repository.
+		'required' => true,        	// If the plugin is required or not.
+	  ],
+	  [ // A WordPress.org plugin repository example.
+		'name'     => 'WPForms', 	// Name of the plugin.
+		'slug'     => 'wpforms-lite', 	// Plugin slug - the same as on WordPress.org plugin repository.
 		'required' => true,        	// If the plugin is required or not.
 	  ],
 	];
