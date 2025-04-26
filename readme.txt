@@ -84,11 +84,11 @@ If you found any bugs or issues, please let us know by posting on the support se
 
 == Changelog ==
 
-= 3.0.2 = 
+= 3.0.2 =
 Update : Show cart count only when item added to cart
-Fix    : Improved rtl version of dropdown menu
+Fix    : Improved dropdown menu rtl version
 
-= 3.0.1 = 
+= 3.0.1 =
 Fix    : Fatal Error issue resolved when Tutor is not activated.
 
 = 3.0.0 = 
