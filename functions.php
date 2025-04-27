@@ -121,7 +121,7 @@ function tutorstarter_demo_import_files() {
 		'local_import_file'            => trailingslashit( get_template_directory() ) . 'inc/demos/elementor/single-course/demo-content.xml',
 		'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'inc/demos/elementor/single-course/widgets.wie',
 		'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'inc/demos/elementor/single-course/customizer.dat',
-		'import_preview_image_url'     => 'https://raw.githubusercontent.com/themeum/tutorstarter/refs/heads/dev/inc/demos/elementor/single-course/preview.jpg',
+		'import_preview_image_url'     => 'https://raw.githubusercontent.com/themeum/tutorstarter/refs/heads/dev/inc/demos/elementor/single-course/preview.png',
 		'preview_url'                  => 'https://preview.tutorlms.com/single-course/',
 	  ],
 
