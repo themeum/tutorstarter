@@ -97,7 +97,7 @@ function tutorstarter_demo_import_files() {
 		'local_import_file'            => trailingslashit( get_template_directory() ) . 'inc/demos/elementor/university/demo-content.xml',
 		'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'inc/demos/elementor/university/widgets.wie',
 		'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'inc/demos/university/customizer.dat',
-		'import_preview_image_url'     => 'https://raw.githubusercontent.com/themeum/tutorstarter/refs/heads/dev/inc/demos/elementor/university/preview.jpg',
+		'import_preview_image_url'     => 'https://raw.githubusercontent.com/themeum/tutorstarter/refs/heads/dev/inc/demos/elementor/university/preview.png',
 		'preview_url'                  => 'https://preview.tutorlms.com/university',
 	  ],
 	  [
@@ -105,7 +105,7 @@ function tutorstarter_demo_import_files() {
 		'local_import_file'            => trailingslashit( get_template_directory() ) . 'inc/demos/elementor/marketplace/demo-content.xml',
 		'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'inc/demos/elementor/marketplace/widgets.wie',
 		'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'inc/demos/elementor/marketplace/customizer.dat',
-		'import_preview_image_url'     => 'https://raw.githubusercontent.com/themeum/tutorstarter/refs/heads/dev/inc/demos/elementor/marketplace/preview.jpg',
+		'import_preview_image_url'     => 'https://raw.githubusercontent.com/themeum/tutorstarter/refs/heads/dev/inc/demos/elementor/marketplace/preview.png',
 		'preview_url'                  => 'https://preview.tutorlms.com/marketplace/',
 	  ],
 	  [
@@ -113,7 +113,7 @@ function tutorstarter_demo_import_files() {
 		'local_import_file'            => trailingslashit( get_template_directory() ) . 'inc/demos/elementor/instructor/demo-content.xml',
 		'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'inc/demos/elementor/instructor/widgets.wie',
 		'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'inc/demos/elementor/instructor/customizer.dat',
-		'import_preview_image_url'     => 'https://raw.githubusercontent.com/themeum/tutorstarter/refs/heads/dev/inc/demos/elementor/instructor/preview.jpg',
+		'import_preview_image_url'     => 'https://raw.githubusercontent.com/themeum/tutorstarter/refs/heads/dev/inc/demos/elementor/instructor/preview.png',
 		'preview_url'                  => 'https://preview.tutorlms.com/instructor/',
 	  ],
 	  [
