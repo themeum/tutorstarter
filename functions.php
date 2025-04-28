@@ -164,7 +164,7 @@ function tutorstarter_register_plugins( $plugins ) {
 	) {
    
 	  // List of all plugins only used by second demo import [overwrite the list] ('import' number = 2).
-	  if ( $_GET['import'] === '4' ||  $_GET['import'] === '5' ||  $_GET['import'] === '6' ||  $_GET['import'] === '7') {
+	  if ( $_GET['import'] === '0' ||  $_GET['import'] === '1' ||  $_GET['import'] === '2' ||  $_GET['import'] === '3') {
 		$theme_plugins = [
 			[ // A WordPress.org plugin repository example.
 				'name'     => 'Tutor LMS', 	// Name of the plugin.
