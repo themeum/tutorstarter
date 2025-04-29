@@ -8,7 +8,36 @@
 
 defined( 'ABSPATH' ) || exit;
 
+add_action( 'tgmpa_register', 'tutorstarter_register_required_plugins' );
 
+/**
+ * Register the required plugins for this theme.
+ */
+function tutorstarter_register_required_plugins() {
+
+	// Array of plugin arrays. Required keys are name and slug.
+	$plugins = array(
+		array(
+			'name'     => 'One Click Demo Import',
+			'slug'     => 'one-click-demo-import',
+			'required' => false,
+		),
+	);
+
+	// Array of configuration settings.
+	$config = array(
+		'id'           => 'tutorstarter',
+		'default_path' => '',
+		'menu'         => 'tgmpa-install-plugins',
+		'has_notices'  => true,
+		'dismissable'  => true,
+		'dismiss_msg'  => '',
+		'is_automatic' => false,
+		'message'      => '',
+	);
+
+	tgmpa( $plugins, $config );
+}
 
 if ( ! function_exists( 'control_active_callback' ) ) {
 	/**

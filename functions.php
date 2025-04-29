@@ -35,45 +35,6 @@ endif;
 * Tutor Start Demo Import
 */
 
-// Install and Activate Demo Importer
-
-add_action( 'after_switch_theme', 'tutorstarter_install_ocdi_plugin' );
-
-function tutorstarter_install_ocdi_plugin() {
-    
-    // Check if One Click Demo Import is already installed
-    if ( ! class_exists( 'OCDI_Plugin' ) ) {
-
-        include_once( ABSPATH . 'wp-admin/includes/plugin-install.php' );
-        include_once( ABSPATH . 'wp-admin/includes/file.php' );
-        include_once( ABSPATH . 'wp-admin/includes/misc.php' );
-        include_once( ABSPATH . 'wp-admin/includes/class-wp-upgrader.php' );
-
-        $plugin_slug = 'one-click-demo-import'; // Plugin slug from WordPress.org
-        $plugin_file = 'one-click-demo-import/one-click-demo-import.php'; // Plugin main file path
-
-        // Install the plugin
-        $api = plugins_api( 'plugin_information', array(
-            'slug' => $plugin_slug,
-            'fields' => array(
-                'sections' => false,
-            ),
-        ) );
-
-        if ( is_wp_error( $api ) ) {
-            return;
-        }
-
-        $upgrader = new Plugin_Upgrader( new Automatic_Upgrader_Skin() );
-        $upgrader->install( $api->download_link );
-
-        // Activate the plugin
-        if ( file_exists( WP_PLUGIN_DIR . '/' . $plugin_file ) ) {
-            activate_plugin( $plugin_file );
-        }
-    }
-}
-
 // Chnage Slug
 function tutorstarter_demo_import_page_setup( $default_settings ) {
     $default_settings['parent_slug'] = 'tutorstarter'; // No parent, making it a top-level menu item
@@ -145,11 +106,6 @@ function tutorstarter_register_plugins( $plugins ) {
 		'required' => true,        	// If the plugin is required or not.
 	  ],
 	  [ // A WordPress.org plugin repository example.
-		'name'     => 'TutorMate', 	// Name of the plugin.
-		'slug'     => 'tutormate', 	// Plugin slug - the same as on WordPress.org plugin repository.
-		'required' => true,        	// If the plugin is required or not.
-	  ],
-	  [ // A WordPress.org plugin repository example.
 		'name'     => 'WPForms', 	// Name of the plugin.
 		'slug'     => 'wpforms-lite', 	// Plugin slug - the same as on WordPress.org plugin repository.
 		'required' => true,        	// If the plugin is required or not.
@@ -172,13 +128,13 @@ function tutorstarter_register_plugins( $plugins ) {
 				'required' => true,    		// If the plugin is required or not.
 			],
 			[ // A WordPress.org plugin repository example.
-				'name'     => 'Qubely', 	// Name of the plugin.
-				'slug'     => 'qubely', 	// Plugin slug - the same as on WordPress.org plugin repository.
+				'name'     => 'Elementor', 	// Name of the plugin.
+				'slug'     => 'elementor', 	// Plugin slug - the same as on WordPress.org plugin repository.
 				'required' => true,        	// If the plugin is required or not.
 			],
 			[ // A WordPress.org plugin repository example.
-				'name'     => 'TutorMate', 	// Name of the plugin.
-				'slug'     => 'tutormate', 	// Plugin slug - the same as on WordPress.org plugin repository.
+				'name'     => 'WPForms', 	// Name of the plugin.
+				'slug'     => 'wpforms-lite', 	// Plugin slug - the same as on WordPress.org plugin repository.
 				'required' => true,        	// If the plugin is required or not.
 			],
 		];
