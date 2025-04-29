@@ -1,0 +1,11 @@
+{
+    "name": "tutorstarter",
+    "version": "1.0.0",
+    "description": "Modern WordPress Theme for Tutor LMS.",
+    "main": "index.js",
+    "dependencies": {
+        "classnames": "^2.2.6",
+        "prop-types": "^15.7.2",
+        "react-visibility-sensor": "^5.1.1"
+    }
+}

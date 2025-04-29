@@ -1,0 +1,30 @@
+.container,
+.container-fluid,
+.container-narrow {
+	box-sizing: border-box;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: $gutter;
+	padding-left: $gutter;
+
+	@include clearfix;
+}
+
+.container {
+	max-width: 1140px;
+}
+
+.container-fluid {
+	max-width: 100%;
+}
+
+.container-narrow {
+	max-width: $lg;
+}
+
+@media screen and (max-width: 767px) {
+	.qubely-section .qubely-container {
+		max-width: 92%;
+	}
+}

@@ -1,0 +1,46 @@
+.tutorstarter-responsive-control-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+.tutorstarter-responsive-control-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
+  
+    .customize-control-title {
+      margin: 0 0 10px;
+    }
+  
+    .components-button-group {
+      display: flex;
+      border: none;
+    }
+  
+    button {
+      height: auto;
+      box-shadow: none !important;
+      padding: 3px 4px !important;
+  
+      svg, .dashicon {
+        fill: #007cba !important;
+        height: 15px;
+        width: 16px;
+        font-size: 16px;
+      }
+    }
+  }
+
+$mappedDevice : 'mobile', 'tablet', 'desktop';
+
+@each $device in $mappedDevice {
+  .preview-#{$device} {
+	.tutorstarter-responsive-control-bar {
+	  button.#{$device} {
+		.dashicon {
+		  color: #7e8993;
+		     }
+	     }
+	  }
+  }
+}

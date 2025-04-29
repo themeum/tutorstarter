@@ -1,0 +1,26 @@
+#sidebar {
+    margin-top: 50px;
+
+    .widget-area {
+        ul {
+            li {
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+aside {
+    position: relative;
+}
+
+.widget-title {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+aside#secondary .widget ul li {
+    list-style: none;
+}

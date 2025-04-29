@@ -1,0 +1,9 @@
+a {
+    color: var(--link-color);
+    //@include transition(all $time $ease);
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+        opacity: 0.85;
+    }
+}

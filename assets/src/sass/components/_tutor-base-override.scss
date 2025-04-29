@@ -1,0 +1,190 @@
+// Colors
+$dark: #0a083b;
+$medium: #57586e;
+$light: rgb(87 88 110 / 50%);
+$blue: #1950d1;
+
+.tutor-courses-wrap {
+    margin-top: 50px;
+}
+
+/* Single Course */
+.tutor-single-course-segment {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $medium;
+
+    .single-instructor-wrap {
+        .single-instructor-top {
+            .tutor-instructor-left {
+                display: flex;
+                align-items: center;
+
+                .instructor-avatar {
+                    a {
+                        text-decoration: none;
+                    }
+                }
+                .instructor-name {
+                    h3 {
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tutor-segment-title,
+.tutor-single-course-segment .tutor-segment-title {
+    margin-bottom: 13px;
+    color: $dark;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.85;
+}
+
+.tutor-course-content-content {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.81;
+    color: $medium;
+}
+
+.tutor-course-topics-contents {
+    .tutor-course-title h4 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: $dark;
+        display: flex;
+        align-items: center;
+    }
+    .tutor-course-lesson h5 {
+        font-family: var(--body-font);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.87;
+        display: flex;
+        align-items: center;
+    }
+    .tutor-course-title {
+        background: #f7f9fa;
+    }
+    .tutor-course-topic {
+        border-color: #f7f9fa;
+        border-radius: 4px;
+    }
+    .tutor-course-lesson {
+        border-color: #f7f9fa;
+    }
+}
+
+.single-instructor-wrap,
+.tutor-course-reviews-wrap {
+    border-color: #f7f9fa;
+    border-radius: 4px;
+    .single-instructor-top,
+    .tutor-review-individual-item {
+        border-color: #f7f9fa;
+    }
+}
+
+.tutor-lesson-video-wrap .plyr--video {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.tutor-price-preview-box {
+    border: none;
+    background: #fafbfc;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 8%);
+    border-radius: 8px;
+}
+
+.tutor-user-public-profile .tutor-user-profile-content {
+    font-size: 16px;
+    line-height: 1.81;
+    > h3 {
+        font-size: 32px;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+}
+
+.tutor-course-archive-results-wrap {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(87, 88, 110, 0.5);
+}
+
+.tutor-single-course-sidebar {
+    .tutor-price-preview-box {
+        .price {
+            .price {
+                ins {
+                    margin-right: 10px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+// Pagination override
+.tutor-pagination-wrap {
+    .page-numbers {
+        min-width: 38px;
+        color: #57586e;
+        background: #ffffff;
+        margin: 60px 2px 12px 2px;
+        padding: 7.5px;
+        font-family: var(--body-font);
+        font-size: 18px;
+        line-height: 1.2222em !important;
+        font-weight: 500;
+        border-radius: 5px;
+        border: 1px solid #bbc0d4;
+        transition: all 0.15s ease-in-out;
+        &:hover,
+        &.current {
+            background: #1950d1;
+            color: #ffffff;
+            border: 1px solid #1950d1;
+        }
+    }
+}
+
+// Site-content spacing
+.single-courses .site-content {
+    padding: 40px 0;
+}
+
+.tutor-assignment-start-btn-wrap {
+    margin-top: 2em;
+}
+
+.tutor-next-previous-pagination-wrap {
+    margin-top: 1em;
+}
+
+.tutor-add-quiz-button-wrap a {
+    color: unset;
+}
+
+// Elementor add-on hover override
+.etlms-course-list-col .etlms-card.hover-animation:hover {
+    top: unset !important;
+}
+
+.etlms-course-list-col .etlms-card.hover-animation {
+    box-shadow: 0px 4px 15px 4px rgb(39 57 101 / 10%) !important;
+    transition: 0.3s linear !important;
+    &:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0px 4px 10px rgb(39 57 101 / 12%) !important;
+    }
+}

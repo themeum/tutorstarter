@@ -1,0 +1,15 @@
+.woocommerce .woocommerce-Button.button[value="Save"] {
+    background: #1950D1 !important;
+    width: 170px;
+    border-radius: 33px !important;
+    padding: 18px 30px !important;
+    color: #fff !important;
+}
+
+.woocommerce form .show-password-input,
+.woocommerce-page form .show-password-input {
+    position: absolute;
+    right: .7em;
+    top: 2.5em;
+    cursor: pointer;
+}

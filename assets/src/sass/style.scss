@@ -1,0 +1,55 @@
+@import "~normalize-scss/sass/normalize/import-now";
+@import "base/reset";
+@import "components/headers";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+//@import 'base/content';
+@import "base/variables";
+@import "base/mixins";
+@import "base/animations";
+@import "base/body";
+@import "base/containers";
+@import "base/grid";
+@import "base/spacing";
+@import "base/content";
+@import "base/wordpress";
+@import "base/forms";
+
+/*--------------------------------------------------------------
+# Partials
+--------------------------------------------------------------*/
+@import "partials/typography";
+@import "partials/buttons";
+@import "partials/links";
+@import "partials/lists";
+@import "partials/colours";
+@import "partials/helpers";
+@import "partials/media";
+@import "partials/dropdown";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/tutor/tutor_signin";
+@import "components/tutor/tutor_instructor_reg";
+@import "components/tutor/tutor_student_reg";
+@import "components/tutor/tutor_lms";
+@import "components/woocommerce/cart";
+@import "components/woocommerce/checkout";
+@import "components/woocommerce/woo-reset-pass";
+@import "components/woocommerce/woo-cart-form";
+@import "components/woocommerce/woo-form";
+@import "components/sidebar";
+@import "components/footer";
+@import "components/blog-list";
+@import "components/blog-grid";
+@import "components/blog";
+@import "components/tutor-base-override";
+@import "components/getting-started";
+@import "components/auth/signin";
+@import "components/auth/signup";
+@import "components/woocommerce";
+@import "components/customhtml";
+@import "components/contact-form7";

@@ -1,0 +1,60 @@
+$text-color: #585b5c;
+$background-color: #E8E8E8;
+$border-color: #CCCCCC;
+
+#customize-controls .wp-full-overlay-sidebar-content {
+    background: #F3F3F3;
+}
+
+.wp-picker-container .wp-color-result.button {
+    border: 1px solid $border-color!important;
+    border-radius: 3px!important;
+}
+
+.customize-control {
+    margin-bottom: 20px!important;
+}
+
+.customize-control input[type="text"] {
+    border: 1px solid $border-color!important;
+    border-radius: 3px!important;
+}
+
+.components-select-control__input,
+.components-input-control__input,
+.customize-control input[type="number"],
+.customize-control input[type="text"],
+select#_customize-input-blog_grid_selected {
+    color: $text-color!important;
+    background: $background-color!important;
+}
+
+.components-input-control__backdrop,
+.customize-control input[type="number"],
+select#_customize-input-blog_grid_selected {
+    border: 1px solid $border-color!important;
+    border-radius: 3px!important;
+}
+
+.tutorstarter-control-header {
+    margin-bottom: 7px;
+}
+
+.tutorstarter-background-control {
+    .customize-control-description {
+        margin-bottom: 0 !important;
+        margin-top: 10px !important;
+    }
+}
+
+.tutorstarter-background-control {
+    border: 1px solid #F3F3F3;
+    border-radius: 3px;
+    padding: 10px;
+    background: #E8E8E8;
+}
+
+.flex-contents {
+    display: flex;
+    align-items: center;
+}
