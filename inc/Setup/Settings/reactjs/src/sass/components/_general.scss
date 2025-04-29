@@ -3,6 +3,24 @@
     display: none;
 }
 
+.ocdi__title-container, 
+.ocdi__theme-about, 
+.plugin-item-all-in-one-seo-pack, 
+.plugin-item-google-analytics-for-wordpress, 
+.ocdi-content-notice--warning{
+    display: none !important;
+}
+
+@media (min-width: 1120px) {
+    .ocdi__gl-item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(25% - 30px);
+        flex: 0 0 calc(25% - 30px);
+        margin-bottom: 30px;
+        margin-right: 30px;
+    }
+}
+
 li#toplevel_page_tutorstarter a .dashicons-before img {
     width: 18px;
     margin-left: 10px;
