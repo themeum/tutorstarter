@@ -1,6 +1,6 @@
 {
 	"name": "tutorstarter",
-	"version": "3.0.2",
+	"version": "3.0.3",
 	"description": "Modern WordPress Theme for Tutor LMS",
 	"main": "index.js",
 	"scripts": {
