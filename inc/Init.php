@@ -35,7 +35,6 @@ final class Init {
 			Custom\Page\Page_Settings::class,
 			Api\Customizer\Customizer::class,
 			Custom\Schema\Custom_Metabox::class,
-			Demos\Starter_Demo_Importer::class,
 		);
 	}
 

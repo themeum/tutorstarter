@@ -84,6 +84,9 @@ If you found any bugs or issues, please let us know by posting on the support se
 
 == Changelog ==
 
+= 3.0.3 =
+Update : Demo importer added directly in the starter theme
+
 = 3.0.2 =
 Update : Show cart count only when item added to cart
 Fix    : Improved dropdown menu rtl version

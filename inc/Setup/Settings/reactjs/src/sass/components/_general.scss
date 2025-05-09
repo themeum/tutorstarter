@@ -3,12 +3,24 @@
     display: none;
 }
 
-.ocdi__title-container, 
-.ocdi__theme-about, 
-.plugin-item-all-in-one-seo-pack, 
-.plugin-item-google-analytics-for-wordpress, 
-.ocdi-content-notice--warning{
+.ocdi-imported.js-ocdi-imported {
+    .notice.notice-warning {
+        display: none !important;
+    }
+}
+
+.ocdi__title-container,
+.ocdi__theme-about,
+.plugin-item-all-in-one-seo-pack,
+.plugin-item-google-analytics-for-wordpress,
+.ocdi-content-notice--warning {
     display: none !important;
+}
+
+.ocdi-install-plugins-content-content {
+    .plugin-item.plugin-item-wpforms-lite:not(.plugin-item--required) {
+        display: none !important;
+    }
 }
 
 @media (min-width: 1120px) {
@@ -35,16 +47,20 @@ li#toplevel_page_tutorstarter a .dashicons-before img {
     line-height: 1.4em;
     padding-bottom: 30px;
 }
+
 .tutorstarter-opt-container {
     max-width: 100%;
     margin: 0 auto;
+
     @media screen and (min-width: 992px) {
         width: 80%;
     }
+
     @media screen and (max-width: 991px) {
         width: 100%;
     }
 }
+
 .tutorstarter-opt-header {
     background-color: transparent;
     text-align: center;
@@ -55,6 +71,7 @@ li#toplevel_page_tutorstarter a .dashicons-before img {
         display: flex;
         align-items: center;
         justify-content: center;
+
         .thm-title {
             font-size: inherit;
             //line-height: 30px;
@@ -70,6 +87,7 @@ li#toplevel_page_tutorstarter a .dashicons-before img {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+
         .tutorstarter-opt-card {
             display: flex;
             flex-direction: column;
@@ -85,6 +103,7 @@ li#toplevel_page_tutorstarter a .dashicons-before img {
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
             transition: 0.35s linear;
             text-decoration: none;
+
             span {
                 font-size: 25px;
             }
@@ -92,6 +111,7 @@ li#toplevel_page_tutorstarter a .dashicons-before img {
             p {
                 font-size: 17px;
             }
+
             &:hover {
                 box-shadow: 0px 30px 60px -10px rgb(0 28 73 / 15%);
             }
