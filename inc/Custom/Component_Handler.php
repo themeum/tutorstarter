@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
  * Component handler class
  */
 class Component_Handler {
-
+	use Header_Components;
 	/**
 	 * Register
 	 */
@@ -34,7 +34,7 @@ class Component_Handler {
 	public function add_new_items( $items, $args ) {
 
 		if ( 'primary' === $args->theme_location ) {
-			$items = Header_Components::navbar_toggler() . $items;
+			$items = $this->navbar_toggler() . $items;
 		}
 		return $items;
 	}

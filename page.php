@@ -32,7 +32,11 @@ $sidebar   = ( ! empty( $page_meta ) ? $page_meta['sidebar_select'] : 'no-sideba
 				while ( have_posts() ) :
 					the_post();
 
-					get_template_part( 'views/content', 'page' );
+					try {
+						get_template_part( 'views/content', 'page' );
+					} catch (\Throwable $th) {
+						error_log( $th->getMessage() );
+					}
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) :

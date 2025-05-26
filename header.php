@@ -34,7 +34,8 @@ $trans_header_toggle = ( ! empty( $page_meta['header_trans_toggle'] ) ? $page_me
 		<?php _e( 'Skip to content', 'tutorstarter' ); ?>
 	</a>
 
-<?php if ( false === $disable_header ) {
+<?php
+if ( false === $disable_header ) {
 	if ( true === $trans_header_toggle ) {
 		get_template_part( 'views/partials/header/header_transparent' );
 	} else {

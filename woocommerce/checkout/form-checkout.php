@@ -4,12 +4,13 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 3.5.0
+ * @version 9.4.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
 $order_button_text = __( 'Complete Payment', 'tutorstarter' );
 ?>
 <div class="checkout-top-spacing"></div>
