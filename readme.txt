@@ -3,7 +3,7 @@ Contributors: themeum
 Tags: education, e-commerce, blog, custom-logo, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, footer-widgets, left-sidebar, right-sidebar
 Requires at least: 5.0
 Tested up to: 6.8
-Stable tag: 3.0.3
+Stable tag: 3.0.4
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -83,6 +83,9 @@ If you found any bugs or issues, please let us know by posting on the support se
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 3.0.4 =
+Update : Compatibility with latest WooCommerce
 
 = 3.0.3 =
 Update : Demo importer added directly in the starter theme
