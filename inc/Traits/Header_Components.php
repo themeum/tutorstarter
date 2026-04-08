@@ -74,10 +74,11 @@ trait Header_Components {
 							if ( 'index' === $menu_key ) {
 								$menu_key = '';
 							}
-							ob_start();?>
+							ob_start();
+							?>
 							<li>
-								<a href="<?php echo esc_url( $menu_link ) ?>"> 
-									<span class="tutor-dashboard-menu-item-icon <?php echo $menu_item['icon'];  ?>"></span>
+								<a href="<?php echo esc_url( $menu_link ); ?>"> 
+									<span class="tutor-dashboard-menu-item-icon <?php echo $menu_item['icon']; ?>"></span>
 									<?php echo esc_html( $menu_title ); ?>
 								</a>
 							</li>
@@ -168,21 +169,22 @@ trait Header_Components {
 	 */
 	public static function default_menus() {
 		return array(
-			'' => array(
+			''                  => array(
 				'title' => __( 'Dashboard', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-dashboard',
 			),
-			'my-profile'       => array(
+			'account/profile/'  => array(
 				'title' => __( 'My profile', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-user-bold',
 			),
-			'settings'       => array(
+			'account/settings/' => array(
 				'title' => __( 'Account Settings', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-gear',
 			),
-			'logout'         => array(
+			'logout'            => array(
 				'title' => __( 'Logout', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-signout',
+				'url'   => wp_logout_url( tutor_utils()->tutor_dashboard_url() ),
 			),
 		);
 	}
