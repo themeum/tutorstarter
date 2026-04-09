@@ -48,10 +48,6 @@ trait Header_Components {
 						<path d="M5.11285 6.29697L8.17285 9.3503L11.2329 6.29697L12.1729 7.23697L8.17285 11.237L4.17285 7.23697L5.11285 6.29697Z" fill="currentColor"></path>
 					</svg>
 				</span>
-				<!-- <div class="tutor-header-profile-name">
-				</div> -->
-				<!-- <div class="tutor-header-submenu-icon tutor-icon-icon-light-down-line tutor-font-size-20 tutor-text-400">
-				</div> -->
 			</div>
 		</div>
 		<div class="tutor-header-submenu">
