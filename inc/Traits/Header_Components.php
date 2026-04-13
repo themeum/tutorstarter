@@ -164,6 +164,27 @@ trait Header_Components {
 	 * Default Menus
 	 */
 	public static function default_menus() {
+		if ( ! self::tutor_version_compare( 4 ) ) {
+			return array(
+				''           => array(
+					'title' => __( 'Dashboard', 'tutorstarter' ),
+					'icon'  => 'tutor-icon-dashboard',
+				),
+				'my-profile' => array(
+					'title' => __( 'My profile', 'tutorstarter' ),
+					'icon'  => 'tutor-icon-user-bold',
+				),
+				'settings'   => array(
+					'title' => __( 'Account Settings', 'tutorstarter' ),
+					'icon'  => 'tutor-icon-gear',
+				),
+				'logout'     => array(
+					'title' => __( 'Logout', 'tutorstarter' ),
+					'icon'  => 'tutor-icon-signout',
+				),
+			);
+		}
+
 		return array(
 			''                  => array(
 				'title' => __( 'Dashboard', 'tutorstarter' ),
@@ -183,5 +204,23 @@ trait Header_Components {
 				'url'   => wp_logout_url( tutor_utils()->tutor_dashboard_url() ),
 			),
 		);
+	}
+
+
+	/**
+	 * Check if Tutor major version is 4+.
+	 *
+	 * @return bool
+	 */
+	private static function tutor_version_compare( $version ) {
+		if ( ! defined( 'TUTOR_VERSION' ) ) {
+			return false;
+		}
+
+		if ( preg_match( '/^(\d+)\./', TUTOR_VERSION, $version_parts ) ) {
+			return (int) $version_parts[1] >= $version;
+		}
+
+		return false;
 	}
 }
