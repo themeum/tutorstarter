@@ -210,6 +210,7 @@ trait Header_Components {
 	/**
 	 * Check if Tutor major version is 4+.
 	 *
+	 * @param int $version Major version to compare against.
 	 * @return bool
 	 */
 	private static function tutor_version_compare( $version ) {
