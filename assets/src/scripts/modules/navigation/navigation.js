@@ -69,7 +69,7 @@
     if (null !== navbarToggler || undefined !== navbarToggler || 'undefined' !== navbarToggler) {
         window.addEventListener('resize', () => {
             if (mediaQuery.matches) {
-                navbarToggler.addEventListener('click', (e) => {
+                navbarToggler?.addEventListener('click', (e) => {
                     if (lastMenuItem) {
                         lastMenuItem.addEventListener('keydown', addTabLoopFeature, false);
                     }

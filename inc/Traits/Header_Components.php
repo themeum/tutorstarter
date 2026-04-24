@@ -48,10 +48,6 @@ trait Header_Components {
 						<path d="M5.11285 6.29697L8.17285 9.3503L11.2329 6.29697L12.1729 7.23697L8.17285 11.237L4.17285 7.23697L5.11285 6.29697Z" fill="currentColor"></path>
 					</svg>
 				</span>
-				<!-- <div class="tutor-header-profile-name">
-				</div> -->
-				<!-- <div class="tutor-header-submenu-icon tutor-icon-icon-light-down-line tutor-font-size-20 tutor-text-400">
-				</div> -->
 			</div>
 		</div>
 		<div class="tutor-header-submenu">
@@ -74,10 +70,11 @@ trait Header_Components {
 							if ( 'index' === $menu_key ) {
 								$menu_key = '';
 							}
-							ob_start();?>
+							ob_start();
+							?>
 							<li>
-								<a href="<?php echo esc_url( $menu_link ) ?>"> 
-									<span class="tutor-dashboard-menu-item-icon <?php echo $menu_item['icon'];  ?>"></span>
+								<a href="<?php echo esc_url( $menu_link ); ?>"> 
+									<span class="tutor-dashboard-menu-item-icon <?php echo $menu_item['icon']; ?>"></span>
 									<?php echo esc_html( $menu_title ); ?>
 								</a>
 							</li>
@@ -167,23 +164,64 @@ trait Header_Components {
 	 * Default Menus
 	 */
 	public static function default_menus() {
+		if ( ! self::tutor_version_compare( 4 ) ) {
+			return array(
+				''           => array(
+					'title' => __( 'Dashboard', 'tutorstarter' ),
+					'icon'  => 'tutor-icon-dashboard',
+				),
+				'my-profile' => array(
+					'title' => __( 'My profile', 'tutorstarter' ),
+					'icon'  => 'tutor-icon-user-bold',
+				),
+				'settings'   => array(
+					'title' => __( 'Account Settings', 'tutorstarter' ),
+					'icon'  => 'tutor-icon-gear',
+				),
+				'logout'     => array(
+					'title' => __( 'Logout', 'tutorstarter' ),
+					'icon'  => 'tutor-icon-signout',
+				),
+			);
+		}
+
 		return array(
-			'' => array(
+			''                  => array(
 				'title' => __( 'Dashboard', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-dashboard',
 			),
-			'my-profile'       => array(
+			'account/profile/'  => array(
 				'title' => __( 'My profile', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-user-bold',
 			),
-			'settings'       => array(
+			'account/settings/' => array(
 				'title' => __( 'Account Settings', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-gear',
 			),
-			'logout'         => array(
+			'logout'            => array(
 				'title' => __( 'Logout', 'tutorstarter' ),
 				'icon'  => 'tutor-icon-signout',
+				'url'   => wp_logout_url( tutor_utils()->tutor_dashboard_url() ),
 			),
 		);
+	}
+
+
+	/**
+	 * Check if Tutor major version is 4+.
+	 *
+	 * @param int $version Major version to compare against.
+	 * @return bool
+	 */
+	private static function tutor_version_compare( $version ) {
+		if ( ! defined( 'TUTOR_VERSION' ) ) {
+			return false;
+		}
+
+		if ( preg_match( '/^(\d+)\./', TUTOR_VERSION, $version_parts ) ) {
+			return (int) $version_parts[1] >= $version;
+		}
+
+		return false;
 	}
 }
