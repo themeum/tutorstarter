@@ -85,7 +85,7 @@ If you found any bugs or issues, please let us know by posting on the support se
 == Changelog ==
 
 = 3.0.5 =
-Update : Compatibility with latest tutor v4
+Update : Added compatibility with Tutor LMS 4.0
 
 = 3.0.4 =
 Update : Compatibility with latest WooCommerce
