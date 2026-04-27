@@ -6,22 +6,13 @@ on:
       - 'v*.*.*'
 
   workflow_dispatch:
-    inputs:
-      dry_run:
-        description: 'Dry Run — skip WP.org deploy, only create GitHub release'
-        required: false
-        default: 'false'
-        type: choice
-        options:
-          - 'true'
-          - 'false'
 
 # ──────────────────────────────────────────────────────────────
-# Detect whether this is a dry-run.
-# Priority: workflow_dispatch input → tag suffix "-dry" → default false
+# Toggle dry-run here. 'true' = skip WP.org deploy, only create
+# a GitHub release. 'false' = full build + deploy + release.
 # ──────────────────────────────────────────────────────────────
 env:
-  DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+  DRY_RUN: 'true'
 
 jobs:
   # ────────────────────────────────────────────────────────────
