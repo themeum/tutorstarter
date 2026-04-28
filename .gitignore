@@ -7,7 +7,7 @@ wp-content/*
 !wp-content/mu-plugins/
 !wp-content/plugins/
 !wp-content/themes/
-
+languages/tutorstarter.pot
 # ignore these plugins
 wp-content/plugins/hello.php
 
@@ -21,10 +21,10 @@ assets/dist/css/
 assets/dist/js/
 assets/.DS_Store
 assets/dist/.DS_Store
+assets/dist/mix-manifest.json
 # ignore vendor dependency directories
 vendor/
 .DS_Store
-
 # ignore log files and databases
 *.log
 *.sql

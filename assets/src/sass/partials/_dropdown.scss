@@ -1,253 +1,284 @@
 .site-content {
-    padding-bottom: 0px;
+	padding-bottom: 0px;
 }
 header.header-default {
-    border-bottom: 2px solid #f8f8f8;
+	border-bottom: 2px solid #f8f8f8;
 }
 .tutor-header-profile-menu-items {
-    display: flex;
-    position: relative;
-    align-items: center;
-    margin-left: 15px !important;
+	display: flex;
+	position: relative;
+	align-items: center;
+	margin-left: 15px !important;
 }
 .tutor-header-profile-content {
-    padding-left: 7px;
+	padding-left: 7px;
 }
 .tutor-header-profile-content-text {
-    font-size: 13px;
-    line-height: 1.1em;
-    color: #757c8e;
+	font-size: 13px;
+	line-height: 1.1em;
+	color: #757c8e;
 }
 .tutor-header-profile-submenu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 7px;
 }
 .tutor-header-profile-name {
-    line-height: 1.2;
-    font-weight: 600;
-    color: #212327;
-    font-size: 16px;
+	line-height: 1.2;
+	font-weight: 600;
+	color: #212327;
+	font-size: 16px;
 }
 .tutor-header-submenu-icon {
-    font-size: 12px;
-    color: #212327;
-    padding: 0 5px;
-    transition: 0.3s ease;
+	font-size: 12px;
+	color: #212327;
+	padding: 0 5px;
+	transition: 0.3s ease;
 }
 .tutor-header-submenu {
-    background-color: #f5f7fa;
-    display: flex;
-    opacity: 0;
-    //   padding: 25px 35px;
+	background-color: #f5f7fa;
+	display: flex;
+	opacity: 0;
+	//   padding: 25px 35px;
 }
 .tutor-header-profile-menu-items .tutor-header-submenu {
-    position: absolute;
-    z-index: 999;
-    width: 655px;
-    top: 50px;
-    right: -35px;
-    transition: 300ms;
-    height: auto;
-    visibility: hidden;
+	position: absolute;
+	z-index: 999;
+	width: 240px;
+	top: 48px;
+	right: -35px;
+	transition: 300ms;
+	height: auto;
+	visibility: hidden;
+	// box-shadow: 4px 10px 20px rgba(39, 57, 101, 0.2);
+	box-shadow: 0px 0px 3px 0px #00000033;
+	background-color: white;
 }
 .tutor-header-profile-menu-items:hover .tutor-header-submenu {
-    opacity: 1;
-    visibility: visible;
+	opacity: 1;
+	visibility: visible;
 }
 .tutor-submenu-login-section {
-    width: 33.33%;
-    background: linear-gradient(318.61deg, #ec653b 0%, #9d1878 96.92%), #ffffff;
-    padding-left: 35px;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	width: 33.33%;
+	background: linear-gradient(318.61deg, #ec653b 0%, #9d1878 96.92%), #ffffff;
+	padding-left: 35px;
+	padding-top: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .tutor-submenu-login-section-instructor {
-    width: 33.33%;
-    background: linear-gradient(318.61deg, #686ae3 0%, #6e2b89 96.92%), #ffffff;
-    padding-left: 35px;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	width: 33.33%;
+	background: linear-gradient(318.61deg, #686ae3 0%, #6e2b89 96.92%), #ffffff;
+	padding-left: 35px;
+	padding-top: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .tutor-submenu-login-content {
-    font-size: 24px;
-    color: #ffffff;
-    padding-top: 10px;
-    padding-bottom: 30px;
+	font-size: 24px;
+	color: #ffffff;
+	padding-top: 10px;
+	padding-bottom: 30px;
 }
 .tutor-submenu-login-profile {
-    font-weight: 600;
+	font-weight: 600;
 }
 .tutor-submenu-login {
-    background-color: rgb(0 0 0 / 20%);
-    height: 44px;
-    width: 44px;
-    font-size: 16px;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	background-color: rgb(0 0 0 / 20%);
+	height: 44px;
+	width: 44px;
+	font-size: 16px;
+	color: white;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .tutor-submenu-links {
-    width: 33.33%;
-    position: relative;
-    padding: 30px 10px;
+	width: 100%;
+	position: relative;
+	padding: 20px 20px;
+	ul {
+		padding: 0px;
+		.profile-name {
+			font-family: Inter;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 24px;
+			color: #000;
+			text-align: center;
+			text-decoration-skip-ink: none;
+			border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+			text-align: left;
+			padding-bottom: 8px;
+			margin-bottom: 8px;
+		}
+		// li a {
+		// 	color: #161616;
+		// }
+	}
 }
 
 .tutor-header-submenu .tutor-submenu-links ul li a {
-    display: block;
-    font-size: 15px;
-    font-weight: 400;
-    color: #212327;
-    line-height: 1.75em;
-    padding: 6px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #161616;
+	line-height: 24px;
+	padding: 2px 0px;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
 }
 .tutor-header-profile-menu-items ul li a:hover {
-    color: #456bed;
+	// color: #1950d1;
+	color: var(--navDefaultHoverColor);
+	svg {
+		color: var(--navDefaultHoverColor);
+		path {
+			color: var(--navDefaultHoverColor);
+		}
+	}
 }
-.tutor-header-submenu:before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    right: 45px;
-    z-index: 1024;
-    border-style: solid;
-    border-width: 10px 12px 10px 12px;
-    border-left-color: #ff000000;
-    border-right-color: #66339900;
-    border-bottom-color: #f5f7fa;
-    border-top-color: #0000ff00;
-}
+// .tutor-header-submenu:before {
+// 	content: '';
+// 	position: absolute;
+// 	top: -20px;
+// 	right: 45px;
+// 	z-index: 1024;
+// 	border-style: solid;
+// 	border-width: 10px 12px 10px 12px;
+// 	border-left-color: #ff000000;
+// 	border-right-color: #66339900;
+// 	border-bottom-color: #f5f7fa;
+// 	border-top-color: #0000ff00;
+// }
 .burger-icon {
-    width: 30px;
-    cursor: pointer;
-    display: none;
+	width: 30px;
+	cursor: pointer;
+	display: none;
 }
 .burger-icon span {
-    display: block;
-    height: 2px;
-    background-color: #091e42;
-    margin: 6px 0;
-    transition: background-color 0.3s ease-in, opacity 0.3s ease-in,
-        transform 0.3s ease-in;
+	display: block;
+	height: 2px;
+	background-color: #091e42;
+	margin: 6px 0;
+	transition: background-color 0.3s ease-in, opacity 0.3s ease-in, transform 0.3s ease-in;
 }
 
 @media (max-width: 991px) {
-    .tutor-header-submenu .tutor-submenu-links ul li a {
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.5em;
-        padding: 10px 25px;
-    }
-    .tutor-submenu-login-content {
-        font-size: 16px;
-        line-height: 1.2em;
-        padding-bottom: 15px;
-        padding-top: 5px;
-    }
-    .tutor-submenu-login-section {
-        padding-left: 30px;
-        padding-top: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .tutor-submenu-login-section-instructor {
-        padding-left: 30px;
-        padding-top: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+	.tutor-header-submenu .tutor-submenu-links ul li a {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.5em;
+		padding: 10px 25px;
+	}
+	.tutor-submenu-login-content {
+		font-size: 16px;
+		line-height: 1.2em;
+		padding-bottom: 15px;
+		padding-top: 5px;
+	}
+	.tutor-submenu-login-section {
+		padding-left: 30px;
+		padding-top: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.tutor-submenu-login-section-instructor {
+		padding-left: 30px;
+		padding-top: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 @media (max-width: 767px) {
-    .navbar-brand {
-        order: 1;
-    }
-    .navbar-utils {
-        order: 2;
-    }
+	.navbar-brand {
+		order: 1;
+	}
+	.navbar-utils {
+		order: 2;
+	}
 
-    .burger-icon {
-        display: block;
-    }
+	.burger-icon {
+		display: block;
+	}
 
-    //start submenu
-    .tutor-header-submenu {
-        display: grid;
-        width: 300px !important;
-    }
-    .tutor-submenu-login-section {
-        width: 100%;
-        padding-left: 25px;
-        padding-top: 10px;
-        order: 3;
-    }
-    .tutor-submenu-login-section-instructor {
-        width: 100%;
-        padding-left: 25px;
-        padding-top: 10px;
-        order: 3;
-    }
-    .tutor-submenu-links {
-        width: 100%;
-        padding: 0px 0px;
-        order: 1;
-    }
-    .tutor-submenu-links ul {
-        padding-left: 0rem;
-    }
-    .tutor-submenu-login-avatar {
-        display: none;
-    }
-    .tutor-submenu-login-btn {
-        position: absolute;
-        right: 40px;
-        bottom: 12px;
-    }
-    .tutor-header-profile-menu-items:hover .tutor-header-submenu {
-        opacity: 0;
-        visibility: hidden;
-    }
-    .tutor-header-profile-menu-items.active {
-        .tutor-header-submenu {
-            opacity: 1;
-            visibility: visible;
-        }
-        .tutor-header-submenu-icon {
-            transform: rotate(180deg);
-        }
-    }
-    .tutor-header-profile-menu-items .tutor-header-submenu {
-        top: 50px;
-        right: -15px;
-        padding-top: 20px;
-    }
-    .tutor-header-submenu:before {
-        top: -18px;
-        right: 70px;
-    }
-    //end of submenu
+	//start submenu
+	.tutor-submenu-login-section {
+		width: 100%;
+		padding-left: 25px;
+		padding-top: 10px;
+		order: 3;
+	}
+	.tutor-submenu-login-section-instructor {
+		width: 100%;
+		padding-left: 25px;
+		padding-top: 10px;
+		order: 3;
+	}
+	.tutor-submenu-links {
+		width: 100%;
+		padding: 0px 10px 20px;
+		order: 1;
+	}
+	.tutor-submenu-links ul {
+		padding-left: 0rem;
+	}
+	.tutor-submenu-login-avatar {
+		display: none;
+	}
+	.tutor-submenu-login-btn {
+		position: absolute;
+		right: 40px;
+		bottom: 12px;
+	}
+	.tutor-header-profile-menu-items:hover .tutor-header-submenu {
+		opacity: 0;
+		visibility: hidden;
+	}
+	.tutor-header-profile-menu-items.active {
+		.tutor-header-submenu {
+			opacity: 1;
+			visibility: visible;
+		}
+		.tutor-header-submenu-icon {
+			transform: rotate(180deg);
+		}
+	}
+	.tutor-header-profile-menu-items .tutor-header-submenu {
+		top: 50px;
+		right: -15px;
+		padding-top: 20px;
+	}
+	.tutor-header-submenu:before {
+		top: -18px;
+		right: 70px;
+	}
+	//end of submenu
 }
 @media (max-width: 500px) {
-    .navbar {
-        display: grid;
-        grid-gap: 0px;
-    }
-    .tutor-header-submenu-icon {
-        font-size: 14px;
-        padding: 0 8px;
-    }
+	.tutor-header-profile-menu-items {
+		margin-left: 5px !important;
+	}
+	.navbar {
+		display: grid;
+		grid-gap: 0px;
+	}
+	.tutor-header-submenu-icon {
+		font-size: 14px;
+		padding: 0 8px;
+	}
 }
 
 .tutor-landing-explore {
-    font-weight: 500;
-    a.tutor-version-new-btn {
-        border-bottom: 1px solid;
-    }
+	font-weight: 500;
+	a.tutor-version-new-btn {
+		border-bottom: 1px solid;
+	}
 }

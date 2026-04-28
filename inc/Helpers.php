@@ -8,37 +8,6 @@
 
 defined( 'ABSPATH' ) || exit;
 
-add_action( 'tgmpa_register', 'tutorstarter_register_required_plugins' );
-
-/**
- * Register the required plugins for this theme.
- */
-function tutorstarter_register_required_plugins() {
-
-	// Array of plugin arrays. Required keys are name and slug.
-	$plugins = array(
-		array(
-			'name'     => 'TutorMate',
-			'slug'     => 'tutormate',
-			'required' => false,
-		),
-	);
-
-	// Array of configuration settings.
-	$config = array(
-		'id'           => 'tutorstarter',
-		'default_path' => '',
-		'menu'         => 'tgmpa-install-plugins',
-		'has_notices'  => true,
-		'dismissable'  => true,
-		'dismiss_msg'  => '',
-		'is_automatic' => false,
-		'message'      => '',
-	);
-
-	tgmpa( $plugins, $config );
-}
-
 if ( ! function_exists( 'control_active_callback' ) ) {
 	/**
 	 * Control active callback
@@ -393,8 +362,7 @@ function tutor_theme_ajax_register_new_user() {
 			)
 		);
 		die();
-	} else {
-		if ( username_exists( $username ) ) {
+	} elseif ( username_exists( $username ) ) {
 			echo json_encode(
 				array(
 					'loggedin' => false,
@@ -405,102 +373,101 @@ function tutor_theme_ajax_register_new_user() {
 				)
 			);
 			die();
-		} elseif ( ! is_email( $email ) ) {
-			echo json_encode(
-				array(
-					'loggedin' => false,
-					'message'  => __(
-						'Email address is not valid.',
-						'tutorstarter'
-					),
-				)
-			);
-			die();
-		} elseif ( email_exists( $email ) ) {
-			echo json_encode(
-				array(
-					'loggedin' => false,
-					'message'  => __(
-						'This Email already exists.',
-						'tutorstarter'
-					),
-				)
-			);
-			die();
-		} elseif ( strlen( $password ) <= 6 ) {
-			echo json_encode(
-				array(
-					'loggedin' => false,
-					'message'  => __(
-						'Password must be 7 characters or more.',
-						'tutorstarter'
-					),
-				)
-			);
-			die();
-		} elseif ( strcmp( $password, $confirm_password ) !== 0 ) {
-			echo json_encode(
-				array(
-					'loggedin' => false,
-					'message'  => __(
-						'Password does not match.',
-						'tutorstarter'
-					),
-				)
-			);
-			die();
-		} else {
-			$user_input = array(
-				'user_login'   => $username,
-				'display_name' => $username,
-				'user_email'   => $email,
-				'user_pass'    => $password,
-			);
+	} elseif ( ! is_email( $email ) ) {
+		echo json_encode(
+			array(
+				'loggedin' => false,
+				'message'  => __(
+					'Email address is not valid.',
+					'tutorstarter'
+				),
+			)
+		);
+		die();
+	} elseif ( email_exists( $email ) ) {
+		echo json_encode(
+			array(
+				'loggedin' => false,
+				'message'  => __(
+					'This Email already exists.',
+					'tutorstarter'
+				),
+			)
+		);
+		die();
+	} elseif ( strlen( $password ) <= 6 ) {
+		echo json_encode(
+			array(
+				'loggedin' => false,
+				'message'  => __(
+					'Password must be 7 characters or more.',
+					'tutorstarter'
+				),
+			)
+		);
+		die();
+	} elseif ( strcmp( $password, $confirm_password ) !== 0 ) {
+		echo json_encode(
+			array(
+				'loggedin' => false,
+				'message'  => __(
+					'Password does not match.',
+					'tutorstarter'
+				),
+			)
+		);
+		die();
+	} else {
+		$user_input = array(
+			'user_login'   => $username,
+			'display_name' => $username,
+			'user_email'   => $email,
+			'user_pass'    => $password,
+		);
 
-			$user_id = wp_insert_user( $user_input );
-			if ( ! is_wp_error( $user_id ) ) {
-				$login_data                  = array();
-				$login_data['user_login']    = $username;
-				$login_data['user_password'] = $password;
-				$login_data['remember']      = false;
+		$user_id = wp_insert_user( $user_input );
+		if ( ! is_wp_error( $user_id ) ) {
+			$login_data                  = array();
+			$login_data['user_login']    = $username;
+			$login_data['user_password'] = $password;
+			$login_data['remember']      = false;
 
-				$user_verify = wp_signon( $login_data, false );
+			$user_verify = wp_signon( $login_data, false );
 
-				if ( is_wp_error( $user_verify ) ) {
-					echo json_encode(
-						array(
-							'loggedin' => false,
-							'message'  => __(
-								'Something went wrong! Please try again later.',
-								'tutorstarter'
-							),
-						)
-					);
-					die();
-				} else {
-					echo json_encode(
-						array(
-							'loggedin' => true,
-							'message'  => __(
-								'Registration successful, redirecting...',
-								'tutorstarter'
-							),
-						)
-					);
-					die();
-				}
-			} else {
+			if ( is_wp_error( $user_verify ) ) {
 				echo json_encode(
 					array(
 						'loggedin' => false,
 						'message'  => __(
-							'Incorrect username or password.',
+							'Something went wrong! Please try again later.',
+							'tutorstarter'
+						),
+					)
+				);
+				die();
+			} else {
+				echo json_encode(
+					array(
+						'loggedin' => true,
+						'message'  => __(
+							'Registration successful, redirecting...',
 							'tutorstarter'
 						),
 					)
 				);
 				die();
 			}
+		} else {
+			echo json_encode(
+				array(
+					'loggedin' => false,
+					'message'  => __(
+						'Incorrect username or password.',
+						'tutorstarter'
+					),
+				)
+			);
+			die();
 		}
 	}
 }
@@ -586,25 +553,24 @@ function tutor_theme_ajax_login() {
  * Tutor starter header cart
  */
 if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
-	function tutor_starter_header_cart() { ?>
-	<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'tutorstarter' ); ?>">
-		<span class="btn-cart">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				height="19"
-				viewBox="0 0 21 19"
-				width="21"
-			>
-				<path
-					d="m18.9375 10.832 1.6523-7.31247c.0704-.25781.0235-.49219-.1406-.70312-.164-.21094-.3867-.31641-.668-.31641h-13.81636l-.3164-1.582031c-.04688-.1875-.15235-.339844-.31641-.457031-.14062-.140626-.30469-.210938-.49219-.210938h-3.62109c-.234375 0-.433594.082031-.597656.246094-.164063.164062-.246094.363281-.246094.597656v.5625c0 .23438.082031.43359.246094.59766.164062.16406.363281.24609.597656.24609h2.46094l2.46093 12.0586c-.30468.1875-.55078.4336-.73828.7383-.16406.3047-.24609.6328-.24609.9843 0 .5391.1875.9961.5625 1.3711.39844.3985.86719.5977 1.40625.5977s.99609-.1992 1.37109-.5977c.39844-.375.59766-.8437.59766-1.4062 0-.5391-.19922-.9961-.59766-1.3711h7.38281c-.3984.375-.5977.832-.5977 1.3711 0 .5625.1876 1.0312.5626 1.4062.3984.3985.8671.5977 1.4062.5977s.9961-.1992 1.3711-.5977c.3984-.375.5977-.832.5977-1.3711 0-.375-.1055-.7148-.3165-1.0195-.1875-.3281-.457-.5742-.8085-.7383l.2109-.8789c.0469-.2578-.0117-.4922-.1758-.7031s-.375-.3164-.6328-.3164h-9.45704l-.21094-1.125h10.30078c.1875 0 .3516-.0586.4922-.1758.1641-.1172.2695-.2812.3164-.4922z"
-					
-				/>
-			</svg>
-				<span>(<?php echo WC()->cart->get_cart_contents_count(); ?>)</span>
-			
-		</span>
-	</a>
+	/**
+	 * Display the header cart.
+	 */
+	function tutor_starter_header_cart() {
+		?>
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>"
+			title="<?php esc_attr_e( 'View your shopping cart', 'tutorstarter' ); ?>">
+			<span class="btn-cart">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="19" viewBox="0 0 21 19" width="21">
+					<path d="m18.9375 10.832 1.6523-7.31247c.0704-.25781.0235-.49219-.1406-.70312-.164-.21094-.3867-.31641-.668-.31641h-13.81636l-.3164-1.582031c-.04688-.1875-.15235-.339844-.31641-.457031-.14062-.140626-.30469-.210938-.49219-.210938h-3.62109c-.234375 0-.433594.082031-.597656.246094-.164063.164062-.246094.363281-.246094.597656v.5625c0 .23438.082031.43359.246094.59766.164062.16406.363281.24609.597656.24609h2.46094l2.46093 12.0586c-.30468.1875-.55078.4336-.73828.7383-.16406.3047-.24609.6328-.24609.9843 0 .5391.1875.9961.5625 1.3711.39844.3985.86719.5977 1.40625.5977s.99609-.1992 1.37109-.5977c.39844-.375.59766-.8437.59766-1.4062 0-.5391-.19922-.9961-.59766-1.3711h7.38281c-.3984.375-.5977.832-.5977 1.3711 0 .5625.1876 1.0312.5626 1.4062.3984.3985.8671.5977 1.4062.5977s.9961-.1992 1.3711-.5977c.3984-.375.5977-.832.5977-1.3711 0-.375-.1055-.7148-.3165-1.0195-.1875-.3281-.457-.5742-.8085-.7383l.2109-.8789c.0469-.2578-.0117-.4922-.1758-.7031s-.375-.3164-.6328-.3164h-9.45704l-.21094-1.125h10.30078c.1875 0 .3516-.0586.4922-.1758.1641-.1172.2695-.2812.3164-.4922z" />
+				</svg>
+				<span>
+					<?php if ( WC()->cart->get_cart_contents_count() ) { ?>
+						(<?php echo esc_html( WC()->cart->get_cart_contents_count() ); ?>)
+					<?php } ?>
+				</span>
+			</span>
+		</a>
 		<?php
 	}
 }
@@ -615,15 +581,26 @@ if ( ! function_exists( 'tutor_starter_header_cart' ) ) {
 add_filter( 'woocommerce_add_to_cart_fragments', 'tutor_starter_cart_link_fragment' );
 
 if ( ! function_exists( 'tutor_starter_cart_link_fragment' ) ) {
+	/**
+	 * Update cart link fragment.
+	 *
+	 * @param array $fragments Fragments to refresh via AJAX.
+	 * @return array Updated fragments.
+	 */
 	function tutor_starter_cart_link_fragment( $fragments ) {
 		global $woocommerce;
 		ob_start();
 		?>
-		
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'tutorstarter' ); ?>">
-			<span>(<?php echo WC()->cart->get_cart_contents_count(); ?>)</span>
+
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>"
+			title="<?php esc_attr_e( 'View your shopping cart', 'tutorstarter' ); ?>">
+			<span class="btn-cart">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="19" viewBox="0 0 21 19" width="21">
+					<path d="m18.9375 10.832 1.6523-7.31247c.0704-.25781.0235-.49219-.1406-.70312-.164-.21094-.3867-.31641-.668-.31641h-13.81636l-.3164-1.582031c-.04688-.1875-.15235-.339844-.31641-.457031-.14062-.140626-.30469-.210938-.49219-.210938h-3.62109c-.234375 0-.433594.082031-.597656.246094-.164063.164062-.246094.363281-.246094.597656v.5625c0 .23438.082031.43359.246094.59766.164062.16406.363281.24609.597656.24609h2.46094l2.46093 12.0586c-.30468.1875-.55078.4336-.73828.7383-.16406.3047-.24609.6328-.24609.9843 0 .5391.1875.9961.5625 1.3711.39844.3985.86719.5977 1.40625.5977s.99609-.1992 1.37109-.5977c.39844-.375.59766-.8437.59766-1.4062 0-.5391-.19922-.9961-.59766-1.3711h7.38281c-.3984.375-.5977.832-.5977 1.3711 0 .5625.1876 1.0312.5626 1.4062.3984.3985.8671.5977 1.4062.5977s.9961-.1992 1.3711-.5977c.3984-.375.5977-.832.5977-1.3711 0-.375-.1055-.7148-.3165-1.0195-.1875-.3281-.457-.5742-.8085-.7383l.2109-.8789c.0469-.2578-.0117-.4922-.1758-.7031s-.375-.3164-.6328-.3164h-9.45704l-.21094-1.125h10.30078c.1875 0 .3516-.0586.4922-.1758.1641-.1172.2695-.2812.3164-.4922z" />
+				</svg>
+				<span>(<?php echo esc_html( WC()->cart->get_cart_contents_count() ); ?>)</span>
+			</span>
 		</a>
-		  
 		<?php
 		$fragments['a.cart-contents'] = ob_get_clean();
 		return $fragments;
@@ -694,13 +671,14 @@ if ( ! function_exists( 'tutorstarter_site_logo' ) ) {
 
 		if ( $logo_img ) :
 			?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img src="<?php echo esc_url( $logo_img ); ?>" <?php echo $logo_retina ? $retina_imgset : ''; ?> alt="<?php printf( esc_attr__( '%s', 'tutorstarter' ), bloginfo( 'name' ) ); ?>" />
-			</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<img src="<?php echo esc_url( $logo_img ); ?>" <?php echo $logo_retina ? $retina_imgset : ''; ?>
+				alt="<?php printf( esc_attr__( '%s', 'tutorstarter' ), bloginfo( 'name' ) ); ?>" />
+		</a>
 		<?php else : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<?php bloginfo( 'title' ); ?>
-			</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<?php bloginfo( 'title' ); ?>
+		</a>
 			<?php
 		endif;
 	}
@@ -717,13 +695,14 @@ if ( ! function_exists( 'tutorstarter_transparent_logo' ) ) {
 
 		if ( $logo ) :
 			?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img src="<?php echo esc_url( $logo ); ?>" <?php echo $logo_retina ? $retina_imgset : ''; ?> alt="<?php printf( esc_attr__( '%s', 'tutorstarter' ), bloginfo( 'name' ) ); ?>" />
-			</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<img src="<?php echo esc_url( $logo ); ?>" <?php echo $logo_retina ? $retina_imgset : ''; ?>
+				alt="<?php printf( esc_attr__( '%s', 'tutorstarter' ), bloginfo( 'name' ) ); ?>" />
+		</a>
 		<?php else : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<?php bloginfo( 'title' ); ?>
-			</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<?php bloginfo( 'title' ); ?>
+		</a>
 			<?php
 		endif;
 	}
@@ -739,7 +718,8 @@ if ( ! function_exists( 'tutorstarter_footer_logo' ) ) {
 		$retina_imgset = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
 		if ( ! empty( $footer_logo ) ) :
 			?>
-			<img height="24" width="92" class="logo-footer" src="<?php echo esc_url( $footer_logo ); ?>" <?php echo $logo_retina ? $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
+			<img height="24" width="92" class="logo-footer" src="<?php echo esc_url( $footer_logo ); ?>"
+				<?php echo $logo_retina ? $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
 			<?php
 		endif;
 	}
@@ -755,7 +735,8 @@ if ( ! function_exists( 'tutorstarter_footer_trans_logo' ) ) {
 		$retina_imgset     = 'srcset="' . esc_url( $logo_retina ) . ' 1x, ' . esc_url( $logo_retina ) . ' 2x"';
 		if ( ! empty( $footer_logo_trans ) ) :
 			?>
-			<img height="24" width="92" class="logo-footer trans" src="<?php echo esc_url( $footer_logo_trans ); ?>" <?php echo $logo_retina ? $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
+			<img height="24" width="92" class="logo-footer trans" src="<?php echo esc_url( $footer_logo_trans ); ?>"
+				<?php echo $logo_retina ? $retina_imgset : ''; ?> alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
 			<?php
 		endif;
 	}
@@ -772,9 +753,55 @@ if ( ! function_exists( 'tutorstarter_footer_trans_logo' ) ) {
 function tutorstarter_skip_link_focus_fix() {
 	// The following is minified via `terser --compress --mangle -- js/skip-link-focus-fix.js`.
 	?>
-	<script>
-		/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
-	</script>
+<script>
+/(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window
+	.addEventListener("hashchange", function() {
+		var t, e = location.hash.substring(1);
+		/^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i
+			.test(t.tagName) || (t.tabIndex = -1), t.focus())
+	}, !1);
+</script>
 	<?php
 }
 add_action( 'wp_print_footer_scripts', 'tutorstarter_skip_link_focus_fix' );
+
+add_action( 'tgmpa_register', 'tutorstarter_register_required_plugins' );
+
+/**
+ * Register the required plugins for this theme.
+ *
+ * In this example, we register five plugins:
+ * - one included with the TGMPA library
+ * - two from an external source, one from an arbitrary source, one from a GitHub repository
+ * - two from the .org repo, where one demonstrates the use of the `is_callable` argument
+ *
+ * The variable passed to tgmpa_register_plugins() should be an array of plugin
+ * arrays.
+ *
+ * This function is hooked into tgmpa_init, which is fired within the
+ * TGM_Plugin_Activation class constructor.
+ */
+function tutorstarter_register_required_plugins() {
+	// Array of plugin arrays. Required keys are name and slug.
+	$plugins = array(
+		array(
+			'name'     => 'Tutor Mate',
+			'slug'     => 'tutormate',
+			'required' => false,
+		),
+	);
+
+	// Array of configuration settings.
+	$config = array(
+		'id'           => 'tutorstarter',
+		'default_path' => '',
+		'menu'         => 'tgmpa-install-plugins',
+		'has_notices'  => true,
+		'dismissable'  => true,
+		'dismiss_msg'  => '',
+		'is_automatic' => false,
+		'message'      => '',
+	);
+
+	tgmpa( $plugins, $config );
+}
