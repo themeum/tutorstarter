@@ -51,7 +51,6 @@ jobs:
       - name: Install WP-CLI
         run: |
           composer global require wp-cli/wp-cli-bundle
-          chmod +x /usr/local/bin/wp
           wp --version --allow-root
 
       - name: Install dist-archive command
