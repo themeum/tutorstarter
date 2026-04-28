@@ -2,8 +2,8 @@ name: Build and Deploy WordPress Theme
 
 on:
   push:
-    tags:
-      - 'v*.*.*'
+    brances:
+      - 'shewa'
 
   workflow_dispatch:
 
