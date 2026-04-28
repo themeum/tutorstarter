@@ -30,3 +30,4 @@ vendor/
 *.sql
 *.sqlite
 package-lock.json
+*.zip
