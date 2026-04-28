@@ -7,10 +7,6 @@ on:
 
   workflow_dispatch:
 
-# ──────────────────────────────────────────────────────────────
-# Toggle dry-run here. 'true' = skip WP.org deploy, only create
-# a GitHub release. 'false' = full build + deploy + release.
-# ──────────────────────────────────────────────────────────────
 env:
   DRY_RUN: 'true'
 
