@@ -87,6 +87,7 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          NODE_OPTIONS: --openssl-legacy-provider
 
       # 6. Verify the zip was produced ------------------------------------
       - name: Verify zip artifact
