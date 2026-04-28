@@ -66,7 +66,7 @@ jobs:
       - name: Install WP-CLI
         shell: bash
         run: |
-          curl -sS -o /usr/local/bin/wp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+          curl -sS -o /usr/local/bin/wp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-2.13.0.phar
           chmod +x /usr/local/bin/wp
           wp --version --allow-root
 
