@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'shewa'
+
 jobs:
   build:
     name: 'Build Theme'
@@ -24,9 +25,9 @@ jobs:
         id: meta
         shell: bash
         run: |
-          RAW=$(grep -m1 -E '^[[:space:]]*\*?[[:space:]]*Version[[:space:]]*:[[:space:]]*' style.css \
-                  | sed -E 's/.*Version[[:space:]]*:[[:space:]]*//' \
-                  | tr -d '[:space:]')
+          RAW=$(grep -m1 -E '^[[:space:]]*\*?[[:space:]]*Version[[:space:]]*:' style.css \
+            | sed -E 's/.*Version[[:space:]]*:[[:space:]]*//' \
+            | tr -d '[:space:]')
 
           if [[ -z "$RAW" ]]; then
             echo "::error::Could not find 'Version:' in style.css"
@@ -64,13 +65,13 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install npm dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: Build theme assets
-        run: 
+      - name: Build assets
+        run: |
           npm run build
-          composer i --no-dev
+          composer install --no-dev
           npm run production
           npm run makepot
         env:
@@ -81,26 +82,25 @@ jobs:
         run: |
           wp dist-archive . "${{ steps.meta.outputs.zip_path }}" --allow-root
 
-      - name: Verify zip artifact
+      - name: Verify zip
         run: |
           if [[ ! -f "${{ steps.meta.outputs.zip_path }}" ]]; then
             echo "::error::Zip not found"
             exit 1
           fi
 
-      - name: Upload build artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: theme-zip
           path: ${{ steps.meta.outputs.zip_path }}
           retention-days: 1
-          if-no-files-found: error
 
   deploy-wporg:
     name: 'Deploy to WordPress.org'
     runs-on: ubuntu-latest
     needs: build
-    : ${{ false }}
+    if: ${{ false }}
 
     env:
       THEME_SLUG: tutorstarter
@@ -114,7 +114,7 @@ jobs:
           sudo apt-get update -q
           sudo apt-get install -y subversion
 
-      - name: Download build artifact
+      - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: theme-zip
@@ -139,7 +139,7 @@ jobs:
           mkdir -p /tmp/theme-files
           unzip -q "/tmp/build/${ZIP_NAME}" -d /tmp/theme-files
 
-      - name: Sync theme files to SVN trunk
+      - name: Sync files to SVN trunk
         run: |
           TRUNK=/tmp/svn/trunk
           find "$TRUNK" -mindepth 1 -delete
@@ -148,7 +148,7 @@ jobs:
           svn status "$TRUNK" | grep '^?' | awk '{print $2}' | xargs -r svn add --force
           svn status "$TRUNK" | grep '^!' | awk '{print $2}' | xargs -r svn delete
 
-      - name: Commit to SVN trunk
+      - name: Commit to SVN
         run: |
           svn commit /tmp/svn/trunk \
             --username "${{ secrets.WPORG_SVN_USERNAME }}" \
@@ -159,15 +159,15 @@ jobs:
   release:
     name: 'Create GitHub Release'
     runs-on: ubuntu-latest
-    needs: [build, deploy-wporg]
+    needs: build
     if: always() && needs.build.result == 'success'
 
     env:
-      VERSION:  ${{ needs.build.outputs.version }}
+      VERSION: ${{ needs.build.outputs.version }}
       ZIP_NAME: ${{ needs.build.outputs.zip_name }}
 
     steps:
-      - name: Download build artifact
+      - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: theme-zip
