@@ -79,7 +79,7 @@ jobs:
 
       # 6. Install npm dependencies ----------------------------------------
       - name: Install npm dependencies
-        run: npm ci --prefer-offline
+        run: npm i
 
       # 7. Build theme assets ---------------------------------------------------
       # Runs: composer i --no-dev && npm run production && npm run makepot && npm run bundle
