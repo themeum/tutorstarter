@@ -72,7 +72,7 @@ jobs:
 
       - name: Install dist-archive command
         shell: bash
-        run: composer require wp-cli/dist-archive-command:^1.0
+        run: composer require wp-cli/dist-archive-command:^2.0
 
       # 5. Set up Node.js ------------------------------------------------
       - name: Set up Node.js
