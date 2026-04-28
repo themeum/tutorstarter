@@ -68,12 +68,29 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Setup minimal WordPress
+        run: |
+          mkdir -p /tmp/wp
+          cd /tmp/wp
+
+          wp core download --allow-root
+          wp config create \
+            --dbname=wp \
+            --dbuser=root \
+            --dbpass=root \
+            --dbhost=127.0.0.1 \
+            --skip-check \
+            --allow-root
+
       - name: Build assets
         run: |
           npm run build
           composer install --no-dev
           npm run production
-          npm run makepot
+          wp i18n make-pot --exclude='node_modules,vendor' . languages/tutorstarter.pot \
+          --path=/tmp/wp \
+          --allow-root
+        
         env:
           NODE_ENV: production
           NODE_OPTIONS: --openssl-legacy-provider
