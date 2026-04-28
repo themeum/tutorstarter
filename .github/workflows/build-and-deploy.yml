@@ -50,7 +50,7 @@ jobs:
 
       - name: Install WP-CLI
         run: |
-          curl -sS -o /usr/local/bin/wp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+          composer global require wp-cli/wp-cli-bundle
           chmod +x /usr/local/bin/wp
           wp --version --allow-root
 
