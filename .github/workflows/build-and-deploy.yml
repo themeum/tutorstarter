@@ -68,10 +68,11 @@ jobs:
         run: |
           curl -sS -o /usr/local/bin/wp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
           chmod +x /usr/local/bin/wp
-          wp --info --allow-root
-      - name: Install dist archive
+          wp --version --allow-root
+
+      - name: Install dist-archive command
         shell: bash
-        run: wp package install wp-cli/dist-archive-command
+        run: wp package install wp-cli/dist-archive-command --allow-root
 
       # 5. Set up Node.js ------------------------------------------------
       - name: Set up Node.js
