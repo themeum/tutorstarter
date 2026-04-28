@@ -4,12 +4,6 @@ on:
   push:
     branches:
       - 'shewa'
-
-  workflow_dispatch:
-
-env:
-  DRY_RUN: 'true'
-
 jobs:
   build:
     name: 'Build Theme'
@@ -106,7 +100,7 @@ jobs:
     name: 'Deploy to WordPress.org'
     runs-on: ubuntu-latest
     needs: build
-    if: ${{ env.DRY_RUN != 'true' }}
+    : ${{ false }}
 
     env:
       THEME_SLUG: tutorstarter
