@@ -58,7 +58,7 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
+          php-version: '8.2'
           tools: composer:v2
           coverage: none
 
@@ -72,7 +72,7 @@ jobs:
 
       - name: Install dist-archive command
         shell: bash
-        run: composer require wp-cli/dist-archive-command --ignore-platform-reqs
+        run: composer require wp-cli/dist-archive-c ommand --ignore-platform-reqs
 
       # 5. Set up Node.js ------------------------------------------------
       - name: Set up Node.js
