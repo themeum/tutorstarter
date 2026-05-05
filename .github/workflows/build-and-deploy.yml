@@ -2,8 +2,8 @@ name: Build and Deploy WordPress Theme
 
 on:
   push:
-    branches:
-      - 'shewa'
+    tags:
+      - '*'
 
 jobs:
   build:
