@@ -194,6 +194,7 @@ jobs:
         run: |
           TAG="${VERSION}"
           gh release create "$TAG" \
+            --repo "${GITHUB_REPOSITORY}" \
             --title "TutorStarter ${VERSION}" \
             "/tmp/release/${ZIP_NAME}" \
-          || gh release upload "$TAG" "/tmp/release/${ZIP_NAME}" --clobber
+          || gh release upload "$TAG" "/tmp/release/${ZIP_NAME}" --repo "${GITHUB_REPOSITORY}" --clobber
