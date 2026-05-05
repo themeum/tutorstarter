@@ -171,6 +171,14 @@ jobs:
             --no-auth-cache --non-interactive \
             -m "Deploy version ${THEME_VERSION}"
 
+      - name: Create SVN tag
+        run: |
+          svn copy "${SVN_BASE}/${THEME_SLUG}/trunk" "${SVN_BASE}/${THEME_SLUG}/tags/${THEME_VERSION}" \
+            --username "${{ secrets.WPORG_SVN_USERNAME }}" \
+            --password "${{ secrets.WPORG_SVN_PASSWORD }}" \
+            --no-auth-cache --non-interactive \
+            -m "Tag version ${THEME_VERSION}"
+
   release:
     name: 'Create GitHub Release'
     runs-on: ubuntu-latest
