@@ -116,9 +116,9 @@ header.header-default {
 			padding-bottom: 8px;
 			margin-bottom: 8px;
 		}
-		// li a {
-		// 	color: #161616;
-		// }
+		li a {
+			color: #161616;
+		}
 	}
 }
 
@@ -132,9 +132,10 @@ header.header-default {
 	flex-direction: row;
 	gap: 10px;
 	align-items: center;
+	text-transform: capitalize;
 }
 .tutor-header-profile-menu-items ul li a:hover {
-	// color: #1950d1;
+	color: #1950d1;
 	color: var(--navDefaultHoverColor);
 	svg {
 		color: var(--navDefaultHoverColor);

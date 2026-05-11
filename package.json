@@ -10,7 +10,7 @@
 		"prod": "npm run production",
 		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"makepot": "wp i18n make-pot --exclude='node_modules,vendor' . languages/tutorstarter.pot",
-		"bundle": "wp dist-archive . . && mv tutorstarter.1.0.0.zip tutorstarter-$(grep 'Version:' style.css | awk '{print $3}').zip && mv tutorstarter-*.zip ../",
+		"bundle": "version=$(grep 'Version:' style.css | awk '{print $3}') && out_zip=\"$(pwd)/../tutorstarter-${version}.zip\" && staging_dir=$(mktemp -d) && rsync -a ./ \"$staging_dir/tutorstarter/\" --exclude-from='.distignore' && (cd \"$staging_dir\" && zip -qr \"$out_zip\" tutorstarter) && rm -rf \"$staging_dir\"",
 		"lint": "eslint \"./**/*.js\"",
 		"build": "composer i --no-dev && npm run production && npm run makepot && npm run bundle"
 	},
