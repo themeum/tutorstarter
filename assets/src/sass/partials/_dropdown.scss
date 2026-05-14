@@ -9,6 +9,33 @@ header.header-default {
 	position: relative;
 	align-items: center;
 	margin-left: 15px !important;
+	.tutor-avatar {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: nowrap;
+		position: relative;
+		border-radius: 1000px;
+		overflow: hidden;
+		background-color: var(--tutor-surface-brand-quaternary, #e4ebfc);
+		color: var(--tutor-text-primary, #0c111d);
+		flex-shrink: 0;
+		user-select: none;
+		width: 32px;
+		height: 32px;
+		box-shadow: none;
+		.tutor-avatar-text {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 500;
+			font-size: 0.75rem;
+			line-height: 1.25rem;
+			color: var(--tutor-text-primary, #0c111d);
+			background-color: var(--tutor-surface-brand-quaternary, #e4ebfc);
+		}
+	}
 }
 .tutor-header-profile-content {
 	padding-left: 7px;

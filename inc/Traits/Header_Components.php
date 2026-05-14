@@ -30,7 +30,6 @@ trait Header_Components {
 			return; // @todo: cross check
 		}
 
-		// $default_menus = apply_filters( 'tutor_dashboard/nav_items', self::default_menus() );
 		$default_menus = self::default_menus();
 		$current_user  = wp_get_current_user();
 		?>
