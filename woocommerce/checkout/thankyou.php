@@ -4,7 +4,7 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 8.1.0
+ * @version 10.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<?php else : ?>
 
-				<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'tutorstarter' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<p><?php wc_get_template( 'checkout/order-received.php', array( 'order' => $order ) ); ?></p>
 
 				<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
 
@@ -73,7 +73,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php else : ?>
 
-			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'tutorstarter' ), null ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			<p><?php wc_get_template( 'checkout/order-received.php', array( 'order' => false ) ); ?></p>
 
 		<?php endif; ?>
 

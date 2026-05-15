@@ -4,12 +4,13 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 3.5.0
+ * @version 10.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
 $order_button_text = __( 'Complete Payment', 'tutorstarter' );
 ?>
 <div class="checkout-top-spacing"></div>
@@ -22,7 +23,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 }
 
 ?>
-<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data" aria-label="<?php echo esc_attr__( 'Checkout', 'tutorstarter' ); ?>">
 	<?php if ( $checkout->get_checkout_fields() ) : ?>
 
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>

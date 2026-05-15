@@ -23,7 +23,7 @@
 
 /* Main CSS */
 .navbar {
-	max-width: 1170px;
+	max-width: 1280px;
 	margin: 0 auto;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -35,6 +35,7 @@
 	grid-auto-flow: column;
 	grid-gap: 30px;
 	align-items: center;
+	justify-content: space-between;
 	a {
 		text-decoration: none;
 	}
@@ -70,6 +71,7 @@
 			line-height: 1.67;
 			text-align: center;
 			letter-spacing: 0.3px;
+			gap: 3px;
 			span {
 				margin-left: 2px;
 				color: var(--navDefaultColor);
@@ -79,7 +81,7 @@
 			}
 		}
 		a.btn-getstarted {
-			padding: 12px 28px;
+			padding: 9px 28px;
 			font-style: normal;
 			font-family: inherit;
 			display: inline-block;
@@ -110,7 +112,8 @@
 	}
 	.navbar-brand {
 		img {
-			max-width: unset;
+			// max-width: unset;
+			max-height: 30px;
 		}
 	}
 	.navbar-nav {
@@ -631,11 +634,12 @@
 }
 
 .rtl .tutor-header-profile-menu-items .tutor-header-submenu {
-	position: absolute;
-	z-index: 999;
-	width: 698px;
-	top: 50px;
-	right: -260%;
+	right: unset;
+    left: -35px;
+}
+
+.rtl .tutor-submenu-links ul .profile-name {
+	text-align: right;
 }
 
 .rtl .tutor-submenu-login-section,
