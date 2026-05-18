@@ -2,17 +2,9 @@
 /**
  * Checkout Form
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/checkout/form-checkout.php.
- *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
- *
- * @see https://woocommerce.com/document/template-structure/
+ * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 9.4.0
+ * @version 10.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -22,8 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $order_button_text = __( 'Complete Payment', 'tutorstarter' );
 ?>
 <div class="checkout-top-spacing"></div>
-<?php
-do_action( 'woocommerce_before_checkout_form', $checkout );
+<?php do_action( 'woocommerce_before_checkout_form', $checkout );
 
 // If checkout registration is disabled and not logged in, the user cannot checkout.
 if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_required() && ! is_user_logged_in() ) {
@@ -92,10 +83,8 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 						</div><!-- .cart-product-price -->
 					</div><!-- .cart-product-actions -->
 				</div><!-- .cart-contents -->
-				<?php
-						}
-					}
-				?>
+				<?php }
+			} ?>
 			</div>
 		</div><!-- .checkout-payment -->
 	</div>
@@ -113,7 +102,13 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 				<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 			</div>
 			
+			<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
+	
 			<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+	
+			<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
+	
+			<?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
 		</div>
 	</div>
 </div><!-- .tutorstarter-checkout-container -->
