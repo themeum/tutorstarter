@@ -2,9 +2,17 @@
 /**
  * Cart Page
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 10.0.0
+ * @version 10.1.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -19,8 +27,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 			<?php
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-				$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
-				$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+				$_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+				$product_id   = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+				$product_name = apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key );
 
 				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
@@ -48,7 +57,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					<div class="cart-product-title">
 						<?php
 						if ( ! $product_permalink ) {
-							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
+							echo wp_kses_post( $product_name . '&nbsp;' );
 						} else {
 							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
 						}
@@ -81,9 +90,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 							echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 								'woocommerce_cart_item_remove_link',
 								sprintf(
-									'<a href="%s" aria-label="%s" data-product_id="%s" data-product_sku="%s">%s</a>',
+									'<a role="button" href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">%s</a>',
 									esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
-									esc_html__( 'Remove this item', 'tutorstarter' ),
+									/* translators: %s is the product name in the cart. */
+									esc_attr( sprintf( __( 'Remove %s from cart', 'tutorstarter' ), wp_strip_all_tags( $product_name ) ) ),
 									esc_attr( $product_id ),
 									esc_attr( $_product->get_sku() ),
 									esc_html__( 'Remove', 'tutorstarter' )
