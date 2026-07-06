@@ -139,14 +139,14 @@ jobs:
         run: |
           SVN_URL="${SVN_BASE}/${THEME_SLUG}"
           svn checkout --depth immediates \
-            --username "${{ secrets.WPORG_SVN_USERNAME }}" \
-            --password "${{ secrets.WPORG_SVN_PASSWORD }}" \
+            --username "${{ secrets.SVN_USERNAME }}" \
+            --password "${{ secrets.SVN_PASSWORD }}" \
             --no-auth-cache --non-interactive \
             "${SVN_URL}" /tmp/svn
 
           svn update /tmp/svn/trunk --set-depth infinity \
-            --username "${{ secrets.WPORG_SVN_USERNAME }}" \
-            --password "${{ secrets.WPORG_SVN_PASSWORD }}" \
+            --username "${{ secrets.SVN_USERNAME }}" \
+            --password "${{ secrets.SVN_PASSWORD }}" \
             --no-auth-cache --non-interactive
 
       - name: Unzip theme
@@ -166,16 +166,16 @@ jobs:
       - name: Commit to SVN
         run: |
           svn commit /tmp/svn/trunk \
-            --username "${{ secrets.WPORG_SVN_USERNAME }}" \
-            --password "${{ secrets.WPORG_SVN_PASSWORD }}" \
+            --username "${{ secrets.SVN_USERNAME }}" \
+            --password "${{ secrets.SVN_PASSWORD }}" \
             --no-auth-cache --non-interactive \
             -m "Deploy version ${THEME_VERSION}"
 
       - name: Create SVN tag
         run: |
           svn copy "${SVN_BASE}/${THEME_SLUG}/trunk" "${SVN_BASE}/${THEME_SLUG}/tags/${THEME_VERSION}" \
-            --username "${{ secrets.WPORG_SVN_USERNAME }}" \
-            --password "${{ secrets.WPORG_SVN_PASSWORD }}" \
+            --username "${{ secrets.SVN_USERNAME }}" \
+            --password "${{ secrets.SVN_PASSWORD }}" \
             --no-auth-cache --non-interactive \
             -m "Tag version ${THEME_VERSION}"
 
