@@ -115,13 +115,15 @@ jobs:
     name: 'Deploy to WordPress.org'
     runs-on: ubuntu-latest
     needs: build
-    if: ${{ true }}
+    if: ${{ false }}
 
     env:
       THEME_SLUG: tutorstarter
       THEME_VERSION: ${{ needs.build.outputs.version }}
       ZIP_NAME: ${{ needs.build.outputs.zip_name }}
       SVN_BASE: https://themes.svn.wordpress.org
+      SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+      SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
 
     steps:
       - name: Install Subversion
@@ -135,49 +137,71 @@ jobs:
           name: theme-zip
           path: /tmp/build
 
-      - name: Checkout SVN trunk
+      # Theme SVN has NO trunk/tags. Layout is /<slug>/<version>/ only,
+      # so we deploy by committing a brand-new version directory.
+      - name: Ensure version does not already exist in SVN
         run: |
-          SVN_URL="${SVN_BASE}/${THEME_SLUG}"
-          svn checkout --depth immediates \
-            --username "${{ secrets.SVN_USERNAME }}" \
-            --password "${{ secrets.SVN_PASSWORD }}" \
+          set -euo pipefail
+          if svn ls "${SVN_BASE}/${THEME_SLUG}/${THEME_VERSION}/" \
+              --username "${SVN_USERNAME}" --password "${SVN_PASSWORD}" \
+              --no-auth-cache --non-interactive > /dev/null 2>&1; then
+            echo "::error::Version ${THEME_VERSION} already exists in SVN. Bump the version in style.css and re-tag."
+            exit 1
+          fi
+
+      - name: Checkout SVN repository root (empty)
+        run: |
+          set -euo pipefail
+          svn checkout --depth empty \
+            --username "${SVN_USERNAME}" \
+            --password "${SVN_PASSWORD}" \
             --no-auth-cache --non-interactive \
-            "${SVN_URL}" /tmp/svn
+            "${SVN_BASE}/${THEME_SLUG}" /tmp/svn
 
-          svn update /tmp/svn/trunk --set-depth infinity \
-            --username "${{ secrets.SVN_USERNAME }}" \
-            --password "${{ secrets.SVN_PASSWORD }}" \
-            --no-auth-cache --non-interactive
-
-      - name: Unzip theme
+      - name: Unzip and validate theme
         run: |
+          set -euo pipefail
           mkdir -p /tmp/theme-files
           unzip -q "/tmp/build/${ZIP_NAME}" -d /tmp/theme-files
 
-      - name: Sync files to SVN trunk
-        run: |
-          TRUNK=/tmp/svn/trunk
-          find "$TRUNK" -mindepth 1 -delete
-          cp -r /tmp/theme-files/. "$TRUNK/"
+          # dist-archive zips contain a single top-level folder; resolve it
+          if [[ -f /tmp/theme-files/style.css ]]; then
+            SRC=/tmp/theme-files
+          else
+            SRC=$(find /tmp/theme-files -mindepth 1 -maxdepth 1 -type d | head -n1)
+          fi
 
-          svn status "$TRUNK" | grep '^?' | awk '{print $2}' | xargs -r svn add --force
-          svn status "$TRUNK" | grep '^!' | awk '{print $2}' | xargs -r svn delete
+          if [[ -z "${SRC}" || ! -f "${SRC}/style.css" ]]; then
+            echo "::error::style.css not found in the built zip; refusing to deploy."
+            exit 1
+          fi
 
-      - name: Commit to SVN
+          ZIP_VERSION=$(grep -m1 -E '^[[:space:]]*\*?[[:space:]]*Version[[:space:]]*:' "${SRC}/style.css" \
+            | sed -E 's/.*Version[[:space:]]*:[[:space:]]*//' | tr -d '[:space:]')
+          if [[ "${ZIP_VERSION}" != "${THEME_VERSION}" ]]; then
+            echo "::error::Version mismatch: zip has '${ZIP_VERSION}' but expected '${THEME_VERSION}'."
+            exit 1
+          fi
+
+          echo "SRC=${SRC}" >> "$GITHUB_ENV"
+
+      - name: Stage new version directory
         run: |
-          svn commit /tmp/svn/trunk \
-            --username "${{ secrets.SVN_USERNAME }}" \
-            --password "${{ secrets.SVN_PASSWORD }}" \
+          set -euo pipefail
+          VERSION_DIR="/tmp/svn/${THEME_VERSION}"
+          mkdir "${VERSION_DIR}"
+          cp -R "${SRC}/." "${VERSION_DIR}/"
+          svn add "${VERSION_DIR}"
+          svn status /tmp/svn
+
+      - name: Commit new version to SVN
+        run: |
+          set -euo pipefail
+          svn commit /tmp/svn \
+            --username "${SVN_USERNAME}" \
+            --password "${SVN_PASSWORD}" \
             --no-auth-cache --non-interactive \
-            -m "Deploy version ${THEME_VERSION}"
-
-      - name: Create SVN tag
-        run: |
-          svn copy "${SVN_BASE}/${THEME_SLUG}/trunk" "${SVN_BASE}/${THEME_SLUG}/tags/${THEME_VERSION}" \
-            --username "${{ secrets.SVN_USERNAME }}" \
-            --password "${{ secrets.SVN_PASSWORD }}" \
-            --no-auth-cache --non-interactive \
-            -m "Tag version ${THEME_VERSION}"
+            -m "Release ${THEME_SLUG} ${THEME_VERSION}"
 
   release:
     name: 'Create GitHub Release'
