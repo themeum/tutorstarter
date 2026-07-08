@@ -16,7 +16,9 @@ reactjs
 assets/src
 inc/Custom/Schema/schemajs
 phpcs.xml
+phpcs.xml.dist
 readme.md
+README.md
 composer.json
 composer.lock
 node_modules

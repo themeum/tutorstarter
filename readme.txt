@@ -18,8 +18,8 @@ Tutor Starter is a free WordPress LMS theme powered by Tutor LMS, the popular eL
 3. Install and activate
 
 == Copyright ==
-Tutor Starter WordPress theme, Copyright 2021 Themeum
-Tutor Starter is distributed under the terms of the GNU GPLv3 or later
+TutorStarter WordPress Theme, Copyright (C) 2021-2026 Themeum
+TutorStarter is distributed under the terms of the GNU GPLv3 or later
 GitHub Repo: https://github.com/themeum/tutorstarter/
 
 == Screenshots ==

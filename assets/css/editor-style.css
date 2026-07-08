@@ -1,0 +1,74 @@
+/*
+ * Block editor styles for TutorStarter.
+ *
+ * Keeps the editing experience visually consistent with the
+ * front end (typography, colors, and the theme color palette).
+ */
+
+.editor-styles-wrapper {
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	font-size: 16px;
+	line-height: 1.7;
+	color: #57586e;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+	font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	font-weight: 700;
+	color: #0a083b;
+}
+
+.editor-styles-wrapper a {
+	color: #1950d1;
+}
+
+.editor-styles-wrapper blockquote {
+	border-left: 4px solid #175cff;
+	padding-left: 1em;
+}
+
+/* Theme color palette classes. */
+.editor-styles-wrapper .has-medium-blue-color {
+	color: #175cff;
+}
+
+.editor-styles-wrapper .has-medium-blue-background-color {
+	background-color: #175cff;
+}
+
+.editor-styles-wrapper .has-deep-navyblue-color {
+	color: #0a083b;
+}
+
+.editor-styles-wrapper .has-deep-navyblue-background-color {
+	background-color: #0a083b;
+}
+
+.editor-styles-wrapper .has-off-white-color {
+	color: #f7f9fa;
+}
+
+.editor-styles-wrapper .has-off-white-background-color {
+	background-color: #f7f9fa;
+}
+
+.editor-styles-wrapper .has-bluish-dark-grey-color {
+	color: #57586e;
+}
+
+.editor-styles-wrapper .has-bluish-dark-grey-background-color {
+	background-color: #57586e;
+}
+
+.editor-styles-wrapper .has-light-grey-color {
+	color: #eaf1f8;
+}
+
+.editor-styles-wrapper .has-light-grey-background-color {
+	background-color: #eaf1f8;
+}
