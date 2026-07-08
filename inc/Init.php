@@ -28,6 +28,7 @@ final class Init {
 			Setup\Menus::class,
 			Core\Sidebar::class,
 			Custom\Extras::class,
+			Custom\Block_Extras::class,
 			Setup\Enqueue::class,
 			Setup\Dashboard::class,
 			Custom\Schema\Schema::class,

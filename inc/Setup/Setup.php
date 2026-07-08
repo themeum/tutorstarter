@@ -39,6 +39,7 @@ class Setup {
 		add_theme_support( 'woocommerce' );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'automatic-feed-links' );
+		add_theme_support( 'responsive-embeds' );
 		add_theme_support( 'wc-product-gallery-zoom' );
 		add_theme_support( 'wc-product-gallery-slider' );
 		add_theme_support( 'wc-product-gallery-lightbox' );
@@ -148,6 +149,27 @@ class Setup {
 				)
 			)
 		);
+
+		// Custom header support.
+		add_theme_support(
+			'custom-header',
+			apply_filters(
+				'tutorstarter_custom_header_args',
+				array(
+					'default-image'      => '',
+					'default-text-color' => '0A083B',
+					'width'              => 1920,
+					'height'             => 500,
+					'flex-height'        => true,
+					'flex-width'         => true,
+					'header-text'        => false,
+				)
+			)
+		);
+
+		// Editor styles, so the block editor matches the front end output.
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'assets/css/editor-style.css' );
 
 		// Activate Post formats.
 		add_theme_support(
