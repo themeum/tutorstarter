@@ -660,6 +660,43 @@ function tutorstarter_header_switcher() {
 }
 
 /**
+ * Normalize plugin option values for WordPress activation APIs.
+ *
+ * Some environments can short-circuit `active_plugins` through filters and
+ * return a string instead of the array shape expected by core.
+ *
+ * @param mixed $value Option value.
+ *
+ * @return mixed
+ */
+function tutorstarter_normalize_active_plugins_option( $value ) {
+	if ( false === $value || is_array( $value ) ) {
+		return $value;
+	}
+
+	$value = maybe_unserialize( $value );
+
+	if ( is_array( $value ) ) {
+		return $value;
+	}
+
+	if ( is_string( $value ) ) {
+		$value = trim( $value );
+		if ( '' === $value ) {
+			return array();
+		}
+		if ( false !== strpos( $value, ',' ) ) {
+			return array_filter( array_map( 'trim', explode( ',', $value ) ) );
+		}
+		return array( $value );
+	}
+
+	return (array) $value;
+}
+add_filter( 'pre_option_active_plugins', 'tutorstarter_normalize_active_plugins_option', 999 );
+add_filter( 'option_active_plugins', 'tutorstarter_normalize_active_plugins_option', 999 );
+
+/**
  * Site logo parser
  */
 if ( ! function_exists( 'tutorstarter_site_logo' ) ) {
