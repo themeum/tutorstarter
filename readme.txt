@@ -84,6 +84,11 @@ If you found any bugs or issues, please let us know by posting on the support se
 
 == Changelog ==
 
+= 4.0.2 =
+Fix: Normalized `active_plugins` option values for better compatibility with WordPress activation APIs in filtered environments.
+Fix: Updated the header profile dropdown implementation to use the shared component handler, improved its alignment, and prevented it from loading on Tutor dashboard pages.
+Update: Replaced the preview demo URL with the current Tutor LMS University demo link.
+
 = 4.0.1 =
 
 Fix: WP Theme standard issues has been fixed.
