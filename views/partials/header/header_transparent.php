@@ -99,8 +99,7 @@ use Tutor_Starter\Custom\Component_Handler;
 					?>
 					<div class="tutor-landing-explore">
 						<span><?php esc_html_e( 'Want to Explore!', 'tutorstarter' ); ?></span>
-						<a class="tutor-version-new-btn"
-							href="<?php echo esc_url( home_url() . '/login' ); ?>"><?php esc_html_e( 'Instant Login', 'tutorstarter' ); ?></a>
+						<a class="tutor-version-new-btn" href="<?php echo esc_url( home_url() . '/login' ); ?>"><?php esc_html_e( 'Instant Login', 'tutorstarter' ); ?></a>
 					</div>
 					<?php
 				}
