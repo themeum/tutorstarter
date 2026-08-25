@@ -2,14 +2,14 @@
 Contributors: themeum
 Tags: education, e-commerce, blog, custom-logo, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, footer-widgets, left-sidebar, right-sidebar
 Requires at least: 5.0
-Tested up to: 7.0
-Stable tag: 4.0.1
+Tested up to: 7.1
+Stable tag: 4.0.2
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
-Tutor Starter is a free WordPress LMS theme powered by Tutor LMS, the popular eLearning plugin for WordPress. It is designed to let Tutor LMS take center stage while also letting you pick what feels right. Tutor Starter is created with the same Unified Design System from Tutor LMS making it the perfect companion eLearning theme for Tutor LMS. Tutor Starter is also highly specialized for speed and efficiency, with all of its components optimized to give your eLearning website a great score on Google's PageSpeed. Tutor Starter pages are also schema ready and SEO optimized to make ranking on search engines as easy as pie! It also boasts an impressive blog single page for perfect readability. With full support for both Elementor and Gutenberg, Tutor Starter hopes to cater to the largest audience of both classic page builders and modern Gutenberg based builders. It comes with customizer settings for headers, footers, and everything in between. With several header and footer variations, advanced typography settings, and contextual page settings, create the eLearning website of your dreams with this free LMS theme. Tutor Starter features 3 modern and pre-built home layouts with fully functioning inner pages for both Elementor and Gutenberg to let you get started in no time. Tutor Starter also features a clean and light one-click demo importer to import all these pre-built home layouts for Gutenberg and Elementor. This, along with deep ties with Tutor LMS makes it a no-brainer WordPress LMS theme. Please Check theme demo here https://preview.tutorlms.com/
+Tutor Starter is a free WordPress LMS theme powered by Tutor LMS, the popular eLearning plugin for WordPress. It is designed to let Tutor LMS take center stage while also letting you pick what feels right. Tutor Starter is created with the same Unified Design System from Tutor LMS making it the perfect companion eLearning theme for Tutor LMS. Tutor Starter is also highly specialized for speed and efficiency, with all of its components optimized to give your eLearning website a great score on Google's PageSpeed. Tutor Starter pages are also schema ready and SEO optimized to make ranking on search engines as easy as pie! It also boasts an impressive blog single page for perfect readability. With full support for both Elementor and Gutenberg, Tutor Starter hopes to cater to the largest audience of both classic page builders and modern Gutenberg based builders. It comes with customizer settings for headers, footers, and everything in between. With several header and footer variations, advanced typography settings, and contextual page settings, create the eLearning website of your dreams with this free LMS theme. Tutor Starter features 3 modern and pre-built home layouts with fully functioning inner pages for both Elementor and Gutenberg to let you get started in no time. Tutor Starter also features a clean and light one-click demo importer to import all these pre-built home layouts for Gutenberg and Elementor. This, along with deep ties with Tutor LMS makes it a no-brainer WordPress LMS theme. Please Check theme demo here https://tutorlms.io/university
 
 == Installation ==
 = From within WordPress =
@@ -83,6 +83,12 @@ If you found any bugs or issues, please let us know by posting on the support se
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 4.0.2 =
+Fix: Updated the header profile dropdown implementation to use the shared component handler, improved its alignment, and prevented it from loading on Tutor dashboard pages.
+Update: Refined WooCommerce cart and checkout template compatibility, including improved cart item validation and payment method accessibility.
+Update: Replaced the preview demo URL with the current Tutor LMS University demo link.
+Fix: Normalized `active_plugins` option values for better compatibility with WordPress activation APIs in filtered environments.
 
 = 4.0.1 =
 

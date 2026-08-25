@@ -4,15 +4,7 @@
  */
 
 use Tutor\Ecommerce\CartController;
-use Tutor_Starter\Traits\Header_Components;
-
-/**
- * For php8.1&8.2 compatibility
- */
-class Header_COMP {
-	use Header_Components;
-}
-$obj = new Header_COMP();
+use Tutor_Starter\Custom\Component_Handler;
 ?>
 
 <header class="header-default">
@@ -120,10 +112,10 @@ $obj = new Header_COMP();
 				}
 			}
 			if ( is_user_logged_in() ) {
-				if ( class_exists( '\TUTOR\Utils' ) && is_user_logged_in() ) {
+				if ( class_exists( '\TUTOR\Utils' ) && ! tutor_utils()->is_dashboard_page() ) {
 					?>
 					<div class="tutor-header-profile-menu-items">
-						<?php $obj->tutor_multi_column_dropdown(); ?>
+						<?php Component_Handler::tutor_multi_column_dropdown(); ?>
 					</div> <!-- .tutor-header-profile-menu -->
 					<?php
 				}

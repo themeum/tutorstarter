@@ -41,7 +41,7 @@ trait Header_Components {
 		<div class="tutor-header-profile-content">
 			<div class="tutor-header-profile-submenu">
 				<?php echo $profile_pic; ?>
-				<span role="button" class="d-flex align-items-center gap-1 fs-5 py-3 text-black-80" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+				<span role="button" class="d-flex tutor-flex align-items-center gap-1 fs-5 py-3 text-black-80" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
 					<?php echo esc_html( ucfirst( $current_user->display_name ) ); ?>
 					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M5.11285 6.29697L8.17285 9.3503L11.2329 6.29697L12.1729 7.23697L8.17285 11.237L4.17285 7.23697L5.11285 6.29697Z" fill="currentColor"></path>

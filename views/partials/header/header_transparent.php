@@ -4,15 +4,7 @@
  */
 
 use Tutor\Ecommerce\CartController;
-use Tutor_Starter\Traits\Header_Components;
-
-/**
- * For php8.1&8.2 compatibility
- */
-class Header_COMP {
-	use Header_Components;
-}
-$obj = new Header_COMP();
+use Tutor_Starter\Custom\Component_Handler;
 ?>
 
 <!-- Search popup for .header-transparent -->
@@ -107,8 +99,7 @@ $obj = new Header_COMP();
 					?>
 					<div class="tutor-landing-explore">
 						<span><?php esc_html_e( 'Want to Explore!', 'tutorstarter' ); ?></span>
-						<a class="tutor-version-new-btn"
-							href="<?php echo esc_url( home_url() . '/login' ); ?>"><?php esc_html_e( 'Instant Login', 'tutorstarter' ); ?></a>
+						<a class="tutor-version-new-btn" href="<?php echo esc_url( home_url() . '/login' ); ?>"><?php esc_html_e( 'Instant Login', 'tutorstarter' ); ?></a>
 					</div>
 					<?php
 				}
@@ -121,9 +112,9 @@ $obj = new Header_COMP();
 						href="<?php echo esc_url( home_url() . '/login' ); ?>"><?php esc_html_e( 'Instant Login', 'tutorstarter' ); ?></a>
 				</div>
 			<?php endif; ?>
-			<?php if ( class_exists( '\TUTOR\Utils' ) && is_user_logged_in() ) : ?>
+			<?php if ( class_exists( '\TUTOR\Utils' ) && is_user_logged_in() && ! tutor_utils()->is_dashboard_page() ) : ?>
 				<div class="tutor-header-profile-menu-items">
-					<?php $obj->tutor_multi_column_dropdown(); ?>
+					<?php Component_Handler::tutor_multi_column_dropdown(); ?>
 				</div><!-- .tutor-header-profile-menu -->
 			<?php endif; ?>
 			<?php if ( ! is_user_logged_in() || is_customize_preview() ) : ?>
