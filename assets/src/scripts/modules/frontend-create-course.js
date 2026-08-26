@@ -10,7 +10,7 @@ async function ajaxHandler(formData) {
 		});
 		return post;
 	} catch (error) {
-		tutor_toast(__('Operation failed', 'tutor'), error, 'error');
+        tutor_toast(__('Operation failed', 'tutorstarter'), error, 'error');
 	}
 }
 
@@ -21,7 +21,7 @@ if(createNewCourse) {
         
         createNewCourse.setAttribute('disabled', 'disabled');
         createNewCourse.classList.add('is-loading');
-        const defaultErrorMessage = __('Something went wrong, please try again', 'tutor');
+        const defaultErrorMessage = __('Something went wrong, please try again', 'tutorstarter');
         const formData = new FormData();
         formData.set('action', 'tutor_create_new_draft_course');
         formData.set(window.tutor_get_nonce_data(true).key, window.tutor_get_nonce_data(true).value);
@@ -34,13 +34,13 @@ if(createNewCourse) {
                 window.location = response.data.url;
             } else {
                 if (response.data.error_message) {
-                    tutor_toast(__('Failed', 'tutor'), response.data.error_message, 'error');
+                    tutor_toast(__('Failed', 'tutorstarter'), response.data.error_message, 'error');
                 } else {
-                    tutor_toast(__('Failed', 'tutor'), defaultErrorMessage, 'error');
+                    tutor_toast(__('Failed', 'tutorstarter'), defaultErrorMessage, 'error');
                 }
             }
         } else {
-            tutor_toast(__('Failed', 'tutor'), defaultErrorMessage, 'error');
+            tutor_toast(__('Failed', 'tutorstarter'), defaultErrorMessage, 'error');
         }
 
     });
