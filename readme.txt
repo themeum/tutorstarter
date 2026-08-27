@@ -3,7 +3,7 @@ Contributors: themeum
 Tags: education, e-commerce, blog, custom-logo, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, footer-widgets, left-sidebar, right-sidebar
 Requires at least: 5.0
 Tested up to: 7.1
-Stable tag: 4.0.2
+Stable tag: 4.0.3
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -84,7 +84,7 @@ If you found any bugs or issues, please let us know by posting on the support se
 
 == Changelog ==
 
-= 4.0.2 =
+= 4.0.3 =
 Fix: Updated the header profile dropdown implementation to use the shared component handler, improved its alignment, and prevented it from loading on Tutor dashboard pages.
 Update: Refined WooCommerce cart and checkout template compatibility, including improved cart item validation and payment method accessibility.
 Update: Replaced the preview demo URL with the current Tutor LMS University demo link.
