@@ -121,6 +121,8 @@ header.header-sticky {
 
 header.header-default {
 	background: var(--headerDefaultBg);
+	position: relative;
+	z-index: 1;
 	.tutor-header-profile-submenu {
 		span[role='button'] {
 			color: var(--navDefaultColor);
