@@ -49,7 +49,7 @@ class Header {
 			array(
 				'selector'            => '.navbar-brand',
 				'container_inclusive' => true,
-				'render_callback'     => function() {
+				'render_callback'     => function () {
 					return the_custom_logo();
 				},
 			)
@@ -149,23 +149,23 @@ class Header {
 					'label'   => esc_html__( 'Select Header Type', 'tutorstarter' ),
 					'section' => 'tutorstarter_header_section',
 					'choices' => array(
-						'header_default'   => array(
+						'header_default'          => array(
 							'name'  => esc_html__( 'Header Default', 'tutorstarter' ),
 							'image' => get_template_directory_uri() . '/assets/dist/images/header-default.svg',
 						),
-						'header_transparent'   => array(
+						'header_transparent'      => array(
 							'name'  => esc_html__( 'Header Transparent', 'tutorstarter' ),
 							'image' => get_template_directory_uri() . '/assets/dist/images/header-transparent.svg',
 						),
-						'header_right'   => array(
+						'header_right'            => array(
 							'name'  => esc_html__( 'Header with Search Bar', 'tutorstarter' ),
 							'image' => get_template_directory_uri() . '/assets/dist/images/header-right.svg',
 						),
-						'header_fullwidth'   => array(
+						'header_fullwidth'        => array(
 							'name'  => esc_html__( 'Header Fullwidth', 'tutorstarter' ),
 							'image' => get_template_directory_uri() . '/assets/dist/images/header-full-width.svg',
 						),
-						'header_fullwidth_center'   => array(
+						'header_fullwidth_center' => array(
 							'name'  => esc_html__( 'Header Fullwidth Center', 'tutorstarter' ),
 							'image' => get_template_directory_uri() . '/assets/dist/images/header-fullwidth-center.svg',
 						),
@@ -194,8 +194,8 @@ class Header {
 				$wp_customize,
 				'menu_bg_color',
 				array(
-					'label'   => esc_html__( 'Header BG Color', 'tutorstarter' ),
-					'section' => 'tutorstarter_header_section',
+					'label'           => esc_html__( 'Header BG Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback_std_menu',
 				)
 			)
@@ -307,7 +307,7 @@ class Header {
 						'tablet'  => 13,
 						'desktop' => 16,
 					),
-					'lineHeight' => array(
+					'lineHeight'    => array(
 						'mobile'  => 1.2,
 						'tablet'  => 1.2,
 						'desktop' => 1.2,
@@ -324,29 +324,29 @@ class Header {
 					'label'       => esc_html__( 'Menu Typography', 'tutorstarter' ),
 					'section'     => 'tutorstarter_header_section',
 					'input_attrs' => array(
-						'font_sizes' => array(
-							'min'        => 8,
-							'max'        => 200,
-							'units'      => array( 'px' )
+						'font_sizes'    => array(
+							'min'   => 8,
+							'max'   => 200,
+							'units' => array( 'px' ),
 						),
-						'line_heights' => array(
-							'min'        => 0,
-							'max'        => 50,
-							'units'      => array( 'em' )
+						'line_heights'  => array(
+							'min'   => 0,
+							'max'   => 50,
+							'units' => array( 'em' ),
 						),
 						'defaultParams' => array(
-							'weight_default'  => 400,
-							'text_transform'  => 'none',
-							'font_sizes' => array(
+							'weight_default' => 400,
+							'text_transform' => 'none',
+							'font_sizes'     => array(
 								'mobile'  => 13,
 								'tablet'  => 13,
 								'desktop' => 16,
 							),
-							'line_heights' => array(
+							'line_heights'   => array(
 								'mobile'  => 1.2,
 								'tablet'  => 1.2,
 								'desktop' => 1.2,
-							)
+							),
 						),
 					),
 				)
@@ -470,7 +470,7 @@ class Header {
 			'cart_btn_toggle',
 			array(
 				'title'             => esc_html__( 'Display cart button when product added?', 'tutorstarter' ),
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'default'           => false,
 				'sanitize_callback' => isset( $input ) ? true : false,
 			)
@@ -483,6 +483,46 @@ class Header {
 					'label'           => esc_html__( 'Display cart button when product added?', 'tutorstarter' ),
 					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'tutor_cart_icon_color',
+			array(
+				'title'             => esc_html__( 'Cart Icon Color', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => '#0c111d',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'tutor_cart_icon_color',
+				array(
+					'label'           => esc_html__( 'Cart Icon Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_tutor_cart_callback',
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'tutor_cart_badge_bg_color',
+			array(
+				'title'             => esc_html__( 'Cart Badge Color', 'tutorstarter' ),
+				'transport'         => 'postMessage',
+				'default'           => '#0c111d',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'tutor_cart_badge_bg_color',
+				array(
+					'label'           => esc_html__( 'Cart Badge Color', 'tutorstarter' ),
+					'section'         => 'tutorstarter_header_section',
+					'active_callback' => 'control_active_tutor_cart_callback',
 				)
 			)
 		);
@@ -730,7 +770,7 @@ class Header {
 						'tablet'  => 13,
 						'desktop' => 16,
 					),
-					'lineHeight' => array(
+					'lineHeight'    => array(
 						'mobile'  => 1.2,
 						'tablet'  => 1.2,
 						'desktop' => 1.2,
@@ -747,30 +787,30 @@ class Header {
 					'label'           => esc_html__( 'Button Typography', 'tutorstarter' ),
 					'section'         => 'tutorstarter_header_section',
 					'active_callback' => 'control_active_callback',
-					'input_attrs' => array(
-						'font_sizes' => array(
-							'min'        => 8,
-							'max'        => 200,
-							'units'      => array( 'px' )
+					'input_attrs'     => array(
+						'font_sizes'    => array(
+							'min'   => 8,
+							'max'   => 200,
+							'units' => array( 'px' ),
 						),
-						'line_heights' => array(
-							'min'        => 0,
-							'max'        => 50,
-							'units'      => array( 'em' )
+						'line_heights'  => array(
+							'min'   => 0,
+							'max'   => 50,
+							'units' => array( 'em' ),
 						),
 						'defaultParams' => array(
-							'weight_default'  => 400,
-							'text_transform'  => 'none',
-							'font_sizes' => array(
+							'weight_default' => 400,
+							'text_transform' => 'none',
+							'font_sizes'     => array(
 								'mobile'  => 13,
 								'tablet'  => 13,
 								'desktop' => 16,
 							),
-							'line_heights' => array(
+							'line_heights'   => array(
 								'mobile'  => 1.2,
 								'tablet'  => 1.2,
 								'desktop' => 1.2,
-							)
+							),
 						),
 					),
 				)

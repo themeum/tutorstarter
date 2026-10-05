@@ -38,6 +38,8 @@ trait Inline_Css_Js {
 		$body_bg_color             = get_theme_mod( 'body_bg_color', '#ffffff' );
 		$cart_color                = get_theme_mod( 'cart_color', '#1950D1' );
 		$cart_color_trans          = get_theme_mod( 'cart_color_trans', '#ffffff' );
+		$tutor_cart_icon_color     = get_theme_mod( 'tutor_cart_icon_color', '#1950D1' );
+		$tutor_cart_badge_bg_color = get_theme_mod( 'tutor_cart_badge_bg_color', '#e74c3c' );
 		$cta_background            = get_theme_mod( 'cta_background', '#ffffff' );
 		$cta_border_color          = get_theme_mod( 'cta_border_color', '#1539e9' );
 		$cta_border_color_trans    = get_theme_mod( 'cta_border_color_trans', '#1950D1' );
@@ -213,6 +215,8 @@ trait Inline_Css_Js {
 				--body-bg-color: {$body_bg_color};
 				--cart-color: {$cart_color};
 				--cart-color-trans: {$cart_color_trans};
+				--tutor-cart-icon-color: {$tutor_cart_icon_color};
+				--tutor-cart-badge-bg: {$tutor_cart_badge_bg_color};
 				--cta-text-color: {$cta_text_color};
 				--cta-text-color-trans: {$cta_text_color_trans};
 				--body-text-color: {$body_text_color};

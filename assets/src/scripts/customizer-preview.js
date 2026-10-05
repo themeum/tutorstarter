@@ -47,6 +47,16 @@
             }
         })
     });
+    wp.customize('tutor_cart_icon_color', function (value) {
+        value.bind(function (updatedValue) {
+            document.documentElement.style.setProperty('--tutor-cart-icon-color', updatedValue);
+        });
+    });
+    wp.customize('tutor_cart_badge_bg_color', function (value) {
+        value.bind(function (updatedValue) {
+            document.documentElement.style.setProperty('--tutor-cart-badge-bg', updatedValue);
+        });
+    });
     wp.customize('body_font', function (value) {
         value.bind(function (updatedValue) {
             const bodySelector = document.querySelector('body');

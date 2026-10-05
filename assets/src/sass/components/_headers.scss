@@ -53,15 +53,18 @@
 		display: flex;
 		align-items: center;
 		justify-self: end;
-		> div:not(:first-child) {
-			margin-left: 20px;
-		}
+		gap: 16px;
+		
 		> * {
 			cursor: pointer;
 		}
 		button {
 			outline: none;
 			border: none;
+		}
+		.tutor-cart-button,
+		.tutor-cart-button:hover {
+			opacity: 1;
 		}
 		.btn-cart {
 			background: none;

@@ -8,7 +8,6 @@ header.header-default {
 	display: flex;
 	position: relative;
 	align-items: center;
-	margin-left: 15px !important;
 	.tutor-avatar {
 		display: flex;
 		flex-direction: row;
@@ -36,9 +35,6 @@ header.header-default {
 			background-color: var(--tutor-surface-brand-quaternary, #e4ebfc);
 		}
 	}
-}
-.tutor-header-profile-content {
-	padding-left: 7px;
 }
 .tutor-header-profile-content-text {
 	font-size: 13px;

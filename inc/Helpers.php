@@ -58,6 +58,15 @@ if ( ! function_exists( 'control_active_cart_trans_callback' ) ) {
 	}
 }
 
+if ( ! function_exists( 'control_active_tutor_cart_callback' ) ) {
+	/**
+	 * Active callback for Tutor native cart color controls
+	 */
+	function control_active_tutor_cart_callback() {
+		return defined( 'TUTOR_VERSION' ) && function_exists( 'tutor_utils' ) && tutor_utils()->is_monetize_by_tutor();
+	}
+}
+
 if ( ! function_exists( 'control_active_callback_meta' ) ) {
 	/**
 	 * Control active callback for post meta
