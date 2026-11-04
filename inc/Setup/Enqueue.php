@@ -63,8 +63,9 @@ class Enqueue {
 
 		wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/dist/css/style.min.css', array(), TUTOR_STARTER_VERSION, 'all' );
 
-		// JS.
-		wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/dist/js/app.min.js', array(), TUTOR_STARTER_VERSION, true );
+		// JS. frontend-create-course.js reads wp.i18n as soon as the bundle loads.
+		wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/dist/js/app.min.js', array( 'wp-i18n' ), TUTOR_STARTER_VERSION, true );
+		wp_set_script_translations( 'main', 'tutorstarter', get_template_directory() . '/languages' );
 
 		// Just in time preloading pages on hover. preload page onhover
 		if ( is_user_logged_in() ) {
